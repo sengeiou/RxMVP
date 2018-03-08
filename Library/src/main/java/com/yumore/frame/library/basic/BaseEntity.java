@@ -1,0 +1,42 @@
+package com.yumore.frame.library.basic;
+
+
+/**
+ * BaseEntity
+ *
+ * @author Nathaniel
+ *         nathanwriting@126.com
+ * @version v1.0.0
+ * @date 2018/3/8 - 15:12
+ */
+public class BaseEntity<T> {
+
+    private String code;
+    private String message;
+
+    private T data;
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+}
