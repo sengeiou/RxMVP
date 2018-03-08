@@ -12,12 +12,21 @@ import java.lang.ref.WeakReference;
 
 public class ScreenSizeUtils {
 
-    private WindowManager manager;
-    private DisplayMetrics dm;
     private static ScreenSizeUtils instance = null;
-    private int screenWidth, screenHeigth;
-    private WeakReference<Context> contextWeakReference;//软引用context
+    private int screenWidth, screenHeight;
 
+
+    private ScreenSizeUtils(Context mcontext) {
+        WeakReference<Context> contextWeakReference = new WeakReference<>(mcontext);
+        Context context = contextWeakReference.get();
+        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        windowManager.getDefaultDisplay().getMetrics(displayMetrics);
+
+        screenWidth = displayMetrics.widthPixels;
+        screenHeight = displayMetrics.heightPixels;
+
+    }
 
     public static ScreenSizeUtils getInstance(Context mContext) {
 
@@ -30,25 +39,11 @@ public class ScreenSizeUtils {
         return instance;
     }
 
-    private ScreenSizeUtils(Context mContext) {
-        contextWeakReference = new WeakReference<>(mContext);
-        Context context = contextWeakReference.get();
-        manager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-        dm = new DisplayMetrics();
-        manager.getDefaultDisplay().getMetrics(dm);
-
-        screenWidth = dm.widthPixels;// 获取屏幕分辨率宽度
-        screenHeigth = dm.heightPixels;
-
-    }
-
-    //获取屏幕宽度
     public int getScreenWidth() {
         return screenWidth;
     }
 
-    //获取屏幕高度
     public int getScreenHeight() {
-        return screenHeigth;
+        return screenHeight;
     }
 }

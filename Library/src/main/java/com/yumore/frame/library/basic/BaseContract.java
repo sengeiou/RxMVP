@@ -3,7 +3,7 @@ package com.yumore.frame.library.basic;
 import io.reactivex.disposables.Disposable;
 
 /**
- * BasePresenter
+ * BaseContract
  *
  * @author Nathaniel
  *         nathanwriting@126.com

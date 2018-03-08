@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.yumore.frame.R;
 
 /**
- * RootActivity
+ * WelcomeActivity
  *
  * @author Nathaniel
  *         nathanwriting@126.com
