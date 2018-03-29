@@ -11,6 +11,17 @@ import android.view.ViewGroup;
 
 import com.yumore.frame.library.helper.ViewHelper;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
+/**
+ * BaseFragment
+ *
+ * @author Nathaniel
+ *         nathanwriting@126.com
+ * @version v1.0.0
+ * @date 2018/3/21 - 18:34
+ */
 public abstract class BaseFragment<P extends BaseContract> extends Fragment implements BaseView, ViewHelper {
     protected Context context;
     protected P presenter;
@@ -18,9 +29,16 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     private boolean viewCreated = false;
     private boolean viewVisible = false;
     private boolean firstLoaded = true;
+    private Unbinder unbinder;
 
+    /**
+     * init presenter
+     *
+     * @return presenter
+     */
     protected abstract P initPresenter();
 
+    @SuppressWarnings("unchecked")
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (null == rootView) {
@@ -51,6 +69,12 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         initView();
         loadData();
         bindView();
+    }
+
+
+    @Override
+    public void initView() {
+        unbinder = ButterKnife.bind(this, rootView);
     }
 
     @Override
@@ -90,6 +114,11 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     public void onDestroyView() {
         if (presenter != null) {
             presenter.detachView();
+            presenter = null;
+        }
+        if (unbinder != null) {
+            unbinder.unbind();
+            unbinder = null;
         }
         viewCreated = false;
         super.onDestroyView();
