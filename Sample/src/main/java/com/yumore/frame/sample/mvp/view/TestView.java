@@ -1,7 +1,7 @@
 package com.yumore.frame.sample.mvp.view;
 
-import com.yumore.frame.sample.entity.Story;
 import com.yumore.frame.library.basic.BaseView;
+import com.yumore.frame.sample.entity.Story;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public interface TestView extends BaseView {
     /**
      * 设置数据
      *
-     * @param dataList
+     * @param dataList 返回的数据
      */
     void setData(List<Story> dataList);
 }

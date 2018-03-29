@@ -1,4 +1,4 @@
-package com.yumore.frame.sample.mvp.contact;
+package com.yumore.frame.sample.mvp.contract;
 
 public interface TestContact {
     /**

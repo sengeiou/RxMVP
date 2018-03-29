@@ -1,12 +1,12 @@
 package com.yumore.frame.sample.mvp.presenter;
 
-import com.yumore.frame.sample.mvp.view.TestView;
 import com.yumore.frame.library.basic.BasePresenter;
 import com.yumore.frame.library.helper.ExceptionHelper;
-import com.yumore.frame.sample.model.CustomEngine;
+import com.yumore.frame.sample.engine.CustomEngine;
 import com.yumore.frame.sample.entity.Story;
 import com.yumore.frame.sample.entity.Test;
-import com.yumore.frame.sample.mvp.contact.TestContact;
+import com.yumore.frame.sample.mvp.contract.TestContact;
+import com.yumore.frame.sample.mvp.view.TestView;
 
 import java.util.List;
 
@@ -17,6 +17,15 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * TestPresenter
+ * Presenter测试类
+ *
+ * @author Nathaniel
+ *         nathanwriting@126.com
+ * @version v1.0.0
+ * @date 2018/3/19 - 17:37
+ */
 public class TestPresenter extends BasePresenter<TestView> implements TestContact {
 
     @Override

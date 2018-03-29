@@ -1,4 +1,4 @@
-package com.yumore.frame.sample.model;
+package com.yumore.frame.sample.engine;
 
 
 import com.yumore.frame.sample.entity.Test;
