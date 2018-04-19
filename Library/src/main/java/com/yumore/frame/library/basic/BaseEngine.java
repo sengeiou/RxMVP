@@ -14,18 +14,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-/**
- * BaseEngine
- *
- * @author Nathaniel
- *         nathanwriting@126.com
- * @version v1.0.0
- * @date 2018/3/19 - 18:09
- */
 public class BaseEngine implements EngineHelper {
-    private static final int READ_TIMEOUT = 60;
-    private static final int CONN_TIMEOUT = 12;
-    private static final String TAG = EngineHelper.class.getClass().getSimpleName();
     private volatile static Retrofit retrofit = null;
     protected Retrofit.Builder retrofitBuilder = new Retrofit.Builder();
     protected OkHttpClient.Builder httpBuilder = new OkHttpClient.Builder();
@@ -44,6 +33,7 @@ public class BaseEngine implements EngineHelper {
     @Override
     public Retrofit getRetrofit() {
         if (retrofit == null) {
+            //锁定代码块
             synchronized (BaseEngine.class) {
                 if (retrofit == null) {
                     retrofit = retrofitBuilder.build();
@@ -66,11 +56,13 @@ public class BaseEngine implements EngineHelper {
     }
 
     public HttpLoggingInterceptor getLoggerInterceptor() {
+        //日志显示级别
         HttpLoggingInterceptor.Level level = HttpLoggingInterceptor.Level.HEADERS;
+        //新建log拦截器
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(String message) {
-                Log.d(TAG, "message: " + message);
+                Log.d("ApiUrl", "--->" + message);
             }
         });
         loggingInterceptor.setLevel(level);

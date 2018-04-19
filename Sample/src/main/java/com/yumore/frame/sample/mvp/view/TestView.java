@@ -15,7 +15,7 @@ public interface TestView extends BaseView {
     /**
      * 设置数据
      *
-     * @param dataList 返回的数据
+     * @param dataList
      */
     void setData(List<Story> dataList);
 }

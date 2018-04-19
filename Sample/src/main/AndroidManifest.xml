@@ -11,7 +11,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sample.surface.activity.WelcomeActivity">
+        <activity android:name=".sample.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,19 +19,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".sample.surface.activity.TestActivity"
+            android:name=".sample.activity.TestActivity"
             android:label="测试页面" />
-
-        <activity android:name=".sample.surface.activity.LoginActivity" />
-
-        <activity android:name=".sample.surface.activity.QueryIPActivity" />
-
-        <activity android:name=".sample.surface.activity.RegisterActivity" />
-
-        <activity android:name=".sample.surface.activity.MovieActivity" />
-
-        <activity android:name=".sample.surface.activity.FileActivity" />
-
 
     </application>
 
