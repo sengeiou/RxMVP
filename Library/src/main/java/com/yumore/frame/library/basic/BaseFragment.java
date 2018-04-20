@@ -19,8 +19,25 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     private boolean viewVisible = false;
     private boolean firstLoaded = true;
 
+    public static BaseFragment createFragment(@NonNull String className) {
+        BaseFragment baseFragment = null;
+        try {
+            Class<?> clazz = Class.forName(className);
+            baseFragment = (BaseFragment) clazz.newInstance();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (java.lang.InstantiationException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return baseFragment;
+    }
+
     protected abstract P initPresenter();
 
+    @SuppressWarnings("unchecked")
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (null == rootView) {
@@ -51,6 +68,10 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         initView();
         loadData();
         bindView();
+    }
+
+    protected View getRootView() {
+        return rootView;
     }
 
     @Override
@@ -93,5 +114,15 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         }
         viewCreated = false;
         super.onDestroyView();
+    }
+
+    @Override
+    public void showLoadingDialog(String message) {
+
+    }
+
+    @Override
+    public void dismissLoadingDialog() {
+
     }
 }

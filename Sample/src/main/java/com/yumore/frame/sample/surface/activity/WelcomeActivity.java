@@ -1,4 +1,4 @@
-package com.yumore.frame.sample.activity;
+package com.yumore.frame.sample.surface.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.yumore.frame.R;
+import com.yumore.frame.library.basic.FragmentActivity;
 
 /**
  * RootActivity
@@ -24,7 +25,7 @@ public class WelcomeActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(WelcomeActivity.this, TestActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, FragmentActivity.class));
             }
         }, 2000);
     }

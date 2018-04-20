@@ -11,7 +11,7 @@ import com.yumore.frame.library.utility.ActivityManager;
  * BaseActivity
  *
  * @author Nathaniel
- *         nathanwriting@126.com
+ * nathanwriting@126.com
  * @version v1.0.0
  * @date 2018/3/8 - 15:11
  */
@@ -32,6 +32,7 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
 
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void initialize() {
         context = this;

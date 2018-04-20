@@ -11,7 +11,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sample.activity.WelcomeActivity">
+        <activity android:name=".sample.surface.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".sample.activity.TestActivity"
+            android:name=".sample.surface.activity.TestActivity"
             android:label="测试页面" />
+
+        <activity
+            android:name=".library.basic.FragmentActivity"
+            android:label="公共页面" />
 
     </application>
 
