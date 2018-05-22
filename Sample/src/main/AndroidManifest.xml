@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yumore.frame">
+    package="com.yumore.sample">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sample.surface.activity.WelcomeActivity">
+        <activity android:name="com.yumore.sample.surface.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,11 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".sample.surface.activity.TestActivity"
+            android:name="com.yumore.sample.surface.activity.TestActivity"
             android:label="测试页面" />
 
         <activity
-            android:name=".library.basic.FragmentActivity"
+            android:name="com.yumore.frame.basic.FragmentActivity"
             android:label="公共页面" />
 
     </application>
