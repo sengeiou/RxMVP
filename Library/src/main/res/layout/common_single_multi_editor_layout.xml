@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+    <EditText
+            android:id="@+id/editor_single_line_editor_et"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/common_shape_editor_round_pressed"
+            android:gravity="center_vertical"
+            android:hint="请输入内容"
+            android:maxLines="1"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    <EditText
+            android:id="@+id/editor_multi_line_editor_et"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:background="@drawable/common_shape_editor_round_pressed"
+            android:gravity="center_vertical|top"
+            android:hint="请输入内容"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+</RelativeLayout>
