@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
-import com.yumore.frame.helper.SPInitializeHelper;
+import com.yumore.frame.helper.InitializeHelper;
 
 
 /**
@@ -21,7 +21,7 @@ import com.yumore.frame.helper.SPInitializeHelper;
  * @author Nathaniel
  * @version v1.0.0
  */
-public abstract class SharedPreferencesUtils implements SPInitializeHelper {
+public abstract class SharedPreferencesUtils implements InitializeHelper {
     private static final String DEFAULT_SHARED_PREFERENCES_NAME = "Evaluation.sdf";
     protected SharedPreferences.Editor editor;
     protected SharedPreferences sharedPreferences;

@@ -3,12 +3,12 @@ package com.yumore.frame.helper;
 import android.content.Context;
 
 /**
+ * InitializeHelper ：初始化帮助类
  * @author Nathaniel
  * @version 1.0.0
- * @description InitializeHelper ：初始化帮助类
- * @time 2017/8/5 - 11:26
+ * @date 2017/8/5 - 11:26
  */
-public interface SPInitializeHelper {
+public interface InitializeHelper {
     /**
      * 因为SharedPreferences是存储少量的数据，
      * 所以尽量把部分数据拆分成多个文件存储。
