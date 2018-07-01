@@ -15,7 +15,14 @@ import java.util.List;
 
 import butterknife.BindView;
 
-
+/**
+ * TestActivity
+ *
+ * @author Nathaniel
+ * nathanwriting@126.com
+ * @version v1.0.0
+ * @date 2018/7/1 - 14:15
+ */
 public class TestActivity extends BaseActivity<TestPresenter> implements TestView {
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -36,7 +43,7 @@ public class TestActivity extends BaseActivity<TestPresenter> implements TestVie
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_test;
+        return R.layout.common_list_layout;
     }
 
 

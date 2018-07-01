@@ -15,7 +15,14 @@ import java.util.List;
 
 import butterknife.BindView;
 
-
+/**
+ * TestFragment
+ *
+ * @author Nathaniel
+ * nathanwriting@126.com
+ * @version v1.0.0
+ * @date 2018/7/1 - 14:15
+ */
 public class TestFragment extends BaseFragment<TestPresenter> implements TestView {
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
@@ -37,7 +44,7 @@ public class TestFragment extends BaseFragment<TestPresenter> implements TestVie
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_test;
+        return R.layout.common_list_layout;
     }
 
     @Override

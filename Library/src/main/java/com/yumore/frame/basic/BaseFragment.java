@@ -155,7 +155,7 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     @Override
     public void showLoadingDialog() {
         dismissLoadingDialog();
-        View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog_layout, null);
+        View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog, null);
         alertDialog = new AlertDialog.Builder(getContext())
                 .setCancelable(false)
                 .setView(view)
