@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yumore.frame.R;
@@ -153,9 +155,13 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     }
 
     @Override
-    public void showLoadingDialog() {
-        dismissLoadingDialog();
+    public void showLoading(String message) {
+        dismissLoading();
         View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog, null);
+        TextView textView = view.findViewById(R.id.loading_text_tv);
+        if (TextUtils.isEmpty(message)) {
+            textView.setText(message);
+        }
         alertDialog = new AlertDialog.Builder(getContext())
                 .setCancelable(false)
                 .setView(view)
@@ -176,7 +182,7 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     }
 
     @Override
-    public void dismissLoadingDialog() {
+    public void dismissLoading() {
         if (null != alertDialog) {
             alertDialog.dismiss();
             alertDialog = null;

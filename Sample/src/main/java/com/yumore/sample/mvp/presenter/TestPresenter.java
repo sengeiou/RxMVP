@@ -30,7 +30,7 @@ public class TestPresenter extends BasePresenter<TestView> implements TestContac
                     @Override
                     public void accept(@NonNull Disposable disposable) {
                         addDisposable(disposable);
-                        baseView.showLoadingDialog();
+                        baseView.showLoading("正在加载数据");
                     }
                 })
                 .map(new Function<Test, List<Story>>() {
@@ -43,13 +43,13 @@ public class TestPresenter extends BasePresenter<TestView> implements TestContac
                 .subscribe(new Consumer<List<Story>>() {
                     @Override
                     public void accept(@NonNull List<Story> storiesBeen) {
-                        baseView.dismissLoadingDialog();
+                        baseView.dismissLoading();
                         baseView.setData(storiesBeen);
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(@NonNull Throwable throwable) {
-                        baseView.dismissLoadingDialog();
+                        baseView.dismissLoading();
                         ExceptionHelper.handleException(throwable);
                     }
                 });

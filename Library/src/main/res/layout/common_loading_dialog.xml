@@ -21,6 +21,7 @@
                 android:indeterminateOnly="true" />
 
         <TextView
+                android:id="@+id/loading_text_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

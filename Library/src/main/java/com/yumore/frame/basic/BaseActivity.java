@@ -5,12 +5,14 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yumore.frame.R;
@@ -93,7 +95,7 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
 
 
     @Override
-    public void dismissLoadingDialog() {
+    public void dismissLoading() {
         if (null != alertDialog) {
             alertDialog.dismiss();
             alertDialog = null;
@@ -101,9 +103,13 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
     }
 
     @Override
-    public void showLoadingDialog() {
-        dismissLoadingDialog();
+    public void showLoading(String message) {
+        dismissLoading();
         View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog, null);
+        TextView textView = view.findViewById(R.id.loading_text_tv);
+        if (TextUtils.isEmpty(message)) {
+            textView.setText(message);
+        }
         alertDialog = new AlertDialog.Builder(getContext())
                 .setCancelable(false)
                 .setView(view)

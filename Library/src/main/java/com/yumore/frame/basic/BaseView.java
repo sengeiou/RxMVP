@@ -53,12 +53,12 @@ public interface BaseView {
     /**
      * 展示dialog
      */
-    void showLoadingDialog();
+    void showLoading(String message);
 
     /**
      * 取消dialog
      */
-    void dismissLoadingDialog();
+    void dismissLoading();
 
     /**
      * 展示错误提示信息
