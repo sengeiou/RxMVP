@@ -11,40 +11,31 @@ package com.yumore.frame.basic;
  */
 public class BaseEntity<T> {
 
-    private int StatusCode;
-    private String Info;
-    private T Data;
-    private int Total;
+    private int code;
+    private String message;
+    private T data;
 
-    public int getStatusCode() {
-        return StatusCode;
+    public int getCode() {
+        return code;
     }
 
-    public void setStatusCode(int statusCode) {
-        StatusCode = statusCode;
+    public void setCode(int code) {
+        this.code = code;
     }
 
-    public String getInfo() {
-        return Info;
+    public String getMessage() {
+        return message;
     }
 
-    public void setInfo(String info) {
-        Info = info;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public T getData() {
-        return Data;
+        return data;
     }
 
     public void setData(T data) {
-        Data = data;
-    }
-
-    public int getTotal() {
-        return Total;
-    }
-
-    public void setTotal(int total) {
-        Total = total;
+        this.data = data;
     }
 }

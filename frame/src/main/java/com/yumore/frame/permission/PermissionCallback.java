@@ -1,6 +1,6 @@
 package com.yumore.frame.permission;
 
-import android.support.v4.app.ActivityCompat;
+import androidx.core.app.ActivityCompat;
 
 /**
  * @author Nathaniel

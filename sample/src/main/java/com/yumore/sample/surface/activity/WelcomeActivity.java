@@ -3,9 +3,10 @@ package com.yumore.sample.surface.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 
 import com.yumore.sample.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * RootActivity

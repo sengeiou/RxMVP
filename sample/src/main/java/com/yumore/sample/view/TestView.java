@@ -1,4 +1,4 @@
-package com.yumore.sample.mvp.view;
+package com.yumore.sample.view;
 
 import com.yumore.frame.basic.BaseView;
 import com.yumore.sample.entity.Story;

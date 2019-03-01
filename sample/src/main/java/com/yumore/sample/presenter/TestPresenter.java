@@ -1,14 +1,14 @@
-package com.yumore.sample.mvp.presenter;
+package com.yumore.sample.presenter;
 
 import android.annotation.SuppressLint;
 
 import com.yumore.frame.basic.BasePresenter;
 import com.yumore.frame.helper.ExceptionHelper;
+import com.yumore.sample.contact.TestContact;
+import com.yumore.sample.engine.CustomEngine;
 import com.yumore.sample.entity.Story;
 import com.yumore.sample.entity.Test;
-import com.yumore.sample.model.CustomEngine;
-import com.yumore.sample.mvp.contact.TestContact;
-import com.yumore.sample.mvp.view.TestView;
+import com.yumore.sample.view.TestView;
 
 import java.util.List;
 

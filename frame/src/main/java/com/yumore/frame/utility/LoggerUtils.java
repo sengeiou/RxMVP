@@ -6,7 +6,7 @@ import android.util.Log;
  * @author Nathaniel
  * @date 2018/5/29-10:17
  */
-public class LogUtils {
+public class LoggerUtils {
 
     public static void e(String tag, String message) {
         int strLength = message.length();

@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.GsonBuilder;
 import com.yumore.frame.helper.EngineHelper;
-import com.yumore.frame.utility.LogUtils;
+import com.yumore.frame.utility.LoggerUtils;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -75,7 +75,7 @@ public class BaseEngine implements EngineHelper {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(@NonNull String message) {
-                LogUtils.e(TAG, message);
+                LoggerUtils.e(TAG, message);
             }
         });
         loggingInterceptor.setLevel(level);

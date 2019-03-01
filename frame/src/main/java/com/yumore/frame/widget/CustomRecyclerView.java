@@ -1,8 +1,9 @@
 package com.yumore.frame.widget;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomRecyclerView extends RecyclerView {
     public CustomRecyclerView(Context context) {

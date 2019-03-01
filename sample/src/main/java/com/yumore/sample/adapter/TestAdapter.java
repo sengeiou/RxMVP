@@ -1,7 +1,6 @@
 package com.yumore.sample.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +12,8 @@ import com.yumore.sample.R;
 import com.yumore.sample.entity.Story;
 
 import java.util.List;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class TestAdapter extends RecyclerView.Adapter<TestAdapter.viewHolder> {
 
@@ -31,7 +32,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.viewHolder> {
 
     @Override
     public void onBindViewHolder(viewHolder holder, int position) {
-        Glide.with(context).load(list.get(position).getImages().get(0)).crossFade().into(holder.imageView);
+        Glide.with(context).load(list.get(position).getImages().get(0)).into(holder.imageView);
         holder.textView.setText(list.get(position).getTitle());
         holder.textView1.setText("2017-9-7 12:00");
     }

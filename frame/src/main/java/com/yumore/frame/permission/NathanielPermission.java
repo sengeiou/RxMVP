@@ -2,24 +2,25 @@ package com.yumore.frame.permission;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.AppOpsManagerCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.AppOpsManagerCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 /**
  * NathanielPermission
@@ -53,16 +54,16 @@ public class NathanielPermission {
     }
 
 
-    public static boolean hasPermissions(@NonNull Context context, String... perms) {
+    public static boolean hasPermissions(@NonNull Context context, String... permissions) {
         if (!PermissionUtils.isOverMarshmallow()) {
             return true;
         }
 
-        if (perms == null || perms.length == 0) {
+        if (permissions == null || permissions.length == 0) {
             return true;
         }
 
-        for (String perm : perms) {
+        for (String perm : permissions) {
             boolean hasPerm = (ContextCompat.checkSelfPermission(context, perm) == PackageManager.PERMISSION_GRANTED);
             if (!hasPerm) {
                 return false;
@@ -72,16 +73,16 @@ public class NathanielPermission {
         return true;
     }
 
-    public static boolean hasPermissionAfterSuccess(@NonNull Context context, String... perms) {
+    public static boolean hasPermissionAfterSuccess(@NonNull Context context, String... permissions) {
         if (!PermissionUtils.isOverMarshmallow()) {
             return true;
         }
 
-        if (perms == null || perms.length == 0) {
+        if (permissions == null || permissions.length == 0) {
             return true;
         }
 
-        for (String permission : perms) {
+        for (String permission : permissions) {
             int result = ContextCompat.checkSelfPermission(context, permission);
             if (result == PackageManager.PERMISSION_DENIED) {
                 return false;
@@ -103,8 +104,8 @@ public class NathanielPermission {
     }
 
 
-    public static void requestPermissions(final Object object, String rationale, final int requestCode, final String... perms) {
-        requestPermissions(object, rationale, android.R.string.ok, android.R.string.cancel, requestCode, perms);
+    public static void requestPermissions(final Object object, String rationale, final int requestCode, final String... permissions) {
+        requestPermissions(object, rationale, android.R.string.ok, android.R.string.cancel, requestCode, permissions);
     }
 
     public static void requestPermissions(final Object object, String rationale, @StringRes int positiveButton, @StringRes int negativeButton, final int requestCode, final String... permissions) {

@@ -3,11 +3,12 @@ package com.yumore.frame.permission;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
 
 /**
  * PermissionUtils
@@ -44,13 +45,13 @@ final class PermissionUtils {
         return denyPermissions;
     }
 
-    protected static boolean shouldShowRequestPermissionRationale(Object object, String perm) {
+    protected static boolean shouldShowRequestPermissionRationale(Object object, String permission) {
         if (object instanceof Activity) {
-            return ActivityCompat.shouldShowRequestPermissionRationale((Activity) object, perm);
+            return ActivityCompat.shouldShowRequestPermissionRationale((Activity) object, permission);
         } else if (object instanceof Fragment) {
-            return ((Fragment) object).shouldShowRequestPermissionRationale(perm);
+            return ((Fragment) object).shouldShowRequestPermissionRationale(permission);
         } else {
-            return object instanceof android.app.Fragment && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ((android.app.Fragment) object).shouldShowRequestPermissionRationale(perm);
+            return object instanceof android.app.Fragment && Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ((android.app.Fragment) object).shouldShowRequestPermissionRationale(permission);
         }
     }
 

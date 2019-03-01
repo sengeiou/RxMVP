@@ -1,4 +1,4 @@
-package com.yumore.sample.model;
+package com.yumore.sample.engine;
 
 import com.yumore.frame.basic.BaseEngine;
 
