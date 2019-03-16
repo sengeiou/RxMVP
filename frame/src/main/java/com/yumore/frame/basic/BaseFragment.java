@@ -166,7 +166,7 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         dismissLoading();
         View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog, null);
         TextView textView = view.findViewById(R.id.loading_text_tv);
-        if (TextUtils.isEmpty(message)) {
+        if (!TextUtils.isEmpty(message)) {
             textView.setText(message);
         }
         alertDialog = new AlertDialog.Builder(getContext())
