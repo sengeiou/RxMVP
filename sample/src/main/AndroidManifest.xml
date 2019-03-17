@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.yumore.sample">
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.yumore.sample">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".common.SampleApplication"
-        android:allowBackup="true"
-        android:icon="@drawable/logo"
-        android:label="@string/app_name"
-        android:roundIcon="@drawable/logo"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:appComponentFactory">
+            android:name=".common.SampleApplication"
+            android:allowBackup="true"
+            android:icon="@drawable/logo"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/logo"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:replace="android:appComponentFactory">
         <activity android:name="com.yumore.sample.surface.activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,13 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.yumore.sample.surface.activity.TestActivity"
-            android:label="测试页面" />
-
-        <activity
-            android:name="com.yumore.frame.basic.FragmentActivity"
-            android:label="公共页面" />
-
+                android:name="com.yumore.sample.surface.activity.TestActivity"
+                android:label="测试页面" />
     </application>
 
 </manifest>
