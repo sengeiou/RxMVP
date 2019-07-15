@@ -2,34 +2,22 @@ package com.yumore.frame.basic;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Display;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.*;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.yumore.frame.R;
-import com.yumore.frame.permission.NathanielPermission;
-import com.yumore.frame.permission.PermissionCallback;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import com.yumore.frame.R;
 
 /**
  * @author Nathaniel
  */
-public abstract class BaseFragment<P extends BaseContract> extends Fragment implements BaseView, PermissionCallback {
+public abstract class BaseFragment<P extends BaseContract> extends Fragment implements BaseView {
     protected Context context;
     protected P presenter;
     protected View rootView;
@@ -39,9 +27,6 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     private boolean firstLoaded = true;
     private Unbinder unbinder;
     private AlertDialog alertDialog;
-    private int requestCode;
-    private String[] permissions;
-    private PermissionCallback permissionCallBack;
 
     public static BaseFragment createFragment(@NonNull String className) {
         BaseFragment baseFragment = null;
@@ -175,14 +160,9 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
                 .create();
         alertDialog.show();
         Window dialogWindow = alertDialog.getWindow();
-        @SuppressWarnings("ConstantConditions")
-        WindowManager windowManager = getActivity().getWindowManager();
-        Display display = windowManager.getDefaultDisplay();
         if (dialogWindow != null) {
             dialogWindow.setGravity(Gravity.CENTER);
             WindowManager.LayoutParams layoutParams = dialogWindow.getAttributes();
-            layoutParams.width = (int) (display.getWidth() * 0.5);
-            layoutParams.height = (int) (display.getWidth() * 0.5);
             layoutParams.alpha = 0.75f;
             dialogWindow.setAttributes(layoutParams);
         }
@@ -193,70 +173,6 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         if (null != alertDialog) {
             alertDialog.dismiss();
             alertDialog = null;
-        }
-    }
-
-    protected void requestPermission(int requestCode, String[] permissions, String rationale, PermissionCallback permissionCallback) {
-        this.requestCode = requestCode;
-        this.permissionCallBack = permissionCallback;
-        this.permissions = permissions;
-
-        NathanielPermission.with(getFragment())
-                .addRequestCode(requestCode)
-                .permissions(permissions)
-                .negativeButtonText(android.R.string.ok)
-                .positiveButtonText(android.R.string.cancel)
-                .rationale(rationale)
-                .request();
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        NathanielPermission.onRequestPermissionsResult(getContext(), requestCode, permissions, grantResults);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == NathanielPermission.SETTINGS_REQUEST_CODE) {
-            if (NathanielPermission.hasPermissions(getContext(), permissions)) {
-                onPermissionGranted(this.requestCode, permissions);
-            } else {
-                onPermissionDenied(this.requestCode, permissions);
-            }
-        }
-    }
-
-    @Override
-    public void onPermissionGranted(int requestCode, String... permissions) {
-        if (permissionCallBack != null) {
-            permissionCallBack.onPermissionGranted(requestCode, permissions);
-        }
-    }
-
-    @Override
-    public void onPermissionDenied(final int requestCode, final String... permissions) {
-        if (NathanielPermission.checkDeniedPermissionsNeverAskAgain(getContext(), "授权啊,不授权没法用啊," + "去设置里授权大哥", android.R.string.ok,
-                android.R.string.cancel,
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if (permissionCallBack != null) {
-                            permissionCallBack.onPermissionDenied(requestCode, permissions);
-                        }
-                    }
-                }, permissions)) {
-            return;
-        }
-
-        if (permissionCallBack != null) {
-            permissionCallBack.onPermissionDenied(requestCode, permissions);
         }
     }
 

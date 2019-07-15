@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        package="com.yumore.sample">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.yumore.sample">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:name=".common.SampleApplication"
@@ -13,18 +13,19 @@
             android:roundIcon="@drawable/logo"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
-            tools:ignore="GoogleAppIndexingWarning"
+            android:appComponentFactory="@string/app_name"
+            tools:ignore="GoogleAppIndexingWarning,UnusedAttribute"
             tools:replace="android:appComponentFactory">
         <activity android:name="com.yumore.sample.surface.activity.WelcomeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
                 android:name="com.yumore.sample.surface.activity.TestActivity"
-                android:label="测试页面" />
+                android:label="测试页面"/>
     </application>
 
 </manifest>

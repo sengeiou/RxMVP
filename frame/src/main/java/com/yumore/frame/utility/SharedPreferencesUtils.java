@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
-
 import com.yumore.frame.helper.InitializeHelper;
 
 
@@ -22,7 +21,7 @@ import com.yumore.frame.helper.InitializeHelper;
  * @version v1.0.0
  */
 public abstract class SharedPreferencesUtils implements InitializeHelper {
-    private static final String DEFAULT_SHARED_PREFERENCES_NAME = "Evaluation.sdf";
+    private static final String DEFAULT_SHARED_PREFERENCES_NAME = "config.sdf";
     protected SharedPreferences.Editor editor;
     protected SharedPreferences sharedPreferences;
 

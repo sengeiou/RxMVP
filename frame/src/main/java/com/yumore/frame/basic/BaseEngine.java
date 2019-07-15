@@ -1,11 +1,9 @@
 package com.yumore.frame.basic;
 
-import android.support.annotation.NonNull;
-
+import androidx.annotation.NonNull;
 import com.google.gson.GsonBuilder;
 import com.yumore.frame.helper.EngineHelper;
 import com.yumore.frame.utility.LoggerUtils;
-
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

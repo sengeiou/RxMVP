@@ -2,28 +2,17 @@ package com.yumore.frame.basic;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Display;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.*;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.yumore.frame.R;
-import com.yumore.frame.permission.NathanielPermission;
-import com.yumore.frame.permission.PermissionCallback;
-import com.yumore.frame.utility.ActivityManager;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import com.yumore.frame.R;
+import com.yumore.frame.utility.ActivityManager;
 
 /**
  * BaseActivity
@@ -33,14 +22,11 @@ import butterknife.Unbinder;
  * @version v1.0.0
  * @date 2018/3/8 - 15:11
  */
-public abstract class BaseActivity<P extends BaseContract> extends AppCompatActivity implements BaseView, PermissionCallback {
+public abstract class BaseActivity<P extends BaseContract> extends AppCompatActivity implements BaseView {
     protected P presenter;
     private Context context;
     private Unbinder unbinder;
     private AlertDialog alertDialog;
-    private PermissionCallback permissionCallBack;
-    private int requestCode;
-    private String[] permissions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,13 +109,9 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
                 .create();
         alertDialog.show();
         Window dialogWindow = alertDialog.getWindow();
-        WindowManager windowManager = getWindowManager();
-        Display display = windowManager.getDefaultDisplay();
         if (dialogWindow != null) {
             dialogWindow.setGravity(Gravity.CENTER);
             WindowManager.LayoutParams layoutParams = dialogWindow.getAttributes();
-            layoutParams.width = (int) (display.getWidth() * 0.5);
-            layoutParams.height = (int) (display.getWidth() * 0.5);
             layoutParams.alpha = 0.75f;
             dialogWindow.setAttributes(layoutParams);
         }
@@ -143,65 +125,5 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
     @Override
     public Context getContext() {
         return context;
-    }
-
-    protected void requestPermission(int requestCode, String[] permissions, String rationale, PermissionCallback permissionCallback) {
-        this.requestCode = requestCode;
-        this.permissionCallBack = permissionCallback;
-        this.permissions = permissions;
-
-        NathanielPermission.with(this)
-                .addRequestCode(requestCode)
-                .permissions(permissions)
-                .negativeButtonText(android.R.string.ok)
-                .positiveButtonText(android.R.string.cancel)
-                .rationale(rationale)
-                .request();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        NathanielPermission.onRequestPermissionsResult(getContext(), requestCode, permissions, grantResults);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == NathanielPermission.SETTINGS_REQUEST_CODE) {
-            if (NathanielPermission.hasPermissions(getContext(), permissions)) {
-                onPermissionGranted(requestCode, permissions);
-            } else {
-                onPermissionDenied(requestCode, permissions);
-            }
-        }
-    }
-
-    @Override
-    public void onPermissionGranted(int requestCode, String... permissions) {
-        if (permissionCallBack != null) {
-            permissionCallBack.onPermissionGranted(requestCode, permissions);
-        }
-    }
-
-    @Override
-    public void onPermissionDenied(final int requestCode, final String... permissions) {
-        if (NathanielPermission.checkDeniedPermissionsNeverAskAgain(getContext(), getResources().getString(R.string.system_permission_tips),
-                android.R.string.ok,
-                android.R.string.cancel,
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        if (permissionCallBack != null) {
-                            permissionCallBack.onPermissionDenied(requestCode, permissions);
-                        }
-                    }
-                }, permissions)) {
-            return;
-        }
-
-        if (permissionCallBack != null) {
-            permissionCallBack.onPermissionDenied(requestCode, permissions);
-        }
     }
 }
