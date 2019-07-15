@@ -1,2 +1,2 @@
-include ':frame'
+include ':frame', ':provider'
 include ':sample'
