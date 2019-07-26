@@ -19,7 +19,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.yumore.common.R;
 import com.yumore.common.R2;
-import com.yumore.common.basic.BaseActivity;
+import com.yumore.common.common.basic.BaseActivity;
 import com.yumore.common.mvp.BaseContract;
 import com.yumore.common.utility.DataUtils;
 import com.yumore.common.widget.CustomPopupWindow;

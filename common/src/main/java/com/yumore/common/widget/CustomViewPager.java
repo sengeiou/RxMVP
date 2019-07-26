@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import androidx.viewpager.widget.ViewPager;
+import androidx.core.view.ViewPager;
 
 /**
  * @author Nathaniel

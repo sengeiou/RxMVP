@@ -1,6 +1,6 @@
 package com.yumore.sample.view;
 
-import com.yumore.frame.basic.BaseView;
+import com.yumore.common.basic.BaseView;
 import com.yumore.sample.entity.Story;
 
 import java.util.List;

@@ -13,12 +13,8 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 import androidx.appcompat.widget.AppCompatEditText;
 import com.yumore.common.R;
-import com.yumore.common.utility.EmptyUtils;
 
 
-/**
- * @author Nathaniel
- */
 public class ClearEditText extends AppCompatEditText implements View.OnFocusChangeListener, TextWatcher {
     private Drawable drawable;
     private boolean focusable;
@@ -49,8 +45,7 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
             drawable = getResources().getDrawable(R.drawable.common_selector_clear_edittext);
         }
 
-        // set size
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+        drawable.setBounds(0, 0, drawable.getIntrinsicWidth() - 20, drawable.getIntrinsicHeight() - 20);
         setClearIconVisible(false);
         setOnFocusChangeListener(this);
         addTextChangedListener(this);
@@ -76,7 +71,7 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
     public void onFocusChange(View v, boolean hasFocus) {
         this.focusable = hasFocus;
         if (hasFocus) {
-            setClearIconVisible(!EmptyUtils.isObjectEmpty(getText()) && getText().length() > 0);
+            setClearIconVisible(getText().length() > 0);
         } else {
             setClearIconVisible(false);
         }
@@ -88,9 +83,9 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
     }
 
     @Override
-    public void onTextChanged(CharSequence charSequence, int start, int count, int after) {
+    public void onTextChanged(CharSequence s, int start, int count, int after) {
         if (focusable) {
-            setClearIconVisible(charSequence.length() > 0);
+            setClearIconVisible(s.length() > 0);
         }
     }
 
@@ -107,5 +102,7 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
     public void setShakeAnimation() {
         this.setAnimation(shakeAnimation(5));
     }
+
+
 }
 

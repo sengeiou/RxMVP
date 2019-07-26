@@ -1,6 +1,6 @@
 package com.yumore.sample.engine;
 
-import com.yumore.frame.basic.BaseEngine;
+import com.yumore.common.basic.BaseEngine;
 
 public class CustomEngine extends BaseEngine {
 

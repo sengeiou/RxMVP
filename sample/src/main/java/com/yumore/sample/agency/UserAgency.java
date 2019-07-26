@@ -1,8 +1,7 @@
 package com.yumore.sample.agency;
 
 import android.content.Context;
-
-import com.yumore.frame.agency.IUserAgency;
+import com.yumore.common.agency.IUserAgency;
 
 /**
  * @author Nathaniel

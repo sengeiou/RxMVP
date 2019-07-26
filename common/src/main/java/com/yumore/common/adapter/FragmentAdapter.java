@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import com.yumore.common.utility.EmptyUtils;
+import com.yumore.common.common.utility.EmptyUtils;
 
 import java.util.List;
 

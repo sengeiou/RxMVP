@@ -1,7 +1,10 @@
 package com.yumore.sample.surface.fragment;
 
 
-import com.yumore.frame.basic.BaseFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import butterknife.BindView;
+import com.yumore.common.basic.BaseFragment;
 import com.yumore.sample.R;
 import com.yumore.sample.adapter.TestAdapter;
 import com.yumore.sample.entity.Story;
@@ -10,10 +13,6 @@ import com.yumore.sample.view.TestView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
 
 /**
  * TestFragment

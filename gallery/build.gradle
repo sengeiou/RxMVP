@@ -7,8 +7,8 @@ if (keyStore.exists()) {
 }
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
 
     defaultConfig {
         minSdkVersion 16
@@ -34,9 +34,9 @@ android {
 }
 
 dependencies {
-    implementation "com.android.support:appcompat-v7:28.0.0"
-    implementation "com.android.support:recyclerview-v7:28.0.0"
-    implementation "com.android.support:support-vector-drawable:28.0.0"
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
     api("com.github.chrisbanes:PhotoView:2.1.4") {
         exclude group: "com.android.support", module: "support-v4"
     }

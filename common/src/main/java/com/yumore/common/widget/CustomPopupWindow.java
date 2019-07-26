@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.yumore.common.R;
-import com.yumore.common.utility.EmptyUtils;
+import com.yumore.common.common.utility.EmptyUtils;
 import com.yumore.common.utility.SpaceItemDecoration;
 
 /**

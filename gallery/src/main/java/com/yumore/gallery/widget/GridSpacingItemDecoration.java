@@ -1,8 +1,8 @@
 package com.yumore.gallery.widget;
 
 import android.graphics.Rect;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import androidx.appcompat.widget.RecyclerView;
 
 
 /**

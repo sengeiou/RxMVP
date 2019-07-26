@@ -2,21 +2,23 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.yumore.common">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:allowBackup="true"
             android:label="@string/app_name"
             android:supportsRtl="true">
+
         <activity
                 android:name=".surface.GalleryActivity"
                 android:screenOrientation="portrait"/>
 
-        <receiver android:name=".receiver.NetworkReceiver">
+        <receiver android:name="com.yumore.common.receiver.NetworkReceiver">
             <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                <action
+                        android:name="android.net.conn.CONNECTIVITY_CHANGE"
                         tools:ignore="BatteryLife"/>
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
                 <action android:name="android.net.wifi.STATE_CHANGE"/>
@@ -24,4 +26,5 @@
         </receiver>
 
     </application>
+
 </manifest>

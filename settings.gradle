@@ -1,2 +1,12 @@
-include ':frame', ':provider'
+include ':common'
+include ':uikit'
+include ':provider'
+include ':utility'
 include ':sample'
+
+include ':rxSample'
+include ':RxUI'
+include ':feature'
+include ':arcGisKit'
+include':RxCamera'
+include ':gallery'

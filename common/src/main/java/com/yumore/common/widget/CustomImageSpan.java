@@ -5,9 +5,9 @@ import android.graphics.*;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.text.style.ImageSpan;
-import androidx.annotation.NonNull;
-import com.yumore.common.utility.LoggerUtils;
+import com.yumore.common.common.utility.LoggerUtils;
 
 /**
  * @author Nathaniel

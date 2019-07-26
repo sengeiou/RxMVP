@@ -3,32 +3,14 @@ package com.yumore.common.utility;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Base64;
-
+import com.yumore.common.common.utility.EmptyUtils;
 import net.lingala.zip4j.model.FileHeader;
 import net.lingala.zip4j.model.ZipParameters;
 import net.lingala.zip4j.util.Zip4jConstants;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipException;
-import java.util.zip.ZipFile;
-import java.util.zip.ZipOutputStream;
+import java.io.*;
+import java.util.*;
+import java.util.zip.*;
 
 
 /**
@@ -423,13 +405,13 @@ public class ZipUtils {
      */
     private static boolean zipFile(File resFile, String rootPath, ZipOutputStream zos, String comment)
             throws IOException {
-        rootPath = rootPath + (EmptyUtils.isObjectEmpty(rootPath) ? "" : File.separator) + resFile.getName();
+        rootPath = rootPath + (com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(rootPath) ? "" : File.separator) + resFile.getName();
         if (resFile.isDirectory()) {
             File[] fileList = resFile.listFiles();
             // 如果是空文件夹那么创建它，我把'/'换为File.separator测试就不成功，eggPain
             if (fileList == null || fileList.length <= 0) {
                 ZipEntry entry = new ZipEntry(rootPath + '/');
-                if (!EmptyUtils.isObjectEmpty(comment)) {
+                if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(comment)) {
                     entry.setComment(comment);
                 }
                 zos.putNextEntry(entry);
@@ -447,11 +429,11 @@ public class ZipUtils {
             try {
                 is = new BufferedInputStream(new FileInputStream(resFile));
                 ZipEntry entry = new ZipEntry(rootPath);
-                if (!EmptyUtils.isObjectEmpty(comment)) {
+                if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(comment)) {
                     entry.setComment(comment);
                 }
                 zos.putNextEntry(entry);
-                byte buffer[] = new byte[KB];
+                byte[] buffer = new byte[KB];
                 int len;
                 while ((len = is.read(buffer, 0, KB)) != -1) {
                     zos.write(buffer, 0, len);
@@ -575,7 +557,7 @@ public class ZipUtils {
                     try {
                         inputStream = new BufferedInputStream(zf.getInputStream(entry));
                         out = new BufferedOutputStream(new FileOutputStream(file));
-                        byte buffer[] = new byte[KB];
+                        byte[] buffer = new byte[KB];
                         int len;
                         while ((len = inputStream.read(buffer)) != -1) {
                             out.write(buffer, 0, len);

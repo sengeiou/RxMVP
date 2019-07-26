@@ -5,9 +5,9 @@ import android.content.Context;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.support.annotation.NonNull;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import androidx.annotation.NonNull;
 
 import java.io.*;
 import java.net.InetAddress;

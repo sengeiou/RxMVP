@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.FileProvider;
 import com.yumore.common.BuildConfig;
 import com.yumore.common.R;
+import com.yumore.common.common.utility.LoggerUtils;
 import okhttp3.MediaType;
 
 import java.io.*;
@@ -82,7 +83,7 @@ public class FileUtils {
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void saveBitmap(Bitmap bitmap, @NonNull String fileName) {
         String subfix = null;
-        LoggerUtils.e(TAG, "fileName = " + fileName);
+        com.yumore.common.common.utility.LoggerUtils.e(TAG, "fileName = " + fileName);
         String regex = ".+(.[Gg][Ii][Ff])|(.[Jj][Pp][Gg])|(.[Bb][Mm][Pp])|(.[Jj][Pp][Ee][Gg])$";
 
         Pattern pattern = Pattern.compile(regex);
@@ -103,7 +104,7 @@ public class FileUtils {
             // TODO 保证保存的图片没有黑色背景
             String pngSubfix = ".png";
             if (pngSubfix.equals(subfix)) {
-                LoggerUtils.e(TAG, "png file");
+                com.yumore.common.common.utility.LoggerUtils.e(TAG, "png file");
                 bitmap.compress(CompressFormat.PNG, 100, fileOutputStream);
             } else {
                 bitmap.compress(CompressFormat.JPEG, 100, fileOutputStream);

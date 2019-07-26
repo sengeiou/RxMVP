@@ -1,6 +1,5 @@
 apply plugin: "com.android.library"
 apply plugin: "com.alibaba.arouter"
-
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
@@ -30,4 +29,5 @@ android {
 
 dependencies {
     api "com.alibaba:arouter-api:1.4.1"
+    //  annotationProcessor 'com.alibaba:arouter-compiler:?'
 }

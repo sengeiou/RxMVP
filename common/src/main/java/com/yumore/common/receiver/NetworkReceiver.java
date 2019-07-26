@@ -20,14 +20,14 @@ public class NetworkReceiver extends BroadcastReceiver {
     private static final String TAG = NetworkReceiver.class.getSimpleName();
     private OnNetworkListener onNetworkListener;
 
-    public void setOnNetworkListener(OnNetworkListener onNetworkListener) {
-        this.onNetworkListener = onNetworkListener;
-    }
-
     public NetworkReceiver() {
     }
 
     public NetworkReceiver(OnNetworkListener onNetworkListener) {
+        this.onNetworkListener = onNetworkListener;
+    }
+
+    public void setOnNetworkListener(OnNetworkListener onNetworkListener) {
         this.onNetworkListener = onNetworkListener;
     }
 

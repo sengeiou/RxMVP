@@ -1,23 +1,21 @@
 package com.yumore.sample.presenter;
 
 import android.annotation.SuppressLint;
-
-import com.yumore.frame.basic.BasePresenter;
-import com.yumore.frame.helper.ExceptionHelper;
+import com.yumore.common.basic.BasePresenter;
+import com.yumore.common.helper.ExceptionHelper;
 import com.yumore.sample.contact.TestContact;
 import com.yumore.sample.engine.CustomEngine;
 import com.yumore.sample.entity.Story;
 import com.yumore.sample.entity.Test;
 import com.yumore.sample.view.TestView;
-
-import java.util.List;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+
+import java.util.List;
 
 public class TestPresenter extends BasePresenter<TestView> implements TestContact {
 

@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.yumore.common.R;
-import com.yumore.common.utility.EmptyUtils;
+import com.yumore.common.common.utility.EmptyUtils;
 import com.yumore.common.utility.ImageFillUtils;
 
 import java.util.List;

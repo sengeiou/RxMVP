@@ -3,9 +3,8 @@ package com.yumore.common.basic;
 import androidx.annotation.NonNull;
 import com.google.gson.GsonBuilder;
 import com.yumore.common.helper.EngineHelper;
-import com.yumore.common.interceptor.RetryInterceptor;
-import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.LoggerUtils;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Converter;
@@ -14,59 +13,70 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * BaseEngine
- * 因为不需要默认的interceptor
- * 所以就不重写了
  *
  * @author Nathaniel
  * nathanwriting@126.com
  * @version v1.0.0
  * @date 18-5-23 - 下午3:41
  */
-public abstract class BaseEngine implements EngineHelper {
+public class BaseEngine implements EngineHelper {
     private static final String TAG = BaseEngine.class.getSimpleName();
+    private volatile static Retrofit retrofit = null;
+    private Retrofit.Builder retrofitBuilder = new Retrofit.Builder();
+    private OkHttpClient.Builder httpBuilder = new OkHttpClient.Builder();
 
-    private OkHttpClient initHttpBuilder() {
-        OkHttpClient.Builder httpBuilder = new OkHttpClient.Builder();
-        httpBuilder.connectTimeout(30, TimeUnit.SECONDS);
-        httpBuilder.readTimeout(30, TimeUnit.SECONDS);
-        httpBuilder.writeTimeout(30, TimeUnit.SECONDS);
-        if (!EmptyUtils.isObjectEmpty(getInterceptor())) {
-            httpBuilder.addInterceptor(getInterceptor());
-        }
-        httpBuilder.retryOnConnectionFailure(true);
-        // httpBuilder.addInterceptor(new SessionInterceptor());
-        httpBuilder.addInterceptor(new RetryInterceptor());
-        httpBuilder.addInterceptor(getLoggerInterceptor());
-        return httpBuilder.build();
+    public BaseEngine(String baseUrl) {
+        retrofitBuilder.addConverterFactory(ScalarsConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(new GsonBuilder()
+                        .setLenient()
+                        .create()
+                ))
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .client(httpBuilder.addInterceptor(getLoggerInterceptor()).build())
+                .baseUrl(baseUrl);
     }
 
-    @NonNull
     @Override
     public Retrofit getRetrofit() {
-        return new Retrofit.Builder()
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .addConverterFactory(getFactory())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .client(initHttpBuilder())
-                .baseUrl(getBaseUrl())
-                .build();
+        if (retrofit == null) {
+            synchronized (BaseEngine.class) {
+                if (retrofit == null) {
+                    retrofit = retrofitBuilder.build();
+                }
+            }
+        }
+        return retrofit;
+
     }
 
+
+    @Override
+    public OkHttpClient.Builder setInterceptor(Interceptor interceptor) {
+        return httpBuilder.addInterceptor(interceptor);
+    }
+
+    @Override
+    public Retrofit.Builder setConverterFactory(Converter.Factory factory) {
+        return retrofitBuilder.addConverterFactory(factory);
+    }
+
+    /**
+     * 设置日志级别
+     *
+     * @return HttpLoggingInterceptor
+     */
     private HttpLoggingInterceptor getLoggerInterceptor() {
-        return new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
+        // 请求/响应行 + 头 + 体
+        HttpLoggingInterceptor.Level level = HttpLoggingInterceptor.Level.BODY;
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(@NonNull String message) {
                 LoggerUtils.e(TAG, message);
             }
-        }).setLevel(HttpLoggingInterceptor.Level.BODY);
-    }
-
-    @Override
-    public Converter.Factory getFactory() {
-        return GsonConverterFactory.create(new GsonBuilder().setLenient().create());
+        });
+        loggingInterceptor.setLevel(level);
+        return loggingInterceptor;
     }
 }

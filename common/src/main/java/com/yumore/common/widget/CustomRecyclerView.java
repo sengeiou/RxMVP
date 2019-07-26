@@ -4,14 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * CustomRecyclerView
- *
- * @author Nathaniel
- * nathanwriting@126.com
- * @version v1.0.0
- * @date 18-7-5 - 下午5:51
- */
 public class CustomRecyclerView extends RecyclerView {
     public CustomRecyclerView(Context context) {
         super(context);

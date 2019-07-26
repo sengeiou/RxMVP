@@ -1,6 +1,5 @@
 package com.yumore.common.basic;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -8,123 +7,41 @@ import android.text.TextUtils;
 import android.view.*;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import com.yumore.common.R;
-import com.yumore.common.mvp.*;
-import com.yumore.common.utility.EmptyUtils;
 
 /**
  * @author Nathaniel
  */
 public abstract class BaseFragment<P extends BaseContract> extends Fragment implements BaseView {
+    protected Context context;
     protected P presenter;
-    protected boolean withoutNext;
+    protected View rootView;
     protected ViewGroup viewGroup;
-    protected LayoutInflater layoutInflater;
-    /**
-     * 是否初始化完成
-     */
-    protected boolean prepared;
-    /**
-     * 是否可见
-     */
-    protected boolean visible;
-    protected Activity activity;
-    private Context context;
-    private View rootView;
-    private boolean viewCreated;
-    private boolean viewVisible;
+    private boolean viewCreated = false;
+    private boolean viewVisible = false;
     private boolean firstLoaded = true;
     private Unbinder unbinder;
     private AlertDialog alertDialog;
-    private PresenterProvider presenterProvider;
-    private PresenterDispatch presenterDispatch;
-    private Toast toast;
 
-    @Override
-    public void onAttach(Context context) {
-        activity = (Activity) context;
-        this.context = context;
-        super.onAttach(context);
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        beforeInit(savedInstanceState);
-        super.onCreate(savedInstanceState);
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        this.viewGroup = container;
-        // 如果当前view部位空则需要清除原有的子view
-        if (rootView != null) {
-            ViewGroup parent = (ViewGroup) rootView.getParent();
-            if (parent != null) {
-                parent.removeView(rootView);
-            }
-        } else {
-            rootView = inflater.inflate(getLayoutId(), container, false);
-            activity = getActivity();
-            context = activity;
-            this.layoutInflater = inflater;
+    public static BaseFragment createFragment(@NonNull String className) {
+        BaseFragment baseFragment = null;
+        try {
+            Class<?> clazz = Class.forName(className);
+            baseFragment = (BaseFragment) clazz.newInstance();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (java.lang.InstantiationException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
-        // 初始化
-        presenter = initPresenter();
-        if (null != presenter) {
-            presenter.attachView(this);
-        }
-        // initialize(); 并不在这初始化view
-        return rootView;
-    }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        presenterProvider = PresenterProvider.inject(this);
-        presenterDispatch = new PresenterDispatch(presenterProvider);
-
-        presenterDispatch.attachView(this);
-        presenterDispatch.onCreatePresenter(savedInstanceState);
-        prepared = true;
-        initialize();
-        lazyLoad();
-        viewCreated = true;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (viewVisible) {
-            visibleToUser();
-        }
-    }
-
-    @Override
-    public void onDestroyView() {
-        if (presenter != null) {
-            presenter.detachView();
-        }
-        if (null != unbinder) {
-            unbinder.unbind();
-            unbinder = null;
-        }
-        viewCreated = false;
-        presenterDispatch.detachView();
-        super.onDestroyView();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        this.activity = null;
-        this.context = null;
+        return baseFragment;
     }
 
     /**
@@ -134,57 +51,29 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
      */
     protected abstract P initPresenter();
 
+    @SuppressWarnings("unchecked")
     @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        presenterDispatch.onSaveInstanceState(outState);
-    }
-
-    protected BasePresenter getPresenter() {
-        return presenterProvider.getPresenter(0);
-    }
-
-    public PresenterProvider getPresenterProviders() {
-        return presenterProvider;
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        this.viewGroup = container;
+        if (null == rootView) {
+            rootView = inflater.inflate(getLayoutId(), container, false);
+        }
+        presenter = initPresenter();
+        if (null != presenter) {
+            presenter.attachView(this);
+        }
+        initialize();
+        return rootView;
     }
 
     @Override
-    public void beforeInit(Bundle savedInstanceState) {
-
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        viewCreated = true;
     }
 
-    public View findViewById(@IdRes int id) {
-        View view;
-        if (rootView != null) {
-            view = rootView.findViewById(id);
-            return view;
-        }
-        return null;
-    }
-
-    /**
-     * 懒加载
-     */
-    private void lazyLoad() {
-        if (!prepared || !visible) {
-            return;
-        }
-        lazyLoadData();
-        prepared = false;
-    }
-
-    /**
-     * 懒加载
-     */
-    protected void lazyLoadData() {
-
-    }
-
-    protected void onVisible() {
-        lazyLoad();
-    }
-
-    protected void onInvisible() {
+    @Override
+    public void beforeInit() {
 
     }
 
@@ -202,9 +91,8 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         }
     }
 
-    @Override
-    public void withoutMore(boolean withoutMore) {
-        this.withoutNext = withoutMore;
+    protected View getRootView() {
+        return rootView;
     }
 
     @Override
@@ -214,59 +102,59 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         if (isVisibleToUser && viewCreated) {
             visibleToUser();
         }
-        if (getUserVisibleHint()) {
-            visible = true;
-            onVisible();
-        } else {
-            visible = false;
-            onInvisible();
-        }
     }
 
     @Override
     public Context getContext() {
-        return context;
+        return getActivity();
     }
 
-    protected boolean isFirstLoad() {
-        return firstLoaded;
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (viewVisible) {
+            visibleToUser();
+        }
+    }
+
+    protected void firstLoad() {
+
     }
 
     protected void visibleToUser() {
         if (firstLoaded) {
+            firstLoad();
             firstLoaded = false;
         }
     }
 
     @Override
-    public void showMessage(@NonNull String message) {
-        View view = LayoutInflater.from(context).inflate(R.layout.common_toast_layout, null);
-        if (EmptyUtils.isObjectEmpty(toast)) {
-            toast = new Toast(context);
+    public void onDestroyView() {
+        if (presenter != null) {
+            presenter.detachView();
         }
-        TextView textView = view.findViewById(R.id.common_toast_message);
-        textView.setText(message);
-        toast.setView(view);
-        toast.setDuration(Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 0, 100);
-        toast.show();
+        if (null != unbinder) {
+            unbinder.unbind();
+            unbinder = null;
+        }
+        viewCreated = false;
+        super.onDestroyView();
     }
 
-    protected void showMessage(int resId) {
-        String message = getContext().getResources().getString(resId);
-        showMessage(message);
+    @Override
+    public void showMessage(@NonNull String message) {
+        Toast.makeText(getContext(), message, Toast.LENGTH_SHORT).show();
     }
 
-    @SuppressWarnings("ConstantConditions")
     @Override
     public void showLoading(String message) {
         dismissLoading();
         View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog, null);
-        TextView textView = view.findViewById(R.id.loading_dialog_message);
+        TextView textView = view.findViewById(R.id.loading_text_tv);
         if (!TextUtils.isEmpty(message)) {
             textView.setText(message);
         }
-        alertDialog = new AlertDialog.Builder(getContext(), R.style.CustomDialog)
+        alertDialog = new AlertDialog.Builder(getContext())
                 .setCancelable(false)
                 .setView(view)
                 .create();

@@ -1,10 +1,9 @@
 package com.yumore.sample.common;
 
 import android.content.Context;
-
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.yumore.frame.basic.BaseApplication;
-import com.yumore.frame.helper.InitializeHelper;
+import com.yumore.common.basic.BaseApplication;
+import com.yumore.common.helper.InitializeHelper;
 import com.yumore.sample.BuildConfig;
 
 /**
