@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Framework</string>
+    <string name="contact_count_tips">已选择%d位联系人</string>
+    <string name="list_none_data_tips">暂无数据</string>
+    <string name="system_location_tips">您的设备不支持定位功能</string>
+    <string name="common_permission_setting">授权啊,不授权没法用啊, 去设置里授权大哥</string>
+    <string name="common_permission_storage">文件存储权限用于缓存附件，以便您更好的文件浏览体验</string>
+    <string name="common_permission_camera_storage">相机权限用于拍摄图片，相册权限用图片选择，存储卡权限用于文件选择</string>
+    <string name="common_permission_all">相机权限用于拍摄图片，相册权限用图片选择，存储卡权限用于文件选择，麦克风权限用于视频录制，定位用于更好的发现好友</string>
+
+    <string name="common_content_tips">
+        If the word South Teaching ball.
+        Holding hands is like traveling.
+        In thousands of doorways.
+        General manager But Go first.
+        Since I can not stay in my arms.
+        When I was in deccan.
+        While enjoying, while tears flow.
+        We are still the same.
+        If you are a stranger, join the group.
+        You said you wanted to question him.
+        But I am destined to feel better.
+        Lover Do you want the rest of the hollow?
+        You come to me, sometimes.
+    </string>
+    <string name="common_demo_hint">
+        问花笑谁把“坚持我手写我心，不唱和，不用典，不参赛”作为自己从事诗词写作的原则，他的作品的灵感，往往来源于自我经验的生活细节。凡有所作，虽于大气磅礴有间，然皆小巧玲珑，而又晶莹剔透，非一般粗豪质直者可比。
+        孟子曰：“恻隐之心，人皆有之。”这首《避雨的小猫》，由偶然见到楼梯拐角处小猫瑟缩悲鸣，联想到自己往日因生意奔走异乡借他人檐下避雨的经历，不觉触动恻隐之心，自然而然地分饼食之。在自家楼梯间“瑟瑟”悲鸣的小猫，和昔日在他乡矮檐下瑟瑟避雨的“我”，这两幅画面交替叠加呈现，而“我”分饼食猫的画面亦隐现其间，既令人酸鼻，又给人些微温馨之感。至于昔时屋檐的主人是否“解衣衣我，推食食我”，则留给读者无尽的想象。
+        此诗前两句，写在楼梯拐角处听到悲伤的猫叫声，并看到一“浑身瑟瑟”的小猫。先言“瑟瑟”之形，次言“凄凄”之声，再次言地点，此种倒状手法，有先声夺人之效。“浑身瑟瑟”，猫被雨淋透，栖身楼梯且“叫声凄”，显然这是一只无家可归的流浪猫，差可慰者，“拐角楼梯暂可栖”。倘“我”于猫之怜惜仅止于此，在猫看来，亦为漠然路人而已。“一饼分它”二句，一气直下，将眼前猫和昔日“我”打并成一处，则亦可视为“物我交融”之一例。
+        唐克龙认为，在当下的文学表述中，“动物不仅仅只是工具性、符号性存在，而是应该和人一样，具备伦理关怀的资质，享有生命主体的道德身份，有资格获得相当福利”。“我”在这里，在小猫面前，低下人类中心主义的头颅，体现出礼敬动物尊严的颇为现代的动物保护主义观念。然究其实质，由物及己，或由己及物，依然涂抹了浓厚的“言志”型动物叙事的底色。
+    </string>
+    <string name="common_editor_count_tips" formatted="false">%d/%d</string>
+    <string name="common_file_count_tips">最多可选择%d个文件</string>
+    <string name="common_search_content_tips">没有搜索到与“%s”相关的内容</string>
+
+    <string name="key_tracking_mode">key_tracking_mode</string>
+    <string name="tracking_mode_left">Left</string>
+    <string name="tracking_mode_right">Right</string>
+    <string name="tracking_mode_bottom">Bottom</string>
+    <string name="tracking_mode_all">All</string>
+</resources>

@@ -1,0 +1,26 @@
+
+===================================
+Nathaniel
+===================================
+how to initialize a presenter
+
+when u wanna got a presenter
+
+using inject like below
+
+simple presenter when u wanna initialize
+@CreatePresenter(presenter = AbcPresenter.class)
+AbcActivity extends BaseActivity implements AbcView
+
+Multiply presenter when u wanna initialize
+@CreatePresenter(presenter = {XPresenter.class, YPresenter.class, ZPresenter.class})
+XyzFragment extends BaseFragment implements XyzView
+
+simple or multiply presenter supported with activity or fragment
+
+---- 2019.03.28
+
+-----------------------------------------
+also u can use mvp like below, but just only one presenter can been initialized
+that's mean that u cannot multiplexing the presenter
+AbcActivity extends BaseActivity<AbcPresenter> implements AbcView

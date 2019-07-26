@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#00aaff</color>
+
+    <color name="common_color_page">#F2F2F2</color>
+    <color name="common_color_divider">#E2E2E2</color>
+    <color name="common_color_blue_dark">#1287F1</color>
+    <color name="common_color_blue_lightly">#3300aaff</color>
+    <color name="common_color_blue_light">#3bafda</color>
+    <color name="common_color_blue_sky">#467CD4</color>
+    <color name="common_color_grey_light">#c7c7c7</color>
+    <color name="common_color_grey_dark">#999999</color>
+    <color name="common_color_black_light">#484848</color>
+    <color name="common_color_black_dark">#101010</color>
+    <color name="common_color_orange_light">#f3c751</color>
+    <color name="common_color_orange_dark">#ffaa00</color>
+    <color name="common_color_brown_light">#d1b689</color>
+    <color name="common_color_red_dark">#FF554A</color>
+    <color name="common_color_red_light">#ff8888</color>
+    <color name="common_color_purple_dark">#764bc7</color>
+    <color name="common_color_green_light">#0fd850</color>
+    <color name="common_color_green_grass">#70c492</color>
+    <color name="common_color_green_dark">#068631</color>
+    <color name="common_color_white">#FFFFFF</color>
+</resources>

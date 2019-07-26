@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/common_shape_round_blue_dark_empty" android:state_pressed="true" />
+    <item android:drawable="@drawable/common_shape_round_blue_dark_empty" android:state_focused="true" />
+    <item android:drawable="@drawable/common_shape_round_blue_dark_empty" android:state_checked="true" />
+    <item android:drawable="@drawable/common_shape_round_blue_dark_empty" android:state_enabled="true" />
+    <item android:drawable="@drawable/common_shape_round_blue_dark_empty" android:state_hovered="true" />
+    <item android:drawable="@drawable/common_shape_round_blue_dark_empty" android:state_activated="true" />
+    <item android:drawable="@drawable/common_shape_round_blue_dark_empty" android:state_window_focused="true" />
+    <item android:drawable="@drawable/common_shape_round_white_solid" />
+</selector>

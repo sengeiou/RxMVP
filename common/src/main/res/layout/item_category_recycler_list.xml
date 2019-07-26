@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="75dp"
+        android:layout_height="95dp"
+        android:orientation="vertical">
+
+    <ImageView
+            android:id="@+id/option_image_iv"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/icon_user_default" />
+
+    <TextView
+            android:id="@+id/option_name_iv"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="QQ" />
+
+    <include
+            android:id="@+id/common_split_view"
+            layout="@layout/common_divider_layout" />
+</LinearLayout>

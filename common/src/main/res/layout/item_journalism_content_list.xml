@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/common_padding_small"
+                android:paddingBottom="@dimen/common_padding_small"
+                android:fitsSystemWindows="true"
+                android:background="@color/common_color_white"
+                android:paddingLeft="@dimen/common_padding_normal"
+                android:paddingRight="@dimen/common_padding_normal"
+                android:layout_height="100dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal">
+
+        <ImageView
+                android:id="@+id/item_content_image"
+                android:layout_width="120dp"
+                android:layout_marginRight="@dimen/common_padding_normal"
+                android:src="@drawable/icon_user_default"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/common_padding_normal"
+                tools:visibility="visible"/>
+
+        <TextView
+                android:id="@+id/item_content_text"
+                android:layout_width="0dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                tools:text="@string/common_content_tips"/>
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/item_content_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_delete_red"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+</RelativeLayout>

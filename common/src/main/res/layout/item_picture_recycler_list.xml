@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/item_picture_layout"
+                android:layout_width="107dp"
+                android:layout_height="107dp">
+
+    <ImageView
+            android:id="@+id/item_picture_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/icon_user_default"/>
+
+    <ImageView
+            android:id="@+id/item_picture_delete_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_delete_red"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+</RelativeLayout>
