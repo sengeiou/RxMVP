@@ -18,17 +18,21 @@ import com.yumore.common.R;
  * @author Nathaniel
  */
 public abstract class BaseFragment<P extends BaseContract> extends Fragment implements BaseView {
-    protected Context context;
     protected P presenter;
-    protected View rootView;
-    protected ViewGroup viewGroup;
+    private Context context;
+    private View rootView;
+    private ViewGroup viewGroup;
     private boolean viewCreated = false;
     private boolean viewVisible = false;
     private boolean firstLoaded = true;
     private Unbinder unbinder;
     private AlertDialog alertDialog;
 
-    public static BaseFragment createFragment(@NonNull String className) {
+    /**
+     * @param className className
+     * @return BaseFragment
+     */
+    private static BaseFragment createFragment(@NonNull String className) {
         BaseFragment baseFragment = null;
         try {
             Class<?> clazz = Class.forName(className);
@@ -74,7 +78,15 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
 
     @Override
     public void beforeInit() {
+        // u can do something before view has been initialized
+    }
 
+    @Override
+    public void onAttach(Context context) {
+        // u can convert this context to activity
+        this.context = context;
+        beforeInit();
+        super.onAttach(context);
     }
 
     @Override
@@ -106,24 +118,15 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
 
     @Override
     public Context getContext() {
-        return getActivity();
+        return context;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (viewVisible) {
-            visibleToUser();
-        }
-    }
-
-    protected void firstLoad() {
-
+    protected boolean isFirstLoad() {
+        return firstLoaded;
     }
 
     protected void visibleToUser() {
         if (firstLoaded) {
-            firstLoad();
             firstLoaded = false;
         }
     }
@@ -150,11 +153,11 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     public void showLoading(String message) {
         dismissLoading();
         View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog, null);
-        TextView textView = view.findViewById(R.id.loading_text_tv);
+        TextView textView = view.findViewById(R.id.loading_dialog_message);
         if (!TextUtils.isEmpty(message)) {
             textView.setText(message);
         }
-        alertDialog = new AlertDialog.Builder(getContext())
+        alertDialog = new AlertDialog.Builder(getContext(), R.style.CustomDialog)
                 .setCancelable(false)
                 .setView(view)
                 .create();

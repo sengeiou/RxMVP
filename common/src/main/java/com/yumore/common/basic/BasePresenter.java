@@ -44,5 +44,4 @@ public abstract class BasePresenter<V extends BaseView> implements BaseContract<
             compositeDisposable.dispose();
         }
     }
-
 }

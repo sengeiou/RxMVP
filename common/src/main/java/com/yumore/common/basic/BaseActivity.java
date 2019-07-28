@@ -99,11 +99,11 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
     public void showLoading(String message) {
         dismissLoading();
         View view = LayoutInflater.from(getContext()).inflate(R.layout.common_loading_dialog, null);
-        TextView textView = view.findViewById(R.id.loading_text_tv);
+        TextView textView = view.findViewById(R.id.loading_dialog_message);
         if (!TextUtils.isEmpty(message)) {
             textView.setText(message);
         }
-        alertDialog = new AlertDialog.Builder(getContext())
+        alertDialog = new AlertDialog.Builder(getContext(), R.style.CustomDialog)
                 .setCancelable(false)
                 .setView(view)
                 .create();
