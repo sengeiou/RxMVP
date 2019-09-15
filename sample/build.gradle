@@ -1,6 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 
+Properties properties = new Properties()
+File keyStore = project.rootProject.file("config.properties")
+if (keyStore.exists()) {
+    properties.load(keyStore.newDataInputStream())
+}
+
 def static buildTime() {
     return new Date().format("yyyyMMddHHmmss")
 }
@@ -23,6 +29,15 @@ android {
         }
     }
 
+    signingConfigs {
+        release {
+            keyAlias properties.getProperty("config.keyAlias")
+            keyPassword properties.getProperty("config.keyPassword")
+            storeFile file(properties.getProperty("config.storeFile"))
+            storePassword properties.getProperty("config.storePassword")
+        }
+    }
+
     buildTypes {
         debug {
             debuggable true
@@ -31,7 +46,10 @@ android {
             crunchPngs false
             zipAlignEnabled false
             jniDebuggable true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            buildConfigField "String", "applicationId", "\"${properties.getProperty("config.applicationId")}\""
+            buildConfigField "String", "fileProviderName", "\"${properties.getProperty("config.applicationId")}.fileProvider\""
         }
 
         release {
@@ -41,7 +59,10 @@ android {
             crunchPngs false
             zipAlignEnabled false
             jniDebuggable false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            buildConfigField "String", "applicationId", "\"${properties.getProperty("config.applicationId")}\""
+            buildConfigField "String", "fileProviderName", "\"${properties.getProperty("config.applicationId")}.fileProvider\""
         }
     }
 
