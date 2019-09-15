@@ -2,8 +2,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.yumore.traction.videoguide.FullScreenVideoView
-        android:id="@+id/videoview_guide"
+    <com.yumore.traction.FullScreenVideoView
+            android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

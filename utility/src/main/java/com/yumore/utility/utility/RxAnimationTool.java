@@ -4,7 +4,7 @@ import android.animation.*;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.*;
-import com.yumore.utility.interfaces.OnDoIntListener;
+import com.yumore.utility.callback.OnDoIntListener;
 
 /**
  * @author Vondear

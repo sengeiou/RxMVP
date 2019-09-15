@@ -6,9 +6,9 @@
         android:id="@+id/activity_auto_image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.yumore.example.activity.ActivityAutoImageView">
+        tools:context="com.yumore.example.surface.ActivityAutoImageView">
 
-    <com.yumore.rxui.view.RxAutoImageView
+    <com.yumore.utility.widget.RxAutoImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:ImageSrc="@drawable/ova"/>

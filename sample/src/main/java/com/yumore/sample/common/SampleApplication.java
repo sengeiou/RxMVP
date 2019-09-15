@@ -4,6 +4,7 @@ import android.content.Context;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.yumore.common.basic.BaseApplication;
 import com.yumore.common.helper.InitializeHelper;
+import com.yumore.example.common.ExampleApplication;
 import com.yumore.sample.BuildConfig;
 
 /**
@@ -12,8 +13,6 @@ import com.yumore.sample.BuildConfig;
  */
 public class SampleApplication extends BaseApplication implements InitializeHelper {
 
-
-
     @Override
     public void initialize(Context context) {
         if (BuildConfig.DEBUG) {
@@ -21,5 +20,6 @@ public class SampleApplication extends BaseApplication implements InitializeHelp
             ARouter.openDebug();
         }
         ARouter.init(application);
+        ExampleApplication.getInstance().initialize(application);
     }
 }

@@ -71,7 +71,7 @@
             android:layout_above="@+id/text"
             android:layout_alignParentTop="true"/>
 
-    <com.yumore.rxui.view.RxTitle
+    <com.yumore.utility.widget.RxTitle
             android:id="@+id/rx_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

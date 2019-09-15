@@ -13,10 +13,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxBarTool;
-import com.yumore.rxui.tool.RxConstants;
-import com.yumore.rxui.view.RxTitle;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxConstants;
+import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore

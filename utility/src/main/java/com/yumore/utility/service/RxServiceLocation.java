@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Looper;
 import androidx.annotation.Nullable;
-import com.yumore.utility.tool.RxLocationTool;
-import com.yumore.utility.view.RxToast;
+import com.yumore.utility.utility.RxLocationTool;
+import com.yumore.utility.widget.RxToast;
 
 /**
  * @author yumore

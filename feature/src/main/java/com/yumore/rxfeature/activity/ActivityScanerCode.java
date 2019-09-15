@@ -31,10 +31,10 @@ import com.yumore.rxfeature.module.scaner.OnRxScanerListener;
 import com.yumore.rxfeature.module.scaner.PlanarYUVLuminanceSource;
 import com.yumore.rxfeature.module.scaner.decoding.InactivityTimer;
 import com.yumore.rxfeature.tool.RxQrBarTool;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.*;
-import com.yumore.rxui.view.RxToast;
-import com.yumore.rxui.view.dialog.RxDialogSure;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.*;
+import com.yumore.utility.widget.RxToast;
+import com.yumore.utility.widget.dialog.RxDialogSure;
 
 import java.io.IOException;
 import java.util.Hashtable;

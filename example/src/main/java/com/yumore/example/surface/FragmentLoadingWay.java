@@ -10,12 +10,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.yumore.example.R;
-import com.yumore.rxui.tool.RxImageTool;
-import com.yumore.rxui.tool.RxRecyclerViewDividerTool;
-import com.yumore.rxui.view.progressing.SpinKitView;
-import com.yumore.rxui.view.progressing.SpriteFactory;
-import com.yumore.rxui.view.progressing.Style;
-import com.yumore.rxui.view.progressing.sprite.Sprite;
+import com.yumore.utility.utility.RxImageTool;
+import com.yumore.utility.utility.RxRecyclerViewDividerTool;
+import com.yumore.utility.widget.progressing.SpinKitView;
+import com.yumore.utility.widget.progressing.SpriteFactory;
+import com.yumore.utility.widget.progressing.Style;
+import com.yumore.utility.widget.progressing.sprite.Sprite;
 
 
 /**

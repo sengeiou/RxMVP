@@ -1,4 +1,4 @@
-package com.yumore.common.callback;
+package com.yumore.traction;
 
 /**
  * @author Nathaniel

@@ -6,7 +6,7 @@ import com.tencent.mm.opensdk.modelmsg.*;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.yumore.rxfeature.module.wechat.pay.WechatPayTools;
-import com.yumore.rxui.tool.RxImageTool;
+import com.yumore.utility.utility.RxImageTool;
 
 /**
  * @author Vondear

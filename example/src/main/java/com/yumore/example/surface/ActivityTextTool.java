@@ -13,13 +13,13 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxTextTool;
-import com.yumore.rxui.view.RxTitle;
-import com.yumore.rxui.view.RxToast;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxTextTool;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.RxToast;
 
-import static com.yumore.rxui.tool.RxBarTool.setTransparentStatusBar;
-import static com.yumore.rxui.tool.RxConstants.URL_VONTOOLS;
+import static com.yumore.utility.utility.RxBarTool.setTransparentStatusBar;
+import static com.yumore.utility.utility.RxConstants.URL_VONTOOLS;
 
 /**
  * @author yumore

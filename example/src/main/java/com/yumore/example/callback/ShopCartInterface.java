@@ -1,4 +1,4 @@
-package com.yumore.example.interfaces;
+package com.yumore.example.callback;
 
 import android.view.View;
 

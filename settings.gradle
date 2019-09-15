@@ -1,7 +1,7 @@
 include ':common', ':traction'
 include ':provider'
 
-include ':uikit'
+include ':utility'
 include ':feature'
 include ':arcgis'
 include ':camera'

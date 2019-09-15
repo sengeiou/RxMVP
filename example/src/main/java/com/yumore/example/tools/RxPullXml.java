@@ -2,7 +2,7 @@ package com.yumore.example.tools;
 
 import android.widget.EditText;
 import com.orhanobut.logger.Logger;
-import com.yumore.example.model.CityModel;
+import com.yumore.example.entity.CityModel;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;

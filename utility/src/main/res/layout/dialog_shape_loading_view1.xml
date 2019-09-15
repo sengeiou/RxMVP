@@ -31,7 +31,7 @@
                 android:textSize="14sp"
                 android:visibility="gone"/>
 
-        <com.yumore.rxui.view.dialog.shapeloadingview.RxShapeView
+        <com.yumore.utility.widget.dialog.shapeloadingview.RxShapeView
                 android:id="@+id/shapeLoadingView"
                 android:layout_width="24dp"
                 android:layout_height="24dp"

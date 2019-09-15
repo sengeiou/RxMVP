@@ -6,10 +6,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxBarTool;
-import com.yumore.rxui.view.RxSeatMovie;
-import com.yumore.rxui.view.RxTitle;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.widget.RxSeatMovie;
+import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore

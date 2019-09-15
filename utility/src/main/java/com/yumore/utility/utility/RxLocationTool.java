@@ -11,8 +11,8 @@ import android.provider.Settings;
 import android.util.Log;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import com.yumore.utility.model.Gps;
-import com.yumore.utility.view.RxToast;
+import com.yumore.utility.entity.Gps;
+import com.yumore.utility.widget.RxToast;
 
 import java.io.IOException;
 import java.text.DecimalFormat;

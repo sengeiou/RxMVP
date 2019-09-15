@@ -9,11 +9,11 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.yumore.example.R;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxBarTool;
-import com.yumore.rxui.tool.RxDeviceTool;
-import com.yumore.rxui.view.RxToast;
-import com.yumore.rxui.view.dialog.RxDialogSureCancel;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxDeviceTool;
+import com.yumore.utility.widget.RxToast;
+import com.yumore.utility.widget.dialog.RxDialogSureCancel;
 
 
 /**
@@ -94,7 +94,7 @@ public class ActivitySplash extends ActivityBase {
 
     public void toMain() {
         Intent intent = new Intent();
-        intent.setClass(context, ActivityMain.class);
+        intent.setClass(context, ExampleActivity.class);
         startActivity(intent);
         finish();
     }

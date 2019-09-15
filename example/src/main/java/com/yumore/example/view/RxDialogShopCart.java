@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.yumore.example.R;
 import com.yumore.example.adapter.AdapterPopupDish;
-import com.yumore.example.interfaces.ShopCartInterface;
-import com.yumore.example.model.ModelShopCart;
+import com.yumore.example.callback.ShopCartInterface;
+import com.yumore.example.entity.ModelShopCart;
 
 
 /**

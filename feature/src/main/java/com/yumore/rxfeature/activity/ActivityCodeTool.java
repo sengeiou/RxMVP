@@ -10,15 +10,15 @@ import androidx.core.widget.NestedScrollView;
 import com.yumore.rxfeature.R;
 import com.yumore.rxfeature.tool.RxBarCode;
 import com.yumore.rxfeature.tool.RxQRCode;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.*;
-import com.yumore.rxui.view.RxTitle;
-import com.yumore.rxui.view.RxToast;
-import com.yumore.rxui.view.ticker.RxTickerUtils;
-import com.yumore.rxui.view.ticker.RxTickerView;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.*;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.RxToast;
+import com.yumore.utility.widget.ticker.RxTickerUtils;
+import com.yumore.utility.widget.ticker.RxTickerView;
 
-import static com.yumore.rxui.tool.RxConstants.SP_MADE_CODE;
-import static com.yumore.rxui.tool.RxConstants.SP_SCAN_CODE;
+import static com.yumore.utility.utility.RxConstants.SP_MADE_CODE;
+import static com.yumore.utility.utility.RxConstants.SP_SCAN_CODE;
 
 /**
  * @author yumore

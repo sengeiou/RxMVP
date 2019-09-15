@@ -1,6 +1,7 @@
-package com.yumore.traction.videoguide;
+package com.yumore.traction;
 
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -26,7 +27,7 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
         return fragmentList != null && !fragmentList.isEmpty() ? fragmentList.size() : 0;
     }
 
-    @SuppressWarnings("NullableProblems")
+    @NonNull
     @Override
     public Fragment getItem(int position) {
         return fragmentList.get(position);

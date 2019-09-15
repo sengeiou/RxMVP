@@ -22,9 +22,9 @@ import com.esri.arcgisruntime.tasks.networkanalysis.RouteParameters;
 import com.esri.arcgisruntime.tasks.networkanalysis.RouteTask;
 import com.yumore.arcgis.model.MapPreview;
 import com.yumore.arcgis.view.RxMapScaleView;
-import com.yumore.rxui.model.Gps;
-import com.yumore.rxui.tool.*;
-import com.yumore.rxui.view.RxToast;
+import com.yumore.utility.entity.Gps;
+import com.yumore.utility.utility.*;
+import com.yumore.utility.widget.RxToast;
 
 import java.io.File;
 import java.util.ArrayList;

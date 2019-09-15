@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import com.google.zxing.*;
 import com.google.zxing.common.HybridBinarizer;
 import com.yumore.rxfeature.module.scaner.BitmapLuminanceSource;
-import com.yumore.rxui.tool.RxImageTool;
+import com.yumore.utility.utility.RxImageTool;
 
 import java.util.Hashtable;
 import java.util.Vector;

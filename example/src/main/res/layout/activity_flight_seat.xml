@@ -6,18 +6,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="com.yumore.example.activity.ActivityFlightSeat">
-
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/darkcyan"
-            android:clipToPadding="true"
-            android:fitsSystemWindows="true"
-            app:title="飞机票选座\n上海 - 长沙"
-            app:titleColor="@color/white"
-            app:titleSize="12sp"/>
+        tools:context="com.yumore.example.surface.ActivityFlightSeat">
 
     <RelativeLayout
             android:layout_width="match_parent"
@@ -25,7 +14,7 @@
             android:background="@color/a9"
             android:orientation="vertical">
 
-        <com.yumore.rxui.view.RxSeatAirplane
+        <com.yumore.utility.widget.RxSeatAirplane
                 android:id="@+id/fsv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,5 +54,16 @@
                 android:textColor="@android:color/white"/>
 
     </RelativeLayout>
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkcyan"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            app:title="飞机票选座\n上海 - 长沙"
+            app:titleColor="@color/white"
+            app:titleSize="12sp" />
 
 </LinearLayout>

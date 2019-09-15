@@ -1,4 +1,4 @@
-package com.yumore.example;
+package com.yumore.example.common;
 
 /**
  * @author Vondear

@@ -10,8 +10,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.view.*;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.widget.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 import com.yumore.example.R;
 import com.yumore.example.view.RxPinView;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.view.RxTitle;
-import com.yumore.rxui.view.scaleimage.ImageSource;
-import com.yumore.rxui.view.scaleimage.RxScaleImageView;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.scaleimage.ImageSource;
+import com.yumore.utility.widget.scaleimage.RxScaleImageView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +32,7 @@ public class ActivityRxScaleImageView extends ActivityBase implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_scale_image_view);
 
-        RxTitle rxTitle = (RxTitle) findViewById(R.id.rx_title);
+        RxTitle rxTitle = findViewById(R.id.rx_title);
         rxTitle.setLeftFinish(mContext);
 
         findViewById(R.id.next).setOnClickListener(this);
@@ -67,7 +67,7 @@ public class ActivityRxScaleImageView extends ActivityBase implements View.OnCli
             position--;
             updateNotes();
         } else if (view.getId() == R.id.play) {
-            RxPinView rxPinView = (RxPinView) findViewById(R.id.imageView);
+            RxPinView rxPinView = findViewById(R.id.imageView);
             Random random = new Random();
             if (rxPinView.isReady()) {
                 float maxScale = rxPinView.getMaxScale();
@@ -92,7 +92,7 @@ public class ActivityRxScaleImageView extends ActivityBase implements View.OnCli
     }
 
     private void initialiseImage() {
-        RxScaleImageView imageView = (RxScaleImageView) findViewById(R.id.imageView);
+        RxScaleImageView imageView = findViewById(R.id.imageView);
         imageView.setImage(ImageSource.asset("squirrel.jpg"));
     }
 
@@ -104,7 +104,7 @@ public class ActivityRxScaleImageView extends ActivityBase implements View.OnCli
         findViewById(R.id.next).setVisibility(position >= notes.size() - 1 ? View.INVISIBLE : View.VISIBLE);
         findViewById(R.id.previous).setVisibility(position <= 0 ? View.INVISIBLE : View.VISIBLE);
 
-        RxScaleImageView imageView = (RxScaleImageView) findViewById(R.id.imageView);
+        RxScaleImageView imageView = findViewById(R.id.imageView);
         if (position == 2) {
             imageView.setPanLimit(RxScaleImageView.PAN_LIMIT_CENTER);
         } else {

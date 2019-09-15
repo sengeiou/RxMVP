@@ -7,10 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.yumore.utility.R;
-import com.yumore.utility.model.ModelPicture;
-import com.yumore.utility.view.RxTextAutoZoom;
-import com.yumore.utility.view.cardstack.RxCardStackView;
-import com.yumore.utility.view.cardstack.tools.RxAdapterStack;
+import com.yumore.utility.entity.ModelPicture;
+import com.yumore.utility.widget.RxTextAutoZoom;
+import com.yumore.utility.widget.cardstack.RxCardStackView;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterStack;
 
 import java.io.File;
 

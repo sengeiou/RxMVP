@@ -2,9 +2,9 @@ package com.yumore.utility.animation;
 
 import android.animation.ValueAnimator;
 import android.graphics.Canvas;
-import com.yumore.utility.view.likeview.tools.RxShineView;
-import com.yumore.utility.view.likeview.tools.ei.RxEase;
-import com.yumore.utility.view.likeview.tools.ei.RxEasingInterpolator;
+import com.yumore.utility.widget.likeview.tools.RxShineView;
+import com.yumore.utility.widget.likeview.tools.ei.RxEase;
+import com.yumore.utility.widget.likeview.tools.ei.RxEasingInterpolator;
 
 /**
  * @author yumore

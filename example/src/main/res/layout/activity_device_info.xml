@@ -7,9 +7,9 @@
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
         android:orientation="vertical"
-        tools:context=".activity.ActivityDeviceInfo">
+        tools:context=".surface.ActivityDeviceInfo">
 
-    <com.yumore.rxui.view.RxTitle
+    <com.yumore.utility.widget.RxTitle
             android:id="@+id/rx_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

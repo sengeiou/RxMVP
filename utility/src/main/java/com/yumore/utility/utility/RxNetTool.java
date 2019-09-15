@@ -7,7 +7,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.telephony.TelephonyManager;
-import com.yumore.utility.view.RxToast;
+import com.yumore.utility.widget.RxToast;
 
 import java.io.BufferedReader;
 import java.io.IOException;

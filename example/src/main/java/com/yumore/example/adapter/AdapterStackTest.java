@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import com.yumore.example.R;
-import com.yumore.rxui.view.cardstack.RxCardStackView;
-import com.yumore.rxui.view.cardstack.tools.RxAdapterStack;
+import com.yumore.utility.widget.cardstack.RxCardStackView;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterStack;
 
 /**
  * @author yumore

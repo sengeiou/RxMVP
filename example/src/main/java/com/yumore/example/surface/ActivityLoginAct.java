@@ -20,11 +20,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.activity.AndroidBug5497Workaround;
-import com.yumore.rxui.tool.RxAnimationTool;
-import com.yumore.rxui.tool.RxBarTool;
-import com.yumore.rxui.tool.RxKeyboardTool;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.AndroidBug5497Workaround;
+import com.yumore.utility.utility.RxAnimationTool;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxKeyboardTool;
 
 
 /**

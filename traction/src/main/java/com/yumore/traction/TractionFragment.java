@@ -1,17 +1,28 @@
 package com.yumore.traction;
 
 
+import android.app.Activity;
 import android.media.MediaPlayer;
 import android.widget.VideoView;
 
 /**
  * @author Nathaniel
  */
-public class GuidePagerFragment extends LazyLoadFragment implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
+public class TractionFragment extends FloppyFragment implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
 
     private VideoView videoView;
-    private int curPage;
-    private boolean mHasPaused;
+    private int currentPage;
+    private boolean paused;
+
+    private OnFragmentToActivity onFragmentToActivity;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        if (activity instanceof OnFragmentToActivity) {
+            onFragmentToActivity = (OnFragmentToActivity) activity;
+        }
+    }
 
     @Override
     protected int setContentView() {
@@ -36,12 +47,11 @@ public class GuidePagerFragment extends LazyLoadFragment implements MediaPlayer.
         if (getArguments() == null) {
             return;
         }
-        videoView = findViewById(R.id.videoview_guide);
+        videoView = findViewById(R.id.videoView);
         int videoRes = getArguments().getInt("res");
-        curPage = getArguments().getInt("page");
+        currentPage = getArguments().getInt("page");
         videoView.setOnPreparedListener(this);
         videoView.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + videoRes);
-
     }
 
     @Override
@@ -57,9 +67,9 @@ public class GuidePagerFragment extends LazyLoadFragment implements MediaPlayer.
     @Override
     public void onResume() {
         super.onResume();
-        if (mHasPaused) {
+        if (paused) {
             if (videoView != null) {
-                videoView.seekTo(curPage);
+                videoView.seekTo(currentPage);
                 videoView.resume();
             }
         }
@@ -69,9 +79,9 @@ public class GuidePagerFragment extends LazyLoadFragment implements MediaPlayer.
     public void onPause() {
         super.onPause();
         if (videoView != null) {
-            curPage = videoView.getCurrentPosition();
+            currentPage = videoView.getCurrentPosition();
         }
-        mHasPaused = true;
+        paused = true;
     }
 
     @Override
@@ -82,8 +92,11 @@ public class GuidePagerFragment extends LazyLoadFragment implements MediaPlayer.
         }
     }
 
+    @SuppressWarnings("unchecked")
     @Override
-    public void onCompletion(MediaPlayer mp) {
-        ((TractionActivity) getActivity()).next(curPage);
+    public void onCompletion(MediaPlayer mediaPlayer) {
+        if (null != onFragmentToActivity) {
+            onFragmentToActivity.onCallback(OnFragmentToActivity.ACTION_NEXT_PAGE, currentPage);
+        }
     }
 }

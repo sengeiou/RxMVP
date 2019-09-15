@@ -3,7 +3,7 @@ package com.yumore.utility.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentActivity;
-import com.yumore.utility.tool.RxActivityTool;
+import com.yumore.utility.utility.RxActivityTool;
 
 /**
  * @author yumore

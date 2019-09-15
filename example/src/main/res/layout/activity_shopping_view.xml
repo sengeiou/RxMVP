@@ -8,14 +8,13 @@
               android:background="@color/paleturquoise"
               android:gravity="center_horizontal"
               android:orientation="vertical"
-              tools:context="com.yumore.example.activity.ActivityShoppingView">
+        tools:context="com.yumore.example.surface.ActivityShoppingView">
 
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="match_parent"
+    <com.yumore.utility.widget.RxShoppingView
+            android:id="@+id/sv_1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="?colorPrimary"
-            app:title="添加购物控件"/>
+            android:layout_margin="10dp" />
 
     <Button
             android:id="@+id/btn_take_out"
@@ -23,13 +22,7 @@
             android:layout_height="wrap_content"
             android:text="外卖点单界面"/>
 
-    <com.yumore.rxui.view.RxShoppingView
-            android:id="@+id/sv_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"/>
-
-    <com.yumore.rxui.view.RxShoppingView
+    <com.yumore.utility.widget.RxShoppingView
             android:id="@+id/sv_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,7 +31,7 @@
             app:sv_bg_color="#CD5555"
             app:sv_text="点击购买"/>
 
-    <com.yumore.rxui.view.RxShoppingView
+    <com.yumore.utility.widget.RxShoppingView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -48,7 +41,7 @@
             app:sv_text="SHOPPING"
             app:sv_text_size="22sp"/>
 
-    <com.yumore.rxui.view.RxShoppingView
+    <com.yumore.utility.widget.RxShoppingView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -57,6 +50,13 @@
             app:sv_duration="100"
             app:sv_text="rxui"
             app:sv_text_size="18sp"/>
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            app:title="添加购物控件" />
 
 
 </LinearLayout>

@@ -12,10 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.yumore.example.R;
-import com.yumore.rxui.view.progressing.style.Circle;
-import com.yumore.rxui.view.progressing.style.CubeGrid;
-import com.yumore.rxui.view.progressing.style.DoubleBounce;
-import com.yumore.rxui.view.progressing.style.Wave;
+import com.yumore.utility.widget.progressing.style.Circle;
+import com.yumore.utility.widget.progressing.style.CubeGrid;
+import com.yumore.utility.widget.progressing.style.DoubleBounce;
+import com.yumore.utility.widget.progressing.style.Wave;
 
 /**
  * Created by Vondear.

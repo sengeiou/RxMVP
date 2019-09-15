@@ -28,7 +28,7 @@ import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
 import androidx.core.app.ActivityCompat;
-import com.yumore.utility.view.RxToast;
+import com.yumore.utility.widget.RxToast;
 import org.xmlpull.v1.XmlSerializer;
 
 import java.io.*;

@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class MainActivity extends AppCompatActivity {
+public class PreviewActivity extends AppCompatActivity {
 
     private PreviewVideoView mVideoView;
     private ViewPager mVpImage;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_preview);
 
         mVideoView = findViewById(R.id.vv_preview);
         mVpImage = findViewById(R.id.vp_image);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         mVideoView.setVideoURI(Uri.parse(getVideoPath()));
 
         for (int i = 0; i < mImageResIds.length; i++) {
-            View view = LayoutInflater.from(this).inflate(R.layout.preview_item, null, false);
+            View view = LayoutInflater.from(this).inflate(R.layout.item_preview_recycler_list, null, false);
             ((ImageView) view.findViewById(R.id.iv_intro_text)).setImageResource(mImageResIds[i]);
             mViewList.add(view);
         }

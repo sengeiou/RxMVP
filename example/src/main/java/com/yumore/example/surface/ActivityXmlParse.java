@@ -12,7 +12,7 @@ import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.entity.CityModel;
 import com.yumore.example.tools.RxPullXml;
-import com.yumore.rxui.activity.ActivityBase;
+import com.yumore.utility.activity.ActivityBase;
 
 import java.io.IOException;
 import java.io.InputStream;

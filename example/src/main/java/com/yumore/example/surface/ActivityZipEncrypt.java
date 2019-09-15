@@ -14,11 +14,11 @@ import butterknife.OnClick;
 import com.orhanobut.logger.Logger;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxFileTool;
-import com.yumore.rxui.tool.RxZipTool;
-import com.yumore.rxui.view.RxTitle;
-import com.yumore.rxui.view.RxToast;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxFileTool;
+import com.yumore.utility.utility.RxZipTool;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.RxToast;
 
 import java.io.File;
 import java.io.IOException;

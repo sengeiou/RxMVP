@@ -1,4 +1,4 @@
-package com.yumore.utility.interfaces;
+package com.yumore.utility.callback;
 
 /**
  * Created by Vondear on 2017/8/14.

@@ -7,9 +7,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.yumore.example.activity.ActivitySeat">
+        tools:context="com.yumore.example.surface.ActivitySeat">
 
-    <com.yumore.rxui.view.RxTitle
+    <com.yumore.utility.widget.RxTitle
             android:id="@+id/rx_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

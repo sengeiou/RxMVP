@@ -5,22 +5,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/green_xiaomi"
-        tools:context=".activity.ActivityWheelHorizontal">
+        tools:context=".surface.ActivityWheelHorizontal">
 
     <LinearLayout
             android:id="@+id/LinearLayout1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-        <com.yumore.rxui.view.RxTitle
-                android:id="@+id/rx_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/blue"
-                android:clipToPadding="true"
-                android:fitsSystemWindows="true"
-                app:title="横向滑动选择控件"/>
 
         <LinearLayout
                 android:id="@+id/LinearLayout2"
@@ -29,7 +20,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-            <com.yumore.rxui.view.wheelhorizontal.WheelHorizontalView
+            <com.yumore.utility.widget.wheelhorizontal.WheelHorizontalView
                     android:id="@+id/wheelView_year_month"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -47,14 +38,14 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-            <com.yumore.rxui.view.RxRulerWheelView
+            <com.yumore.utility.widget.RxRulerWheelView
                     android:id="@+id/wheelview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@android:color/white"/>
 
-            <com.yumore.rxui.view.RxRulerWheelView
+            <com.yumore.utility.widget.RxRulerWheelView
                     android:id="@+id/wheelview2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -63,7 +54,7 @@
                     app:lwvHighlightColor="#7CD717"
                     app:lwvIntervalFactor="1.1"/>
 
-            <com.yumore.rxui.view.RxRulerWheelView
+            <com.yumore.utility.widget.RxRulerWheelView
                     android:id="@+id/wheelview3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -76,7 +67,7 @@
 
         </LinearLayout>
 
-        <com.yumore.rxui.view.RxRulerWheelView
+        <com.yumore.utility.widget.RxRulerWheelView
                 android:id="@+id/wheelview4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,7 +78,7 @@
                 app:lwvMarkColor="#EEEEEE"
                 app:lwvMarkTextColor="#CACACA"/>
 
-        <com.yumore.rxui.view.RxRulerWheelView
+        <com.yumore.utility.widget.RxRulerWheelView
                 android:id="@+id/wheelview5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,6 +91,15 @@
                 app:lwvMarkColor="#EEEEEE"
                 app:lwvMarkTextColor="#CACACA"
                 app:lwvMarkTextSize="12sp"/>
+
+        <com.yumore.utility.widget.RxTitle
+                android:id="@+id/rx_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:clipToPadding="true"
+                android:fitsSystemWindows="true"
+                app:title="横向滑动选择控件" />
 
         <TextView
                 android:id="@+id/changed_tv"

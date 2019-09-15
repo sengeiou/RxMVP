@@ -12,14 +12,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.tool.RxImageTool;
-import com.yumore.rxui.view.colorpicker.ColorPickerView;
-import com.yumore.rxui.view.colorpicker.OnColorChangedListener;
-import com.yumore.rxui.view.colorpicker.OnColorSelectedListener;
-import com.yumore.rxui.view.colorpicker.slider.AlphaSlider;
-import com.yumore.rxui.view.colorpicker.slider.LightnessSlider;
-import com.yumore.rxui.view.waveview.RxWaveHelper;
-import com.yumore.rxui.view.waveview.RxWaveView;
+import com.yumore.utility.utility.RxImageTool;
+import com.yumore.utility.widget.colorpicker.ColorPickerView;
+import com.yumore.utility.widget.colorpicker.OnColorChangedListener;
+import com.yumore.utility.widget.colorpicker.OnColorSelectedListener;
+import com.yumore.utility.widget.colorpicker.slider.AlphaSlider;
+import com.yumore.utility.widget.colorpicker.slider.LightnessSlider;
+import com.yumore.utility.widget.waveview.RxWaveHelper;
+import com.yumore.utility.widget.waveview.RxWaveView;
 
 /**
  * @author yumore

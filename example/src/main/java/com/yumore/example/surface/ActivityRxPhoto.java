@@ -15,25 +15,25 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxBarTool;
-import com.yumore.rxui.tool.RxPhotoTool;
-import com.yumore.rxui.tool.RxSPTool;
-import com.yumore.rxui.view.RxTitle;
-import com.yumore.rxui.view.dialog.RxDialogChooseImage;
-import com.yumore.rxui.view.dialog.RxDialogScaleView;
-import com.yumore.rxui.view.dialog.RxDialogSureCancel;
 import com.yalantis.ucrop.UCrop;
 import com.yalantis.ucrop.UCropActivity;
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxPhotoTool;
+import com.yumore.utility.utility.RxSPTool;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.dialog.RxDialogChooseImage;
+import com.yumore.utility.widget.dialog.RxDialogScaleView;
+import com.yumore.utility.widget.dialog.RxDialogSureCancel;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static com.yumore.rxui.view.dialog.RxDialogChooseImage.LayoutType.TITLE;
+import static com.yumore.utility.widget.dialog.RxDialogChooseImage.LayoutType.TITLE;
 
 
 /**

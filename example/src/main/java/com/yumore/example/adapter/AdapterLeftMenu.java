@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.yumore.example.R;
-import com.yumore.example.model.ModelDishMenu;
+import com.yumore.example.entity.ModelDishMenu;
 
 import java.util.ArrayList;
 import java.util.List;

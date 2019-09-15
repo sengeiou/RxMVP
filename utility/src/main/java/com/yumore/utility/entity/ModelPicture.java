@@ -1,4 +1,4 @@
-package com.yumore.utility.model;
+package com.yumore.utility.entity;
 
 /**
  * 图片实体类

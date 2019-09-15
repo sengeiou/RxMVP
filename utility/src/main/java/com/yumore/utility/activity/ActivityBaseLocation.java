@@ -9,12 +9,12 @@ import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
-import com.yumore.utility.model.Gps;
-import com.yumore.utility.tool.RxLocationTool;
-import com.yumore.utility.tool.RxVibrateTool;
-import com.yumore.utility.view.RxToast;
-import com.yumore.utility.view.dialog.RxDialogGPSCheck;
-import com.yumore.utility.view.dialog.RxDialogTool;
+import com.yumore.utility.entity.Gps;
+import com.yumore.utility.utility.RxLocationTool;
+import com.yumore.utility.utility.RxVibrateTool;
+import com.yumore.utility.widget.RxToast;
+import com.yumore.utility.widget.dialog.RxDialogGPSCheck;
+import com.yumore.utility.widget.dialog.RxDialogTool;
 
 
 /**

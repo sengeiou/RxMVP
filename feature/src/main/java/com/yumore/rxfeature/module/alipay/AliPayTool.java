@@ -7,7 +7,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import com.alipay.sdk.app.PayTask;
-import com.yumore.rxui.interfaces.OnSuccessAndErrorListener;
+import com.yumore.utility.callback.OnSuccessAndErrorListener;
 
 import java.util.Map;
 

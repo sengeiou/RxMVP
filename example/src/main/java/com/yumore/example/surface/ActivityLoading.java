@@ -1,7 +1,6 @@
 package com.yumore.example.surface;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -10,8 +9,8 @@ import butterknife.ButterKnife;
 import com.google.android.material.tabs.TabLayout;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.view.RxTitle;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore

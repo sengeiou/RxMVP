@@ -1,4 +1,4 @@
-package com.yumore.utility.interfaces;
+package com.yumore.utility.callback;
 
 /**
  * @author Vondear

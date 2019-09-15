@@ -5,20 +5,13 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context=".activity.ActivityELMe">
-
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?colorPrimary"
-            app:title="点餐界面"/>
+        tools:context=".surface.ActivityELMe">
 
     <RelativeLayout
             android:id="@+id/main_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".activity.ActivityELMe">
+            tools:context=".surface.ActivityELMe">
 
         <LinearLayout
                 android:id="@+id/shopping_cart_bottom"
@@ -107,5 +100,12 @@
                 android:visibility="gone"/>
 
     </RelativeLayout>
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            app:title="点餐界面" />
 
 </LinearLayout>

@@ -10,13 +10,21 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0.0"
+        // router
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 }
 
 dependencies {
-    implementation project(':uikit')
+    implementation project(':utility')
     implementation project(':camera')
     implementation project(':feature')
+    implementation project(':provider')
+    implementation project(':common')
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -36,5 +44,5 @@ dependencies {
     implementation 'com.orhanobut:logger:2.2.0'
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
-
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }

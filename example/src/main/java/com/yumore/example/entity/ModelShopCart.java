@@ -1,4 +1,4 @@
-package com.yumore.example.model;
+package com.yumore.example.entity;
 
 import android.util.Log;
 

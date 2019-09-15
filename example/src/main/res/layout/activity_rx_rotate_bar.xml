@@ -6,14 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.yumore.example.activity.ActivityRxRotateBar">
-
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            app:title="旋转引擎"/>
+        tools:context="com.yumore.example.surface.ActivityRxRotateBar">
 
     <LinearLayout
             android:id="@+id/ll_change"
@@ -24,7 +17,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
-        <com.yumore.rxui.view.RxRotateBar
+        <com.yumore.utility.widget.RxRotateBar
                 android:id="@+id/rating_view"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
@@ -39,5 +32,12 @@
                 android:visibility="gone"/>
 
     </LinearLayout>
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:title="旋转引擎" />
 
 </LinearLayout>

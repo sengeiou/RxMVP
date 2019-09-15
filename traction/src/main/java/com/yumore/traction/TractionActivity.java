@@ -14,8 +14,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.yumore.provider.RouterConstants;
-import com.yumore.traction.videoguide.ExtendedViewPager;
-import com.yumore.traction.videoguide.FragmentAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +21,7 @@ import java.util.List;
 /**
  * @author Nathaniel
  */
-public class TractionActivity extends FragmentActivity implements ViewPager.OnPageChangeListener {
+public class TractionActivity extends FragmentActivity implements ViewPager.OnPageChangeListener, OnFragmentToActivity<Integer> {
 
     @BindView(R2.id.guide_viewpager)
     ExtendedViewPager extendedViewPager;
@@ -39,6 +37,7 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +65,7 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
         }
 
         for (int i = 0; i < videoRes.length; i++) {
-            GuidePagerFragment fragment = new GuidePagerFragment();
+            TractionFragment fragment = new TractionFragment();
             Bundle bundle = new Bundle();
             bundle.putInt("res", videoRes[i]);
             bundle.putInt("page", i);
@@ -79,20 +78,12 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
         extendedViewPager.addOnPageChangeListener(this);
     }
 
-    public void next(int positon) {
-        int i = extendedViewPager.getCurrentItem();
-        if (positon == i) {
-            positon += 1;
-            extendedViewPager.setCurrentItem(positon, true);
-        }
-    }
-
     @OnClick({
             R2.id.enter_button
     })
     public void onClick(View view) {
         if (view.getId() == R.id.enter_button) {
-            ARouter.getInstance().build(RouterConstants.MASTER_HOME).navigation();
+            ARouter.getInstance().build(RouterConstants.EXAMPLE_HOME).navigation();
         }
     }
 
@@ -119,5 +110,14 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    @Override
+    public void onCallback(String action, Integer integer) {
+        int i = extendedViewPager.getCurrentItem();
+        if (integer == i) {
+            integer += 1;
+            extendedViewPager.setCurrentItem(integer, true);
+        }
     }
 }

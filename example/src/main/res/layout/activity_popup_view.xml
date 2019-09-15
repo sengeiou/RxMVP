@@ -8,9 +8,9 @@
         android:layout_height="match_parent"
         android:background="@color/blue_shadow_50"
         android:orientation="vertical"
-        tools:context="com.yumore.example.activity.ActivityPopupView">
+        tools:context="com.yumore.example.surface.ActivityPopupView">
 
-    <com.yumore.rxui.view.RxTitle
+    <com.yumore.utility.widget.RxTitle
             android:id="@+id/rx_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

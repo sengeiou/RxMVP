@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
         android:orientation="vertical"
-        tools:context="com.yumore.example.activity.ActivityCardStack">
+        tools:context="com.yumore.example.surface.ActivityCardStack">
 
     <LinearLayout
             android:id="@+id/button_container"
@@ -33,7 +33,7 @@
 
     </LinearLayout>
 
-    <com.yumore.rxui.view.cardstack.RxCardStackView
+    <com.yumore.utility.widget.cardstack.RxCardStackView
             android:id="@+id/stackview_main"
             android:layout_width="match_parent"
             android:layout_height="0dp"

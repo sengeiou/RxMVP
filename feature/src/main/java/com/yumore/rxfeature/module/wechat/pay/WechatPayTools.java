@@ -5,8 +5,8 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
-import com.yumore.rxui.interfaces.OnSuccessAndErrorListener;
-import com.yumore.rxui.view.RxToast;
+import com.yumore.utility.callback.OnSuccessAndErrorListener;
+import com.yumore.utility.widget.RxToast;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static com.yumore.rxui.tool.RxConstants.WX_TOTAL_ORDER;
+import static com.yumore.utility.utility.RxConstants.WX_TOTAL_ORDER;
 
 /**
  * @author Vondear

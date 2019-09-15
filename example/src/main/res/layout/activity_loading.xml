@@ -7,7 +7,7 @@
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
-    <com.yumore.rxui.view.RxTitle
+    <com.yumore.utility.widget.RxTitle
             android:id="@+id/rx_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

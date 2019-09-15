@@ -10,9 +10,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.yumore.example.R;
-import com.yumore.example.interfaces.ShopCartInterface;
-import com.yumore.example.model.ModelDish;
-import com.yumore.example.model.ModelShopCart;
+import com.yumore.example.callback.ShopCartInterface;
+import com.yumore.example.entity.ModelDish;
+import com.yumore.example.entity.ModelShopCart;
 
 import java.util.ArrayList;
 

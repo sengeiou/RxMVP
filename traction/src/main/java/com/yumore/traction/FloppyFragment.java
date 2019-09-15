@@ -13,15 +13,14 @@ import androidx.fragment.app.Fragment;
  * Fragment预加载问题的解决方案：
  * 1.可以懒加载的Fragment
  * 2.切换到其他页面时停止加载数据（可选）
+ *
+ * @author Nathaniel
  */
 
-public abstract class LazyLoadFragment extends Fragment {
-    /**
-     * 视图是否已经初初始化
-     */
+public abstract class FloppyFragment extends Fragment {
+    protected final String TAG = FloppyFragment.class.getSimpleName();
     protected boolean isInit = false;
     protected boolean isLoad = false;
-    protected final String TAG = "LazyLoadFragment";
     private View view;
 
     @Nullable
@@ -29,7 +28,6 @@ public abstract class LazyLoadFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(setContentView(), container, false);
         isInit = true;
-        /**初始化的时候去加载数据**/
         isCanLoadData();
         return view;
     }
@@ -106,7 +104,6 @@ public abstract class LazyLoadFragment extends Fragment {
      * @return
      */
     protected <T extends View> T findViewById(int id) {
-
         return (T) getContentView().findViewById(id);
     }
 

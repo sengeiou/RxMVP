@@ -13,11 +13,11 @@ import android.view.WindowManager;
 import android.webkit.*;
 import android.widget.*;
 import com.yumore.utility.R;
-import com.yumore.utility.tool.RxBarTool;
-import com.yumore.utility.tool.RxConstants;
-import com.yumore.utility.tool.RxImageTool;
-import com.yumore.utility.tool.RxKeyboardTool;
-import com.yumore.utility.view.RxTextAutoZoom;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxConstants;
+import com.yumore.utility.utility.RxImageTool;
+import com.yumore.utility.utility.RxKeyboardTool;
+import com.yumore.utility.widget.RxTextAutoZoom;
 
 /**
  * @author yumore

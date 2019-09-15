@@ -1,7 +1,7 @@
 package com.yumore.common.basic;
 
 import android.app.Application;
-
+import android.content.Context;
 import com.yumore.common.helper.InitializeHelper;
 
 /**
@@ -10,6 +10,11 @@ import com.yumore.common.helper.InitializeHelper;
  */
 public abstract class BaseApplication extends Application implements InitializeHelper {
     protected Application application;
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+    }
 
     @Override
     public void onCreate() {

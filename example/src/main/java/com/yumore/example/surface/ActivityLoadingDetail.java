@@ -13,10 +13,10 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.yumore.example.R;
 import com.yumore.example.tools.EvaluatorARGB;
-import com.yumore.rxui.view.progressing.SpinKitView;
-import com.yumore.rxui.view.progressing.SpriteFactory;
-import com.yumore.rxui.view.progressing.Style;
-import com.yumore.rxui.view.progressing.sprite.Sprite;
+import com.yumore.utility.widget.progressing.SpinKitView;
+import com.yumore.utility.widget.progressing.SpriteFactory;
+import com.yumore.utility.widget.progressing.Style;
+import com.yumore.utility.widget.progressing.sprite.Sprite;
 
 
 /**

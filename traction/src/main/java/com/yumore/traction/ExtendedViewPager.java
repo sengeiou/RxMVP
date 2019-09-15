@@ -1,4 +1,4 @@
-package com.yumore.traction.videoguide;
+package com.yumore.traction;
 
 import android.content.Context;
 import android.util.AttributeSet;

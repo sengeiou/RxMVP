@@ -11,12 +11,12 @@ import butterknife.ButterKnife;
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.adapter.AdapterStackTest;
-import com.yumore.rxui.interfaces.OnSimpleListener;
-import com.yumore.rxui.tool.RxTool;
-import com.yumore.rxui.view.cardstack.RxCardStackView;
-import com.yumore.rxui.view.cardstack.tools.RxAdapterAllMoveDownAnimator;
-import com.yumore.rxui.view.cardstack.tools.RxAdapterUpDownAnimator;
-import com.yumore.rxui.view.cardstack.tools.RxAdapterUpDownStackAnimator;
+import com.yumore.utility.callback.OnSimpleListener;
+import com.yumore.utility.utility.RxTool;
+import com.yumore.utility.widget.cardstack.RxCardStackView;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterAllMoveDownAnimator;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterUpDownAnimator;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterUpDownStackAnimator;
 
 import java.util.Arrays;
 

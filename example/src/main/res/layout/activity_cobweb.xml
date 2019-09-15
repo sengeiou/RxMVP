@@ -6,23 +6,6 @@
               android:background="@color/e"
               android:orientation="vertical">
 
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/green_xiaomi"
-            android:clipToPadding="true"
-            android:fitsSystemWindows="true"
-            app:title="蛛网等级Demo"/>
-
-    <com.yumore.rxui.view.RxCobwebView
-            android:id="@+id/cobweb_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="5dp"
-            app:spiderColor="@color/colorPrimaryDark"/>
-
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -99,7 +82,7 @@
                         android:text="蛛网填充颜色"
                         android:textColor="@color/green_xiaomi"/>
 
-                <com.yumore.rxui.view.colorpicker.ColorPickerView
+                <com.yumore.utility.widget.colorpicker.ColorPickerView
                         android:id="@+id/color_picker_view"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -110,13 +93,13 @@
                         app:lightnessSliderView="@+id/v_lightness_slider"
                         app:wheelType="FLOWER"/>
 
-                <com.yumore.rxui.view.colorpicker.slider.LightnessSlider
-                        android:id="@+id/v_lightness_slider"
+                <com.yumore.utility.widget.colorpicker.slider.AlphaSlider
+                        android:id="@+id/v_alpha_slider"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"/>
 
-                <com.yumore.rxui.view.colorpicker.slider.AlphaSlider
-                        android:id="@+id/v_alpha_slider"
+                <com.yumore.utility.widget.colorpicker.slider.LightnessSlider
+                        android:id="@+id/v_lightness_slider"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"/>
 
@@ -136,7 +119,7 @@
                         android:text="蛛网等级颜色"
                         android:textColor="@color/green_xiaomi"/>
 
-                <com.yumore.rxui.view.colorpicker.ColorPickerView
+                <com.yumore.utility.widget.colorpicker.ColorPickerView
                         android:id="@+id/color_picker_view_level"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -147,13 +130,13 @@
                         app:lightnessSliderView="@+id/v_lightness_slider_level"
                         app:wheelType="FLOWER"/>
 
-                <com.yumore.rxui.view.colorpicker.slider.LightnessSlider
-                        android:id="@+id/v_lightness_slider_level"
+                <com.yumore.utility.widget.colorpicker.slider.AlphaSlider
+                        android:id="@+id/v_alpha_slider_level"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"/>
 
-                <com.yumore.rxui.view.colorpicker.slider.AlphaSlider
-                        android:id="@+id/v_alpha_slider_level"
+                <com.yumore.utility.widget.colorpicker.slider.LightnessSlider
+                        android:id="@+id/v_lightness_slider_level"
                         android:layout_width="match_parent"
                         android:layout_height="20dp"/>
             </LinearLayout>
@@ -161,5 +144,22 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <com.yumore.utility.widget.RxCobwebView
+            android:id="@+id/cobweb_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            app:spiderColor="@color/colorPrimaryDark" />
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_xiaomi"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            app:title="蛛网等级Demo" />
 
 </LinearLayout>

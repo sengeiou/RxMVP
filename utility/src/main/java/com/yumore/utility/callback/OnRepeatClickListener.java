@@ -1,8 +1,8 @@
-package com.yumore.utility.interfaces;
+package com.yumore.utility.callback;
 
 import android.view.View;
 import com.yumore.utility.utility.RxTool;
-import com.yumore.utility.view.RxToast;
+import com.yumore.utility.widget.RxToast;
 
 /**
  * @author Vondear

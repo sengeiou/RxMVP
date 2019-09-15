@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.yumore.rxui">
+        package="com.yumore.utility">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -27,7 +27,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus"/>
     <application>
         <activity
-                android:name="com.yumore.rxui.activity.ActivityWebView"
+                android:name="com.yumore.utility.activity.ActivityWebView"
                 android:windowSoftInputMode="stateHidden|adjustResize"/>
 
         <provider

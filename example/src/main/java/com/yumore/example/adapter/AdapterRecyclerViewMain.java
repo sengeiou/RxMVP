@@ -6,14 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.bumptech.glide.Glide;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.example.model.ModelMainItem;
-import com.yumore.rxui.tool.RxActivityTool;
+import com.yumore.example.entity.ModelMainItem;
+import com.yumore.utility.utility.RxActivityTool;
 
 import java.util.List;
 
@@ -32,27 +33,20 @@ public class AdapterRecyclerViewMain extends RecyclerView.Adapter<AdapterRecycle
         mValues = items;
     }
 
+    @NonNull
     @Override
     public AdapterRecyclerViewMain.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recyclerview_main, parent, false);
         context = view.getContext();
-      /*  mScreenWidth = RxDeviceTool.getScreenWidth(context) > RxDeviceTool.getScreenHeight(context) ? RxDeviceTool.getScreenHeight(context) : RxDeviceTool.getScreenWidth(context);
-        mItemWidth = (mScreenWidth - 50) / 3;
-        mItemHeight = mItemWidth * 6 / 4;
-        GridLayoutManager.LayoutParams layoutParams = new GridLayoutManager.LayoutParams(mItemWidth, mItemHeight);
-        view.setLayoutParams(layoutParams);*/
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-
         holder.mItem = mValues.get(position);
-
         holder.tvName.setText(holder.mItem.getName());
-
-        Glide.with(context).
-                load(holder.mItem.getImage()).
+        Glide.with(context)
+                .load(holder.mItem.getImage()).
                 thumbnail(0.5f).
                 into(holder.imageView);
 

@@ -15,11 +15,11 @@ import com.yumore.camera.RxCameraView;
 import com.yumore.camera.tool.RxCameraTool;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBaseLocation;
-import com.yumore.rxui.interfaces.OnRxCamera;
-import com.yumore.rxui.tool.*;
-import com.yumore.rxui.view.RxToast;
-import com.yumore.rxui.view.dialog.RxDialogScaleView;
+import com.yumore.utility.activity.ActivityBaseLocation;
+import com.yumore.utility.callback.OnRxCamera;
+import com.yumore.utility.utility.*;
+import com.yumore.utility.widget.RxToast;
+import com.yumore.utility.widget.dialog.RxDialogScaleView;
 
 import java.io.File;
 import java.util.Random;

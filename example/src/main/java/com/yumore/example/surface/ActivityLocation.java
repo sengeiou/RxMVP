@@ -15,9 +15,9 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxLocationTool;
-import com.yumore.rxui.view.RxTitle;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxLocationTool;
+import com.yumore.utility.widget.RxTitle;
 
 import java.util.Iterator;
 

@@ -9,15 +9,13 @@
               android:clipToPadding="true"
               android:fitsSystemWindows="true"
               android:orientation="vertical"
-              tools:context="com.yumore.example.activity.ActivityMovieSeat">
+        tools:context="com.yumore.example.surface.ActivityMovieSeat">
 
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
+    <com.yumore.utility.widget.RxSeatMovie
+            android:id="@+id/seatView"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="@color/google_green"
-            app:title="仙剑奇侠传：电影版"
-            app:titleColor="@color/white"/>
+            android:layout_height="match_parent"
+            android:background="@color/e" />
 
     <View
             android:layout_width="match_parent"
@@ -53,10 +51,12 @@
             android:layout_marginLeft="50dp"
             android:background="@color/gray1"/>
 
-    <com.yumore.rxui.view.RxSeatMovie
-            android:id="@+id/seatView"
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/e"/>
+            android:layout_height="55dp"
+            android:background="@color/google_green"
+            app:title="仙剑奇侠传：电影版"
+            app:titleColor="@color/white" />
 
 </LinearLayout>

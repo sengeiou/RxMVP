@@ -6,14 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.yumore.example.activity.ActivityLike">
-
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            app:title="点赞的艺术"/>
+        tools:context="com.yumore.example.surface.ActivityLike">
 
     <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                <com.yumore.rxui.view.likeview.RxShineButton
+                <com.yumore.utility.widget.likeview.RxShineButton
                         android:id="@+id/po_image1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -66,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                <com.yumore.rxui.view.likeview.RxShineButton
+                <com.yumore.utility.widget.likeview.RxShineButton
                         android:id="@+id/po_image2"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -84,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                <com.yumore.rxui.view.likeview.RxShineButton
+                <com.yumore.utility.widget.likeview.RxShineButton
                         android:id="@+id/po_image3"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -120,7 +113,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp">
 
-                <com.yumore.rxui.view.likeview.RxShineButton
+                <com.yumore.utility.widget.likeview.RxShineButton
                         android:id="@+id/po_image0"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -132,7 +125,7 @@
             </RelativeLayout>
 
 
-            <com.yumore.rxui.view.likeview.RxShineButton
+            <com.yumore.utility.widget.likeview.RxShineButton
                     android:id="@+id/po_image8"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -175,7 +168,7 @@
 
         </LinearLayout>
 
-        <com.yumore.rxui.view.heart.RxHeartLayout
+        <com.yumore.utility.widget.heart.RxHeartLayout
                 android:id="@+id/heart_layout"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
@@ -189,5 +182,12 @@
                 android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:title="点赞的艺术" />
 
 </LinearLayout>

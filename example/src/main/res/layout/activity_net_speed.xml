@@ -5,14 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="com.yumore.example.activity.ActivityNetSpeed">
-
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?colorPrimary"
-            app:title="添加购物控件"/>
+        tools:context="com.yumore.example.surface.ActivityNetSpeed">
 
     <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -27,7 +20,7 @@
             android:paddingTop="@dimen/activity_vertical_margin"
             tools:context="com.yumore.tools.activity.ActivityNetSpeed">
 
-        <com.yumore.rxui.view.RxNetSpeedView
+        <com.yumore.utility.widget.RxNetSpeedView
                 android:id="@+id/rx_net_speed_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,5 +60,12 @@
                 android:text="简单模式是所有网卡上下行速度之和；\n\n在复杂模式中，W代表WiFi网络，M代表移动蜂窝网络，↑代表上传，↓代表下载。"/>
 
     </RelativeLayout>
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            app:title="添加购物控件" />
 
 </LinearLayout>

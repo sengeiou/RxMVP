@@ -1,9 +1,12 @@
-package com.yumore.traction.videoguide;
+package com.yumore.traction;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.VideoView;
 
+/**
+ * @author Nathaniel
+ */
 public class FullScreenVideoView extends VideoView {
 
     public FullScreenVideoView(Context context) {

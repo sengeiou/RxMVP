@@ -20,7 +20,7 @@ import android.content.Context;
 import android.graphics.*;
 import android.util.AttributeSet;
 import com.yumore.example.R;
-import com.yumore.rxui.view.scaleimage.RxScaleImageView;
+import com.yumore.utility.widget.scaleimage.RxScaleImageView;
 
 
 /**

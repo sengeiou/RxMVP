@@ -12,10 +12,10 @@ import com.yumore.example.R2;
 import com.yumore.example.common.SelfInfo;
 import com.yumore.rxfeature.module.alipay.AliPayModel;
 import com.yumore.rxfeature.module.alipay.AliPayTool;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.interfaces.OnSuccessAndErrorListener;
-import com.yumore.rxui.tool.RxTimeTool;
-import com.yumore.rxui.view.RxToast;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.callback.OnSuccessAndErrorListener;
+import com.yumore.utility.utility.RxTimeTool;
+import com.yumore.utility.widget.RxToast;
 
 public class ActivityAliPay extends ActivityBase {
 

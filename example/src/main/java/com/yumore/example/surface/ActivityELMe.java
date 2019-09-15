@@ -20,15 +20,15 @@ import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.adapter.AdapterLeftMenu;
 import com.yumore.example.adapter.AdapterRightDish;
-import com.yumore.example.interfaces.ShopCartInterface;
+import com.yumore.example.callback.ShopCartInterface;
 import com.yumore.example.entity.ModelDish;
 import com.yumore.example.entity.ModelDishMenu;
 import com.yumore.example.entity.ModelShopCart;
 import com.yumore.example.view.RxDialogShopCart;
 import com.yumore.example.view.RxFakeAddImageView;
 import com.yumore.example.view.RxPointFTypeEvaluator;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.view.RxTitle;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.widget.RxTitle;
 
 import java.util.ArrayList;
 

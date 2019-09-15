@@ -1,25 +1,28 @@
-package com.yumore.example;
+package com.yumore.example.common;
 
-import android.app.Application;
 import android.content.Context;
-import com.yumore.rxui.tool.RxTool;
+import com.yumore.common.helper.InitializeHelper;
+import com.yumore.utility.utility.RxTool;
 
 /**
  * @author vonde
  * @date 2016/12/23
  */
 
-public class ExampleApplication extends Application {
+public class ExampleApplication implements InitializeHelper {
 
-    @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(base);
+    private static ExampleApplication exampleApplication;
+
+
+    public static ExampleApplication getInstance() {
+        if (exampleApplication == null) {
+            exampleApplication = new ExampleApplication();
+        }
+        return exampleApplication;
     }
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        RxTool.init(this);
+    public void initialize(Context context) {
+        RxTool.init(context);
     }
-
 }

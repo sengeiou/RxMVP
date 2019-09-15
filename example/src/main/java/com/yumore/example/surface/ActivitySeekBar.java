@@ -7,9 +7,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.view.RxSeekBar;
-import com.yumore.rxui.view.RxTitle;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.widget.RxSeekBar;
+import com.yumore.utility.widget.RxTitle;
 
 import java.text.DecimalFormat;
 

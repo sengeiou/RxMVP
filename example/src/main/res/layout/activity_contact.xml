@@ -6,18 +6,10 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <com.yumore.rxui.view.RxTitle
-            android:id="@+id/rx_title"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:background="@color/blue"
-            app:title="联系人侧边栏快速导航"
-            app:titleColor="@color/white"/>
-
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".activity.ActivityContact">
+            tools:context=".surface.ActivityContact">
 
 
         <androidx.appcompat.widget.RecyclerView
@@ -26,11 +18,19 @@
                 android:layout_height="match_parent"
                 />
 
-        <com.yumore.rxui.view.wavesidebar.WaveSideBarView
+        <com.yumore.utility.widget.wavesidebar.WaveSideBarView
                 android:id="@+id/side_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
     </RelativeLayout>
+
+    <com.yumore.utility.widget.RxTitle
+            android:id="@+id/rx_title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/blue"
+            app:title="联系人侧边栏快速导航"
+            app:titleColor="@color/white" />
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.yumore.utility.photomagic;
+package com.yumore.utility.photo;
 
 import android.text.TextUtils;
 

@@ -11,9 +11,9 @@ import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.yumore.utility.interfaces.OnDoListener;
-import com.yumore.utility.interfaces.OnSimpleListener;
-import com.yumore.utility.view.RxToast;
+import com.yumore.utility.callback.OnDoListener;
+import com.yumore.utility.callback.OnSimpleListener;
+import com.yumore.utility.widget.RxToast;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -1,4 +1,4 @@
-package com.yumore.common.callback;
+package com.yumore.traction;
 
 /**
  * 建议使用key->value的形式出传数据
@@ -10,16 +10,13 @@ package com.yumore.common.callback;
  */
 public interface OnFragmentToActivity<T> {
 
-    String ACTION_DELETE_PIGEON = "deletePigeon";
-    String ACTION_UPDATE_PIGEON = "updatePigeon";
-    String ACTION_UPDATE_UNREAD = "updateUnread";
+    String ACTION_NEXT_PAGE = "nextPage";
 
     /**
      * 获取指定fragment的数据
      *
-     * @param position position
      * @param action   action
      * @param t        data
      */
-    void onCallback(int position, String action, T t);
+    void onCallback(String action, T t);
 }

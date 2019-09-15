@@ -9,9 +9,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.rxui.activity.ActivityBase;
-import com.yumore.rxui.tool.RxActivityTool;
-import com.yumore.rxui.view.RxTitle;
+import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.utility.RxActivityTool;
+import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore

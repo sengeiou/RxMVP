@@ -9,15 +9,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.adapter.AdapterRecyclerViewMain;
 import com.yumore.example.entity.ModelMainItem;
+import com.yumore.provider.RouterConstants;
 import com.yumore.rxfeature.activity.ActivityCodeTool;
-import com.yumore.rxui.activity.ActivityWebView;
-import com.yumore.rxui.tool.RxImageTool;
-import com.yumore.rxui.tool.RxPermissionsTool;
-import com.yumore.rxui.tool.RxRecyclerViewDividerTool;
+import com.yumore.utility.activity.ActivityWebView;
+import com.yumore.utility.utility.RxImageTool;
+import com.yumore.utility.utility.RxPermissionsTool;
+import com.yumore.utility.utility.RxRecyclerViewDividerTool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,29 +27,26 @@ import java.util.List;
 /**
  * @author yumore
  */
-public class ActivityMain extends AppCompatActivity {
-
-    //双击返回键 退出
-    //----------------------------------------------------------------------------------------------
-    private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
-    @BindView(R2.id.recyclerview)
+@Route(path = RouterConstants.EXAMPLE_HOME)
+public class ExampleActivity extends AppCompatActivity {
+    private static final int TIME_INTERVAL = 2000;
+    private static final int COLUMN_COUNT_DEFAULT = 3;
+    @BindView(R2.id.recyclerView)
     RecyclerView recyclerview;
     private List<ModelMainItem> mData;
-    private int mColumnCount = 3;
-    private ActivityMain mContext;
+    private ExampleActivity mContext;
     private long mBackPressed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_example);
         ButterKnife.bind(this);
         mContext = this;
         initData();
         initView();
 
-        RxPermissionsTool.
-                with(mContext).
+        RxPermissionsTool.with(mContext).
                 addPermission(Manifest.permission.ACCESS_FINE_LOCATION).
                 addPermission(Manifest.permission.ACCESS_COARSE_LOCATION).
                 addPermission(Manifest.permission.READ_EXTERNAL_STORAGE).
@@ -108,10 +107,10 @@ public class ActivityMain extends AppCompatActivity {
     }
 
     private void initView() {
-        if (mColumnCount <= 1) {
+        if (COLUMN_COUNT_DEFAULT <= 1) {
             recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
         } else {
-            recyclerview.setLayoutManager(new GridLayoutManager(mContext, mColumnCount));
+            recyclerview.setLayoutManager(new GridLayoutManager(mContext, COLUMN_COUNT_DEFAULT));
         }
 
         recyclerview.addItemDecoration(new RxRecyclerViewDividerTool(RxImageTool.dp2px(5f)));
@@ -130,5 +129,4 @@ public class ActivityMain extends AppCompatActivity {
         }
         mBackPressed = System.currentTimeMillis();
     }
-    //==============================================================================================
 }
