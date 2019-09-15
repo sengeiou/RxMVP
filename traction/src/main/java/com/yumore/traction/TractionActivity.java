@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -29,6 +30,8 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     TextView textView;
     @BindView(R2.id.dot_layout)
     LinearLayout linearLayout;
+    @BindView(R2.id.traction_layout)
+    RelativeLayout relativeLayout;
     private List<Fragment> fragmentList = new ArrayList<>();
     private int[] videoRes = new int[]{R.raw.guide1, R.raw.guide2, R.raw.guide3};
     private LinearLayout.LayoutParams params1, params2;
@@ -76,6 +79,7 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
         extendedViewPager.setOffscreenPageLimit(fragmentList.size());
         extendedViewPager.setAdapter(fragmentAdapter);
         extendedViewPager.addOnPageChangeListener(this);
+        relativeLayout.bringToFront();
     }
 
     @OnClick({
