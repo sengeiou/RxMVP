@@ -2,8 +2,8 @@ package com.yumore.common.reflect;
 
 import android.net.ParseException;
 import com.google.gson.JsonParseException;
-import com.yumore.common.common.utility.EmptyUtils;
-import com.yumore.common.common.utility.LoggerUtils;
+import com.yumore.common.utility.EmptyUtils;
+import com.yumore.common.utility.LoggerUtils;
 import io.reactivex.functions.Consumer;
 import org.json.JSONException;
 import retrofit2.HttpException;

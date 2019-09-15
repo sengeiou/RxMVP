@@ -3,7 +3,6 @@ package com.yumore.common.utility;
 import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Base64;
-import com.yumore.common.common.utility.EmptyUtils;
 import net.lingala.zip4j.model.FileHeader;
 import net.lingala.zip4j.model.ZipParameters;
 import net.lingala.zip4j.util.Zip4jConstants;
@@ -405,13 +404,13 @@ public class ZipUtils {
      */
     private static boolean zipFile(File resFile, String rootPath, ZipOutputStream zos, String comment)
             throws IOException {
-        rootPath = rootPath + (com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(rootPath) ? "" : File.separator) + resFile.getName();
+        rootPath = rootPath + (EmptyUtils.isObjectEmpty(rootPath) ? "" : File.separator) + resFile.getName();
         if (resFile.isDirectory()) {
             File[] fileList = resFile.listFiles();
             // 如果是空文件夹那么创建它，我把'/'换为File.separator测试就不成功，eggPain
             if (fileList == null || fileList.length <= 0) {
                 ZipEntry entry = new ZipEntry(rootPath + '/');
-                if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(comment)) {
+                if (!EmptyUtils.isObjectEmpty(comment)) {
                     entry.setComment(comment);
                 }
                 zos.putNextEntry(entry);
@@ -429,7 +428,7 @@ public class ZipUtils {
             try {
                 is = new BufferedInputStream(new FileInputStream(resFile));
                 ZipEntry entry = new ZipEntry(rootPath);
-                if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(comment)) {
+                if (!EmptyUtils.isObjectEmpty(comment)) {
                     entry.setComment(comment);
                 }
                 zos.putNextEntry(entry);

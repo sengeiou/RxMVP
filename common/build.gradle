@@ -1,5 +1,5 @@
 apply plugin: "com.android.library"
-apply plugin: "com.jakewharton.butterknife"
+apply plugin: 'com.jakewharton.butterknife'
 
 Properties properties = new Properties()
 File keyStore = project.rootProject.file("config.properties")
@@ -9,11 +9,11 @@ if (keyStore.exists()) {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 3
         versionName "1.0.2"
         //router
@@ -22,7 +22,11 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+    }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -47,12 +51,12 @@ dependencies {
     api project(":gallery")
     api project(':provider')
 
-    api 'androidx.appcompat:appcompat:1.0.2'
+    api 'androidx.appcompat:appcompat:1.1.0'
     api 'com.google.android.material:material:1.0.0'
     api 'androidx.legacy:legacy-support-v4:1.0.0'
     api 'androidx.cardview:cardview:1.0.0'
     api 'androidx.recyclerview:recyclerview:1.0.0'
-    api 'androidx.vectordrawable:vectordrawable:1.0.1'
+    api 'androidx.vectordrawable:vectordrawable:1.1.0'
     api 'androidx.annotation:annotation:1.1.0'
 
     api 'io.reactivex.rxjava2:rxjava:2.2.0'
@@ -66,7 +70,7 @@ dependencies {
     api 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
     api 'com.squareup.okhttp3:logging-interceptor:3.9.0'
     api 'com.squareup.okio:okio:2.1.0'
-    api "com.squareup.okhttp3:okhttp:3.11.0"
+    api "com.squareup.okhttp3:okhttp:3.12.1"
 
     api "com.squareup.okhttp3:logging-interceptor:3.9.0"
     api 'com.github.tbruyelle:rxpermissions:0.10.2'
@@ -83,15 +87,11 @@ dependencies {
     implementation "com.github.bumptech.glide:okhttp3-integration:4.9.0"
     annotationProcessor "com.github.bumptech.glide:compiler:4.9.0"
 
-    api 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    api 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
 
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 
     implementation 'top.zibin:Luban:1.1.8'
-
-
-
-
-
+    implementation 'org.jetbrains:annotations:15.0'
 }

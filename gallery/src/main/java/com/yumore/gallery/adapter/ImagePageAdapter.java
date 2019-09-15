@@ -1,12 +1,12 @@
 package com.yumore.gallery.adapter;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import androidx.core.view.PagerAdapter;
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
 import com.github.chrisbanes.photoview.OnPhotoTapListener;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.yumore.gallery.entity.ImageItem;

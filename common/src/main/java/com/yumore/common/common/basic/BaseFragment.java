@@ -15,8 +15,8 @@ import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import com.yumore.common.R;
-import com.yumore.common.common.utility.EmptyUtils;
 import com.yumore.common.mvp.*;
+import com.yumore.common.utility.EmptyUtils;
 
 /**
  * @author Nathaniel

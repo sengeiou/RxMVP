@@ -2,16 +2,15 @@ package com.yumore.gallery.adapter;
 
 import android.Manifest;
 import android.app.Activity;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.Toast;
-import androidx.appcompat.widget.RecyclerView;
-import androidx.appcompat.widget.RecyclerView.ViewHolder;
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.RecyclerView;
 import com.yumore.gallery.R;
 import com.yumore.gallery.entity.ImageItem;
 import com.yumore.gallery.helper.ImagePicker;
@@ -34,7 +33,7 @@ import java.util.ArrayList;
  * @author Nathaniel
  */
 
-public class ImageRecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     /**
      * 第一个条目是相机
      */
@@ -100,7 +99,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == ITEM_TYPE_CAMERA) {
             return new CameraViewHolder(mInflater.inflate(R.layout.adapter_camera_item, parent, false));
         }
@@ -108,7 +107,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof CameraViewHolder) {
             ((CameraViewHolder) holder).bindCamera();
         } else if (holder instanceof ImageViewHolder) {
@@ -149,7 +148,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
         void onImageItemClick(View view, ImageItem imageItem, int position);
     }
 
-    private class ImageViewHolder extends ViewHolder {
+    private class ImageViewHolder extends RecyclerView.ViewHolder {
 
         View rootView;
         ImageView ivThumb;
@@ -214,7 +213,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     }
 
-    private class CameraViewHolder extends ViewHolder {
+    private class CameraViewHolder extends RecyclerView.ViewHolder {
 
         View mItemView;
 

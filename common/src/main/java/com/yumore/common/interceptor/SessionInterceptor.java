@@ -1,8 +1,8 @@
 package com.yumore.common.interceptor;
 
 import com.alibaba.fastjson.JSON;
-import com.yumore.common.common.utility.EmptyUtils;
-import com.yumore.common.common.utility.LoggerUtils;
+import com.yumore.common.utility.EmptyUtils;
+import com.yumore.common.utility.LoggerUtils;
 import okhttp3.*;
 import okio.BufferedSource;
 import okio.Okio;

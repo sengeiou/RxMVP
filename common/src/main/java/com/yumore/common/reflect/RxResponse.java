@@ -1,7 +1,7 @@
 package com.yumore.common.reflect;
 
-import com.yumore.common.common.utility.EmptyUtils;
 import com.yumore.common.entity.ResultData;
+import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.GsonUtils;
 import com.yumore.common.utility.ZipUtils;
 import io.reactivex.functions.Function;

@@ -1,7 +1,6 @@
 package com.yumore.common.utility;
 
 import com.google.gson.Gson;
-import com.yumore.common.common.utility.EmptyUtils;
 import com.yumore.common.entity.BaseEntity;
 import okhttp3.ResponseBody;
 
@@ -17,7 +16,7 @@ import java.util.List;
 public class GsonPaser {
     public static <T> BaseEntity<T> fromJsonObject(ResponseBody responseBody, Class<T> clazz) throws IOException {
         byte[] bytes = responseBody.bytes();
-        String string = com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(bytes) ? "" : new String(bytes);
+        String string = EmptyUtils.isObjectEmpty(bytes) ? "" : new String(bytes);
         Type type = new ParameterizedTypeImpl(BaseEntity.class, new Class[]{clazz});
         return new Gson().fromJson(string, type);
     }

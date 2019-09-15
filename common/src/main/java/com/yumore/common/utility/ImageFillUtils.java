@@ -20,8 +20,6 @@ import com.bumptech.glide.request.transition.Transition;
 import com.yumore.common.R;
 import com.yumore.common.callback.OnImageCompressListener;
 import com.yumore.common.callback.OnMultiImageCompressListener;
-import com.yumore.common.common.utility.EmptyUtils;
-import com.yumore.common.common.utility.LoggerUtils;
 import top.zibin.luban.CompressionPredicate;
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
@@ -151,8 +149,8 @@ public final class ImageFillUtils {
     }
 
     public static void compressImage(Context context, String originPath, final OnImageCompressListener onImageCompressListener) {
-        com.yumore.common.common.utility.LoggerUtils.e(TAG, "origin file size is " + new File(originPath).length());
-        com.yumore.common.common.utility.LoggerUtils.e(TAG, "origin file path is " + originPath);
+      LoggerUtils.e(TAG, "origin file size is " + new File(originPath).length());
+      LoggerUtils.e(TAG, "origin file path is " + originPath);
         Luban.with(context)
                 .load(originPath)
                 .setTargetDir(FileUtils.getCachePath())
@@ -167,7 +165,7 @@ public final class ImageFillUtils {
                 .setCompressListener(new OnCompressListener() {
                     @Override
                     public void onStart() {
-                        if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                        if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
                             onImageCompressListener.onPrepared();
                         }
                     }
@@ -175,22 +173,22 @@ public final class ImageFillUtils {
                     @SuppressWarnings("ResultOfMethodCallIgnored")
                     @Override
                     public void onSuccess(File file) {
-                        com.yumore.common.common.utility.LoggerUtils.e(TAG, "compressed file name = " + file.getName());
-                        com.yumore.common.common.utility.LoggerUtils.e(TAG, "compressed file path = " + file.getAbsolutePath());
-                        com.yumore.common.common.utility.LoggerUtils.e(TAG, "compressed file size = " + file.length());
+                      LoggerUtils.e(TAG, "compressed file name = " + file.getName());
+                      LoggerUtils.e(TAG, "compressed file path = " + file.getAbsolutePath());
+                      LoggerUtils.e(TAG, "compressed file size = " + file.length());
                         File newFile;
                         if (file.getName().toLowerCase().contains(".jpeg")) {
                             newFile = new File(file.getParent(), file.getName().toLowerCase().replace(".jpeg", ".jpg"));
-                            com.yumore.common.common.utility.LoggerUtils.e(TAG, "new file path = " + newFile.getAbsolutePath());
+                          LoggerUtils.e(TAG, "new file path = " + newFile.getAbsolutePath());
                             if (!newFile.exists()) {
                                 try {
                                     file.createNewFile();
                                     boolean flag = file.renameTo(newFile);
                                     if (!flag) {
-                                        com.yumore.common.common.utility.LoggerUtils.e(TAG, "rename *.jpeg to *.jpg failed");
+                                      LoggerUtils.e(TAG, "rename *.jpeg to *.jpg failed");
                                     }
                                     file.delete();
-                                    if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                                    if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
                                         onImageCompressListener.onSuccess(newFile);
                                     }
                                 } catch (IOException e) {
@@ -198,7 +196,7 @@ public final class ImageFillUtils {
                                 }
                             }
                         } else {
-                            if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                            if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
                                 onImageCompressListener.onSuccess(file);
                             }
                         }
@@ -206,7 +204,7 @@ public final class ImageFillUtils {
 
                     @Override
                     public void onError(Throwable throwable) {
-                        if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                        if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
                             onImageCompressListener.onFailure(throwable);
                         }
                     }
@@ -229,7 +227,7 @@ public final class ImageFillUtils {
                 .setCompressListener(new OnCompressListener() {
                     @Override
                     public void onStart() {
-                        if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
+                        if (!EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
                             onMultiImageCompressListener.onPrepared();
                         }
                     }
@@ -237,13 +235,13 @@ public final class ImageFillUtils {
                     @SuppressWarnings("ResultOfMethodCallIgnored")
                     @Override
                     public void onSuccess(File file) {
-                        com.yumore.common.common.utility.LoggerUtils.e(TAG, "compressed file name = " + file.getName());
-                        com.yumore.common.common.utility.LoggerUtils.e(TAG, "compressed file path = " + file.getAbsolutePath());
-                        com.yumore.common.common.utility.LoggerUtils.e(TAG, "compressed file size = " + file.length());
+                      LoggerUtils.e(TAG, "compressed file name = " + file.getName());
+                      LoggerUtils.e(TAG, "compressed file path = " + file.getAbsolutePath());
+                      LoggerUtils.e(TAG, "compressed file size = " + file.length());
                         File newFile;
                         if (file.getName().toLowerCase().contains(".jpeg")) {
                             newFile = new File(file.getParent(), file.getName().toLowerCase().replace(".jpeg", ".jpg"));
-                            com.yumore.common.common.utility.LoggerUtils.e(TAG, "new file path = " + newFile.getAbsolutePath());
+                          LoggerUtils.e(TAG, "new file path = " + newFile.getAbsolutePath());
                             if (!newFile.exists()) {
                                 try {
                                     file.createNewFile();
@@ -252,7 +250,7 @@ public final class ImageFillUtils {
                                         LoggerUtils.e(TAG, "rename *.jpeg to *.jpg failed");
                                     }
                                     file.delete();
-                                    if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
+                                    if (!EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
                                         onMultiImageCompressListener.onSuccess(position, newFile);
                                     }
                                 } catch (IOException e) {
@@ -260,7 +258,7 @@ public final class ImageFillUtils {
                                 }
                             }
                         } else {
-                            if (!com.yumore.common.common.utility.EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
+                            if (!EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
                                 onMultiImageCompressListener.onSuccess(position, file);
                             }
                         }

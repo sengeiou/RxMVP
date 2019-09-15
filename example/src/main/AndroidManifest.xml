@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.yumore.rxdemo">
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission
+            android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+            tools:ignore="ProtectedPermissions"/>
+
+    <application
+            android:allowBackup="true"
+            android:largeHeap="true"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:appComponentFactory="@string/app_name"
+            tools:ignore="GoogleAppIndexingWarning"
+            tools:replace="android:appComponentFactory"
+            tools:targetApi="p">
+        <activity
+                android:name="com.yumore.rxdemo.activity.ActivityMain"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.yumore.rxdemo.activity.ActivityRxPhoto"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.yalantis.ucrop.UCropActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+                android:name="com.yumore.rxdemo.activity.ActivityCreateQRCode"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name="com.yumore.rxdemo.activity.ActivitySplash"
+                android:screenOrientation="portrait"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityDialog"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityTextTool"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivitySlidingDrawerSingle"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityProgressBar"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityWheelHorizontal"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityAutoImageView"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityPopupView"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRunTextView"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRxToast"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityNetSpeed"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityShoppingView"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityELMe"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityLike"/>
+        <activity
+                android:name="com.yumore.rxdemo.activity.ActivitySVG"
+                android:screenOrientation="portrait" />
+        <activity android:name="com.yumore.rxdemo.activity.ActivityMovieSeat"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityFlightSeat"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivitySeat"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityCardStack"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRxCaptcha"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityContact"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityLocation"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivitySeekBar"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityLoginAct"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityLoading"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityLoadingDetail"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRxScaleImageView"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityVibrate"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityZipEncrypt"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRxExifTool"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRxDataTool"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityDeviceInfo"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityCobweb"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRxRotateBar"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityRxWaveView"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityXmlParse"/>
+        <activity android:name="com.yumore.rxdemo.activity.ActivityAliPay"/>
+    </application>
+</manifest>

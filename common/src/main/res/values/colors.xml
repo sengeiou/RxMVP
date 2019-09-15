@@ -24,4 +24,5 @@
     <color name="common_color_green_grass">#70c492</color>
     <color name="common_color_green_dark">#068631</color>
     <color name="common_color_white">#FFFFFF</color>
+    <color name="common_theme_color">#3F51B5</color>
 </resources>

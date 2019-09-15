@@ -8,11 +8,11 @@ if (keyStore.exists()) {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion 19
+        targetSdkVersion 29
         versionCode 100
         versionName "1.9.9"
         vectorDrawables.useSupportLibrary = true
@@ -34,10 +34,10 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
-    api("com.github.chrisbanes:PhotoView:2.1.4") {
-        exclude group: "com.android.support", module: "support-v4"
-    }
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+//    implementation 'androidx.viewpager:viewpager:1.0.0'
+//    implementation 'androidx.viewpager2:viewpager2:1.0.0-beta04'
+    api 'com.github.chrisbanes:PhotoView:2.3.0'
 }

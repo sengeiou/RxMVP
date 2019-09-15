@@ -1,12 +1,11 @@
 include ':common'
-include ':uikit'
 include ':provider'
-include ':utility'
-include ':sample'
 
-include ':rxSample'
-include ':RxUI'
+include ':uikit'
 include ':feature'
-include ':arcGisKit'
-include':RxCamera'
+include ':arcgis'
+include ':camera'
 include ':gallery'
+
+include ':example'
+include ':sample'
