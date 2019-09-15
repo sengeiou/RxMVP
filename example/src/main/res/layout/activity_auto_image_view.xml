@@ -6,7 +6,7 @@
         android:id="@+id/activity_auto_image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.yumore.rxdemo.activity.ActivityAutoImageView">
+        tools:context="com.yumore.example.activity.ActivityAutoImageView">
 
     <com.yumore.rxui.view.RxAutoImageView
             android:layout_width="match_parent"

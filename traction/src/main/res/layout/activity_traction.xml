@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp">
+
+        <LinearLayout
+                android:id="@+id/dot_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_centerHorizontal="true" />
+
+        <TextView
+                android:id="@+id/enter_button"
+                style="@style/FrameButtonStyle"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:layout_marginTop="30dp"
+                android:text="进入App" />
+
+    </RelativeLayout>
+
+    <com.yumore.traction.videoguide.ExtendedViewPager
+            android:id="@+id/guide_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:overScrollMode="ifContentScrolls" />
+</RelativeLayout>

@@ -1,4 +1,4 @@
-include ':common'
+include ':common', ':traction'
 include ':provider'
 
 include ':uikit'
@@ -9,3 +9,4 @@ include ':gallery'
 
 include ':example'
 include ':sample'
+include ':preview'

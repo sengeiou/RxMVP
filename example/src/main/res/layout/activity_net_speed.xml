@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
-              tools:context="com.yumore.rxdemo.activity.ActivityNetSpeed">
+              tools:context="com.yumore.example.activity.ActivityNetSpeed">
 
     <com.yumore.rxui.view.RxTitle
             android:id="@+id/rx_title"

@@ -19,4 +19,5 @@ public class RouterConstants {
      * ===========================================
      */
     public static final String MASTER_VIDEO_DYNAMIC = "/master/PublishDynamicActivity";
+    public static final String MASTER_HOME = "/master/HomeActivity";
 }

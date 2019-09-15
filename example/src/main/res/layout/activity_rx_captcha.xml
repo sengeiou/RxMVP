@@ -8,7 +8,7 @@
               android:background="@color/e"
               android:gravity="center_horizontal"
               android:orientation="vertical"
-              tools:context="com.yumore.rxdemo.activity.ActivityRxCaptcha">
+              tools:context="com.yumore.example.activity.ActivityRxCaptcha">
 
     <com.yumore.rxui.view.RxTitle
             android:id="@+id/rx_title"

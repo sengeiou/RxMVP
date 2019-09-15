@@ -8,7 +8,7 @@
               android:background="@color/paleturquoise"
               android:gravity="center_horizontal"
               android:orientation="vertical"
-              tools:context="com.yumore.rxdemo.activity.ActivityShoppingView">
+              tools:context="com.yumore.example.activity.ActivityShoppingView">
 
     <com.yumore.rxui.view.RxTitle
             android:id="@+id/rx_title"

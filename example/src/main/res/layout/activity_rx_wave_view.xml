@@ -12,7 +12,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.yumore.rxdemo.activity.ActivityRxWaveView">
+        tools:context="com.yumore.example.activity.ActivityRxWaveView">
 
     <com.yumore.rxui.view.waveview.RxWaveView
             android:id="@+id/wave"

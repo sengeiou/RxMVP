@@ -7,7 +7,7 @@
               android:background="@color/brown1"
               android:gravity="center_horizontal"
               android:orientation="vertical"
-              tools:context="com.yumore.rxdemo.activity.ActivityProgressBar">
+              tools:context="com.yumore.example.activity.ActivityProgressBar">
 
     <com.yumore.rxui.view.RxTitle
             android:id="@+id/rx_title"

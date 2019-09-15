@@ -9,7 +9,7 @@
         android:background="@color/white"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context="com.yumore.rxdemo.activity.ActivityRunTextView">
+        tools:context="com.yumore.example.activity.ActivityRunTextView">
 
     <com.yumore.rxui.view.RxTitle
             android:id="@+id/rx_title"
