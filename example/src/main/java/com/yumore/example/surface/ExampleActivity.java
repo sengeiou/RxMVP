@@ -14,6 +14,7 @@ import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.adapter.AdapterRecyclerViewMain;
 import com.yumore.example.entity.ModelMainItem;
+import com.yumore.preview.PreviewActivity;
 import com.yumore.provider.RouterConstants;
 import com.yumore.rxfeature.activity.ActivityCodeTool;
 import com.yumore.utility.activity.ActivityWebView;
@@ -104,6 +105,7 @@ public class ExampleActivity extends AppCompatActivity {
         mData.add(new ModelMainItem("app检测更新与安装", R.mipmap.ic_launcher, ActivitySplash.class));
         mData.add(new ModelMainItem("PULL解析XML", R.mipmap.ic_launcher, ActivityXmlParse.class));
         mData.add(new ModelMainItem("支付宝支付Demo", R.drawable.circle_alipay, ActivityAliPay.class));
+        mData.add(new ModelMainItem("流利说欢迎动画", R.mipmap.ic_launcher, PreviewActivity.class));
     }
 
     private void initView() {

@@ -4,11 +4,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.yumore.provider.RouterConstants;
 import rx.Observable;
 import rx.Subscription;
 import rx.functions.Action1;
@@ -17,39 +17,43 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Nathaniel
+ */
+@Route(path = RouterConstants.PREVIEW_HOME, group = "preview")
 public class PreviewActivity extends AppCompatActivity {
 
-    private PreviewVideoView mVideoView;
-    private ViewPager mVpImage;
-    private PreviewIndicator mIndicator;
+    private PreviewVideoView previewVideoView;
+    private ViewPager viewPager;
+    private PreviewIndicator previewIndicator;
 
-    private List<View> mViewList = new ArrayList<>();
-    private int[] mImageResIds = new int[]{R.mipmap.intro_text_1, R.mipmap.intro_text_2, R.mipmap.intro_text_3};
-    private CustomPagerAdapter mAdapter;
+    private List<View> viewList = new ArrayList<>();
+    private int[] imageResIds = new int[]{R.mipmap.intro_text_1, R.mipmap.intro_text_2, R.mipmap.intro_text_3};
+    private CustomPagerAdapter customPagerAdapter;
 
-    private int mCurrentPage = 0;
-    private Subscription mLoop;
+    private int currentPage = 0;
+    private Subscription subscription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview);
 
-        mVideoView = findViewById(R.id.vv_preview);
-        mVpImage = findViewById(R.id.vp_image);
-        mIndicator = findViewById(R.id.indicator);
+        previewVideoView = findViewById(R.id.vv_preview);
+        viewPager = findViewById(R.id.vp_image);
+        previewIndicator = findViewById(R.id.indicator);
 
-        mVideoView.setVideoURI(Uri.parse(getVideoPath()));
+        previewVideoView.setVideoURI(Uri.parse(getVideoPath()));
 
-        for (int i = 0; i < mImageResIds.length; i++) {
+        for (int mImageResId : imageResIds) {
             View view = LayoutInflater.from(this).inflate(R.layout.item_preview_recycler_list, null, false);
-            ((ImageView) view.findViewById(R.id.iv_intro_text)).setImageResource(mImageResIds[i]);
-            mViewList.add(view);
+            ((ImageView) view.findViewById(R.id.iv_intro_text)).setImageResource(mImageResId);
+            viewList.add(view);
         }
-
-        mAdapter = new CustomPagerAdapter(mViewList);
-        mVpImage.setAdapter(mAdapter);
-        mVpImage.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        previewIndicator.bringToFront();
+        customPagerAdapter = new CustomPagerAdapter(viewList);
+        viewPager.setAdapter(customPagerAdapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -57,8 +61,8 @@ public class PreviewActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                mCurrentPage = position;
-                mIndicator.setSelected(mCurrentPage);
+                currentPage = position;
+                previewIndicator.setSelected(currentPage);
                 startLoop();
             }
 
@@ -85,16 +89,16 @@ public class PreviewActivity extends AppCompatActivity {
      * 开启轮询
      */
     private void startLoop() {
-        if (null != mLoop) {
-            mLoop.unsubscribe();
+        if (null != subscription) {
+            subscription.unsubscribe();
         }
-        mLoop = Observable.interval(0, 6 * 1000, TimeUnit.MILLISECONDS)
+        subscription = Observable.interval(0, 6 * 1000, TimeUnit.MILLISECONDS)
                 .subscribe(new Action1<Long>() {
                     @Override
                     public void call(Long aLong) {
-                        mVideoView.seekTo(mCurrentPage * 6 * 1000);
-                        if (!mVideoView.isPlaying()) {
-                            mVideoView.start();
+                        previewVideoView.seekTo(currentPage * 6 * 1000);
+                        if (!previewVideoView.isPlaying()) {
+                            previewVideoView.start();
                         }
                     }
                 });
@@ -102,40 +106,9 @@ public class PreviewActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        if (null != mLoop) {
-            mLoop.unsubscribe();
+        if (null != subscription) {
+            subscription.unsubscribe();
         }
         super.onDestroy();
     }
-
-    public static class CustomPagerAdapter extends PagerAdapter {
-
-        private List<View> mViewList;
-
-        public CustomPagerAdapter(List<View> viewList) {
-            mViewList = viewList;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            container.addView(mViewList.get(position));
-            return mViewList.get(position);
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView(mViewList.get(position));
-        }
-
-        @Override
-        public int getCount() {
-            return mViewList.size();
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == object;
-        }
-    }
-
 }

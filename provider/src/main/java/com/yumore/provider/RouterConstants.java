@@ -21,4 +21,6 @@ public class RouterConstants {
     public static final String MASTER_VIDEO_DYNAMIC = "/master/PublishDynamicActivity";
 
     public static final String EXAMPLE_HOME = "/example/HomeActivity";
+
+    public static final String PREVIEW_HOME = "/preview/PreviewActivity";
 }

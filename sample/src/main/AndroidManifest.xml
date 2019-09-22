@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
-          package="com.yumore.sample">
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.yumore.sample">
 
     <application
             android:name=".common.SampleApplication"
@@ -18,15 +16,18 @@
             tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
             tools:replace="android:appComponentFactory">
 
-        <activity android:name=".surface.WelcomeActivity"
+        <activity
+                android:name=".surface.WelcomeActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/SplashTheme">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
