@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.yumore.answer">
+
+    <application>
+        <activity android:name=".AnswerMainActivity" />
+        <activity android:name=".CourseActivity" />
+        <activity android:name=".AnwerActivity" />
+        <activity android:name=".AnswerReadActivity" />
+        <activity android:name=".ReadActivity" />
+
+    </application>
+</manifest>

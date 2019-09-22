@@ -10,3 +10,7 @@ include ':gallery'
 include ':example'
 include ':sample'
 include ':preview'
+
+include ':compass'
+include ':answer'
+include ':sticky'
