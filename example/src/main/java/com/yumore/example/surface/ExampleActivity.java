@@ -16,7 +16,7 @@ import com.yumore.example.adapter.AdapterRecyclerViewMain;
 import com.yumore.example.entity.ModelMainItem;
 import com.yumore.preview.PreviewActivity;
 import com.yumore.provider.RouterConstants;
-import com.yumore.rxfeature.activity.ActivityCodeTool;
+import com.yumore.feature.activity.ActivityCodeTool;
 import com.yumore.utility.activity.ActivityWebView;
 import com.yumore.utility.utility.RxImageTool;
 import com.yumore.utility.utility.RxPermissionsTool;
