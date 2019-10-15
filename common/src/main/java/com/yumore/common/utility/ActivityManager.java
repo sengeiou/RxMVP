@@ -6,6 +6,12 @@ import android.util.Log;
 
 import java.util.Stack;
 
+/**
+ * Activity管理类
+ *
+ * @author Nathaniel
+ * @see android.app.ActivityManager
+ */
 public class ActivityManager {
     private static final String TAG = ActivityManager.class.getSimpleName();
     private static Stack<Activity> activityStack;
@@ -73,9 +79,9 @@ public class ActivityManager {
     /**
      * 结束指定类名的Activity
      */
-    public void finishActivity(Class<?> cls) {
+    public void finishActivity(Class<?> clazz) {
         for (int i = 0; i < activityStack.size(); i++) {
-            if (activityStack.get(i).getClass().equals(cls)) {
+            if (activityStack.get(i).getClass().equals(clazz)) {
                 finishActivity(activityStack.get(i));
                 removeActivity(activityStack.get(i));
                 return;
@@ -100,11 +106,13 @@ public class ActivityManager {
     /**
      * 退出应用程序
      */
-    public void AppExit(Context context) {
+    public void exitApp(Context context) {
         try {
             finishAllActivity();
-            android.app.ActivityManager activityMgr = (android.app.ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-            activityMgr.restartPackage(context.getPackageName());
+            android.app.ActivityManager activityManager = (android.app.ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+            if (activityManager != null) {
+                activityManager.restartPackage(context.getPackageName());
+            }
             System.exit(0);
         } catch (Exception e) {
             e.printStackTrace();

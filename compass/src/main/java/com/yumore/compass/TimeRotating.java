@@ -1,4 +1,4 @@
-package time.fx.com.digitalclockcompass;
+package com.yumore.compass;
 
 import android.content.Context;
 import android.graphics.Canvas;

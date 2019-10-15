@@ -4,11 +4,11 @@
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="time.fx.com.digitalclockcompass.MainActivity">
+        tools:context=".CompassActivity">
 
-    <time.fx.com.digitalclockcompass.TimeRotating
-            android:id="@+id/tr"
+    <com.yumore.compass.TimeRotating
+            android:id="@+id/timeRotating"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></time.fx.com.digitalclockcompass.TimeRotating>
+            android:layout_height="match_parent" />
 
 </RelativeLayout>
