@@ -1,9 +1,9 @@
 package com.yumore.gallery.utility;
 
-import android.app.Activity;
 import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 用于监听导航栏的显示和隐藏
@@ -37,7 +37,7 @@ public class NavigationBarChangeListener implements ViewTreeObserver.OnGlobalLay
         return with(rootView, ORIENTATION_VERTICAL);
     }
 
-    public static NavigationBarChangeListener with(Activity activity) {
+    public static NavigationBarChangeListener with(AppCompatActivity activity) {
         return with(activity.findViewById(android.R.id.content), ORIENTATION_VERTICAL);
     }
 
@@ -47,7 +47,7 @@ public class NavigationBarChangeListener implements ViewTreeObserver.OnGlobalLay
         return changeListener;
     }
 
-    public static NavigationBarChangeListener with(Activity activity, int orientation) {
+    public static NavigationBarChangeListener with(AppCompatActivity activity, int orientation) {
         return with(activity.findViewById(android.R.id.content), orientation);
     }
 

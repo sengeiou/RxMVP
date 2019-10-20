@@ -62,7 +62,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginRight="15dp"
                         android:layout_marginTop="20dp"
-                        android:src="@drawable/transparent_bg"/>
+                        app:srcCompat="@drawable/transparent_bg" />
 
                 <View
                         android:layout_width="fill_parent"
@@ -75,7 +75,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/transparent_bg"/>
+                        app:srcCompat="@drawable/transparent_bg" />
 
                 <LinearLayout
                         android:id="@+id/ll_refresh"
@@ -89,7 +89,7 @@
                             android:id="@+id/imageView1"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:src="@drawable/circle"/>
+                            app:srcCompat="@drawable/circle" />
 
                     <TextView
                             android:id="@+id/textView2"

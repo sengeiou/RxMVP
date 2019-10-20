@@ -16,8 +16,8 @@
 
 package com.yumore.feature.module.scaner.decoding;
 
-import android.app.Activity;
 import android.content.DialogInterface;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Simple listener used to exit the app in a few cases.
@@ -27,9 +27,9 @@ import android.content.DialogInterface;
 public final class FinishListener
         implements DialogInterface.OnClickListener, DialogInterface.OnCancelListener, Runnable {
 
-    private final Activity activityToFinish;
+    private final AppCompatActivity activityToFinish;
 
-    public FinishListener(Activity activityToFinish) {
+    public FinishListener(AppCompatActivity activityToFinish) {
         this.activityToFinish = activityToFinish;
     }
 

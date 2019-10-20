@@ -81,7 +81,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_margin="7.5dp"
-                        android:src="@drawable/slibe_up"/>
+                        app:srcCompat="@drawable/slibe_up" />
 
                 <TextView
                         android:id="@+id/textView8"

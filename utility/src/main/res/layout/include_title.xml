@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/ll_include_title"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_include_title"
               android:layout_width="match_parent"
               android:layout_height="55dp"
               android:gravity="center"
@@ -11,7 +12,7 @@
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:padding="15dp"
-            android:src="@drawable/previous_icon"/>
+            app:srcCompat="@drawable/previous_icon" />
 
     <TextView
             android:id="@+id/tvContent"
@@ -30,6 +31,6 @@
             android:padding="10dp"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:src="@drawable/set"
+            app:srcCompat="@drawable/set"
             android:visibility="invisible"/>
 </LinearLayout>

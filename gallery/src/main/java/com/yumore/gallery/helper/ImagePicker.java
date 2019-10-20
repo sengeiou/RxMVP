@@ -1,6 +1,5 @@
 package com.yumore.gallery.helper;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,6 +12,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import com.yumore.gallery.BuildConfig;
 import com.yumore.gallery.entity.ImageFolder;
@@ -319,7 +319,7 @@ public class ImagePicker {
      * *可以通过dat extra能够得到原始图片位置。即，如果指定了目标uri，data就没有数据，
      * *如果没有指定uri，则data就返回有数据！
      */
-    public void takePicture(Activity activity, int requestCode) {
+    public void takePicture(AppCompatActivity activity, int requestCode) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         takePictureIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         if (takePictureIntent.resolveActivity(activity.getPackageManager()) != null) {

@@ -47,7 +47,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/shape_circle_blue"
                     android:padding="3dp"
-                    android:src="@drawable/circle_elves_ball"/>
+                    app:srcCompat="@drawable/circle_elves_ball" />
         </LinearLayout>
 
     </RelativeLayout>

@@ -1,12 +1,12 @@
 package com.yumore.gallery.utility;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -81,7 +81,7 @@ public class BitmapUtils {
      * @param path     路径
      * @return 正常的Uri
      */
-    public static Uri getRotatedUri(Activity activity, String path) {
+    public static Uri getRotatedUri(AppCompatActivity activity, String path) {
         int degree = BitmapUtils.getBitmapDegree(path);
         if (degree != 0) {
             Bitmap bitmap = BitmapFactory.decodeFile(path);

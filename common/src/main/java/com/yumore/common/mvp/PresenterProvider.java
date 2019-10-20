@@ -1,8 +1,8 @@
 package com.yumore.common.mvp;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import java.lang.annotation.Annotation;
@@ -17,11 +17,11 @@ import java.lang.reflect.Field;
 public class PresenterProvider {
 
     private PresenterStore presenterStore = new PresenterStore<>();
-    private Activity activity;
+    private AppCompatActivity activity;
     private Fragment fragment;
     private Class<?> clazz;
 
-    private PresenterProvider(Activity activity, Fragment fragment) {
+    private PresenterProvider(AppCompatActivity activity, Fragment fragment) {
         if (activity != null) {
             this.activity = activity;
             clazz = this.activity.getClass();
@@ -34,7 +34,7 @@ public class PresenterProvider {
         resolvePresenterVariable();
     }
 
-    public static PresenterProvider inject(Activity activity) {
+    public static PresenterProvider inject(AppCompatActivity activity) {
         return new PresenterProvider(activity, null);
     }
 
@@ -42,7 +42,7 @@ public class PresenterProvider {
         return new PresenterProvider(null, fragment);
     }
 
-    private static Application checkApplication(Activity activity) {
+    private static Application checkApplication(AppCompatActivity activity) {
         Application application = activity.getApplication();
         if (application == null) {
             throw new IllegalStateException("Your activity/fragment is not yet attached to Application. You can't request PresenterProviders before onCreate call.");
@@ -50,8 +50,8 @@ public class PresenterProvider {
         return application;
     }
 
-    private static Activity checkActivity(Fragment fragment) {
-        Activity activity = fragment.getActivity();
+    private static AppCompatActivity checkActivity(Fragment fragment) {
+        AppCompatActivity activity = (AppCompatActivity) fragment.getActivity();
         if (activity == null) {
             throw new IllegalStateException("Can't create PresenterProviders for detached fragment");
         }
@@ -60,7 +60,7 @@ public class PresenterProvider {
 
     private static Context checkContext(Context context) {
         Context resultContent = null;
-        if (context instanceof Activity) {
+        if (context instanceof AppCompatActivity) {
             resultContent = context;
         }
         if (resultContent == null) {

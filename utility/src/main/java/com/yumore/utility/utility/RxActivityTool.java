@@ -1,12 +1,12 @@
 package com.yumore.utility.utility;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 import java.util.Stack;
@@ -20,14 +20,14 @@ import java.util.Stack;
  */
 public class RxActivityTool {
 
-    private static Stack<Activity> activityStack;
+    private static Stack<AppCompatActivity> activityStack;
 
     /**
      * 添加Activity 到栈
      *
      * @param activity
      */
-    public static void addActivity(Activity activity) {
+    public static void addActivity(AppCompatActivity activity) {
         if (activityStack == null) {
             activityStack = new Stack<>();
         }
@@ -37,8 +37,8 @@ public class RxActivityTool {
     /**
      * 获取当前的Activity（堆栈中最后一个压入的)
      */
-    public static Activity currentActivity() {
-        Activity activity = activityStack.lastElement();
+    public static AppCompatActivity currentActivity() {
+        AppCompatActivity activity = activityStack.lastElement();
         return activity;
     }
 
@@ -46,7 +46,7 @@ public class RxActivityTool {
      * 结束当前Activity（堆栈中最后一个压入的）
      */
     public static void finishActivity() {
-        Activity activity = activityStack.lastElement();
+        AppCompatActivity activity = activityStack.lastElement();
 
     }
 
@@ -55,7 +55,7 @@ public class RxActivityTool {
      *
      * @param activity
      */
-    public static void finishActivity(Activity activity) {
+    public static void finishActivity(AppCompatActivity activity) {
         if (activity != null) {
             activityStack.remove(activity);
             activity.finish();
@@ -67,7 +67,7 @@ public class RxActivityTool {
      * 结束指定类名的Activity
      */
     public static void finishActivity(Class<?> cls) {
-        for (Activity activity : activityStack) {
+        for (AppCompatActivity activity : activityStack) {
             if (activity.getClass().equals(cls)) {
                 finishActivity(activity);
             }
@@ -98,7 +98,7 @@ public class RxActivityTool {
         }
     }
 
-    public static Stack<Activity> getActivityStack() {
+    public static Stack<AppCompatActivity> getActivityStack() {
         return activityStack;
     }
 
@@ -154,7 +154,7 @@ public class RxActivityTool {
         intent.putExtras(bundle);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
-        ((Activity) context).finish();
+        ((AppCompatActivity) context).finish();
     }
 
     /**
@@ -169,7 +169,7 @@ public class RxActivityTool {
         Intent intent = new Intent(context, goal);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
-        ((Activity) context).finish();
+        ((AppCompatActivity) context).finish();
     }
 
 
@@ -183,7 +183,7 @@ public class RxActivityTool {
         Intent intent = new Intent(context, goal);
         intent.putExtras(bundle);
         context.startActivity(intent);
-        ((Activity) context).finish();
+        ((AppCompatActivity) context).finish();
     }
 
     /**
@@ -195,7 +195,7 @@ public class RxActivityTool {
     public static void skipActivityAndFinish(Context context, Class<?> goal) {
         Intent intent = new Intent(context, goal);
         context.startActivity(intent);
-        ((Activity) context).finish();
+        ((AppCompatActivity) context).finish();
     }
 
 
@@ -222,12 +222,12 @@ public class RxActivityTool {
         context.startActivity(intent);
     }
 
-    public static void skipActivityForResult(Activity context, Class<?> goal, int requestCode) {
+    public static void skipActivityForResult(AppCompatActivity context, Class<?> goal, int requestCode) {
         Intent intent = new Intent(context, goal);
         context.startActivityForResult(intent, requestCode);
     }
 
-    public static void skipActivityForResult(Activity context, Class<?> goal, Bundle bundle, int requestCode) {
+    public static void skipActivityForResult(AppCompatActivity context, Class<?> goal, Bundle bundle, int requestCode) {
         Intent intent = new Intent(context, goal);
         intent.putExtras(bundle);
         context.startActivityForResult(intent, requestCode);

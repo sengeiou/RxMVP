@@ -1,12 +1,12 @@
 package com.yumore.utility.widget.dialog;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 
 
@@ -38,7 +38,7 @@ public class RxDialogEditSureCancel extends RxDialog {
         initView();
     }
 
-    public RxDialogEditSureCancel(Activity context) {
+    public RxDialogEditSureCancel(AppCompatActivity context) {
         super(context);
         initView();
     }

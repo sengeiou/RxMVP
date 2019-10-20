@@ -1,6 +1,5 @@
 package com.yumore.utility.utility;
 
-import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
@@ -8,6 +7,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -139,7 +139,7 @@ public class RxPictureTool {
      * @param data    onActivityResult返回的Intent
      * @return bitmap
      */
-    public static Bitmap getChoosedImage(Activity context, Intent data) {
+    public static Bitmap getChoosedImage(AppCompatActivity context, Intent data) {
         if (data == null) return null;
         Bitmap bm = null;
         ContentResolver cr = context.getContentResolver();
@@ -159,7 +159,7 @@ public class RxPictureTool {
      * @param data    onActivityResult返回的Intent
      * @return
      */
-    public static String getChoosedImagePath(Activity context, Intent data) {
+    public static String getChoosedImagePath(AppCompatActivity context, Intent data) {
         if (data == null) return null;
         String path = "";
         ContentResolver resolver = context.getContentResolver();

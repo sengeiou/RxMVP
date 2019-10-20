@@ -1,8 +1,8 @@
 package com.yumore.utility.utility;
 
-import android.app.Activity;
 import android.content.pm.PackageManager;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
@@ -15,16 +15,16 @@ import java.util.List;
 
 public class RxPermissionsTool {
 
-    public static RxPermissionsTool.Builder with(Activity activity) {
+    public static RxPermissionsTool.Builder with(AppCompatActivity activity) {
         return new Builder(activity);
     }
 
     public static class Builder {
 
-        private Activity mActivity;
+        private AppCompatActivity mActivity;
         private List<String> permissionList;
 
-        public Builder(@NonNull Activity activity) {
+        public Builder(@NonNull AppCompatActivity activity) {
             mActivity = activity;
             permissionList = new ArrayList<>();
         }

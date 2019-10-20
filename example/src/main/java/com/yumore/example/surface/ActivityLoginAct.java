@@ -1,7 +1,6 @@
 package com.yumore.example.surface;
 
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -14,6 +13,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 import android.widget.*;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -183,7 +183,7 @@ public class ActivityLoginAct extends ActivityBase {
         });
     }
 
-    public boolean isFullScreen(Activity activity) {
+    public boolean isFullScreen(AppCompatActivity activity) {
         return (activity.getWindow().getAttributes().flags &
                 WindowManager.LayoutParams.FLAG_FULLSCREEN) == WindowManager.LayoutParams.FLAG_FULLSCREEN;
     }

@@ -20,7 +20,7 @@
                 android:layout_marginRight="6dp"
                 android:layout_marginBottom="6dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_default_image"/>
+                app:srcCompat="@drawable/ic_default_image" />
 
     </FrameLayout>
 

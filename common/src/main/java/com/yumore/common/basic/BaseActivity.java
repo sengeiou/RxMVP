@@ -1,6 +1,5 @@
 package com.yumore.common.basic;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,6 +7,7 @@ import android.view.*;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

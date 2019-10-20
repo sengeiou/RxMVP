@@ -29,7 +29,7 @@
                     android:id="@+id/imageView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/wheel_h_index"/>
+                    app:srcCompat="@drawable/wheel_h_index" />
         </LinearLayout>
 
         <LinearLayout

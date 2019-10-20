@@ -17,7 +17,6 @@ package com.yumore.utility.utility;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
@@ -31,6 +30,7 @@ import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import java.io.*;
@@ -1931,7 +1931,7 @@ public class RxFileTool {
      * @param uri
      * @return
      */
-    public static File getFilePhotoFromUri(Activity context, Uri uri) {
+    public static File getFilePhotoFromUri(AppCompatActivity context, Uri uri) {
         return new File(RxPhotoTool.getImageAbsolutePath(context, uri));
     }
 

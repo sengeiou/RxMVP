@@ -22,7 +22,7 @@
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:paddingTop="18dp"
-                android:src="@drawable/previous_icon"
+                app:srcCompat="@drawable/previous_icon"
                 android:visibility="invisible"/>
 
         <ImageView
@@ -36,7 +36,7 @@
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:paddingTop="18dp"
-                android:src="@drawable/next_icon"/>
+                app:srcCompat="@drawable/next_icon" />
 
         <ImageView
                 android:id="@+id/play"
@@ -49,7 +49,7 @@
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
                 android:paddingTop="18dp"
-                android:src="@drawable/play"/>
+                app:srcCompat="@drawable/play" />
 
         <TextView
                 android:id="@+id/note"

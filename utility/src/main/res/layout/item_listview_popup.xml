@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:gravity="center_vertical"
               android:orientation="horizontal"
@@ -10,7 +11,7 @@
             android:id="@+id/iv_itpop"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:src="@drawable/set"/>
+            app:srcCompat="@drawable/set" />
 
     <TextView
             android:id="@+id/tv_itpop"

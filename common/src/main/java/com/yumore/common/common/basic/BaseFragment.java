@@ -1,7 +1,5 @@
 package com.yumore.common.common.basic;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +9,8 @@ import android.widget.Toast;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -34,7 +34,7 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
      * 是否可见
      */
     protected boolean visible;
-    protected Activity activity;
+    protected AppCompatActivity activity;
     private Context context;
     private View rootView;
     private boolean viewCreated;
@@ -47,8 +47,8 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     private Toast toast;
 
     @Override
-    public void onAttach(Context context) {
-        activity = (Activity) context;
+    public void onAttach(@NonNull Context context) {
+        activity = (AppCompatActivity) context;
         this.context = context;
         super.onAttach(context);
     }
@@ -71,7 +71,7 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
             }
         } else {
             rootView = inflater.inflate(getLayoutId(), container, false);
-            activity = getActivity();
+            activity = (AppCompatActivity) getActivity();
             context = activity;
             this.layoutInflater = inflater;
         }

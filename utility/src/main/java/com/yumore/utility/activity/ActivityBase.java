@@ -2,13 +2,13 @@ package com.yumore.utility.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.fragment.app.FragmentActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.utility.RxActivityTool;
 
 /**
  * @author yumore
  */
-public class ActivityBase extends FragmentActivity {
+public class ActivityBase extends AppCompatActivity {
 
     public ActivityBase mContext;
 

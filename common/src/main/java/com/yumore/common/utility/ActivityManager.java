@@ -1,8 +1,8 @@
 package com.yumore.common.utility;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Stack;
 
@@ -14,7 +14,7 @@ import java.util.Stack;
  */
 public class ActivityManager {
     private static final String TAG = ActivityManager.class.getSimpleName();
-    private static Stack<Activity> activityStack;
+    private static Stack<AppCompatActivity> activityStack;
     private static ActivityManager instance;
 
     private ActivityManager() {
@@ -33,7 +33,7 @@ public class ActivityManager {
     /**
      * 添加Activity到堆栈
      */
-    public synchronized void addActivity(Activity activity) {
+    public synchronized void addActivity(AppCompatActivity activity) {
         if (activityStack == null) {
             activityStack = new Stack<>();
         }
@@ -44,7 +44,7 @@ public class ActivityManager {
     /**
      * 获取当前Activity（堆栈中最后一个压入的）
      */
-    public Activity currentActivity() {
+    public AppCompatActivity currentActivity() {
         return activityStack.lastElement();
     }
 
@@ -58,7 +58,7 @@ public class ActivityManager {
     /**
      * 移除最后一个Activity
      */
-    public void removeActivity(Activity activity) {
+    public void removeActivity(AppCompatActivity activity) {
         if (activity != null) {
             activityStack.remove(activity);
             Log.i("TAG", "ActivityManager移除了：" + activity.getClass().getName());
@@ -68,7 +68,7 @@ public class ActivityManager {
     /**
      * 结束指定的Activity
      */
-    public void finishActivity(Activity activity) {
+    public void finishActivity(AppCompatActivity activity) {
         if (activity != null) {
             activityStack.remove(activity);
             activity.finish();
@@ -94,7 +94,7 @@ public class ActivityManager {
      * 结束所有Activity
      */
     public void finishAllActivity() {
-        for (Activity activity : activityStack) {
+        for (AppCompatActivity activity : activityStack) {
             if (activity != null) {
                 activity.finish();
             }

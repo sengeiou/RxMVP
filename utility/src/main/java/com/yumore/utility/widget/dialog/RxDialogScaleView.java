@@ -1,12 +1,12 @@
 package com.yumore.utility.widget.dialog;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 import com.yumore.utility.widget.scaleimage.ImageSource;
 import com.yumore.utility.widget.scaleimage.RxScaleImageView;
@@ -32,7 +32,7 @@ public class RxDialogScaleView extends RxDialog {
         initView();
     }
 
-    public RxDialogScaleView(Activity context) {
+    public RxDialogScaleView(AppCompatActivity context) {
         super(context);
         initView();
     }

@@ -1,11 +1,11 @@
 package com.yumore.utility.activity;
 
-import android.app.Activity;
 import android.graphics.Rect;
 import android.os.Build;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author yumore
@@ -16,10 +16,10 @@ public class AndroidBug5497Workaround {
     private FrameLayout.LayoutParams frameLayoutParams;
     private int contentHeight;
     private boolean isfirst = true;
-    private Activity activity;
+    private AppCompatActivity activity;
     private int statusBarHeight;
 
-    private AndroidBug5497Workaround(Activity activity) {
+    private AndroidBug5497Workaround(AppCompatActivity activity) {
         //获取状态栏的高度
         int resourceId = activity.getResources().getIdentifier("status_bar_height", "dimen", "android");
         statusBarHeight = activity.getResources().getDimensionPixelSize(resourceId);
@@ -42,7 +42,7 @@ public class AndroidBug5497Workaround {
                 mChildOfContent.getLayoutParams();
     }
 
-    public static void assistActivity(Activity activity) {
+    public static void assistActivity(AppCompatActivity activity) {
         new AndroidBug5497Workaround(activity);
     }
 

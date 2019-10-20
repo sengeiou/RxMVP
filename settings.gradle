@@ -3,7 +3,6 @@ include ':provider'
 
 include ':utility'
 include ':feature'
-include ':arcgis'
 include ':camera'
 include ':gallery'
 
@@ -14,3 +13,8 @@ include ':preview'
 include ':compass'
 include ':answer'
 include ':sticky'
+
+
+include ':daemon'
+include ':cropper'
+include ':picture'

@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 100
+        versionName "1.9.9"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    resourcePrefix 'ucrop_'
+
+}
+
+dependencies {
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
+    api "com.github.bumptech.glide:glide:4.9.0"
+}

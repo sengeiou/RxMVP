@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/msp_demo_title_bg"
             android:scaleType="center"
-            android:src="@drawable/msp_demo_title"
+            app:srcCompat="@drawable/msp_demo_title"
             tools:ignore="ContentDescription"/>
 
     <ScrollView

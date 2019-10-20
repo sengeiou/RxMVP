@@ -1,11 +1,11 @@
 package com.yumore.feature.module.alipay;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 import com.alipay.sdk.app.PayTask;
 import com.yumore.utility.callback.OnSuccessAndErrorListener;
 
@@ -47,7 +47,7 @@ public class AliPayTool {
         }
     };
 
-    public static void aliPay(final Activity activity, String appid, boolean isRsa2, String alipay_rsa_private, AliPayModel aliPayModel, OnSuccessAndErrorListener onRxHttp1) {
+    public static void aliPay(final AppCompatActivity activity, String appid, boolean isRsa2, String alipay_rsa_private, AliPayModel aliPayModel, OnSuccessAndErrorListener onRxHttp1) {
         sOnSuccessAndErrorListener = onRxHttp1;
         Map<String, String> params = AliPayOrderTool.buildOrderParamMap(appid, isRsa2, aliPayModel.getOutTradeNo(), aliPayModel.getName(), aliPayModel.getMoney(), aliPayModel.getDetail());
         String orderParam = AliPayOrderTool.buildOrderParam(params);

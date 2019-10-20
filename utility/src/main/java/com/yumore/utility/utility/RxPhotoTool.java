@@ -2,7 +2,6 @@ package com.yumore.utility.utility;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.*;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -11,6 +10,7 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -34,7 +34,7 @@ public class RxPhotoTool {
     public static Uri imageUriFromCamera;
     public static Uri cropImageUri;
 
-    public static void openCameraImage(final Activity activity) {
+    public static void openCameraImage(final AppCompatActivity activity) {
         imageUriFromCamera = createImagePathUri(activity);
 
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -56,7 +56,7 @@ public class RxPhotoTool {
         fragment.startActivityForResult(intent, GET_IMAGE_BY_CAMERA);
     }
 
-    public static void openLocalImage(final Activity activity) {
+    public static void openLocalImage(final AppCompatActivity activity) {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -70,7 +70,7 @@ public class RxPhotoTool {
         fragment.startActivityForResult(intent, GET_IMAGE_FROM_PHONE);
     }
 
-    public static void cropImage(Activity activity, Uri srcUri) {
+    public static void cropImage(AppCompatActivity activity, Uri srcUri) {
         cropImageUri = createImagePathUri(activity);
 
         Intent intent = new Intent("com.android.camera.action.CROP");
@@ -148,7 +148,7 @@ public class RxPhotoTool {
         final Uri[] imageFilePath = {null};
 
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            ActivityCompat.requestPermissions((AppCompatActivity) context, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             imageFilePath[0] = Uri.parse("");
             RxToast.error("请先获取写入SDCard权限");
         } else {

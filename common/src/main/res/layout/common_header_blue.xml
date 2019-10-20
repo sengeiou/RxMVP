@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
@@ -16,7 +17,7 @@
                 android:layout_width="@dimen/common_header_height"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/icon_back_white"
+                app:srcCompat="@mipmap/icon_back_white"
                 android:padding="@dimen/common_padding_small"
                 android:visibility="gone"
                 tools:visibility="visible"/>
@@ -62,7 +63,7 @@
                     android:layout_height="match_parent"
                     android:padding="@dimen/common_padding_small"
                     android:gravity="center"
-                    android:src="@mipmap/icon_add_white"
+                    app:srcCompat="@mipmap/icon_add_white"
                     android:visibility="gone"
                     tools:visibility="visible"/>
         </LinearLayout>

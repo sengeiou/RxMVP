@@ -1,6 +1,6 @@
 package com.yumore.utility.fragment;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -52,9 +52,9 @@ public class RxFragmentTool {
      * @param fragment
      * @param r_id_fragment <FrameLayout android:id="@+id/r_id_fragment"/>
      */
-    public static void showFragment(Activity activity, android.app.Fragment fragment, int r_id_fragment) {
-        android.app.FragmentManager fragmentManager = activity.getFragmentManager();
-        android.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+    public static void showFragment(AppCompatActivity activity, Fragment fragment, int r_id_fragment) {
+        FragmentManager fragmentManager = activity.getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(r_id_fragment, fragment);
         fragmentTransaction.commit();
     }

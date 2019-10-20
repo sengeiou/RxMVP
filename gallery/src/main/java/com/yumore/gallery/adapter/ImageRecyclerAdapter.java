@@ -1,7 +1,6 @@
 package com.yumore.gallery.adapter;
 
 import android.Manifest;
-import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import com.yumore.gallery.R;
@@ -43,7 +43,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
      */
     private static final int ITEM_TYPE_NORMAL = 1;
     private ImagePicker imagePicker;
-    private Activity mActivity;
+    private AppCompatActivity mActivity;
     /**
      * 当前需要显示的所有的图片数据
      */
@@ -69,7 +69,7 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
     /**
      * 构造方法
      */
-    public ImageRecyclerAdapter(Activity activity, ArrayList<ImageItem> images) {
+    public ImageRecyclerAdapter(AppCompatActivity activity, ArrayList<ImageItem> images) {
         this.mActivity = activity;
         if (images == null || images.size() == 0) {
             this.images = new ArrayList<>();

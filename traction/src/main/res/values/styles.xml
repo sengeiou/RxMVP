@@ -8,9 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="FrameButtonStyle" parent="android:TextAppearance.Holo.Widget.Button">
+    <style name="FrameButtonStyle" parent="TextAppearance.AppCompat.Widget.Button">
         <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:background">@drawable/btn_guide_bg_unpressed</item>
+        <item name="background">@drawable/btn_guide_bg_unpressed</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">10dp</item>
         <item name="android:paddingRight">10dp</item>

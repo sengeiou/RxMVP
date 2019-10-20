@@ -1,11 +1,11 @@
 package com.yumore.gallery.adapter;
 
-import android.app.Activity;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import com.github.chrisbanes.photoview.OnPhotoTapListener;
 import com.github.chrisbanes.photoview.PhotoView;
@@ -26,9 +26,9 @@ public class ImagePageAdapter extends PagerAdapter {
     private int screenHeight;
     private ImagePicker imagePicker;
     private ArrayList<ImageItem> images;
-    private Activity mActivity;
+    private AppCompatActivity mActivity;
 
-    public ImagePageAdapter(Activity activity, ArrayList<ImageItem> images) {
+    public ImagePageAdapter(AppCompatActivity activity, ArrayList<ImageItem> images) {
         this.mActivity = activity;
         this.images = images;
 

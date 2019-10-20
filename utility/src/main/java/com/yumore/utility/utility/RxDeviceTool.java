@@ -2,7 +2,6 @@ package com.yumore.utility.utility;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -27,6 +26,7 @@ import android.util.Xml;
 import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import com.yumore.utility.widget.RxToast;
 import org.xmlpull.v1.XmlSerializer;
@@ -745,7 +745,7 @@ public class RxDeviceTool {
      * 打开手机联系人界面点击联系人后便获取该号码
      * <p>参照以下注释代码</p>
      */
-    public static void getContantNum(Activity context) {
+    public static void getContantNum(AppCompatActivity context) {
         Log.i("tips", "U should copy the following code.");
         Intent intent = new Intent();
         intent.setAction("android.intent.action.PICK");
@@ -852,7 +852,7 @@ public class RxDeviceTool {
      *
      * @param activity activity
      */
-    public static void setLandscape(Activity activity) {
+    public static void setLandscape(AppCompatActivity activity) {
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
@@ -861,7 +861,7 @@ public class RxDeviceTool {
      *
      * @param activity activity
      */
-    public static void setPortrait(Activity activity) {
+    public static void setPortrait(AppCompatActivity activity) {
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
@@ -891,7 +891,7 @@ public class RxDeviceTool {
      * @param activity activity
      * @return 屏幕旋转角度
      */
-    public static int getScreenRotation(Activity activity) {
+    public static int getScreenRotation(AppCompatActivity activity) {
         switch (activity.getWindowManager().getDefaultDisplay().getRotation()) {
             default:
             case Surface.ROTATION_0:
@@ -911,7 +911,7 @@ public class RxDeviceTool {
      * @param activity activity
      * @return Bitmap
      */
-    public static Bitmap captureWithStatusBar(Activity activity) {
+    public static Bitmap captureWithStatusBar(AppCompatActivity activity) {
         View view = activity.getWindow().getDecorView();
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
@@ -930,7 +930,7 @@ public class RxDeviceTool {
      * @param activity activity
      * @return Bitmap
      */
-    public static Bitmap captureWithoutStatusBar(Activity activity) {
+    public static Bitmap captureWithoutStatusBar(AppCompatActivity activity) {
         View view = activity.getWindow().getDecorView();
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
@@ -975,7 +975,7 @@ public class RxDeviceTool {
      *
      * @param activity
      */
-    public static void noScreenshots(Activity activity) {
+    public static void noScreenshots(AppCompatActivity activity) {
         activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
     }
 }

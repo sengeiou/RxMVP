@@ -1,6 +1,5 @@
 package com.yumore.utility.widget;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
@@ -8,6 +7,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxDataTool;
 import com.yumore.utility.utility.RxImageTool;
@@ -220,8 +220,8 @@ public class RxTitle extends FrameLayout {
         //don't forget to add min text size programmatically
         mTvTitle.setMinTextSize(37f);
         try {
-            RxTextAutoZoom.setNormalization((Activity) getContext(), mRootLayout, mTvTitle);
-            RxKeyboardTool.hideSoftInput((Activity) getContext());
+            RxTextAutoZoom.setNormalization((AppCompatActivity) getContext(), mRootLayout, mTvTitle);
+            RxKeyboardTool.hideSoftInput((AppCompatActivity) getContext());
         } catch (Exception e) {
 
         }
@@ -439,7 +439,7 @@ public class RxTitle extends FrameLayout {
         }
     }
 
-    public void setLeftFinish(final Activity activity) {
+    public void setLeftFinish(final AppCompatActivity activity) {
         mLlLeft.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

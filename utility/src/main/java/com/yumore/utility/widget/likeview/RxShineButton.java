@@ -2,7 +2,6 @@ package com.yumore.utility.widget.likeview;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -15,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.LinearInterpolator;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 import com.yumore.utility.widget.likeview.tools.RxPorterShapeImageView;
 import com.yumore.utility.widget.likeview.tools.RxShineView;
@@ -28,7 +28,7 @@ public class RxShineButton extends RxPorterShapeImageView {
     int DEFAULT_WIDTH = 50;
     int DEFAULT_HEIGHT = 50;
     DisplayMetrics metrics = new DisplayMetrics();
-    Activity activity;
+    AppCompatActivity activity;
     RxShineView mRxShineView;
     ValueAnimator shakeAnimator;
     RxShineView.ShineParams shineParams = new RxShineView.ShineParams();
@@ -41,8 +41,8 @@ public class RxShineButton extends RxPorterShapeImageView {
 
     public RxShineButton(Context context) {
         super(context);
-        if (context instanceof Activity) {
-            init((Activity) context);
+        if (context instanceof AppCompatActivity) {
+            init((AppCompatActivity) context);
         }
     }
 
@@ -59,8 +59,8 @@ public class RxShineButton extends RxPorterShapeImageView {
 
     private void initButton(Context context, AttributeSet attrs) {
 
-        if (context instanceof Activity) {
-            init((Activity) context);
+        if (context instanceof AppCompatActivity) {
+            init((AppCompatActivity) context);
         }
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RxShineButton);
         btnColor = a.getColor(R.styleable.RxShineButton_btn_color, Color.GRAY);
@@ -196,7 +196,7 @@ public class RxShineButton extends RxPorterShapeImageView {
         this.listener = listener;
     }
 
-    public void init(Activity activity) {
+    public void init(AppCompatActivity activity) {
         this.activity = activity;
         onButtonClickListener = new OnButtonClickListener();
         setOnClickListener(onButtonClickListener);

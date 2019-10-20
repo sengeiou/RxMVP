@@ -1,7 +1,6 @@
 package com.yumore.utility.utility;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -9,6 +8,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import androidx.appcompat.app.AppCompatActivity;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 import java.lang.reflect.Field;
@@ -30,7 +30,7 @@ public class RxBarTool {
      *
      * @param activity activity
      */
-    public static void hideStatusBar(Activity activity) {
+    public static void hideStatusBar(AppCompatActivity activity) {
         noTitle(activity);
         FLAG_FULLSCREEN(activity);
     }
@@ -44,7 +44,7 @@ public class RxBarTool {
      *
      * @param activity activity
      */
-    public static void setTransparentStatusBar(Activity activity) {
+    public static void setTransparentStatusBar(AppCompatActivity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);  //透明状态栏
             activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); //透明导航栏
@@ -57,11 +57,11 @@ public class RxBarTool {
      *
      * @param activity
      */
-    public static void setNoTitle(Activity activity) {
+    public static void setNoTitle(AppCompatActivity activity) {
         activity.requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 
-    public static void noTitle(Activity activity) {
+    public static void noTitle(AppCompatActivity activity) {
         setNoTitle(activity);
     }
 
@@ -71,7 +71,7 @@ public class RxBarTool {
      *
      * @param activity
      */
-    public static void FLAG_FULLSCREEN(Activity activity) {
+    public static void FLAG_FULLSCREEN(AppCompatActivity activity) {
         activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
@@ -97,7 +97,7 @@ public class RxBarTool {
      * @param activity activity
      * @return {@code true}: 存在<br>{@code false}: 不存在
      */
-    public static boolean isStatusBarExists(Activity activity) {
+    public static boolean isStatusBarExists(AppCompatActivity activity) {
         WindowManager.LayoutParams params = activity.getWindow().getAttributes();
         return (params.flags & WindowManager.LayoutParams.FLAG_FULLSCREEN) != WindowManager.LayoutParams.FLAG_FULLSCREEN;
     }
@@ -108,7 +108,7 @@ public class RxBarTool {
      * @param activity activity
      * @return ActionBar高度
      */
-    public static int getActionBarHeight(Activity activity) {
+    public static int getActionBarHeight(AppCompatActivity activity) {
         TypedValue tv = new TypedValue();
         if (activity.getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
             return TypedValue.complexToDimensionPixelSize(tv.data, activity.getResources().getDisplayMetrics());
@@ -173,7 +173,7 @@ public class RxBarTool {
      * @param activity
      */
     @TargetApi(19)
-    public static void transparencyBar(Activity activity) {
+    public static void transparencyBar(AppCompatActivity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
@@ -197,7 +197,7 @@ public class RxBarTool {
      * @param activity
      * @param colorId
      */
-    public static void setStatusBarColor(Activity activity, int colorId) {
+    public static void setStatusBarColor(AppCompatActivity activity, int colorId) {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
@@ -219,7 +219,7 @@ public class RxBarTool {
      * @param activity
      * @return 1:MIUUI 2:Flyme 3:android6.0
      */
-    public static int StatusBarLightMode(Activity activity) {
+    public static int StatusBarLightMode(AppCompatActivity activity) {
         int result = 0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (MIUISetStatusBarLightMode(activity.getWindow(), true)) {
@@ -241,7 +241,7 @@ public class RxBarTool {
      * @param activity
      * @param type     1:MIUUI 2:Flyme 3:android6.0
      */
-    public static void StatusBarLightMode(Activity activity, int type) {
+    public static void StatusBarLightMode(AppCompatActivity activity, int type) {
         if (type == 1) {
             MIUISetStatusBarLightMode(activity.getWindow(), true);
         } else if (type == 2) {
@@ -255,7 +255,7 @@ public class RxBarTool {
     /**
      * 清除MIUI或flyme或6.0以上版本状态栏黑色字体
      */
-    public static void StatusBarDarkMode(Activity activity, int type) {
+    public static void StatusBarDarkMode(AppCompatActivity activity, int type) {
         if (type == 1) {
             MIUISetStatusBarLightMode(activity.getWindow(), false);
         } else if (type == 2) {

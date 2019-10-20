@@ -1,11 +1,11 @@
 package com.yumore.utility.utility;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author yumore
@@ -24,7 +24,7 @@ public class RxKeyboardTool {
      *
      * @param activity activity
      */
-    public static void hideSoftInput(Activity activity) {
+    public static void hideSoftInput(AppCompatActivity activity) {
         View view = activity.getWindow().peekDecorView();
         if (view != null) {
             InputMethodManager inputmanger = (InputMethodManager) activity
@@ -39,7 +39,7 @@ public class RxKeyboardTool {
      * @param activity
      * @param view
      */
-    public static void hideKeyboard(Activity activity, View view) {
+    public static void hideKeyboard(AppCompatActivity activity, View view) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }

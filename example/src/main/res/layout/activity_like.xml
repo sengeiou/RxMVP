@@ -162,7 +162,7 @@
                         android:background="@drawable/shape_round_transparent"
                         android:clickable="true"
                         android:padding="12dp"
-                        android:src="@drawable/selector_love"/>
+                        app:srcCompat="@drawable/selector_love" />
 
             </LinearLayout>
 

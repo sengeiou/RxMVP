@@ -1,7 +1,6 @@
 package com.yumore.utility.widget;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.RectF;
@@ -17,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author yumore
@@ -98,7 +98,7 @@ public class RxTextAutoZoom extends androidx.appcompat.widget.AppCompatEditText 
         initiallized = true;
     }
 
-    public static void setNormalization(final Activity a, View rootView, final RxTextAutoZoom aText) {
+    public static void setNormalization(final AppCompatActivity a, View rootView, final RxTextAutoZoom aText) {
 
         // if the view is not instance of AutoFitEditText
         // i.e. if the user taps outside of the box
@@ -131,9 +131,9 @@ public class RxTextAutoZoom extends androidx.appcompat.widget.AppCompatEditText 
         }
     }
 
-    public static void hideSoftKeyboard(Activity a) {
+    public static void hideSoftKeyboard(AppCompatActivity a) {
         InputMethodManager inputMethodManager = (InputMethodManager) a
-                .getSystemService(Activity.INPUT_METHOD_SERVICE);
+                .getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE);
         if (a.getCurrentFocus() != null
                 && a.getCurrentFocus().getWindowToken() != null) {
             inputMethodManager.hideSoftInputFromWindow(a.getCurrentFocus().getWindowToken(), 0);

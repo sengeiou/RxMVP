@@ -1,7 +1,6 @@
 package com.yumore.gallery.utility;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
@@ -9,6 +8,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.util.DisplayMetrics;
 import android.view.*;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author Nathaniel
@@ -28,7 +28,7 @@ public class ScreenUtils {
         return statusHeight;
     }
 
-    public static int getImageItemWidth(Activity activity) {
+    public static int getImageItemWidth(AppCompatActivity activity) {
         int screenWidth = activity.getResources().getDisplayMetrics().widthPixels;
         int densityDpi = activity.getResources().getDisplayMetrics().densityDpi;
         int cols = screenWidth / densityDpi;
@@ -41,7 +41,7 @@ public class ScreenUtils {
         return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
-    public static DisplayMetrics getScreenPix(Activity activity) {
+    public static DisplayMetrics getScreenPix(AppCompatActivity activity) {
         DisplayMetrics displaysMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displaysMetrics);
         return displaysMetrics;
@@ -93,7 +93,7 @@ public class ScreenUtils {
         return outMetrics.heightPixels;
     }
 
-    public static Bitmap snapShotWithStatusBar(Activity activity) {
+    public static Bitmap snapShotWithStatusBar(AppCompatActivity activity) {
         View view = activity.getWindow().getDecorView();
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();
@@ -107,7 +107,7 @@ public class ScreenUtils {
 
     }
 
-    public static Bitmap snapShotWithoutStatusBar(Activity activity) {
+    public static Bitmap snapShotWithoutStatusBar(AppCompatActivity activity) {
         View view = activity.getWindow().getDecorView();
         view.setDrawingCacheEnabled(true);
         view.buildDrawingCache();

@@ -1,9 +1,9 @@
 package com.yumore.utility.utility;
 
-import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class RxBeepTool {
     private static boolean playBeep = false;
     private static MediaPlayer mediaPlayer;
 
-    public static void playBeep(Activity mContext, boolean vibrate) {
+    public static void playBeep(AppCompatActivity mContext, boolean vibrate) {
         playBeep = true;
         AudioManager audioService = (AudioManager) mContext.getSystemService(AUDIO_SERVICE);
         if (audioService.getRingerMode() != AudioManager.RINGER_MODE_NORMAL) {

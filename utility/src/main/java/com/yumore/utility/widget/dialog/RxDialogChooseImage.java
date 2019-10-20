@@ -1,10 +1,10 @@
 package com.yumore.utility.widget.dialog;
 
-import android.app.Activity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxPhotoTool;
@@ -22,7 +22,7 @@ public class RxDialogChooseImage extends RxDialog {
     private TextView mTvFile;
     private TextView mTvCancel;
 
-    public RxDialogChooseImage(Activity context) {
+    public RxDialogChooseImage(AppCompatActivity context) {
         super(context);
         initView(context);
     }
@@ -32,7 +32,7 @@ public class RxDialogChooseImage extends RxDialog {
         initView(fragment);
     }
 
-    public RxDialogChooseImage(Activity context, int themeResId) {
+    public RxDialogChooseImage(AppCompatActivity context, int themeResId) {
         super(context, themeResId);
         initView(context);
     }
@@ -42,7 +42,7 @@ public class RxDialogChooseImage extends RxDialog {
         initView(fragment);
     }
 
-    public RxDialogChooseImage(Activity context, float alpha, int gravity) {
+    public RxDialogChooseImage(AppCompatActivity context, float alpha, int gravity) {
         super(context, alpha, gravity);
         initView(context);
     }
@@ -59,13 +59,13 @@ public class RxDialogChooseImage extends RxDialog {
     }
 
 
-    public RxDialogChooseImage(Activity context, LayoutType layoutType) {
+    public RxDialogChooseImage(AppCompatActivity context, LayoutType layoutType) {
         super(context);
         mLayoutType = layoutType;
         initView(context);
     }
 
-    public RxDialogChooseImage(Activity context, int themeResId, LayoutType layoutType) {
+    public RxDialogChooseImage(AppCompatActivity context, int themeResId, LayoutType layoutType) {
         super(context, themeResId);
         mLayoutType = layoutType;
         initView(context);
@@ -77,7 +77,7 @@ public class RxDialogChooseImage extends RxDialog {
         initView(fragment);
     }
 
-    public RxDialogChooseImage(Activity context, float alpha, int gravity, LayoutType layoutType) {
+    public RxDialogChooseImage(AppCompatActivity context, float alpha, int gravity, LayoutType layoutType) {
         super(context, alpha, gravity);
         mLayoutType = layoutType;
         initView(context);
@@ -105,7 +105,7 @@ public class RxDialogChooseImage extends RxDialog {
         return mLayoutType;
     }
 
-    private void initView(final Activity activity) {
+    private void initView(final AppCompatActivity activity) {
         View dialogView = null;
         switch (mLayoutType) {
             case TITLE:

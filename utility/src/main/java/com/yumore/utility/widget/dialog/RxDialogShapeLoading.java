@@ -1,9 +1,9 @@
 package com.yumore.utility.widget.dialog;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 import com.yumore.utility.widget.RxToast;
 import com.yumore.utility.widget.dialog.shapeloadingview.RxShapeLoadingView;
@@ -33,7 +33,7 @@ public class RxDialogShapeLoading extends RxDialog {
         initView(context);
     }
 
-    public RxDialogShapeLoading(Activity context) {
+    public RxDialogShapeLoading(AppCompatActivity context) {
         super(context);
         initView(context);
     }

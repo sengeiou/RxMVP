@@ -1,13 +1,13 @@
 package com.yumore.common.utility;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.gallery.widget.SystemBarTintManager;
 
 import java.lang.reflect.Field;
@@ -27,7 +27,7 @@ public class StatusBarUtils {
      * @param textDarkEnable 是否启用黑色字体
      * @param statusColorId  状态南颜色
      */
-    public static void setStatusBarMode(Activity activity, boolean textDarkEnable, int statusColorId) {
+    public static void setStatusBarMode(AppCompatActivity activity, boolean textDarkEnable, int statusColorId) {
         setStatusBarColor(activity, statusColorId);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             if (RomUtils.isMIUI()) {
@@ -49,7 +49,7 @@ public class StatusBarUtils {
     }
 
     @TargetApi(19)
-    private static void setTranslucentStatus(Activity activity) {
+    private static void setTranslucentStatus(AppCompatActivity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -62,7 +62,7 @@ public class StatusBarUtils {
         }
     }
 
-    private static void setStatusBarColor(Activity activity, int statusColorId) {
+    private static void setStatusBarColor(AppCompatActivity activity, int statusColorId) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.setStatusBarColor(activity.getResources().getColor(statusColorId));
@@ -77,7 +77,7 @@ public class StatusBarUtils {
     /**
      * flyme的状态栏模式
      */
-    private static boolean setFlymeStatusBarTextMode(Activity activity, boolean textDarkEnable) {
+    private static boolean setFlymeStatusBarTextMode(AppCompatActivity activity, boolean textDarkEnable) {
         Window window = activity.getWindow();
         boolean result = false;
         if (window != null) {
@@ -107,7 +107,7 @@ public class StatusBarUtils {
     /**
      * flyme的状态栏模式
      */
-    private static boolean setMeizuStatusBarDarkMode(Activity activity, boolean textDarkEnable) {
+    private static boolean setMeizuStatusBarDarkMode(AppCompatActivity activity, boolean textDarkEnable) {
         boolean result = false;
         Window window = activity.getWindow();
         if (window != null) {
@@ -137,7 +137,7 @@ public class StatusBarUtils {
     /**
      * miui的状态栏模式
      */
-    private static boolean setMiuiStatusBarDarkMode(Activity activity, boolean textDarkEnable) {
+    private static boolean setMiuiStatusBarDarkMode(AppCompatActivity activity, boolean textDarkEnable) {
         Class<? extends Window> clazz = activity.getWindow().getClass();
         try {
             int darkModeFlag = 0;
@@ -155,7 +155,7 @@ public class StatusBarUtils {
     /**
      * miui的状态栏模式
      */
-    private static boolean setMIUIStatusBarTextMode(Activity activity, boolean textDarkEnable) {
+    private static boolean setMIUIStatusBarTextMode(AppCompatActivity activity, boolean textDarkEnable) {
         boolean result = false;
         Window window = activity.getWindow();
         if (window != null) {

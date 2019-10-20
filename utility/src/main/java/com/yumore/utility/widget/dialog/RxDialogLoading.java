@@ -1,10 +1,10 @@
 package com.yumore.utility.widget.dialog;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 import com.yumore.utility.widget.RxToast;
 import com.yumore.utility.widget.progressing.SpinKitView;
@@ -35,7 +35,7 @@ public class RxDialogLoading extends RxDialog {
         initView(context);
     }
 
-    public RxDialogLoading(Activity context) {
+    public RxDialogLoading(AppCompatActivity context) {
         super(context);
         initView(context);
     }

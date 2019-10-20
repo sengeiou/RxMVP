@@ -1,8 +1,6 @@
 package com.yumore.common.common.basic;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
@@ -17,6 +15,7 @@ import android.view.*;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -175,7 +174,7 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
     @SuppressWarnings("JavaReflectionMemberAccess")
     private boolean fixOrientation() {
         try {
-            Field field = Activity.class.getDeclaredField("mActivityInfo");
+            Field field = AppCompatActivity.class.getDeclaredField("mActivityInfo");
             field.setAccessible(true);
             ActivityInfo activityInfo = (ActivityInfo) field.get(this);
             activityInfo.screenOrientation = -1;
@@ -283,7 +282,7 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
         return this;
     }
 
-    protected Activity getActivity() {
+    protected AppCompatActivity getActivity() {
         return this;
     }
 

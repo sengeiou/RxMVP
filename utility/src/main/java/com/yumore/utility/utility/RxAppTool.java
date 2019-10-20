@@ -1,7 +1,6 @@
 package com.yumore.utility.utility;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,6 +12,7 @@ import android.content.pm.Signature;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -52,7 +52,7 @@ public class RxAppTool {
      * @param filePath    文件路径
      * @param requestCode 请求值
      */
-    public static void installApp(Activity activity, String filePath, int requestCode) {
+    public static void installApp(AppCompatActivity activity, String filePath, int requestCode) {
         activity.startActivityForResult(RxIntentTool.getInstallAppIntent(activity, filePath), requestCode);
     }
 
@@ -63,7 +63,7 @@ public class RxAppTool {
      * @param file        文件
      * @param requestCode 请求值
      */
-    public static void installApp(Activity activity, File file, int requestCode) {
+    public static void installApp(AppCompatActivity activity, File file, int requestCode) {
         if (!RxFileTool.isFileExists(file)) return;
         installApp(activity, file.getAbsolutePath(), requestCode);
     }
@@ -131,7 +131,7 @@ public class RxAppTool {
      * @param packageName 包名
      * @param requestCode 请求值
      */
-    public static void uninstallApp(Activity activity, String packageName, int requestCode) {
+    public static void uninstallApp(AppCompatActivity activity, String packageName, int requestCode) {
         if (RxDataTool.isNullString(packageName)) return;
         activity.startActivityForResult(RxIntentTool.getUninstallAppIntent(packageName), requestCode);
     }
@@ -186,7 +186,7 @@ public class RxAppTool {
      * @param packageName 包名
      * @param requestCode 请求值
      */
-    public static void launchApp(Activity activity, String packageName, int requestCode) {
+    public static void launchApp(AppCompatActivity activity, String packageName, int requestCode) {
         if (RxDataTool.isNullString(packageName)) return;
         activity.startActivityForResult(RxIntentTool.getLaunchAppIntent(activity, packageName), requestCode);
     }

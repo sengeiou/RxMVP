@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
-import com.sothree.slidinguppanel.library.BuildConfig;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

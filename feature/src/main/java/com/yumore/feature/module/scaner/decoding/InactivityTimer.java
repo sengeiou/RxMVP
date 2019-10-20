@@ -16,7 +16,7 @@
 
 package com.yumore.feature.module.scaner.decoding;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.concurrent.*;
 
@@ -31,10 +31,10 @@ public final class InactivityTimer {
 
     private final ScheduledExecutorService inactivityTimer =
             Executors.newSingleThreadScheduledExecutor(new DaemonThreadFactory());
-    private final Activity activity;
+    private final AppCompatActivity activity;
     private ScheduledFuture<?> inactivityFuture = null;
 
-    public InactivityTimer(Activity activity) {
+    public InactivityTimer(AppCompatActivity activity) {
         this.activity = activity;
         onActivity();
     }

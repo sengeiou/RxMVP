@@ -4,7 +4,6 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.*;
 import android.os.Bundle;
@@ -16,6 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxImageTool;
 
@@ -175,7 +175,7 @@ public class RxSeatAirplane extends View {
         pathTail = new Path();
         pathTail.reset();
 
-        setOnTouchListener(new MoveListerner((Activity) getContext()) {
+        setOnTouchListener(new MoveListerner((AppCompatActivity) getContext()) {
             @Override
             public void moveDirection(View v, int direction, float distanceX, float distanceY) {
 
@@ -1406,7 +1406,7 @@ public class RxSeatAirplane extends View {
         private boolean isScorllStart = false;
         private boolean isUpAndDown = false;
 
-        public MoveListerner(Activity context) {
+        public MoveListerner(AppCompatActivity context) {
             super();
             mGestureDetector = new GestureDetector(context, this);
         }
