@@ -11,6 +11,7 @@ import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.yumore.daemon.adapter.GridImageAdapter;
 import com.yumore.picture.PictureSelector;
 import com.yumore.picture.config.PictureConfig;
@@ -18,6 +19,7 @@ import com.yumore.picture.config.PictureMimeType;
 import com.yumore.picture.entity.LocalMedia;
 import com.yumore.picture.permissions.RxPermissions;
 import com.yumore.picture.tools.PictureFileUtils;
+import com.yumore.provider.RouterConstants;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 
@@ -25,11 +27,13 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DaemonActivity extends AppCompatActivity implements View.OnClickListener,
-        RadioGroup.OnCheckedChangeListener, CompoundButton.OnCheckedChangeListener {
+/**
+ * @author Nathaniel
+ */
+@Route(path = RouterConstants.DAEMON_HOME)
+public class DaemonActivity extends AppCompatActivity implements View.OnClickListener, RadioGroup.OnCheckedChangeListener, CompoundButton.OnCheckedChangeListener {
     private final static String TAG = DaemonActivity.class.getSimpleName();
     private List<LocalMedia> selectList = new ArrayList<>();
-    private RecyclerView recyclerView;
     private GridImageAdapter adapter;
     private int maxSelectNum = 9;
     private TextView tv_select_num;
@@ -161,7 +165,7 @@ public class DaemonActivity extends AppCompatActivity implements View.OnClickLis
         rgb_crop.setOnCheckedChangeListener(this);
         rgb_style.setOnCheckedChangeListener(this);
         rgb_photo_mode.setOnCheckedChangeListener(this);
-        recyclerView = findViewById(R.id.recycler);
+        RecyclerView recyclerView = findViewById(R.id.recycler);
         left_back = findViewById(R.id.left_back);
         left_back.setOnClickListener(this);
         minus.setOnClickListener(this);

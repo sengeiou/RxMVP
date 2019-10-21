@@ -34,7 +34,7 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     RelativeLayout relativeLayout;
     private List<Fragment> fragmentList = new ArrayList<>();
     private int[] videoRes = new int[]{R.raw.guide1, R.raw.guide2, R.raw.guide3};
-    private LinearLayout.LayoutParams params1, params2;
+    private LinearLayout.LayoutParams focusedParams, unfocusedParams;
 
     public static int dip2px(Context context, float dpValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
@@ -47,24 +47,22 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_traction);
-
         ButterKnife.bind(this);
-
-        params1 = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 7), dip2px(getApplicationContext(), 7));
-        params1.leftMargin = dip2px(getApplicationContext(), 15);
-        params2 = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 10), dip2px(getApplicationContext(), 10));
-        params2.leftMargin = dip2px(getApplicationContext(), 15);
-        View dot;
+        focusedParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 7), dip2px(getApplicationContext(), 7));
+        focusedParams.leftMargin = dip2px(getApplicationContext(), 15);
+        unfocusedParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 10), dip2px(getApplicationContext(), 10));
+        unfocusedParams.leftMargin = dip2px(getApplicationContext(), 15);
+        View dotView;
         for (int i = 0; i < videoRes.length; i++) {
-            dot = new View(this);
+            dotView = new View(this);
             if (i == 0) {
-                dot.setLayoutParams(params2);
-                dot.setBackgroundResource(R.drawable.dot_focus);
+                dotView.setLayoutParams(unfocusedParams);
+                dotView.setBackgroundResource(R.drawable.tranction_shape_circle_magenta_solid);
             } else {
-                dot.setLayoutParams(params1);
-                dot.setBackgroundResource(R.drawable.dot_unfocus);
+                dotView.setLayoutParams(focusedParams);
+                dotView.setBackgroundResource(R.drawable.tranction_shape_circle_gray_solid);
             }
-            linearLayout.addView(dot);
+            linearLayout.addView(dotView);
         }
 
         for (int i = 0; i < videoRes.length; i++) {
@@ -99,13 +97,13 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     @Override
     public void onPageSelected(int position) {
         for (int i = 0; i < linearLayout.getChildCount(); i++) {
-            View dot = linearLayout.getChildAt(i);
+            View dotView = linearLayout.getChildAt(i);
             if (i == position) {
-                dot.setLayoutParams(params2);
-                dot.setBackgroundResource(R.drawable.dot_focus);
+                dotView.setLayoutParams(unfocusedParams);
+                dotView.setBackgroundResource(R.drawable.tranction_shape_circle_magenta_solid);
             } else {
-                dot.setLayoutParams(params1);
-                dot.setBackgroundResource(R.drawable.dot_unfocus);
+                dotView.setLayoutParams(focusedParams);
+                dotView.setBackgroundResource(R.drawable.tranction_shape_circle_gray_solid);
             }
 
         }
