@@ -70,7 +70,7 @@ public class PresenterProvider {
     }
 
     @SuppressWarnings("unchecked")
-    private <P extends BasePresenter> PresenterProvider resolveCreatePresenter() {
+    private <P extends AbstractPresenter> PresenterProvider resolveCreatePresenter() {
         CreatePresenter createPresenter = clazz.getAnnotation(CreatePresenter.class);
         if (createPresenter != null) {
             Class<P>[] classes = (Class<P>[]) createPresenter.presenter();
@@ -89,7 +89,7 @@ public class PresenterProvider {
     }
 
     @SuppressWarnings("unchecked")
-    private <P extends BasePresenter> PresenterProvider resolvePresenterVariable() {
+    private <P extends AbstractPresenter> PresenterProvider resolvePresenterVariable() {
         for (Field field : clazz.getDeclaredFields()) {
             //获取字段上的注解
             Annotation[] annotations = field.getDeclaredAnnotations();
@@ -114,7 +114,7 @@ public class PresenterProvider {
 
 
     @SuppressWarnings("unchecked")
-    public <P extends BasePresenter> P getPresenter(int index) {
+    public <P extends AbstractPresenter> P getPresenter(int index) {
         CreatePresenter createPresenter = clazz.getAnnotation(CreatePresenter.class);
         if (createPresenter == null) {
             return null;
@@ -124,7 +124,7 @@ public class PresenterProvider {
         }
         if (index >= 0 && index < createPresenter.presenter().length) {
             String key = createPresenter.presenter()[index].getCanonicalName();
-            BasePresenter presenter = presenterStore.get(key);
+            AbstractPresenter presenter = presenterStore.get(key);
             if (presenter != null) {
                 return (P) presenter;
             } else {

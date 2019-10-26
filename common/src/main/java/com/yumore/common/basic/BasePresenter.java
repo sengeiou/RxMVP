@@ -12,7 +12,7 @@ import io.reactivex.disposables.Disposable;
  * @version v1.0.0
  * @date 2018/3/8 - 16:02
  */
-public abstract class BasePresenter<V extends BaseView> implements BaseContract<V> {
+public abstract class BasePresenter<V extends BaseViewer> implements BaseContract<V> {
     protected Context context;
     protected V baseView;
     private CompositeDisposable compositeDisposable;

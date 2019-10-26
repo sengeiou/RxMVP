@@ -8,7 +8,7 @@ import java.util.HashMap;
  *
  * @author Nathaniel
  */
-public class PresenterStore<P extends BasePresenter> {
+public class PresenterStore<P extends AbstractPresenter> {
     private static final String STORE_DEFAULT_KEY = "PresenterStore.DefaultKey";
     private HashMap<String, P> hashMap = new HashMap<>();
 

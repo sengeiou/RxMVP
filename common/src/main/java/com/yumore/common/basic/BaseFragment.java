@@ -17,8 +17,9 @@ import com.yumore.common.R;
 /**
  * @author Nathaniel
  */
-public abstract class BaseFragment<P extends BaseContract> extends Fragment implements BaseView {
+public abstract class BaseFragment<P extends BaseContract> extends Fragment implements BaseViewer {
     protected P presenter;
+    protected boolean withoutMore;
     private Context context;
     private View rootView;
     private ViewGroup viewGroup;
@@ -37,14 +38,9 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         try {
             Class<?> clazz = Class.forName(className);
             baseFragment = (BaseFragment) clazz.newInstance();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (java.lang.InstantiationException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IllegalAccessException | java.lang.InstantiationException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
         return baseFragment;
     }
 
@@ -74,18 +70,18 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         viewCreated = true;
+        beforeInit(savedInstanceState);
     }
 
     @Override
-    public void beforeInit() {
+    public void beforeInit(Bundle savedInstanceState) {
         // u can do something before view has been initialized
     }
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(@NonNull Context context) {
         // u can convert this context to activity
         this.context = context;
-        beforeInit();
         super.onAttach(context);
     }
 
@@ -116,6 +112,7 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
         }
     }
 
+    @NonNull
     @Override
     public Context getContext() {
         return context;
@@ -181,5 +178,10 @@ public abstract class BaseFragment<P extends BaseContract> extends Fragment impl
 
     public Fragment getFragment() {
         return this;
+    }
+
+    @Override
+    public void withoutMore(boolean withoutMore) {
+        this.withoutMore = withoutMore;
     }
 }

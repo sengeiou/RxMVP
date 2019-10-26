@@ -1,18 +1,18 @@
 package com.yumore.answer;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.GridLayoutManager;
+import androidx.appcompat.widget.RecyclerView;
+import androidx.core.app.Fragment;
+import androidx.core.app.FragmentPagerAdapter;
+import androidx.core.view.ViewPager;
 import com.alibaba.fastjson.JSON;
 import com.yumore.answer.adapter.TopicAdapter;
 import com.yumore.answer.bean.AnwerInfo;
@@ -56,8 +56,8 @@ public class ReadActivity extends AppCompatActivity {
 
         initReadViewPager();
 
-        Button bt_pre = (Button) findViewById(R.id.bt_pre);
-        Button bt_next = (Button) findViewById(R.id.bt_next);
+        Button bt_pre = findViewById(R.id.bt_pre);
+        Button bt_next = findViewById(R.id.bt_next);
 
         bt_pre.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,8 +88,8 @@ public class ReadActivity extends AppCompatActivity {
     private int curPosition2;
 
     private void initReadViewPager() {
-        shadowView = (ImageView) findViewById(R.id.shadowView);
-        readerViewPager = (ReaderViewPager) findViewById(R.id.readerViewPager);
+        shadowView = findViewById(R.id.shadowView);
+        readerViewPager = findViewById(R.id.readerViewPager);
 
 
         readerViewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -136,7 +136,7 @@ public class ReadActivity extends AppCompatActivity {
     private int curPosition;
 
     private void initList() {
-        recyclerView = (RecyclerView) findViewById(R.id.list);
+        recyclerView = findViewById(R.id.list);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 6);
 
@@ -171,11 +171,11 @@ public class ReadActivity extends AppCompatActivity {
     }
 
     private void initSlidingUoPanel() {
-        mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        mLayout = findViewById(R.id.sliding_layout);
 
         int height = getWindowManager().getDefaultDisplay().getHeight();
 
-        LinearLayout dragView = (LinearLayout) findViewById(R.id.dragView);
+        LinearLayout dragView = findViewById(R.id.dragView);
         SlidingUpPanelLayout.LayoutParams params = new SlidingUpPanelLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (int) (height * 0.8f));
         dragView.setLayoutParams(params);
 

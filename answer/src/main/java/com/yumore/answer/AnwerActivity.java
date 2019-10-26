@@ -1,14 +1,14 @@
 package com.yumore.answer;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.GridLayoutManager;
+import androidx.appcompat.widget.RecyclerView;
 import com.alibaba.fastjson.JSON;
 import com.yumore.answer.adapter.LayoutAdapter;
 import com.yumore.answer.adapter.TopicAdapter;
@@ -38,7 +38,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anwer);
 
-        TextView tv_title = (TextView) findViewById(R.id.tv_title);
+        TextView tv_title = findViewById(R.id.tv_title);
 
         tv_title.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,8 +55,8 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
             }
         });
 
-        Button bt_pre = (Button) findViewById(R.id.bt_pre);
-        Button bt_next = (Button) findViewById(R.id.bt_next);
+        Button bt_pre = findViewById(R.id.bt_pre);
+        Button bt_next = findViewById(R.id.bt_next);
 
         bt_next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +93,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
     private void initPage() {
         if(datas.size()>0) {
-            rootLayout = (FlipperLayout) findViewById(R.id.container);
+            rootLayout = findViewById(R.id.container);
             rootLayout.removeAllViews();
             rootLayout.setIndex(1);
 
@@ -133,7 +133,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
     private void initLastPage() {
 
-        rootLayout = (FlipperLayout) findViewById(R.id.container);
+        rootLayout = findViewById(R.id.container);
         rootLayout.removeAllViews();
         int position = datas.size() - 1;
         rootLayout.setIndex(position+1);
@@ -219,7 +219,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
     private void choosePage(int recover,int one,int two) {
 
-        rootLayout = (FlipperLayout) findViewById(R.id.container);
+        rootLayout = findViewById(R.id.container);
         rootLayout.removeAllViews();
         rootLayout.setIndex(two);
 
@@ -253,7 +253,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
     private int curPosition;
 
     private void initList() {
-        recyclerView = (RecyclerView) findViewById(R.id.list);
+        recyclerView = findViewById(R.id.list);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 6);
 
@@ -300,7 +300,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
 
     private void initSlidingUoPanel() {
-        mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        mLayout = findViewById(R.id.sliding_layout);
         mLayout.addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
             @Override
             public void onPanelSlide(View panel, float slideOffset) {

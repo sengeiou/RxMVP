@@ -19,7 +19,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.yumore.common.R;
 import com.yumore.common.R2;
-import com.yumore.common.common.basic.BaseActivity;
+import com.yumore.common.basic.AbstractActivity;
 import com.yumore.common.mvp.BaseContract;
 import com.yumore.common.utility.DataUtils;
 import com.yumore.common.widget.CustomPopupWindow;
@@ -34,7 +34,7 @@ import java.util.List;
  * @author Nathaniel
  * @date 18-8-6-上午9:56
  */
-public class GalleryActivity extends BaseActivity implements ViewPager.OnPageChangeListener, BaseQuickAdapter.OnItemClickListener, View.OnClickListener {
+public class GalleryActivity extends AbstractActivity implements ViewPager.OnPageChangeListener, BaseQuickAdapter.OnItemClickListener, View.OnClickListener {
     @BindView(R2.id.common_header_back_iv)
     ImageView commonHeaderBackIv;
     @BindView(R2.id.common_header_title_tv)

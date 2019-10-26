@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+    <Button
+            android:id="@+id/btn_adjust"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_adjust"
+            android:textColor="@android:color/white" />
+
+    <Button
+            android:id="@+id/btn_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_effect"
+            android:textColor="@android:color/white" />
+
+    <Button
+            android:id="@+id/btn_texture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_texture"
+            android:textColor="@android:color/white" />
+
+    <Button
+            android:id="@+id/btn_blur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_blur"
+            android:textColor="@android:color/white" />
+
+    <Button
+            android:id="@+id/btn_curve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_curve"
+            android:textColor="@android:color/white" />
+
+    <Button
+            android:id="@+id/btn_hue_saturation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_hue_saturation"
+            android:textColor="@android:color/white" />
+
+    <Button
+            android:id="@+id/btn_tone_separation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_tone_separation"
+            android:textColor="@android:color/white" />
+
+    <Button
+            android:id="@+id/btn_color_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/btn_color_balance"
+            android:textColor="@android:color/white" />
+</LinearLayout>

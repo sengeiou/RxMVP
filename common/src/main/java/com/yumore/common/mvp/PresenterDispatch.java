@@ -2,6 +2,7 @@ package com.yumore.common.mvp;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
+import com.yumore.common.basic.BaseViewer;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,18 +18,18 @@ public class PresenterDispatch {
     }
 
     @SuppressWarnings("unchecked")
-    public <P extends BasePresenter> void attachView(BaseView view) {
+    public <P extends AbstractPresenter> void attachView(BaseViewer baseViewer) {
         PresenterStore presenterStore = presenterProvider.getPresenterStore();
         HashMap<String, P> hashMap = presenterStore.getMap();
         for (Map.Entry<String, P> entry : hashMap.entrySet()) {
             P presenter = entry.getValue();
             if (presenter != null) {
-                presenter.attachView(view);
+                presenter.attachView(baseViewer);
             }
         }
     }
 
-    public <P extends BasePresenter> void detachView() {
+    public <P extends AbstractPresenter> void detachView() {
         PresenterStore presenterStore = presenterProvider.getPresenterStore();
         HashMap<String, P> hashMap = presenterStore.getMap();
         for (Map.Entry<String, P> entry : hashMap.entrySet()) {
@@ -39,7 +40,7 @@ public class PresenterDispatch {
         }
     }
 
-    public <P extends BasePresenter> void onCreatePresenter(@Nullable Bundle savedInstanceState) {
+    public <P extends AbstractPresenter> void onCreatePresenter(@Nullable Bundle savedInstanceState) {
         PresenterStore presenterStore = presenterProvider.getPresenterStore();
         HashMap<String, P> hashMap = presenterStore.getMap();
         for (Map.Entry<String, P> entry : hashMap.entrySet()) {
@@ -50,7 +51,7 @@ public class PresenterDispatch {
         }
     }
 
-    public <P extends BasePresenter> void onDestroyPresenter() {
+    public <P extends AbstractPresenter> void onDestroyPresenter() {
         PresenterStore presenterStore = presenterProvider.getPresenterStore();
         HashMap<String, P> hashMap = presenterStore.getMap();
         for (Map.Entry<String, P> entry : hashMap.entrySet()) {
@@ -61,7 +62,7 @@ public class PresenterDispatch {
         }
     }
 
-    public <P extends BasePresenter> void onSaveInstanceState(Bundle outState) {
+    public <P extends AbstractPresenter> void onSaveInstanceState(Bundle outState) {
         PresenterStore presenterStore = presenterProvider.getPresenterStore();
         HashMap<String, P> hashMap = presenterStore.getMap();
         for (Map.Entry<String, P> entry : hashMap.entrySet()) {

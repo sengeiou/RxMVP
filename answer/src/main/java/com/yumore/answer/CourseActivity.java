@@ -1,12 +1,12 @@
 package com.yumore.answer;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.LinearLayoutManager;
+import androidx.appcompat.widget.RecyclerView;
 import com.alibaba.fastjson.JSON;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.yumore.answer.adapter.AnimalsHeadersAdapter;
@@ -37,7 +37,7 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
         setContentView(R.layout.activity_course);
 
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView = findViewById(R.id.recyclerview);
 
 
 

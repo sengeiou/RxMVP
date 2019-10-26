@@ -1,16 +1,32 @@
 package com.yumore.common.helper;
 
 import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 
 public interface EngineHelper {
 
+    /**
+     * initialize retrofit
+     *
+     * @return retrofit
+     */
     Retrofit getRetrofit();
 
-    OkHttpClient.Builder setInterceptor(Interceptor interceptor);
+    /**
+     * initialize interceptor
+     *
+     * @return interceptor
+     */
+    Interceptor getInterceptor();
 
-    Retrofit.Builder setConverterFactory(Converter.Factory factory);
+    /**
+     * initialize server url
+     *
+     * @return serverUrl
+     */
+    String getBaseUrl();
+
+    Converter.Factory getFactory();
 
 }

@@ -22,8 +22,9 @@ import com.yumore.common.utility.ActivityManager;
  * @version v1.0.0
  * @date 2018/3/8 - 15:11
  */
-public abstract class BaseActivity<P extends BaseContract> extends AppCompatActivity implements BaseView {
+public abstract class BaseActivity<P extends BaseContract> extends AppCompatActivity implements BaseViewer {
     protected P presenter;
+    protected boolean withoutMore;
     private Context context;
     private Unbinder unbinder;
     private AlertDialog alertDialog;
@@ -31,13 +32,13 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        beforeInit();
+        beforeInit(savedInstanceState);
         setContentView(getLayoutId());
         initialize();
     }
 
     @Override
-    public void beforeInit() {
+    public void beforeInit(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
 
@@ -125,5 +126,10 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
     @Override
     public Context getContext() {
         return context;
+    }
+
+    @Override
+    public void withoutMore(boolean withoutMore) {
+        this.withoutMore = withoutMore;
     }
 }

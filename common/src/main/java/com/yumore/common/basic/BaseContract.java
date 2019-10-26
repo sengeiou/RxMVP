@@ -10,7 +10,7 @@ import io.reactivex.disposables.Disposable;
  * @version v1.0.0
  * @date 2018/3/8 - 15:02
  */
-public interface BaseContract<V extends BaseView> {
+public interface BaseContract<V extends BaseViewer> {
     @SuppressWarnings("unchecked")
     void attachView(V baseView);
 
