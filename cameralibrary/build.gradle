@@ -21,7 +21,7 @@ android {
     repositories {
         flatDir {
             // 人脸关键点检测依赖库下放到facedetectlibrary
-            dirs project(':facedetectlibrary').file('libs')
+            dirs project(':facedetect').file('libs')
         }
     }
     compileOptions {
@@ -32,7 +32,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation project(':facedetectlibrary')
+    implementation project(':facedetect')
     implementation project(':filterlibrary')
     implementation project(':landmarklibrary')
     implementation project(':utilslibrary')

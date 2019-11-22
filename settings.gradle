@@ -22,7 +22,7 @@ include ':picture'
 
 include ':app'
 include ':cameralibrary'
-include ':facedetectlibrary'
+include ':facedetect'
 include ':filterlibrary'
 include ':videolibrary'
 include ':gdxlibrary'
