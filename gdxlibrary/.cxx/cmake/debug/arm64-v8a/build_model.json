@@ -1,0 +1,70 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "E:\\AndroidStudio\\RxMVP",
+      "sdkFolder": "E:\\AndroidSDK",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\build\\intermediates",
+      "gradleModulePathName": ":gdxlibrary",
+      "moduleRootFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary",
+      "makeFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "E:\\AndroidStudio\\RxMVP\\.cxx",
+      "cxxFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx",
+      "ndkFolder": "E:\\AndroidSDK\\ndk-bundle",
+      "ndkVersion": "20.1.5948944",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      "-std\u003dc++11"
+    ],
+    "variantName": "debug",
+    "soFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\build\\intermediates\\cmake\\debug\\lib",
+    "objFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\build\\intermediates\\cmake\\debug\\obj",
+    "jsonFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug",
+    "gradleBuildOutputFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug",
+    "isDebuggableEnabled": true,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "ARM64_V8A",
+  "abiPlatformVersion": 19,
+  "cxxBuildFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a",
+  "jsonFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a",
+  "objFolder": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a",
+  "buildCommandFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\\build_command.txt",
+  "buildOutputFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\\build_output.txt",
+  "modelOutputFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a\\CMakeLists.txt",
+    "toolchainWrapperFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a\\build_generation_state.json",
+    "cacheKeyFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_cache_key.json",
+    "compilerCacheUseFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cxx\\debug\\arm64-v8a\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\\json_generation_record.json",
+  "compileCommandsJsonFile": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\\compile_commands.json"
+}

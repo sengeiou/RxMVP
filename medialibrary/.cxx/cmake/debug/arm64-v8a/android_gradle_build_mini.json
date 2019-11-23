@@ -1,0 +1,62 @@
+{
+  "buildFiles": [
+    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\CMakeLists.txt",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\CMakeLists.txt",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\CMakeLists.txt",
+    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\CMakeLists.txt",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CMakeLists.txt",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\CMakeLists.txt",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\CMakeLists.txt",
+    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "ffcommand-Debug-arm64-v8a": {
+      "artifactName": "ffcommand",
+      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" ffcommand",
+      "abi": "arm64-v8a",
+      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libffcommand.so"
+    },
+    "soundtouch-Debug-arm64-v8a": {
+      "artifactName": "soundtouch",
+      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" soundtouch",
+      "abi": "arm64-v8a",
+      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libsoundtouch.so"
+    },
+    "cainfilter-Debug-arm64-v8a": {
+      "artifactName": "cainfilter",
+      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" cainfilter",
+      "abi": "arm64-v8a",
+      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libcainfilter.so"
+    },
+    "ffrecorder-Debug-arm64-v8a": {
+      "artifactName": "ffrecorder",
+      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" ffrecorder",
+      "abi": "arm64-v8a",
+      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libffrecorder.so"
+    },
+    "metadata_retriever-Debug-arm64-v8a": {
+      "artifactName": "metadata_retriever",
+      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" metadata_retriever",
+      "abi": "arm64-v8a",
+      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libmetadata_retriever.so"
+    },
+    "media_player-Debug-arm64-v8a": {
+      "artifactName": "media_player",
+      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" media_player",
+      "abi": "arm64-v8a",
+      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libmedia_player.so"
+    },
+    "media_editor-Debug-arm64-v8a": {
+      "artifactName": "media_editor",
+      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" media_editor",
+      "abi": "arm64-v8a",
+      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libmedia_editor.so"
+    }
+  }
+}

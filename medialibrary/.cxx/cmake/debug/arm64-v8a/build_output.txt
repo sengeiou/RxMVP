@@ -1,0 +1,25 @@
+CMake Warning (dev) in CainFilter/CMakeLists.txt:
+  A logical block opening on the line
+
+    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt:3 (if)
+
+  closes on the line
+
+    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt:11 (endif)
+
+  with mis-matching arguments.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in MediaPlayer/CMakeLists.txt:
+  A logical block opening on the line
+
+    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt:3 (if)
+
+  closes on the line
+
+    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt:11 (endif)
+
+  with mis-matching arguments.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+Configuring done

@@ -1,0 +1,3 @@
+E:/AndroidStudio/RxMVP/filterlibrary/.cxx/cmake/debug/arm64-v8a/CMakeFiles/nativefilter.dir
+E:/AndroidStudio/RxMVP/filterlibrary/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+E:/AndroidStudio/RxMVP/filterlibrary/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir

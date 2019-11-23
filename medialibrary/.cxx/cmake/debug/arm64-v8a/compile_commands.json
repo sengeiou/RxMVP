@@ -1,0 +1,691 @@
+[
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffcommand_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFCommand\\CMakeFiles\\ffcommand.dir\\cmdutils.c.o   -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\cmdutils.c",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\cmdutils.c"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffcommand_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFCommand\\CMakeFiles\\ffcommand.dir\\ffmpeg.c.o   -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg.c",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg.c"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffcommand_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFCommand\\CMakeFiles\\ffcommand.dir\\ffmpeg_filter.c.o   -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg_filter.c",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg_filter.c"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffcommand_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFCommand\\CMakeFiles\\ffcommand.dir\\ffmpeg_opt.c.o   -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg_opt.c",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg_opt.c"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffcommand_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFCommand\\CMakeFiles\\ffcommand.dir\\com_cgfay_media_FFmpegUtils.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\com_cgfay_media_FFmpegUtils.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\com_cgfay_media_FFmpegUtils.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\__\\Common\\AVFrameFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFrameFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFrameFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\__\\Common\\AVMediaWriter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaWriter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaWriter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\__\\Common\\AVFormatter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFormatter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFormatter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\__\\Common\\AVMediaData.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaData.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaData.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\__\\Common\\YuvConvertor.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvConvertor.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvConvertor.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\__\\Common\\YuvData.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvData.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvData.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\FFMediaRecorder.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\FFMediaRecorder.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\FFMediaRecorder.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\RecordParams.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\RecordParams.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\RecordParams.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o FFMediaRecorder\\CMakeFiles\\ffrecorder.dir\\com_cgfay_media_recorder_FFMediaRecorder.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\com_cgfay_media_recorder_FFMediaRecorder.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\com_cgfay_media_recorder_FFMediaRecorder.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmetadata_retriever_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o Metadata\\CMakeFiles\\metadata_retriever.dir\\MediaMetadataRetriever.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\MediaMetadataRetriever.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\MediaMetadataRetriever.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmetadata_retriever_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o Metadata\\CMakeFiles\\metadata_retriever.dir\\Metadata.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\Metadata.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\Metadata.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmetadata_retriever_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/source  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o Metadata\\CMakeFiles\\metadata_retriever.dir\\com_cgfay_media_MediaMetadataRetriever.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\com_cgfay_media_MediaMetadataRetriever.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\com_cgfay_media_MediaMetadataRetriever.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\AAFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\AAFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\AAFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\BPMDetect.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\BPMDetect.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\BPMDetect.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\cpu_detect_x86.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\cpu_detect_x86.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\cpu_detect_x86.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\FIFOSampleBuffer.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\FIFOSampleBuffer.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\FIFOSampleBuffer.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\FIRFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\FIRFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\FIRFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\InterpolateCubic.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateCubic.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateCubic.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\InterpolateLinear.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateLinear.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateLinear.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\InterpolateShannon.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateShannon.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateShannon.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\mmx_optimized.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\mmx_optimized.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\mmx_optimized.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\PeakFinder.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\PeakFinder.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\PeakFinder.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\RateTransposer.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\RateTransposer.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\RateTransposer.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\SoundTouch.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\SoundTouch.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\SoundTouch.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\sse_optimized.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\sse_optimized.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\sse_optimized.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\source\\SoundTouch\\TDStretch.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\TDStretch.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\TDStretch.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\SoundTouchWrapper.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\SoundTouchWrapper.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\SoundTouchWrapper.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o SoundTouch\\CMakeFiles\\soundtouch.dir\\com_cgfay_media_SoundTouch.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\com_cgfay_media_SoundTouch.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\com_cgfay_media_SoundTouch.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\FilterManager.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\FilterManager.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\FilterManager.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\FrameBuffer.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\FrameBuffer.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\FrameBuffer.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\common\\CainEGLContext.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\CainEGLContext.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\CainEGLContext.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\common\\EglHelper.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\EglHelper.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\EglHelper.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\common\\OpenGLUtils.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\OpenGLUtils.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\OpenGLUtils.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\common\\CoordinateUtils.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\CoordinateUtils.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\CoordinateUtils.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\common\\vecmath.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\vecmath.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\vecmath.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GL64LookupTableFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GL64LookupTableFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GL64LookupTableFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GL512LookupTableFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GL512LookupTableFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GL512LookupTableFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLDepthFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDepthFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDepthFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLDepthMixFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDepthMixFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDepthMixFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLDrosteFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDrosteFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDrosteFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLGroupFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGroupFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGroupFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLGaussianBlurFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGaussianBlurFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGaussianBlurFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLGaussianPassBlurFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGaussianPassBlurFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGaussianPassBlurFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\GLIntensityFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLIntensityFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLIntensityFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\adjust\\GLImageAdjustFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLImageAdjustFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLImageAdjustFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\adjust\\GLBrightnessFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLBrightnessFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLBrightnessFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\adjust\\GLContrastFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLContrastFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLContrastFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\adjust\\GLExposureFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLExposureFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLExposureFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\adjust\\GLHueFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLHueFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLHueFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\adjust\\GLSaturationFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLSaturationFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLSaturationFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\adjust\\GLSharpenFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLSharpenFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLSharpenFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\beauty\\GLBeautyAdjustFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyAdjustFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyAdjustFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\beauty\\GLBeautyBlurFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyBlurFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyBlurFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\beauty\\GLBeautyFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\beauty\\GLBeautyHighPassFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyHighPassFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyHighPassFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLEffectGlitterWhiteFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectGlitterWhiteFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectGlitterWhiteFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLEffectIllusionFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectIllusionFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectIllusionFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLEffectScaleFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectScaleFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectScaleFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLEffectShakeFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectShakeFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectShakeFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLEffectSoulStuffFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectSoulStuffFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectSoulStuffFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameBlackWhiteThreeFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlackWhiteThreeFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlackWhiteThreeFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameBlurFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlurFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlurFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameBlurMixFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlurMixFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlurMixFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameTwoFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameTwoFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameTwoFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameThreeFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameThreeFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameThreeFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameFourFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameFourFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameFourFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameSixFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameSixFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameSixFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\effect\\GLFrameNineFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameNineFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameNineFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\input\\GLInputFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\input\\GLInputABGRFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputABGRFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputABGRFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\input\\GLInputYUV420PFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputYUV420PFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputYUV420PFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\filter\\input\\GLOESInputFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLOESInputFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLOESInputFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\node\\DisplayRenderNode.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\DisplayRenderNode.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\DisplayRenderNode.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\node\\InputRenderNode.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\InputRenderNode.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\InputRenderNode.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\node\\OESRenderNode.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\OESRenderNode.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\OESRenderNode.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\node\\RenderNode.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\RenderNode.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\RenderNode.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/.  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o CainFilter\\CMakeFiles\\cainfilter.dir\\node\\RenderNodeList.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\RenderNodeList.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\RenderNodeList.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\common\\FFmpegUtils.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\common\\FFmpegUtils.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\common\\FFmpegUtils.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\convertor\\AudioResampler.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\convertor\\AudioResampler.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\convertor\\AudioResampler.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\decoder\\AudioDecoder.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\AudioDecoder.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\AudioDecoder.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\decoder\\MediaDecoder.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\MediaDecoder.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\MediaDecoder.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\decoder\\VideoDecoder.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\VideoDecoder.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\VideoDecoder.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\device\\android\\GLESDevice.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\android\\GLESDevice.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\android\\GLESDevice.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\device\\android\\SLESDevice.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\android\\SLESDevice.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\android\\SLESDevice.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\device\\AudioDevice.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\AudioDevice.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\AudioDevice.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\device\\VideoDevice.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\VideoDevice.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\VideoDevice.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\queue\\FrameQueue.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\queue\\FrameQueue.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\queue\\FrameQueue.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\queue\\PacketQueue.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\queue\\PacketQueue.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\queue\\PacketQueue.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\sync\\MediaClock.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\sync\\MediaClock.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\sync\\MediaClock.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\sync\\MediaSync.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\sync\\MediaSync.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\sync\\MediaSync.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\player\\AVMessageQueue.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\AVMessageQueue.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\AVMessageQueue.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\player\\MediaPlayer.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\MediaPlayer.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\MediaPlayer.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\source\\player\\PlayerState.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\PlayerState.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\PlayerState.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\android\\CainMediaPlayer.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\CainMediaPlayer.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\CainMediaPlayer.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\android\\JNIHelp.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\JNIHelp.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\JNIHelp.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaPlayer\\CMakeFiles\\media_player.dir\\android\\com_cgfay_media_CainMediaPlayer.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\com_cgfay_media_CainMediaPlayer.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\com_cgfay_media_CainMediaPlayer.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\AVFormatter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFormatter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFormatter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\AVFrameFilter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFrameFilter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFrameFilter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\AVMediaData.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaData.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaData.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\AVMediaReader.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaReader.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaReader.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\AVMediaWriter.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaWriter.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaWriter.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\Resampler.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\Resampler.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\Resampler.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\YuvConvertor.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvConvertor.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvConvertor.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\__\\Common\\YuvData.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvData.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvData.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\source\\AudioCutEditor.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\AudioCutEditor.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\AudioCutEditor.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\source\\MediaEditor.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\MediaEditor.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\MediaEditor.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\source\\VideoCutEditor.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\VideoCutEditor.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\VideoCutEditor.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\CainMediaEditor.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\CainMediaEditor.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\CainMediaEditor.cpp"
+},
+
+{
+  "directory": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel  -fPIC   -o MediaEditor\\CMakeFiles\\media_editor.dir\\com_cgfay_media_CainMediaEditor.cpp.o -c E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\com_cgfay_media_CainMediaEditor.cpp",
+  "file": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\com_cgfay_media_CainMediaEditor.cpp"
+}
+]
