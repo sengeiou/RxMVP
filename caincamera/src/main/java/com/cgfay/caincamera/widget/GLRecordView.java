@@ -10,9 +10,15 @@ import android.opengl.GLSurfaceView;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.*;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
+
 import androidx.core.view.GestureDetectorCompat;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.uitls.utils.DensityUtils;
 
@@ -266,7 +272,7 @@ public class GLRecordView extends GLSurfaceView {
      * 添加视频圆角功能
      */
     private static class RoundOutlineProvider extends ViewOutlineProvider {
-        private float mRadius;
+        private final float mRadius;
 
         RoundOutlineProvider(float radius) {
             mRadius = radius;

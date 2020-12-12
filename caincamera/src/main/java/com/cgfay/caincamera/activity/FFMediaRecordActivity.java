@@ -1,7 +1,9 @@
 package com.cgfay.caincamera.activity;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.caincamera.fragment.FFMediaRecordFragment;
 

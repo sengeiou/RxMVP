@@ -10,7 +10,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.caincamera.presenter.RecordPresenter;
 import com.cgfay.caincamera.renderer.RecordRenderer;
@@ -47,7 +49,7 @@ public class SpeedRecordActivity extends AppCompatActivity implements View.OnCli
     private Toast mToast;
     // ----------------------------------------- 切换滤镜 -------------------------------------------
     private int mFilterIndex;
-    private GLRecordView.OnTouchScroller mTouchScroller = new GLRecordView.OnTouchScroller() {
+    private final GLRecordView.OnTouchScroller mTouchScroller = new GLRecordView.OnTouchScroller() {
         @Override
         public void swipeBack() {
             mFilterIndex++;

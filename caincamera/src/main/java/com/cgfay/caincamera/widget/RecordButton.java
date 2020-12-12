@@ -23,7 +23,7 @@ public class RecordButton extends TextView {
 
     private static final int BACKGROUND_COLOR = Color.parseColor("#fe2c55");
 
-    private int mBackgroundColor = BACKGROUND_COLOR;
+    private final int mBackgroundColor = BACKGROUND_COLOR;
 
     private Paint mPaint;
 

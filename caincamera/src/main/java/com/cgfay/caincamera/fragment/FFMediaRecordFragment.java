@@ -19,7 +19,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import androidx.core.app.Fragment;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.caincamera.presenter.FFMediaRecordPresenter;
 import com.cgfay.caincamera.renderer.FFRecordRenderer;

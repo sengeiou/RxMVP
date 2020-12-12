@@ -1,14 +1,20 @@
-package com.yumore.common.utility;
+package com.yumore.common.basic;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
+
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.google.gson.JsonArray;
 import com.yumore.common.helper.InitializeHelper;
+import com.yumore.common.utility.EmptyUtils;
+import com.yumore.common.utility.LoggerUtils;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -21,13 +27,19 @@ import java.util.List;
  * 3. apply方法不会提示任何失败的提示。
  * 由于在一个进程中，sharedPreference是单实例，一般不会出现并发冲突，
  * 如果对提交的结果不关心的话，建议使用apply，当然需要确保提交成功且有后续操作的话，还是需要用commit的。
+ * ----------------------------------
+ * TODO 注意
+ * 子类的方法需要使用 protected
+ * 不对外公开
  *
  * @author Nathaniel
  * @version v1.0.0
  */
-public abstract class AbstractSharedPreferences<T> implements InitializeHelper {
+public abstract class BasePreferences implements InitializeHelper {
+    private static final String TAG = BasePreferences.class.getSimpleName();
     private static final String DEFAULT_SHARED_PREFERENCES_NAME = "config.sdf";
-    protected SharedPreferences.Editor editor;
+    protected Context context;
+    private SharedPreferences.Editor editor;
     private SharedPreferences sharedPreferences;
 
     /**
@@ -39,7 +51,8 @@ public abstract class AbstractSharedPreferences<T> implements InitializeHelper {
 
     @SuppressLint("CommitPrefEdits")
     @Override
-    public void initialize(Context context) {
+    public void initialize(@NonNull Context context) {
+        this.context = context;
         if (TextUtils.isEmpty(getSharedPreferencesName())) {
             sharedPreferences = context.getSharedPreferences(DEFAULT_SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
         } else {
@@ -48,92 +61,104 @@ public abstract class AbstractSharedPreferences<T> implements InitializeHelper {
         editor = sharedPreferences.edit();
     }
 
-    public int getInt(String key, int defaultValue) {
+    protected int getInt(String key, int defaultValue) {
         return sharedPreferences.getInt(key, defaultValue);
     }
 
-    public void putInt(String key, int value) {
+    protected void putInt(String key, int value) {
         editor.putInt(key, value).apply();
     }
 
-    public long getLong(String key, long defaultValue) {
+    protected long getLong(String key, long defaultValue) {
         return sharedPreferences.getLong(key, defaultValue);
     }
 
-    public void putLong(String key, long value) {
+    protected void putLong(String key, long value) {
         editor.putLong(key, value).apply();
     }
 
-    public String getString(final String key, final String defaultValue) {
+    protected String getString(final String key, final String defaultValue) {
         return sharedPreferences.getString(key, defaultValue);
     }
 
-    public void putString(String key, String value) {
+    protected void putString(String key, String value) {
         editor.putString(key, value).apply();
     }
 
-    public boolean getBoolean(String key, boolean defaultValue) {
+    protected boolean getBoolean(String key, boolean defaultValue) {
         return sharedPreferences.getBoolean(key, defaultValue);
     }
 
-    public void putBoolean(String key, boolean value) {
+    protected void putBoolean(String key, boolean value) {
         editor.putBoolean(key, value).apply();
     }
 
-    public void putList(String key, List<T> data) {
+    protected <T> T getObject(String key, Class<T> clazz) {
+        String json = getString(key, null);
+        if (EmptyUtils.isEmpty(json)) {
+            return null;
+        }
         Gson gson = new Gson();
-        String json = gson.toJson(data);
+        return gson.fromJson(json, clazz);
+    }
+
+    protected <T> void putObject(String key, T data) {
+        Gson gson = new Gson();
+        putString(key, gson.toJson(data));
+    }
+
+    protected <T> void putList(String key, List<T> dataList) {
+        Gson gson = new Gson();
+        String json = gson.toJson(dataList);
         editor.putString(key, json);
     }
 
-    public List<T> getList(String key, Type type) {
+    protected <T> List<T> getList(String key, Type type) {
+        List<T> dataList = new ArrayList<>();
         String json = getString(key, null);
-        if (json != null) {
+        if (EmptyUtils.isEmpty(json) || "[]".equals(json)) {
+            return dataList;
+        } else {
             Gson gson = new Gson();
-            return gson.fromJson(json, type);
+            if (gson.fromJson(json, type) instanceof JsonArray) {
+                dataList = gson.fromJson(json, type);
+            } else {
+                LoggerUtils.logger(TAG, key + " json is " + json + ", after convert is not a jsonArray");
+            }
         }
-        return null;
+        return dataList;
     }
 
-    public List<T> getList(String key) {
-        String json = getString(key, null);
-        if (json != null) {
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<T>>() {
-            }.getType();
-            return gson.fromJson(json, type);
-        }
-        return null;
-    }
-
-    public void remove(String key) {
+    protected void remove(String key) {
         editor.remove(key).apply();
     }
 
-    public void remove(String... keys) {
-        if (keys != null && keys.length > 0) {
-            for (String key : keys) {
-                editor.remove(key);
-            }
-            editor.apply();
+    protected void remove(String... keys) {
+        if (EmptyUtils.isEmpty(keys)) {
+            return;
         }
+        for (String key : keys) {
+            editor.remove(key);
+        }
+        editor.apply();
     }
 
-    public boolean hasKey(String key) {
+    protected boolean hasKey(String key) {
         return sharedPreferences.contains(key);
     }
 
-    public boolean hasKey(String... keys) {
+    protected boolean hasKey(String... keys) {
         boolean flag = true;
-        if (keys != null && keys.length > 0) {
-            for (String key : keys) {
-                flag = flag && sharedPreferences.contains(key);
-            }
+        if (EmptyUtils.isEmpty(keys)) {
+            return false;
+        }
+        for (String key : keys) {
+            flag = flag && sharedPreferences.contains(key);
         }
         return flag;
     }
 
-    public void clear() {
+    protected void clear() {
         editor.clear();
         editor.commit();
     }

@@ -7,17 +7,20 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.yumore.provider.RouterConstants;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * @author Nathaniel
@@ -32,8 +35,12 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     LinearLayout linearLayout;
     @BindView(R2.id.traction_layout)
     RelativeLayout relativeLayout;
-    private List<Fragment> fragmentList = new ArrayList<>();
-    private int[] videoRes = new int[]{R.raw.guide1, R.raw.guide2, R.raw.guide3};
+    private final int[] videoRes = new int[]{
+            R.raw.guide1,
+            R.raw.guide2,
+            R.raw.guide3
+    };
+    private List<Fragment> fragmentList;
     private LinearLayout.LayoutParams focusedParams, unfocusedParams;
 
     public static int dip2px(Context context, float dpValue) {
@@ -41,13 +48,13 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
         return (int) (dpValue * scale + 0.5f);
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_traction);
         ButterKnife.bind(this);
+        fragmentList = new ArrayList<>();
         focusedParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 7), dip2px(getApplicationContext(), 7));
         focusedParams.leftMargin = dip2px(getApplicationContext(), 15);
         unfocusedParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 10), dip2px(getApplicationContext(), 10));
@@ -85,7 +92,9 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     })
     public void onClick(View view) {
         if (view.getId() == R.id.enter_button) {
+
             ARouter.getInstance().build(RouterConstants.EXAMPLE_HOME).navigation();
+            finish();
         }
     }
 

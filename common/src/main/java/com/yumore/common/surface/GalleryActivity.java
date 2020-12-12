@@ -10,23 +10,27 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.viewpager.widget.ViewPager;
-import butterknife.BindView;
-import butterknife.OnClick;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.yumore.common.R;
 import com.yumore.common.R2;
 import com.yumore.common.basic.AbstractActivity;
-import com.yumore.common.mvp.BaseContract;
+import com.yumore.common.basic.BaseContract;
 import com.yumore.common.utility.DataUtils;
 import com.yumore.common.widget.CustomPopupWindow;
-import io.reactivex.functions.Consumer;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+import io.reactivex.functions.Consumer;
 
 /**
  * 左右切换和点击放大的图片浏览器
@@ -34,7 +38,7 @@ import java.util.List;
  * @author Nathaniel
  * @date 18-8-6-上午9:56
  */
-public class GalleryActivity extends AbstractActivity implements ViewPager.OnPageChangeListener, BaseQuickAdapter.OnItemClickListener, View.OnClickListener {
+public class GalleryActivity extends AbstractActivity implements ViewPager.OnPageChangeListener, OnItemClickListener, View.OnClickListener {
     @BindView(R2.id.common_header_back_iv)
     ImageView commonHeaderBackIv;
     @BindView(R2.id.common_header_title_tv)
@@ -46,7 +50,7 @@ public class GalleryActivity extends AbstractActivity implements ViewPager.OnPag
     @BindView(R2.id.common_header_root)
     RelativeLayout commonHeaderRoot;
 
-    private List<String> imageUrlList = new ArrayList<>();
+    private final List<String> imageUrlList = new ArrayList<>();
     private int defaultIndex;
     private GalleryAdapter galleryAdapter;
     private CustomPopupWindow customPopupWindow;

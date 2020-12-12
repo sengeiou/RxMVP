@@ -11,8 +11,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.LinearLayout;
+import android.widget.SeekBar;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
+
 import androidx.core.app.Fragment;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.media.CainCommandEditor;
 import com.cgfay.media.CainMediaEditor;
@@ -57,7 +63,7 @@ public class MusicMergeFragment extends Fragment implements View.OnClickListener
      * 这里是混合处理的代码
      */
     private long startTime;
-    private SeekBar.OnSeekBarChangeListener mSeekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
+    private final SeekBar.OnSeekBarChangeListener mSeekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             if (fromUser) {

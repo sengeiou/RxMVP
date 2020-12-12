@@ -4,16 +4,18 @@ import android.graphics.SurfaceTexture;
 import android.opengl.GLES30;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
+
 import com.cgfay.caincamera.presenter.FFMediaRecordPresenter;
 import com.cgfay.filter.glfilter.base.GLImageFilter;
 import com.cgfay.filter.glfilter.base.GLImageOESInputFilter;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
 
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL10;
 import java.lang.ref.WeakReference;
 import java.nio.FloatBuffer;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
 
 /**
  * FFmpeg录制渲染器
@@ -42,7 +44,7 @@ public class FFRecordRenderer implements GLSurfaceView.Renderer {
     // 输入纹理
     private int mInputTexture;
     private SurfaceTexture mSurfaceTexture;
-    private float[] mMatrix = new float[16];
+    private final float[] mMatrix = new float[16];
 
     public FFRecordRenderer(FFMediaRecordPresenter presenter) {
         mWeakPresenter = new WeakReference<>(presenter);

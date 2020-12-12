@@ -1,689 +1,711 @@
 {
   "stringTable": {
-    "0": "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
-    "1": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffcommand_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC",
-    "2": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffcommand_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC",
-    "3": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dffrecorder_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC",
-    "4": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dmetadata_retriever_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC",
-    "5": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dsoundtouch_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC",
-    "6": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dcainfilter_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/. -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC",
-    "7": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dmedia_player_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC",
-    "8": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dmedia_editor_EXPORTS -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -IE:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC"
+    "0": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a",
+    "1": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffcommand_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC",
+    "2": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffcommand_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "3": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffrecorder_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "4": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmetadata_retriever_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "5": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dsoundtouch_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "6": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcainfilter_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/. -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "7": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmedia_player_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "8": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmedia_editor_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
-    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\CMakeLists.txt",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\CMakeLists.txt",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\CMakeLists.txt",
-    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\CMakeLists.txt",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CMakeLists.txt",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\CMakeLists.txt",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\CMakeLists.txt",
-    "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\CMakeLists.txt"
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CMakeLists.txt",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/platforms.cmake",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" clean"
+    "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" clean"
   ],
-  "buildTargetsCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "ffcommand-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" ffcommand",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" ffcommand",
       "buildType": "debug",
-      "toolchain": "2311914784",
+      "toolchain": "574402080",
       "abi": "arm64-v8a",
       "artifactName": "ffcommand",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\cmdutils.c",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg.c",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg_filter.c",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\ffmpeg_opt.c",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFCommand\\com_cgfay_media_FFmpegUtils.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/com_cgfay_media_FFmpegUtils.cpp",
           "flagsOrdinal": 2,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/cmdutils.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/ffmpeg.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/ffmpeg_filter.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/ffmpeg_opt.c",
+          "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libffcommand.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libffcommand.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so"
+      ]
     },
     "soundtouch-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" soundtouch",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" soundtouch",
       "buildType": "debug",
-      "toolchain": "2311914784",
+      "toolchain": "574402080",
       "abi": "arm64-v8a",
       "artifactName": "soundtouch",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\AAFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/AAFilter.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\BPMDetect.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/BPMDetect.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\cpu_detect_x86.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/cpu_detect_x86.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\FIFOSampleBuffer.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/FIFOSampleBuffer.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\FIRFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/FIRFilter.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateCubic.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/InterpolateCubic.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateLinear.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/InterpolateLinear.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\InterpolateShannon.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/InterpolateShannon.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\mmx_optimized.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/mmx_optimized.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\PeakFinder.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/PeakFinder.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\RateTransposer.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/RateTransposer.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\SoundTouch.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/SoundTouch.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\sse_optimized.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/sse_optimized.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\source\\SoundTouch\\TDStretch.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch/TDStretch.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\SoundTouchWrapper.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/SoundTouchWrapper.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\SoundTouch\\com_cgfay_media_SoundTouch.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/com_cgfay_media_SoundTouch.cpp",
           "flagsOrdinal": 5,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libsoundtouch.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libsoundtouch.so",
+      "runtimeFiles": []
     },
     "cainfilter-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" cainfilter",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" cainfilter",
       "buildType": "debug",
-      "toolchain": "2311914784",
+      "toolchain": "574402080",
       "abi": "arm64-v8a",
       "artifactName": "cainfilter",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\FilterManager.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/FilterManager.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\FrameBuffer.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/FrameBuffer.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\CainEGLContext.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/common/CainEGLContext.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\EglHelper.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/common/EglHelper.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\OpenGLUtils.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/common/OpenGLUtils.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\CoordinateUtils.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/common/CoordinateUtils.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\common\\vecmath.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/common/vecmath.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GL64LookupTableFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GL64LookupTableFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GL512LookupTableFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GL512LookupTableFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDepthFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLDepthFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDepthMixFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLDepthMixFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLDrosteFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLDrosteFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGroupFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLGroupFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGaussianBlurFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLGaussianBlurFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLGaussianPassBlurFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLGaussianPassBlurFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\GLIntensityFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/GLIntensityFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLImageAdjustFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/adjust/GLImageAdjustFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLBrightnessFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/adjust/GLBrightnessFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLContrastFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/adjust/GLContrastFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLExposureFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/adjust/GLExposureFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLHueFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/adjust/GLHueFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLSaturationFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/adjust/GLSaturationFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\adjust\\GLSharpenFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/adjust/GLSharpenFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyAdjustFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/beauty/GLBeautyAdjustFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyBlurFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/beauty/GLBeautyBlurFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/beauty/GLBeautyFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\beauty\\GLBeautyHighPassFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/beauty/GLBeautyHighPassFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectGlitterWhiteFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLEffectGlitterWhiteFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectIllusionFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLEffectIllusionFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectScaleFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLEffectScaleFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectShakeFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLEffectShakeFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLEffectSoulStuffFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLEffectSoulStuffFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlackWhiteThreeFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameBlackWhiteThreeFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlurFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameBlurFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameBlurMixFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameBlurMixFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameTwoFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameTwoFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameThreeFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameThreeFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameFourFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameFourFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameSixFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameSixFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\effect\\GLFrameNineFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/effect/GLFrameNineFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/input/GLInputFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputABGRFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/input/GLInputABGRFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLInputYUV420PFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/input/GLInputYUV420PFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\filter\\input\\GLOESInputFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/filter/input/GLOESInputFilter.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\DisplayRenderNode.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/node/DisplayRenderNode.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\InputRenderNode.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/node/InputRenderNode.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\OESRenderNode.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/node/OESRenderNode.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\RenderNode.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/node/RenderNode.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\CainFilter\\node\\RenderNodeList.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/node/RenderNodeList.cpp",
           "flagsOrdinal": 6,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libcainfilter.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libcainfilter.so",
+      "runtimeFiles": []
     },
     "ffrecorder-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" ffrecorder",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" ffrecorder",
       "buildType": "debug",
-      "toolchain": "2311914784",
+      "toolchain": "574402080",
       "abi": "arm64-v8a",
       "artifactName": "ffrecorder",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFrameFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFrameFilter.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaWriter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaWriter.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFormatter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFormatter.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaData.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaData.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvConvertor.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvConvertor.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvData.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvData.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\FFMediaRecorder.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/FFMediaRecorder.cpp",
           "flagsOrdinal": 3,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\RecordParams.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/RecordParams.cpp",
           "flagsOrdinal": 3,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\FFMediaRecorder\\com_cgfay_media_recorder_FFMediaRecorder.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/com_cgfay_media_recorder_FFMediaRecorder.cpp",
           "flagsOrdinal": 3,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libffrecorder.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libffrecorder.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libyuv.so"
+      ]
     },
     "metadata_retriever-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" metadata_retriever",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" metadata_retriever",
       "buildType": "debug",
-      "toolchain": "2311914784",
+      "toolchain": "574402080",
       "abi": "arm64-v8a",
       "artifactName": "metadata_retriever",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\MediaMetadataRetriever.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/MediaMetadataRetriever.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\Metadata.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/Metadata.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Metadata\\com_cgfay_media_MediaMetadataRetriever.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/com_cgfay_media_MediaMetadataRetriever.cpp",
           "flagsOrdinal": 4,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libmetadata_retriever.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libmetadata_retriever.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so"
+      ]
     },
     "media_player-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" media_player",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" media_player",
       "buildType": "debug",
-      "toolchain": "2311914784",
+      "toolchain": "574402080",
       "abi": "arm64-v8a",
       "artifactName": "media_player",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\common\\FFmpegUtils.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/common/FFmpegUtils.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\convertor\\AudioResampler.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/convertor/AudioResampler.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\AudioDecoder.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/decoder/AudioDecoder.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\MediaDecoder.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/decoder/MediaDecoder.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\decoder\\VideoDecoder.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/decoder/VideoDecoder.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\android\\GLESDevice.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/device/android/GLESDevice.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\android\\SLESDevice.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/device/android/SLESDevice.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\AudioDevice.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/device/AudioDevice.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\device\\VideoDevice.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/device/VideoDevice.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\queue\\FrameQueue.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/queue/FrameQueue.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\queue\\PacketQueue.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/queue/PacketQueue.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\sync\\MediaClock.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/sync/MediaClock.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\sync\\MediaSync.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/sync/MediaSync.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\AVMessageQueue.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/player/AVMessageQueue.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\MediaPlayer.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/player/MediaPlayer.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\source\\player\\PlayerState.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source/player/PlayerState.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\CainMediaPlayer.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android/CainMediaPlayer.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\JNIHelp.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android/JNIHelp.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaPlayer\\android\\com_cgfay_media_CainMediaPlayer.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android/com_cgfay_media_CainMediaPlayer.cpp",
           "flagsOrdinal": 7,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libmedia_player.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libmedia_player.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libsoundtouch.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libcainfilter.so"
+      ]
     },
     "media_editor-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\medialibrary\\.cxx\\cmake\\debug\\arm64-v8a\" media_editor",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a\" media_editor",
       "buildType": "debug",
-      "toolchain": "2311914784",
+      "toolchain": "574402080",
       "abi": "arm64-v8a",
       "artifactName": "media_editor",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFormatter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFormatter.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVFrameFilter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFrameFilter.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaData.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaData.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaReader.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaReader.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\AVMediaWriter.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaWriter.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\Resampler.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/Resampler.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvConvertor.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvConvertor.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\Common\\YuvData.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvData.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\AudioCutEditor.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source/AudioCutEditor.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\MediaEditor.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source/MediaEditor.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\source\\VideoCutEditor.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source/VideoCutEditor.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\CainMediaEditor.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/CainMediaEditor.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\medialibrary\\src\\main\\cpp\\MediaEditor\\com_cgfay_media_CainMediaEditor.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/com_cgfay_media_CainMediaEditor.cpp",
           "flagsOrdinal": 8,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\medialibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libmedia_editor.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libmedia_editor.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libsoundtouch.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libyuv.so"
+      ]
     }
   },
   "toolchains": {
-    "2311914784": {
-      "cCompilerExecutable": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
-      "cppCompilerExecutable": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    "574402080": {
+      "cCompilerExecutable": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+      "cppCompilerExecutable": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
     }
   },
   "cFileExtensions": [

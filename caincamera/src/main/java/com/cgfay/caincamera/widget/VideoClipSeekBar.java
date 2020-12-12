@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.uitls.utils.DensityUtils;
 
@@ -33,7 +34,7 @@ public class VideoClipSeekBar extends View {
     private int roundCorner;
     private boolean moveStart;
     private boolean moveEnd;
-    private int mMax = MAX;
+    private final int mMax = MAX;
 
     private OnCutBarChangeListener callBack;
 

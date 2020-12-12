@@ -2,10 +2,14 @@ package com.yumore.common.surface;
 
 import android.view.View;
 import android.widget.LinearLayout;
+
 import androidx.annotation.Nullable;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
+import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.yumore.common.R;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -26,21 +30,21 @@ public class OptionAdapter<M> extends BaseQuickAdapter<M, BaseViewHolder> {
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, M m) {
+    protected void convert(@NotNull BaseViewHolder helper, M m) {
         if (m == null) {
             return;
         }
         int itemCount = 4;
-        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(helper.getConvertView().getLayoutParams());
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(helper.itemView.getLayoutParams());
         if (helper.getAdapterPosition() % itemCount == itemCount - 1) {
             layoutParams.setMargins(0, 0, 0, 0);
         } else {
-            layoutParams.setMargins(0, 0, (int) mContext.getResources().getDimension(R.dimen.common_padding_normal), 0);
+            layoutParams.setMargins(0, 0, (int) getContext().getResources().getDimension(R.dimen.common_padding_normal), 0);
         }
         if (showEnable) {
-            helper.getConvertView().setLayoutParams(layoutParams);
+            helper.itemView.setLayoutParams(layoutParams);
         }
         View view = helper.getView(R.id.common_split_view);
-        view.setVisibility(helper.getAdapterPosition() < mData.size() - 1 ? View.VISIBLE : View.GONE);
+        view.setVisibility(helper.getAdapterPosition() < getData().size() - 1 ? View.VISIBLE : View.GONE);
     }
 }

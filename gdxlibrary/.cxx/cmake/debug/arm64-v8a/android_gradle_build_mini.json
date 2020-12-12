@@ -1,19 +1,20 @@
 {
   "buildFiles": [
-    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
-    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
-    "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\CMakeLists.txt"
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/CMakeLists.txt",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/platforms.cmake"
   ],
   "cleanCommands": [
-    "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\" clean"
+    "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a\" clean"
   ],
-  "buildTargetsCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "nativegdx-Debug-arm64-v8a": {
       "artifactName": "nativegdx",
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\" nativegdx",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a\" nativegdx",
       "abi": "arm64-v8a",
-      "output": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libnativegdx.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libnativegdx.so",
+      "runtimeFiles": []
     }
   }
 }

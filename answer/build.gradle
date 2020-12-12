@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 19
@@ -20,9 +20,9 @@ android {
 
 dependencies {
     implementation project(':sticky')
-    implementation 'com.alibaba:fastjson:1.2.55'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.alibaba:fastjson:1.2.75'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'com.google.firebase:firebase-appindexing:19.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.firebase:firebase-appindexing:19.1.0'
 }

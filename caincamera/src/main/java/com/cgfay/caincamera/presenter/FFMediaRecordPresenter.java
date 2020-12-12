@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.cgfay.caincamera.fragment.FFMediaRecordFragment;
 import com.cgfay.camera.engine.camera.CameraEngine;
 import com.cgfay.camera.engine.camera.CameraParam;
@@ -33,7 +34,7 @@ public class FFMediaRecordPresenter implements Camera.PreviewCallback, AudioReco
     private static final boolean VERBOSE = true;
     private final List<VideoInfo> mVideoList;
     private Activity mActivity;
-    private FFMediaRecordFragment mFragment;
+    private final FFMediaRecordFragment mFragment;
     // 命令行编辑器
     private CainCommandEditor mCommandEditor;
     // 最大时长(毫秒)
@@ -42,10 +43,10 @@ public class FFMediaRecordPresenter implements Camera.PreviewCallback, AudioReco
     private int mPreviewRotate;
     private int mRecordWidth;
     private int mRecordHeight;
-    private AudioRecorder mAudioRecorder;
+    private final AudioRecorder mAudioRecorder;
     private FFMediaRecorder mMediaRecorder;
     private boolean mIsRecording;
-    private Handler mHandler;
+    private final Handler mHandler;
 
     public FFMediaRecordPresenter(Activity activity, FFMediaRecordFragment fragment) {
         mActivity = activity;
@@ -403,8 +404,8 @@ public class FFMediaRecordPresenter implements Camera.PreviewCallback, AudioReco
      */
     public class VideoInfo {
 
-        private String fileName;
-        private float duration;
+        private final String fileName;
+        private final float duration;
 
         public VideoInfo(String fileName, float duration) {
             this.fileName = fileName;

@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.camera.engine.PreviewEngine;
 import com.cgfay.camera.engine.model.AspectRatio;

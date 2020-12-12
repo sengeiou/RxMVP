@@ -1,8 +1,8 @@
-# Install script for directory: E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand
+# Install script for directory: /Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Project")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

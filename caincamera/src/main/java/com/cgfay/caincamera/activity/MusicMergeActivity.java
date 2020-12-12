@@ -4,7 +4,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.cgfay.caincamera.R;
 import com.cgfay.caincamera.fragment.MusicMergeFragment;
 import com.cgfay.uitls.fragment.MusicSelectFragment;
@@ -19,7 +21,7 @@ public class MusicMergeActivity extends AppCompatActivity {
     private static final String FRAGMENT_MUSIC_MERGE = "fragment_music_merge";
 
     private String mVideoPath;
-    private MusicSelectFragment.OnMusicSelectedListener listener = (music) -> {
+    private final MusicSelectFragment.OnMusicSelectedListener listener = (music) -> {
         MusicMergeFragment fragment = MusicMergeFragment.newInstance();
         fragment.setVideoPath(mVideoPath);
         fragment.setMusicPath(music.getSongUrl(), music.getDuration());

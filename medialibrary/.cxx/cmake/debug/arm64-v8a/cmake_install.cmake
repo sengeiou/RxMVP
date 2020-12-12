@@ -1,8 +1,8 @@
-# Install script for directory: E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp
+# Install script for directory: /Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Project")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/FFCommand/cmake_install.cmake")
-  include("E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/FFMediaRecorder/cmake_install.cmake")
-  include("E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/Metadata/cmake_install.cmake")
-  include("E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/SoundTouch/cmake_install.cmake")
-  include("E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/CainFilter/cmake_install.cmake")
-  include("E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/MediaPlayer/cmake_install.cmake")
-  include("E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/MediaEditor/cmake_install.cmake")
+  include("/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/FFCommand/cmake_install.cmake")
+  include("/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/FFMediaRecorder/cmake_install.cmake")
+  include("/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/Metadata/cmake_install.cmake")
+  include("/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/SoundTouch/cmake_install.cmake")
+  include("/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/CainFilter/cmake_install.cmake")
+  include("/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/MediaPlayer/cmake_install.cmake")
+  include("/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/MediaEditor/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/arm64-v8a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -3,7 +3,9 @@ package com.yumore.sample.surface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.sample.R;
 import com.yumore.traction.TractionActivity;
 
@@ -22,6 +24,7 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         new Handler().postDelayed(() -> {
+
             Intent intent = new Intent(WelcomeActivity.this, TractionActivity.class);
             startActivity(intent);
             finish();

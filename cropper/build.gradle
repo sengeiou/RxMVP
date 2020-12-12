@@ -1,8 +1,14 @@
 apply plugin: 'com.android.library'
 
+Properties properties = new Properties()
+File keyStore = project.rootProject.file("config.properties")
+if (keyStore.exists()) {
+    properties.load(keyStore.newDataInputStream())
+}
+
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 19
@@ -13,14 +19,20 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "applicationId", "\"${properties.getProperty("config.applicationId")}\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "applicationId", "\"${properties.getProperty("config.applicationId")}\""
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     lintOptions {
         abortOnError false
@@ -31,7 +43,7 @@ android {
 }
 
 dependencies {
-    api 'androidx.appcompat:appcompat:1.1.0'
-    api 'androidx.recyclerview:recyclerview:1.0.0'
-    api "com.github.bumptech.glide:glide:4.9.0"
+    api 'androidx.appcompat:appcompat:1.2.0'
+    api 'androidx.recyclerview:recyclerview:1.1.0'
+    api "com.github.bumptech.glide:glide:4.11.0"
 }

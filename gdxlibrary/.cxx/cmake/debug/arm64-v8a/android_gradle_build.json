@@ -1,38 +1,39 @@
 {
   "stringTable": {
-    "0": "E:/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a",
-    "1": "--target=aarch64-none-linux-android21 --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dnativegdx_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -O0 -fno-limit-debug-info -fno-experimental-isel -fPIC"
+    "0": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a",
+    "1": "--target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnativegdx_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++11 -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
-    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
-    "E:\\AndroidSDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
-    "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\CMakeLists.txt"
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/CMakeLists.txt",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/platforms.cmake"
   ],
   "cleanCommands": [
-    "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\" clean"
+    "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a\" clean"
   ],
-  "buildTargetsCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "nativegdx-Debug-arm64-v8a": {
-      "buildCommand": "E:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\AndroidStudio\\RxMVP\\gdxlibrary\\.cxx\\cmake\\debug\\arm64-v8a\" nativegdx",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/debug/arm64-v8a\" nativegdx",
       "buildType": "debug",
-      "toolchain": "3180433301",
+      "toolchain": "84289207",
       "abi": "arm64-v8a",
       "artifactName": "nativegdx",
       "files": [
         {
-          "src": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\src\\main\\cpp\\Matrix4.cpp",
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/src/main/cpp/Matrix4.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "E:\\AndroidStudio\\RxMVP\\gdxlibrary\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libnativegdx.so"
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/build/intermediates/cmake/debug/obj/arm64-v8a/libnativegdx.so",
+      "runtimeFiles": []
     }
   },
   "toolchains": {
-    "3180433301": {
-      "cppCompilerExecutable": "E:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    "84289207": {
+      "cppCompilerExecutable": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
     }
   },
   "cFileExtensions": [],

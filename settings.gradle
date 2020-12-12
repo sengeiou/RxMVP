@@ -20,7 +20,7 @@ include ':daemon'
 include ':cropper'
 include ':picture'
 
-include ':app'
+include ':caincamera'
 include ':cameralibrary'
 include ':facedetect'
 include ':filterlibrary'

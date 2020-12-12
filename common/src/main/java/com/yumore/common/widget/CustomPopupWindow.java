@@ -12,9 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.yumore.common.R;
 import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.SpaceItemDecoration;
@@ -60,14 +63,14 @@ public class CustomPopupWindow extends PopupWindow {
         }
     }
 
-    public static class Builder implements View.OnClickListener, BaseQuickAdapter.OnItemClickListener {
+    public static class Builder implements View.OnClickListener, OnItemClickListener {
 
-        private BaseQuickAdapter.OnItemClickListener onItemClickListener;
+        private final Context context;
         private int width, height;
         private RecyclerView.LayoutManager layoutManager;
         private View.OnClickListener onClickListener;
         private CustomPopupWindow customPopupWindow;
-        private Context context;
+        private OnItemClickListener onItemClickListener;
         private boolean widthFull, heightFull;
         private View customView;
         private BaseQuickAdapter baseQuickAdapter;
@@ -84,7 +87,7 @@ public class CustomPopupWindow extends PopupWindow {
             return this;
         }
 
-        public Builder setOnItemClickListener(BaseQuickAdapter.OnItemClickListener onItemClickListener) {
+        public Builder setOnItemClickListener(OnItemClickListener onItemClickListener) {
             this.onItemClickListener = onItemClickListener;
             return this;
         }

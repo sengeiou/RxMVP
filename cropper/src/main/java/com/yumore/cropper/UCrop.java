@@ -8,9 +8,16 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
-import androidx.annotation.*;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.FloatRange;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
 import com.yumore.cropper.model.AspectRatio;
 
 import java.util.ArrayList;
@@ -27,7 +34,7 @@ public class UCrop {
     public static final int REQUEST_CROP = 69;
     public static final int RESULT_ERROR = 96;
 
-    private static final String EXTRA_PREFIX = BuildConfig.APPLICATION_ID;
+    private static final String EXTRA_PREFIX = BuildConfig.applicationId;
 
     public static final String EXTRA_INPUT_URI = EXTRA_PREFIX + ".InputUri";
     public static final String EXTRA_OUTPUT_URI = EXTRA_PREFIX + ".OutputUri";
@@ -44,8 +51,8 @@ public class UCrop {
     public static final String EXTRA_MAX_SIZE_X = EXTRA_PREFIX + ".MaxSizeX";
     public static final String EXTRA_MAX_SIZE_Y = EXTRA_PREFIX + ".MaxSizeY";
 
-    private Intent mCropIntent;
-    private Bundle mCropOptionsBundle;
+    private final Intent mCropIntent;
+    private final Bundle mCropOptionsBundle;
 
     private UCrop(@NonNull Uri source, @NonNull Uri destination) {
         mCropIntent = new Intent();
@@ -99,7 +106,7 @@ public class UCrop {
      * @return aspect ratio as a floating point value (x:y) - so it will be 1 for 1:1 or 4/3 for 4:3
      */
     public static float getOutputCropAspectRatio(@NonNull Intent intent) {
-        return intent.getParcelableExtra(EXTRA_OUTPUT_CROP_ASPECT_RATIO);
+        return intent.getFloatExtra(EXTRA_OUTPUT_CROP_ASPECT_RATIO, 0f);
     }
 
     /**

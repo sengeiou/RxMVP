@@ -8,11 +8,19 @@ import android.opengl.EGLContext;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
+
 import com.cgfay.caincamera.activity.SpeedRecordActivity;
 import com.cgfay.camera.engine.camera.CameraEngine;
 import com.cgfay.camera.engine.camera.CameraParam;
 import com.cgfay.camera.utils.PathConstraints;
-import com.cgfay.filter.recorder.*;
+import com.cgfay.filter.recorder.AudioParams;
+import com.cgfay.filter.recorder.HWMediaRecorder;
+import com.cgfay.filter.recorder.MediaInfo;
+import com.cgfay.filter.recorder.MediaType;
+import com.cgfay.filter.recorder.OnRecordStateListener;
+import com.cgfay.filter.recorder.RecordInfo;
+import com.cgfay.filter.recorder.SpeedMode;
+import com.cgfay.filter.recorder.VideoParams;
 import com.cgfay.media.CainCommandEditor;
 import com.cgfay.uitls.utils.FileUtils;
 import com.cgfay.video.activity.VideoEditActivity;
@@ -45,10 +53,10 @@ public class RecordPresenter implements SurfaceTexture.OnFrameAvailableListener,
     private long mRemainDuration;
 
     // 视频编码器
-    private HWMediaRecorder mHWMediaRecorder;
+    private final HWMediaRecorder mHWMediaRecorder;
 
     // 视频列表
-    private List<MediaInfo> mVideoList = new ArrayList<>();
+    private final List<MediaInfo> mVideoList = new ArrayList<>();
 
     // 录制音频信息
     private RecordInfo mAudioInfo;

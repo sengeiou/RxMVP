@@ -2,7 +2,7 @@ apply plugin: "com.android.library"
 apply plugin: "com.alibaba.arouter"
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 19
@@ -28,7 +28,6 @@ android {
 }
 
 dependencies {
-    api "com.alibaba:arouter-api:1.4.1"
+    api "com.alibaba:arouter-api:1.5.0"
     implementation 'com.android.support:appcompat-v7'
-    //  annotationProcessor 'com.alibaba:arouter-compiler:?'
 }

@@ -1,11 +1,23 @@
+Check for working C compiler: /Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang
+Check for working C compiler: /Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang -- works
+Detecting C compiler ABI info
+Detecting C compiler ABI info - done
+Detecting C compile features
+Detecting C compile features - done
+Check for working CXX compiler: /Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++
+Check for working CXX compiler: /Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ -- works
+Detecting CXX compiler ABI info
+Detecting CXX compiler ABI info - done
+Detecting CXX compile features
+Detecting CXX compile features - done
 CMake Warning (dev) in CainFilter/CMakeLists.txt:
   A logical block opening on the line
 
-    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt:3 (if)
+    /Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt:3 (if)
 
   closes on the line
 
-    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt:11 (endif)
+    /Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt:11 (endif)
 
   with mis-matching arguments.
 This warning is for project developers.  Use -Wno-dev to suppress it.
@@ -13,11 +25,11 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 CMake Warning (dev) in MediaPlayer/CMakeLists.txt:
   A logical block opening on the line
 
-    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt:3 (if)
+    /Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt:3 (if)
 
   closes on the line
 
-    E:/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt:11 (endif)
+    /Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt:11 (endif)
 
   with mis-matching arguments.
 This warning is for project developers.  Use -Wno-dev to suppress it.
