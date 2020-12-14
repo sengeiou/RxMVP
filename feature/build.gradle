@@ -29,5 +29,5 @@ dependencies {
     compileOnly 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.4.0'
     compileOnly 'com.lzy.net:okgo:3.0.4'
     compileOnly 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.google.zxing:core:3.4.0'
+    implementation 'com.google.zxing:core:3.4.1'
 }

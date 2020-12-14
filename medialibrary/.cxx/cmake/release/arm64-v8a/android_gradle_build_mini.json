@@ -1,0 +1,84 @@
+{
+  "buildFiles": [
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CMakeLists.txt",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/platforms.cmake",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/CMakeLists.txt",
+    "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "media_player-Release-arm64-v8a": {
+      "artifactName": "media_player",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" media_player",
+      "abi": "arm64-v8a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libmedia_player.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libsoundtouch.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libcainfilter.so"
+      ]
+    },
+    "ffcommand-Release-arm64-v8a": {
+      "artifactName": "ffcommand",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" ffcommand",
+      "abi": "arm64-v8a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libffcommand.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so"
+      ]
+    },
+    "soundtouch-Release-arm64-v8a": {
+      "artifactName": "soundtouch",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" soundtouch",
+      "abi": "arm64-v8a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libsoundtouch.so",
+      "runtimeFiles": []
+    },
+    "ffrecorder-Release-arm64-v8a": {
+      "artifactName": "ffrecorder",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" ffrecorder",
+      "abi": "arm64-v8a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libffrecorder.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libyuv.so"
+      ]
+    },
+    "metadata_retriever-Release-arm64-v8a": {
+      "artifactName": "metadata_retriever",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" metadata_retriever",
+      "abi": "arm64-v8a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libmetadata_retriever.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so"
+      ]
+    },
+    "cainfilter-Release-arm64-v8a": {
+      "artifactName": "cainfilter",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" cainfilter",
+      "abi": "arm64-v8a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libcainfilter.so",
+      "runtimeFiles": []
+    },
+    "media_editor-Release-arm64-v8a": {
+      "artifactName": "media_editor",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a\" media_editor",
+      "abi": "arm64-v8a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libmedia_editor.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a/libsoundtouch.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/arm64-v8a/libyuv.so"
+      ]
+    }
+  }
+}

@@ -28,10 +28,10 @@ dependencies {
     compileOnly 'androidx.recyclerview:recyclerview:1.1.0'
     compileOnly 'androidx.annotation:annotation:1.1.0'
     compileOnly 'com.google.android:flexbox:2.0.1'
-    compileOnly 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compileOnly 'com.readystatesoftware.systembartint:systembartint:1.0.4'
     compileOnly 'com.orhanobut:logger:2.2.0'
     compileOnly 'org.greenrobot:greendao:3.3.0'
-    implementation 'net.lingala.zip4j:zip4j:1.3.2'
+    compileOnly "net.lingala.zip4j:zip4j:1.3.2"
     compileOnly 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }

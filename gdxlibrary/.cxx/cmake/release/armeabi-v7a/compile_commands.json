@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/.cxx/cmake/release/armeabi-v7a",
+    "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativegdx_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++11 -Oz -DNDEBUG  -fPIC   -o CMakeFiles/nativegdx.dir/src/main/cpp/Matrix4.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/src/main/cpp/Matrix4.cpp",
+    "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/gdxlibrary/src/main/cpp/Matrix4.cpp"
+  }
+]

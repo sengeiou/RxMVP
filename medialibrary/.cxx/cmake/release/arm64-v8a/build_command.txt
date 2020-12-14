@@ -1,0 +1,24 @@
+                Executable : /Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake
+arguments : 
+-H/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp
+-DCMAKE_CXX_FLAGS=-std=c++11 -D__STDC_CONSTANT_MACROS
+-DCMAKE_FIND_ROOT_PATH=/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/prefab/arm64-v8a/prefab
+-DCMAKE_BUILD_TYPE=Release
+-DCMAKE_TOOLCHAIN_FILE=/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake
+-DANDROID_ABI=arm64-v8a
+-DANDROID_NDK=/Users/nathaniel/Library/Android/sdk/ndk-bundle
+-DANDROID_PLATFORM=android-19
+-DCMAKE_ANDROID_ARCH_ABI=arm64-v8a
+-DCMAKE_ANDROID_NDK=/Users/nathaniel/Library/Android/sdk/ndk-bundle
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/release/obj/arm64-v8a
+-DCMAKE_MAKE_PROGRAM=/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=19
+-DANDROID_PLATFORM_LEVEL=19
+-DANDROID_TOOLCHAIN=clang
+-B/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/release/arm64-v8a
+-GNinja
+jvmArgs : 
+
+Build command args:
