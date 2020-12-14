@@ -33,6 +33,16 @@ allprojects {
     }
 }
 
+def debuggable() {
+    def taskNames = gradle.startParameter.taskNames
+    for (taskName in taskNames) {
+        if ((taskName.contains("install") || taskName.contains("assemble")) && taskName.contains("Debug")) {
+            return true
+        }
+    }
+    return false
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

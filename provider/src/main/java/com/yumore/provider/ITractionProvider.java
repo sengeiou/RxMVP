@@ -8,7 +8,7 @@ import com.alibaba.android.arouter.facade.template.IProvider;
  * @package com.yumore.provider
  * @datetime 12/12/20 - 3:01 PM
  */
-interface ISampleProvider extends IProvider {
+interface ITractionProvider extends IProvider {
     boolean getTractionEnable();
 
     void setTractionEnable(boolean tractionEnable);

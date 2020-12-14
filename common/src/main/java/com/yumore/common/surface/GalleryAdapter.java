@@ -4,8 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
+
 import com.github.chrisbanes.photoview.PhotoView;
 import com.yumore.common.R;
 import com.yumore.common.utility.EmptyUtils;
@@ -27,7 +29,7 @@ public class GalleryAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return EmptyUtils.isObjectEmpty(imageUrlList) ? 0 : imageUrlList.size();
+        return EmptyUtils.isEmpty(imageUrlList) ? 0 : imageUrlList.size();
     }
 
     @Override

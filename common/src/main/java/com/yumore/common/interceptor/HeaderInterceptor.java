@@ -1,15 +1,16 @@
 package com.yumore.common.interceptor;
 
 import com.yumore.common.utility.EmptyUtils;
-import okhttp3.HttpUrl;
-import okhttp3.Interceptor;
-import okhttp3.Request;
-import okhttp3.Response;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import okhttp3.HttpUrl;
+import okhttp3.Interceptor;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /**
  * @author Nathaniel
@@ -24,7 +25,7 @@ public class HeaderInterceptor implements Interceptor {
                 .newBuilder()
                 .scheme(oldRequest.url().scheme())
                 .host(oldRequest.url().host());
-        if (!EmptyUtils.isObjectEmpty(getHeaders())) {
+        if (!EmptyUtils.isEmpty(getHeaders())) {
             Set<String> stringSet = getHeaders().keySet();
             for (String key : stringSet) {
                 builder.addQueryParameter(key, getHeaders().get(key));

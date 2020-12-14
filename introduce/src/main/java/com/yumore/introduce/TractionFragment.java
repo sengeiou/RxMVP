@@ -1,4 +1,4 @@
-package com.valuelink.traction;
+package com.yumore.introduce;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
  * @author nathaniel
  */
 public class TractionFragment extends Fragment {
-    private int imageResource;
+    private final int imageResource;
 
     private TractionFragment(int imageResource) {
         this.imageResource = imageResource;

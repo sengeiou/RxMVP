@@ -1,11 +1,15 @@
 package com.yumore.common.basic;
 
 import androidx.annotation.NonNull;
+
 import com.google.gson.GsonBuilder;
 import com.yumore.common.helper.EngineHelper;
 import com.yumore.common.interceptor.RetryInterceptor;
 import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.LoggerUtils;
+
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Converter;
@@ -13,8 +17,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * BaseEngine
@@ -34,7 +36,7 @@ public abstract class BaseEngine implements EngineHelper {
         httpBuilder.connectTimeout(30, TimeUnit.SECONDS);
         httpBuilder.readTimeout(30, TimeUnit.SECONDS);
         httpBuilder.writeTimeout(30, TimeUnit.SECONDS);
-        if (!EmptyUtils.isObjectEmpty(getInterceptor())) {
+        if (!EmptyUtils.isEmpty(getInterceptor())) {
             httpBuilder.addInterceptor(getInterceptor());
         }
         httpBuilder.retryOnConnectionFailure(true);
@@ -60,7 +62,7 @@ public abstract class BaseEngine implements EngineHelper {
         return new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
             @Override
             public void log(@NonNull String message) {
-                LoggerUtils.e(TAG, message);
+                LoggerUtils.logger(TAG, message);
             }
         }).setLevel(HttpLoggingInterceptor.Level.BODY);
     }

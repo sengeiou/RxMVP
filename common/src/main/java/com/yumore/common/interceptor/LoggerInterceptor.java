@@ -1,9 +1,15 @@
 package com.yumore.common.interceptor;
 
 import com.yumore.common.utility.LoggerUtils;
-import okhttp3.*;
 
 import java.io.IOException;
+
+import okhttp3.FormBody;
+import okhttp3.Interceptor;
+import okhttp3.MultipartBody;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 /**
  * @author Nathaniel
@@ -12,7 +18,7 @@ import java.io.IOException;
 public class LoggerInterceptor implements Interceptor {
     private static final String TAG = LoggerInterceptor.class.getSimpleName();
     private static final boolean ENABLE = true;
-    private boolean enable;
+    private final boolean enable;
 
     public LoggerInterceptor() {
         this.enable = ENABLE;
@@ -32,7 +38,7 @@ public class LoggerInterceptor implements Interceptor {
             //个新的response给应用层处理
             ResponseBody responseBody = response.peekBody(1024 * 1024);
             long responseTime = System.currentTimeMillis();
-            LoggerUtils.e(TAG, response.request().url() + " , use-timeMillis: " + (responseTime - requestTime) + " , data: " + responseBody.string());
+            LoggerUtils.logger(TAG, response.request().url() + " , use-timeMillis: " + (responseTime - requestTime) + " , data: " + responseBody.string());
         }
         return response;
     }

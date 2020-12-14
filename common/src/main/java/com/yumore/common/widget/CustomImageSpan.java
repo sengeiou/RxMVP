@@ -1,12 +1,19 @@
 package com.yumore.common.widget;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
+import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.text.style.ImageSpan;
+
 import androidx.annotation.NonNull;
+
 import com.yumore.common.utility.LoggerUtils;
 
 /**
@@ -101,7 +108,7 @@ public class CustomImageSpan extends ImageSpan {
             Bitmap oldBitmap = drawableToBitmap(drawable);
             Matrix matrix = new Matrix();
             float scaleWidth = ((float) distW / width);
-            LoggerUtils.e("move", "width:" + width + ";;w:" + distW + ";;scaleWidth:" + scaleWidth);
+            LoggerUtils.logger("move", "width:" + width + ";;w:" + distW + ";;scaleWidth:" + scaleWidth);
             float scaleHeight = ((float) distH / height);
             matrix.postScale(scaleWidth, scaleHeight);
             Bitmap newBitmap = Bitmap.createBitmap(oldBitmap, 0, 0, width, height, matrix, true);

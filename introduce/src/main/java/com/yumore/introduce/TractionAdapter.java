@@ -1,4 +1,4 @@
-package com.valuelink.traction;
+package com.yumore.introduce;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -11,7 +11,7 @@ import java.util.List;
  * @author nathaniel
  */
 public class TractionAdapter extends FragmentStatePagerAdapter {
-    private List<Fragment> fragmentList;
+    private final List<Fragment> fragmentList;
 
     public TractionAdapter(FragmentManager fragmentManager, List<Fragment> fragmentList) {
         super(fragmentManager);

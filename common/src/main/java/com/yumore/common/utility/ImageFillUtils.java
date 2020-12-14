@@ -6,8 +6,10 @@ import android.graphics.Bitmap;
 import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.RequestManager;
@@ -20,12 +22,13 @@ import com.bumptech.glide.request.transition.Transition;
 import com.yumore.common.R;
 import com.yumore.common.callback.OnImageCompressListener;
 import com.yumore.common.callback.OnMultiImageCompressListener;
-import top.zibin.luban.CompressionPredicate;
-import top.zibin.luban.Luban;
-import top.zibin.luban.OnCompressListener;
 
 import java.io.File;
 import java.io.IOException;
+
+import top.zibin.luban.CompressionPredicate;
+import top.zibin.luban.Luban;
+import top.zibin.luban.OnCompressListener;
 
 
 /**
@@ -149,8 +152,8 @@ public final class ImageFillUtils {
     }
 
     public static void compressImage(Context context, String originPath, final OnImageCompressListener onImageCompressListener) {
-      LoggerUtils.e(TAG, "origin file size is " + new File(originPath).length());
-      LoggerUtils.e(TAG, "origin file path is " + originPath);
+        LoggerUtils.logger(TAG, "origin file size is " + new File(originPath).length());
+        LoggerUtils.logger(TAG, "origin file path is " + originPath);
         Luban.with(context)
                 .load(originPath)
                 .setTargetDir(FileUtils.getCachePath())
@@ -165,7 +168,7 @@ public final class ImageFillUtils {
                 .setCompressListener(new OnCompressListener() {
                     @Override
                     public void onStart() {
-                        if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                        if (!EmptyUtils.isEmpty(onImageCompressListener)) {
                             onImageCompressListener.onPrepared();
                         }
                     }
@@ -173,22 +176,22 @@ public final class ImageFillUtils {
                     @SuppressWarnings("ResultOfMethodCallIgnored")
                     @Override
                     public void onSuccess(File file) {
-                      LoggerUtils.e(TAG, "compressed file name = " + file.getName());
-                      LoggerUtils.e(TAG, "compressed file path = " + file.getAbsolutePath());
-                      LoggerUtils.e(TAG, "compressed file size = " + file.length());
+                        LoggerUtils.logger(TAG, "compressed file name = " + file.getName());
+                        LoggerUtils.logger(TAG, "compressed file path = " + file.getAbsolutePath());
+                        LoggerUtils.logger(TAG, "compressed file size = " + file.length());
                         File newFile;
                         if (file.getName().toLowerCase().contains(".jpeg")) {
                             newFile = new File(file.getParent(), file.getName().toLowerCase().replace(".jpeg", ".jpg"));
-                          LoggerUtils.e(TAG, "new file path = " + newFile.getAbsolutePath());
+                            LoggerUtils.logger(TAG, "new file path = " + newFile.getAbsolutePath());
                             if (!newFile.exists()) {
                                 try {
                                     file.createNewFile();
                                     boolean flag = file.renameTo(newFile);
                                     if (!flag) {
-                                      LoggerUtils.e(TAG, "rename *.jpeg to *.jpg failed");
+                                        LoggerUtils.logger(TAG, "rename *.jpeg to *.jpg failed");
                                     }
                                     file.delete();
-                                    if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                                    if (!EmptyUtils.isEmpty(onImageCompressListener)) {
                                         onImageCompressListener.onSuccess(newFile);
                                     }
                                 } catch (IOException e) {
@@ -196,7 +199,7 @@ public final class ImageFillUtils {
                                 }
                             }
                         } else {
-                            if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                            if (!EmptyUtils.isEmpty(onImageCompressListener)) {
                                 onImageCompressListener.onSuccess(file);
                             }
                         }
@@ -204,7 +207,7 @@ public final class ImageFillUtils {
 
                     @Override
                     public void onError(Throwable throwable) {
-                        if (!EmptyUtils.isObjectEmpty(onImageCompressListener)) {
+                        if (!EmptyUtils.isEmpty(onImageCompressListener)) {
                             onImageCompressListener.onFailure(throwable);
                         }
                     }
@@ -227,7 +230,7 @@ public final class ImageFillUtils {
                 .setCompressListener(new OnCompressListener() {
                     @Override
                     public void onStart() {
-                        if (!EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
+                        if (!EmptyUtils.isEmpty(onMultiImageCompressListener)) {
                             onMultiImageCompressListener.onPrepared();
                         }
                     }
@@ -235,22 +238,22 @@ public final class ImageFillUtils {
                     @SuppressWarnings("ResultOfMethodCallIgnored")
                     @Override
                     public void onSuccess(File file) {
-                      LoggerUtils.e(TAG, "compressed file name = " + file.getName());
-                      LoggerUtils.e(TAG, "compressed file path = " + file.getAbsolutePath());
-                      LoggerUtils.e(TAG, "compressed file size = " + file.length());
+                        LoggerUtils.logger(TAG, "compressed file name = " + file.getName());
+                        LoggerUtils.logger(TAG, "compressed file path = " + file.getAbsolutePath());
+                        LoggerUtils.logger(TAG, "compressed file size = " + file.length());
                         File newFile;
                         if (file.getName().toLowerCase().contains(".jpeg")) {
                             newFile = new File(file.getParent(), file.getName().toLowerCase().replace(".jpeg", ".jpg"));
-                          LoggerUtils.e(TAG, "new file path = " + newFile.getAbsolutePath());
+                            LoggerUtils.logger(TAG, "new file path = " + newFile.getAbsolutePath());
                             if (!newFile.exists()) {
                                 try {
                                     file.createNewFile();
                                     boolean flag = file.renameTo(newFile);
                                     if (!flag) {
-                                        LoggerUtils.e(TAG, "rename *.jpeg to *.jpg failed");
+                                        LoggerUtils.logger(TAG, "rename *.jpeg to *.jpg failed");
                                     }
                                     file.delete();
-                                    if (!EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
+                                    if (!EmptyUtils.isEmpty(onMultiImageCompressListener)) {
                                         onMultiImageCompressListener.onSuccess(position, newFile);
                                     }
                                 } catch (IOException e) {
@@ -258,7 +261,7 @@ public final class ImageFillUtils {
                                 }
                             }
                         } else {
-                            if (!EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
+                            if (!EmptyUtils.isEmpty(onMultiImageCompressListener)) {
                                 onMultiImageCompressListener.onSuccess(position, file);
                             }
                         }
@@ -266,7 +269,7 @@ public final class ImageFillUtils {
 
                     @Override
                     public void onError(Throwable throwable) {
-                        if (!EmptyUtils.isObjectEmpty(onMultiImageCompressListener)) {
+                        if (!EmptyUtils.isEmpty(onMultiImageCompressListener)) {
                             onMultiImageCompressListener.onFailure(throwable);
                         }
                     }
@@ -284,7 +287,7 @@ public final class ImageFillUtils {
         DRAWABLE(3),
         FILE(4);
 
-        private int value;
+        private final int value;
 
         ImageFrom(int value) {
             this.value = value;
@@ -303,7 +306,7 @@ public final class ImageFillUtils {
         ROUNDED(1),
         CIRCLE(2);
 
-        private int value;
+        private final int value;
 
         ImageType(int value) {
             this.value = value;
@@ -326,7 +329,7 @@ public final class ImageFillUtils {
         FIT_XY(5),
         CENTER(6),
         MATRIX(7);
-        private int value;
+        private final int value;
 
         ScaleType(int value) {
             this.value = value;

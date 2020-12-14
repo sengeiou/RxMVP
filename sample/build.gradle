@@ -14,7 +14,7 @@ def increaseVersionCode() {
         properties.load(new FileInputStream(configFile))
         def versionCode = properties.getProperty("config.versionCode") as Integer
         def runTasks = gradle.startParameter.taskNames
-        def realTask = ":master:assembleRelease"
+        def realTask = ":sample:assembleRelease"
         if (realTask in runTasks) {
             versionCode += 1
             project.logger.error("realTask: ${realTask}, versionCode: ${versionCode}")

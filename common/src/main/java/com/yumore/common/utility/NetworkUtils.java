@@ -7,9 +7,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -266,7 +271,7 @@ public class NetworkUtils {
             while ((content = in.readLine()) != null) {
                 stringBuilder.append(content);
             }
-            LoggerUtils.e("------ping-----", "result content : " + stringBuilder.toString());
+            LoggerUtils.logger("------ping-----", "result content : " + stringBuilder.toString());
             // ping的状态
             int status = process.waitFor();
             if (status == 0) {

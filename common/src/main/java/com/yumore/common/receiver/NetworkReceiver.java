@@ -7,6 +7,7 @@ import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
 import android.os.Build;
+
 import com.yumore.common.callback.OnNetworkListener;
 import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.LoggerUtils;
@@ -36,7 +37,7 @@ public class NetworkReceiver extends BroadcastReceiver {
         if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())) {
             int connectedType = NetworkUtils.getAPNType(context);
             // 接口回调传过去状态的类型
-            if (!EmptyUtils.isObjectEmpty(onNetworkListener)) {
+            if (!EmptyUtils.isEmpty(onNetworkListener)) {
                 onNetworkListener.onStatusChanged(connectedType);
             }
         }
@@ -51,13 +52,13 @@ public class NetworkReceiver extends BroadcastReceiver {
             //获取移动数据连接的信息
             NetworkInfo dataNetworkInfo = connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
             if (wifiNetworkInfo.isConnected() && dataNetworkInfo.isConnected()) {
-                LoggerUtils.e(TAG, "WIFI已连接,移动数据已连接");
+                LoggerUtils.logger(TAG, "WIFI已连接,移动数据已连接");
             } else if (wifiNetworkInfo.isConnected() && !dataNetworkInfo.isConnected()) {
-                LoggerUtils.e(TAG, "WIFI已连接,移动数据已断开");
+                LoggerUtils.logger(TAG, "WIFI已连接,移动数据已断开");
             } else if (!wifiNetworkInfo.isConnected() && dataNetworkInfo.isConnected()) {
-                LoggerUtils.e(TAG, "WIFI已断开,移动数据已连接");
+                LoggerUtils.logger(TAG, "WIFI已断开,移动数据已连接");
             } else {
-                LoggerUtils.e(TAG, "WIFI已断开,移动数据已断开");
+                LoggerUtils.logger(TAG, "WIFI已断开,移动数据已断开");
             }
             //API大于23时使用下面的方式进行网络监听
         } else {
@@ -73,7 +74,7 @@ public class NetworkReceiver extends BroadcastReceiver {
                 NetworkInfo networkInfo = connectivityManager.getNetworkInfo(network);
                 stringBuilder.append(networkInfo.getTypeName()).append(" connect is ").append(networkInfo.isConnected());
             }
-            LoggerUtils.e(TAG, stringBuilder.toString());
+            LoggerUtils.logger(TAG, stringBuilder.toString());
         }
     }
 }

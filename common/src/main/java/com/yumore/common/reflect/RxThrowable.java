@@ -1,16 +1,19 @@
 package com.yumore.common.reflect;
 
 import android.net.ParseException;
+
 import com.google.gson.JsonParseException;
 import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.LoggerUtils;
-import io.reactivex.functions.Consumer;
+
 import org.json.JSONException;
-import retrofit2.HttpException;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
+
+import io.reactivex.functions.Consumer;
+import retrofit2.HttpException;
 
 /**
  * @author Nathaniel
@@ -40,13 +43,13 @@ public abstract class RxThrowable implements Consumer<Throwable> {
         } else {
             stringBuilder.append("未知异常:");
         }
-        if (EmptyUtils.isObjectEmpty(throwable.getCause())) {
+        if (EmptyUtils.isEmpty(throwable.getCause())) {
             stringBuilder.append(throwable.getMessage());
         } else {
             stringBuilder.append(throwable.getCause().getMessage());
         }
         rxError.setMessage(stringBuilder.toString());
-        LoggerUtils.e(TAG, stringBuilder.toString());
+        LoggerUtils.logger(TAG, stringBuilder.toString());
         onFailure(rxError);
     }
 

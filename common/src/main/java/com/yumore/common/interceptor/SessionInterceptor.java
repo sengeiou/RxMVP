@@ -3,12 +3,17 @@ package com.yumore.common.interceptor;
 import com.alibaba.fastjson.JSON;
 import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.LoggerUtils;
-import okhttp3.*;
-import okio.BufferedSource;
-import okio.Okio;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+
+import okhttp3.Interceptor;
+import okhttp3.MediaType;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import okio.BufferedSource;
+import okio.Okio;
 
 /**
  * @author Nathaniel
@@ -36,7 +41,7 @@ public class SessionInterceptor implements Interceptor {
         return new ResponseBody() {
             @Override
             public MediaType contentType() {
-                if (EmptyUtils.isObjectEmpty(response) || EmptyUtils.isObjectEmpty(response.body())) {
+                if (EmptyUtils.isEmpty(response) || EmptyUtils.isEmpty(response.body())) {
                     return MediaType.parse("application/json");
                 }
                 return response.body().contentType();
@@ -44,7 +49,7 @@ public class SessionInterceptor implements Interceptor {
 
             @Override
             public long contentLength() {
-                if (EmptyUtils.isObjectEmpty(response) || EmptyUtils.isObjectEmpty(response.body())) {
+                if (EmptyUtils.isEmpty(response) || EmptyUtils.isEmpty(response.body())) {
                     return 0;
                 }
                 return response.body().contentLength();
@@ -53,12 +58,12 @@ public class SessionInterceptor implements Interceptor {
             @Override
             public BufferedSource source() {
                 try {
-                    if (EmptyUtils.isObjectEmpty(response) || EmptyUtils.isObjectEmpty(response.body())) {
+                    if (EmptyUtils.isEmpty(response) || EmptyUtils.isEmpty(response.body())) {
                         ByteArrayInputStream tInputStringStream = new ByteArrayInputStream(defaultResponse.getBytes());
                         return Okio.buffer(Okio.source(tInputStringStream));
                     }
                     String result = response.body().string();
-                    LoggerUtils.e(TAG, "result from server: " + result);
+                    LoggerUtils.logger(TAG, "result from server: " + result);
                     if (result.contains("code") && JSON.parseObject(result).containsKey("code") && JSON.parseObject(result).getInteger("code") == 500) {
                         /*
                          *这里改变返回的数据，如果服务器返回的是一个HTML网页，

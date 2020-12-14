@@ -3,22 +3,30 @@ package com.yumore.common.basic;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.*;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
+
 import com.yumore.common.R;
 import com.yumore.common.mvp.AbstractPresenter;
 import com.yumore.common.mvp.PresenterDispatch;
 import com.yumore.common.mvp.PresenterProvider;
 import com.yumore.common.utility.EmptyUtils;
+
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * @author Nathaniel
@@ -243,7 +251,7 @@ public abstract class AbstractFragment<P extends BaseContract> extends Fragment 
     @Override
     public void showMessage(@NonNull String message) {
         View view = LayoutInflater.from(context).inflate(R.layout.common_toast_layout, null);
-        if (EmptyUtils.isObjectEmpty(toast)) {
+        if (EmptyUtils.isEmpty(toast)) {
             toast = new Toast(context);
         }
         TextView textView = view.findViewById(R.id.common_toast_message);

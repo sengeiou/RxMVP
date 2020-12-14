@@ -1,4 +1,4 @@
-package com.valuelink.traction;
+package com.yumore.introduce;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,29 +17,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.alibaba.android.arouter.launcher.ARouter;
-import com.valuelink.provider.constrant.RouterConstants;
-import com.valuelink.provider.provider.IMasterProvider;
-import com.valuelink.provider.provider.IProfileProvider;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 
 /**
  * @author nathaniel
  */
 public class TractionActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
-    private static final int[] IMAGE_CN_RESOURCES = {
-            R.drawable.icon_indicator_cn_01,
-            R.drawable.icon_indicator_cn_02,
-            R.drawable.icon_indicator_cn_03
-    };
     private static final int[] IMAGE_EN_RESOURCES = {
-            R.drawable.icon_indicator_en_01,
-            R.drawable.icon_indicator_en_02,
-            R.drawable.icon_indicator_en_03
+            R.drawable.icon_indicator_00,
+            R.drawable.icon_indicator_01,
+            R.drawable.icon_indicator_02,
+            R.drawable.icon_indicator_03,
+            R.drawable.icon_indicator_04,
+            R.drawable.icon_indicator_05,
+            R.drawable.icon_indicator_06,
+            R.drawable.icon_indicator_07,
+            R.drawable.icon_indicator_08,
+            R.drawable.icon_indicator_09,
+            R.drawable.icon_indicator_10,
+            R.drawable.icon_indicator_11,
+            R.drawable.icon_indicator_12,
+            R.drawable.icon_indicator_13
     };
     private static final int HANDLER_MESSAGE = 1, DELAY_MILLIS = 30 * 1000;
     private List<Fragment> fragmentList;
@@ -51,11 +51,6 @@ public class TractionActivity extends AppCompatActivity implements ViewPager.OnP
     private ViewPager viewPager;
     private int[] imageResources;
 
-    public boolean isChinese() {
-        Locale locale = getResources().getConfiguration().locale;
-        String language = locale.getLanguage();
-        return language.endsWith("zh");
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +67,7 @@ public class TractionActivity extends AppCompatActivity implements ViewPager.OnP
         viewPager = findViewById(R.id.traction_viewPager_vp);
         linearLayout = findViewById(R.id.traction_dots_layout);
         fragmentList = new ArrayList<>();
-        imageResources = isChinese() ? IMAGE_CN_RESOURCES : IMAGE_EN_RESOURCES;
+        imageResources = IMAGE_EN_RESOURCES;
         for (int imageResource : imageResources) {
             fragmentList.add(TractionFragment.newInstance(imageResource));
         }
@@ -159,12 +154,12 @@ public class TractionActivity extends AppCompatActivity implements ViewPager.OnP
 
     @Override
     public void onClick(View view) {
-        IProfileProvider profileProvider = ARouter.getInstance().navigation(IProfileProvider.class);
-        IMasterProvider masterProvider = ARouter.getInstance().navigation(IMasterProvider.class);
-        masterProvider.setVersionCode();
-        ARouter.getInstance()
-                .build(profileProvider.isLogged() ? RouterConstants.ROUTER_NAVIGATE_NAVIGATE : RouterConstants.ROUTER_PROFILE_LOGIN)
-                .navigation();
+//        IProfileProvider profileProvider = ARouter.getInstance().navigation(IProfileProvider.class);
+//        IMasterProvider masterProvider = ARouter.getInstance().navigation(IMasterProvider.class);
+//        masterProvider.setVersionCode();
+//        ARouter.getInstance()
+//                .build(profileProvider.isLogged() ? RouterConstants.ROUTER_NAVIGATE_NAVIGATE : RouterConstants.ROUTER_PROFILE_LOGIN)
+//                .navigation();
         finish();
     }
 }

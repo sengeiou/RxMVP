@@ -151,13 +151,13 @@ public class CustomPopupWindow extends PopupWindow {
             LinearLayout headerLayout = contentView.findViewById(R.id.popup_header_layout);
             LinearLayout footerLayout = contentView.findViewById(R.id.popup_footer_layout);
             int space = (int) context.getResources().getDimension(R.dimen.common_item_space_minimum);
-            if (!EmptyUtils.isObjectEmpty(headerView)) {
+            if (!EmptyUtils.isEmpty(headerView)) {
                 headerLayout.removeAllViews();
                 headerLayout.addView(headerView);
             } else {
                 headerLayout.setMinimumHeight(space);
             }
-            if (EmptyUtils.isObjectEmpty(customView)) {
+            if (EmptyUtils.isEmpty(customView)) {
                 contentView.findViewById(R.id.popup_window_cancel).setOnClickListener(this);
                 recyclerView = contentView.findViewById(R.id.recyclerView);
                 if (layoutManager == null) {
@@ -174,7 +174,7 @@ public class CustomPopupWindow extends PopupWindow {
                 linearLayout.removeAllViews();
                 linearLayout.addView(customView);
             }
-            if (!EmptyUtils.isObjectEmpty(footerView)) {
+            if (!EmptyUtils.isEmpty(footerView)) {
                 footerLayout.removeAllViews();
                 footerLayout.addView(footerView);
             } else {

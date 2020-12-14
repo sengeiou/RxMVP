@@ -1,11 +1,13 @@
 package com.yumore.common.adapter;
 
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+
 import com.yumore.common.utility.EmptyUtils;
 
 import java.util.List;
@@ -22,7 +24,7 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
      * 不用String的原因是CharSequence的子类更多
      */
     private List<String> stringList;
-    private FragmentManager fragmentManager;
+    private final FragmentManager fragmentManager;
 
     public FragmentAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
@@ -82,7 +84,7 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
      * @param title    title
      */
     public void setPageTitle(int position, @NonNull String title) {
-        if (EmptyUtils.isObjectEmpty(stringList) || position > stringList.size()) {
+        if (EmptyUtils.isEmpty(stringList) || position > stringList.size()) {
             return;
         }
         stringList.set(position, title);

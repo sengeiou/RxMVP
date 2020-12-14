@@ -11,14 +11,18 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.*;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
+
 import com.google.android.material.snackbar.Snackbar;
 import com.yumore.common.BuildConfig;
 import com.yumore.common.R;
@@ -37,6 +41,9 @@ import com.yumore.gallery.widget.SystemBarTintManager;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * BaseActivity
@@ -108,7 +115,7 @@ public abstract class AbstractActivity<P extends BaseContract> extends AppCompat
      * @return 颜色
      */
     private int getStatusBarColor() {
-        LoggerUtils.e(TAG, "platformType = " + getPlatformType());
+        LoggerUtils.logger(TAG, "platformType = " + getPlatformType());
         switch (getPlatformType()) {
             case 0:
                 return R.color.common_color_green_dark;
@@ -263,7 +270,7 @@ public abstract class AbstractActivity<P extends BaseContract> extends AppCompat
     @Override
     public void showMessage(@NonNull String message) {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.common_toast_layout, null);
-        if (EmptyUtils.isObjectEmpty(toast)) {
+        if (EmptyUtils.isEmpty(toast)) {
             toast = new Toast(getContext());
         }
         TextView textView = view.findViewById(R.id.common_toast_message);

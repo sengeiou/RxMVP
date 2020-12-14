@@ -4,6 +4,7 @@ import com.yumore.common.entity.ResultData;
 import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.GsonUtils;
 import com.yumore.common.utility.ZipUtils;
+
 import io.reactivex.functions.Function;
 
 /**
@@ -12,7 +13,7 @@ import io.reactivex.functions.Function;
 
 public class RxResponse<T> implements Function<ResultData<T>, T> {
 
-    private Class<T> clazz;
+    private final Class<T> clazz;
 
     public RxResponse(Class<T> clazz) {
         this.clazz = clazz;
@@ -38,11 +39,11 @@ public class RxResponse<T> implements Function<ResultData<T>, T> {
      */
     public static <T> T zipJsonToData(String jsonString, Class<T> clazz) {
         T data = null;
-        if (EmptyUtils.isObjectEmpty(jsonString)) {
+        if (EmptyUtils.isEmpty(jsonString)) {
             long timeStart = System.currentTimeMillis();
             long size1 = jsonString.length();
             String decompressed = ZipUtils.gunzip(jsonString);
-            if (EmptyUtils.isObjectEmpty(decompressed)) {
+            if (EmptyUtils.isEmpty(decompressed)) {
                 long size2 = decompressed.length();
                 data = GsonUtils.processJson(decompressed, clazz);
                 long timeEnd = System.currentTimeMillis();
@@ -58,7 +59,7 @@ public class RxResponse<T> implements Function<ResultData<T>, T> {
             throw new RxException(resultData.getCode());
         }
         T t = parseResData(resultData, clazz);
-        if (EmptyUtils.isObjectEmpty(t)) {
+        if (EmptyUtils.isEmpty(t)) {
             throw new RxException(999);
         }
         return t;

@@ -265,7 +265,7 @@ public final class RegexUtils {
                     if (idCardY[idCardMod].toUpperCase().equals(String.valueOf(idCardLast).toUpperCase())) {
                         return true;
                     } else {
-                        LoggerUtils.e(TAG, "身份证最后一位:" + String.valueOf(idCardLast).toUpperCase() + "错误,正确的应该是:" + idCardY[idCardMod].toUpperCase());
+                        LoggerUtils.logger(TAG, "身份证最后一位:" + String.valueOf(idCardLast).toUpperCase() + "错误,正确的应该是:" + idCardY[idCardMod].toUpperCase());
                         return false;
                     }
 
