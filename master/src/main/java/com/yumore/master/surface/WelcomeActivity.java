@@ -7,6 +7,7 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.yumore.common.utility.PreferencesUtils;
+import com.yumore.example.surface.ExampleActivity;
 import com.yumore.introduce.IntroduceActivity;
 import com.yumore.master.R;
 import com.yumore.traction.TractionActivity;
@@ -26,7 +27,9 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         new Handler().postDelayed(() -> {
-            Class<?> clazz = PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ? IntroduceActivity.class : TractionActivity.class;
+            Class<?> clazz = PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ?
+                    PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ?
+                            ExampleActivity.class : TractionActivity.class : IntroduceActivity.class;
             Intent intent = new Intent(getApplicationContext(), clazz);
             startActivity(intent);
             finish();

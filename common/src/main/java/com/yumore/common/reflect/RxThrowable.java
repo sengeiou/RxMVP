@@ -3,8 +3,8 @@ package com.yumore.common.reflect;
 import android.net.ParseException;
 
 import com.google.gson.JsonParseException;
-import com.yumore.common.utility.EmptyUtils;
-import com.yumore.common.utility.LoggerUtils;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import org.json.JSONException;
 

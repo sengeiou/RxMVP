@@ -32,12 +32,12 @@ import com.yumore.common.mvp.AbstractPresenter;
 import com.yumore.common.mvp.PresenterDispatch;
 import com.yumore.common.mvp.PresenterProvider;
 import com.yumore.common.receiver.NetworkReceiver;
-import com.yumore.common.utility.EmptyUtils;
-import com.yumore.common.utility.LoggerUtils;
 import com.yumore.common.utility.NetworkUtils;
 import com.yumore.common.utility.StatusBarUtils;
 import com.yumore.common.widget.CustomSnackBar;
 import com.yumore.gallery.widget.SystemBarTintManager;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

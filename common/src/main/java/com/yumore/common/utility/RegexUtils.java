@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
+import com.yumore.provider.utility.LoggerUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;

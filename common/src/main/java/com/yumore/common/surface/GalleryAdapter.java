@@ -10,8 +10,8 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.github.chrisbanes.photoview.PhotoView;
 import com.yumore.common.R;
-import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.ImageFillUtils;
+import com.yumore.provider.utility.EmptyUtils;
 
 import java.util.List;
 

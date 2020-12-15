@@ -1,8 +1,8 @@
 package com.yumore.common.interceptor;
 
 import com.alibaba.fastjson.JSON;
-import com.yumore.common.utility.EmptyUtils;
-import com.yumore.common.utility.LoggerUtils;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

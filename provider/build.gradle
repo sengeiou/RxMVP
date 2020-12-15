@@ -30,4 +30,5 @@ android {
 
 dependencies {
     api "com.alibaba:arouter-api:1.5.1"
+    implementation 'androidx.annotation:annotation:1.1.0'
 }

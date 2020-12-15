@@ -1,6 +1,6 @@
 package com.yumore.common.interceptor;
 
-import com.yumore.common.utility.EmptyUtils;
+import com.yumore.provider.utility.EmptyUtils;
 
 import java.io.IOException;
 import java.util.HashMap;

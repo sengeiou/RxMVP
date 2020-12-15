@@ -22,6 +22,8 @@ import com.bumptech.glide.request.transition.Transition;
 import com.yumore.common.R;
 import com.yumore.common.callback.OnImageCompressListener;
 import com.yumore.common.callback.OnMultiImageCompressListener;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import java.io.File;
 import java.io.IOException;

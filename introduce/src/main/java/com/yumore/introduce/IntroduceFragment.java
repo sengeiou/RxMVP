@@ -32,7 +32,7 @@ public class IntroduceFragment extends Fragment {
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_traction, container, false);
+        final View view = inflater.inflate(R.layout.fragment_introduce, container, false);
         ImageView imageView = view.findViewById(R.id.traction_image_iv);
         imageView.setImageResource(imageResource);
         return view;

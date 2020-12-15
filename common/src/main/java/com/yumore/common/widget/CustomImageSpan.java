@@ -14,7 +14,7 @@ import android.text.style.ImageSpan;
 
 import androidx.annotation.NonNull;
 
-import com.yumore.common.utility.LoggerUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 /**
  * @author Nathaniel

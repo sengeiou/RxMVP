@@ -23,7 +23,7 @@ import com.yumore.common.R;
 import com.yumore.common.mvp.AbstractPresenter;
 import com.yumore.common.mvp.PresenterDispatch;
 import com.yumore.common.mvp.PresenterProvider;
-import com.yumore.common.utility.EmptyUtils;
+import com.yumore.provider.utility.EmptyUtils;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

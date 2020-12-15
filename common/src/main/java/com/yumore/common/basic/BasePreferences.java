@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.yumore.common.helper.InitializeHelper;
-import com.yumore.common.utility.EmptyUtils;
-import com.yumore.common.utility.LoggerUtils;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

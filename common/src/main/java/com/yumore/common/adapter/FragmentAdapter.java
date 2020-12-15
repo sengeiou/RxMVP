@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.yumore.common.utility.EmptyUtils;
+import com.yumore.provider.utility.EmptyUtils;
 
 import java.util.List;
 

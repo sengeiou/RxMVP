@@ -8,7 +8,6 @@ import android.os.Message;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -47,7 +46,8 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
             R.drawable.icon_indicator_12,
             R.drawable.icon_indicator_13
     };
-    private static final int HANDLER_MESSAGE = 1, DELAY_MILLIS = 30 * 1000;
+    private static final int HANDLER_MESSAGE = 1, DELAY_MILLIS = 5 * 1000;
+    private static final int DOT_SIZE = 8, DOT_MARGIN = 16;
     private List<Fragment> fragmentList;
     private TextView textView;
     private LinearLayout linearLayout;
@@ -62,14 +62,7 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-                | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                | View.SYSTEM_UI_FLAG_IMMERSIVE);
-        setContentView(R.layout.activity_traction);
+        setContentView(R.layout.activity_introduce);
         viewPager = findViewById(R.id.traction_viewPager_vp);
         linearLayout = findViewById(R.id.traction_dots_layout);
         fragmentList = new ArrayList<>();
@@ -80,10 +73,10 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
         FragmentAdapter tractionAdapter = new FragmentAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(tractionAdapter);
         viewPager.setOffscreenPageLimit(fragmentList.size());
-        normalParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 8), dip2px(getApplicationContext(), 8));
-        normalParams.leftMargin = dip2px(getApplicationContext(), 15);
-        focusParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 48), dip2px(getApplicationContext(), 8));
-        focusParams.leftMargin = dip2px(getApplicationContext(), 15);
+        normalParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), DOT_SIZE), dip2px(getApplicationContext(), DOT_SIZE));
+        normalParams.leftMargin = dip2px(getApplicationContext(), DOT_SIZE);
+        focusParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), DOT_MARGIN), dip2px(getApplicationContext(), DOT_SIZE));
+        focusParams.leftMargin = dip2px(getApplicationContext(), DOT_SIZE);
         View dotView;
         for (int i = 0; i < imageResources.length; i++) {
             dotView = new View(this);

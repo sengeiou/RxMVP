@@ -19,8 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.yumore.common.R;
-import com.yumore.common.utility.EmptyUtils;
 import com.yumore.common.utility.SpaceItemDecoration;
+import com.yumore.provider.utility.EmptyUtils;
 
 /**
  * @author Nathaniel

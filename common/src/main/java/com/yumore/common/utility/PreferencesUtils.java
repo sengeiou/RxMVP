@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.yumore.common.basic.BasePreferences;
+import com.yumore.provider.utility.EmptyUtils;
 
 /**
  * @author Nathaniel

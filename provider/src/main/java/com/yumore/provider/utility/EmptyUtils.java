@@ -1,4 +1,4 @@
-package com.yumore.common.utility;
+package com.yumore.provider.utility;
 
 import android.text.Editable;
 import android.util.SparseArray;
@@ -9,8 +9,6 @@ import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Array;
 import java.util.Collection;
@@ -40,13 +38,13 @@ public final class EmptyUtils {
         if (object.getClass().isArray() && Array.getLength(object) == 0) {
             return true;
         }
-        if (object instanceof Collection && ((Collection) object).isEmpty()) {
+        if (object instanceof Collection && ((Collection<?>) object).isEmpty()) {
             return true;
         }
-        if (object instanceof Map && ((Map) object).isEmpty()) {
+        if (object instanceof Map && ((Map<?, ?>) object).isEmpty()) {
             return true;
         }
-        if (object instanceof SparseArray && ((SparseArray) object).size() == 0) {
+        if (object instanceof SparseArray && ((SparseArray<?>) object).size() == 0) {
             return true;
         }
         if (object instanceof SparseBooleanArray && ((SparseBooleanArray) object).size() == 0) {
@@ -82,7 +80,7 @@ public final class EmptyUtils {
     }
 
     @Nullable
-    private static String getEditor(@NotNull EditText editText) {
+    private static String getEditor(@NonNull EditText editText) {
         return isEmpty(editText.getText()) ? null : editText.getText().toString();
     }
 }

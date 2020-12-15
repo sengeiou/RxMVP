@@ -4,6 +4,8 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Base64;
 
+import com.yumore.provider.utility.EmptyUtils;
+
 import net.lingala.zip4j.model.FileHeader;
 import net.lingala.zip4j.model.ZipParameters;
 import net.lingala.zip4j.util.Zip4jConstants;

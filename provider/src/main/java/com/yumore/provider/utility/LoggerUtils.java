@@ -1,4 +1,4 @@
-package com.yumore.common.utility;
+package com.yumore.provider.utility;
 
 import android.util.Log;
 

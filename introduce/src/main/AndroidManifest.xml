@@ -6,6 +6,6 @@
         <activity
             android:name=".IntroduceActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/TractionTheme" />
+            android:theme="@style/IntroduceTheme" />
     </application>
 </manifest>

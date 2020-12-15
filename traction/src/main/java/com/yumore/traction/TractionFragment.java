@@ -17,6 +17,7 @@ public class TractionFragment extends FloppyFragment implements MediaPlayer.OnPr
     private boolean paused;
 
     private OnFragmentToActivity<Integer> onFragmentToActivity;
+    private Context context;
 
     @SuppressWarnings("unchecked")
     @Override
@@ -25,6 +26,7 @@ public class TractionFragment extends FloppyFragment implements MediaPlayer.OnPr
         if (context instanceof OnFragmentToActivity) {
             onFragmentToActivity = (OnFragmentToActivity<Integer>) context;
         }
+        this.context = context;
     }
 
     @Override
@@ -54,7 +56,7 @@ public class TractionFragment extends FloppyFragment implements MediaPlayer.OnPr
         int videoRes = getArguments().getInt("res");
         currentPage = getArguments().getInt("page");
         videoView.setOnPreparedListener(this);
-        videoView.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + videoRes);
+        videoView.setVideoPath("android.resource://" + context.getPackageName() + "/" + videoRes);
     }
 
     @Override

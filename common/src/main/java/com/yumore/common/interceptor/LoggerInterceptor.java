@@ -1,6 +1,6 @@
 package com.yumore.common.interceptor;
 
-import com.yumore.common.utility.LoggerUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import java.io.IOException;
 

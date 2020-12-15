@@ -2,6 +2,7 @@ package com.yumore.common.utility;
 
 import com.google.gson.Gson;
 import com.yumore.common.entity.BaseEntity;
+import com.yumore.provider.utility.EmptyUtils;
 
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;

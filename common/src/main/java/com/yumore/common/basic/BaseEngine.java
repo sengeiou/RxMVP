@@ -5,8 +5,8 @@ import androidx.annotation.NonNull;
 import com.google.gson.GsonBuilder;
 import com.yumore.common.helper.EngineHelper;
 import com.yumore.common.interceptor.RetryInterceptor;
-import com.yumore.common.utility.EmptyUtils;
-import com.yumore.common.utility.LoggerUtils;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import java.util.concurrent.TimeUnit;
 

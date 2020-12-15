@@ -9,9 +9,9 @@ import android.net.NetworkInfo;
 import android.os.Build;
 
 import com.yumore.common.callback.OnNetworkListener;
-import com.yumore.common.utility.EmptyUtils;
-import com.yumore.common.utility.LoggerUtils;
 import com.yumore.common.utility.NetworkUtils;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 /**
  * @author Nathaniel

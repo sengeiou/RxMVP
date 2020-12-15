@@ -20,6 +20,8 @@ import androidx.core.content.FileProvider;
 
 import com.yumore.common.BuildConfig;
 import com.yumore.common.R;
+import com.yumore.provider.utility.EmptyUtils;
+import com.yumore.provider.utility.LoggerUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
