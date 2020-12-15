@@ -18,4 +18,6 @@ public class RouterConstants {
     public static final String DAEMON_HOME = "/example/DaemonActivity";
 
     public static final String PREVIEW_HOME = "/preview/PreviewActivity";
+
+    public static final String TRACTION_HOME = "/traction/TractionActivity";
 }
