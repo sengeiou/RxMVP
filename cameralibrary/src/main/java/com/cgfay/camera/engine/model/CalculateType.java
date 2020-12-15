@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.model;
+package com.yumore.camera.engine.model;
 
 /**
  * 相机预览和拍照计算类型

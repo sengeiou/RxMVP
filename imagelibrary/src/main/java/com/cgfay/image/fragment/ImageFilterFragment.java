@@ -1,4 +1,4 @@
-package com.cgfay.image.fragment;
+package com.yumore.image.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,16 +17,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+
 import androidx.appcompat.widget.LinearLayoutManager;
 import androidx.appcompat.widget.RecyclerView;
 import androidx.core.app.Fragment;
-import com.cgfay.filter.glfilter.resource.FilterHelper;
+
 import com.cgfay.filter.glfilter.resource.bean.ResourceData;
 import com.cgfay.filter.widget.GLImageSurfaceView;
-import com.cgfay.image.activity.ImagePreviewActivity;
-import com.cgfay.image.adapter.ImageFilterAdapter;
-import com.cgfay.imagelibrary.R;
-import com.cgfay.uitls.utils.BitmapUtils;
+import com.yumore.filter.glfilter.resource.FilterHelper;
+import com.yumore.image.activity.ImagePreviewActivity;
+import com.yumore.image.adapter.ImageFilterAdapter;
+import com.yumore.imagelibrary.R;
+import com.yumore.uitls.utils.BitmapUtils;
 
 import java.io.File;
 import java.nio.ByteBuffer;
@@ -57,7 +59,7 @@ public class ImageFilterFragment extends Fragment implements View.OnClickListene
     /**
      * 截屏回调
      */
-    private GLImageSurfaceView.CaptureCallback mCaptureCallback = new GLImageSurfaceView.CaptureCallback() {
+    private final GLImageSurfaceView.CaptureCallback mCaptureCallback = new GLImageSurfaceView.CaptureCallback() {
         @Override
         public void onCapture(final ByteBuffer buffer, final int width, final int height) {
             mMainHandler.post(new Runnable() {

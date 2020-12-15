@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.base;
+package com.yumore.filter.glfilter.base;
 
 import android.content.Context;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 外部纹理(OES纹理)输入

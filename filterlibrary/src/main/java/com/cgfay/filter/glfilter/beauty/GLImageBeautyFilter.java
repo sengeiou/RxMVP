@@ -1,11 +1,12 @@
 package com.cgfay.filter.glfilter.beauty;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.base.GLImageGaussianBlurFilter;
-import com.cgfay.filter.glfilter.beauty.bean.BeautyParam;
-import com.cgfay.filter.glfilter.beauty.bean.IBeautify;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.base.GLImageGaussianBlurFilter;
+import com.yumore.filter.glfilter.beauty.bean.BeautyParam;
+import com.yumore.filter.glfilter.beauty.bean.IBeautify;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.nio.FloatBuffer;
 
@@ -28,7 +29,7 @@ public class GLImageBeautyFilter extends GLImageFilter implements IBeautify {
     private GLImageBeautyFaceFilter mBeautyFaceFilter;
 
     // 缩放
-    private float mBlurScale = 0.5f;
+    private final float mBlurScale = 0.5f;
 
     public GLImageBeautyFilter(Context context) {
         this(context, null, null);

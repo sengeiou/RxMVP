@@ -1,6 +1,6 @@
 package com.cgfay.camera.listener;
 
-import com.cgfay.camera.engine.model.GalleryType;
+import com.yumore.camera.engine.model.GalleryType;
 
 /**
  * 图库点击监听器

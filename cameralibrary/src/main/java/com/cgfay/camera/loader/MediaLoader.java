@@ -1,4 +1,4 @@
-package com.cgfay.camera.loader;
+package com.yumore.camera.loader;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

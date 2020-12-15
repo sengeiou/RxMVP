@@ -1,4 +1,4 @@
-package com.cgfay.video.bean;
+package com.yumore.video.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -24,8 +24,8 @@ public enum EffectMimeType implements Parcelable {
             return new EffectMimeType[size];
         }
     };
-    private int mimeType;
-    private String mName;
+    private final int mimeType;
+    private final String mName;
 
     EffectMimeType(String name, int type) {
         this.mName = name;

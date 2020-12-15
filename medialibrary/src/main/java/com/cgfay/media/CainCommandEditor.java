@@ -1,4 +1,4 @@
-package com.cgfay.media;
+package com.yumore.media;
 
 import android.content.Context;
 import android.media.MediaExtractor;
@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
 import android.util.Log;
+
 import com.cgfay.uitls.utils.FileUtils;
 
 import java.io.File;

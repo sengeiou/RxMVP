@@ -1,8 +1,8 @@
-package com.cgfay.filter.glfilter.stickers;
+package com.yumore.filter.glfilter.stickers;
 
 import com.badlogic.gdx.math.Camera;
 import com.badlogic.gdx.math.Vector3;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.base.GLImageFilter;
 
 import java.util.List;
 

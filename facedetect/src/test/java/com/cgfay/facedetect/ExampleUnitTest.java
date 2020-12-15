@@ -1,4 +1,4 @@
-package com.cgfay.facedetect;
+package com.yumore.facedetect;
 
 import org.junit.Test;
 

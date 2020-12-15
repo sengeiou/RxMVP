@@ -1,4 +1,4 @@
-package com.cgfay.image.fragment;
+package com.yumore.image.fragment;
 
 import android.Manifest;
 import android.app.Activity;
@@ -15,15 +15,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+
 import androidx.core.app.Fragment;
 import androidx.core.app.FragmentTransaction;
-import com.cgfay.imagelibrary.R;
-import com.cgfay.uitls.fragment.BackPressedDialogFragment;
-import com.cgfay.uitls.fragment.PermissionConfirmDialogFragment;
-import com.cgfay.uitls.fragment.PermissionErrorDialogFragment;
-import com.cgfay.uitls.utils.BitmapUtils;
+
 import com.cgfay.uitls.utils.FileUtils;
 import com.cgfay.uitls.utils.PermissionUtils;
+import com.yumore.imagelibrary.R;
+import com.yumore.uitls.fragment.BackPressedDialogFragment;
+import com.yumore.uitls.fragment.PermissionConfirmDialogFragment;
+import com.yumore.uitls.fragment.PermissionErrorDialogFragment;
+import com.yumore.uitls.utils.BitmapUtils;
 
 import java.io.File;
 

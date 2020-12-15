@@ -1,4 +1,4 @@
-package com.cgfay.camera.widget;
+package com.yumore.camera.widget;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.cgfay.cameralibrary.R;
 
 /**
@@ -16,8 +17,8 @@ import com.cgfay.cameralibrary.R;
  */
 public class RecordSpeedLevelBar extends LinearLayout {
 
-    private String[] mSpeedStr;
-    private SparseArray<TextView> mSpeedTexts;
+    private final String[] mSpeedStr;
+    private final SparseArray<TextView> mSpeedTexts;
     private int mCurrentPosition = 2;
     private boolean touchEnable = true;
     private OnSpeedChangedListener mOnSpeedChangedListener;
@@ -144,8 +145,8 @@ public class RecordSpeedLevelBar extends LinearLayout {
         SPEED_L3(1, 2.0f),      // L3 : 较快 (倍速: 2.0)
         SPEED_L4(2, 3.0f);      // L4 : 极快 (倍速: 3.0)
 
-        private int type;
-        private float speed;
+        private final int type;
+        private final float speed;
 
         RecordSpeed(int type, float speed) {
             this.type = type;

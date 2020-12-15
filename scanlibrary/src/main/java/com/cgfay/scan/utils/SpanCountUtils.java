@@ -1,4 +1,4 @@
-package com.cgfay.scan.utils;
+package com.yumore.scan.utils;
 
 import android.content.Context;
 

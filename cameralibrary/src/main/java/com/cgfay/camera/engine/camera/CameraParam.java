@@ -1,15 +1,16 @@
-package com.cgfay.camera.engine.camera;
+package com.yumore.camera.engine.camera;
 
 import android.hardware.Camera;
-import com.cgfay.camera.engine.listener.OnCameraCallback;
-import com.cgfay.camera.engine.listener.OnCaptureListener;
-import com.cgfay.camera.engine.listener.OnFpsListener;
-import com.cgfay.camera.engine.model.AspectRatio;
-import com.cgfay.camera.engine.model.GalleryType;
-import com.cgfay.camera.listener.OnGallerySelectedListener;
-import com.cgfay.camera.listener.OnMusicSelectListener;
+
 import com.cgfay.camera.listener.OnPreviewCaptureListener;
 import com.cgfay.filter.glfilter.beauty.bean.BeautyParam;
+import com.yumore.camera.engine.listener.OnCameraCallback;
+import com.yumore.camera.engine.listener.OnCaptureListener;
+import com.yumore.camera.engine.listener.OnFpsListener;
+import com.yumore.camera.engine.model.AspectRatio;
+import com.yumore.camera.engine.model.GalleryType;
+import com.yumore.camera.listener.OnGallerySelectedListener;
+import com.yumore.camera.listener.OnMusicSelectListener;
 
 /**
  * 相机配置参数

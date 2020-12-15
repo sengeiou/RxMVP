@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.resource;
+package com.yumore.filter.glfilter.resource;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

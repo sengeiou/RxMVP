@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.resource.bean;
+package com.yumore.filter.glfilter.resource.bean;
 
 /**
  * 资源枚举类型

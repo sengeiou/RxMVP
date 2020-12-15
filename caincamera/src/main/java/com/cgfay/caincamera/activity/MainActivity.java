@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.activity;
+package com.yumore.caincamera.activity;
 
 import android.Manifest;
 import android.content.Intent;
@@ -8,24 +8,24 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cgfay.caincamera.R;
 import com.cgfay.camera.engine.PreviewEngine;
-import com.cgfay.camera.engine.model.AspectRatio;
 import com.cgfay.camera.engine.model.GalleryType;
 import com.cgfay.camera.listener.OnGallerySelectedListener;
-import com.cgfay.camera.listener.OnPreviewCaptureListener;
 import com.cgfay.filter.glfilter.resource.FilterHelper;
 import com.cgfay.filter.glfilter.resource.MakeupHelper;
-import com.cgfay.filter.glfilter.resource.ResourceHelper;
-import com.cgfay.image.activity.ImageEditActivity;
-import com.cgfay.scan.engine.MediaScanEngine;
-import com.cgfay.scan.listener.OnCaptureListener;
-import com.cgfay.scan.listener.OnMediaSelectedListener;
 import com.cgfay.scan.loader.impl.GlideMediaLoader;
 import com.cgfay.scan.model.MimeType;
-import com.cgfay.uitls.utils.PermissionUtils;
 import com.cgfay.video.activity.VideoCutActivity;
 import com.cgfay.video.activity.VideoEditActivity;
+import com.yumore.caincamera.R;
+import com.yumore.camera.engine.model.AspectRatio;
+import com.yumore.camera.listener.OnPreviewCaptureListener;
+import com.yumore.filter.glfilter.resource.ResourceHelper;
+import com.yumore.image.activity.ImageEditActivity;
+import com.yumore.scan.engine.MediaScanEngine;
+import com.yumore.scan.listener.OnCaptureListener;
+import com.yumore.scan.listener.OnMediaSelectedListener;
+import com.yumore.uitls.utils.PermissionUtils;
 
 import java.util.List;
 

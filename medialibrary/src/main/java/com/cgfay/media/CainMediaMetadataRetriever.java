@@ -1,4 +1,4 @@
-package com.cgfay.media;
+package com.yumore.media;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -6,8 +6,9 @@ import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import com.cgfay.media.annotations.AccessedByNative;
-import com.cgfay.uitls.utils.BitmapUtils;
+
+import com.yumore.media.annotations.AccessedByNative;
+import com.yumore.uitls.utils.BitmapUtils;
 
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;

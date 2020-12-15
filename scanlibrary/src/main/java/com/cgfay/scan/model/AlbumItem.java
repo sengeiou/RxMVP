@@ -1,12 +1,13 @@
-package com.cgfay.scan.model;
+package com.yumore.scan.model;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.provider.MediaStore;
-import com.cgfay.scan.R;
-import com.cgfay.scan.scanner.AlbumCursorLoader;
+
+import com.yumore.scan.R;
+import com.yumore.scan.scanner.AlbumCursorLoader;
 
 /**
  * 相册item对象

@@ -1,9 +1,11 @@
-package com.cgfay.image.activity;
+package com.yumore.image.activity;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.cgfay.image.fragment.ImageEditedFragment;
+
 import com.cgfay.imagelibrary.R;
+import com.yumore.image.fragment.ImageEditedFragment;
 
 public class ImageEditActivity extends AppCompatActivity {
 

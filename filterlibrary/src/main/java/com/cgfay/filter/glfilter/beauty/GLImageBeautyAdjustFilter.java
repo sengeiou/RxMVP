@@ -2,8 +2,9 @@ package com.cgfay.filter.glfilter.beauty;
 
 import android.content.Context;
 import android.opengl.GLES20;
+
 import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 磨皮调节滤镜，高反差保留法最后一步

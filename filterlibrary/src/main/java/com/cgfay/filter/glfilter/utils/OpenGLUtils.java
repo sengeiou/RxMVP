@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.utils;
+package com.yumore.filter.glfilter.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,16 +9,24 @@ import android.opengl.GLUtils;
 import android.opengl.Matrix;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.cgfay.uitls.utils.BitmapUtils;
 
-import javax.microedition.khronos.egl.EGL10;
-import javax.microedition.khronos.egl.EGL11;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 import java.util.ArrayList;
+
+import javax.microedition.khronos.egl.EGL10;
+import javax.microedition.khronos.egl.EGL11;
 
 public class OpenGLUtils {
 

@@ -27,11 +27,11 @@
                 android:gravity="bottom"
                 android:orientation="vertical">
 
-            <com.cgfay.image.widget.CropCoverView
-                    android:id="@+id/image_cop_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
+            <com.yumore.image.widget.CropCoverView
+                android:id="@+id/image_cop_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
             <include layout="@layout/view_image_crop_progress" />
         </LinearLayout>

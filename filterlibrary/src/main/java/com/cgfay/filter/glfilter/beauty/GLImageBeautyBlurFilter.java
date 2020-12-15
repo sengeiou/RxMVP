@@ -1,8 +1,9 @@
-package com.cgfay.filter.glfilter.beauty;
+package com.yumore.filter.glfilter.beauty;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.base.GLImageGaussianBlurFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.base.GLImageGaussianBlurFilter;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 美颜用的高斯模糊

@@ -2,19 +2,21 @@ package com.cgfay.scan.engine;
 
 import android.app.Activity;
 import android.content.Intent;
+
 import androidx.core.app.Fragment;
+
 import com.cgfay.scan.activity.MediaScanActivity;
-import com.cgfay.scan.listener.OnCaptureListener;
 import com.cgfay.scan.listener.OnMediaSelectedListener;
-import com.cgfay.scan.loader.MediaLoader;
-import com.cgfay.scan.model.MimeType;
+import com.yumore.scan.listener.OnCaptureListener;
+import com.yumore.scan.loader.MediaLoader;
+import com.yumore.scan.model.MimeType;
 
 import java.util.Set;
 
 public final class MediaScanBuilder {
 
-    private MediaScanEngine mMediaScanEngine;
-    private MediaScanParam mMediaScanParam;
+    private final MediaScanEngine mMediaScanEngine;
+    private final MediaScanParam mMediaScanParam;
 
     public MediaScanBuilder(MediaScanEngine engine, Set<MimeType> mimeTypes) {
         mMediaScanEngine = engine;

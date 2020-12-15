@@ -1,8 +1,8 @@
-package com.cgfay.filter.glfilter.makeup;
+package com.yumore.filter.glfilter.makeup;
 
-import com.cgfay.filter.glfilter.makeup.bean.MakeupBaseData;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.landmark.LandmarkEngine;
+import com.yumore.filter.glfilter.makeup.bean.MakeupBaseData;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.landmark.LandmarkEngine;
 
 /**
  * 动态彩妆加载器，除美瞳，因为美瞳需要做裁剪处理，需要多个FBO处理

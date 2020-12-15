@@ -3,8 +3,8 @@
         package="com.cgfay.imagelibrary">
 
     <application>
-        <activity android:name="com.cgfay.image.activity.ImagePreviewActivity"></activity>
-        <activity android:name="com.cgfay.image.activity.ImageEditActivity" />
+        <activity android:name="com.yumore.image.activity.ImagePreviewActivity"></activity>
+        <activity android:name="com.yumore.image.activity.ImageEditActivity" />
     </application>
 
 </manifest>

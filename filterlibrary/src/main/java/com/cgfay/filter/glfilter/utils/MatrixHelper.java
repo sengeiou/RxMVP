@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.utils;
+package com.yumore.filter.glfilter.utils;
 
 /**
  * Created by cain.huang on 2017/8/24.

@@ -1,14 +1,15 @@
-package com.cgfay.filter.glfilter.makeup;
+package com.yumore.filter.glfilter.makeup;
 
 import android.content.Context;
 import android.opengl.GLES30;
 import android.util.SparseArray;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
+
 import com.cgfay.filter.glfilter.makeup.bean.DynamicMakeup;
-import com.cgfay.filter.glfilter.makeup.bean.MakeupBaseData;
-import com.cgfay.filter.glfilter.makeup.bean.MakeupType;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.landmark.LandmarkEngine;
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.makeup.bean.MakeupBaseData;
+import com.yumore.filter.glfilter.makeup.bean.MakeupType;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.landmark.LandmarkEngine;
 
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;

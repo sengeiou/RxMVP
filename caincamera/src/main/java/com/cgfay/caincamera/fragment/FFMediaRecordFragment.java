@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.fragment;
+package com.yumore.caincamera.fragment;
 
 import android.Manifest;
 import android.app.Activity;
@@ -23,13 +23,13 @@ import android.widget.Toast;
 import androidx.core.app.Fragment;
 
 import com.cgfay.caincamera.R;
-import com.cgfay.caincamera.presenter.FFMediaRecordPresenter;
-import com.cgfay.caincamera.renderer.FFRecordRenderer;
-import com.cgfay.caincamera.widget.GLRecordView;
-import com.cgfay.camera.widget.RecordProgressView;
 import com.cgfay.uitls.utils.NotchUtils;
-import com.cgfay.uitls.utils.PermissionUtils;
-import com.cgfay.uitls.utils.StatusBarUtils;
+import com.yumore.caincamera.presenter.FFMediaRecordPresenter;
+import com.yumore.caincamera.renderer.FFRecordRenderer;
+import com.yumore.caincamera.widget.GLRecordView;
+import com.yumore.camera.widget.RecordProgressView;
+import com.yumore.uitls.utils.PermissionUtils;
+import com.yumore.uitls.utils.StatusBarUtils;
 
 /**
  * 利用FFmpeg录制视频

@@ -1,4 +1,4 @@
-package com.cgfay.filter.audioplayer;
+package com.yumore.filter.audioplayer;
 
 /**
  * 音频对焦监听器

@@ -1,7 +1,7 @@
-package com.cgfay.video.fragment;
+package com.yumore.video.fragment;
 
-import com.cgfay.video.bean.EffectMimeType;
 import com.cgfay.video.bean.EffectType;
+import com.yumore.video.bean.EffectMimeType;
 
 import java.util.ArrayList;
 import java.util.List;

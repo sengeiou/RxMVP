@@ -2,13 +2,14 @@ package com.cgfay.filter.glfilter.beauty;
 
 import android.content.Context;
 import android.opengl.GLES30;
+
 import com.cgfay.filter.glfilter.base.GLImageDrawElementsFilter;
-import com.cgfay.filter.glfilter.base.GLImageGaussianBlurFilter;
 import com.cgfay.filter.glfilter.beauty.bean.BeautyParam;
-import com.cgfay.filter.glfilter.beauty.bean.IBeautify;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
-import com.cgfay.landmark.LandmarkEngine;
+import com.yumore.filter.glfilter.base.GLImageGaussianBlurFilter;
+import com.yumore.filter.glfilter.beauty.bean.IBeautify;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.utils.TextureRotationUtils;
+import com.yumore.landmark.LandmarkEngine;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -95,7 +96,7 @@ public class GLImageBeautyFaceFilter extends GLImageDrawElementsFilter implement
             0.398625f, 0.833333f,
             0.240550f, 0.651515f,
     };
-    private float[] mVertices = new float[MaxLength];
+    private final float[] mVertices = new float[MaxLength];
     // 用于高斯模糊处理
     private GLImageGaussianBlurFilter mBlurFilter;
     private GLImageGaussianBlurFilter mBlurNextFilter;
@@ -115,9 +116,9 @@ public class GLImageBeautyFaceFilter extends GLImageDrawElementsFilter implement
     // 高斯模糊纹理
     private int mBlurTexture = OpenGLUtils.GL_NOT_TEXTURE;
     private int mBlurTexture2 = OpenGLUtils.GL_NOT_TEXTURE;
-    private int mEyeMaskTexture;        // 眼睛遮罩纹理
-    private int mTeethMaskTexture;      // 嘴巴(牙齿)遮罩纹理
-    private int mTeethLookupTexture;    // 美牙的lookup table 纹理
+    private final int mEyeMaskTexture;        // 眼睛遮罩纹理
+    private final int mTeethMaskTexture;      // 嘴巴(牙齿)遮罩纹理
+    private final int mTeethLookupTexture;    // 美牙的lookup table 纹理
     private float mBrightEyeStrength;   // 亮眼程度
     private float mBeautyTeethStrength; // 美牙程度
     private float mNasolabialStrength;  // 法令纹消除程度

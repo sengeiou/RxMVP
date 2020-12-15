@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.resource;
+package com.yumore.filter.glfilter.resource;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -16,7 +16,7 @@ import java.util.Map;
  */
 public class ResourceBaseHelper {
 
-    private static String TAG = "ResourceBaseHelper";
+    private static final String TAG = "ResourceBaseHelper";
 
     /**
      * 解压Asset文件夹目录下的资源

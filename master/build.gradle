@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.jakewharton.butterknife'
 
 Properties properties = new Properties()
 File keyStore = project.rootProject.file("config.properties")
@@ -144,11 +143,10 @@ android {
 }
 
 dependencies {
-    implementation project(':traction')
     implementation project(':common')
     implementation project(':example')
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(':introduce')
+    implementation project(':traction')
     implementation 'androidx.multidex:multidex:2.0.1'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }

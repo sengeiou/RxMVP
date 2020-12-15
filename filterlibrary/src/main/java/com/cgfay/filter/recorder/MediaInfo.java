@@ -1,4 +1,4 @@
-package com.cgfay.filter.recorder;
+package com.yumore.filter.recorder;
 
 /**
  * 媒体信息
@@ -8,8 +8,8 @@ package com.cgfay.filter.recorder;
  */
 public class MediaInfo {
 
-    private String fileName;
-    private long duration;
+    private final String fileName;
+    private final long duration;
 
     public MediaInfo(String name, long duration) {
         this.fileName = name;

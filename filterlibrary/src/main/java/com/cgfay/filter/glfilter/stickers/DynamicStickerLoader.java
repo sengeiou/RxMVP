@@ -1,16 +1,17 @@
-package com.cgfay.filter.glfilter.stickers;
+package com.yumore.filter.glfilter.stickers;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
-import com.cgfay.filter.glfilter.resource.ResourceCodec;
-import com.cgfay.filter.glfilter.resource.ResourceIndexCodec;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicStickerData;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.landmark.LandmarkEngine;
-import com.cgfay.uitls.utils.BitmapUtils;
+import com.yumore.filter.glfilter.resource.ResourceCodec;
+import com.yumore.filter.glfilter.resource.ResourceIndexCodec;
+import com.yumore.filter.glfilter.stickers.bean.DynamicStickerData;
+import com.yumore.landmark.LandmarkEngine;
+import com.yumore.uitls.utils.BitmapUtils;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -29,9 +30,9 @@ public class DynamicStickerLoader {
     // 暂存纹理id，用于复用
     private int mRestoreTexture;
     // 贴纸所在的文件夹
-    private String mFolderPath;
+    private final String mFolderPath;
     // 贴纸数据
-    private DynamicStickerData mStickerData;
+    private final DynamicStickerData mStickerData;
     // 索引索引加载器
     private ResourceIndexCodec mResourceIndexCodec;
     // 当前索引

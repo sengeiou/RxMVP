@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.adjust;
+package com.yumore.filter.glfilter.adjust;
 
 import android.content.Context;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.base.GLImageFilter;
 
 /**
  * 镜像翻转

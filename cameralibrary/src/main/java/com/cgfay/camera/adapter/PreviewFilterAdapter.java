@@ -1,4 +1,4 @@
-package com.cgfay.camera.adapter;
+package com.yumore.camera.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,7 +9,9 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.RecyclerView;
+
 import com.cgfay.cameralibrary.R;
 import com.cgfay.filter.glfilter.resource.bean.ResourceData;
 import com.cgfay.uitls.utils.BitmapUtils;
@@ -24,9 +26,9 @@ public class PreviewFilterAdapter extends RecyclerView.Adapter<PreviewFilterAdap
 
     private static final String TAG = "PreviewFilterAdapter";
 
-    private Context mContext;
+    private final Context mContext;
     private int mSelected = 0;
-    private List<ResourceData> mFilterDataList = new ArrayList<>();
+    private final List<ResourceData> mFilterDataList = new ArrayList<>();
     private OnFilterChangeListener mFilterChangeListener;
 
     public PreviewFilterAdapter(Context context, List<ResourceData> resourceDataList) {

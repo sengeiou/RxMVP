@@ -1,4 +1,4 @@
-package com.cgfay.image.widget;
+package com.yumore.image.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,7 +7,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import com.cgfay.imagelibrary.R;
+
+import com.yumore.imagelibrary.R;
 
 /**
  * 裁剪遮罩视图
@@ -34,8 +35,8 @@ public class CropCoverView extends View {
     // 按下坐标
     private float mTouchX;
     private float mTouchY;
-    private float mLastX = 0;
-    private float mLastY = 0;
+    private final float mLastX = 0;
+    private final float mLastY = 0;
 
     private boolean mTouchLeft;     // 左边触摸标志
     private boolean mTouchRight;    // 右边触摸标志

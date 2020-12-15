@@ -1,13 +1,14 @@
-package com.cgfay.filter.glfilter.face;
+package com.yumore.filter.glfilter.face;
 
 import android.content.Context;
 import android.opengl.GLES30;
 import android.text.TextUtils;
 import android.util.SparseArray;
+
 import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.landmark.LandmarkEngine;
-import com.cgfay.landmark.OneFace;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.landmark.LandmarkEngine;
+import com.yumore.landmark.OneFace;
 
 import java.nio.FloatBuffer;
 
@@ -35,9 +36,9 @@ public class GLImageFacePointsFilter extends GLImageFilter {
     private final float[] color = {1.0f, 0.0f, 0.0f, 1.0f};
 
     private int mColorHandle;
-    private int mPointCount = 114;
-    private float[] mPoints;
-    private FloatBuffer mPointVertexBuffer;
+    private final int mPointCount = 114;
+    private final float[] mPoints;
+    private final FloatBuffer mPointVertexBuffer;
 
     public GLImageFacePointsFilter(Context context) {
         this(context, VertexShader, FragmentShader);

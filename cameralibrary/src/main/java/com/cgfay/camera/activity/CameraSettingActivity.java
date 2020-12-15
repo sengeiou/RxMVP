@@ -1,13 +1,15 @@
-package com.cgfay.camera.activity;
+package com.yumore.camera.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.cameralibrary.R;
+
+import com.yumore.camera.engine.camera.CameraParam;
+import com.yumore.cameralibrary.R;
 
 /**
  * 相机设置页面
@@ -22,7 +24,7 @@ public class CameraSettingActivity extends AppCompatActivity {
     /**
      * 监听事件回调
      */
-    private View.OnClickListener mClickListener = new View.OnClickListener() {
+    private final View.OnClickListener mClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             int id = v.getId();

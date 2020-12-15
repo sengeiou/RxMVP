@@ -1,4 +1,4 @@
-package com.cgfay.scan.fragment;
+package com.yumore.scan.fragment;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -8,17 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
 import androidx.appcompat.widget.GridLayoutManager;
 import androidx.appcompat.widget.RecyclerView;
 import androidx.core.app.Fragment;
-import com.cgfay.scan.R;
+
 import com.cgfay.scan.adapter.MediaScanAdapter;
-import com.cgfay.scan.engine.MediaScanParam;
 import com.cgfay.scan.model.AlbumItem;
 import com.cgfay.scan.model.MediaItem;
-import com.cgfay.scan.scanner.MediaScanner;
-import com.cgfay.scan.utils.SpanCountUtils;
 import com.cgfay.scan.widget.MediaItemDecoration;
+import com.yumore.scan.R;
+import com.yumore.scan.engine.MediaScanParam;
+import com.yumore.scan.scanner.MediaScanner;
+import com.yumore.scan.utils.SpanCountUtils;
 
 public class MediaScanFragment extends Fragment implements MediaScanner.MediaScanCallbacks,
         MediaScanAdapter.OnCaptureClickListener, MediaScanAdapter.OnMediaItemSelectedListener {

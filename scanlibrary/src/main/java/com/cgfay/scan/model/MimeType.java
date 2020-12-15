@@ -1,11 +1,13 @@
-package com.cgfay.scan.model;
+package com.yumore.scan.model;
 
 import android.content.ContentResolver;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
+
 import androidx.core.util.ArraySet;
-import com.cgfay.scan.utils.MediaMetadataUtils;
+
+import com.yumore.scan.utils.MediaMetadataUtils;
 
 import java.util.Arrays;
 import java.util.EnumSet;

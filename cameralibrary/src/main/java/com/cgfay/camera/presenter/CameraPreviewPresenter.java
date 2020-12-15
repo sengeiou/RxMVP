@@ -7,31 +7,32 @@ import android.graphics.SurfaceTexture;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Surface;
-import com.cgfay.camera.activity.CameraSettingActivity;
-import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.engine.listener.OnCameraCallback;
-import com.cgfay.camera.engine.listener.OnCaptureListener;
-import com.cgfay.camera.engine.listener.OnFpsListener;
-import com.cgfay.camera.engine.listener.OnRecordListener;
-import com.cgfay.camera.engine.model.GalleryType;
-import com.cgfay.camera.engine.recorder.PreviewRecorder;
+
 import com.cgfay.camera.engine.render.PreviewRenderer;
-import com.cgfay.camera.fragment.CameraPreviewFragment;
-import com.cgfay.camera.utils.PathConstraints;
 import com.cgfay.facedetect.engine.FaceTracker;
-import com.cgfay.facedetect.listener.FaceTrackerCallback;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
 import com.cgfay.filter.glfilter.makeup.bean.DynamicMakeup;
-import com.cgfay.filter.glfilter.resource.FilterHelper;
-import com.cgfay.filter.glfilter.resource.ResourceHelper;
 import com.cgfay.filter.glfilter.resource.ResourceJsonCodec;
-import com.cgfay.filter.glfilter.resource.bean.ResourceData;
 import com.cgfay.filter.glfilter.resource.bean.ResourceType;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
 import com.cgfay.landmark.LandmarkEngine;
-import com.cgfay.uitls.utils.BitmapUtils;
-import com.cgfay.uitls.utils.BrightnessUtils;
 import com.cgfay.uitls.utils.PermissionUtils;
+import com.yumore.camera.activity.CameraSettingActivity;
+import com.yumore.camera.engine.camera.CameraParam;
+import com.yumore.camera.engine.listener.OnCameraCallback;
+import com.yumore.camera.engine.listener.OnCaptureListener;
+import com.yumore.camera.engine.listener.OnFpsListener;
+import com.yumore.camera.engine.listener.OnRecordListener;
+import com.yumore.camera.engine.model.GalleryType;
+import com.yumore.camera.engine.recorder.PreviewRecorder;
+import com.yumore.camera.fragment.CameraPreviewFragment;
+import com.yumore.camera.utils.PathConstraints;
+import com.yumore.facedetect.listener.FaceTrackerCallback;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.resource.FilterHelper;
+import com.yumore.filter.glfilter.resource.ResourceHelper;
+import com.yumore.filter.glfilter.resource.bean.ResourceData;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
+import com.yumore.uitls.utils.BitmapUtils;
+import com.yumore.uitls.utils.BrightnessUtils;
 
 import java.io.File;
 import java.nio.ByteBuffer;
@@ -51,7 +52,7 @@ public class CameraPreviewPresenter extends PreviewPresenter<CameraPreviewFragme
     private int mFilterIndex = 0;
 
     // 预览参数
-    private CameraParam mCameraParam;
+    private final CameraParam mCameraParam;
 
     private Activity mActivity;
 

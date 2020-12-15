@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.widget;
+package com.yumore.caincamera.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,8 +9,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.cgfay.caincamera.R;
-import com.cgfay.uitls.utils.DensityUtils;
+import com.yumore.caincamera.R;
+import com.yumore.uitls.utils.DensityUtils;
 
 /**
  * 视频剪辑SeekBar

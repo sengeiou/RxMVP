@@ -1,14 +1,15 @@
-package com.cgfay.filter.glfilter.face;
+package com.yumore.filter.glfilter.face;
 
 import android.content.Context;
 import android.opengl.GLES20;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.base.GLImageDrawElementsFilter;
-import com.cgfay.filter.glfilter.beauty.bean.BeautyParam;
-import com.cgfay.filter.glfilter.beauty.bean.IBeautify;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
 import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
 import com.cgfay.landmark.LandmarkEngine;
+import com.yumore.filter.glfilter.base.GLImageDrawElementsFilter;
+import com.yumore.filter.glfilter.beauty.bean.BeautyParam;
+import com.yumore.filter.glfilter.beauty.bean.IBeautify;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -279,13 +280,13 @@ public class GLImageFaceReshapeFilter extends GLImageDrawElementsFilter implemen
     // 106 个关键点
     private final int FacePoints = 106;
     // 顶点坐标
-    private float[] mVertices = new float[122 * 2];
+    private final float[] mVertices = new float[122 * 2];
     // 纹理坐标
-    private float[] mTextureVertices = new float[122 * 2];
+    private final float[] mTextureVertices = new float[122 * 2];
     // 笛卡尔坐标系
-    private float[] mCartesianVertices = new float[106 * 2];
+    private final float[] mCartesianVertices = new float[106 * 2];
     // 脸型程度
-    private float[] mReshapeIntensity = new float[12];
+    private final float[] mReshapeIntensity = new float[12];
     // 顶点坐标缓冲
     private FloatBuffer mVertexBuffer;
     // 纹理坐标缓冲

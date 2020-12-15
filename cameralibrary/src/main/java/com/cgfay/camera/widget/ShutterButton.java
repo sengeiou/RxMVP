@@ -1,4 +1,4 @@
-package com.cgfay.camera.widget;
+package com.yumore.camera.widget;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -13,7 +13,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import com.cgfay.cameralibrary.R;
+
+import com.yumore.cameralibrary.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +85,7 @@ public class ShutterButton extends View {
     private boolean mOpenMode = false;
 
     // 分割列表
-    private List<Float> mSplitList = new ArrayList<>();
+    private final List<Float> mSplitList = new ArrayList<>();
 
     // 按钮动画
     private ValueAnimator mButtonAnim;
@@ -97,7 +98,7 @@ public class ShutterButton extends View {
 
     // 判断是否处于预览状态，主要用于页面刚打开状态的状态限定
     private boolean mPreviewing = false;
-    private Handler mButtonHandler = new Handler() {
+    private final Handler mButtonHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {

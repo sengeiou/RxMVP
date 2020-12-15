@@ -2,10 +2,11 @@ package com.cgfay.filter.glfilter.beauty;
 
 import android.content.Context;
 import android.opengl.GLES30;
+
 import com.cgfay.filter.glfilter.base.GLImageFilter;
 import com.cgfay.filter.glfilter.beauty.bean.BeautyParam;
 import com.cgfay.filter.glfilter.beauty.bean.IBeautify;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.nio.FloatBuffer;
 
@@ -20,7 +21,7 @@ public class GLImageOldBeautyFilter extends GLImageFilter implements IBeautify {
     private int mOpacityLoc;
 
     // 高斯模糊处理的图像缩放倍数
-    private float mBlurScale = 0.5f;
+    private final float mBlurScale = 0.5f;
 
     private GLImageBeautyComplexionFilter mComplexionBeautyFilter;
 

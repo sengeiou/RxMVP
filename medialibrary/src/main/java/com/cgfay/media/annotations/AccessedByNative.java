@@ -1,4 +1,4 @@
-package com.cgfay.media.annotations;
+package com.yumore.media.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

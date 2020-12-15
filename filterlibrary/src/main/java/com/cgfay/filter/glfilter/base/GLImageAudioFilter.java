@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.base;
+package com.yumore.filter.glfilter.base;
 
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.util.Log;
+
 import com.cgfay.filter.audioplayer.AutoFocusPlayer;
 
 import java.io.IOException;
@@ -20,11 +21,11 @@ public class GLImageAudioFilter extends GLImageFilter {
     private boolean mPlayerInit = false;
     private PlayerStatus mPlayerStatus = PlayerStatus.RELEASE;
     private MediaPlayer mAudioPlayer = null;
-    private Set<MediaPlayer> mPlayerSet = new HashSet<>();
+    private final Set<MediaPlayer> mPlayerSet = new HashSet<>();
     /**
      * 准备监听器
      */
-    private MediaPlayer.OnPreparedListener mPreparedListener = new MediaPlayer.OnPreparedListener() {
+    private final MediaPlayer.OnPreparedListener mPreparedListener = new MediaPlayer.OnPreparedListener() {
         @Override
         public void onPrepared(final MediaPlayer player) {
             runOnDraw(new Runnable() {

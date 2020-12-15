@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -19,15 +20,15 @@ import androidx.fragment.app.Fragment;
 
 public abstract class FloppyFragment extends Fragment {
     protected final String TAG = FloppyFragment.class.getSimpleName();
-    protected boolean isInit = false;
-    protected boolean isLoad = false;
+    protected boolean initialized = false;
+    protected boolean firstLoaded = false;
     private View view;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(setContentView(), container, false);
-        isInit = true;
+        initialized = true;
         isCanLoadData();
         return view;
     }
@@ -48,15 +49,15 @@ public abstract class FloppyFragment extends Fragment {
      * 2.视图对用户可见
      */
     private void isCanLoadData() {
-        if (!isInit) {
+        if (!initialized) {
             return;
         }
 
         if (getUserVisibleHint()) {
             lazyLoad();
-            isLoad = true;
+            firstLoaded = true;
         } else {
-            if (isLoad) {
+            if (firstLoaded) {
                 stopLoad();
             }
         }
@@ -68,8 +69,8 @@ public abstract class FloppyFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        isInit = false;
-        isLoad = false;
+        initialized = false;
+        firstLoaded = false;
 
     }
 
@@ -90,7 +91,7 @@ public abstract class FloppyFragment extends Fragment {
     /**
      * 获取设置的布局
      *
-     * @return
+     * @return View
      */
     protected View getContentView() {
         return view;
@@ -99,10 +100,11 @@ public abstract class FloppyFragment extends Fragment {
     /**
      * 找出对应的控件
      *
-     * @param id
-     * @param <T>
-     * @return
+     * @param id  id
+     * @param <T> view
+     * @return View
      */
+    @SuppressWarnings("unchecked")
     protected <T extends View> T findViewById(int id) {
         return (T) getContentView().findViewById(id);
     }

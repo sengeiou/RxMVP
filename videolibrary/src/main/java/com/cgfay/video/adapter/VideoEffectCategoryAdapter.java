@@ -1,4 +1,4 @@
-package com.cgfay.video.adapter;
+package com.yumore.video.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -7,9 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.RecyclerView;
+
 import com.cgfay.video.R;
-import com.cgfay.video.bean.EffectMimeType;
+import com.yumore.video.bean.EffectMimeType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,9 +21,9 @@ import java.util.List;
  */
 public class VideoEffectCategoryAdapter extends RecyclerView.Adapter<VideoEffectCategoryAdapter.ImageHolder> {
 
-    private Context mContext;
+    private final Context mContext;
     private int mSelected = 0;
-    private List<EffectMimeType> mCategoryList = new ArrayList<>();
+    private final List<EffectMimeType> mCategoryList = new ArrayList<>();
     private OnEffectCategoryChangeListener mEffectCategoryChangeListener;
 
     public VideoEffectCategoryAdapter(Context context) {

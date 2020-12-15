@@ -11,11 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.VideoView;
+
 import androidx.core.app.Fragment;
+
 import com.cgfay.scan.R;
 import com.cgfay.scan.engine.MediaScanParam;
-import com.cgfay.scan.model.MediaItem;
-import com.cgfay.scan.utils.MediaMetadataUtils;
+import com.yumore.scan.model.MediaItem;
+import com.yumore.scan.utils.MediaMetadataUtils;
 
 public class PreviewFragment extends Fragment {
 

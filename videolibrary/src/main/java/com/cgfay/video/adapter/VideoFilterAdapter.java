@@ -1,4 +1,4 @@
-package com.cgfay.video.adapter;
+package com.yumore.video.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,10 +9,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.RecyclerView;
-import com.cgfay.filter.glfilter.resource.bean.ResourceData;
-import com.cgfay.uitls.utils.BitmapUtils;
-import com.cgfay.video.R;
+
+import com.yumore.filter.glfilter.resource.bean.ResourceData;
+import com.yumore.uitls.utils.BitmapUtils;
+import com.yumore.video.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +24,9 @@ import java.util.List;
  */
 public class VideoFilterAdapter extends RecyclerView.Adapter<VideoFilterAdapter.ImageHolder> {
 
-    private Context mContext;
+    private final Context mContext;
     private int mSelected = 0;
-    private List<ResourceData> mFilterDataList = new ArrayList<>();
+    private final List<ResourceData> mFilterDataList = new ArrayList<>();
     private OnFilterChangeListener mFilterChangeListener;
 
     public VideoFilterAdapter(Context context, List<ResourceData> resourceDataList) {

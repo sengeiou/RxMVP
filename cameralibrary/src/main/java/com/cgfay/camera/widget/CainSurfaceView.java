@@ -9,13 +9,20 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.*;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.SurfaceView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
+
 import androidx.core.view.GestureDetectorCompat;
-import com.cgfay.camera.engine.render.PreviewRenderer;
+
 import com.cgfay.cameralibrary.R;
-import com.cgfay.filter.glfilter.stickers.StaticStickerNormalFilter;
-import com.cgfay.uitls.utils.DensityUtils;
+import com.yumore.camera.engine.render.PreviewRenderer;
+import com.yumore.filter.glfilter.stickers.StaticStickerNormalFilter;
+import com.yumore.uitls.utils.DensityUtils;
 
 
 /**
@@ -273,7 +280,7 @@ public class CainSurfaceView extends SurfaceView {
      * 添加视频圆角功能
      */
     private static class RoundOutlineProvider extends ViewOutlineProvider {
-        private float mRadius;
+        private final float mRadius;
 
         RoundOutlineProvider(float radius) {
             mRadius = radius;

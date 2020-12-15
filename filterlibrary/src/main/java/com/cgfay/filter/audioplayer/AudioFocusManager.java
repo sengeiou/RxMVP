@@ -1,4 +1,4 @@
-package com.cgfay.filter.audioplayer;
+package com.yumore.filter.audioplayer;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -19,11 +19,11 @@ public class AudioFocusManager {
     private int mState = AudioManager.AUDIOFOCUS_LOSS_TRANSIENT;
 
     // 监听器集合
-    private Set<AudioFocusChangeListener> mListenerSet = new HashSet<>();
+    private final Set<AudioFocusChangeListener> mListenerSet = new HashSet<>();
     /**
      * 对焦状态监听器
      */
-    private AudioManager.OnAudioFocusChangeListener mFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
+    private final AudioManager.OnAudioFocusChangeListener mFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
         public void onAudioFocusChange(int focusChange) {
             if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {

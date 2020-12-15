@@ -1,7 +1,8 @@
-package com.cgfay.filter.glfilter.effect;
+package com.yumore.filter.glfilter.effect;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 public class GLImageEffectMultiNineFilter extends GLImageEffectFilter {
 

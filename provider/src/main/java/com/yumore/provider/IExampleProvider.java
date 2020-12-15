@@ -1,15 +1,15 @@
 package com.yumore.provider;
 
+import android.app.Application;
+
 import com.alibaba.android.arouter.facade.template.IProvider;
 
 /**
  * @author nathaniel
  * @version V1.0.0
  * @package com.yumore.provider
- * @datetime 12/12/20 - 3:01 PM
+ * @datetime 12/15/20 - 11:08 AM
  */
-public interface ITractionProvider extends IProvider {
-    boolean getTractionEnable();
-
-    void setTractionEnable(boolean tractionEnable);
+public interface IExampleProvider extends IProvider {
+    void initPlugins(Application application);
 }

@@ -1,7 +1,8 @@
-package com.cgfay.filter.glfilter.effect;
+package com.yumore.filter.glfilter.effect;
 
 import android.content.Context;
 import android.opengl.GLES20;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 
 /**

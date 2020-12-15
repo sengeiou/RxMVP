@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.adjust.bean;
+package com.yumore.filter.glfilter.adjust.bean;
 
 /**
  * 滤镜调节接口

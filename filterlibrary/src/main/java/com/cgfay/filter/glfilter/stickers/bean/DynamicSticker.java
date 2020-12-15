@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.stickers.bean;
+package com.yumore.filter.glfilter.stickers.bean;
 
 import java.util.ArrayList;
 import java.util.List;

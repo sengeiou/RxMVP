@@ -1,4 +1,4 @@
-package com.cgfay.scan.adapter;
+package com.yumore.scan.adapter;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -8,13 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.appcompat.widget.GridLayoutManager;
 import androidx.appcompat.widget.RecyclerView;
-import com.cgfay.scan.R;
-import com.cgfay.scan.engine.MediaScanParam;
-import com.cgfay.scan.model.AlbumItem;
+
 import com.cgfay.scan.model.MediaItem;
-import com.cgfay.scan.widget.MediaItemLayout;
+import com.yumore.scan.R;
+import com.yumore.scan.engine.MediaScanParam;
+import com.yumore.scan.model.AlbumItem;
+import com.yumore.scan.widget.MediaItemLayout;
 
 /**
  * 媒体扫描适配器
@@ -27,8 +29,8 @@ public class MediaScanAdapter extends RecyclerCursorAdapter<RecyclerView.ViewHol
     // 占位图
     private final Drawable mPlaceholder;
     // 扫描参数
-    private MediaScanParam mMediaScanParam;
-    private RecyclerView mRecyclerView;
+    private final MediaScanParam mMediaScanParam;
+    private final RecyclerView mRecyclerView;
     // 重新定义大小
     private int mThumbnailResize;
     // 拍照选中监听器
@@ -159,7 +161,7 @@ public class MediaScanAdapter extends RecyclerCursorAdapter<RecyclerView.ViewHol
      */
     class CaptureViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView capture;
+        private final ImageView capture;
 
         public CaptureViewHolder(View itemView) {
             super(itemView);
@@ -173,7 +175,7 @@ public class MediaScanAdapter extends RecyclerCursorAdapter<RecyclerView.ViewHol
      */
     class ThumbnailViewHolder extends RecyclerView.ViewHolder {
 
-        private MediaItemLayout mMediaItemLayout;
+        private final MediaItemLayout mMediaItemLayout;
 
         public ThumbnailViewHolder(View itemView) {
             super(itemView);

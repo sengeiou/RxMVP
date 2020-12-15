@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.base;
+package com.yumore.filter.glfilter.base;
 
 import android.content.Context;
 import android.opengl.GLES20;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.nio.Buffer;
 import java.nio.ByteBuffer;
@@ -20,12 +21,12 @@ public class GLImageYUVInputFilter extends GLImageFilter {
 
     // 纹理id, 当渲染YUV时，mInputTexture 为Y纹理，mInputTexture2为U纹理，mInputTexture3为V纹理
     // 当渲染BGRA时，只有mInputTexture有效
-    private int[] mInputTexture = new int[3];
+    private final int[] mInputTexture = new int[3];
     // 是否渲染YUV。默认渲染YUV
     private int mRenderYUV;
 
-    private FloatBuffer mVertexBuffer;
-    private FloatBuffer mTextureBuffer;
+    private final FloatBuffer mVertexBuffer;
+    private final FloatBuffer mTextureBuffer;
 
     // 存放YUV数据
     private Buffer yBuffer;

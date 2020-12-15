@@ -1,4 +1,4 @@
-package com.cgfay.camera.widget;
+package com.yumore.camera.widget;
 
 import android.animation.ValueAnimator;
 import android.app.Activity;
@@ -20,7 +20,7 @@ public class BasePopupWindow extends PopupWindow {
 
     protected Context mContext;
 
-    private float mShowAlpha = 0.88f;
+    private final float mShowAlpha = 0.88f;
 
     private Drawable mBackground;
 

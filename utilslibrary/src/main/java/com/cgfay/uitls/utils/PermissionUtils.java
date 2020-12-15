@@ -9,12 +9,14 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.PermissionChecker;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+
 import com.cgfay.uitls.fragment.PermissionConfirmDialogFragment;
 import com.cgfay.utilslibrary.R;
 
@@ -136,8 +138,7 @@ public final class PermissionUtils {
      */
     public static void requestCameraPermission(@NonNull Fragment fragment) {
         if (fragment.shouldShowRequestPermissionRationale(Manifest.permission.CAMERA)) {
-            PermissionConfirmDialogFragment.newInstance(fragment.getString(R.string.request_camera_permission),
-                    PermissionUtils.REQUEST_CAMERA_PERMISSION, true)
+            PermissionConfirmDialogFragment.newInstance(fragment.getString(R.string.request_camera_permission), PermissionUtils.REQUEST_CAMERA_PERMISSION, true)
                     .show(fragment.getChildFragmentManager(), FRAGMENT_DIALOG);
         } else {
             fragment.requestPermissions(new String[]{Manifest.permission.CAMERA},

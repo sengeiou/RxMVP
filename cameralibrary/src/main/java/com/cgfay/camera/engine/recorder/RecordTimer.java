@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.recorder;
+package com.yumore.camera.engine.recorder;
 
 import android.os.Handler;
 import android.os.Message;
@@ -24,7 +24,7 @@ public abstract class RecordTimer {
     private long mStartTime;
     // handler回调
     @SuppressWarnings("HandlerLeak")
-    private Handler mHandler = new Handler() {
+    private final Handler mHandler = new Handler() {
 
         @Override
         public void handleMessage(Message msg) {

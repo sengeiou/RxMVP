@@ -1,9 +1,11 @@
 package com.yumore.traction;
 
 
-import android.app.Activity;
+import android.content.Context;
 import android.media.MediaPlayer;
 import android.widget.VideoView;
+
+import androidx.annotation.NonNull;
 
 /**
  * @author Nathaniel
@@ -14,13 +16,14 @@ public class TractionFragment extends FloppyFragment implements MediaPlayer.OnPr
     private int currentPage;
     private boolean paused;
 
-    private OnFragmentToActivity onFragmentToActivity;
+    private OnFragmentToActivity<Integer> onFragmentToActivity;
 
+    @SuppressWarnings("unchecked")
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        if (activity instanceof OnFragmentToActivity) {
-            onFragmentToActivity = (OnFragmentToActivity) activity;
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentToActivity) {
+            onFragmentToActivity = (OnFragmentToActivity<Integer>) context;
         }
     }
 
@@ -92,7 +95,6 @@ public class TractionFragment extends FloppyFragment implements MediaPlayer.OnPr
         }
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void onCompletion(MediaPlayer mediaPlayer) {
         if (null != onFragmentToActivity) {

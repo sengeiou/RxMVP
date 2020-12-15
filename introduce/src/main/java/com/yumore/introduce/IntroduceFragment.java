@@ -13,15 +13,15 @@ import androidx.fragment.app.Fragment;
 /**
  * @author nathaniel
  */
-public class TractionFragment extends Fragment {
+public class IntroduceFragment extends Fragment {
     private final int imageResource;
 
-    private TractionFragment(int imageResource) {
+    private IntroduceFragment(int imageResource) {
         this.imageResource = imageResource;
     }
 
-    public static TractionFragment newInstance(int imageResource) {
-        return new TractionFragment(imageResource);
+    public static IntroduceFragment newInstance(int imageResource) {
+        return new IntroduceFragment(imageResource);
     }
 
 

@@ -2,8 +2,9 @@ package com.cgfay.filter.glfilter.mosaic;
 
 import android.content.Context;
 import android.opengl.GLES30;
+
 import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 三角形马赛克滤镜

@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.model;
+package com.yumore.camera.engine.model;
 
 /**
  * Created by cain.huang on 2017/9/28.

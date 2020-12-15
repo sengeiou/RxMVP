@@ -1,7 +1,8 @@
-package com.cgfay.media;
+package com.yumore.media;
 
 import android.support.annotation.NonNull;
-import com.cgfay.uitls.utils.FileUtils;
+
+import com.yumore.uitls.utils.FileUtils;
 
 /**
  * 媒体编辑器

@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.mosaic;
+package com.yumore.filter.glfilter.mosaic;
 
 import android.content.Context;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 圆形马赛克

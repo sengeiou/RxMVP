@@ -9,16 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.cgfay.video.R;
-import com.cgfay.video.bean.VideoSpeed;
+
+import com.yumore.video.R;
+import com.yumore.video.bean.VideoSpeed;
 
 /**
  * 倍速控制条
  */
 public class VideoSpeedLevelBar extends LinearLayout {
 
-    private String[] mSpeedStr;
-    private SparseArray<TextView> mSpeedTexts;
+    private final String[] mSpeedStr;
+    private final SparseArray<TextView> mSpeedTexts;
     private int mCurrentPosition = 1;
     private boolean touchEnable = true;
     private OnSpeedChangedListener mOnSpeedChangedListener;

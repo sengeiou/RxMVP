@@ -9,7 +9,7 @@ include ':camera'
 include ':gallery'
 
 include ':example'
-include ':sample'
+include ':master'
 include ':preview'
 
 include ':compass'

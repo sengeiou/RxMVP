@@ -1,19 +1,21 @@
-package com.cgfay.scan.activity;
+package com.yumore.scan.activity;
 
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewPager;
-import com.cgfay.scan.R;
-import com.cgfay.scan.adapter.PreviewPagerAdapter;
+
 import com.cgfay.scan.engine.MediaScanParam;
-import com.cgfay.scan.model.AlbumItem;
-import com.cgfay.scan.model.MediaItem;
-import com.cgfay.scan.scanner.MediaScanner;
-import com.cgfay.uitls.utils.FileUtils;
+import com.yumore.scan.R;
+import com.yumore.scan.adapter.PreviewPagerAdapter;
+import com.yumore.scan.model.AlbumItem;
+import com.yumore.scan.model.MediaItem;
+import com.yumore.scan.scanner.MediaScanner;
+import com.yumore.uitls.utils.FileUtils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,16 +1,17 @@
-package com.cgfay.filter.glfilter.makeup;
+package com.yumore.filter.glfilter.makeup;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.opengl.GLES30;
 import android.util.Log;
 import android.util.Pair;
+
 import com.cgfay.filter.glfilter.makeup.bean.MakeupBaseData;
-import com.cgfay.filter.glfilter.makeup.bean.MakeupLipstickData;
-import com.cgfay.filter.glfilter.makeup.bean.MakeupNormaData;
-import com.cgfay.filter.glfilter.resource.ResourceCodec;
 import com.cgfay.filter.glfilter.resource.ResourceDataCodec;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.makeup.bean.MakeupLipstickData;
+import com.yumore.filter.glfilter.makeup.bean.MakeupNormaData;
+import com.yumore.filter.glfilter.resource.ResourceCodec;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;

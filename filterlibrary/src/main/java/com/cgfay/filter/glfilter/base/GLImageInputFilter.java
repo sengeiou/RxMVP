@@ -1,6 +1,7 @@
-package com.cgfay.filter.glfilter.base;
+package com.yumore.filter.glfilter.base;
 
 import android.content.Context;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 
 /**

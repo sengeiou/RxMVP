@@ -17,6 +17,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.yumore.provider.ISampleProvider;
+import com.yumore.provider.RouterConstants;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +29,9 @@ import java.util.List;
 /**
  * @author nathaniel
  */
-public class TractionActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
-    private static final int[] IMAGE_EN_RESOURCES = {
+@Route(path = RouterConstants.INTRODUCE_HOME)
+public class IntroduceActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
+    private static final int[] IMAGE_RESOURCES = {
             R.drawable.icon_indicator_00,
             R.drawable.icon_indicator_01,
             R.drawable.icon_indicator_02,
@@ -67,11 +73,11 @@ public class TractionActivity extends AppCompatActivity implements ViewPager.OnP
         viewPager = findViewById(R.id.traction_viewPager_vp);
         linearLayout = findViewById(R.id.traction_dots_layout);
         fragmentList = new ArrayList<>();
-        imageResources = IMAGE_EN_RESOURCES;
+        imageResources = IMAGE_RESOURCES;
         for (int imageResource : imageResources) {
-            fragmentList.add(TractionFragment.newInstance(imageResource));
+            fragmentList.add(IntroduceFragment.newInstance(imageResource));
         }
-        TractionAdapter tractionAdapter = new TractionAdapter(getSupportFragmentManager(), fragmentList);
+        FragmentAdapter tractionAdapter = new FragmentAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(tractionAdapter);
         viewPager.setOffscreenPageLimit(fragmentList.size());
         normalParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 8), dip2px(getApplicationContext(), 8));
@@ -154,12 +160,9 @@ public class TractionActivity extends AppCompatActivity implements ViewPager.OnP
 
     @Override
     public void onClick(View view) {
-//        IProfileProvider profileProvider = ARouter.getInstance().navigation(IProfileProvider.class);
-//        IMasterProvider masterProvider = ARouter.getInstance().navigation(IMasterProvider.class);
-//        masterProvider.setVersionCode();
-//        ARouter.getInstance()
-//                .build(profileProvider.isLogged() ? RouterConstants.ROUTER_NAVIGATE_NAVIGATE : RouterConstants.ROUTER_PROFILE_LOGIN)
-//                .navigation();
+        ISampleProvider sampleProvider = ARouter.getInstance().navigation(ISampleProvider.class);
+        sampleProvider.setIntroduceEnable(true);
+        ARouter.getInstance().build(RouterConstants.TRACTION_HOME).navigation();
         finish();
     }
 }

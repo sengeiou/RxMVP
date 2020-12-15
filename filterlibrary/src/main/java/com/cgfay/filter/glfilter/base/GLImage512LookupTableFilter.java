@@ -1,8 +1,9 @@
-package com.cgfay.filter.glfilter.base;
+package com.yumore.filter.glfilter.base;
 
 import android.content.Context;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 应用查找表(3D LUT)滤镜(512 x 512)
@@ -15,7 +16,7 @@ public class GLImage512LookupTableFilter extends GLImageFilter {
     private int mStrengthHandle;
     private int mLookupTableTextureHandle;
 
-    private int mCurveTexture = OpenGLUtils.GL_NOT_INIT;
+    private final int mCurveTexture = OpenGLUtils.GL_NOT_INIT;
 
     public GLImage512LookupTableFilter(Context context) {
         this(context, VERTEX_SHADER, OpenGLUtils.getShaderFromAssets(context,

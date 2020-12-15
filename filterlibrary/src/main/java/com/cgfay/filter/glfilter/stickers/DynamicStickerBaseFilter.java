@@ -1,8 +1,9 @@
 package com.cgfay.filter.glfilter.stickers;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.base.GLImageAudioFilter;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
+
+import com.yumore.filter.glfilter.base.GLImageAudioFilter;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
 
 import java.util.ArrayList;
 import java.util.List;

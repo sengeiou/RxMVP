@@ -1,10 +1,11 @@
 package com.cgfay.filter.glfilter.adjust;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.adjust.bean.AdjustParam;
-import com.cgfay.filter.glfilter.adjust.bean.IAdjust;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
+
 import com.cgfay.filter.glfilter.base.GLImageGroupFilter;
+import com.yumore.filter.glfilter.adjust.bean.AdjustParam;
+import com.yumore.filter.glfilter.adjust.bean.IAdjust;
+import com.yumore.filter.glfilter.base.GLImageFilter;
 
 import java.util.ArrayList;
 import java.util.List;

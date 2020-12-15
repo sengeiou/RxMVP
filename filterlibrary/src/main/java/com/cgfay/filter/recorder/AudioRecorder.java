@@ -1,10 +1,15 @@
 package com.cgfay.filter.recorder;
 
-import android.media.*;
+import android.media.AudioRecord;
+import android.media.MediaCodec;
+import android.media.MediaCodecInfo;
+import android.media.MediaFormat;
+import android.media.MediaRecorder;
 import android.os.Handler;
 import android.os.HandlerThread;
-import com.cgfay.media.SoundTouch;
-import com.cgfay.uitls.utils.FileUtils;
+
+import com.yumore.media.SoundTouch;
+import com.yumore.uitls.utils.FileUtils;
 
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;

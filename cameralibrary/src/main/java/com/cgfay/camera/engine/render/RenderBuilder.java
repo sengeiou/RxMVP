@@ -1,18 +1,19 @@
-package com.cgfay.camera.engine.render;
+package com.yumore.camera.engine.render;
 
 import android.content.Context;
-import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.engine.listener.OnCameraCallback;
+
 import com.cgfay.camera.engine.listener.OnCaptureListener;
 import com.cgfay.camera.engine.listener.OnFpsListener;
+import com.yumore.camera.engine.camera.CameraParam;
+import com.yumore.camera.engine.listener.OnCameraCallback;
 
 /**
  * 渲染引擎Builder
  */
 public final class RenderBuilder {
 
-    private PreviewRenderer mPreviewRenderer;
-    private CameraParam mCameraParam;
+    private final PreviewRenderer mPreviewRenderer;
+    private final CameraParam mCameraParam;
 
     RenderBuilder(PreviewRenderer renderer, OnCameraCallback callback) {
         mPreviewRenderer = renderer;

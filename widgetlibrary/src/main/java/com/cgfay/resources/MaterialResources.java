@@ -1,4 +1,4 @@
-package com.cgfay.resources;
+package com.yumore.resources;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RestrictTo;
 import android.support.annotation.StyleableRes;
 import android.support.design.resources.TextAppearance;
+
 import androidx.appcompat.content.res.AppCompatResources;
 
 @RestrictTo({RestrictTo.Scope.LIBRARY_GROUP})

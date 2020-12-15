@@ -20,12 +20,12 @@ import android.widget.VideoView;
 import androidx.core.app.Fragment;
 
 import com.cgfay.caincamera.R;
-import com.cgfay.media.CainCommandEditor;
-import com.cgfay.media.CainMediaEditor;
-import com.cgfay.media.VideoEditorUtil;
-import com.cgfay.uitls.utils.FileUtils;
-import com.cgfay.video.activity.VideoEditActivity;
-import com.cgfay.video.widget.CircleProgressView;
+import com.yumore.media.CainCommandEditor;
+import com.yumore.media.CainMediaEditor;
+import com.yumore.media.VideoEditorUtil;
+import com.yumore.uitls.utils.FileUtils;
+import com.yumore.video.activity.VideoEditActivity;
+import com.yumore.video.widget.CircleProgressView;
 
 /**
  * 视频音乐合成

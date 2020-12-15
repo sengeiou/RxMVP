@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.color.bean;
+package com.yumore.filter.glfilter.color.bean;
 
 import java.util.ArrayList;
 import java.util.List;

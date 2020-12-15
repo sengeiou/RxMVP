@@ -11,30 +11,41 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.*;
-import android.widget.*;
+import android.view.LayoutInflater;
+import android.view.Surface;
+import android.view.TextureView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
 import androidx.appcompat.widget.LinearLayoutManager;
 import androidx.appcompat.widget.RecyclerView;
 import androidx.core.app.DialogFragment;
 import androidx.core.app.Fragment;
-import com.cgfay.filter.glfilter.resource.FilterHelper;
-import com.cgfay.filter.glfilter.resource.bean.ResourceData;
-import com.cgfay.media.CainMediaEditor;
-import com.cgfay.media.CainMediaPlayer;
-import com.cgfay.media.IMediaPlayer;
+
 import com.cgfay.uitls.fragment.BackPressedDialogFragment;
-import com.cgfay.uitls.utils.DensityUtils;
-import com.cgfay.uitls.utils.FileUtils;
-import com.cgfay.uitls.utils.StringUtils;
-import com.cgfay.video.R;
-import com.cgfay.video.adapter.VideoEffectAdapter;
 import com.cgfay.video.adapter.VideoEffectCategoryAdapter;
-import com.cgfay.video.adapter.VideoFilterAdapter;
-import com.cgfay.video.bean.EffectMimeType;
-import com.cgfay.video.bean.EffectType;
 import com.cgfay.video.widget.EffectSelectedSeekBar;
 import com.cgfay.video.widget.VideoTextureView;
-import com.cgfay.video.widget.WaveCutView;
+import com.yumore.filter.glfilter.resource.FilterHelper;
+import com.yumore.filter.glfilter.resource.bean.ResourceData;
+import com.yumore.media.CainMediaEditor;
+import com.yumore.media.CainMediaPlayer;
+import com.yumore.media.IMediaPlayer;
+import com.yumore.uitls.utils.DensityUtils;
+import com.yumore.uitls.utils.FileUtils;
+import com.yumore.uitls.utils.StringUtils;
+import com.yumore.video.R;
+import com.yumore.video.adapter.VideoEffectAdapter;
+import com.yumore.video.adapter.VideoFilterAdapter;
+import com.yumore.video.bean.EffectMimeType;
+import com.yumore.video.bean.EffectType;
+import com.yumore.video.widget.WaveCutView;
 
 import java.io.IOException;
 
@@ -108,7 +119,7 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     // 视频显示监听
     private SurfaceTexture mSurfaceTexture;
     private Surface mSurface;
-    private TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
+    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
             if (mSurfaceTexture == null) {
@@ -137,7 +148,7 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     /**
      * 带特效选中的滑动监听
      */
-    private EffectSelectedSeekBar.OnSeekBarChangeListener mOnSeekBarChangeListener = new EffectSelectedSeekBar.OnSeekBarChangeListener() {
+    private final EffectSelectedSeekBar.OnSeekBarChangeListener mOnSeekBarChangeListener = new EffectSelectedSeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgress(int progress, boolean fromUser) {
             if (fromUser) {
@@ -158,7 +169,7 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     /**
      * 音量调节监听器
      */
-    private SeekBar.OnSeekBarChangeListener mVolumeChangeListener = new SeekBar.OnSeekBarChangeListener() {
+    private final SeekBar.OnSeekBarChangeListener mVolumeChangeListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             if (seekBar.getId() == R.id.sb_volume_source && fromUser) {
@@ -192,7 +203,7 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     /**
      * 裁剪音乐监听器
      */
-    private WaveCutView.OnDragListener mCutMusicListener = new WaveCutView.OnDragListener() {
+    private final WaveCutView.OnDragListener mCutMusicListener = new WaveCutView.OnDragListener() {
         @Override
         public void onDragging(int position) {
             mTvMusicCurrent.setText(StringUtils.generateStandardTime(position));
@@ -208,7 +219,7 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     /**
      * 滤镜列表改变回调
      */
-    private VideoFilterAdapter.OnFilterChangeListener mFilterChangeListener = new VideoFilterAdapter.OnFilterChangeListener() {
+    private final VideoFilterAdapter.OnFilterChangeListener mFilterChangeListener = new VideoFilterAdapter.OnFilterChangeListener() {
         @Override
         public void onFilterChanged(ResourceData resourceData) {
 
@@ -217,7 +228,7 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     /**
      * 特效列表切换
      */
-    private VideoEffectAdapter.OnEffectChangeListener mEffectChangeListener = new VideoEffectAdapter.OnEffectChangeListener() {
+    private final VideoEffectAdapter.OnEffectChangeListener mEffectChangeListener = new VideoEffectAdapter.OnEffectChangeListener() {
         @Override
         public void onEffectChanged(EffectType effectType) {
             if (mCainMediaPlayer != null) {
@@ -228,7 +239,7 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     /**
      * 特效目录切换
      */
-    private VideoEffectCategoryAdapter.OnEffectCategoryChangeListener mEffectCategoryChangeListener = new VideoEffectCategoryAdapter.OnEffectCategoryChangeListener() {
+    private final VideoEffectCategoryAdapter.OnEffectCategoryChangeListener mEffectCategoryChangeListener = new VideoEffectCategoryAdapter.OnEffectCategoryChangeListener() {
         @Override
         public void onCategoryChange(EffectMimeType mimeType) {
             if (mimeType == EffectMimeType.FILTER) {

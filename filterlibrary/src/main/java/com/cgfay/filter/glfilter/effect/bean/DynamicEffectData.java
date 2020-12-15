@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.effect.bean;
+package com.yumore.filter.glfilter.effect.bean;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name=".TractionActivity"
+            android:name=".IntroduceActivity"
             android:screenOrientation="portrait"
             android:theme="@style/TractionTheme" />
     </application>

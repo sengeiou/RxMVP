@@ -1,7 +1,8 @@
-package com.cgfay.filter.glfilter.effect;
+package com.yumore.filter.glfilter.effect;
 
 import android.content.Context;
 import android.opengl.GLES30;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 
 /**
@@ -10,7 +11,7 @@ import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 public class GLImageEffectBlackWhiteThreeFilter extends GLImageEffectFilter {
 
     private int mScaleHandle;
-    private float mScale = 1.2f;
+    private final float mScale = 1.2f;
 
     public GLImageEffectBlackWhiteThreeFilter(Context context) {
         this(context, VERTEX_SHADER, OpenGLUtils.getShaderFromAssets(context,

@@ -1,18 +1,19 @@
-package com.cgfay.filter.glfilter.mosaic;
+package com.yumore.filter.glfilter.mosaic;
 
 import android.content.Context;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 方形马赛克滤镜
  */
 public class GLImageMosaicFilter extends GLImageFilter {
 
-    private int mImageWidthFactorLoc;
-    private int mImageHeightFactorLoc;
-    private int mMosaicSizeLoc;
+    private final int mImageWidthFactorLoc;
+    private final int mImageHeightFactorLoc;
+    private final int mMosaicSizeLoc;
 
     private float mImageWidthFactor;
     private float mImageHeightFactor;

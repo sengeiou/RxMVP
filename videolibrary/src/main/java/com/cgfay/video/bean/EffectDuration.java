@@ -1,4 +1,4 @@
-package com.cgfay.video.bean;
+package com.yumore.video.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;

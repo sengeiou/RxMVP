@@ -1,8 +1,10 @@
-package com.cgfay.camera.engine;
+package com.yumore.camera.engine;
 
 import android.app.Activity;
+
 import androidx.core.app.Fragment;
-import com.cgfay.camera.engine.model.AspectRatio;
+
+import com.yumore.camera.engine.model.AspectRatio;
 
 import java.lang.ref.WeakReference;
 
@@ -11,8 +13,8 @@ import java.lang.ref.WeakReference;
  */
 public final class PreviewEngine {
 
-    private WeakReference<Activity> mWeakActivity;
-    private WeakReference<Fragment> mWeakFragment;
+    private final WeakReference<Activity> mWeakActivity;
+    private final WeakReference<Fragment> mWeakFragment;
 
     private PreviewEngine(Activity activity) {
         this(activity, null);

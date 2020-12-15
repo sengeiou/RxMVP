@@ -1,15 +1,15 @@
-package com.cgfay.caincamera.renderer;
+package com.yumore.caincamera.renderer;
 
 import android.graphics.SurfaceTexture;
 import android.opengl.GLES30;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
 
-import com.cgfay.caincamera.presenter.FFMediaRecordPresenter;
 import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.base.GLImageOESInputFilter;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
+import com.yumore.caincamera.presenter.FFMediaRecordPresenter;
+import com.yumore.filter.glfilter.base.GLImageOESInputFilter;
+import com.yumore.filter.glfilter.utils.TextureRotationUtils;
 
 import java.lang.ref.WeakReference;
 import java.nio.FloatBuffer;

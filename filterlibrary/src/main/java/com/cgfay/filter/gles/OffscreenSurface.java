@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.cgfay.filter.gles;
+package com.yumore.filter.gles;
 
 /**
  * Off-screen EGL surface (pbuffer).

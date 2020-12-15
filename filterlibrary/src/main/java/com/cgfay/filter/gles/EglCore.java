@@ -14,10 +14,15 @@
  * limitations under the License.
  */
 
-package com.cgfay.filter.gles;
+package com.yumore.filter.gles;
 
 import android.graphics.SurfaceTexture;
-import android.opengl.*;
+import android.opengl.EGL14;
+import android.opengl.EGLConfig;
+import android.opengl.EGLContext;
+import android.opengl.EGLDisplay;
+import android.opengl.EGLExt;
+import android.opengl.EGLSurface;
 import android.util.Log;
 import android.view.Surface;
 

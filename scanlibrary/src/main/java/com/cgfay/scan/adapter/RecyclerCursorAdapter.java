@@ -1,8 +1,9 @@
-package com.cgfay.scan.adapter;
+package com.yumore.scan.adapter;
 
 import android.database.Cursor;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+
 import androidx.appcompat.widget.RecyclerView;
 
 public abstract class RecyclerCursorAdapter<VH extends RecyclerView.ViewHolder>

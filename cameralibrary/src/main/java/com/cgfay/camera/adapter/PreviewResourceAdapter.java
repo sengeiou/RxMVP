@@ -11,12 +11,14 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.widget.RecyclerView;
+
 import com.cgfay.camera.loader.MediaLoader;
 import com.cgfay.camera.loader.impl.GlideMediaLoader;
 import com.cgfay.cameralibrary.R;
-import com.cgfay.filter.glfilter.resource.bean.ResourceData;
-import com.cgfay.uitls.utils.BitmapUtils;
+import com.yumore.filter.glfilter.resource.bean.ResourceData;
+import com.yumore.uitls.utils.BitmapUtils;
 
 import java.util.List;
 
@@ -25,12 +27,12 @@ import java.util.List;
  */
 public class PreviewResourceAdapter extends RecyclerView.Adapter<PreviewResourceAdapter.ResourceHolder> {
 
-    private Drawable mPlaceHolder;
-    private List<ResourceData> mResourceList;
-    private Context mContext;
+    private final Drawable mPlaceHolder;
+    private final List<ResourceData> mResourceList;
+    private final Context mContext;
     private int mSelected;
 
-    private MediaLoader mMediaLoader;
+    private final MediaLoader mMediaLoader;
 
     private OnResourceChangeListener mListener;
 

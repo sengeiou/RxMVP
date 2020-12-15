@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.widget;
+package com.yumore.caincamera.widget;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -19,8 +19,8 @@ import android.widget.ImageView;
 
 import androidx.core.view.GestureDetectorCompat;
 
-import com.cgfay.caincamera.R;
-import com.cgfay.uitls.utils.DensityUtils;
+import com.yumore.caincamera.R;
+import com.yumore.uitls.utils.DensityUtils;
 
 
 /**

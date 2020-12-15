@@ -16,12 +16,12 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1">
 
-            <com.cgfay.video.widget.VideoTextureView
-                    android:id="@+id/video_player_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center" />
+            <com.yumore.video.widget.VideoTextureView
+                android:id="@+id/video_player_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center" />
 
             <ImageView
                     android:id="@+id/iv_video_play"
@@ -58,11 +58,11 @@
                         android:textSize="12sp" />
 
                 <!-- 带特效选中的进度条 -->
-                <com.cgfay.video.widget.EffectSelectedSeekBar
-                        android:id="@+id/sb_select_effect"
-                        android:layout_width="0dp"
-                        android:layout_height="28dp"
-                        android:layout_weight="1" />
+                <com.yumore.video.widget.EffectSelectedSeekBar
+                    android:id="@+id/sb_select_effect"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1" />
 
                 <!-- 文件时长 -->
                 <TextView

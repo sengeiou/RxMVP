@@ -1,4 +1,4 @@
-package com.cgfay.media.recorder;
+package com.yumore.media.recorder;
 
 import android.media.AudioFormat;
 

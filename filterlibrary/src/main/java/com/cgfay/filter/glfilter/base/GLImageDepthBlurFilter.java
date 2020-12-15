@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.base;
+package com.yumore.filter.glfilter.base;
 
 import android.content.Context;
 import android.graphics.PointF;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.nio.FloatBuffer;
 
@@ -26,7 +27,7 @@ public class GLImageDepthBlurFilter extends GLImageFilter {
     private GLImageGaussianBlurFilter mGaussianBlurFilter;
 
     // 高斯模糊图像缩放半径
-    private float mBlurScale = 0.5f;
+    private final float mBlurScale = 0.5f;
     // 存储经过高斯模糊处理的纹理id
     private int mBlurTexture;
 

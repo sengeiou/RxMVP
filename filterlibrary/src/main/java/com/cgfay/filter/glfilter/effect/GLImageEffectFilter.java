@@ -1,7 +1,8 @@
-package com.cgfay.filter.glfilter.effect;
+package com.yumore.filter.glfilter.effect;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
+
+import com.yumore.filter.glfilter.base.GLImageFilter;
 
 /**
  * 时间特效基类

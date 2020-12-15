@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.effect;
+package com.yumore.filter.glfilter.effect;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.cgfay.filter.glfilter.base.GLImageGroupFilter;
+
 import com.cgfay.filter.glfilter.effect.bean.DynamicEffect;
+import com.yumore.filter.glfilter.base.GLImageGroupFilter;
 
 /**
  * 动态特效滤镜

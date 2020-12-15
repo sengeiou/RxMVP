@@ -1,4 +1,4 @@
-package com.cgfay.camera.adapter;
+package com.yumore.camera.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,8 +8,10 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.RecyclerView;
-import com.cgfay.cameralibrary.R;
+
+import com.yumore.cameralibrary.R;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +23,7 @@ public class PreviewBeautyAdapter extends RecyclerView.Adapter<PreviewBeautyAdap
 
     // 滤镜名称
     private final List<String> mItemNames;
-    private Context mContext;
+    private final Context mContext;
     private int mSelected = 0;
     private OnBeautySelectedListener mBeautySelectedListener;
 

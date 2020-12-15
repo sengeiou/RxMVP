@@ -1,10 +1,11 @@
-package com.cgfay.filter.glfilter.stickers;
+package com.yumore.filter.glfilter.stickers;
 
 import android.content.Context;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicStickerFrameData;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
+import com.yumore.filter.glfilter.stickers.bean.DynamicStickerFrameData;
 
 import java.nio.FloatBuffer;
 
@@ -17,7 +18,7 @@ public class DynamicStickerFrameFilter extends DynamicStickerBaseFilter {
     private int mStickerTextureHandle;
     private int mEnableStickerHandle;
     // 贴纸缓冲
-    private FloatBuffer mStickerBuffer;
+    private final FloatBuffer mStickerBuffer;
     private int mStickerTexture;
 
     public DynamicStickerFrameFilter(Context context, DynamicSticker sticker) {

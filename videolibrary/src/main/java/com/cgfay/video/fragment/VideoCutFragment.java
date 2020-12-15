@@ -15,22 +15,28 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.Surface;
+import android.view.TextureView;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.core.app.Fragment;
+
 import com.cgfay.media.CainMediaEditor;
 import com.cgfay.media.CainMediaPlayer;
-import com.cgfay.media.VideoEditorUtil;
 import com.cgfay.uitls.utils.FileUtils;
 import com.cgfay.video.R;
 import com.cgfay.video.activity.VideoEditActivity;
-import com.cgfay.video.bean.VideoSpeed;
 import com.cgfay.video.widget.CircleProgressView;
-import com.cgfay.video.widget.VideoCutViewBar;
 import com.cgfay.video.widget.VideoSpeedLevelBar;
 import com.cgfay.video.widget.VideoTextureView;
+import com.yumore.media.VideoEditorUtil;
+import com.yumore.video.bean.VideoSpeed;
+import com.yumore.video.widget.VideoCutViewBar;
 
 import java.io.IOException;
 
@@ -74,7 +80,7 @@ public class VideoCutFragment extends Fragment implements View.OnClickListener {
     private float mCurrentRotate;
     private SurfaceTexture mSurfaceTexture;
     private Surface mSurface;
-    private TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
+    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
             if (mSurfaceTexture == null) {
@@ -100,7 +106,7 @@ public class VideoCutFragment extends Fragment implements View.OnClickListener {
 
         }
     };
-    private VideoCutViewBar.OnVideoCropViewBarListener mOnVideoCropViewBarListener = new VideoCutViewBar.OnVideoCropViewBarListener() {
+    private final VideoCutViewBar.OnVideoCropViewBarListener mOnVideoCropViewBarListener = new VideoCutViewBar.OnVideoCropViewBarListener() {
         @Override
         public void onTouchDown() {
             if (mCainMediaPlayer != null) {

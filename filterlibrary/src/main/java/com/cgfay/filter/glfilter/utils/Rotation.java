@@ -1,5 +1,5 @@
 
-package com.cgfay.filter.glfilter.utils;
+package com.yumore.filter.glfilter.utils;
 
 /**
  * 基于GPUImage改造而来

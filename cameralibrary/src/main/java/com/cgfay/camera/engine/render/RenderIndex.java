@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.render;
+package com.yumore.camera.engine.render;
 
 /**
  * 渲染类型索引

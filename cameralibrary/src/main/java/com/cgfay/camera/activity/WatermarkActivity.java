@@ -1,7 +1,9 @@
-package com.cgfay.camera.activity;
+package com.yumore.camera.activity;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.cgfay.cameralibrary.R;
 
 /**

@@ -1,8 +1,9 @@
-package com.cgfay.camera.engine.recorder;
+package com.yumore.camera.engine.recorder;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.cgfay.uitls.utils.FileUtils;
+
+import com.yumore.uitls.utils.FileUtils;
 
 /**
  * 分段录制信息

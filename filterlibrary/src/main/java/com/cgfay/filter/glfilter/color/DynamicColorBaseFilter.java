@@ -2,9 +2,10 @@ package com.cgfay.filter.glfilter.color;
 
 import android.content.Context;
 import android.text.TextUtils;
+
 import com.cgfay.filter.glfilter.base.GLImageAudioFilter;
-import com.cgfay.filter.glfilter.color.bean.DynamicColorData;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.color.bean.DynamicColorData;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 /**
  * 颜色滤镜基类

@@ -5,15 +5,16 @@ import android.opengl.EGLContext;
 import android.opengl.GLES30;
 import android.text.TextUtils;
 import android.util.Log;
-import com.cgfay.filter.gles.EglCore;
-import com.cgfay.filter.gles.WindowSurface;
+
 import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
 import com.cgfay.filter.multimedia.MediaAudioEncoder;
 import com.cgfay.filter.multimedia.MediaEncoder;
-import com.cgfay.filter.multimedia.MediaMuxerWrapper;
 import com.cgfay.filter.multimedia.MediaVideoEncoder;
+import com.yumore.filter.gles.EglCore;
+import com.yumore.filter.gles.WindowSurface;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.multimedia.MediaMuxerWrapper;
 
 import java.io.File;
 import java.io.IOException;

@@ -4,10 +4,10 @@
 
     <application>
         <activity
-                android:name="com.cgfay.camera.activity.CameraActivity"
-                android:theme="@style/NoActionBarTheme" />
-        <activity android:name="com.cgfay.camera.activity.CameraSettingActivity" />
-        <activity android:name="com.cgfay.camera.activity.WatermarkActivity"></activity>
+            android:name="com.yumore.camera.activity.CameraActivity"
+            android:theme="@style/NoActionBarTheme" />
+        <activity android:name="com.yumore.camera.activity.CameraSettingActivity" />
+        <activity android:name="com.yumore.camera.activity.WatermarkActivity"></activity>
     </application>
 
 </manifest>

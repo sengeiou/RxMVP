@@ -1,11 +1,12 @@
 package com.cgfay.filter.glfilter.stickers;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.base.GLImageGroupFilter;
+
 import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicStickerFrameData;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicStickerNormalData;
 import com.cgfay.filter.glfilter.stickers.bean.StaticStickerNormalData;
+import com.yumore.filter.glfilter.base.GLImageGroupFilter;
+import com.yumore.filter.glfilter.stickers.bean.DynamicStickerFrameData;
+import com.yumore.filter.glfilter.stickers.bean.DynamicStickerNormalData;
 
 /**
  * 动态贴纸滤镜

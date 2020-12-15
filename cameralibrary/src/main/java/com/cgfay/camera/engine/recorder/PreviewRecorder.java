@@ -1,14 +1,15 @@
-package com.cgfay.camera.engine.recorder;
+package com.yumore.camera.engine.recorder;
 
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+
 import com.cgfay.camera.engine.listener.OnRecordListener;
 import com.cgfay.camera.engine.render.PreviewRenderer;
-import com.cgfay.filter.multimedia.MediaEncoder;
-import com.cgfay.filter.multimedia.VideoCombiner;
-import com.cgfay.uitls.utils.FileUtils;
-import com.cgfay.uitls.utils.StringUtils;
+import com.yumore.filter.multimedia.MediaEncoder;
+import com.yumore.filter.multimedia.VideoCombiner;
+import com.yumore.uitls.utils.FileUtils;
+import com.yumore.uitls.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -69,7 +70,7 @@ public final class PreviewRecorder {
     private OnRecordListener mRecordListener;
     // 倒计时Handler
     @SuppressWarnings("HandlerLeak")
-    private Handler mTimerHandler = new Handler() {
+    private final Handler mTimerHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             cancelCountDown();
@@ -78,7 +79,7 @@ public final class PreviewRecorder {
     /**
      * 录制编码监听器
      */
-    private MediaEncoder.MediaEncoderListener mEncoderListener = new MediaEncoder.MediaEncoderListener() {
+    private final MediaEncoder.MediaEncoderListener mEncoderListener = new MediaEncoder.MediaEncoderListener() {
 
         @Override
         public void onPrepared(MediaEncoder encoder) {

@@ -1,15 +1,16 @@
-package com.cgfay.filter.recorder;
+package com.yumore.filter.recorder;
 
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.support.annotation.NonNull;
 import android.util.Log;
-import com.cgfay.filter.gles.EglCore;
-import com.cgfay.filter.gles.WindowSurface;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
 import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
+import com.yumore.filter.gles.EglCore;
+import com.yumore.filter.gles.WindowSurface;
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -303,7 +304,7 @@ public final class VideoRecorder implements Runnable, VideoEncoder.OnEncodingLis
      */
     private static class RecordHandler extends Handler {
 
-        private WeakReference<VideoRecorder> mWeakRecorder;
+        private final WeakReference<VideoRecorder> mWeakRecorder;
 
         public RecordHandler(VideoRecorder encoder) {
             mWeakRecorder = new WeakReference<VideoRecorder>(encoder);

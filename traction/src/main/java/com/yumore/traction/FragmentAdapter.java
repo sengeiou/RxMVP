@@ -9,17 +9,16 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import java.util.List;
 
 /**
- * fragmentAdapter
+ * FragmentAdapter
+ *
  * @author Nathaniel
  */
 public class FragmentAdapter extends FragmentStatePagerAdapter {
-    private List<Fragment> fragmentList;
-    private FragmentManager fragmentManager;
+    private final List<Fragment> fragmentList;
 
     public FragmentAdapter(List<Fragment> fragmentList, FragmentManager fragmentManager) {
-        super(fragmentManager);
+        super(fragmentManager, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.fragmentList = fragmentList;
-        this.fragmentManager = fragmentManager;
     }
 
     @Override

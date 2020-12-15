@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.presenter;
+package com.yumore.caincamera.presenter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,16 +10,16 @@ import android.os.Looper;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.cgfay.caincamera.fragment.FFMediaRecordFragment;
-import com.cgfay.camera.engine.camera.CameraEngine;
 import com.cgfay.camera.engine.camera.CameraParam;
 import com.cgfay.camera.utils.PathConstraints;
-import com.cgfay.media.CainCommandEditor;
 import com.cgfay.media.recorder.AVFormatter;
-import com.cgfay.media.recorder.AudioRecorder;
-import com.cgfay.media.recorder.FFMediaRecorder;
 import com.cgfay.uitls.utils.FileUtils;
-import com.cgfay.video.activity.VideoEditActivity;
+import com.yumore.caincamera.fragment.FFMediaRecordFragment;
+import com.yumore.camera.engine.camera.CameraEngine;
+import com.yumore.media.CainCommandEditor;
+import com.yumore.media.recorder.AudioRecorder;
+import com.yumore.media.recorder.FFMediaRecorder;
+import com.yumore.video.activity.VideoEditActivity;
 
 import java.util.ArrayList;
 import java.util.List;

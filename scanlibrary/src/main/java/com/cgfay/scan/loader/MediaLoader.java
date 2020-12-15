@@ -1,4 +1,4 @@
-package com.cgfay.scan.loader;
+package com.yumore.scan.loader;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

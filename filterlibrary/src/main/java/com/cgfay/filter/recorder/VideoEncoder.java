@@ -1,4 +1,4 @@
-package com.cgfay.filter.recorder;
+package com.yumore.filter.recorder;
 
 import android.media.MediaCodec;
 import android.media.MediaCodecInfo;
@@ -22,14 +22,14 @@ final class VideoEncoder {
     private static final String TAG = "VideoEncoder";
     private static final boolean VERBOSE = false;
 
-    private Surface mInputSurface;
+    private final Surface mInputSurface;
     private MediaMuxer mMediaMuxer;
     private MediaCodec mMediaCodec;
-    private MediaCodec.BufferInfo mBufferInfo;
+    private final MediaCodec.BufferInfo mBufferInfo;
     private int mTrackIndex;
     private boolean mMuxerStarted;
-    private VideoParams mVideoParams;
-    private OnEncodingListener mRecordingListener;
+    private final VideoParams mVideoParams;
+    private final OnEncodingListener mRecordingListener;
     // 录制起始时间戳
     private long mStartTimeStamp;
     // 录制时长

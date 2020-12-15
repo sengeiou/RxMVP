@@ -1,19 +1,20 @@
-package com.cgfay.facedetect.engine;
+package com.yumore.facedetect.engine;
 
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.util.Log;
+
 import com.cgfay.facedetect.listener.FaceTrackerCallback;
-import com.cgfay.facedetect.utils.ConUtil;
 import com.cgfay.facedetect.utils.FaceppConstraints;
 import com.cgfay.facedetect.utils.SensorEventUtil;
-import com.cgfay.facedetectlibrary.R;
 import com.cgfay.landmark.LandmarkEngine;
-import com.cgfay.landmark.OneFace;
 import com.megvii.facepp.sdk.Facepp;
 import com.megvii.licensemanager.sdk.LicenseManager;
+import com.yumore.facedetect.utils.ConUtil;
+import com.yumore.facedetectlibrary.R;
+import com.yumore.landmark.OneFace;
 
 /**
  * 人脸检测器
@@ -26,7 +27,7 @@ public final class FaceTracker {
     private final Object mSyncFence = new Object();
 
     // 人脸检测参数
-    private FaceTrackParam mFaceTrackParam;
+    private final FaceTrackParam mFaceTrackParam;
 
     // 检测线程
     private TrackerThread mTrackerThread;
@@ -236,7 +237,7 @@ public final class FaceTracker {
     }
 
     private static class FaceTrackerHolder {
-        private static FaceTracker instance = new FaceTracker();
+        private static final FaceTracker instance = new FaceTracker();
     }
 
     /**

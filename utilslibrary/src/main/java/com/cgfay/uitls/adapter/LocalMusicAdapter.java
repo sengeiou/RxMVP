@@ -1,13 +1,15 @@
 package com.cgfay.uitls.adapter;
 
 import android.database.Cursor;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import androidx.appcompat.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.cgfay.uitls.bean.Music;
 import com.cgfay.uitls.utils.StringUtils;
 import com.cgfay.utilslibrary.R;
@@ -67,9 +69,9 @@ public class LocalMusicAdapter extends LocalCursorAdapter<RecyclerView.ViewHolde
 
     class MusicViewHolder extends RecyclerView.ViewHolder {
 
-        private LinearLayout mLayoutMusic;
-        private TextView mTextName;
-        private TextView mTexDuration;
+        private final LinearLayout mLayoutMusic;
+        private final TextView mTextName;
+        private final TextView mTexDuration;
 
         public MusicViewHolder(View itemView) {
             super(itemView);

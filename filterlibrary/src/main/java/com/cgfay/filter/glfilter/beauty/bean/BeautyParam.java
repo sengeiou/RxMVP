@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.beauty.bean;
+package com.yumore.filter.glfilter.beauty.bean;
 
 /**
  * 美颜参数

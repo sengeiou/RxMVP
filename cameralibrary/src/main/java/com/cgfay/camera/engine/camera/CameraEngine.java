@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.camera;
+package com.yumore.camera.engine.camera;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,6 +7,7 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.view.Surface;
 import android.view.SurfaceHolder;
+
 import com.cgfay.camera.engine.model.CalculateType;
 
 import java.io.IOException;

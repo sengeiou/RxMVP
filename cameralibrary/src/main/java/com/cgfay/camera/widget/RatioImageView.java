@@ -7,8 +7,9 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
-import com.cgfay.camera.engine.model.AspectRatio;
-import com.cgfay.cameralibrary.R;
+
+import com.yumore.camera.engine.model.AspectRatio;
+import com.yumore.cameralibrary.R;
 
 /**
  * 长宽比图片视图
@@ -18,7 +19,7 @@ import com.cgfay.cameralibrary.R;
 @SuppressLint("AppCompatCustomView")
 public class RatioImageView extends ImageView implements View.OnClickListener {
 
-    private int[] mImageIds = {
+    private final int[] mImageIds = {
             R.drawable.ic_camera_ratio_11_light,
             R.drawable.ic_camera_ratio_34_light,
             R.drawable.ic_camera_ratio_916_light

@@ -1,13 +1,14 @@
-package com.cgfay.camera.loader.impl;
+package com.yumore.camera.loader.impl;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.widget.ImageView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.request.RequestOptions;
-import com.cgfay.camera.loader.MediaLoader;
+import com.yumore.camera.loader.MediaLoader;
 
 /**
  * 图片加载器

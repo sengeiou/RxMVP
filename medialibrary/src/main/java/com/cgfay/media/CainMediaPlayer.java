@@ -1,4 +1,4 @@
-package com.cgfay.media;
+package com.yumore.media;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -15,7 +15,8 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
-import com.cgfay.media.annotations.AccessedByNative;
+
+import com.yumore.media.annotations.AccessedByNative;
 
 import java.io.FileDescriptor;
 import java.io.IOException;
@@ -108,7 +109,7 @@ public class CainMediaPlayer implements IMediaPlayer {
     @AccessedByNative
     private int mListenerContext;   // nothing
     private SurfaceHolder mSurfaceHolder;
-    private EventHandler mEventHandler;
+    private final EventHandler mEventHandler;
     private PowerManager.WakeLock mWakeLock = null;
     private boolean mScreenOnWhilePlaying;
     private boolean mStayAwake;
@@ -1074,7 +1075,7 @@ public class CainMediaPlayer implements IMediaPlayer {
 
     private class EventHandler extends Handler {
 
-        private CainMediaPlayer mMediaPlayer;
+        private final CainMediaPlayer mMediaPlayer;
 
         public EventHandler(CainMediaPlayer mp, Looper looper) {
             super(looper);

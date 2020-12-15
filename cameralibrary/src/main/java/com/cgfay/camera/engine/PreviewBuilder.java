@@ -1,20 +1,22 @@
-package com.cgfay.camera.engine;
+package com.yumore.camera.engine;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.hardware.Camera;
+
 import androidx.core.app.Fragment;
-import com.cgfay.camera.activity.CameraActivity;
+
 import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.engine.model.AspectRatio;
 import com.cgfay.camera.listener.OnGallerySelectedListener;
 import com.cgfay.camera.listener.OnPreviewCaptureListener;
 import com.cgfay.cameralibrary.R;
+import com.yumore.camera.activity.CameraActivity;
+import com.yumore.camera.engine.model.AspectRatio;
 
 public final class PreviewBuilder {
 
-    private PreviewEngine mPreviewEngine;
-    private CameraParam mCameraParam;
+    private final PreviewEngine mPreviewEngine;
+    private final CameraParam mCameraParam;
 
     public PreviewBuilder(PreviewEngine engine, AspectRatio ratio) {
         mPreviewEngine = engine;

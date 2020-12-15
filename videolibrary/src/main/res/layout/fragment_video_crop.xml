@@ -5,11 +5,11 @@
         android:background="@color/video_page_background">
 
     <!-- 视频显示页面 -->
-    <com.cgfay.video.widget.VideoTextureView
-            android:id="@+id/video_player_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true" />
+    <com.yumore.video.widget.VideoTextureView
+        android:id="@+id/video_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
 
     <!-- back -->
     <ImageView
@@ -83,12 +83,12 @@
         </LinearLayout>
 
         <!-- 裁剪缩略图 -->
-        <com.cgfay.video.widget.VideoCutViewBar
-                android:id="@+id/video_crop_view_bar"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginBottom="20dp"
-                android:background="@color/video_cut_bar_background" />
+        <com.yumore.video.widget.VideoCutViewBar
+            android:id="@+id/video_crop_view_bar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/video_cut_bar_background" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,17 +104,17 @@
             android:paddingBottom="15dp"
             android:visibility="gone">
 
-        <com.cgfay.video.widget.CircleProgressView xmlns:circle="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/cv_crop_progress"
-                android:layout_width="@dimen/dp60"
-                android:layout_height="@dimen/dp60"
-                circle:backgroundCircleWidth="2dp"
-                circle:backgroundColor="@color/azure"
-                circle:circleWidth="2dp"
-                circle:color="@color/yellow"
-                circle:textColor="@color/white"
-                circle:textSize="9"
-                circle:textSuffix="%" />
+        <com.yumore.video.widget.CircleProgressView xmlns:circle="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_crop_progress"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            circle:backgroundCircleWidth="2dp"
+            circle:backgroundColor="@color/azure"
+            circle:circleWidth="2dp"
+            circle:color="@color/yellow"
+            circle:textColor="@color/white"
+            circle:textSize="9"
+            circle:textSuffix="%" />
 
         <TextView
                 android:id="@+id/tv_crop_progress"

@@ -1,14 +1,16 @@
-package com.cgfay.video.activity;
+package com.yumore.video.activity;
 
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.cgfay.uitls.bean.Music;
 import com.cgfay.uitls.fragment.MusicSelectFragment;
-import com.cgfay.video.R;
-import com.cgfay.video.fragment.VideoEditFragment;
+import com.yumore.video.R;
+import com.yumore.video.fragment.VideoEditFragment;
 
 public class VideoEditActivity extends AppCompatActivity implements VideoEditFragment.OnSelectMusicListener,
         MusicSelectFragment.OnMusicSelectedListener {

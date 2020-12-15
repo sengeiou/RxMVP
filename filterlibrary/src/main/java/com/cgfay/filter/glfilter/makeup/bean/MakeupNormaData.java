@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.makeup.bean;
+package com.yumore.filter.glfilter.makeup.bean;
 
 /**
  * 普通彩妆数据

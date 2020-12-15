@@ -1,4 +1,4 @@
-package com.cgfay.widget;
+package com.yumore.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

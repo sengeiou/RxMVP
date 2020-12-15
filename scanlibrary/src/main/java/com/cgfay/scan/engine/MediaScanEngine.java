@@ -1,8 +1,10 @@
 package com.cgfay.scan.engine;
 
 import android.app.Activity;
+
 import androidx.core.app.Fragment;
-import com.cgfay.scan.model.MimeType;
+
+import com.yumore.scan.model.MimeType;
 
 import java.lang.ref.WeakReference;
 import java.util.Set;
@@ -12,9 +14,9 @@ import java.util.Set;
  */
 public final class MediaScanEngine {
 
-    private WeakReference<Activity> mWeakActivity;
+    private final WeakReference<Activity> mWeakActivity;
 
-    private WeakReference<Fragment> mWeakFragment;
+    private final WeakReference<Fragment> mWeakFragment;
 
     private MediaScanEngine(Activity activity) {
         this(activity, null);

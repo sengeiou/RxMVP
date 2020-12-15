@@ -55,9 +55,9 @@ import androidx.core.widget.TextViewCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.cgfay.design.R;
 import com.cgfay.internal.ViewUtils;
-import com.cgfay.resources.MaterialResources;
+import com.yumore.design.R;
+import com.yumore.resources.MaterialResources;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

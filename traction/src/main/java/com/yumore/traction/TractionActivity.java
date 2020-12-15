@@ -5,42 +5,31 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.yumore.provider.ISampleProvider;
 import com.yumore.provider.RouterConstants;
+import com.yumore.traction.databinding.ActivityTractionBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 /**
  * @author Nathaniel
  */
-public class TractionActivity extends FragmentActivity implements ViewPager.OnPageChangeListener, OnFragmentToActivity<Integer> {
-
-    @BindView(R2.id.guide_viewpager)
-    ExtendedViewPager extendedViewPager;
-    @BindView(R2.id.enter_button)
-    TextView textView;
-    @BindView(R2.id.dot_layout)
-    LinearLayout linearLayout;
-    @BindView(R2.id.traction_layout)
-    RelativeLayout relativeLayout;
+@Route(path = RouterConstants.TRACTION_HOME)
+public class TractionActivity extends FragmentActivity implements ViewPager.OnPageChangeListener, OnFragmentToActivity<Integer>, View.OnClickListener {
     private final int[] videoRes = new int[]{
             R.raw.guide1,
             R.raw.guide2,
             R.raw.guide3
     };
-    private List<Fragment> fragmentList;
+    private ActivityTractionBinding tractionBinding;
     private LinearLayout.LayoutParams focusedParams, unfocusedParams;
 
     public static int dip2px(Context context, float dpValue) {
@@ -52,9 +41,14 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_traction);
-        ButterKnife.bind(this);
-        fragmentList = new ArrayList<>();
+        tractionBinding = ActivityTractionBinding.inflate(getLayoutInflater());
+        setContentView(tractionBinding.getRoot());
+
+        initialize();
+    }
+
+    private void initialize() {
+        List<Fragment> fragmentList = new ArrayList<>();
         focusedParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 7), dip2px(getApplicationContext(), 7));
         focusedParams.leftMargin = dip2px(getApplicationContext(), 15);
         unfocusedParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 10), dip2px(getApplicationContext(), 10));
@@ -69,7 +63,7 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
                 dotView.setLayoutParams(focusedParams);
                 dotView.setBackgroundResource(R.drawable.tranction_shape_circle_gray_solid);
             }
-            linearLayout.addView(dotView);
+            tractionBinding.indicatorLayout.addView(dotView);
         }
 
         for (int i = 0; i < videoRes.length; i++) {
@@ -81,18 +75,18 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
             fragmentList.add(fragment);
         }
         FragmentAdapter fragmentAdapter = new FragmentAdapter(fragmentList, getSupportFragmentManager());
-        extendedViewPager.setOffscreenPageLimit(fragmentList.size());
-        extendedViewPager.setAdapter(fragmentAdapter);
-        extendedViewPager.addOnPageChangeListener(this);
-        relativeLayout.bringToFront();
+        tractionBinding.tractionViewpager.setOffscreenPageLimit(fragmentList.size());
+        tractionBinding.tractionViewpager.setAdapter(fragmentAdapter);
+        tractionBinding.tractionViewpager.addOnPageChangeListener(this);
+        tractionBinding.tractionLayout.bringToFront();
+        tractionBinding.tractionEnter.setOnClickListener(this);
     }
 
-    @OnClick({
-            R2.id.enter_button
-    })
+    @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.enter_button) {
-
+        if (view.getId() == R.id.traction_enter) {
+            ISampleProvider sampleProvider = ARouter.getInstance().navigation(ISampleProvider.class);
+            sampleProvider.setTractionEnable(true);
             ARouter.getInstance().build(RouterConstants.EXAMPLE_HOME).navigation();
             finish();
         }
@@ -105,8 +99,8 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
 
     @Override
     public void onPageSelected(int position) {
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-            View dotView = linearLayout.getChildAt(i);
+        for (int i = 0; i < tractionBinding.indicatorLayout.getChildCount(); i++) {
+            View dotView = tractionBinding.indicatorLayout.getChildAt(i);
             if (i == position) {
                 dotView.setLayoutParams(unfocusedParams);
                 dotView.setBackgroundResource(R.drawable.tranction_shape_circle_magenta_solid);
@@ -114,7 +108,6 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
                 dotView.setLayoutParams(focusedParams);
                 dotView.setBackgroundResource(R.drawable.tranction_shape_circle_gray_solid);
             }
-
         }
     }
 
@@ -125,10 +118,10 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
 
     @Override
     public void onCallback(String action, Integer integer) {
-        int i = extendedViewPager.getCurrentItem();
-        if (integer == i) {
-            integer += 1;
-            extendedViewPager.setCurrentItem(integer, true);
+        int position = tractionBinding.tractionViewpager.getCurrentItem();
+        if (integer == position) {
+            integer++;
+            tractionBinding.tractionViewpager.setCurrentItem(integer, true);
         }
     }
 }

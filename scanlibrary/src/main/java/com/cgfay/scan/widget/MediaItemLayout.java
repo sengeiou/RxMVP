@@ -1,4 +1,4 @@
-package com.cgfay.scan.widget;
+package com.yumore.scan.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -8,10 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.RecyclerView;
-import com.cgfay.scan.R;
-import com.cgfay.scan.engine.MediaScanParam;
-import com.cgfay.scan.model.MediaItem;
+
+import com.yumore.scan.R;
+import com.yumore.scan.engine.MediaScanParam;
+import com.yumore.scan.model.MediaItem;
 
 /**
  * 媒体item布局

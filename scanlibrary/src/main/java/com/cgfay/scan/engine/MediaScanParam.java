@@ -1,10 +1,10 @@
-package com.cgfay.scan.engine;
+package com.yumore.scan.engine;
 
-import com.cgfay.scan.listener.OnCaptureListener;
-import com.cgfay.scan.listener.OnMediaSelectedListener;
 import com.cgfay.scan.loader.MediaLoader;
 import com.cgfay.scan.loader.impl.GlideMediaLoader;
-import com.cgfay.scan.model.MimeType;
+import com.yumore.scan.listener.OnCaptureListener;
+import com.yumore.scan.listener.OnMediaSelectedListener;
+import com.yumore.scan.model.MimeType;
 
 import java.util.Set;
 

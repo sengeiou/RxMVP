@@ -1,14 +1,22 @@
-package com.cgfay.video.widget;
+package com.yumore.video.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.LinearGradient;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Shader;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import com.cgfay.uitls.utils.DensityUtils;
+
 import com.cgfay.video.R;
+import com.yumore.uitls.utils.DensityUtils;
 
 /**
  * 音乐裁剪控件
@@ -18,17 +26,17 @@ public class WaveCutView extends View {
     private final int WAVE_COUNT = 45;
     int mParentMargin;
     float mWaveWidth;
-    private int[] mHeights;
+    private final int[] mHeights;
     private int mMaxCount = 50;
     private int mSelectedCount = 15;
     private int mSelectedColor = 0x80F8CE17;
     private int mDefaultColor = 0x80FFFFFF;
     private boolean isDragging;
-    private int mImageWidth;
-    private int mImageHeight;
+    private final int mImageWidth;
+    private final int mImageHeight;
     private int mImagePositonX;
     private int mImagePositonY;
-    private Bitmap mImageBitmap;
+    private final Bitmap mImageBitmap;
     private int mProgress;
     private OnDragListener mOnDragListener;
     private float mMoveX;

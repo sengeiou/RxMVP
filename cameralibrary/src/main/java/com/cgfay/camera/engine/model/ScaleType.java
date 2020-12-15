@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.model;
+package com.yumore.camera.engine.model;
 
 /**
  * 缩放类型

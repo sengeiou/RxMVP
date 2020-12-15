@@ -1,4 +1,4 @@
-package com.cgfay.facedetect.utils;
+package com.yumore.facedetect.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,8 +12,8 @@ import java.util.Map;
  * 通过SharedPreferences来存储数据，自定义类型
  */
 public class SharedUtil {
-    private Context ctx;
-    private String FileName = "megvii";
+    private final Context ctx;
+    private final String FileName = "megvii";
 
     public SharedUtil(Context ctx) {
         this.ctx = ctx;

@@ -1,4 +1,4 @@
-package com.cgfay.camera.widget;
+package com.yumore.camera.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,7 +10,9 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import androidx.appcompat.widget.TintTypedArray;
+
 import com.cgfay.cameralibrary.R;
 
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ import java.util.List;
 
 public class HorizontalIndicatorView extends View {
 
-    private Context mContext;
+    private final Context mContext;
     private List<String> mIndicators = new ArrayList<String>();//数据源字符串数组
 
     private boolean isFirst = true;
@@ -47,7 +49,7 @@ public class HorizontalIndicatorView extends View {
     private float mSelectedTextSize;
     private int mSelectedColor;
 
-    private Rect mRect = new Rect();
+    private final Rect mRect = new Rect();
 
     private int mTextWidth = 0;
     private int mTextHeight = 0;

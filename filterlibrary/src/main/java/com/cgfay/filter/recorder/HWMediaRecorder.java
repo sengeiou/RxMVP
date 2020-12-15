@@ -1,4 +1,4 @@
-package com.cgfay.filter.recorder;
+package com.yumore.filter.recorder;
 
 import android.util.Log;
 
@@ -28,7 +28,7 @@ public class HWMediaRecorder implements OnRecordListener {
     private long mProcessTime = 0;
 
     // 录制状态回调
-    private OnRecordStateListener mRecordStateListener;
+    private final OnRecordStateListener mRecordStateListener;
 
     public HWMediaRecorder(OnRecordStateListener listener) {
         mRecordStateListener = listener;

@@ -1,11 +1,11 @@
-package com.yumore.sample.common;
+package com.yumore.master.common;
 
 import android.content.Context;
+
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.yumore.common.basic.BaseApplication;
 import com.yumore.common.helper.InitializeHelper;
-import com.yumore.example.common.ExampleApplication;
-import com.yumore.sample.BuildConfig;
+import com.yumore.master.BuildConfig;
 
 /**
  * @author Nathaniel
@@ -20,6 +20,5 @@ public class SampleApplication extends BaseApplication implements InitializeHelp
             ARouter.openDebug();
         }
         ARouter.init(application);
-        ExampleApplication.getInstance().initialize(application);
     }
 }

@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.widget;
+package com.yumore.caincamera.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

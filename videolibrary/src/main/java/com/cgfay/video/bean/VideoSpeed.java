@@ -1,4 +1,4 @@
-package com.cgfay.video.bean;
+package com.yumore.video.bean;
 
 /**
  * 速度枚举
@@ -9,8 +9,8 @@ public enum VideoSpeed {
     SPEED_L2(0, 1.0f),      // L2 : 标准 (倍速: 1.0, 默认速度)
     SPEED_L3(1, 2.0f);      // L3 : 较快 (倍速: 2.0)
 
-    private int type;
-    private float speed;
+    private final int type;
+    private final float speed;
 
     VideoSpeed(int type, float speed) {
         this.type = type;

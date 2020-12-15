@@ -2,7 +2,8 @@ package com.cgfay.filter.glfilter.base;
 
 import android.content.Context;
 import android.opengl.GLES20;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 public class GLImage3x3TextureSamplingFilter extends GLImageFilter {
 

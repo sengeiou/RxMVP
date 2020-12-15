@@ -1,16 +1,17 @@
-package com.cgfay.filter.glfilter.stickers;
+package com.yumore.filter.glfilter.stickers;
 
 import android.content.Context;
 import android.opengl.GLES30;
 import android.util.Log;
+
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.math.OrthographicCamera;
 import com.badlogic.gdx.math.Vector3;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
-import com.cgfay.filter.glfilter.stickers.bean.StaticStickerNormalData;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
+import com.yumore.filter.glfilter.stickers.bean.StaticStickerNormalData;
+import com.yumore.filter.glfilter.utils.TextureRotationUtils;
 
 import java.nio.FloatBuffer;
 

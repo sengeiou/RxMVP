@@ -1,4 +1,4 @@
-package com.cgfay.facedetect.utils;
+package com.yumore.facedetect.utils;
 
 public class FaceppConstraints {
 

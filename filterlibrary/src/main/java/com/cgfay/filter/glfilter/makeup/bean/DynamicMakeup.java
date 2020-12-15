@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.makeup.bean;
+package com.yumore.filter.glfilter.makeup.bean;
 
 import java.util.ArrayList;
 import java.util.List;

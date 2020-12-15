@@ -1,13 +1,15 @@
 package com.cgfay.filter.glfilter.resource;
 
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
-import com.cgfay.filter.glfilter.color.bean.DynamicColorBaseData;
 import com.cgfay.filter.glfilter.color.bean.DynamicColorData;
-import com.cgfay.filter.glfilter.effect.bean.DynamicEffect;
-import com.cgfay.filter.glfilter.effect.bean.DynamicEffectData;
-import com.cgfay.filter.glfilter.makeup.bean.*;
-import com.cgfay.filter.glfilter.stickers.bean.*;
-import com.cgfay.uitls.utils.FileUtils;
+import com.cgfay.filter.glfilter.makeup.bean.MakeupBaseData;
+import com.cgfay.filter.glfilter.makeup.bean.MakeupType;
+import com.cgfay.filter.glfilter.stickers.bean.DynamicStickerData;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.color.bean.DynamicColorBaseData;
+import com.yumore.filter.glfilter.effect.bean.DynamicEffect;
+import com.yumore.filter.glfilter.effect.bean.DynamicEffectData;
+import com.yumore.uitls.utils.FileUtils;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

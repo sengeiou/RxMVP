@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.stickers.bean;
+package com.yumore.filter.glfilter.stickers.bean;
 
 /**
  * 默认动态贴纸类型

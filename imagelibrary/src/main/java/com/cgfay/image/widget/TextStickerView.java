@@ -1,7 +1,13 @@
 package com.cgfay.image.widget;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.support.annotation.ColorInt;
 import android.support.annotation.Nullable;
 import android.text.TextPaint;
@@ -9,8 +15,9 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import com.cgfay.imagelibrary.R;
+
 import com.cgfay.uitls.utils.RectUtils;
+import com.yumore.imagelibrary.R;
 
 /**
  * 文字贴图控件
@@ -28,15 +35,15 @@ public class TextStickerView extends View {
     private static final int DELETE_MODE = 3;   // 删除模式
     private static final int EDIT_MODE = 4;     // 编辑模式
 
-    private TextPaint mPaint = new TextPaint(); // 绘制文字的Paint
-    private Paint mBorderPaint = new Paint();   // 绘制边框的Paint
+    private final TextPaint mPaint = new TextPaint(); // 绘制文字的Paint
+    private final Paint mBorderPaint = new Paint();   // 绘制边框的Paint
 
-    private Rect mTextRect = new Rect();        // 文字位置
-    private RectF mBorderRect = new RectF();    // 边框位置
+    private final Rect mTextRect = new Rect();        // 文字位置
+    private final RectF mBorderRect = new RectF();    // 边框位置
 
-    private Rect mDeleteRect = new Rect();      // 删除按钮的位置
-    private Rect mScaleRect = new Rect();       // 缩放按钮的位置
-    private Rect mEditRect = new Rect();        // 编辑按钮的位置
+    private final Rect mDeleteRect = new Rect();      // 删除按钮的位置
+    private final Rect mScaleRect = new Rect();       // 缩放按钮的位置
+    private final Rect mEditRect = new Rect();        // 编辑按钮的位置
 
     private RectF mDeleteDstRect;               // 删除按钮目标位置
     private RectF mScaleDstRect;                // 缩放按钮目标位置

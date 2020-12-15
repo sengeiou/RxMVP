@@ -1,4 +1,4 @@
-package com.cgfay.landmark;
+package com.yumore.landmark;
 
 import android.util.SparseArray;
 

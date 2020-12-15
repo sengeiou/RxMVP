@@ -10,10 +10,10 @@ import java.util.List;
 /**
  * @author nathaniel
  */
-public class TractionAdapter extends FragmentStatePagerAdapter {
+public class FragmentAdapter extends FragmentStatePagerAdapter {
     private final List<Fragment> fragmentList;
 
-    public TractionAdapter(FragmentManager fragmentManager, List<Fragment> fragmentList) {
+    public FragmentAdapter(FragmentManager fragmentManager, List<Fragment> fragmentList) {
         super(fragmentManager);
         this.fragmentList = fragmentList;
     }

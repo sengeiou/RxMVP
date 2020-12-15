@@ -9,20 +9,26 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
 import androidx.appcompat.widget.LinearLayoutManager;
 import androidx.appcompat.widget.RecyclerView;
 import androidx.core.app.Fragment;
-import com.cgfay.camera.adapter.PreviewBeautyAdapter;
+
 import com.cgfay.camera.adapter.PreviewFilterAdapter;
-import com.cgfay.camera.adapter.PreviewMakeupAdapter;
-import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.cameralibrary.R;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
-import com.cgfay.filter.glfilter.makeup.bean.DynamicMakeup;
 import com.cgfay.filter.glfilter.resource.FilterHelper;
-import com.cgfay.filter.glfilter.resource.MakeupHelper;
 import com.cgfay.filter.glfilter.resource.ResourceJsonCodec;
+import com.yumore.camera.adapter.PreviewBeautyAdapter;
+import com.yumore.camera.adapter.PreviewMakeupAdapter;
+import com.yumore.camera.engine.camera.CameraParam;
+import com.yumore.cameralibrary.R;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.makeup.bean.DynamicMakeup;
+import com.yumore.filter.glfilter.resource.MakeupHelper;
 
 import java.io.File;
 

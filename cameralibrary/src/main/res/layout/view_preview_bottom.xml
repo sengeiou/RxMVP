@@ -44,12 +44,12 @@
                 android:background="@drawable/ic_camera_sticker_light" />
 
         <!-- 快门 -->
-        <com.cgfay.camera.widget.ShutterButton
-                android:id="@+id/btn_shutter"
-                android:layout_width="@dimen/record_width_height_normal"
-                android:layout_height="@dimen/record_width_height_normal"
-                android:layout_centerInParent="true"
-                android:layout_gravity="center" />
+        <com.yumore.camera.widget.ShutterButton
+            android:id="@+id/btn_shutter"
+            android:layout_width="@dimen/record_width_height_normal"
+            android:layout_height="@dimen/record_width_height_normal"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
 
         <!-- 删除 -->
         <Button
@@ -88,16 +88,16 @@
 
     <com.cgfay.widget.CameraTabView
             android:id="@+id/tl_camera_tab"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/bottom_indicator_height"
-            app:tabGravity="center"
-            app:tabIndicatorColor="@color/white"
-            app:tabIndicatorFullWidth="false"
-            app:tabIndicatorHeight="4dp"
-            app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/colorHorizontalIndicator"
-            app:tabTextColor="@android:color/darker_gray">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_indicator_height"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/colorHorizontalIndicator"
+        app:tabTextColor="@android:color/darker_gray">
 
-    </com.cgfay.widget.CameraTabView>
+    </com.yumore.widget.CameraTabView>
 
 </LinearLayout>

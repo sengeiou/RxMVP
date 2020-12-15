@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.activity;
+package com.yumore.caincamera.activity;
 
 import android.Manifest;
 import android.app.Dialog;
@@ -13,20 +13,20 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cgfay.caincamera.R;
 import com.cgfay.caincamera.presenter.RecordPresenter;
 import com.cgfay.caincamera.renderer.RecordRenderer;
-import com.cgfay.caincamera.widget.GLRecordView;
-import com.cgfay.caincamera.widget.RecordButton;
-import com.cgfay.camera.widget.RecordProgressView;
 import com.cgfay.camera.widget.RecordSpeedLevelBar;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
-import com.cgfay.filter.glfilter.resource.FilterHelper;
-import com.cgfay.filter.glfilter.resource.ResourceJsonCodec;
 import com.cgfay.filter.recorder.SpeedMode;
 import com.cgfay.uitls.utils.NotchUtils;
-import com.cgfay.uitls.utils.PermissionUtils;
-import com.cgfay.uitls.utils.StatusBarUtils;
+import com.yumore.caincamera.R;
+import com.yumore.caincamera.widget.GLRecordView;
+import com.yumore.caincamera.widget.RecordButton;
+import com.yumore.camera.widget.RecordProgressView;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.resource.FilterHelper;
+import com.yumore.filter.glfilter.resource.ResourceJsonCodec;
+import com.yumore.uitls.utils.PermissionUtils;
+import com.yumore.uitls.utils.StatusBarUtils;
 
 import java.io.File;
 

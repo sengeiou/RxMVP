@@ -1,4 +1,4 @@
-package com.cgfay.filter.recorder;
+package com.yumore.filter.recorder;
 
 /**
  * 速度模式
@@ -13,8 +13,8 @@ public enum SpeedMode {
     MODE_FAST(4, 2.0f),         // 快
     MODE_EXTRA_FAST(5, 3.0f);   // 极快
 
-    private int type;
-    private float speed;
+    private final int type;
+    private final float speed;
 
     SpeedMode(int type, float speed) {
         this.type = type;

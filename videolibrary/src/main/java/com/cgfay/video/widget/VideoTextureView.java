@@ -1,4 +1,4 @@
-package com.cgfay.video.widget;
+package com.yumore.video.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

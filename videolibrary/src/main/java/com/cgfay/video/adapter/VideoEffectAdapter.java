@@ -8,10 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.RecyclerView;
-import com.cgfay.uitls.utils.BitmapUtils;
-import com.cgfay.video.R;
-import com.cgfay.video.bean.EffectType;
+
+import com.yumore.uitls.utils.BitmapUtils;
+import com.yumore.video.R;
+import com.yumore.video.bean.EffectType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +23,9 @@ import java.util.List;
  */
 public class VideoEffectAdapter extends RecyclerView.Adapter<VideoEffectAdapter.ImageHolder> {
 
-    private Context mContext;
+    private final Context mContext;
     private int mSelected = -1;
-    private List<EffectType> mEffectList = new ArrayList<>();
+    private final List<EffectType> mEffectList = new ArrayList<>();
     private OnEffectChangeListener mEffectChangeListener;
 
     public VideoEffectAdapter(Context context, List<EffectType> effectTypeList) {

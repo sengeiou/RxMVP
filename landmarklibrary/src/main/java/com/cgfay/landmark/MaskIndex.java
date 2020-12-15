@@ -1,4 +1,4 @@
-package com.cgfay.landmark;
+package com.yumore.landmark;
 
 /**
  * 遮罩索引

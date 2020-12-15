@@ -1,4 +1,4 @@
-package com.cgfay.filter.audioplayer;
+package com.yumore.filter.audioplayer;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -10,11 +10,11 @@ import android.media.MediaPlayer;
 public class AutoFocusPlayer extends MediaPlayer {
 
     // 音频对焦管理器
-    private AudioFocusManager mFocusManager;
+    private final AudioFocusManager mFocusManager;
     /**
      * 音频对焦监听器
      */
-    private AudioFocusChangeListener mFocusChangeListener = new AudioFocusChangeListener() {
+    private final AudioFocusChangeListener mFocusChangeListener = new AudioFocusChangeListener() {
         @Override
         public void onFocusChange(int state) {
             switch (state) {

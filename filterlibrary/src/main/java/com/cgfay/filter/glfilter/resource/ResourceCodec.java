@@ -1,14 +1,29 @@
-package com.cgfay.filter.glfilter.resource;
+package com.yumore.filter.glfilter.resource;
 
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
+
 import com.cgfay.uitls.utils.FileUtils;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.Closeable;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -23,9 +38,9 @@ public class ResourceCodec {
     // 数据缓冲
     protected ByteBuffer mDataBuffer;
     // 索引文件路径
-    private String mIndexPath;
+    private final String mIndexPath;
     // 数据文件路径
-    private String mDataPath;
+    private final String mDataPath;
 
     public ResourceCodec(String indexPath, String dataPath) {
         mIndexPath = indexPath;
@@ -136,7 +151,7 @@ public class ResourceCodec {
                     int length;
                     for (offset = 0; (length = inputStream.read(buffer)) != -1; offset += length) {
                     }
-                    folderList.add(new FileDescription(entry.getName(), (long) offset));
+                    folderList.add(new FileDescription(entry.getName(), offset));
                 }
             }
         } finally {
@@ -249,7 +264,7 @@ public class ResourceCodec {
                     RandomAccessFile accessFile = (RandomAccessFile) offsetMap.get(folderName);
                     // 找到起始位置
                     int pos = (Integer) ((Map) sizeMap.get(folderName)).get(FileUtils.extractFileName(zipEntry.getName()));
-                    accessFile.seek((long) pos);
+                    accessFile.seek(pos);
                     // 将png数据写入文件中
                     int length;
                     while ((length = zipStream.read(buffer)) != -1) {

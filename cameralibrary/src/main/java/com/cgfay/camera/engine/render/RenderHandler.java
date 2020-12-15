@@ -1,13 +1,14 @@
-package com.cgfay.camera.engine.render;
+package com.yumore.camera.engine.render;
 
 import android.graphics.SurfaceTexture;
 import android.os.Handler;
 import android.os.Message;
 import android.view.Surface;
 import android.view.SurfaceHolder;
+
 import com.cgfay.filter.glfilter.color.bean.DynamicColor;
 import com.cgfay.filter.glfilter.makeup.bean.DynamicMakeup;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
 
 import java.lang.ref.WeakReference;
 
@@ -49,7 +50,7 @@ class RenderHandler extends Handler {
     // 切换动态动态资源
     public static final int MSG_CHANGE_DYNAMIC_RESOURCE = 0x17;
 
-    private WeakReference<RenderThread> mWeakRenderThread;
+    private final WeakReference<RenderThread> mWeakRenderThread;
 
     public RenderHandler(RenderThread thread) {
         super(thread.getLooper());

@@ -9,13 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.widget.GridLayoutManager;
 import androidx.appcompat.widget.RecyclerView;
 import androidx.core.app.Fragment;
-import com.cgfay.camera.adapter.PreviewResourceAdapter;
-import com.cgfay.cameralibrary.R;
-import com.cgfay.filter.glfilter.resource.ResourceHelper;
+
 import com.cgfay.filter.glfilter.resource.bean.ResourceData;
+import com.yumore.camera.adapter.PreviewResourceAdapter;
+import com.yumore.cameralibrary.R;
+import com.yumore.filter.glfilter.resource.ResourceHelper;
 
 /**
  * 贴纸资源页面

@@ -1,4 +1,4 @@
-package com.cgfay.media;
+package com.yumore.media;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -10,7 +10,7 @@ import java.util.TimeZone;
  */
 public class CainMetadata {
 
-    private HashMap<String, String> mParcelMetadata;
+    private final HashMap<String, String> mParcelMetadata;
 
     public CainMetadata(HashMap<String, String> metadata) {
         mParcelMetadata = metadata;

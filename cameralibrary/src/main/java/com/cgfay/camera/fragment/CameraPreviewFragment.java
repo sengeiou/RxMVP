@@ -12,25 +12,32 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.*;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.TextureView;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.core.app.Fragment;
 import androidx.core.app.FragmentTransaction;
+
 import com.cgfay.camera.engine.camera.CameraEngine;
 import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.engine.model.GalleryType;
 import com.cgfay.camera.engine.recorder.PreviewRecorder;
 import com.cgfay.camera.presenter.CameraPreviewPresenter;
-import com.cgfay.camera.utils.PathConstraints;
-import com.cgfay.camera.widget.*;
 import com.cgfay.cameralibrary.R;
-import com.cgfay.filter.multimedia.VideoCombiner;
-import com.cgfay.uitls.fragment.PermissionErrorDialogFragment;
-import com.cgfay.uitls.utils.*;
 import com.cgfay.widget.CameraTabView;
+import com.yumore.camera.engine.model.GalleryType;
+import com.yumore.camera.utils.PathConstraints;
+import com.yumore.camera.widget.*;
+import com.yumore.filter.multimedia.VideoCombiner;
+import com.yumore.uitls.fragment.PermissionErrorDialogFragment;
+import com.yumore.uitls.utils.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +70,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     private boolean mDelayTaking = false;
 
     // 预览参数
-    private CameraParam mCameraParam;
+    private final CameraParam mCameraParam;
 
     // Fragment主页面
     private View mContentView;
@@ -109,7 +116,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     // 相机指示器
     private CameraTabView mCameraTabView;
     // 相机类型指示文字
-    private List<String> mIndicatorText = new ArrayList<String>();
+    private final List<String> mIndicatorText = new ArrayList<String>();
     // 合并对话框
     private CombineVideoDialogFragment mCombineDialog;
     // 主线程Handler
@@ -122,7 +129,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     private PreviewEffectFragment mEffectFragment;
 
     private CameraPreviewPresenter mPreviewPresenter;
-    private CainTextureView.OnTouchScroller mTouchScroller = new CainTextureView.OnTouchScroller() {
+    private final CainTextureView.OnTouchScroller mTouchScroller = new CainTextureView.OnTouchScroller() {
 
         @Override
         public void swipeBack() {
@@ -158,7 +165,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     /**
      * 单双击回调监听
      */
-    private CainTextureView.OnMultiClickListener mMultiClickListener = new CainTextureView.OnMultiClickListener() {
+    private final CainTextureView.OnMultiClickListener mMultiClickListener = new CainTextureView.OnMultiClickListener() {
 
         @Override
         public void onSurfaceSingleClick(final float x, final float y) {
@@ -194,7 +201,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
         }
 
     };
-    private TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
+    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
         @Override
         public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
             mPreviewPresenter.bindSurface(surface);
@@ -218,7 +225,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
         }
     };
     // ----------------------------------- 顶部状态栏点击回调 ------------------------------------
-    private PopupSettingView.StateChangedListener mStateChangedListener = new PopupSettingView.StateChangedListener() {
+    private final PopupSettingView.StateChangedListener mStateChangedListener = new PopupSettingView.StateChangedListener() {
 
         @Override
         public void flashStateChanged(boolean flashOn) {
@@ -255,7 +262,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     // 合成输出路径
     private String combinePath;
     // 合成监听器
-    private VideoCombiner.CombineListener mCombineListener = new VideoCombiner.CombineListener() {
+    private final VideoCombiner.CombineListener mCombineListener = new VideoCombiner.CombineListener() {
         @Override
         public void onCombineStart() {
             if (VERBOSE) {
@@ -292,7 +299,7 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
         }
     };
     // ------------------------------------ 录制回调 -------------------------------------------
-    private ShutterButton.OnShutterListener mShutterListener = new ShutterButton.OnShutterListener() {
+    private final ShutterButton.OnShutterListener mShutterListener = new ShutterButton.OnShutterListener() {
 
         @Override
         public void onStartRecord() {

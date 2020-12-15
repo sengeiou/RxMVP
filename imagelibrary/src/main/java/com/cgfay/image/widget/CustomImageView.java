@@ -1,4 +1,4 @@
-package com.cgfay.image.widget;
+package com.yumore.image.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,9 +13,9 @@ import android.view.View;
 public class CustomImageView extends View {
 
     // 变换矩阵
-    private Matrix mMatrix = new Matrix();
+    private final Matrix mMatrix = new Matrix();
     // 透视变换矩阵
-    private Matrix mPerspectMatirx = new Matrix();
+    private final Matrix mPerspectMatirx = new Matrix();
 
     private Bitmap mBitmap;
     private int mImageWidth;

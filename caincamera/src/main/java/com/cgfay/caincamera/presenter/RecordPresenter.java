@@ -1,4 +1,4 @@
-package com.cgfay.caincamera.presenter;
+package com.yumore.caincamera.presenter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,20 +10,20 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.cgfay.caincamera.activity.SpeedRecordActivity;
-import com.cgfay.camera.engine.camera.CameraEngine;
 import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.utils.PathConstraints;
-import com.cgfay.filter.recorder.AudioParams;
 import com.cgfay.filter.recorder.HWMediaRecorder;
 import com.cgfay.filter.recorder.MediaInfo;
 import com.cgfay.filter.recorder.MediaType;
-import com.cgfay.filter.recorder.OnRecordStateListener;
-import com.cgfay.filter.recorder.RecordInfo;
-import com.cgfay.filter.recorder.SpeedMode;
-import com.cgfay.filter.recorder.VideoParams;
 import com.cgfay.media.CainCommandEditor;
-import com.cgfay.uitls.utils.FileUtils;
-import com.cgfay.video.activity.VideoEditActivity;
+import com.yumore.camera.engine.camera.CameraEngine;
+import com.yumore.camera.utils.PathConstraints;
+import com.yumore.filter.recorder.AudioParams;
+import com.yumore.filter.recorder.OnRecordStateListener;
+import com.yumore.filter.recorder.RecordInfo;
+import com.yumore.filter.recorder.SpeedMode;
+import com.yumore.filter.recorder.VideoParams;
+import com.yumore.uitls.utils.FileUtils;
+import com.yumore.video.activity.VideoEditActivity;
 
 import java.io.File;
 import java.util.ArrayList;

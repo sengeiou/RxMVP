@@ -1,4 +1,4 @@
-package com.cgfay.video.widget;
+package com.yumore.video.widget;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,11 +9,12 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
+
 import com.cgfay.media.CainMediaMetadataRetriever;
 import com.cgfay.media.CainMetadata;
 import com.cgfay.video.R;
 import com.cgfay.video.bean.VideoFrameNode;
-import com.cgfay.video.bean.VideoSpeed;
+import com.yumore.video.bean.VideoSpeed;
 
 import java.util.ArrayList;
 
@@ -38,7 +39,7 @@ public class VideoCutViewBar extends View {
     private String mVideoPath;
     private boolean loadFinish;
     // 帧列表
-    private ArrayList<VideoFrameNode> mLoadingFrames;
+    private final ArrayList<VideoFrameNode> mLoadingFrames;
     private VideoFrameNode mCurrentNode;
     private VideoFrameNode mFirstNode;
     private VideoFrameNode mLastNode;
@@ -49,7 +50,7 @@ public class VideoCutViewBar extends View {
     private long mVideoDuration;    // 时长
     private float mVideoSar;        // 长宽比
     private float mViewFrameWidth;  // 帧宽度
-    private int mViewNumber = 1;    // 控件显示多少帧
+    private final int mViewNumber = 1;    // 控件显示多少帧
     private boolean loadFail;   // 加载失败
     // 裁剪参数
     private float mCropMax = CROP_TIME_MAX_15;  // 最大允许选取时间

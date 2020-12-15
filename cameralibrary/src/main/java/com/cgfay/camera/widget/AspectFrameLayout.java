@@ -1,4 +1,4 @@
-package com.cgfay.camera.widget;
+package com.yumore.camera.widget;
 
 import android.content.Context;
 import android.support.annotation.AttrRes;

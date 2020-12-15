@@ -1,4 +1,4 @@
-package com.cgfay.image.adapter;
+package com.yumore.image.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,10 +9,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.appcompat.widget.RecyclerView;
-import com.cgfay.filter.glfilter.resource.bean.ResourceData;
+
 import com.cgfay.imagelibrary.R;
 import com.cgfay.uitls.utils.BitmapUtils;
+import com.yumore.filter.glfilter.resource.bean.ResourceData;
 
 import java.util.List;
 
@@ -21,10 +23,10 @@ import java.util.List;
  */
 public class ImageFilterAdapter extends RecyclerView.Adapter<ImageFilterAdapter.ImageHolder> {
 
-    private Context mContext;
+    private final Context mContext;
     // 滤镜选中索引
     private int mSelected = 0;
-    private List<ResourceData> mFilterDataList;
+    private final List<ResourceData> mFilterDataList;
     private OnFilterChangeListener mFilterChangeListener;
 
     public ImageFilterAdapter(Context context, List<ResourceData> filterDataList) {

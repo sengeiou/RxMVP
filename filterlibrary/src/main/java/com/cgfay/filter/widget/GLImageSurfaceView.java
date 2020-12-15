@@ -9,22 +9,24 @@ import android.os.Looper;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.Toast;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.base.GLImageInputFilter;
-import com.cgfay.filter.glfilter.color.GLImageDynamicColorFilter;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
-import com.cgfay.filter.glfilter.resource.FilterHelper;
-import com.cgfay.filter.glfilter.resource.ResourceJsonCodec;
-import com.cgfay.filter.glfilter.resource.bean.ResourceData;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
 
-import javax.microedition.khronos.egl.EGLConfig;
-import javax.microedition.khronos.opengles.GL10;
+import com.cgfay.filter.glfilter.base.GLImageFilter;
+import com.cgfay.filter.glfilter.color.GLImageDynamicColorFilter;
+import com.yumore.filter.glfilter.base.GLImageInputFilter;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.resource.FilterHelper;
+import com.yumore.filter.glfilter.resource.ResourceJsonCodec;
+import com.yumore.filter.glfilter.resource.bean.ResourceData;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.utils.TextureRotationUtils;
+
 import java.io.File;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
+
+import javax.microedition.khronos.egl.EGLConfig;
+import javax.microedition.khronos.opengles.GL10;
 
 /**
  * 图片GL渲染视图
@@ -49,8 +51,8 @@ public class GLImageSurfaceView extends GLSurfaceView implements GLSurfaceView.R
     protected Handler mMainHandler;
     boolean takePicture;
     CaptureCallback mCaptureCallback;
-    private FloatBuffer mVertexBuffer;
-    private FloatBuffer mTextureBuffer;
+    private final FloatBuffer mVertexBuffer;
+    private final FloatBuffer mTextureBuffer;
     // 输入图片
     private Bitmap mBitmap;
     // 记录当前滤镜数据

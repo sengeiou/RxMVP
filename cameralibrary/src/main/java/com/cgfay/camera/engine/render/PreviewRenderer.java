@@ -4,12 +4,13 @@ import android.content.Context;
 import android.graphics.SurfaceTexture;
 import android.view.MotionEvent;
 import android.view.Surface;
-import com.cgfay.camera.engine.camera.CameraParam;
+
 import com.cgfay.camera.engine.listener.OnCameraCallback;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
-import com.cgfay.filter.glfilter.makeup.bean.DynamicMakeup;
-import com.cgfay.filter.glfilter.stickers.StaticStickerNormalFilter;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
+import com.yumore.camera.engine.camera.CameraParam;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.makeup.bean.DynamicMakeup;
+import com.yumore.filter.glfilter.stickers.StaticStickerNormalFilter;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
 
 
 /**
@@ -22,7 +23,7 @@ public final class PreviewRenderer {
     // 操作锁
     private final Object mSynOperation = new Object();
     // 相机渲染参数
-    private CameraParam mCameraParam;
+    private final CameraParam mCameraParam;
     // 渲染Handler
     private RenderHandler mRenderHandler;
     // 渲染线程
@@ -297,6 +298,6 @@ public final class PreviewRenderer {
     }
 
     private static class RenderHolder {
-        private static PreviewRenderer instance = new PreviewRenderer();
+        private static final PreviewRenderer instance = new PreviewRenderer();
     }
 }

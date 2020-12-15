@@ -7,9 +7,9 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cgfay.caincamera.R;
-import com.cgfay.caincamera.fragment.MusicMergeFragment;
-import com.cgfay.uitls.fragment.MusicSelectFragment;
+import com.yumore.caincamera.R;
+import com.yumore.caincamera.fragment.MusicMergeFragment;
+import com.yumore.uitls.fragment.MusicSelectFragment;
 
 /**
  * 视频音乐合成

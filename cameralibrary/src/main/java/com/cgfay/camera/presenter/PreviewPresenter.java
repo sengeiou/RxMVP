@@ -1,4 +1,4 @@
-package com.cgfay.camera.presenter;
+package com.yumore.camera.presenter;
 
 import androidx.core.app.Fragment;
 

@@ -1,4 +1,4 @@
-package com.cgfay.media.recorder;
+package com.yumore.media.recorder;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;
@@ -21,7 +21,7 @@ public class AudioRecorder {
     private static final int SAMPLE_RATE = 44100;
 
 
-    private ExecutorService mExecutor = Executors.newCachedThreadPool();
+    private final ExecutorService mExecutor = Executors.newCachedThreadPool();
 
     private AudioRecord mAudioRecord;
     private int mBufferSize;

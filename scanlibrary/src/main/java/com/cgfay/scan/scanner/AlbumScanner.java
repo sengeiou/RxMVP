@@ -1,8 +1,9 @@
-package com.cgfay.scan.scanner;
+package com.yumore.scan.scanner;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
+
 import androidx.core.app.FragmentActivity;
 import androidx.core.app.LoaderManager;
 import androidx.core.content.Loader;
@@ -15,8 +16,8 @@ import java.lang.ref.WeakReference;
 public class AlbumScanner implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final int LOADER_ID = 1;
-    private WeakReference<Context> mWeakContext;
-    private LoaderManager mLoaderManager;
+    private final WeakReference<Context> mWeakContext;
+    private final LoaderManager mLoaderManager;
     private int mCurrentSelection;
     private boolean mLoadFinished;
     private AlbumScanCallbacks mCallbacks;

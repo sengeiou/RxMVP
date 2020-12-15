@@ -2,9 +2,10 @@ package com.cgfay.filter.glfilter.multiframe;
 
 import android.content.Context;
 import android.opengl.GLES30;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.base.GLImageGaussianBlurFilter;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.base.GLImageGaussianBlurFilter;
 
 import java.nio.FloatBuffer;
 
@@ -22,7 +23,7 @@ public class GLImageFrameEdgeBlurFilter extends GLImageFilter {
     // 高斯模糊滤镜
     private GLImageGaussianBlurFilter mGaussianBlurFilter;
     // 高斯模糊图像缩放半径
-    private float mBlurScale = 0.5f;
+    private final float mBlurScale = 0.5f;
     private int mBlurTexture;
 
     public GLImageFrameEdgeBlurFilter(Context context) {

@@ -1,4 +1,4 @@
-package com.cgfay.video.widget;
+package com.yumore.video.widget;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -15,8 +15,9 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.cgfay.uitls.utils.DensityUtils;
-import com.cgfay.video.R;
+
+import com.yumore.uitls.utils.DensityUtils;
+import com.yumore.video.R;
 
 /**
  * 圆形进度控件

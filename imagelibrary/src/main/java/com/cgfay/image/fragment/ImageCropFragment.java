@@ -1,4 +1,4 @@
-package com.cgfay.image.fragment;
+package com.yumore.image.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,10 +9,16 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
 import androidx.core.app.Fragment;
-import com.cgfay.image.widget.CropCoverView;
+
 import com.cgfay.imagelibrary.R;
+import com.yumore.image.widget.CropCoverView;
 
 /**
  * 裁剪页面

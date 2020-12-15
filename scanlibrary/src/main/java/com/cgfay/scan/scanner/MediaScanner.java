@@ -5,10 +5,12 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
 import androidx.core.app.FragmentActivity;
 import androidx.core.app.LoaderManager;
 import androidx.core.content.Loader;
-import com.cgfay.scan.model.AlbumItem;
+
+import com.yumore.scan.model.AlbumItem;
 
 import java.lang.ref.WeakReference;
 
@@ -21,8 +23,8 @@ public class MediaScanner implements LoaderManager.LoaderCallbacks<Cursor> {
     private static final String ALBUM_ARGS = "album_args";
     private static final String CAPTURE_ENABLE_ARGS = "capture_enable_args";
 
-    private WeakReference<Context> mWeakContext;
-    private LoaderManager mLoaderManager;
+    private final WeakReference<Context> mWeakContext;
+    private final LoaderManager mLoaderManager;
     private MediaScanCallbacks mCallbacks;
 
 

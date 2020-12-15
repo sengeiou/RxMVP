@@ -1,7 +1,7 @@
 package com.cgfay.facedetect.engine;
 
-import com.cgfay.facedetect.listener.FaceTrackerCallback;
 import com.megvii.facepp.sdk.Facepp;
+import com.yumore.facedetect.listener.FaceTrackerCallback;
 
 /**
  * 人脸检测参数

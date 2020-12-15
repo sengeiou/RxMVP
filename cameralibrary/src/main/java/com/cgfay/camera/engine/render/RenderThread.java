@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.render;
+package com.yumore.camera.engine.render;
 
 import android.content.Context;
 import android.graphics.SurfaceTexture;
@@ -8,16 +8,17 @@ import android.os.HandlerThread;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.Surface;
-import com.cgfay.camera.engine.camera.CameraEngine;
-import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.engine.recorder.HardcodeEncoder;
-import com.cgfay.filter.gles.EglCore;
-import com.cgfay.filter.gles.WindowSurface;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
-import com.cgfay.filter.glfilter.makeup.bean.DynamicMakeup;
+
 import com.cgfay.filter.glfilter.stickers.StaticStickerNormalFilter;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+import com.yumore.camera.engine.camera.CameraEngine;
+import com.yumore.camera.engine.camera.CameraParam;
+import com.yumore.camera.engine.recorder.HardcodeEncoder;
+import com.yumore.filter.gles.EglCore;
+import com.yumore.filter.gles.WindowSurface;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.makeup.bean.DynamicMakeup;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.nio.ByteBuffer;
 
@@ -41,7 +42,7 @@ class RenderThread extends HandlerThread implements SurfaceTexture.OnFrameAvaila
     private final float[] mMatrix = new float[16];
     private boolean isPreviewing = false;       // 是否预览状态
     private boolean isRecording = false;        // 是否录制状态
-    private boolean isRecordingPause = false;   // 是否处于暂停录制状态
+    private final boolean isRecordingPause = false;   // 是否处于暂停录制状态
     // EGL共享上下文
     private EglCore mEglCore;
     // 预览用的EGLSurface
@@ -61,16 +62,16 @@ class RenderThread extends HandlerThread implements SurfaceTexture.OnFrameAvaila
     private RenderHandler mRenderHandler;
 
     // 计算帧率
-    private FrameRateMeter mFrameRateMeter;
+    private final FrameRateMeter mFrameRateMeter;
 
     // 上下文
-    private Context mContext;
+    private final Context mContext;
 
     // 预览参数
-    private CameraParam mCameraParam;
+    private final CameraParam mCameraParam;
 
     // 渲染管理器
-    private RenderManager mRenderManager;
+    private final RenderManager mRenderManager;
     private long time = 0;
 
     public RenderThread(Context context, String name) {

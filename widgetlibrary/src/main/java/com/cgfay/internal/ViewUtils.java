@@ -1,7 +1,8 @@
-package com.cgfay.internal;
+package com.yumore.internal;
 
 import android.graphics.PorterDuff;
 import android.view.View;
+
 import androidx.core.view.ViewCompat;
 
 public final class ViewUtils {

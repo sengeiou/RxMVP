@@ -1,4 +1,4 @@
-package com.cgfay.scan.activity;
+package com.yumore.scan.activity;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -7,18 +7,25 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.cgfay.scan.R;
+
 import com.cgfay.scan.adapter.AlbumScanAdapter;
-import com.cgfay.scan.adapter.MediaScanAdapter;
-import com.cgfay.scan.engine.MediaScanParam;
-import com.cgfay.scan.fragment.MediaScanFragment;
 import com.cgfay.scan.loader.impl.GlideMediaLoader;
-import com.cgfay.scan.model.AlbumItem;
 import com.cgfay.scan.model.MediaItem;
-import com.cgfay.scan.scanner.AlbumScanner;
 import com.cgfay.uitls.utils.FileUtils;
+import com.yumore.scan.R;
+import com.yumore.scan.adapter.MediaScanAdapter;
+import com.yumore.scan.engine.MediaScanParam;
+import com.yumore.scan.fragment.MediaScanFragment;
+import com.yumore.scan.model.AlbumItem;
+import com.yumore.scan.scanner.AlbumScanner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +56,7 @@ public class MediaScanActivity extends AppCompatActivity implements AlbumScanner
     /**
      * 相册列表选中监听器
      */
-    private AdapterView.OnItemClickListener mAlbumItemClickListener = new AdapterView.OnItemClickListener() {
+    private final AdapterView.OnItemClickListener mAlbumItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             if (mAlbumScanner != null) {

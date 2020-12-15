@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.stickers.bean;
+package com.yumore.filter.glfilter.stickers.bean;
 
 /**
  * 动态贴纸前景数据

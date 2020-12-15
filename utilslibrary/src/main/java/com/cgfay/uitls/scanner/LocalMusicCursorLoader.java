@@ -3,7 +3,8 @@ package com.cgfay.uitls.scanner;
 import android.content.Context;
 import android.net.Uri;
 import android.provider.MediaStore;
-import androidx.core.content.CursorLoader;
+
+import androidx.loader.content.CursorLoader;
 
 /**
  * 本地音乐加载器

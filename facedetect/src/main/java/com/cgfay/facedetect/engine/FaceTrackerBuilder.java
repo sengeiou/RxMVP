@@ -1,14 +1,14 @@
-package com.cgfay.facedetect.engine;
+package com.yumore.facedetect.engine;
 
-import com.cgfay.facedetect.listener.FaceTrackerCallback;
+import com.yumore.facedetect.listener.FaceTrackerCallback;
 
 /**
  * 人脸检测构建器
  */
 public final class FaceTrackerBuilder {
 
-    private FaceTracker mFaceTracker;
-    private FaceTrackParam mFaceTrackParam;
+    private final FaceTracker mFaceTracker;
+    private final FaceTrackParam mFaceTrackParam;
 
     public FaceTrackerBuilder(FaceTracker tracker, FaceTrackerCallback callback) {
         mFaceTracker = tracker;

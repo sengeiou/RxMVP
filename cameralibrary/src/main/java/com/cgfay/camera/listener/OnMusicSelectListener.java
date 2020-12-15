@@ -1,4 +1,4 @@
-package com.cgfay.camera.listener;
+package com.yumore.camera.listener;
 
 /**
  * 音乐选择监听器

@@ -1,9 +1,10 @@
-package com.cgfay.filter.glfilter.color;
+package com.yumore.filter.glfilter.color;
 
 import android.content.Context;
 import android.text.TextUtils;
+
 import com.cgfay.filter.glfilter.base.GLImageGroupFilter;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
 
 /**
  * 颜色滤镜

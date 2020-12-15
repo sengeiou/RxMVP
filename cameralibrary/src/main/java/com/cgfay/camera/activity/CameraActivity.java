@@ -10,14 +10,16 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.fragment.CameraPreviewFragment;
-import com.cgfay.cameralibrary.R;
+
 import com.cgfay.facedetect.engine.FaceTracker;
 import com.cgfay.uitls.fragment.MusicSelectFragment;
-import com.cgfay.uitls.utils.NotchUtils;
-import com.cgfay.uitls.utils.StatusBarUtils;
+import com.yumore.camera.engine.camera.CameraParam;
+import com.yumore.camera.fragment.CameraPreviewFragment;
+import com.yumore.cameralibrary.R;
+import com.yumore.uitls.utils.NotchUtils;
+import com.yumore.uitls.utils.StatusBarUtils;
 
 /**
  * 相机预览页面
@@ -29,7 +31,7 @@ public class CameraActivity extends AppCompatActivity {
     /**
      * Home按键监听服务
      */
-    private BroadcastReceiver mHomePressReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mHomePressReceiver = new BroadcastReceiver() {
         private final String SYSTEM_DIALOG_REASON_KEY = "reason";
         private final String SYSTEM_DIALOG_REASON_HOME_KEY = "homekey";
 

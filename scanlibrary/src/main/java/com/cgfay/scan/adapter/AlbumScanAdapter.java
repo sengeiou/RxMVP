@@ -1,4 +1,4 @@
-package com.cgfay.scan.adapter;
+package com.yumore.scan.adapter;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
-import com.cgfay.scan.R;
+
 import com.cgfay.scan.model.AlbumItem;
+import com.yumore.scan.R;
 
 /**
  * 相册扫描适配器

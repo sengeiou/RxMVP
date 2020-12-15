@@ -1,10 +1,11 @@
-package com.cgfay.scan.adapter;
+package com.yumore.scan.adapter;
 
 import androidx.core.app.Fragment;
 import androidx.core.app.FragmentManager;
 import androidx.core.app.FragmentPagerAdapter;
-import com.cgfay.scan.fragment.PreviewFragment;
+
 import com.cgfay.scan.model.MediaItem;
+import com.yumore.scan.fragment.PreviewFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public class PreviewPagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<MediaItem> mMediaItems = new ArrayList<>();
+    private final ArrayList<MediaItem> mMediaItems = new ArrayList<>();
 
     public PreviewPagerAdapter(FragmentManager fm) {
         super(fm);

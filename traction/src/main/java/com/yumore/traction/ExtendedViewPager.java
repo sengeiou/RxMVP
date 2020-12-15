@@ -1,36 +1,39 @@
 package com.yumore.traction;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
 import androidx.viewpager.widget.ViewPager;
 
 public class ExtendedViewPager extends ViewPager {
 
-    private boolean mPagingEnabled = true;
+    private boolean pagingEnabled;
 
     public ExtendedViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mPagingEnabled = true;
+        pagingEnabled = true;
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
-        if (!mPagingEnabled) {
+        if (!pagingEnabled) {
             return false;
         }
         return super.onInterceptTouchEvent(event);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (!mPagingEnabled) {
+        if (!pagingEnabled) {
             return false;
         }
         return super.onTouchEvent(event);
     }
 
     public void setPagingEnabled(boolean enabled) {
-        mPagingEnabled = enabled;
+        pagingEnabled = enabled;
     }
 }

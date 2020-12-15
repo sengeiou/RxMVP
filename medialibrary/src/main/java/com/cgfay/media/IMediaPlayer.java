@@ -1,4 +1,4 @@
-package com.cgfay.media;
+package com.yumore.media;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -18,7 +18,7 @@ public interface IMediaPlayer {
     /**
      * Unspecified media player error.
      *
-     * @see com.cgfay.media.IMediaPlayer.OnInfoListener
+     * @see com.yumore.media.IMediaPlayer.OnInfoListener
      */
     int MEDIA_ERROR_UNKNOWN = 1;
     /**
@@ -39,27 +39,27 @@ public interface IMediaPlayer {
     /**
      * Unspecified media player info.
      *
-     * @see com.cgfay.media.IMediaPlayer.OnInfoListener
+     * @see com.yumore.media.IMediaPlayer.OnInfoListener
      */
     int MEDIA_INFO_UNKNOWN = 1;
     /**
      * The video is too complex for the decoder: it can't decode frames fast
      * enough. Possibly only the audio plays fine at this stage.
      *
-     * @see com.cgfay.media.IMediaPlayer.OnInfoListener
+     * @see com.yumore.media.IMediaPlayer.OnInfoListener
      */
     int MEDIA_INFO_VIDEO_TRACK_LAGGING = 700;
     /**
      * MediaPlayer is temporarily pausing playback internally in order to
      * buffer more data.
      *
-     * @see com.cgfay.media.IMediaPlayer.OnInfoListener
+     * @see com.yumore.media.IMediaPlayer.OnInfoListener
      */
     int MEDIA_INFO_BUFFERING_START = 701;
     /**
      * MediaPlayer is resuming playback after filling buffers.
      *
-     * @see com.cgfay.media.IMediaPlayer.OnInfoListener
+     * @see com.yumore.media.IMediaPlayer.OnInfoListener
      */
     int MEDIA_INFO_BUFFERING_END = 702;
     /**

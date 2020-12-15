@@ -1,32 +1,33 @@
-package com.cgfay.camera.engine.render;
+package com.yumore.camera.engine.render;
 
 import android.content.Context;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.MotionEvent;
+
 import com.badlogic.gdx.math.Vector3;
 import com.cgfay.camera.engine.camera.CameraParam;
-import com.cgfay.camera.engine.model.ScaleType;
-import com.cgfay.filter.glfilter.base.GLImageDepthBlurFilter;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
 import com.cgfay.filter.glfilter.base.GLImageOESInputFilter;
-import com.cgfay.filter.glfilter.base.GLImageVignetteFilter;
-import com.cgfay.filter.glfilter.beauty.GLImageBeautyFilter;
 import com.cgfay.filter.glfilter.beauty.bean.IBeautify;
 import com.cgfay.filter.glfilter.color.GLImageDynamicColorFilter;
-import com.cgfay.filter.glfilter.color.bean.DynamicColor;
 import com.cgfay.filter.glfilter.face.GLImageFacePointsFilter;
-import com.cgfay.filter.glfilter.face.GLImageFaceReshapeFilter;
 import com.cgfay.filter.glfilter.makeup.GLImageMakeupFilter;
 import com.cgfay.filter.glfilter.makeup.bean.DynamicMakeup;
-import com.cgfay.filter.glfilter.multiframe.GLImageFrameEdgeBlurFilter;
 import com.cgfay.filter.glfilter.stickers.GLImageDynamicStickerFilter;
 import com.cgfay.filter.glfilter.stickers.GestureHelp;
 import com.cgfay.filter.glfilter.stickers.StaticStickerNormalFilter;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
-import com.cgfay.landmark.LandmarkEngine;
+import com.yumore.camera.engine.model.ScaleType;
+import com.yumore.filter.glfilter.base.GLImageDepthBlurFilter;
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.base.GLImageVignetteFilter;
+import com.yumore.filter.glfilter.beauty.GLImageBeautyFilter;
+import com.yumore.filter.glfilter.color.bean.DynamicColor;
+import com.yumore.filter.glfilter.face.GLImageFaceReshapeFilter;
+import com.yumore.filter.glfilter.multiframe.GLImageFrameEdgeBlurFilter;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
+import com.yumore.filter.glfilter.utils.TextureRotationUtils;
+import com.yumore.landmark.LandmarkEngine;
 
 import java.nio.FloatBuffer;
 
@@ -37,9 +38,9 @@ public final class RenderManager {
 
     public static final Vector3 tempVec = new Vector3();
     // 滤镜列表
-    private SparseArray<GLImageFilter> mFilterArrays = new SparseArray<GLImageFilter>();
+    private final SparseArray<GLImageFilter> mFilterArrays = new SparseArray<GLImageFilter>();
     // 坐标缓冲
-    private ScaleType mScaleType = ScaleType.CENTER_CROP;
+    private final ScaleType mScaleType = ScaleType.CENTER_CROP;
     private FloatBuffer mVertexBuffer;
     private FloatBuffer mTextureBuffer;
     // 用于显示裁剪的纹理顶点缓冲
@@ -50,7 +51,7 @@ public final class RenderManager {
     // 输入图像大小
     private int mTextureWidth, mTextureHeight;
     // 相机参数
-    private CameraParam mCameraParam;
+    private final CameraParam mCameraParam;
     // 上下文
     private Context mContext;
 

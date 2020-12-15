@@ -35,12 +35,12 @@
             android:layout_marginTop="@dimen/dp10"
             android:layout_marginBottom="@dimen/dp20">
 
-        <com.cgfay.video.widget.WaveCutView
-                android:id="@+id/wave_cut_view"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginLeft="39dp"
-                android:layout_marginRight="39dp" />
+        <com.yumore.video.widget.WaveCutView
+            android:id="@+id/wave_cut_view"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginRight="39dp" />
 
         <TextView
                 android:id="@+id/tv_audio_current"

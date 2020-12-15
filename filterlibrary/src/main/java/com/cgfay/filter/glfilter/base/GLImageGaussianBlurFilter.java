@@ -1,7 +1,8 @@
 package com.cgfay.filter.glfilter.base;
 
 import android.content.Context;
-import com.cgfay.filter.glfilter.utils.OpenGLUtils;
+
+import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 import java.nio.FloatBuffer;
 

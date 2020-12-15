@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.effect;
+package com.yumore.filter.glfilter.effect;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -6,12 +6,13 @@ import android.opengl.GLES30;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
-import com.cgfay.filter.glfilter.base.GLImageFilter;
-import com.cgfay.filter.glfilter.effect.bean.DynamicEffectData;
-import com.cgfay.filter.glfilter.resource.ResourceCodec;
-import com.cgfay.filter.glfilter.resource.ResourceDataCodec;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
-import com.cgfay.uitls.utils.BitmapUtils;
+import com.yumore.filter.glfilter.base.GLImageFilter;
+import com.yumore.filter.glfilter.effect.bean.DynamicEffectData;
+import com.yumore.filter.glfilter.resource.ResourceCodec;
+import com.yumore.filter.glfilter.resource.ResourceDataCodec;
+import com.yumore.uitls.utils.BitmapUtils;
 
 import java.io.IOException;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.color;
+package com.yumore.filter.glfilter.color;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -6,11 +6,12 @@ import android.opengl.GLES30;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Pair;
+
 import com.cgfay.filter.glfilter.color.bean.DynamicColorData;
 import com.cgfay.filter.glfilter.resource.ResourceCodec;
-import com.cgfay.filter.glfilter.resource.ResourceDataCodec;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 import com.cgfay.uitls.utils.BitmapUtils;
+import com.yumore.filter.glfilter.resource.ResourceDataCodec;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -25,13 +26,13 @@ public class DynamicColorLoader {
     // 动态滤镜
     private final WeakReference<DynamicColorBaseFilter> mWeakFilter;
     // 滤镜所在的文件夹
-    private String mFolderPath;
+    private final String mFolderPath;
     // 动态滤镜数据
-    private DynamicColorData mColorData;
+    private final DynamicColorData mColorData;
     // 资源加载器
     private ResourceDataCodec mResourceCodec;
     // 统一变量列表
-    private HashMap<String, Integer> mUniformHandleList = new HashMap<>();
+    private final HashMap<String, Integer> mUniformHandleList = new HashMap<>();
     // 纹理列表
     private int[] mTextureList;
 

@@ -1,8 +1,8 @@
-package com.yumore.sample.surface;
+package com.yumore.master.surface;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.yumore.sample.agency.UserAgency;
+import com.yumore.master.provider.SampleProvider;
 
 /**
  * @author Nathaniel
@@ -11,7 +11,7 @@ import com.yumore.sample.agency.UserAgency;
 public class UserAgencyDemo {
 
     @Autowired
-    UserAgency userAgency;
+    SampleProvider userAgency;
 
     private void useAgencyWithAnnotation() {
         // 使用注解
@@ -19,7 +19,7 @@ public class UserAgencyDemo {
     }
 
     private void useAgencyWithoutAnnotation() {
-        UserAgency userAgency = ARouter.getInstance().navigation(UserAgency.class);
+        SampleProvider userAgency = ARouter.getInstance().navigation(SampleProvider.class);
         userAgency.getUsername();
     }
 }

@@ -1,4 +1,4 @@
-package com.cgfay.scan.scanner;
+package com.yumore.scan.scanner;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -6,9 +6,11 @@ import android.database.MatrixCursor;
 import android.database.MergeCursor;
 import android.net.Uri;
 import android.provider.MediaStore;
+
 import androidx.core.content.CursorLoader;
+
 import com.cgfay.scan.engine.MediaScanParam;
-import com.cgfay.scan.model.AlbumItem;
+import com.yumore.scan.model.AlbumItem;
 
 /**
  * 相册加载器

@@ -1,4 +1,4 @@
-package com.cgfay.facedetect.utils;
+package com.yumore.facedetect.utils;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -8,8 +8,8 @@ import android.hardware.SensorManager;
 
 public class SensorEventUtil implements SensorEventListener {
     public int orientation = 0;
-    private SensorManager mSensorManager;
-    private Sensor mSensor;
+    private final SensorManager mSensorManager;
+    private final Sensor mSensor;
 
     public SensorEventUtil(Context context) {
         mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);

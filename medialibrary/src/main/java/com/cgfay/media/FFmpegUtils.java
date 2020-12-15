@@ -1,4 +1,4 @@
-package com.cgfay.media;
+package com.yumore.media;
 
 /**
  * @author CainHuang

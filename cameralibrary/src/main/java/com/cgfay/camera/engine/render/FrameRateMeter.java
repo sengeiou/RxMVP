@@ -1,4 +1,4 @@
-package com.cgfay.camera.engine.render;
+package com.yumore.camera.engine.render;
 
 /**
  * FPS计算类

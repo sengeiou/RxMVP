@@ -3,13 +3,14 @@ package com.cgfay.filter.glfilter.stickers;
 import android.content.Context;
 import android.opengl.GLES30;
 import android.opengl.Matrix;
-import com.cgfay.filter.glfilter.stickers.bean.DynamicSticker;
+
 import com.cgfay.filter.glfilter.stickers.bean.DynamicStickerNormalData;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 import com.cgfay.filter.glfilter.utils.TextureRotationUtils;
 import com.cgfay.landmark.FacePointsUtils;
 import com.cgfay.landmark.LandmarkEngine;
 import com.cgfay.landmark.OneFace;
+import com.yumore.filter.glfilter.stickers.bean.DynamicSticker;
 
 import java.nio.FloatBuffer;
 
@@ -26,10 +27,10 @@ public class DynamicStickerNormalFilter extends DynamicStickerBaseFilter {
     private int mMVPMatrixHandle;
 
     // 贴纸变换矩阵
-    private float[] mProjectionMatrix = new float[16];
-    private float[] mViewMatrix = new float[16];
-    private float[] mModelMatrix = new float[16];
-    private float[] mMVPMatrix = new float[16];
+    private final float[] mProjectionMatrix = new float[16];
+    private final float[] mViewMatrix = new float[16];
+    private final float[] mModelMatrix = new float[16];
+    private final float[] mMVPMatrix = new float[16];
 
     // 长宽比
     private float mRatio;
@@ -39,7 +40,7 @@ public class DynamicStickerNormalFilter extends DynamicStickerBaseFilter {
     private FloatBuffer mTextureBuffer;
 
     // 贴纸顶点
-    private float[] mStickerVertices = new float[8];
+    private final float[] mStickerVertices = new float[8];
 
     public DynamicStickerNormalFilter(Context context, DynamicSticker sticker) {
         super(context, sticker, OpenGLUtils.getShaderFromAssets(context, "shader/sticker/vertex_sticker_normal.glsl"),

@@ -1,4 +1,4 @@
-package com.cgfay.filter.glfilter.resource;
+package com.yumore.filter.glfilter.resource;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,7 +25,7 @@ public class ResourceDataCodec extends ResourceCodec {
             return null;
         }
         return BitmapFactory.decodeByteArray(mDataBuffer.array(),
-                mDataBuffer.arrayOffset() + (Integer) pair.first, (Integer) pair.second);
+                mDataBuffer.arrayOffset() + pair.first, (Integer) pair.second);
     }
 
     /**
@@ -48,7 +48,7 @@ public class ResourceDataCodec extends ResourceCodec {
         if (pair == null) {
             return null;
         }
-        return new Pair<>(((Integer) pair.first) + mDataBuffer.arrayOffset(),
+        return new Pair<>(pair.first + mDataBuffer.arrayOffset(),
                 (Integer) pair.second);
     }
 }
