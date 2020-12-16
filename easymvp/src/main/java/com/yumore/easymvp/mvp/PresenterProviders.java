@@ -10,24 +10,23 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 
 /**
- * create by yumore
- * time:2018/7/26
+ * @author nathaniel
  */
 public class PresenterProviders {
 
-    private final PresenterStore mPresenterStore = new PresenterStore<>();
-    private Activity mActivity;
-    private Fragment mFragment;
-    private Class<?> mClass;
+    private final PresenterStore<BasePresenter<BaseMvpView>> presenterStore = new PresenterStore<>();
+    private Activity activity;
+    private Fragment fragment;
+    private Class<?> clazz;
 
     private PresenterProviders(Activity activity, Fragment fragment) {
         if (activity != null) {
-            this.mActivity = activity;
-            mClass = this.mActivity.getClass();
+            this.activity = activity;
+            clazz = this.activity.getClass();
         }
         if (fragment != null) {
-            this.mFragment = fragment;
-            mClass = this.mFragment.getClass();
+            this.fragment = fragment;
+            clazz = this.fragment.getClass();
         }
         resolveCreatePresenter();
         resolvePresenterVariable();
@@ -68,18 +67,17 @@ public class PresenterProviders {
         return resultContent;
     }
 
-    private <P extends BasePresenter> PresenterProviders resolveCreatePresenter() {
-        CreatePresenter createPresenter = mClass.getAnnotation(CreatePresenter.class);
+    @SuppressWarnings("unchecked")
+    private <P extends BasePresenter<BaseMvpView>> PresenterProviders resolveCreatePresenter() {
+        CreatePresenter createPresenter = clazz.getAnnotation(CreatePresenter.class);
         if (createPresenter != null) {
 
             Class<P>[] classes = (Class<P>[]) createPresenter.presenter();
             for (Class<P> clazz : classes) {
                 String canonicalName = clazz.getCanonicalName();
                 try {
-                    mPresenterStore.put(canonicalName, clazz.newInstance());
-                } catch (InstantiationException e) {
-                    e.printStackTrace();
-                } catch (IllegalAccessException e) {
+                    presenterStore.put(canonicalName, clazz.newInstance());
+                } catch (InstantiationException | IllegalAccessException e) {
                     e.printStackTrace();
                 }
             }
@@ -87,20 +85,21 @@ public class PresenterProviders {
         return this;
     }
 
-    private <P extends BasePresenter> PresenterProviders resolvePresenterVariable() {
-        for (Field field : mClass.getDeclaredFields()) {
+    @SuppressWarnings("unchecked")
+    private <P extends BasePresenter<BaseMvpView>> PresenterProviders resolvePresenterVariable() {
+        for (Field field : clazz.getDeclaredFields()) {
             //获取字段上的注解
-            Annotation[] anns = field.getDeclaredAnnotations();
-            if (anns.length < 1) {
+            Annotation[] annotations = field.getDeclaredAnnotations();
+            if (annotations.length < 1) {
                 continue;
             }
-            if (anns[0] instanceof PresenterVariable) {
+            if (annotations[0] instanceof PresenterVariable) {
                 String canonicalName = field.getType().getName();
-                P presenterInstance = (P) mPresenterStore.get(canonicalName);
+                P presenterInstance = (P) presenterStore.get(canonicalName);
                 if (presenterInstance != null) {
                     try {
                         field.setAccessible(true);
-                        field.set(mFragment != null ? mFragment : mActivity, presenterInstance);
+                        field.set(fragment != null ? fragment : activity, presenterInstance);
                     } catch (IllegalAccessException e) {
                         e.printStackTrace();
                     }
@@ -111,8 +110,9 @@ public class PresenterProviders {
     }
 
 
-    public <P extends BasePresenter> P getPresenter(int index) {
-        CreatePresenter createPresenter = mClass.getAnnotation(CreatePresenter.class);
+    @SuppressWarnings("unchecked")
+    public <P extends BasePresenter<BaseMvpView>> P getPresenter(int index) {
+        CreatePresenter createPresenter = clazz.getAnnotation(CreatePresenter.class);
         if (createPresenter == null) {
             return null;
         }
@@ -121,7 +121,7 @@ public class PresenterProviders {
         }
         if (index >= 0 && index < createPresenter.presenter().length) {
             String key = createPresenter.presenter()[index].getCanonicalName();
-            BasePresenter presenter = mPresenterStore.get(key);
+            BasePresenter<BaseMvpView> presenter = presenterStore.get(key);
             if (presenter != null) {
                 return (P) presenter;
             } else {
@@ -132,7 +132,7 @@ public class PresenterProviders {
         }
     }
 
-    public PresenterStore getPresenterStore() {
-        return mPresenterStore;
+    public PresenterStore<BasePresenter<BaseMvpView>> getPresenterStore() {
+        return presenterStore;
     }
 }

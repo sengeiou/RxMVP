@@ -10,6 +10,9 @@ import com.yumore.easymvp.mvp.PresenterDispatch;
 import com.yumore.easymvp.mvp.PresenterProviders;
 
 
+/**
+ * @author nathaniel
+ */
 public abstract class BaseMvpActivity<P extends BasePresenter> extends AppCompatActivity implements BaseMvpView {
 
     private PresenterProviders mPresenterProviders;

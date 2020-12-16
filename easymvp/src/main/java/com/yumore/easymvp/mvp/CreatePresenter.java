@@ -6,8 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * create by yumore
- * time:2018/7/26
+ * @author nathaniel
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

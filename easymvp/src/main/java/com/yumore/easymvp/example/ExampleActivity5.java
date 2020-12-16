@@ -5,6 +5,8 @@ import com.yumore.easymvp.base.BaseMvpActivity;
 
 /**
  * 例子4：Fragment
+ *
+ * @author nathaniel
  */
 public class ExampleActivity5 extends BaseMvpActivity {
 

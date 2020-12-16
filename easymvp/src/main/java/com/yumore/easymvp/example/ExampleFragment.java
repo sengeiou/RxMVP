@@ -12,8 +12,7 @@ import com.yumore.easymvp.mvp.CreatePresenter;
 import com.yumore.easymvp.mvp.PresenterVariable;
 
 /**
- * create by yumore
- * time:2018/7/30
+ * @author nathaniel
  */
 @CreatePresenter(presenter = {LoginPresenter.class, RegisterPresenter.class})
 public class ExampleFragment extends BaseMvpFragment implements LoginView, RegisterView {

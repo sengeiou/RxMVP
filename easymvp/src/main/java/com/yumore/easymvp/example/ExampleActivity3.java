@@ -10,6 +10,8 @@ import com.yumore.easymvp.mvp.CreatePresenter;
 
 /**
  * 例子3：一个Presenter和使用 getPresenter 方法获取实例
+ *
+ * @author nathaniel
  */
 @CreatePresenter(presenter = LoginPresenter.class)
 public class ExampleActivity3 extends BaseMvpActivity<LoginPresenter> implements LoginView {

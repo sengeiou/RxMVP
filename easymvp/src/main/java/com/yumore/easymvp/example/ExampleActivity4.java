@@ -5,6 +5,8 @@ import com.yumore.easymvp.base.BaseMvpActivity;
 
 /**
  * 例子4：不使用 mvp 的情况
+ *
+ * @author nathaniel
  */
 public class ExampleActivity4 extends BaseMvpActivity {
     @Override

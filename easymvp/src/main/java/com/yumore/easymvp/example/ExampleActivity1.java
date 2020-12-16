@@ -14,8 +14,8 @@ import com.yumore.easymvp.mvp.PresenterVariable;
 
 /**
  * 例子1：多个Presenter和使用@PresenterVariable注解
- * create by yumore
- * time:2018/7/26
+ *
+ * @author nathaniel
  */
 @CreatePresenter(presenter = {LoginPresenter.class, RegisterPresenter.class})
 public class ExampleActivity1 extends BaseMvpActivity implements LoginView, RegisterView {

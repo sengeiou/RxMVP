@@ -6,29 +6,28 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 /**
- * create by yumore
- * time:2018/7/26
+ * @author nathaniel
  */
 public class BasePresenter<V> {
 
-    protected Context mContext;
-    protected V mView;
+    protected Context context;
+    protected V baseView;
 
     protected void onCleared() {
 
     }
 
-    public void attachView(Context context, V view) {
-        this.mContext = context;
-        this.mView = view;
+    public void attachView(Context context, V baseView) {
+        this.context = context;
+        this.baseView = baseView;
     }
 
     public void detachView() {
-        this.mView = null;
+        this.baseView = null;
     }
 
     public boolean isAttachView() {
-        return this.mView != null;
+        return this.baseView != null;
     }
 
     public void onCreatePresenter(@Nullable Bundle savedState) {
@@ -36,7 +35,7 @@ public class BasePresenter<V> {
     }
 
     public void onDestroyPresenter() {
-        this.mContext = null;
+        this.context = null;
         detachView();
     }
 

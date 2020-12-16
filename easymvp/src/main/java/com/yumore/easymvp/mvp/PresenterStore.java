@@ -3,37 +3,36 @@ package com.yumore.easymvp.mvp;
 import java.util.HashMap;
 
 /**
- * create by yumore
- * time:2018/7/26
+ * @author nathaniel
  */
-public class PresenterStore<P extends BasePresenter> {
+public class PresenterStore<P extends BasePresenter<BaseMvpView>> {
 
     private static final String DEFAULT_KEY = "PresenterStore.DefaultKey";
-    private final HashMap<String, P> mMap = new HashMap<>();
+    private final HashMap<String, P> hashMap = new HashMap<>();
 
     public final void put(String key, P presenter) {
-        P oldPresenter = mMap.put(DEFAULT_KEY + ":" + key, presenter);
+        P oldPresenter = hashMap.put(DEFAULT_KEY + ":" + key, presenter);
         if (oldPresenter != null) {
             oldPresenter.onCleared();
         }
     }
 
     public final P get(String key) {
-        return mMap.get(DEFAULT_KEY + ":" + key);
+        return hashMap.get(DEFAULT_KEY + ":" + key);
     }
 
     public final void clear() {
-        for (P presenter : mMap.values()) {
+        for (P presenter : hashMap.values()) {
             presenter.onCleared();
         }
-        mMap.clear();
+        hashMap.clear();
     }
 
     public int getSize() {
-        return mMap.size();
+        return hashMap.size();
     }
 
     public HashMap<String, P> getMap() {
-        return mMap;
+        return hashMap;
     }
 }
