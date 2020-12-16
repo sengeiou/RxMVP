@@ -5,9 +5,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.adapter.AdapterStackTest;
@@ -19,6 +19,9 @@ import com.yumore.utility.widget.cardstack.tools.RxAdapterUpDownAnimator;
 import com.yumore.utility.widget.cardstack.tools.RxAdapterUpDownStackAnimator;
 
 import java.util.Arrays;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author yumore

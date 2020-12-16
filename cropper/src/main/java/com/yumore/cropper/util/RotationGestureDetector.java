@@ -1,6 +1,7 @@
 package com.yumore.cropper.util;
 
 import android.view.MotionEvent;
+
 import androidx.annotation.NonNull;
 
 public class RotationGestureDetector {
@@ -13,7 +14,7 @@ public class RotationGestureDetector {
     private float mAngle;
     private boolean mIsFirstTouch;
 
-    private OnRotationGestureListener mListener;
+    private final OnRotationGestureListener mListener;
 
     public RotationGestureDetector(OnRotationGestureListener listener) {
         mListener = listener;

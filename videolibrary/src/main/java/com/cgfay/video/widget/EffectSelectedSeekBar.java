@@ -2,13 +2,18 @@ package com.cgfay.video.widget;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import com.cgfay.uitls.utils.DensityUtils;
 import com.cgfay.video.bean.EffectDuration;
 
@@ -21,16 +26,16 @@ public class EffectSelectedSeekBar extends View {
 
     private static final int DELAY = 150;
 
-    private Context mContext;
+    private final Context mContext;
 
     // 当前指示器宽高和颜色
     private float mIndicatorWidth;
     private float mIndicatorHeight;
-    private int mIndicatorColor;
+    private final int mIndicatorColor;
 
     // 进度条颜色
-    private int mProgressColor;
-    private int mProgressHeight;
+    private final int mProgressColor;
+    private final int mProgressHeight;
 
     private float mMax = 0;
     private float mProgress = 50f;
@@ -39,7 +44,7 @@ public class EffectSelectedSeekBar extends View {
     private float mViewWidth;
     private int mPositionX;
 
-    private int mDstThumbWidth = 100;
+    private final int mDstThumbWidth = 100;
 
     private int mDstMargin;
     private float mDstViewWidth;
@@ -47,9 +52,9 @@ public class EffectSelectedSeekBar extends View {
     private float mDstProgress = 0f;
 
 
-    private float mAppend;
-    private float mTouchWidth;
-    private float mTouchHeight;
+    private final float mAppend;
+    private final float mTouchWidth;
+    private final float mTouchHeight;
 
 
     private EffectDuration mDuration;

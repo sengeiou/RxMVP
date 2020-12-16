@@ -1,6 +1,7 @@
 package com.cgfay.filter.glfilter.makeup;
 
 import android.opengl.GLES30;
+
 import com.cgfay.filter.glfilter.makeup.bean.MakeupBaseData;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 import com.cgfay.landmark.LandmarkEngine;

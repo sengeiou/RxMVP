@@ -48,21 +48,6 @@ public class MusicMergeFragment extends Fragment implements View.OnClickListener
     private SeekBar mMusicProgress;
     private float mVideoVolume = 0.5f;
     private float mMusicVolume = 0.5f;
-
-    // 执行进度提示
-    private LinearLayout mLayoutProgress;
-    // 圆形进度条
-    private CircleProgressView mCvCropProgress;
-    private TextView mTvCropProgress;
-
-    private AudioManager mAudioManager;
-    private CainCommandEditor mCommandEditor;
-    private CainMediaEditor mMediaEditor;
-    /**
-     * 命令行混合，这里直接用mp3 和 视频合成会崩溃，会提示找不到aac编码器，需要先将音频文件转码成aac文件
-     * 这里是混合处理的代码
-     */
-    private long startTime;
     private final SeekBar.OnSeekBarChangeListener mSeekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -86,6 +71,19 @@ public class MusicMergeFragment extends Fragment implements View.OnClickListener
 
         }
     };
+    // 执行进度提示
+    private LinearLayout mLayoutProgress;
+    // 圆形进度条
+    private CircleProgressView mCvCropProgress;
+    private TextView mTvCropProgress;
+    private AudioManager mAudioManager;
+    private CainCommandEditor mCommandEditor;
+    private CainMediaEditor mMediaEditor;
+    /**
+     * 命令行混合，这里直接用mp3 和 视频合成会崩溃，会提示找不到aac编码器，需要先将音频文件转码成aac文件
+     * 这里是混合处理的代码
+     */
+    private long startTime;
 
     public static MusicMergeFragment newInstance() {
         return new MusicMergeFragment();

@@ -1,11 +1,13 @@
 package com.yumore.picture;
 
 import android.content.Intent;
+
 import androidx.annotation.FloatRange;
 import androidx.annotation.IntRange;
 import androidx.annotation.StyleRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
 import com.yumore.picture.config.PictureSelectionConfig;
 import com.yumore.picture.entity.LocalMedia;
 import com.yumore.picture.tools.DoubleUtils;
@@ -23,8 +25,8 @@ import java.util.List;
  */
 
 public class PictureSelectionModel {
-    private PictureSelectionConfig selectionConfig;
-    private PictureSelector selector;
+    private final PictureSelectionConfig selectionConfig;
+    private final PictureSelector selector;
 
     public PictureSelectionModel(PictureSelector selector, int mimeType) {
         this.selector = selector;

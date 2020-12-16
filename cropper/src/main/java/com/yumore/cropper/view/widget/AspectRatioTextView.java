@@ -9,10 +9,12 @@ import android.graphics.Rect;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
+
 import com.yumore.cropper.R;
 import com.yumore.cropper.model.AspectRatio;
 import com.yumore.cropper.view.CropImageView;

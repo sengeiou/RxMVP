@@ -19,12 +19,12 @@ import java.util.List;
  * @date 18-6-29-下午1:43
  */
 public class FragmentAdapter extends FragmentStatePagerAdapter {
+    private final FragmentManager fragmentManager;
     private List<Fragment> fragmentList;
     /**
      * 不用String的原因是CharSequence的子类更多
      */
     private List<String> stringList;
-    private final FragmentManager fragmentManager;
 
     public FragmentAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);

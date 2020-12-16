@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
     <root-path
-            name="root"
-            path="."/>
+        name="root"
+        path="." />
 
     <external-path
-            name="master"
-            path="."/>
+        name="master"
+        path="." />
 
     <external-path
-            name="backstage"
-            path="backstage/"/>
+        name="backstage"
+        path="backstage/" />
 
     <external-path
-            name="xinge"
-            path="ChinaXinge/"/>
+        name="xinge"
+        path="ChinaXinge/" />
 
     <external-path
-            name="stage"
-            path="com.zxw.backstage/"/>
+        name="stage"
+        path="com.zxw.backstage/" />
 
     <external-path
-            name="image"
-            path="backstage/image"/>
+        name="image"
+        path="backstage/image" />
 
     <external-path
-            name="audio"
-            path="backstage/audio/"/>
+        name="audio"
+        path="backstage/audio/" />
 
     <external-path
-            name="video"
-            path="backstage/video/"/>
+        name="video"
+        path="backstage/video/" />
 
     <external-path
-            name="temp"
-            path="backstage/temp/"/>
+        name="temp"
+        path="backstage/temp/" />
 
     <external-path
-            name="stage-image"
-            path="com.zxw.backstage/image/"/>
+        name="stage-image"
+        path="com.zxw.backstage/image/" />
 
     <external-path
-            name="cache"
-            path="backstage/cache/"/>
+        name="cache"
+        path="backstage/cache/" />
 </paths>

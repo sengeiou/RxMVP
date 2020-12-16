@@ -2,7 +2,15 @@ package com.yumore.utility.utility;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 /**
  * @author yumore
@@ -11,8 +19,8 @@ import java.util.concurrent.*;
  */
 public class RxThreadPoolTool {
 
-    private ExecutorService exec;
-    private ScheduledExecutorService scheduleExec;
+    private final ExecutorService exec;
+    private final ScheduledExecutorService scheduleExec;
 
     /**
      * ThreadPoolUtils构造函数

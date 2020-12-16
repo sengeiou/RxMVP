@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.yumore.gallery.R;
 import com.yumore.gallery.adapter.ImagePageAdapter;
 import com.yumore.gallery.entity.ImageItem;

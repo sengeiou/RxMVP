@@ -14,7 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.animation.LinearInterpolator;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.utility.R;
 import com.yumore.utility.widget.likeview.tools.RxPorterShapeImageView;
 import com.yumore.utility.widget.likeview.tools.RxShineView;

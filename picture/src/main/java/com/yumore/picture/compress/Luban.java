@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.yumore.cropper.util.BitmapUtils;
 import com.yumore.picture.config.PictureMimeType;
 import com.yumore.picture.entity.LocalMedia;
@@ -35,15 +36,15 @@ public class Luban implements Handler.Callback {
 
     private String mTargetDir;
     private boolean focusAlpha;
-    private int mLeastCompressSize;
-    private OnRenameListener mRenameListener;
-    private OnCompressListener mCompressListener;
-    private CompressionPredicate mCompressionPredicate;
-    private List<InputStreamProvider> mStreamProviders;
-    private List<String> mPaths;
-    private List<LocalMedia> mediaList;
+    private final int mLeastCompressSize;
+    private final OnRenameListener mRenameListener;
+    private final OnCompressListener mCompressListener;
+    private final CompressionPredicate mCompressionPredicate;
+    private final List<InputStreamProvider> mStreamProviders;
+    private final List<String> mPaths;
+    private final List<LocalMedia> mediaList;
     private int index = -1;
-    private Handler mHandler;
+    private final Handler mHandler;
 
     private Luban(Builder builder) {
         this.mPaths = builder.mPaths;
@@ -241,15 +242,15 @@ public class Luban implements Handler.Callback {
     }
 
     public static class Builder {
-        private Context context;
+        private final Context context;
         private String mTargetDir;
         private boolean focusAlpha;
         private int mLeastCompressSize = 100;
         private OnRenameListener mRenameListener;
         private OnCompressListener mCompressListener;
         private CompressionPredicate mCompressionPredicate;
-        private List<InputStreamProvider> mStreamProviders;
-        private List<String> mPaths;
+        private final List<InputStreamProvider> mStreamProviders;
+        private final List<String> mPaths;
         private List<LocalMedia> mediaList;
 
         Builder(Context context) {

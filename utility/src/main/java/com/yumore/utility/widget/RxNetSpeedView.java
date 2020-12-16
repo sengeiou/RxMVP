@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.yumore.utility.R;
 
 import java.text.DecimalFormat;
@@ -37,7 +38,7 @@ public class RxNetSpeedView extends FrameLayout {
     private long mobileSendSum = 0;
     private long wlanRecvSum = 0;
     private long wlanSendSum = 0;
-    private long exitTime = 0;
+    private final long exitTime = 0;
 
     private int mTextColor;
 
@@ -45,11 +46,11 @@ public class RxNetSpeedView extends FrameLayout {
 
     private boolean isMulti = false;
 
-    private DecimalFormat showFloatFormat = new DecimalFormat("0.00");
+    private final DecimalFormat showFloatFormat = new DecimalFormat("0.00");
 
     private long timeInterval = 500;
-    private Handler handler = new Handler();
-    private Runnable task = new Runnable() {
+    private final Handler handler = new Handler();
+    private final Runnable task = new Runnable() {
         @Override
         public void run() {
             //设置延迟时间，此处是5秒

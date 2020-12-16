@@ -13,12 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class AndroidBug5497Workaround {
     private final View mChildOfContent;
-    private int usableHeightPrevious;
     private final FrameLayout.LayoutParams frameLayoutParams;
-    private int contentHeight;
-    private boolean isfirst = true;
     private final AppCompatActivity activity;
     private final int statusBarHeight;
+    private int usableHeightPrevious;
+    private int contentHeight;
+    private boolean isfirst = true;
 
     private AndroidBug5497Workaround(AppCompatActivity activity) {
         //获取状态栏的高度

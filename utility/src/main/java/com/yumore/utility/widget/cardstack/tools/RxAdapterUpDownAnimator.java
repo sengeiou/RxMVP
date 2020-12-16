@@ -2,6 +2,7 @@ package com.yumore.utility.widget.cardstack.tools;
 
 import android.animation.ObjectAnimator;
 import android.view.View;
+
 import com.yumore.utility.widget.cardstack.RxCardStackView;
 
 

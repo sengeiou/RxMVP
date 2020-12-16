@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#000"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical">
 
-    <include layout="@layout/include_top_bar"/>
+    <include layout="@layout/include_top_bar" />
 
     <!-- <com.lzy.imagepicker.view.CropImageView
          android:id="@+id/cv_crop_image"
@@ -13,9 +13,9 @@
          android:layout_height="match_parent"/>-->
 
     <com.yumore.gallery.widget.CropImageView
-            android:id="@+id/cv_crop_image"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+        android:id="@+id/cv_crop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <!-- <com.lzy.imagepicker.view.crop.CropImageView2
          android:id="@+id/cv_crop_image"

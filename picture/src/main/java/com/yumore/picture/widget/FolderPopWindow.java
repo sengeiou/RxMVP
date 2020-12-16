@@ -14,9 +14,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.picture.R;
 import com.yumore.picture.adapter.PictureAlbumDirectoryAdapter;
 import com.yumore.picture.decoration.RecycleViewDivider;
@@ -37,16 +39,18 @@ import java.util.List;
  */
 
 public class FolderPopWindow extends PopupWindow implements View.OnClickListener {
-    private Context context;
-    private View window;
+    private final Context context;
+    private final View window;
     private RecyclerView recyclerView;
     private PictureAlbumDirectoryAdapter adapter;
-    private Animation animationIn, animationOut;
+    private final Animation animationIn;
+    private final Animation animationOut;
     private boolean isDismiss = false;
     private LinearLayout id_ll_root;
     private TextView picture_title;
-    private Drawable drawableUp, drawableDown;
-    private int mimeType;
+    private final Drawable drawableUp;
+    private final Drawable drawableDown;
+    private final int mimeType;
 
     public FolderPopWindow(Context context, int mimeType) {
         this.context = context;

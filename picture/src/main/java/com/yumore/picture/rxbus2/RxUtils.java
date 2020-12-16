@@ -2,12 +2,13 @@ package com.yumore.picture.rxbus2;
 
 
 import androidx.annotation.NonNull;
+
+import java.util.concurrent.TimeUnit;
+
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
-
-import java.util.concurrent.TimeUnit;
 
 public class RxUtils {
 

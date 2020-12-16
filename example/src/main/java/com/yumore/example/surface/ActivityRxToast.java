@@ -56,11 +56,11 @@ public class ActivityRxToast extends BaseActivity {
         });
     }
 
-    @OnClick({R2.id.button_error_toast, 
+    @OnClick({R2.id.button_error_toast,
             R2.id.button_success_toast,
-            R2.id.button_info_toast, 
-            R2.id.button_warning_toast, 
-            R2.id.button_normal_toast_wo_icon, 
+            R2.id.button_info_toast,
+            R2.id.button_warning_toast,
+            R2.id.button_normal_toast_wo_icon,
             R2.id.button_normal_toast_w_icon})
     public void onClick(View view) {
         int id = view.getId();

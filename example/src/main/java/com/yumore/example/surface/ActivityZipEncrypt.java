@@ -45,16 +45,6 @@ public class ActivityZipEncrypt extends BaseActivity {
     Button mBtnZipDeleteDir;
     @BindView(R2.id.Progress)
     ProgressBar mProgress;
-
-    private File fileDir;
-    private File fileTempDir;
-    private File unZipDirFile;
-    private File fileZip;
-
-    private String zipPath;
-    private String zipParentPath;
-    private String zipTempDeletePath;
-    private String unzipPath;
     @SuppressLint("HandlerLeak")
     private final Handler _handler = new Handler() {
         @Override
@@ -88,6 +78,14 @@ public class ActivityZipEncrypt extends BaseActivity {
             }
         }
     };
+    private File fileDir;
+    private File fileTempDir;
+    private File unZipDirFile;
+    private File fileZip;
+    private String zipPath;
+    private String zipParentPath;
+    private String zipTempDeletePath;
+    private String unzipPath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,9 +104,9 @@ public class ActivityZipEncrypt extends BaseActivity {
         }
     }
 
-    @OnClick({R2.id.btn_create_folder, 
-            R2.id.btn_zip, 
-            R2.id.btn_upzip, 
+    @OnClick({R2.id.btn_create_folder,
+            R2.id.btn_zip,
+            R2.id.btn_upzip,
             R2.id.btn_zip_delete_dir})
     public void onViewClicked(View view) {
         int id = view.getId();

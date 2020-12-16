@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.viewpager.widget.ViewPager;
+
 import com.yumore.gallery.R;
 import com.yumore.gallery.helper.ImagePicker;
 import com.yumore.gallery.utility.NavigationBarChangeListener;

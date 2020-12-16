@@ -1,4 +1,3 @@
-
 package com.cgfay.camera.activity;
 
 import android.content.BroadcastReceiver;

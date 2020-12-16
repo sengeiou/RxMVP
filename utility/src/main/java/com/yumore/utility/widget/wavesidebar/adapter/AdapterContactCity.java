@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.yumore.utility.R;
 import com.yumore.utility.entity.ModelContactCity;
 

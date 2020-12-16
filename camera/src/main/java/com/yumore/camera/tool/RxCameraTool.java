@@ -4,7 +4,9 @@ import android.content.Context;
 import android.hardware.Camera;
 import android.os.SystemClock;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
+
 import com.yumore.camera.RxCameraView;
 import com.yumore.utility.callback.OnRxCamera;
 import com.yumore.utility.photo.OnCompressListener;
@@ -14,6 +16,12 @@ import com.yumore.utility.utility.RxExifTool;
 import com.yumore.utility.utility.RxFileTool;
 import com.yumore.utility.utility.RxVibrateTool;
 import com.yumore.utility.widget.RxToast;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -21,11 +29,6 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 
 /**
  * @author Vondear

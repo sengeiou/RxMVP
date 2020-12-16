@@ -5,6 +5,7 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.os.Build;
 import android.view.SurfaceHolder;
+
 import androidx.collection.SparseArrayCompat;
 
 import java.io.IOException;

@@ -10,7 +10,7 @@ const std::string kFrameNineFragmentShader = SHADER_TO_STRING(
         uniform
         sampler2D inputTexture;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
 
         void main() {

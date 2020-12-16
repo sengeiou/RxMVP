@@ -33,6 +33,7 @@ import butterknife.ButterKnife;
 public class ActivityWheelHorizontal extends BaseActivity {
 
 
+    private final List<String> listYearMonth = new ArrayList<>();
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
     @BindView(R2.id.wheelView_year_month)
@@ -57,7 +58,6 @@ public class ActivityWheelHorizontal extends BaseActivity {
     TextView mSelectedTv;
     @BindView(R2.id.LinearLayout1)
     LinearLayout mLinearLayout1;
-    private final List<String> listYearMonth = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

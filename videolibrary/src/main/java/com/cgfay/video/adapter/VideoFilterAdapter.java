@@ -25,8 +25,8 @@ import java.util.List;
 public class VideoFilterAdapter extends RecyclerView.Adapter<VideoFilterAdapter.ImageHolder> {
 
     private final Context mContext;
-    private int mSelected = 0;
     private final List<ResourceData> mFilterDataList = new ArrayList<>();
+    private int mSelected = 0;
     private OnFilterChangeListener mFilterChangeListener;
 
     public VideoFilterAdapter(Context context, List<ResourceData> resourceDataList) {

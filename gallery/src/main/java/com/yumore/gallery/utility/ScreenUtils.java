@@ -7,7 +7,13 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Environment;
 import android.util.DisplayMetrics;
-import android.view.*;
+import android.view.Display;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 /**

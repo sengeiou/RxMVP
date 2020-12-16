@@ -22,25 +22,20 @@ public class DynamicStickerNormalFilter extends DynamicStickerBaseFilter {
     // 视椎体缩放倍数，具体数据与setLookAt 和 frustumM有关
     // 备注：setLookAt 和 frustumM 设置的结果导致了视点(eye)到近平面(near)和视点(eye)到贴纸(center)恰好是2倍的关系
     private static final float ProjectionScale = 2.0f;
-
-    // 变换矩阵句柄
-    private int mMVPMatrixHandle;
-
     // 贴纸变换矩阵
     private final float[] mProjectionMatrix = new float[16];
     private final float[] mViewMatrix = new float[16];
     private final float[] mModelMatrix = new float[16];
     private final float[] mMVPMatrix = new float[16];
-
+    // 贴纸顶点
+    private final float[] mStickerVertices = new float[8];
+    // 变换矩阵句柄
+    private int mMVPMatrixHandle;
     // 长宽比
     private float mRatio;
-
     // 贴纸坐标缓冲
     private FloatBuffer mVertexBuffer;
     private FloatBuffer mTextureBuffer;
-
-    // 贴纸顶点
-    private final float[] mStickerVertices = new float[8];
 
     public DynamicStickerNormalFilter(Context context, DynamicSticker sticker) {
         super(context, sticker, OpenGLUtils.getShaderFromAssets(context, "shader/sticker/vertex_sticker_normal.glsl"),

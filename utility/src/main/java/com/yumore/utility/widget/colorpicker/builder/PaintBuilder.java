@@ -1,6 +1,12 @@
 package com.yumore.utility.widget.colorpicker.builder;
 
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Shader;
 
 /**
  * @author yumore
@@ -36,7 +42,7 @@ public class PaintBuilder {
     }
 
     public static class PaintHolder {
-        private Paint paint;
+        private final Paint paint;
 
         private PaintHolder() {
             this.paint = new Paint(Paint.ANTI_ALIAS_FLAG);

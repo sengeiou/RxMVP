@@ -3,11 +3,16 @@ package com.yumore.utility.widget.wavesidebar;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import com.yumore.utility.R;
 
 import java.util.Arrays;
@@ -33,9 +38,9 @@ public class WaveSideBarView extends View {
     // 当前选中的位置
     private int mChoose = -1;
     // 字母列表画笔
-    private Paint mLettersPaint = new Paint();
+    private final Paint mLettersPaint = new Paint();
     // 提示字母画笔
-    private Paint mTextPaint = new Paint();
+    private final Paint mTextPaint = new Paint();
     // 波浪画笔
     private Paint mWavePaint = new Paint();
     private float mTextSize;
@@ -48,9 +53,9 @@ public class WaveSideBarView extends View {
     private int mItemHeight;
     private int mPadding;
     // 波浪路径
-    private Path mWavePath = new Path();
+    private final Path mWavePath = new Path();
     // 圆形路径
-    private Path mBallPath = new Path();
+    private final Path mBallPath = new Path();
     // 手指滑动的Y点作为中心点
     private int mCenterY; //中心点Y
     // 贝塞尔曲线的分布半径

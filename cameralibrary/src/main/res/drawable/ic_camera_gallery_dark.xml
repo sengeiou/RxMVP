@@ -2,10 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-            android:id="@+id/preview_gallery_holder"
-            android:drawable="@drawable/ic_camera_gallery_holder_dark" />
+        android:id="@+id/preview_gallery_holder"
+        android:drawable="@drawable/ic_camera_gallery_holder_dark" />
     <item
-            android:id="@+id/preview_gallery_foreground"
-            android:drawable="@drawable/ic_camera_gallery_foreground_dark" />
+        android:id="@+id/preview_gallery_foreground"
+        android:drawable="@drawable/ic_camera_gallery_foreground_dark" />
 
 </layer-list>

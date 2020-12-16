@@ -10,7 +10,12 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import static com.yumore.utility.utility.RxConstTool.*;
+import static com.yumore.utility.utility.RxConstTool.DAY;
+import static com.yumore.utility.utility.RxConstTool.HOUR;
+import static com.yumore.utility.utility.RxConstTool.MIN;
+import static com.yumore.utility.utility.RxConstTool.MSEC;
+import static com.yumore.utility.utility.RxConstTool.SEC;
+import static com.yumore.utility.utility.RxConstTool.TimeUnit;
 import static com.yumore.utility.utility.RxDataTool.isNullString;
 import static com.yumore.utility.utility.RxDataTool.stringToInt;
 

@@ -3,7 +3,11 @@ package com.cgfay.uitls.utils;
 import android.text.TextPaint;
 
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.TimeZone;
 
 /**
  * 字符串工具

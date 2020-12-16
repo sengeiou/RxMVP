@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
-import com.yumore.answer.anwerdemo.R;
+
+import com.yumore.answer.R;
 import com.yumore.answer.bean.CourseSheetInfo;
 
 import java.security.SecureRandom;
@@ -25,9 +27,9 @@ public class CourseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public static final int HEAD = 101;
     private final float density;
     private final LayoutInflater inflater;
-    private Context mContext;
+    private final Context mContext;
     private List<CourseSheetInfo.DataBean.ScheduleBean> datas;
-    private List<CourseSheetInfo.DataBean.ScheduleBean.DetailBean> items = new ArrayList<>();
+    private final List<CourseSheetInfo.DataBean.ScheduleBean.DetailBean> items = new ArrayList<>();
 
     public CourseAdapter(Context context) {
         setHasStableIds(true);

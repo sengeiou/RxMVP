@@ -5,13 +5,13 @@ import com.yumore.common.entity.ResultData;
 import com.yumore.common.entity.StatusEntity;
 
 public class GsonUtils {
-    private static Gson gson = new Gson();
+    private static final Gson gson = new Gson();
 
     /**
      * 解析json数据   T:泛型
      *
      * @param jsonString json
-     * @param clazz clazz
+     * @param clazz      clazz
      * @return T
      */
     public static <T> T processJson(String jsonString, Class<T> clazz) {

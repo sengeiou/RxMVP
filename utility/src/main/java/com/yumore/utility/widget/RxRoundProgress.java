@@ -2,9 +2,14 @@ package com.yumore.utility.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxDataTool;
 
@@ -20,10 +25,10 @@ public class RxRoundProgress extends View {
     /**
      * 画笔对象的引用
      */
-    private Paint paint;
-    private Paint textPaint;
-    private Paint moneyPaint;
-    private Paint moneyDPaint;
+    private final Paint paint;
+    private final Paint textPaint;
+    private final Paint moneyPaint;
+    private final Paint moneyDPaint;
     /**
      * 圆环的颜色
      */
@@ -55,11 +60,11 @@ public class RxRoundProgress extends View {
     /**
      * 是否显示中间的进度
      */
-    private boolean textIsDisplayable;
+    private final boolean textIsDisplayable;
     /**
      * 进度的风格，实心或者空心
      */
-    private int style;
+    private final int style;
 
     public RxRoundProgress(Context context) {
         this(context, null);

@@ -39,6 +39,7 @@ import io.reactivex.functions.Consumer;
  * @date 18-8-6-上午9:56
  */
 public class GalleryActivity extends AbstractActivity implements ViewPager.OnPageChangeListener, OnItemClickListener, View.OnClickListener {
+    private final List<String> imageUrlList = new ArrayList<>();
     @BindView(R2.id.common_header_back_iv)
     ImageView commonHeaderBackIv;
     @BindView(R2.id.common_header_title_tv)
@@ -49,8 +50,6 @@ public class GalleryActivity extends AbstractActivity implements ViewPager.OnPag
     ViewPager viewPager;
     @BindView(R2.id.common_header_root)
     RelativeLayout commonHeaderRoot;
-
-    private final List<String> imageUrlList = new ArrayList<>();
     private int defaultIndex;
     private GalleryAdapter galleryAdapter;
     private CustomPopupWindow customPopupWindow;

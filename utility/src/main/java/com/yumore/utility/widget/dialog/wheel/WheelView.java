@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
+
 import com.yumore.utility.R;
 
 import java.util.LinkedList;
@@ -73,11 +74,11 @@ public class WheelView extends View {
     private WheelViewAdapter viewAdapter;
 
     // Recycle
-    private WheelRecycle recycle = new WheelRecycle(this);
+    private final WheelRecycle recycle = new WheelRecycle(this);
 
     // Listeners
-    private List<OnWheelChangedListener> changingListeners = new LinkedList<OnWheelChangedListener>();
-    private List<OnWheelScrollListener> scrollingListeners = new LinkedList<OnWheelScrollListener>();
+    private final List<OnWheelChangedListener> changingListeners = new LinkedList<OnWheelChangedListener>();
+    private final List<OnWheelScrollListener> scrollingListeners = new LinkedList<OnWheelScrollListener>();
     // Scrolling listener
     WheelScroller.ScrollingListener scrollingListener = new WheelScroller.ScrollingListener() {
         @Override
@@ -118,9 +119,9 @@ public class WheelView extends View {
             }
         }
     };
-    private List<OnWheelClickedListener> clickingListeners = new LinkedList<OnWheelClickedListener>();
+    private final List<OnWheelClickedListener> clickingListeners = new LinkedList<OnWheelClickedListener>();
     // Adapter listener
-    private DataSetObserver dataObserver = new DataSetObserver() {
+    private final DataSetObserver dataObserver = new DataSetObserver() {
         @Override
         public void onChanged() {
             invalidateWheel(false);

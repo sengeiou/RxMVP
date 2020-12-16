@@ -12,6 +12,7 @@ import android.content.pm.Signature;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;

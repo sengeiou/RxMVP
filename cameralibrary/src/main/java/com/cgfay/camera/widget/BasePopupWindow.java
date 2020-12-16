@@ -18,10 +18,8 @@ import android.widget.PopupWindow;
 
 public class BasePopupWindow extends PopupWindow {
 
-    protected Context mContext;
-
     private final float mShowAlpha = 0.88f;
-
+    protected Context mContext;
     private Drawable mBackground;
 
     public BasePopupWindow(Context context) {

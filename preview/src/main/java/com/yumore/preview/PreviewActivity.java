@@ -5,17 +5,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.yumore.provider.RouterConstants;
-import rx.Observable;
-import rx.Subscription;
-import rx.functions.Action1;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import rx.Observable;
+import rx.Subscription;
+import rx.functions.Action1;
 
 /**
  * @author Nathaniel
@@ -27,8 +30,8 @@ public class PreviewActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private PreviewIndicator previewIndicator;
 
-    private List<View> viewList = new ArrayList<>();
-    private int[] imageResIds = new int[]{R.mipmap.intro_text_1, R.mipmap.intro_text_2, R.mipmap.intro_text_3};
+    private final List<View> viewList = new ArrayList<>();
+    private final int[] imageResIds = new int[]{R.mipmap.intro_text_1, R.mipmap.intro_text_2, R.mipmap.intro_text_3};
     private CustomPagerAdapter customPagerAdapter;
 
     private int currentPage = 0;

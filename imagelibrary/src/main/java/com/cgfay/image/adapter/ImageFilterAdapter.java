@@ -24,9 +24,9 @@ import java.util.List;
 public class ImageFilterAdapter extends RecyclerView.Adapter<ImageFilterAdapter.ImageHolder> {
 
     private final Context mContext;
+    private final List<ResourceData> mFilterDataList;
     // 滤镜选中索引
     private int mSelected = 0;
-    private final List<ResourceData> mFilterDataList;
     private OnFilterChangeListener mFilterChangeListener;
 
     public ImageFilterAdapter(Context context, List<ResourceData> filterDataList) {

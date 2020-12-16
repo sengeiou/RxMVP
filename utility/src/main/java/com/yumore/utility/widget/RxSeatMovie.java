@@ -5,7 +5,16 @@ import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.text.TextPaint;
 import android.util.AttributeSet;
@@ -16,6 +25,7 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Toast;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxImageTool;
 
@@ -236,11 +246,11 @@ public class RxSeatMovie extends View {
     /**
      * 默认的座位图宽度,如果使用的自己的座位图片比这个尺寸大或者小,会缩放到这个大小
      */
-    private float defaultImgW = 40;
+    private final float defaultImgW = 40;
     /**
      * 默认的座位图高度
      */
-    private float defaultImgH = 34;
+    private final float defaultImgH = 34;
     /**
      * 座位图片的宽度
      */
@@ -304,7 +314,7 @@ public class RxSeatMovie extends View {
             return super.onSingleTapConfirmed(e);
         }
     });
-    private Runnable hideOverviewRunnable = new Runnable() {
+    private final Runnable hideOverviewRunnable = new Runnable() {
         @Override
         public void run() {
             isDrawOverview = false;

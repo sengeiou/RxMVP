@@ -2,6 +2,7 @@ package com.yumore.utility.widget.wavesidebar.adapter;
 
 import android.util.SparseArray;
 import android.view.View;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 public class BaseViewHolder extends RecyclerView.ViewHolder {

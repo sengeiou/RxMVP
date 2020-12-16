@@ -30,6 +30,8 @@ import butterknife.OnClick;
 public class ActivityProgressBar extends BaseActivity {
 
 
+    private final int money1 = 10000;
+    private final int mRxRoundPdMax = 100;
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
     @BindView(R2.id.flikerbar)
@@ -105,7 +107,6 @@ public class ActivityProgressBar extends BaseActivity {
     };
     private double progress;
     private int progress1;
-    private final int money1 = 10000;
     private int mRxRoundProgress;
     Handler mRxRoundPdHandler = new Handler() {
         @Override
@@ -133,7 +134,6 @@ public class ActivityProgressBar extends BaseActivity {
             mProgressThree.setProgress(mRxRoundProgress);
         }
     };
-    private final int mRxRoundPdMax = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

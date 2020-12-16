@@ -4,6 +4,7 @@ import android.animation.ValueAnimator;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.view.animation.LinearInterpolator;
+
 import com.yumore.utility.widget.progressing.animation.SpriteAnimatorBuilder;
 import com.yumore.utility.widget.progressing.sprite.RectSprite;
 import com.yumore.utility.widget.progressing.sprite.Sprite;
@@ -16,7 +17,7 @@ import com.yumore.utility.widget.progressing.sprite.SpriteContainer;
 public class FoldingCube extends SpriteContainer {
 
     @SuppressWarnings("FieldCanBeLocal")
-    private boolean wrapContent = false;
+    private final boolean wrapContent = false;
 
     @Override
     public Sprite[] onCreateChild() {

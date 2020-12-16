@@ -97,6 +97,9 @@ public class GLImageBeautyFaceFilter extends GLImageDrawElementsFilter implement
             0.240550f, 0.651515f,
     };
     private final float[] mVertices = new float[MaxLength];
+    private final int mEyeMaskTexture;        // 眼睛遮罩纹理
+    private final int mTeethMaskTexture;      // 嘴巴(牙齿)遮罩纹理
+    private final int mTeethLookupTexture;    // 美牙的lookup table 纹理
     // 用于高斯模糊处理
     private GLImageGaussianBlurFilter mBlurFilter;
     private GLImageGaussianBlurFilter mBlurNextFilter;
@@ -116,9 +119,6 @@ public class GLImageBeautyFaceFilter extends GLImageDrawElementsFilter implement
     // 高斯模糊纹理
     private int mBlurTexture = OpenGLUtils.GL_NOT_TEXTURE;
     private int mBlurTexture2 = OpenGLUtils.GL_NOT_TEXTURE;
-    private final int mEyeMaskTexture;        // 眼睛遮罩纹理
-    private final int mTeethMaskTexture;      // 嘴巴(牙齿)遮罩纹理
-    private final int mTeethLookupTexture;    // 美牙的lookup table 纹理
     private float mBrightEyeStrength;   // 亮眼程度
     private float mBeautyTeethStrength; // 美牙程度
     private float mNasolabialStrength;  // 法令纹消除程度

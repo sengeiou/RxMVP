@@ -54,19 +54,19 @@ const std::string kSharpenFragmentShader = SHADER_TO_STRING(
         highp float;
 
         varying
-        highp
+                highp
         vec2 textureCoordinate;
         varying
-        highp
+                highp
         vec2 leftTextureCoordinate;
         varying
-        highp
+                highp
         vec2 rightTextureCoordinate;
         varying
-        highp
+                highp
         vec2 topTextureCoordinate;
         varying
-        highp
+                highp
         vec2 bottomTextureCoordinate;
 
         varying

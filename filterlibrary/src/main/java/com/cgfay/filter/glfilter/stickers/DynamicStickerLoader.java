@@ -24,15 +24,15 @@ public class DynamicStickerLoader {
     private static final String TAG = "DynamicStickerLoader";
     // 贴纸滤镜
     private final WeakReference<DynamicStickerBaseFilter> mWeakFilter;
+    // 贴纸所在的文件夹
+    private final String mFolderPath;
+    // 贴纸数据
+    private final DynamicStickerData mStickerData;
     public boolean isStaticSticker = false;
     // 贴纸纹理
     private int mStickerTexture;
     // 暂存纹理id，用于复用
     private int mRestoreTexture;
-    // 贴纸所在的文件夹
-    private final String mFolderPath;
-    // 贴纸数据
-    private final DynamicStickerData mStickerData;
     // 索引索引加载器
     private ResourceIndexCodec mResourceIndexCodec;
     // 当前索引

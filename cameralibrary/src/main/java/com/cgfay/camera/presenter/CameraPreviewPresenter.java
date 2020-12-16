@@ -47,13 +47,10 @@ public class CameraPreviewPresenter extends PreviewPresenter<CameraPreviewFragme
         implements OnRecordListener, OnCameraCallback, FaceTrackerCallback, OnCaptureListener, OnFpsListener {
 
     private static final String TAG = "CameraPreviewPresenter";
-
-    // 当前索引
-    private int mFilterIndex = 0;
-
     // 预览参数
     private final CameraParam mCameraParam;
-
+    // 当前索引
+    private int mFilterIndex = 0;
     private Activity mActivity;
 
     // 背景音乐

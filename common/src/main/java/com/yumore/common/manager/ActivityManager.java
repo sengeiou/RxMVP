@@ -2,6 +2,7 @@ package com.yumore.common.manager;
 
 import android.content.Context;
 import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Stack;

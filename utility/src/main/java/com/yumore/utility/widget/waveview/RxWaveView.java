@@ -16,8 +16,14 @@
 package com.yumore.utility.widget.waveview;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
 import android.graphics.Paint.Style;
+import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
 

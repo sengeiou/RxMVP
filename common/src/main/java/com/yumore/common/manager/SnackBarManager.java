@@ -3,6 +3,7 @@ package com.yumore.common.manager;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+
 import com.yumore.common.widget.CustomSnackBar;
 
 import java.lang.ref.WeakReference;

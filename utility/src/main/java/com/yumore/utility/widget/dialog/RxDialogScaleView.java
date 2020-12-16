@@ -6,7 +6,9 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.utility.R;
 import com.yumore.utility.widget.scaleimage.ImageSource;
 import com.yumore.utility.widget.scaleimage.RxScaleImageView;

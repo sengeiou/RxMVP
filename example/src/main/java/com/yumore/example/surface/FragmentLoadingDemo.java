@@ -9,8 +9,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import com.yumore.example.R;
 import com.yumore.utility.widget.progressing.style.Circle;
 import com.yumore.utility.widget.progressing.style.CubeGrid;

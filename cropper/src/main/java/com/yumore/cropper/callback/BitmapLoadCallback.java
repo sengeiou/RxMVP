@@ -2,8 +2,10 @@ package com.yumore.cropper.callback;
 
 import android.graphics.Bitmap;
 import android.net.Uri;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.yumore.cropper.model.ExifInfo;
 
 public interface BitmapLoadCallback {

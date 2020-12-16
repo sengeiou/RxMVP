@@ -2,6 +2,7 @@ package com.yumore.common.mvp;
 
 import android.app.Application;
 import android.content.Context;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -16,7 +17,7 @@ import java.lang.reflect.Field;
  */
 public class PresenterProvider {
 
-    private PresenterStore presenterStore = new PresenterStore<>();
+    private final PresenterStore presenterStore = new PresenterStore<>();
     private AppCompatActivity activity;
     private Fragment fragment;
     private Class<?> clazz;

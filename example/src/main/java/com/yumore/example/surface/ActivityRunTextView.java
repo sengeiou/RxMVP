@@ -28,6 +28,7 @@ import butterknife.ButterKnife;
 public class ActivityRunTextView extends BaseActivity {
 
 
+    private final ArrayList<String> titleList = new ArrayList<String>();
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
     @BindView(R2.id.tv_runtitle)
@@ -38,7 +39,6 @@ public class ActivityRunTextView extends BaseActivity {
     RxTextViewVerticalMore mUpview1;
     @BindView(R2.id.activity_run_text_view)
     LinearLayout mActivityRunTextView;
-    private final ArrayList<String> titleList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

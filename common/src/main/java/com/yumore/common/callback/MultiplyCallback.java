@@ -1,9 +1,9 @@
 package com.yumore.common.callback;
 
+import java.io.IOException;
+
 import okhttp3.Call;
 import okhttp3.Response;
-
-import java.io.IOException;
 
 /**
  * @author Nathaniel

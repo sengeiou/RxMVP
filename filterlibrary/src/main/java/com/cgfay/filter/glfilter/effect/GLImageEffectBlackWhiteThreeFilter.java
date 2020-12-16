@@ -10,8 +10,8 @@ import com.cgfay.filter.glfilter.utils.OpenGLUtils;
  */
 public class GLImageEffectBlackWhiteThreeFilter extends GLImageEffectFilter {
 
-    private int mScaleHandle;
     private final float mScale = 1.2f;
+    private int mScaleHandle;
 
     public GLImageEffectBlackWhiteThreeFilter(Context context) {
         this(context, VERTEX_SHADER, OpenGLUtils.getShaderFromAssets(context,

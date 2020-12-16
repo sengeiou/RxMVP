@@ -10,6 +10,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
+
 import com.yumore.utility.R;
 
 import java.util.LinkedList;
@@ -66,12 +67,12 @@ public abstract class AbstractWheel extends View {
     protected int mLayoutWidth;
 
     // Recycle
-    private WheelRecycler mRecycler = new WheelRecycler(this);
+    private final WheelRecycler mRecycler = new WheelRecycler(this);
 
     // Listeners
-    private List<OnWheelChangedListener> changingListeners = new LinkedList<OnWheelChangedListener>();
-    private List<OnWheelScrollListener> scrollingListeners = new LinkedList<OnWheelScrollListener>();
-    private List<OnWheelClickedListener> clickingListeners = new LinkedList<OnWheelClickedListener>();
+    private final List<OnWheelChangedListener> changingListeners = new LinkedList<OnWheelChangedListener>();
+    private final List<OnWheelScrollListener> scrollingListeners = new LinkedList<OnWheelScrollListener>();
+    private final List<OnWheelClickedListener> clickingListeners = new LinkedList<OnWheelClickedListener>();
 
     //XXX: I don't like listeners the way as they are now. -df
 

@@ -6,9 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.GridLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.alibaba.fastjson.JSON;
 import com.yumore.answer.adapter.LayoutAdapter;
 import com.yumore.answer.adapter.TopicAdapter;
@@ -32,6 +34,9 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
     private RecyclerView recyclerView;
     private List<AnwerInfo.DataBean.SubDataBean> datas;
     private FlipperLayout rootLayout;
+    private int index = 1;
+    private int prePosition;
+    private int curPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +52,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
                     InputStream in = getAssets().open("test_1.json");
                     List<QuestionEntry> questionEntries = JSON.parseArray(inputStream2String(in), QuestionEntry.class);
                     int size = questionEntries.size();
-                    Log.i("AA",size+"");
+                    Log.i("AA", size + "");
                 } catch (IOException e) {
                     e.printStackTrace();
                     Log.e("data.size=", e.toString());
@@ -88,11 +93,10 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         initList();
 
 
-
     }
 
     private void initPage() {
-        if(datas.size()>0) {
+        if (datas.size() > 0) {
             rootLayout = findViewById(R.id.container);
             rootLayout.removeAllViews();
             rootLayout.setIndex(1);
@@ -109,19 +113,19 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
             if (datas.size() == 1) {
                 //填充第一页的文本
-                setText(readView1,datas.get(0));
+                setText(readView1, datas.get(0));
             } else if (datas.size() >= 2) {
                 //填充第一页的文本
-                setText(readView1,datas.get(0));
+                setText(readView1, datas.get(0));
 
                 //填充第二页的文本
-                setText(readView2,datas.get(1));
+                setText(readView2, datas.get(1));
             }
         }
 
     }
 
-    private void setText(TextView textView, AnwerInfo.DataBean.SubDataBean subDataBean){
+    private void setText(TextView textView, AnwerInfo.DataBean.SubDataBean subDataBean) {
         textView.setText(subDataBean.getQuestionid() + ". " + subDataBean.getQuestion()
                 + "\n\nA." + subDataBean.getOptiona()
                 + "\nB." + subDataBean.getOptionb()
@@ -136,7 +140,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         rootLayout = findViewById(R.id.container);
         rootLayout.removeAllViews();
         int position = datas.size() - 1;
-        rootLayout.setIndex(position+1);
+        rootLayout.setIndex(position + 1);
 
         View recoverView = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
         View view1 = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
@@ -148,50 +152,45 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         final TextView readView1 = view1.findViewById(R.id.tv_anwer);
         final TextView readView2 = view2.findViewById(R.id.tv_anwer);
 
-        AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(position-1);
+        AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(position - 1);
 
         //填充第一页的文本
-        setText(recoverReadView,subDataBean);
+        setText(recoverReadView, subDataBean);
 
         subDataBean = datas.get(position);
         //填充最后一页一页的文本
-        setText(readView1,subDataBean);
-
+        setText(readView1, subDataBean);
 
 
     }
 
-
     @Override
     public View createView(int direction, int index) {
-        Log.i("createView-index=",index+"");
+        Log.i("createView-index=", index + "");
         View newView = null;
-        if (direction == FlipperLayout.OnSlidePageListener.MOVE_TO_LEFT && index<datas.size()) { //下一页
+        if (direction == FlipperLayout.OnSlidePageListener.MOVE_TO_LEFT && index < datas.size()) { //下一页
             AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(index);
 
             newView = LayoutInflater.from(this).inflate(R.layout.anwer_item, null);
             TextView readView = newView.findViewById(R.id.tv_anwer);
-            setText(readView,subDataBean);
+            setText(readView, subDataBean);
 
 
-
-        } else if(direction == FlipperLayout.MOVE_TO_RIGHT && index>=2){//上一页
-            AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(index-2);
+        } else if (direction == FlipperLayout.MOVE_TO_RIGHT && index >= 2) {//上一页
+            AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(index - 2);
             newView = LayoutInflater.from(this).inflate(R.layout.anwer_item, null);
             TextView readView = newView.findViewById(R.id.tv_anwer);
-            setText(readView,subDataBean);
+            setText(readView, subDataBean);
 
         }
 
         return newView;
     }
 
-
-
     @Override
     public void currentPosition(int index) {
-        Log.i("@@@",index+"");
-        curPosition = index-1;
+        Log.i("@@@", index + "");
+        curPosition = index - 1;
         topicAdapter.notifyCurPosition(curPosition);
         topicAdapter.notifyPrePosition(prePosition);
         recyclerView.smoothScrollToPosition(curPosition);
@@ -199,7 +198,6 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         prePosition = curPosition;
     }
 
-    private int index = 1;
     @Override
     public boolean currentIsLastPage() {
         index = rootLayout.getIndex();
@@ -214,10 +212,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         return datas.size() != index;
     }
 
-
-
-
-    private void choosePage(int recover,int one,int two) {
+    private void choosePage(int recover, int one, int two) {
 
         rootLayout = findViewById(R.id.container);
         rootLayout.removeAllViews();
@@ -236,21 +231,17 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
         AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(recover);
         //左边一个
-        setText(recoverReadView,subDataBean);
+        setText(recoverReadView, subDataBean);
 
         subDataBean = datas.get(one);
         //填充第一页的文本
-        setText(readView1,subDataBean);
+        setText(readView1, subDataBean);
 
         subDataBean = datas.get(two);
         //填充第二页的文本
-        setText(readView2,subDataBean);
+        setText(readView2, subDataBean);
 
     }
-
-
-    private int prePosition;
-    private int curPosition;
 
     private void initList() {
         recyclerView = findViewById(R.id.list);
@@ -273,11 +264,11 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
             public void onClick(TopicAdapter.TopicViewHolder holder, int position) {
                 curPosition = position;
                 Log.i("点击了==>", position + "");
-                if(position==0){
+                if (position == 0) {
                     initPage();
-                }else if(position==datas.size()-1){
+                } else if (position == datas.size() - 1) {
                     initLastPage();
-                }else{
+                } else {
                     choosePage(position - 1, position, position + 1);
                 }
 
@@ -296,7 +287,6 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
 
     }
-
 
 
     private void initSlidingUoPanel() {
@@ -320,7 +310,6 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
             }
         });
     }
-
 
 
     @Override

@@ -40,9 +40,17 @@ class RenderThread extends HandlerThread implements SurfaceTexture.OnFrameAvaila
     private final Object mSyncFence = new Object();
     // 矩阵
     private final float[] mMatrix = new float[16];
+    private final boolean isRecordingPause = false;   // 是否处于暂停录制状态
+    // 计算帧率
+    private final FrameRateMeter mFrameRateMeter;
+    // 上下文
+    private final Context mContext;
+    // 预览参数
+    private final CameraParam mCameraParam;
+    // 渲染管理器
+    private final RenderManager mRenderManager;
     private boolean isPreviewing = false;       // 是否预览状态
     private boolean isRecording = false;        // 是否录制状态
-    private final boolean isRecordingPause = false;   // 是否处于暂停录制状态
     // EGL共享上下文
     private EglCore mEglCore;
     // 预览用的EGLSurface
@@ -54,24 +62,10 @@ class RenderThread extends HandlerThread implements SurfaceTexture.OnFrameAvaila
 //    private byte[] mPreviewBuffer;
     // 输入图像大小
     private int mTextureWidth, mTextureHeight;
-
     // 可用帧
     private int mFrameNum = 0;
-
     // 渲染Handler回调
     private RenderHandler mRenderHandler;
-
-    // 计算帧率
-    private final FrameRateMeter mFrameRateMeter;
-
-    // 上下文
-    private final Context mContext;
-
-    // 预览参数
-    private final CameraParam mCameraParam;
-
-    // 渲染管理器
-    private final RenderManager mRenderManager;
     private long time = 0;
 
     public RenderThread(Context context, String name) {

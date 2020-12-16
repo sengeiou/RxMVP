@@ -41,23 +41,19 @@ public class RecordPresenter implements SurfaceTexture.OnFrameAvailableListener,
     // 音视频参数
     private final VideoParams mVideoParams;
     private final AudioParams mAudioParams;
+    // 视频编码器
+    private final HWMediaRecorder mHWMediaRecorder;
+    // 视频列表
+    private final List<MediaInfo> mVideoList = new ArrayList<>();
     private SpeedRecordActivity mActivity;
     // 录制操作开始
     private boolean mOperateStarted = false;
-
     // 当前录制进度
     private float mCurrentProgress;
     // 最大时长
     private long mMaxDuration;
     // 剩余时长
     private long mRemainDuration;
-
-    // 视频编码器
-    private final HWMediaRecorder mHWMediaRecorder;
-
-    // 视频列表
-    private final List<MediaInfo> mVideoList = new ArrayList<>();
-
     // 录制音频信息
     private RecordInfo mAudioInfo;
     // 录制视频信息

@@ -10,7 +10,7 @@ const std::string kBlackWhiteThreeFragmentShader = SHADER_TO_STRING(
         uniform
         sampler2D inputTexture;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
 
         uniform float scale;          // 黑白部分缩放倍数

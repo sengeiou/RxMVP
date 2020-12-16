@@ -3605,13 +3605,13 @@ const OptionDef options[] = {
          "disable data"},
 
 #if CONFIG_VAAPI
-{ "vaapi_device", HAS_ARG | OPT_EXPERT, { .func_arg = opt_vaapi_device },
-    "set VAAPI hardware device (DRM path or X11 display name)", "device" },
+        { "vaapi_device", HAS_ARG | OPT_EXPERT, { .func_arg = opt_vaapi_device },
+            "set VAAPI hardware device (DRM path or X11 display name)", "device" },
 #endif
 
 #if CONFIG_QSV
-{ "qsv_device", HAS_ARG | OPT_STRING | OPT_EXPERT, { &qsv_device },
-    "set QSV hardware device (DirectX adapter index, DRM path or X11 display name)", "device"},
+        { "qsv_device", HAS_ARG | OPT_STRING | OPT_EXPERT, { &qsv_device },
+            "set QSV hardware device (DirectX adapter index, DRM path or X11 display name)", "device"},
 #endif
 
         {NULL,},

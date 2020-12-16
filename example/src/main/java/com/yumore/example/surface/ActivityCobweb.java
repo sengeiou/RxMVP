@@ -27,6 +27,13 @@ import butterknife.ButterKnife;
  */
 public class ActivityCobweb extends BaseActivity implements SeekBar.OnSeekBarChangeListener {
 
+    private final String[] nameStrs = {
+            "金钱", "能力", "美貌", "智慧", "交际",
+            "口才", "力量", "智力", "体力", "体质",
+            "敏捷", "精神", "耐力", "精通", "急速",
+            "暴击", "回避", "命中", "跳跃", "反应",
+            "幸运", "魅力", "感知", "活力", "意志"
+    };
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
     @BindView(R2.id.cobweb_view)
@@ -47,14 +54,6 @@ public class ActivityCobweb extends BaseActivity implements SeekBar.OnSeekBarCha
     LightnessSlider mVLightnessSliderLevel;
     @BindView(R2.id.v_alpha_slider_level)
     AlphaSlider mVAlphaSliderLevel;
-
-    private final String[] nameStrs = {
-            "金钱", "能力", "美貌", "智慧", "交际",
-            "口才", "力量", "智力", "体力", "体质",
-            "敏捷", "精神", "耐力", "精通", "急速",
-            "暴击", "回避", "命中", "跳跃", "反应",
-            "幸运", "魅力", "感知", "活力", "意志"
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

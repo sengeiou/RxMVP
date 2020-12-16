@@ -1,7 +1,9 @@
 package com.yumore.common.mvp;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
+
 import com.yumore.common.basic.BaseViewer;
 
 import java.util.HashMap;
@@ -11,7 +13,7 @@ import java.util.Map;
  * @author Nathaniel
  */
 public class PresenterDispatch {
-    private PresenterProvider presenterProvider;
+    private final PresenterProvider presenterProvider;
 
     public PresenterDispatch(PresenterProvider presenterProvider) {
         this.presenterProvider = presenterProvider;

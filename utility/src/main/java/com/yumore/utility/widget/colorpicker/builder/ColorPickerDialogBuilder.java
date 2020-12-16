@@ -11,7 +11,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AlertDialog;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxImageTool;
 import com.yumore.utility.widget.colorpicker.ColorPickerView;
@@ -27,9 +29,9 @@ import com.yumore.utility.widget.colorpicker.slider.LightnessSlider;
  * @date 2018/6/11 11:36:40 整合修改
  */
 public class ColorPickerDialogBuilder {
-    private AlertDialog.Builder builder;
-    private LinearLayout pickerContainer;
-    private ColorPickerView colorPickerView;
+    private final AlertDialog.Builder builder;
+    private final LinearLayout pickerContainer;
+    private final ColorPickerView colorPickerView;
     private LightnessSlider lightnessSlider;
     private AlphaSlider alphaSlider;
     private EditText colorEdit;
@@ -41,7 +43,7 @@ public class ColorPickerDialogBuilder {
     private boolean isPreviewEnabled = false;
     private int pickerCount = 1;
     private int defaultMargin = 0;
-    private Integer[] initialColor = new Integer[]{null, null, null, null, null};
+    private final Integer[] initialColor = new Integer[]{null, null, null, null, null};
 
     private ColorPickerDialogBuilder(Context context) {
         this(context, 0);

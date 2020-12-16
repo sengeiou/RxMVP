@@ -12,14 +12,12 @@ import java.util.Set;
  */
 public class AudioFocusManager {
 
-    // 音频管理器
-    private AudioManager mAudioManager;
-
-    // 音频管理器状态
-    private int mState = AudioManager.AUDIOFOCUS_LOSS_TRANSIENT;
-
     // 监听器集合
     private final Set<AudioFocusChangeListener> mListenerSet = new HashSet<>();
+    // 音频管理器
+    private AudioManager mAudioManager;
+    // 音频管理器状态
+    private int mState = AudioManager.AUDIOFOCUS_LOSS_TRANSIENT;
     /**
      * 对焦状态监听器
      */

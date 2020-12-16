@@ -8,8 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.*;
+import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+
 import com.yumore.utility.R;
 import com.yumore.utility.entity.ActionItem;
 import com.yumore.utility.utility.RxDeviceTool;
@@ -26,17 +32,18 @@ public class RxPopupSingleView extends PopupWindow {
     protected final int LIST_PADDING = 10;
     // 坐标的位置（x、y）
     private final int[] mLocation = new int[2];
-    private Context mContext;
+    private final Context mContext;
     // 实例化一个矩形
-    private Rect mRect = new Rect();
+    private final Rect mRect = new Rect();
     // 屏幕的宽度和高度
-    private int mScreenWidth, mScreenHeight;
+    private final int mScreenWidth;
+    private final int mScreenHeight;
 
     // 判断是否需要添加或更新列表子类项
     private boolean mIsDirty;
 
     // 位置不在中心
-    private int popupGravity = Gravity.NO_GRAVITY;
+    private final int popupGravity = Gravity.NO_GRAVITY;
 
     // 弹窗子类项选中时的监听
     private OnItemOnClickListener mItemOnClickListener;
@@ -45,7 +52,7 @@ public class RxPopupSingleView extends PopupWindow {
     private ListView mListView;
 
     // 定义弹窗子类项列表
-    private ArrayList<ActionItem> mActionItems = new ArrayList<ActionItem>();
+    private final ArrayList<ActionItem> mActionItems = new ArrayList<ActionItem>();
     private int colorItemText = 0;
 
     public RxPopupSingleView(Context context) {

@@ -33,14 +33,14 @@ import java.util.zip.ZipInputStream;
 public class ResourceCodec {
 
     protected static final String TAG = "ResourceCodec";
-    // 索引绑定
-    protected Map<String, Pair<Integer, Integer>> mIndexMap;
-    // 数据缓冲
-    protected ByteBuffer mDataBuffer;
     // 索引文件路径
     private final String mIndexPath;
     // 数据文件路径
     private final String mDataPath;
+    // 索引绑定
+    protected Map<String, Pair<Integer, Integer>> mIndexMap;
+    // 数据缓冲
+    protected ByteBuffer mDataBuffer;
 
     public ResourceCodec(String indexPath, String dataPath) {
         mIndexPath = indexPath;

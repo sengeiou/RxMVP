@@ -7,6 +7,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.UiThread;
 import androidx.annotation.WorkerThread;
@@ -26,11 +27,11 @@ public class RxMagic implements Handler.Callback {
     private static final int MSG_COMPRESS_ERROR = 2;
 
     private String mTargetDir;
-    private List<String> mPaths;
-    private int mLeastCompressSize;
-    private OnCompressListener mCompressListener;
+    private final List<String> mPaths;
+    private final int mLeastCompressSize;
+    private final OnCompressListener mCompressListener;
 
-    private Handler mHandler;
+    private final Handler mHandler;
 
     private RxMagic(Builder builder) {
         this.mPaths = builder.mPaths;
@@ -182,9 +183,9 @@ public class RxMagic implements Handler.Callback {
     }
 
     public static class Builder {
-        private Context context;
+        private final Context context;
         private String mTargetDir;
-        private List<String> mPaths;
+        private final List<String> mPaths;
         private int mLeastCompressSize = 100;
         private OnCompressListener mCompressListener;
 

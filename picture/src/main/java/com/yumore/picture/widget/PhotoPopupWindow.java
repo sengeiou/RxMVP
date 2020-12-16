@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
 import com.yumore.picture.R;
 
 
@@ -25,10 +26,13 @@ import com.yumore.picture.R;
  */
 
 public class PhotoPopupWindow extends PopupWindow implements View.OnClickListener {
-    private TextView picture_tv_photo, picture_tv_video, picture_tv_cancel;
-    private LinearLayout ll_root;
-    private FrameLayout fl_content;
-    private Animation animationIn, animationOut;
+    private final TextView picture_tv_photo;
+    private final TextView picture_tv_video;
+    private final TextView picture_tv_cancel;
+    private final LinearLayout ll_root;
+    private final FrameLayout fl_content;
+    private final Animation animationIn;
+    private final Animation animationOut;
     private boolean isDismiss = false;
     private OnItemClickListener onItemClickListener;
 

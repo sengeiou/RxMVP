@@ -1,11 +1,12 @@
 package com.yumore.common.interceptor;
 
 import androidx.annotation.NonNull;
+
+import java.io.IOException;
+
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
-
-import java.io.IOException;
 
 /**
  * 实际链接次数 1+重连次数
@@ -19,7 +20,7 @@ public class RetryInterceptor implements Interceptor {
      * 重连次数
      * 重连计数器
      */
-    private int maxRetry;
+    private final int maxRetry;
     private int retryNumber;
 
     public RetryInterceptor() {

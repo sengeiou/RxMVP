@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.alibaba.fastjson.JSON;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.yumore.answer.adapter.AnimalsHeadersAdapter;
@@ -38,7 +40,6 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
 
 
         recyclerView = findViewById(R.id.recyclerview);
-
 
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -79,7 +80,6 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
                 headersDecor.invalidateHeaders();
             }
         });
-
 
 
         CourseSheetInfo courseSheet = getCourseSheet();
@@ -135,8 +135,8 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
         //选课监听
         CourseSheetInfo.DataBean.ScheduleBean.DetailBean.SubDetailBean subDetailBean = detailBean.getData().get(childPosition);
 
-       String s=  subDetailBean.getText2()+subDetailBean.getText();
-        Toast.makeText(CourseActivity.this, "groupPosition: " + groupPosition + ", childPosition: " + childPosition+",s="+s,
+        String s = subDetailBean.getText2() + subDetailBean.getText();
+        Toast.makeText(CourseActivity.this, "groupPosition: " + groupPosition + ", childPosition: " + childPosition + ",s=" + s,
                 Toast.LENGTH_SHORT).show();
     }
 }

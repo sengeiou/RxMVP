@@ -5,7 +5,15 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -15,7 +23,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxImageTool;
 
@@ -41,13 +51,13 @@ public class RxSeatAirplane extends View {
     private Paint mPaintOther;
     private Paint mPaintMap;
     private RectF rectFCabin;
-    private HashMap<String, RectF> mSeats
+    private final HashMap<String, RectF> mSeats
             = new HashMap<>();
-    private HashMap<String, SeatState> mSeatSelecting
+    private final HashMap<String, SeatState> mSeatSelecting
             = new HashMap<>();
-    private HashMap<String, SeatState> mSeatSelected
+    private final HashMap<String, SeatState> mSeatSelected
             = new HashMap<>();
-    private HashMap<String, RectF> mSeatSelectingRectF = new HashMap<>();
+    private final HashMap<String, RectF> mSeatSelectingRectF = new HashMap<>();
     private Path pathFuselage;
     private Path pathArrow;
     private Path pathTail;
@@ -59,14 +69,14 @@ public class RxSeatAirplane extends View {
     private Bitmap mBitmapSeatSelected = null;
     private Bitmap mBitmapSeatSelecting = null;
     private float scaleValue = 2.0f;
-    private float scaleMaxValue = 3f;
-    private float scaleMap = 10f;
+    private final float scaleMaxValue = 3f;
+    private final float scaleMap = 10f;
     private int maxSelectStates = 10;
     private float moveY = 0;
     private ValueAnimator valueAnimator;
     private float mAnimatedValue = 0f;
     @SuppressLint("HandlerLeak")
-    private Handler mHandler = new Handler() {
+    private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);

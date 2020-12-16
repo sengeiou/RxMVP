@@ -71,41 +71,6 @@ public class VideoCutFragment extends Fragment implements View.OnClickListener {
     private long mVideoDuration;
     private boolean mSeeking = false;
     private CainMediaPlayer mCainMediaPlayer;
-    private AudioManager mAudioManager;
-    private CainMediaEditor mMediaEditor;
-    /**
-     * 旋转视频
-     */
-    private boolean mRotating;
-    private float mCurrentRotate;
-    private SurfaceTexture mSurfaceTexture;
-    private Surface mSurface;
-    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
-        @Override
-        public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-            if (mSurfaceTexture == null) {
-                mSurfaceTexture = surface;
-                openMediaPlayer();
-            } else {
-                mVideoPlayerView.setSurfaceTexture(mSurfaceTexture);
-            }
-        }
-
-        @Override
-        public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-
-        }
-
-        @Override
-        public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-            return mSurfaceTexture == null;
-        }
-
-        @Override
-        public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-
-        }
-    };
     private final VideoCutViewBar.OnVideoCropViewBarListener mOnVideoCropViewBarListener = new VideoCutViewBar.OnVideoCropViewBarListener() {
         @Override
         public void onTouchDown() {
@@ -144,6 +109,41 @@ public class VideoCutFragment extends Fragment implements View.OnClickListener {
         @Override
         public void onError(String error) {
             Log.d(TAG, "onError: " + error);
+        }
+    };
+    private AudioManager mAudioManager;
+    private CainMediaEditor mMediaEditor;
+    /**
+     * 旋转视频
+     */
+    private boolean mRotating;
+    private float mCurrentRotate;
+    private SurfaceTexture mSurfaceTexture;
+    private Surface mSurface;
+    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
+        @Override
+        public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
+            if (mSurfaceTexture == null) {
+                mSurfaceTexture = surface;
+                openMediaPlayer();
+            } else {
+                mVideoPlayerView.setSurfaceTexture(mSurfaceTexture);
+            }
+        }
+
+        @Override
+        public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
+
+        }
+
+        @Override
+        public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
+            return mSurfaceTexture == null;
+        }
+
+        @Override
+        public void onSurfaceTextureUpdated(SurfaceTexture surface) {
+
         }
     };
 

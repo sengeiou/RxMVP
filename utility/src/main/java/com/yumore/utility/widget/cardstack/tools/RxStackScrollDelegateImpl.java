@@ -1,6 +1,7 @@
 package com.yumore.utility.widget.cardstack.tools;
 
 import android.view.View;
+
 import com.yumore.utility.widget.cardstack.RxCardStackView;
 
 
@@ -10,7 +11,7 @@ import com.yumore.utility.widget.cardstack.RxCardStackView;
  */
 public class RxStackScrollDelegateImpl implements RxScrollDelegate {
 
-    private RxCardStackView mRxCardStackView;
+    private final RxCardStackView mRxCardStackView;
     private int mScrollY;
     private int mScrollX;
 

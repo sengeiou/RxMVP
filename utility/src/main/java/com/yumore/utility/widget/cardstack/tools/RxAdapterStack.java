@@ -2,6 +2,7 @@ package com.yumore.utility.widget.cardstack.tools;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+
 import com.yumore.utility.widget.cardstack.RxCardStackView;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public abstract class RxAdapterStack<T> extends RxCardStackView.Adapter<RxCardSt
 
     private final Context mContext;
     private final LayoutInflater mInflater;
-    private List<T> mData;
+    private final List<T> mData;
 
     public RxAdapterStack(Context context) {
         this.mContext = context;

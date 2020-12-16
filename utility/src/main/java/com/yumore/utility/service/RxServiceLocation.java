@@ -7,7 +7,9 @@ import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Looper;
+
 import androidx.annotation.Nullable;
+
 import com.yumore.utility.utility.RxLocationTool;
 import com.yumore.utility.widget.RxToast;
 
@@ -25,7 +27,7 @@ public class RxServiceLocation extends Service {
     private String locality = "loading...";
     private String street = "loading...";
     private OnGetLocationListener mOnGetLocationListener;
-    private RxLocationTool.OnLocationChangeListener mOnLocationChangeListener = new RxLocationTool.OnLocationChangeListener() {
+    private final RxLocationTool.OnLocationChangeListener mOnLocationChangeListener = new RxLocationTool.OnLocationChangeListener() {
         @Override
         public void getLastKnownLocation(Location location) {
             lastLatitude = String.valueOf(location.getLatitude());

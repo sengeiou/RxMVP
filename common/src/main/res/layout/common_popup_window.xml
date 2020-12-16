@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/common_shape_popup_window"
-            android:maxHeight="240dp"
-            android:paddingTop="@dimen/common_radius_normal"
-            android:paddingBottom="@dimen/common_radius_normal"
-            android:scrollbars="none" />
+        android:id="@+id/recyclerView"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_shape_popup_window"
+        android:maxHeight="240dp"
+        android:paddingTop="@dimen/common_radius_normal"
+        android:paddingBottom="@dimen/common_radius_normal"
+        android:scrollbars="none" />
 </RelativeLayout>

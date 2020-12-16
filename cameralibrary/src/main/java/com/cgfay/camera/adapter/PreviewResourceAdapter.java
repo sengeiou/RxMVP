@@ -30,10 +30,8 @@ public class PreviewResourceAdapter extends RecyclerView.Adapter<PreviewResource
     private final Drawable mPlaceHolder;
     private final List<ResourceData> mResourceList;
     private final Context mContext;
-    private int mSelected;
-
     private final MediaLoader mMediaLoader;
-
+    private int mSelected;
     private OnResourceChangeListener mListener;
 
     public PreviewResourceAdapter(Context context, List<ResourceData> itemList) {

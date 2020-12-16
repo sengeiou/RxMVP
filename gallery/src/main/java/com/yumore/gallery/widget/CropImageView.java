@@ -2,7 +2,16 @@ package com.yumore.gallery.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.PointF;
+import android.graphics.RectF;
+import android.graphics.Region;
+import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -12,8 +21,10 @@ import android.os.Message;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.MotionEvent;
+
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.view.ViewCompat;
+
 import com.yumore.gallery.R;
 
 import java.io.File;
@@ -34,12 +45,12 @@ public class CropImageView extends AppCompatImageView {
     private static final int ZOOM_OR_ROTATE = 4;  // 缩放或旋转
     private static final int SAVE_SUCCESS = 1001;  // 缩放或旋转
     private static final int SAVE_ERROR = 1002;  // 缩放或旋转
-    private static Handler mHandler = new InnerHandler();
+    private static final Handler mHandler = new InnerHandler();
     /**
      * 图片保存完成的监听
      */
     private static OnBitmapSaveCompleteListener mListener;
-    private Style[] styles = {Style.RECTANGLE, Style.CIRCLE};
+    private final Style[] styles = {Style.RECTANGLE, Style.CIRCLE};
     private int mMaskColor = 0xAF000000;   //暗色
     private int mBorderColor = 0xAA808080; //焦点框的边框颜色
     private int mBorderWidth = 1;         //焦点边框的宽度（画笔宽度）
@@ -47,19 +58,19 @@ public class CropImageView extends AppCompatImageView {
     private int mFocusHeight = 250;        //焦点框的高度
     private int mDefaultStyleIndex = 0;    //默认焦点框的形状
     private Style mStyle = styles[mDefaultStyleIndex];
-    private Paint mBorderPaint = new Paint();
-    private Path mFocusPath = new Path();
-    private RectF mFocusRect = new RectF();
+    private final Paint mBorderPaint = new Paint();
+    private final Path mFocusPath = new Path();
+    private final RectF mFocusRect = new RectF();
     private int mImageWidth;
     private int mImageHeight;
     private int mRotatedImageWidth;
     private int mRotatedImageHeight;
     private Matrix matrix = new Matrix();      //图片变换的matrix
-    private Matrix savedMatrix = new Matrix(); //开始变幻的时候，图片的matrix
-    private PointF pA = new PointF();          //第一个手指按下点的坐标
-    private PointF pB = new PointF();          //第二个手指按下点的坐标
-    private PointF midPoint = new PointF();    //两个手指的中间点
-    private PointF doubleClickPos = new PointF();  //双击图片的时候，双击点的坐标
+    private final Matrix savedMatrix = new Matrix(); //开始变幻的时候，图片的matrix
+    private final PointF pA = new PointF();          //第一个手指按下点的坐标
+    private final PointF pB = new PointF();          //第二个手指按下点的坐标
+    private final PointF midPoint = new PointF();    //两个手指的中间点
+    private final PointF doubleClickPos = new PointF();  //双击图片的时候，双击点的坐标
     private PointF mFocusMidPoint = new PointF();  //中间View的中间点
     private int mode = NONE;            //初始的模式
     private long doubleClickTime = 0;   //第二次双击的时间

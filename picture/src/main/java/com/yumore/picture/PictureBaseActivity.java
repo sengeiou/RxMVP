@@ -11,8 +11,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.cropper.UCrop;
 import com.yumore.cropper.UCropMulti;
 import com.yumore.cropper.util.BitmapUtils;
@@ -28,14 +30,19 @@ import com.yumore.picture.entity.LocalMediaFolder;
 import com.yumore.picture.immersive.ImmersiveManage;
 import com.yumore.picture.rxbus2.RxBus;
 import com.yumore.picture.rxbus2.RxUtils;
-import com.yumore.picture.tools.*;
-import io.reactivex.Flowable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
+import com.yumore.picture.tools.AttrsUtils;
+import com.yumore.picture.tools.DateUtils;
+import com.yumore.picture.tools.DoubleUtils;
+import com.yumore.picture.tools.PictureFileUtils;
+import com.yumore.picture.tools.SdkVersionUtils;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.reactivex.Flowable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * @author：luck

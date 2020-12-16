@@ -1,7 +1,5 @@
 package com.yumore.utility.utility;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,6 +8,9 @@ import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 
 import static com.yumore.utility.utility.RxDataTool.bytes2HexString;
 import static com.yumore.utility.utility.RxDataTool.hexString2Bytes;

@@ -5,7 +5,9 @@ import android.graphics.PorterDuff;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
+
 import com.yumore.example.R;
 import com.yumore.utility.widget.cardstack.RxCardStackView;
 import com.yumore.utility.widget.cardstack.tools.RxAdapterStack;

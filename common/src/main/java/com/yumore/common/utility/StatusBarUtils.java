@@ -7,7 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.gallery.widget.SystemBarTintManager;
 
 import java.lang.reflect.Field;

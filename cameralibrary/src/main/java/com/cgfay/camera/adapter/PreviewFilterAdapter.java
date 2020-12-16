@@ -27,8 +27,8 @@ public class PreviewFilterAdapter extends RecyclerView.Adapter<PreviewFilterAdap
     private static final String TAG = "PreviewFilterAdapter";
 
     private final Context mContext;
-    private int mSelected = 0;
     private final List<ResourceData> mFilterDataList = new ArrayList<>();
+    private int mSelected = 0;
     private OnFilterChangeListener mFilterChangeListener;
 
     public PreviewFilterAdapter(Context context, List<ResourceData> resourceDataList) {

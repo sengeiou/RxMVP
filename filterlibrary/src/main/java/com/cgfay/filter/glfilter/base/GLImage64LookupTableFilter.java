@@ -2,6 +2,7 @@ package com.cgfay.filter.glfilter.base;
 
 import android.content.Context;
 import android.opengl.GLES30;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 
 /**
@@ -14,7 +15,7 @@ public class GLImage64LookupTableFilter extends GLImageFilter {
     private int mStrengthHandle;
     private int mLookupTableTextureHandle;
 
-    private int mCurveTexture = OpenGLUtils.GL_NOT_INIT;
+    private final int mCurveTexture = OpenGLUtils.GL_NOT_INIT;
 
     public GLImage64LookupTableFilter(Context context) {
         this(context, VERTEX_SHADER, OpenGLUtils.getShaderFromAssets(context,

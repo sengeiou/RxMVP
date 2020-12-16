@@ -25,6 +25,7 @@ public class FFRecordRenderer implements GLSurfaceView.Renderer {
     private static final String TAG = "FFRecordRenderer";
     private static final boolean VERBOSE = false;
     private final WeakReference<FFMediaRecordPresenter> mWeakPresenter;
+    private final float[] mMatrix = new float[16];
     // 输入纹理大小
     protected int mTextureWidth;
     protected int mTextureHeight;
@@ -44,7 +45,6 @@ public class FFRecordRenderer implements GLSurfaceView.Renderer {
     // 输入纹理
     private int mInputTexture;
     private SurfaceTexture mSurfaceTexture;
-    private final float[] mMatrix = new float[16];
 
     public FFRecordRenderer(FFMediaRecordPresenter presenter) {
         mWeakPresenter = new WeakReference<>(presenter);

@@ -1,84 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.yumore.sticky.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:sothree="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/sliding_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        sothree:umanoDragView="@+id/dragView"
-        sothree:umanoOverlay="true"
-        sothree:umanoPanelHeight="45dp"
-        sothree:umanoParallaxOffset="0dp"
-        sothree:umanoScrollableView="@+id/list"
-        sothree:umanoShadowHeight="1dp">
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/dragView"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="45dp"
+    sothree:umanoParallaxOffset="0dp"
+    sothree:umanoScrollableView="@+id/list"
+    sothree:umanoShadowHeight="1dp">
 
     <!-- MAIN CONTENT -->
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="#4ecff2"
-                android:gravity="center"
-                android:text="答题"
-                android:textSize="22sp" />
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#4ecff2"
+            android:gravity="center"
+            android:text="答题"
+            android:textSize="22sp" />
 
         <com.yumore.answer.view.FlipperLayout
-                android:id="@+id/container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
     <!-- SLIDING LAYOUT -->
     <LinearLayout
-            android:id="@+id/dragView"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:background="#ffffff"
-            android:clickable="true"
-            android:focusable="false"
-            android:orientation="vertical">
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:focusable="false"
+        android:orientation="vertical">
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
 
             <Button
-                    android:id="@+id/bt_pre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="上一题" />
+                android:id="@+id/bt_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上一题" />
 
 
             <Button
-                    android:id="@+id/bt_next"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="下一题" />
+                android:id="@+id/bt_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下一题" />
 
 
             <TextView
-                    android:id="@+id/bt_load_anwer"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
-                    android:background="#de6767"
-                    android:gravity="center"
-                    android:text="查看" />
+                android:id="@+id/bt_load_anwer"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="#de6767"
+                android:gravity="center"
+                android:text="查看" />
 
 
         </LinearLayout>
 
         <androidx.appcompat.widget.RecyclerView
-                android:id="@+id/list"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <!--<ScrollView-->
         <!--android:id="@+id/sv"-->

@@ -7,9 +7,9 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
 public class SensorEventUtil implements SensorEventListener {
-    public int orientation = 0;
     private final SensorManager mSensorManager;
     private final Sensor mSensor;
+    public int orientation = 0;
 
     public SensorEventUtil(Context context) {
         mSensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);

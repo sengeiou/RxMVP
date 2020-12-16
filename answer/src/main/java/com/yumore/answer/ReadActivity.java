@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.GridLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentPagerAdapter;
-import androidx.core.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
 import com.alibaba.fastjson.JSON;
 import com.yumore.answer.adapter.TopicAdapter;
 import com.yumore.answer.bean.AnwerInfo;
@@ -33,6 +35,10 @@ public class ReadActivity extends AppCompatActivity {
     private ImageView shadowView;
     private ReaderViewPager readerViewPager;
     private List<AnwerInfo.DataBean.SubDataBean> datas;
+    private int prePosition2;
+    private int curPosition2;
+    private int prePosition;
+    private int curPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +46,11 @@ public class ReadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_read);
 
 
-
         initSlidingUoPanel();
 
         initList();
 
-        AnwerInfo anwerInfo =  getAnwer();
+        AnwerInfo anwerInfo = getAnwer();
 
         datas = anwerInfo.getData().getData();
         Log.i("data.size=", "" + datas.size());
@@ -62,12 +67,12 @@ public class ReadActivity extends AppCompatActivity {
         bt_pre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 int currentItem = readerViewPager.getCurrentItem();
-                currentItem = currentItem-1;
-                if (currentItem>datas.size()-1){
-                    currentItem=datas.size()-1;
+                int currentItem = readerViewPager.getCurrentItem();
+                currentItem = currentItem - 1;
+                if (currentItem > datas.size() - 1) {
+                    currentItem = datas.size() - 1;
                 }
-                readerViewPager.setCurrentItem(currentItem,true);
+                readerViewPager.setCurrentItem(currentItem, true);
             }
         });
 
@@ -75,17 +80,14 @@ public class ReadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int currentItem = readerViewPager.getCurrentItem();
-                currentItem = currentItem+1;
-                if (currentItem<0){
-                    currentItem=0;
+                currentItem = currentItem + 1;
+                if (currentItem < 0) {
+                    currentItem = 0;
                 }
-                readerViewPager.setCurrentItem(currentItem,true);
+                readerViewPager.setCurrentItem(currentItem, true);
             }
         });
     }
-
-    private int prePosition2;
-    private int curPosition2;
 
     private void initReadViewPager() {
         shadowView = findViewById(R.id.shadowView);
@@ -111,7 +113,7 @@ public class ReadActivity extends AppCompatActivity {
         readerViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                shadowView.setTranslationX(readerViewPager.getWidth()-positionOffsetPixels);
+                shadowView.setTranslationX(readerViewPager.getWidth() - positionOffsetPixels);
             }
 
             @Override
@@ -131,9 +133,6 @@ public class ReadActivity extends AppCompatActivity {
         });
 
     }
-
-    private int prePosition;
-    private int curPosition;
 
     private void initList() {
         recyclerView = findViewById(R.id.list);

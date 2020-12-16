@@ -2,6 +2,7 @@ package com.cgfay.scan.widget;
 
 import android.graphics.Rect;
 import android.view.View;
+
 import androidx.appcompat.widget.RecyclerView;
 
 /**
@@ -10,11 +11,11 @@ import androidx.appcompat.widget.RecyclerView;
 public class MediaItemDecoration extends RecyclerView.ItemDecoration {
 
     // 每行item的数量
-    private int mSpanCount;
+    private final int mSpanCount;
     // 分割线大小
-    private int mSpacing;
+    private final int mSpacing;
     // 边沿是否存在
-    private boolean mHasEdge;
+    private final boolean mHasEdge;
 
     public MediaItemDecoration(int spanCount, int spacing, boolean hasEdge) {
         this.mSpanCount = spanCount;

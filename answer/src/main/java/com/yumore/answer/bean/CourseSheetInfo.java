@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by zhangyipeng on 16/7/4.
  */
-public class CourseSheetInfo extends  BaseInfo {
+public class CourseSheetInfo extends BaseInfo {
 
 
     /**
@@ -90,15 +90,6 @@ public class CourseSheetInfo extends  BaseInfo {
                 private String date;
                 private String date_week;
                 private String date_day;
-
-                public long getId() {
-                    return id;
-                }
-
-                public void setId(long id) {
-                    this.id = id;
-                }
-
                 /**
                  * id : 26038
                  * subject_fee : 0.00
@@ -113,8 +104,15 @@ public class CourseSheetInfo extends  BaseInfo {
                  */
 
 
-
                 private List<SubDetailBean> data;
+
+                public long getId() {
+                    return id;
+                }
+
+                public void setId(long id) {
+                    this.id = id;
+                }
 
                 public String getDate() {
                     return date;

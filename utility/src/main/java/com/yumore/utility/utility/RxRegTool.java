@@ -8,7 +8,18 @@ import java.util.Hashtable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.yumore.utility.utility.RxConstTool.*;
+import static com.yumore.utility.utility.RxConstTool.REGEX_CHZ;
+import static com.yumore.utility.utility.RxConstTool.REGEX_DATE;
+import static com.yumore.utility.utility.RxConstTool.REGEX_EMAIL;
+import static com.yumore.utility.utility.RxConstTool.REGEX_IDCARD;
+import static com.yumore.utility.utility.RxConstTool.REGEX_IDCARD15;
+import static com.yumore.utility.utility.RxConstTool.REGEX_IDCARD18;
+import static com.yumore.utility.utility.RxConstTool.REGEX_IP;
+import static com.yumore.utility.utility.RxConstTool.REGEX_MOBILE_EXACT;
+import static com.yumore.utility.utility.RxConstTool.REGEX_MOBILE_SIMPLE;
+import static com.yumore.utility.utility.RxConstTool.REGEX_TEL;
+import static com.yumore.utility.utility.RxConstTool.REGEX_URL;
+import static com.yumore.utility.utility.RxConstTool.REGEX_USERNAME;
 import static com.yumore.utility.utility.RxDataTool.isNullString;
 
 /**

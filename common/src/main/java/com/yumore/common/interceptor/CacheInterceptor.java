@@ -1,21 +1,23 @@
 package com.yumore.common.interceptor;
 
 import android.content.Context;
+
 import com.yumore.common.utility.NetworkUtils;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
-
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author Nathaniel
  * @date 2019/4/13 - 19:58
  */
 public class CacheInterceptor implements Interceptor {
-    private Context context;
+    private final Context context;
 
     public CacheInterceptor(Context context) {
         this.context = context;

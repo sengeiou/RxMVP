@@ -16,6 +16,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.yumore.utility.R;
 
 
@@ -36,7 +37,7 @@ public class RxShapeLoadingView extends FrameLayout {
     private int mTextAppearance;
     private String mLoadText;
     private AnimatorSet mAnimatorSet = null;
-    private Runnable mFreeFallRunnable = new Runnable() {
+    private final Runnable mFreeFallRunnable = new Runnable() {
         @Override
         public void run() {
             freeFall();

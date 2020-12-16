@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by zhangyipeng on 16/6/30.
  */
-public class AnwerInfo extends BaseInfo{
+public class AnwerInfo extends BaseInfo {
 
 
     private DataBean data;
@@ -48,7 +48,7 @@ public class AnwerInfo extends BaseInfo{
             this.data = data;
         }
 
-        public static class SubDataBean implements Serializable{
+        public static class SubDataBean implements Serializable {
             private String answer;
             private String explain;
             private String optiona;

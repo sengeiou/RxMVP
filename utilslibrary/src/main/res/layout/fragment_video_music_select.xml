@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/fragment_music_select"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/video_window_background"
-        android:orientation="vertical">
+    android:id="@+id/fragment_music_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_window_background"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.RecyclerView
-            android:id="@+id/music_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></androidx.appcompat.widget.RecyclerView>
+        android:id="@+id/music_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.appcompat.widget.RecyclerView>
 
 </LinearLayout>

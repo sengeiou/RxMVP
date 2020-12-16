@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
+
 import androidx.viewpager.widget.ViewPager;
 
 import java.lang.reflect.Field;

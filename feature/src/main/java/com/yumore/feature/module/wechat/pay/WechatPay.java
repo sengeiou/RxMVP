@@ -2,10 +2,12 @@ package com.yumore.feature.module.wechat.pay;
 
 import android.content.Context;
 import android.text.TextUtils;
+
 import com.tencent.mm.opensdk.constants.Build;
 import com.tencent.mm.opensdk.modelpay.PayReq;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,7 +21,7 @@ public class WechatPay {
     public static final int ERROR_PAY_PARAM = 2;  //支付参数错误
     public static final int ERROR_PAY = 3;  //支付失败
     private static WechatPay sMWechatPay;
-    private IWXAPI mWXApi;
+    private final IWXAPI mWXApi;
     private String mPayParam;
     private WXPayResultCallBack mCallback;
 

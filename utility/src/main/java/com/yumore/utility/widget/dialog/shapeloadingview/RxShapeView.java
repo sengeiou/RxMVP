@@ -11,6 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
+
 import com.yumore.utility.R;
 
 
@@ -25,15 +26,15 @@ public class RxShapeView extends View {
     private static final float mTriangle2Circle = 0.25555555f;
     public boolean mIsLoading = false;
     private Shape mShape = Shape.SHAPE_CIRCLE;
-    private Interpolator mInterpolator = new DecelerateInterpolator();
-    private ArgbEvaluator mArgbEvaluator = new ArgbEvaluator();
+    private final Interpolator mInterpolator = new DecelerateInterpolator();
+    private final ArgbEvaluator mArgbEvaluator = new ArgbEvaluator();
     private int mTriangleColor;
     private int mCircleColor;
     private int mRectColor;
     /**
      * 用赛贝尔曲线画圆
      */
-    private float mMagicNumber = 0.55228475f;
+    private final float mMagicNumber = 0.55228475f;
     private Paint mPaint;
     private float mControlX = 0;
     private float mControlY = 0;

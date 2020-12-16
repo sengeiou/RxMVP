@@ -9,8 +9,10 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
+
 import com.yumore.cropper.UCrop;
 import com.yumore.cropper.UCropMulti;
 import com.yumore.cropper.model.CutInfo;

@@ -4,9 +4,11 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
+
 import com.github.chrisbanes.photoview.OnPhotoTapListener;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.yumore.gallery.entity.ImageItem;
@@ -22,11 +24,11 @@ import java.util.ArrayList;
 public class ImagePageAdapter extends PagerAdapter {
 
     public PhotoViewClickListener listener;
-    private int screenWidth;
-    private int screenHeight;
-    private ImagePicker imagePicker;
+    private final int screenWidth;
+    private final int screenHeight;
+    private final ImagePicker imagePicker;
     private ArrayList<ImageItem> images;
-    private AppCompatActivity mActivity;
+    private final AppCompatActivity mActivity;
 
     public ImagePageAdapter(AppCompatActivity activity, ArrayList<ImageItem> images) {
         this.mActivity = activity;

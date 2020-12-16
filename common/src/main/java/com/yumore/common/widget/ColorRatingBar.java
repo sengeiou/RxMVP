@@ -6,7 +6,15 @@ import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.CornerPathEffect;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -16,11 +24,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.Interpolator;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.Dimension;
+
 import com.yumore.common.R;
 
-import static android.util.TypedValue.*;
+import static android.util.TypedValue.COMPLEX_UNIT_DIP;
+import static android.util.TypedValue.COMPLEX_UNIT_SP;
+import static android.util.TypedValue.applyDimension;
 
 /**
  * A simple RatingBar for Android.
@@ -1326,7 +1338,7 @@ public class ColorRatingBar extends View {
      * - Duration: 2s
      */
     public class AnimationBuilder {
-        private ColorRatingBar ratingBar;
+        private final ColorRatingBar ratingBar;
         private long duration;
         private Interpolator interpolator;
         private float ratingTarget;

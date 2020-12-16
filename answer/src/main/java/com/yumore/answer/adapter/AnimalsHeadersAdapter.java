@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
-import com.yumore.answer.anwerdemo.R;
+
+import com.yumore.answer.R;
 import com.yumore.answer.bean.CourseSheetInfo;
 import com.yumore.sticky.StickyRecyclerHeadersAdapter;
 
@@ -24,10 +26,10 @@ import java.util.List;
 public class AnimalsHeadersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements StickyRecyclerHeadersAdapter<RecyclerView.ViewHolder> {
 
     private final float density;
-    private Context mContext;
+    private final Context mContext;
+    private final List<CourseSheetInfo.DataBean.ScheduleBean.DetailBean> items = new ArrayList<>();
     private OnCourseClickListener listener;
     private List<CourseSheetInfo.DataBean.ScheduleBean> datas;
-    private List<CourseSheetInfo.DataBean.ScheduleBean.DetailBean> items = new ArrayList<>();
     private int oneCnt;
 
     public AnimalsHeadersAdapter(Context context) {
@@ -128,7 +130,7 @@ public class AnimalsHeadersAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     private int getRandomColor() {
         SecureRandom rgen = new SecureRandom();
-        return Color.HSVToColor(360, new float[]{
+        return Color.HSVToColor(255, new float[]{
                 rgen.nextInt(359), 1, 1
         });
     }

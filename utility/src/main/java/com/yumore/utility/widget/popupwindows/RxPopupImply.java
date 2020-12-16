@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
 import com.yumore.utility.R;
 import com.yumore.utility.entity.ActionItem;
 import com.yumore.utility.utility.RxDeviceTool;
@@ -26,23 +27,24 @@ public class RxPopupImply extends PopupWindow {
     protected final int LIST_PADDING = 10;
     // 坐标的位置（x、y）
     private final int[] mLocation = new int[2];
-    private Context mContext;
+    private final Context mContext;
     // 实例化一个矩形
-    private Rect mRect = new Rect();
+    private final Rect mRect = new Rect();
     // 屏幕的宽度和高度
-    private int mScreenWidth, mScreenHeight;
+    private final int mScreenWidth;
+    private final int mScreenHeight;
 
     // 判断是否需要添加或更新列表子类项
     private boolean mIsDirty;
 
     // 位置不在中心
-    private int popupGravity = Gravity.NO_GRAVITY;
+    private final int popupGravity = Gravity.NO_GRAVITY;
 
     // 定义列表对象
     private ListView mListView;
 
     // 定义弹窗子类项列表
-    private ArrayList<ActionItem> mActionItems = new ArrayList<ActionItem>();
+    private final ArrayList<ActionItem> mActionItems = new ArrayList<ActionItem>();
     private TextView tv_imply;
 
     public RxPopupImply(Context context) {

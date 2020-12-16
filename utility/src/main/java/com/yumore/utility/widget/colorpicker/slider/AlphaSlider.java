@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.util.AttributeSet;
+
 import com.yumore.utility.utility.RxImageTool;
 import com.yumore.utility.widget.colorpicker.ColorPickerView;
 import com.yumore.utility.widget.colorpicker.builder.PaintBuilder;
@@ -16,10 +17,10 @@ import com.yumore.utility.widget.colorpicker.builder.PaintBuilder;
  */
 public class AlphaSlider extends AbsCustomSlider {
     public int color;
-    private Paint alphaPatternPaint = PaintBuilder.newPaint().build();
-    private Paint barPaint = PaintBuilder.newPaint().build();
-    private Paint solid = PaintBuilder.newPaint().build();
-    private Paint clearingStroke = PaintBuilder.newPaint().color(0xffffffff).xPerMode(PorterDuff.Mode.CLEAR).build();
+    private final Paint alphaPatternPaint = PaintBuilder.newPaint().build();
+    private final Paint barPaint = PaintBuilder.newPaint().build();
+    private final Paint solid = PaintBuilder.newPaint().build();
+    private final Paint clearingStroke = PaintBuilder.newPaint().color(0xffffffff).xPerMode(PorterDuff.Mode.CLEAR).build();
 
     private ColorPickerView colorPicker;
 

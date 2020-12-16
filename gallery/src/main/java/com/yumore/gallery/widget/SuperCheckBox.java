@@ -3,6 +3,7 @@ package com.yumore.gallery.widget;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.SoundEffectConstants;
+
 import androidx.appcompat.widget.AppCompatCheckBox;
 
 public class SuperCheckBox extends AppCompatCheckBox {

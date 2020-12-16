@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 
 import androidx.annotation.NonNull;
+
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
@@ -14,7 +15,7 @@ import java.security.MessageDigest;
  * @date 18-11-2-上午11:54
  */
 public class GlideBlurformation extends BitmapTransformation {
-    private Context context;
+    private final Context context;
 
     public GlideBlurformation(Context context) {
         this.context = context;

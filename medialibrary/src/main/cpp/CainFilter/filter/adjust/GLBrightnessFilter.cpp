@@ -9,7 +9,7 @@ const std::string kBrightnessFragmentShader = SHADER_TO_STRING(
         precision
         mediump float;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
         uniform
         sampler2D inputTexture;

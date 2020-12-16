@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/sliding_layout"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header_blue" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
+        android:orientation="vertical">
 
-
-    <Button
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="ReadActivity"
-            android:onClick="zeroClick" />
+            android:onClick="zeroClick"
+            android:text="ReadActivity" />
 
-    <Button
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="AnwerActivity"
-            android:onClick="oneClick" />
+            android:onClick="oneClick"
+            android:text="AnwerActivity" />
 
 
-    <Button
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:onClick="twoClick"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
             android:text="AnswerReadActivity" />
 
 
-    <Button
-            android:onClick="threeClick"
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:onClick="threeClick"
             android:text="CourseActivity" />
+    </LinearLayout>
 </LinearLayout>

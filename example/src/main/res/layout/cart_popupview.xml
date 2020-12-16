@@ -1,126 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
-            android:id="@+id/linearlayout"
-            android:layout_above="@+id/shopping_cart_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/deep_gray">
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/shopping_cart_bottom"
+        android:background="@color/deep_gray"
+        android:orientation="vertical">
 
         <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/gray1">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray1">
 
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/shopping_cart_right_margin"
-                    android:layout_marginTop="@dimen/shopping_cart_right_margin"
-                    android:layout_marginBottom="@dimen/shopping_cart_right_margin"
-                    android:layout_alignParentLeft="true"
-                    android:text="@string/shopcart"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/shopping_cart_small_size"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/shopping_cart_right_margin"
+                android:layout_marginTop="@dimen/shopping_cart_right_margin"
+                android:layout_marginBottom="@dimen/shopping_cart_right_margin"
+                android:text="@string/shopcart"
+                android:textColor="@color/black"
+                android:textSize="@dimen/shopping_cart_small_size" />
 
             <LinearLayout
-                    android:id="@+id/clear_layout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_alignParentRight="true"
-                    android:clickable="true"
-                    android:layout_marginRight="@dimen/shopping_cart_right_margin"
-                    android:layout_marginTop="@dimen/shopping_cart_right_margin"
-                    android:layout_marginBottom="@dimen/shopping_cart_right_margin">
+                android:id="@+id/clear_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/shopping_cart_right_margin"
+                android:layout_marginRight="@dimen/shopping_cart_right_margin"
+                android:layout_marginBottom="@dimen/shopping_cart_right_margin"
+                android:clickable="true"
+                android:orientation="horizontal">
 
                 <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/ic_add_circle_blue_700_24dp"
-                        android:layout_marginRight="@dimen/item_dish_small_horizontal_margin"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/item_dish_small_horizontal_margin"
+                    app:srcCompat="@drawable/ic_add_circle_blue_700_24dp" />
 
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/clear"
-                        android:textColor="@color/deep_gray_2"
-                        android:textSize="@dimen/shopping_cart_small_size"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear"
+                    android:textColor="@color/deep_gray_2"
+                    android:textSize="@dimen/shopping_cart_small_size" />
             </LinearLayout>
         </RelativeLayout>
 
-        <androidx.appcompat.widget.RecyclerView
-                android:id="@+id/recycleview"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/shopping_cart_bottom_recycle_height"
-                android:background="@color/white">
-        </androidx.appcompat.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shopping_cart_bottom_recycle_height"
+            android:background="@color/white" />
 
     </LinearLayout>
 
     <LinearLayout
-            android:id="@+id/shopping_cart_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/shopping_cart_height"
-            android:background="@color/light_black"
-            android:orientation="horizontal"
-            android:clickable="true"
-            android:layout_alignParentBottom="true">
+        android:id="@+id/shopping_cart_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopping_cart_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_black"
+        android:clickable="true"
+        android:orientation="horizontal">
 
         <TextView
-                android:id="@+id/shopping_cart_total_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="120"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textSize="@dimen/shopping_cart_total_price_word_size"
-                android:textStyle="bold"
-                android:visibility="gone"
-                android:layout_marginLeft="@dimen/shopping_cart_total_price_left_magrin"/>
+            android:id="@+id/shopping_cart_total_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/shopping_cart_total_price_left_magrin"
+            android:text="120"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/shopping_cart_total_price_word_size"
+            android:textStyle="bold"
+            android:visibility="gone" />
     </LinearLayout>
 
     <FrameLayout
-            android:id="@+id/shopping_cart_layout"
-            android:layout_width="@dimen/shopping_cart_circle_size"
-            android:layout_height="@dimen/shopping_cart_circle_size"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_above="@+id/lineview"
-            android:clickable="true"
-            android:background="@drawable/circle_blue">
+        android:id="@+id/shopping_cart_layout"
+        android:layout_width="@dimen/shopping_cart_circle_size"
+        android:layout_height="@dimen/shopping_cart_circle_size"
+        android:layout_above="@+id/lineview"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:background="@drawable/circle_blue"
+        android:clickable="true">
 
         <ImageView
-                android:id="@+id/shopping_cart"
-                android:layout_width="@dimen/shopping_cart_image_height"
-                android:layout_height="@dimen/shopping_cart_image_height"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_shopping_cart_white_24dp" />
+            android:id="@+id/shopping_cart"
+            android:layout_width="@dimen/shopping_cart_image_height"
+            android:layout_height="@dimen/shopping_cart_image_height"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_shopping_cart_white_24dp" />
     </FrameLayout>
 
     <TextView
-            android:id="@+id/lineview"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/shopping_cart_bottom_margin"
-            android:visibility="invisible"
-            android:layout_alignParentBottom="true"/>
+        android:id="@+id/lineview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/shopping_cart_bottom_margin"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible" />
 
     <TextView
-            android:id="@+id/shopping_cart_total_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/small_red_circle"
-            android:text="1"
-            android:textColor="@color/white"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            android:layout_above="@id/shopping_cart_bottom"
-            android:layout_alignRight="@id/shopping_cart_layout"/>
+        android:id="@+id/shopping_cart_total_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/shopping_cart_bottom"
+        android:layout_alignRight="@id/shopping_cart_layout"
+        android:background="@drawable/small_red_circle"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

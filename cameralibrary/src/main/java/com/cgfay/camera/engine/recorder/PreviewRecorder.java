@@ -62,12 +62,6 @@ public final class PreviewRecorder {
     private boolean mProcessLasSecond = true;
     // 计时器是否停止
     private boolean mTimerFinish = false;
-
-    // 分段视频列表
-    private LinkedList<RecordItem> mVideoList = new LinkedList<RecordItem>();
-
-    // 录制监听器
-    private OnRecordListener mRecordListener;
     // 倒计时Handler
     @SuppressWarnings("HandlerLeak")
     private final Handler mTimerHandler = new Handler() {
@@ -76,6 +70,10 @@ public final class PreviewRecorder {
             cancelCountDown();
         }
     };
+    // 分段视频列表
+    private LinkedList<RecordItem> mVideoList = new LinkedList<RecordItem>();
+    // 录制监听器
+    private OnRecordListener mRecordListener;
     /**
      * 录制编码监听器
      */

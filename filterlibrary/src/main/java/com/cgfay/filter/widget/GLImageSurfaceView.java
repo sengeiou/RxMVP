@@ -33,6 +33,8 @@ import javax.microedition.khronos.opengles.GL10;
  */
 public class GLImageSurfaceView extends GLSurfaceView implements GLSurfaceView.Renderer {
 
+    private final FloatBuffer mVertexBuffer;
+    private final FloatBuffer mTextureBuffer;
     // 输入纹理
     protected int mInputTexture = OpenGLUtils.GL_NOT_TEXTURE;
     // 图片输入滤镜
@@ -51,8 +53,6 @@ public class GLImageSurfaceView extends GLSurfaceView implements GLSurfaceView.R
     protected Handler mMainHandler;
     boolean takePicture;
     CaptureCallback mCaptureCallback;
-    private final FloatBuffer mVertexBuffer;
-    private final FloatBuffer mTextureBuffer;
     // 输入图片
     private Bitmap mBitmap;
     // 记录当前滤镜数据

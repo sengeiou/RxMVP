@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.example.R;
 import com.yumore.example.entity.ModelDishMenu;
 
@@ -18,10 +20,10 @@ import java.util.List;
  * @date 16-11-10
  */
 public class AdapterLeftMenu extends RecyclerView.Adapter {
-    private Context mContext;
-    private ArrayList<ModelDishMenu> mMenuList;
+    private final Context mContext;
+    private final ArrayList<ModelDishMenu> mMenuList;
     private int mSelectedNum;
-    private List<onItemSelectedListener> mSelectedListenerList;
+    private final List<onItemSelectedListener> mSelectedListenerList;
 
     public AdapterLeftMenu(Context mContext, ArrayList<ModelDishMenu> mMenuList) {
         this.mContext = mContext;
@@ -54,11 +56,7 @@ public class AdapterLeftMenu extends RecyclerView.Adapter {
         ModelDishMenu modelDishMenu = mMenuList.get(position);
         LeftMenuViewHolder viewHolder = (LeftMenuViewHolder) holder;
         viewHolder.menuName.setText(modelDishMenu.getMenuName());
-        if (mSelectedNum == position) {
-            viewHolder.menuLayout.setSelected(true);
-        } else {
-            viewHolder.menuLayout.setSelected(false);
-        }
+        viewHolder.menuLayout.setSelected(mSelectedNum == position);
     }
 
     @Override

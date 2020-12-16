@@ -19,8 +19,10 @@ import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
+
 import androidx.core.view.MotionEventCompat;
 import androidx.core.view.ViewCompat;
+
 import com.nineoldandroids.view.animation.AnimatorProxy;
 
 import java.util.ArrayList;
@@ -72,7 +74,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
     /**
      * Default initial state for the component
      */
-    private static PanelState DEFAULT_SLIDE_STATE = PanelState.COLLAPSED;
+    private static final PanelState DEFAULT_SLIDE_STATE = PanelState.COLLAPSED;
     /**
      * The paint used to dim the main layout when sliding
      */
@@ -170,7 +172,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
     private float mInitialMotionX;
     private float mInitialMotionY;
     private boolean mIsScrollableViewHandlingTouch = false;
-    private List<PanelSlideListener> mPanelSlideListeners = new ArrayList<>();
+    private final List<PanelSlideListener> mPanelSlideListeners = new ArrayList<>();
     private View.OnClickListener mFadeOnClickListener;
     /**
      * Stores whether or not the pane was expanded the last time it was slideable.

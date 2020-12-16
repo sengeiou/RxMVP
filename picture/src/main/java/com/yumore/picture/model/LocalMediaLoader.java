@@ -5,8 +5,10 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+
 import com.yumore.picture.R;
 import com.yumore.picture.config.PictureConfig;
 import com.yumore.picture.config.PictureMimeType;
@@ -63,12 +65,12 @@ public class LocalMediaLoader {
             String.valueOf(MediaStore.Files.FileColumns.MEDIA_TYPE_IMAGE),
             String.valueOf(MediaStore.Files.FileColumns.MEDIA_TYPE_VIDEO),
     };
-    private int type;
-    private Context mContext;
-    private boolean isGif;
-    private long videoMaxS;
-    private long videoMinS;
-    private boolean isAndroidQ;
+    private final int type;
+    private final Context mContext;
+    private final boolean isGif;
+    private final long videoMaxS;
+    private final long videoMinS;
+    private final boolean isAndroidQ;
 
     public LocalMediaLoader(Context context, int type, boolean isGif, long videoMaxS, long videoMinS) {
         this.mContext = context.getApplicationContext();

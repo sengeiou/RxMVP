@@ -21,6 +21,7 @@ import butterknife.ButterKnife;
  */
 public class ActivitySeekBar extends BaseActivity {
 
+    private final DecimalFormat df = new DecimalFormat("0.00");
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
     @BindView(R2.id.seekbar1)
@@ -35,8 +36,6 @@ public class ActivitySeekBar extends BaseActivity {
     RxSeekBar mSeekbar4;
     @BindView(R2.id.activity_main)
     LinearLayout mActivityMain;
-
-    private final DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

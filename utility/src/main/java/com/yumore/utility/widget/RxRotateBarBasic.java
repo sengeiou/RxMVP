@@ -1,6 +1,10 @@
 package com.yumore.utility.widget;
 
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.RectF;
 import android.text.TextPaint;
 
 import java.util.ArrayList;
@@ -37,8 +41,11 @@ public class RxRotateBarBasic {
 
     private ArrayList<Rate> rates;
 
-    private Paint ratedPaint, unRatedPaint, shadowPaint, outlinePaint;
-    private TextPaint titlePaint;
+    private final Paint ratedPaint;
+    private final Paint unRatedPaint;
+    private final Paint shadowPaint;
+    private final Paint outlinePaint;
+    private final TextPaint titlePaint;
 
     private int mRadius;
 
@@ -290,7 +297,8 @@ public class RxRotateBarBasic {
      * Rate class
      */
     public class Rate {
-        private float startAngle, sweepAngle;
+        private final float startAngle;
+        private final float sweepAngle;
 
         public Rate(float startAngle, float sweepAngle) {
             this.startAngle = startAngle;

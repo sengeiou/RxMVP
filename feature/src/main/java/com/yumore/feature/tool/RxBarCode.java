@@ -2,7 +2,9 @@ package com.yumore.feature.tool;
 
 import android.graphics.Bitmap;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -103,7 +105,7 @@ public class RxBarCode {
 
         private int codeHeight = 300;
 
-        private CharSequence content;
+        private final CharSequence content;
 
         public Builder(@NonNull CharSequence text) {
             this.content = text;

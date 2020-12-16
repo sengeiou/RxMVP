@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.example.R;
 import com.yumore.example.adapter.AdapterPopupDish;
 import com.yumore.example.callback.ShopCartInterface;
@@ -26,7 +28,7 @@ public class RxDialogShopCart extends Dialog implements View.OnClickListener, Sh
 
     private LinearLayout linearLayout, bottomLayout, clearLayout;
     private FrameLayout shopingcartLayout;
-    private ModelShopCart mModelShopCart;
+    private final ModelShopCart mModelShopCart;
     private TextView totalPriceTextView;
     private TextView totalPriceNumTextView;
     private RecyclerView recyclerView;

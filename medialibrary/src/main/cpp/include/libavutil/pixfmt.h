@@ -123,11 +123,11 @@ enum AVPixelFormat {
 #if FF_API_VAAPI
     /** @name Deprecated pixel formats */
     /**@{*/
-            AV_PIX_FMT_VAAPI_MOCO, ///< HW acceleration through VA API at motion compensation entry-point, Picture.data[3] contains a vaapi_render_state struct which contains macroblocks as well as various fields extracted from headers
+    AV_PIX_FMT_VAAPI_MOCO, ///< HW acceleration through VA API at motion compensation entry-point, Picture.data[3] contains a vaapi_render_state struct which contains macroblocks as well as various fields extracted from headers
     AV_PIX_FMT_VAAPI_IDCT, ///< HW acceleration through VA API at IDCT entry-point, Picture.data[3] contains a vaapi_render_state struct which contains fields extracted from headers
     AV_PIX_FMT_VAAPI_VLD,  ///< HW decoding through VA API, Picture.data[3] contains a VASurfaceID
     /**@}*/
-            AV_PIX_FMT_VAAPI = AV_PIX_FMT_VAAPI_VLD,
+    AV_PIX_FMT_VAAPI = AV_PIX_FMT_VAAPI_VLD,
 #else
     /**
      *  Hardware acceleration through VA-API, data[3] contains a
@@ -164,7 +164,7 @@ enum AVPixelFormat {
      * Notice that each 9/10 bits sample is stored in 16 bits with extra padding.
      * If you want to support multiple bit depths, then using AV_PIX_FMT_YUV420P16* with the bpp stored separately is better.
      */
-            AV_PIX_FMT_YUV420P9BE, ///< planar YUV 4:2:0, 13.5bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian
+    AV_PIX_FMT_YUV420P9BE, ///< planar YUV 4:2:0, 13.5bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian
     AV_PIX_FMT_YUV420P9LE, ///< planar YUV 4:2:0, 13.5bpp, (1 Cr & Cb sample per 2x2 Y samples), little-endian
     AV_PIX_FMT_YUV420P10BE,///< planar YUV 4:2:0, 15bpp, (1 Cr & Cb sample per 2x2 Y samples), big-endian
     AV_PIX_FMT_YUV420P10LE,///< planar YUV 4:2:0, 15bpp, (1 Cr & Cb sample per 2x2 Y samples), little-endian
@@ -233,12 +233,12 @@ enum AVPixelFormat {
      *  HW acceleration through QSV, data[3] contains a pointer to the
      *  mfxFrameSurface1 structure.
      */
-            AV_PIX_FMT_QSV,
+    AV_PIX_FMT_QSV,
     /**
      * HW acceleration though MMAL, data[3] contains a pointer to the
      * MMAL_BUFFER_HEADER_T structure.
      */
-            AV_PIX_FMT_MMAL,
+    AV_PIX_FMT_MMAL,
 
     AV_PIX_FMT_D3D11VA_VLD,  ///< HW decoding through Direct3D11, Picture.data[3] contains a ID3D11VideoDecoderOutputView pointer
 
@@ -246,7 +246,7 @@ enum AVPixelFormat {
      * HW acceleration through CUDA. data[i] contain CUdeviceptr pointers
      * exactly as for system memory frames.
      */
-            AV_PIX_FMT_CUDA,
+    AV_PIX_FMT_CUDA,
 
     AV_PIX_FMT_0RGB = 0x123 + 4,///< packed RGB 8:8:8, 32bpp, XRGBXRGB...   X=unused/undefined
     AV_PIX_FMT_RGB0,        ///< packed RGB 8:8:8, 32bpp, RGBXRGBX...   X=unused/undefined

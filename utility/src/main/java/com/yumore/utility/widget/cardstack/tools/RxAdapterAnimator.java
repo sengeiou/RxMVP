@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.view.animation.AccelerateDecelerateInterpolator;
+
 import com.yumore.utility.widget.cardstack.RxCardStackView;
 
 

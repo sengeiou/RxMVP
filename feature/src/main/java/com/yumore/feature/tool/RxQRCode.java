@@ -2,7 +2,9 @@ package com.yumore.feature.tool;
 
 import android.graphics.Bitmap;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
@@ -101,7 +103,7 @@ public class RxQRCode {
 
         private int codeSide = 800;
 
-        private CharSequence content;
+        private final CharSequence content;
 
         public Builder(@NonNull CharSequence text) {
             this.content = text;

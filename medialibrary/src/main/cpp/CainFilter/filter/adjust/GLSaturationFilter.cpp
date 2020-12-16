@@ -9,7 +9,7 @@ const std::string kSaturationFragmentShader = SHADER_TO_STRING(
         precision
         mediump float;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
         uniform
         sampler2D inputTexture;

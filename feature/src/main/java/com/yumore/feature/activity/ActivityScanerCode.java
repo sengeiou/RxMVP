@@ -66,44 +66,35 @@ public class ActivityScanerCode extends BaseActivity {
      * 扫描结果监听
      */
     private static OnRxScanerListener mScanerListener;
-
-    private InactivityTimer inactivityTimer;
-
-    /**
-     * 扫描处理
-     */
-    private CaptureActivityHandler handler;
-
-    /**
-     * 整体根布局
-     */
-    private RelativeLayout mContainer = null;
-
-    /**
-     * 扫描框根布局
-     */
-    private RelativeLayout mCropLayout = null;
-
-    /**
-     * 扫描边界的宽度
-     */
-    private int mCropWidth = 0;
-
-    /**
-     * 扫描边界的高度
-     */
-    private int mCropHeight = 0;
-
-    /**
-     * 是否有预览
-     */
-    private boolean hasSurface;
-
     /**
      * 扫描成功后是否震动
      */
     private final boolean vibrate = true;
-
+    private InactivityTimer inactivityTimer;
+    /**
+     * 扫描处理
+     */
+    private CaptureActivityHandler handler;
+    /**
+     * 整体根布局
+     */
+    private RelativeLayout mContainer = null;
+    /**
+     * 扫描框根布局
+     */
+    private RelativeLayout mCropLayout = null;
+    /**
+     * 扫描边界的宽度
+     */
+    private int mCropWidth = 0;
+    /**
+     * 扫描边界的高度
+     */
+    private int mCropHeight = 0;
+    /**
+     * 是否有预览
+     */
+    private boolean hasSurface;
     /**
      * 闪光灯开启状态
      */

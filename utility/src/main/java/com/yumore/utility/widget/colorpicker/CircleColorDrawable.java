@@ -3,6 +3,7 @@ package com.yumore.utility.widget.colorpicker;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
+
 import com.yumore.utility.widget.colorpicker.builder.PaintBuilder;
 
 
@@ -12,9 +13,9 @@ import com.yumore.utility.widget.colorpicker.builder.PaintBuilder;
  */
 public class CircleColorDrawable extends ColorDrawable {
     private float strokeWidth;
-    private Paint strokePaint = PaintBuilder.newPaint().style(Paint.Style.STROKE).stroke(strokeWidth).color(0xffffffff).build();
-    private Paint fillPaint = PaintBuilder.newPaint().style(Paint.Style.FILL).color(0).build();
-    private Paint fillBackPaint = PaintBuilder.newPaint().shader(PaintBuilder.createAlphaPatternShader(16)).build();
+    private final Paint strokePaint = PaintBuilder.newPaint().style(Paint.Style.STROKE).stroke(strokeWidth).color(0xffffffff).build();
+    private final Paint fillPaint = PaintBuilder.newPaint().style(Paint.Style.FILL).color(0).build();
+    private final Paint fillBackPaint = PaintBuilder.newPaint().shader(PaintBuilder.createAlphaPatternShader(16)).build();
 
     public CircleColorDrawable() {
         super();

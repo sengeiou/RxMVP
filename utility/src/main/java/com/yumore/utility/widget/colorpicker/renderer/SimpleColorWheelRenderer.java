@@ -2,6 +2,7 @@ package com.yumore.utility.widget.colorpicker.renderer;
 
 import android.graphics.Color;
 import android.graphics.Paint;
+
 import com.yumore.utility.widget.colorpicker.ColorCircle;
 import com.yumore.utility.widget.colorpicker.builder.PaintBuilder;
 
@@ -11,8 +12,8 @@ import com.yumore.utility.widget.colorpicker.builder.PaintBuilder;
  * @date 2018/6/11 11:36:40 整合修改
  */
 public class SimpleColorWheelRenderer extends AbsColorWheelRenderer {
-    private Paint selectorFill = PaintBuilder.newPaint().build();
-    private float[] hsv = new float[3];
+    private final Paint selectorFill = PaintBuilder.newPaint().build();
+    private final float[] hsv = new float[3];
 
     @Override
     public void draw() {

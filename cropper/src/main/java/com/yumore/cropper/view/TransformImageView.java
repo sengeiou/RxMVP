@@ -9,9 +9,11 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ImageView;
+
 import androidx.annotation.IntRange;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.yumore.cropper.callback.BitmapLoadCallback;
 import com.yumore.cropper.model.ExifInfo;
 import com.yumore.cropper.util.BitmapLoadUtils;

@@ -15,8 +15,8 @@ public interface OnFragmentToActivity<T> {
     /**
      * 获取指定fragment的数据
      *
-     * @param action   action
-     * @param t        data
+     * @param action action
+     * @param t      data
      */
     void onCallback(String action, T t);
 }

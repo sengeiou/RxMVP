@@ -22,7 +22,13 @@ package com.cgfay.filter.multimedia;
  * All files in the folder are under this Apache License, Version 2.0.
  */
 
-import android.media.*;
+import android.media.AudioFormat;
+import android.media.AudioRecord;
+import android.media.MediaCodec;
+import android.media.MediaCodecInfo;
+import android.media.MediaCodecList;
+import android.media.MediaFormat;
+import android.media.MediaRecorder;
 import android.util.Log;
 
 import java.io.IOException;
@@ -158,7 +164,7 @@ public class MediaAudioEncoder extends MediaEncoder {
      */
     private class AudioThread extends Thread {
 
-        private Object mSync = new Object();
+        private final Object mSync = new Object();
         private volatile boolean mAudioStarted = false;
         private WeakReference<AudioRecord> mWeakRecorder;
 

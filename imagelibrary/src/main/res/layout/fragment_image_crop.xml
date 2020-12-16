@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:gravity="bottom"
-        android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical">
 
     <!-- 图片内容布局 -->
     <FrameLayout
-            android:id="@+id/layout_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
         <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:scaleType="center" />
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="center" />
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="bottom"
-                android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:orientation="vertical">
 
             <com.yumore.image.widget.CropCoverView
                 android:id="@+id/image_cop_view"
@@ -38,10 +38,10 @@
     </FrameLayout>
 
     <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp100"
-            android:background="@color/dimgray"
-            android:scrollbars="none">
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100"
+        android:background="@color/dimgray"
+        android:scrollbars="none">
 
         <include layout="@layout/view_image_crop_button" />
     </HorizontalScrollView>

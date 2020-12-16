@@ -2,6 +2,7 @@ package com.yumore.common.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomRecyclerView extends RecyclerView {

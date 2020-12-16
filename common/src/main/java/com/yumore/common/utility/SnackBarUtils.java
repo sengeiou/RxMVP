@@ -6,7 +6,14 @@ import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.annotation.*;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+
 import com.google.android.material.snackbar.Snackbar;
 
 import java.lang.annotation.Retention;
@@ -27,7 +34,7 @@ public final class SnackBarUtils {
     private static final int COLOR_ERROR = 0xFFFF0000;
     private static final int COLOR_MESSAGE = 0xFFFFFFFF;
     private static WeakReference<Snackbar> weakReference;
-    private View view;
+    private final View view;
     private CharSequence message;
     private int messageColor;
     private int bgColor;

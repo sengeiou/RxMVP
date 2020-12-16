@@ -35,6 +35,7 @@ public class RecordRenderer implements GLSurfaceView.Renderer {
     private static final int RECORDING_ON = 1;
     // presenter
     private final WeakReference<RecordPresenter> mWeakPresenter;
+    private final float[] mMatrix = new float[16];
     // 输入纹理大小
     protected int mTextureWidth;
     protected int mTextureHeight;
@@ -55,7 +56,6 @@ public class RecordRenderer implements GLSurfaceView.Renderer {
     // 输入纹理
     private int mInputTexture;
     private SurfaceTexture mSurfaceTexture;
-    private final float[] mMatrix = new float[16];
 
     public RecordRenderer(RecordPresenter presenter) {
         mWeakPresenter = new WeakReference<>(presenter);

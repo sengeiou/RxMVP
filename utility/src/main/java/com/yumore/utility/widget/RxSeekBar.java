@@ -6,13 +6,25 @@ import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.RadialGradient;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Shader;
+import android.graphics.Typeface;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import androidx.core.content.ContextCompat;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxImageTool;
 
@@ -39,20 +51,20 @@ public class RxSeekBar extends View {
     private final int mSeekBarMode;
     private final boolean mHideProgressHint;
     //default seekbar's padding left and right
-    private int defaultPaddingLeftAndRight;
-    private int defaultPaddingTop;
+    private final int defaultPaddingLeftAndRight;
+    private final int defaultPaddingTop;
     //默认为1，当大于1时自动切回刻度模式
     //The default is 1, and when it is greater than 1,
     // it will automatically switch back to the scale mode
     private int cellsCount = 1;
     //刻度与进度条间的间距
     //The spacing between the scale and the progress bar
-    private int textPadding;
+    private final int textPadding;
     //进度提示背景与按钮之间的距离
     //The progress indicates the distance between the background and the button
-    private int mHintBGPadding;
-    private int mSeekBarHeight;
-    private int mThumbSize;
+    private final int mHintBGPadding;
+    private final int mSeekBarHeight;
+    private final int mThumbSize;
     //两个按钮之间的最小距离
     //The minimum distance between two buttons
     private int reserveCount;
@@ -63,23 +75,23 @@ public class RxSeekBar extends View {
     private int lineWidth;
     //选择过的进度条颜色
     // the color of the selected progress bar
-    private int colorLineSelected;
+    private final int colorLineSelected;
     //未选则的进度条颜色
     // the color of the unselected progress bar
-    private int colorLineEdge;
+    private final int colorLineEdge;
     //The foreground color of progress bar and thumb button.
-    private int colorPrimary;
+    private final int colorPrimary;
     //The background color of progress bar and thumb button.
-    private int colorSecondary;
+    private final int colorSecondary;
     //刻度文字与提示文字的大小
     //Scale text and prompt text size
-    private int mTextSize;
+    private final int mTextSize;
     private int lineTop, lineBottom, lineLeft, lineRight;
     //进度提示背景的高度，宽度如果是0的话会自适应调整
     //Progress prompted the background height, width,
     // if it is 0, then adaptively adjust
     private float mHintBGHeight;
-    private float mHintBGWith;
+    private final float mHintBGWith;
     private float offsetValue;
     private float cellsPercent;
     private float reserveValue;
@@ -91,14 +103,14 @@ public class RxSeekBar extends View {
     private boolean isEnable = true;
     //刻度上显示的文字
     //The texts displayed on the scale
-    private CharSequence[] mTextArray;
+    private final CharSequence[] mTextArray;
 
     private Bitmap mProgressHintBG;
-    private Paint mMainPaint = new Paint();
-    private Paint mCursorPaint = new Paint();
+    private final Paint mMainPaint = new Paint();
+    private final Paint mCursorPaint = new Paint();
     private Paint mProgressPaint;
-    private RectF line = new RectF();
-    private SeekBar leftSB;
+    private final RectF line = new RectF();
+    private final SeekBar leftSB;
     private SeekBar rightSB;
     private SeekBar currTouch;
 
@@ -704,7 +716,7 @@ public class RxSeekBar extends View {
         private int left, right, top, bottom;
         private float currPercent;
         private float material = 0;
-        private boolean isLeft;
+        private final boolean isLeft;
         private Bitmap bmp;
         private ValueAnimator anim;
         private RadialGradient shadowGradient;

@@ -3,17 +3,19 @@ package com.yumore.picture.permissions;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.functions.Function;
 import io.reactivex.subjects.PublishSubject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * author：luck

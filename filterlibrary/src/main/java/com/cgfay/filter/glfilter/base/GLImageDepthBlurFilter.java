@@ -13,6 +13,8 @@ import java.nio.FloatBuffer;
  */
 public class GLImageDepthBlurFilter extends GLImageFilter {
 
+    // 高斯模糊图像缩放半径
+    private final float mBlurScale = 0.5f;
     private int mBlurImageHandle;
     private int mInnerHandle;
     private int mOuterHandle;
@@ -22,12 +24,8 @@ public class GLImageDepthBlurFilter extends GLImageFilter {
     private int mLine1Handle;
     private int mLine2Handle;
     private int mIntensityHandle;
-
     // 高斯模糊滤镜
     private GLImageGaussianBlurFilter mGaussianBlurFilter;
-
-    // 高斯模糊图像缩放半径
-    private final float mBlurScale = 0.5f;
     // 存储经过高斯模糊处理的纹理id
     private int mBlurTexture;
 

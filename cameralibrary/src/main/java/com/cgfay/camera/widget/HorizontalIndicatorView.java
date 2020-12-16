@@ -26,31 +26,23 @@ import java.util.List;
 public class HorizontalIndicatorView extends View {
 
     private final Context mContext;
+    private final Rect mRect = new Rect();
     private List<String> mIndicators = new ArrayList<String>();//数据源字符串数组
-
     private boolean isFirst = true;
     private int mWidth;//控件宽度
     private int mHeight;//控件高度
-
-
     private int mFontSize;//每个字母所占的大小；
     private TextPaint mTextPaint;
     private Paint mSelectedPaint;//被选中文字的画笔
-
-
     private int mCurrentIndex;
     private float mPreviewX;
     private float mOffset;
-
     // 属性
     private int mSeeSize = 5;
     private float mTextSize;
     private int mTextColor;
     private float mSelectedTextSize;
     private int mSelectedColor;
-
-    private final Rect mRect = new Rect();
-
     private int mTextWidth = 0;
     private int mTextHeight = 0;
     private int mCenterTextWidth = 0;

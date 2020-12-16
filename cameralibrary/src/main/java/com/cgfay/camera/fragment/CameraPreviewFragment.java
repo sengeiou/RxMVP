@@ -54,7 +54,10 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
 
     // 对焦大小
     private static final int FocusSize = 100;
-
+    // 预览参数
+    private final CameraParam mCameraParam;
+    // 相机类型指示文字
+    private final List<String> mIndicatorText = new ArrayList<String>();
     // 相机权限使能标志
     private boolean mCameraEnable = false;
     // 存储权限使能标志
@@ -65,13 +68,8 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     private boolean isShowingStickers = false;
     // 显示滤镜页面
     private boolean isShowingFilters = false;
-
     // 处于延时拍照状态
     private boolean mDelayTaking = false;
-
-    // 预览参数
-    private final CameraParam mCameraParam;
-
     // Fragment主页面
     private View mContentView;
     // 预览部分
@@ -96,7 +94,6 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     private LinearLayout mBtnEffect;
     // 设置的PopupView
     private PopupSettingView mSettingView;
-
     private LinearLayout mLayoutBottom;
     // 速度选择条
     private RecordSpeedLevelBar mSpeedBar;
@@ -115,8 +112,6 @@ public class CameraPreviewFragment extends Fragment implements View.OnClickListe
     private Button mBtnRecordPreview;
     // 相机指示器
     private CameraTabView mCameraTabView;
-    // 相机类型指示文字
-    private final List<String> mIndicatorText = new ArrayList<String>();
     // 合并对话框
     private CombineVideoDialogFragment mCombineDialog;
     // 主线程Handler

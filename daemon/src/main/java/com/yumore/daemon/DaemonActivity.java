@@ -6,11 +6,18 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
-import android.widget.*;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.yumore.daemon.adapter.GridImageAdapter;
 import com.yumore.picture.PictureSelector;
@@ -20,12 +27,13 @@ import com.yumore.picture.entity.LocalMedia;
 import com.yumore.picture.permissions.RxPermissions;
 import com.yumore.picture.tools.PictureFileUtils;
 import com.yumore.provider.RouterConstants;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 
 /**
  * @author Nathaniel
@@ -46,7 +54,7 @@ public class DaemonActivity extends AppCompatActivity implements View.OnClickLis
             cb_showCropFrame, cb_preview_audio;
     private int themeId;
     private int chooseMode = PictureMimeType.ofAll();
-    private GridImageAdapter.onAddPicClickListener onAddPicClickListener = new GridImageAdapter.onAddPicClickListener() {
+    private final GridImageAdapter.onAddPicClickListener onAddPicClickListener = new GridImageAdapter.onAddPicClickListener() {
         @Override
         public void onAddPicClick() {
             boolean mode = cb_mode.isChecked();

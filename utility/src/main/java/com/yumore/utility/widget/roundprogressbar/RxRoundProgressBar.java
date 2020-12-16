@@ -24,6 +24,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
 import com.yumore.utility.R;
 import com.yumore.utility.widget.roundprogressbar.common.RxBaseRoundProgressBar;
 

@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxTimeTool;
 import com.yumore.utility.widget.dialog.wheel.DateArrayAdapter;
@@ -35,15 +36,15 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
     private CheckBox mCheckBoxDay;
     private Calendar mCalendar;
     private LinearLayout llType;
-    private String[] mMonths = new String[]{"01", "02", "03",
+    private final String[] mMonths = new String[]{"01", "02", "03",
             "04", "05", "06", "07", "08", "09", "10", "11", "12"};
-    private String[] mDays = new String[]{"01", "02", "03", "04", "05", "06", "07",
+    private final String[] mDays = new String[]{"01", "02", "03", "04", "05", "06", "07",
             "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19",
             "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"};
 
     private int beginYear = 0;
     private int endYear = 0;
-    private int divideYear = endYear - beginYear;
+    private final int divideYear = endYear - beginYear;
 
     public RxDialogWheelYearMonthDay(Context mContext) {
         super(mContext);

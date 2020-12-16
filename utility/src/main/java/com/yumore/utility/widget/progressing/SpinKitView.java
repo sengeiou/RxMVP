@@ -9,6 +9,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ProgressBar;
+
 import com.yumore.utility.R;
 import com.yumore.utility.widget.progressing.sprite.Sprite;
 
@@ -17,7 +18,7 @@ import com.yumore.utility.widget.progressing.sprite.Sprite;
  */
 public class SpinKitView extends ProgressBar {
 
-    private Style mStyle;
+    private final Style mStyle;
     private int mColor;
     private Sprite mSprite;
 

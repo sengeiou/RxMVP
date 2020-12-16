@@ -2,6 +2,7 @@ package com.yumore.common.basic;
 
 import android.app.Application;
 import android.content.Context;
+
 import com.yumore.common.helper.InitializeHelper;
 
 /**

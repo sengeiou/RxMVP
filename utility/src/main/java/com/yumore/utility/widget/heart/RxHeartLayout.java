@@ -19,6 +19,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
+
 import com.yumore.utility.R;
 import com.yumore.utility.animation.RxAbstractPathAnimator;
 import com.yumore.utility.animation.RxPathAnimator;

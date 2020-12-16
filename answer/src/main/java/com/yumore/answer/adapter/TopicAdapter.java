@@ -7,8 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
-import com.yumore.answer.anwerdemo.R;
+
+import com.yumore.answer.R;
 
 /**
  * Created by zhangyipeng on 16/6/30.
@@ -17,7 +19,7 @@ public class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.TopicViewHol
 
     private final LayoutInflater inflater;
     private final Resources resources;
-    private Context mContext;
+    private final Context mContext;
     private OnTopicClickListener listener;
     private int curPosition;
     private int prePosition;

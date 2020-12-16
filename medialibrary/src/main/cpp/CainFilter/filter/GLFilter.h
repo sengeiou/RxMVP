@@ -26,10 +26,10 @@ const std::string kDefaultVertexShader = SHADER_TO_STRING(
         precision
         mediump float;
         attribute
-        highp
+                highp
         vec4 aPosition;
         attribute
-        highp
+                highp
         vec2 aTextureCoord;
         varying
         vec2 textureCoordinate;

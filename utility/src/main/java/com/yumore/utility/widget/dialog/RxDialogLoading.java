@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.utility.R;
 import com.yumore.utility.widget.RxToast;
 import com.yumore.utility.widget.progressing.SpinKitView;

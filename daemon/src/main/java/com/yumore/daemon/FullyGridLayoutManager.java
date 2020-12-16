@@ -3,6 +3,7 @@ package com.yumore.daemon;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class FullyGridLayoutManager extends GridLayoutManager {
     final RecyclerView.State mState = new RecyclerView.State();
-    private int[] mMeasuredDimension = new int[2];
+    private final int[] mMeasuredDimension = new int[2];
 
     public FullyGridLayoutManager(Context context, int spanCount) {
         super(context, spanCount);

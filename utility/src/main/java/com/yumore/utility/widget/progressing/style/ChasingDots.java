@@ -3,6 +3,7 @@ package com.yumore.utility.widget.progressing.style;
 import android.animation.ValueAnimator;
 import android.graphics.Rect;
 import android.view.animation.LinearInterpolator;
+
 import com.yumore.utility.widget.progressing.animation.SpriteAnimatorBuilder;
 import com.yumore.utility.widget.progressing.sprite.CircleSprite;
 import com.yumore.utility.widget.progressing.sprite.Sprite;

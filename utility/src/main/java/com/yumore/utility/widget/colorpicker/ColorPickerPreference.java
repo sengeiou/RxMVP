@@ -12,7 +12,9 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
+
 import com.yumore.utility.R;
 import com.yumore.utility.widget.colorpicker.builder.ColorPickerClickListener;
 import com.yumore.utility.widget.colorpicker.builder.ColorPickerDialogBuilder;

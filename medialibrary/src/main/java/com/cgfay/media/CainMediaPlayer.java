@@ -102,6 +102,7 @@ public class CainMediaPlayer implements IMediaPlayer {
         native_init();
     }
 
+    private final EventHandler mEventHandler;
     @AccessedByNative
     private long mNativeContext;
     @AccessedByNative
@@ -109,7 +110,6 @@ public class CainMediaPlayer implements IMediaPlayer {
     @AccessedByNative
     private int mListenerContext;   // nothing
     private SurfaceHolder mSurfaceHolder;
-    private final EventHandler mEventHandler;
     private PowerManager.WakeLock mWakeLock = null;
     private boolean mScreenOnWhilePlaying;
     private boolean mStayAwake;

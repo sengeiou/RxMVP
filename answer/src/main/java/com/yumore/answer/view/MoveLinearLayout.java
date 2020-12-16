@@ -26,19 +26,19 @@ public class MoveLinearLayout extends LinearLayout {
 
     }
 
-    public void setScroller(Scroller scroller){
-       this.mScroller = scroller;
+    public void setScroller(Scroller scroller) {
+        this.mScroller = scroller;
     }
 
     @Override
     public void computeScroll() {
         super.computeScroll();
-        if (mScroller==null){
+        if (mScroller == null) {
             return;
         }
 
-        if(mScroller.computeScrollOffset()){
-            scrollTo(mScroller.getCurrX(),mScroller.getCurrY());
+        if (mScroller.computeScrollOffset()) {
+            scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
         }
         invalidate();//必须要调用
 

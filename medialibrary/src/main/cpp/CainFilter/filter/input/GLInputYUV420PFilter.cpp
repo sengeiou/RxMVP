@@ -10,16 +10,16 @@ const std::string kYUV420PFragmentShader = SHADER_TO_STRING(
         precision
         mediump float;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
         uniform
-        lowp
+                lowp
         sampler2D inputTextureY;
         uniform
-        lowp
+                lowp
         sampler2D inputTextureU;
         uniform
-        lowp
+                lowp
         sampler2D inputTextureV;
 
         void main() {

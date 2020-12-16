@@ -1,12 +1,18 @@
 package com.yumore.utility.widget.progressing.sprite;
 
 import android.animation.ValueAnimator;
-import android.graphics.*;
+import android.graphics.Camera;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.Matrix;
+import android.graphics.PixelFormat;
+import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.util.FloatProperty;
 import android.util.IntProperty;
 import android.util.Property;
+
 import com.yumore.utility.utility.RxAnimationTool;
 
 
@@ -160,8 +166,8 @@ public abstract class Sprite extends Drawable implements
     private float translateYPercentage;
     private ValueAnimator animator;
     private int alpha = 255;
-    private Camera mCamera;
-    private Matrix mMatrix;
+    private final Camera mCamera;
+    private final Matrix mMatrix;
 
     public Sprite() {
         mCamera = new Camera();

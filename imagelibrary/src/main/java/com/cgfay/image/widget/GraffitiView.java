@@ -9,6 +9,7 @@ import android.support.annotation.ColorInt;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import com.cgfay.imagelibrary.R;
 
 import java.util.ArrayList;
@@ -24,8 +25,8 @@ public class GraffitiView extends View {
     private Paint mPaint;
     private Path mPath;
     // 当前存放的列表
-    private List<Path> savePathList = new ArrayList<>();
-    private List<Paint> paintList = new ArrayList<>();
+    private final List<Path> savePathList = new ArrayList<>();
+    private final List<Paint> paintList = new ArrayList<>();
     private boolean isDrawMode;
     private OnLineChangeListener mLineChangeListener;
     // 触摸状态

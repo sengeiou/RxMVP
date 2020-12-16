@@ -29,10 +29,10 @@ public class DynamicColorLoader {
     private final String mFolderPath;
     // 动态滤镜数据
     private final DynamicColorData mColorData;
-    // 资源加载器
-    private ResourceDataCodec mResourceCodec;
     // 统一变量列表
     private final HashMap<String, Integer> mUniformHandleList = new HashMap<>();
+    // 资源加载器
+    private ResourceDataCodec mResourceCodec;
     // 纹理列表
     private int[] mTextureList;
 

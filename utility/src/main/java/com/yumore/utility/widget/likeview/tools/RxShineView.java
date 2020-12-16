@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
+
 import com.yumore.utility.animation.RxShineAnimator;
 import com.yumore.utility.widget.likeview.RxShineButton;
 import com.yumore.utility.widget.likeview.tools.ei.RxEase;
@@ -24,7 +25,7 @@ public class RxShineView extends View {
     private static final String TAG = "ShineView";
     static int[] colorRandom = new int[10];
     //default 10ms ,change to 25ms for saving cpu.
-    private static long FRAME_REFRESH_DELAY = 25;
+    private static final long FRAME_REFRESH_DELAY = 25;
     RxShineAnimator mRxShineAnimator;
     ValueAnimator clickAnimator;
     RxShineButton mRxShineButton;
@@ -55,7 +56,7 @@ public class RxShineView extends View {
     private Paint paint;
     private Paint paint2;
     private Paint paintSmall;
-    private float distanceOffset = 0.2f;
+    private final float distanceOffset = 0.2f;
 
 
     public RxShineView(Context context) {

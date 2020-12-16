@@ -4,6 +4,7 @@ import android.content.Context;
 
 /**
  * InitializeHelper ：初始化帮助类
+ *
  * @author Nathaniel
  * @version 1.0.0
  * @date 2017/8/5 - 11:26

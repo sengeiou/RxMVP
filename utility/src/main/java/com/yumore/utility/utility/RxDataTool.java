@@ -5,9 +5,15 @@ import android.util.SparseArray;
 import android.util.SparseBooleanArray;
 import android.util.SparseIntArray;
 import android.util.SparseLongArray;
+
 import androidx.annotation.Nullable;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -15,7 +21,10 @@ import java.util.Collection;
 import java.util.Locale;
 import java.util.Map;
 
-import static com.yumore.utility.utility.RxConstTool.*;
+import static com.yumore.utility.utility.RxConstTool.BYTE;
+import static com.yumore.utility.utility.RxConstTool.GB;
+import static com.yumore.utility.utility.RxConstTool.KB;
+import static com.yumore.utility.utility.RxConstTool.MB;
 
 /**
  * @author yumore
@@ -48,7 +57,7 @@ public class RxDataTool {
      * 金额 格式化
      */
     private static final DecimalFormat AMOUNT_FORMAT = new DecimalFormat("###,###,###,##0.00");
-    private static int[] pyValue = new int[]{
+    private static final int[] pyValue = new int[]{
 
             /*A*/
             -20319, -20317, -20304, -20295, -20292,
@@ -146,7 +155,7 @@ public class RxDataTool {
             -10270, -10262, -10260, -10256, -10254
 
     };
-    private static String[] pyStr = new String[]{
+    private static final String[] pyStr = new String[]{
             /*A*/
             "a", "ai", "an", "ang", "ao",
 

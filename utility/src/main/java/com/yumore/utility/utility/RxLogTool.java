@@ -4,7 +4,12 @@ import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -17,11 +22,11 @@ public class RxLogTool {
 
     private final static SimpleDateFormat LOG_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// 日志的输出格式
     private final static SimpleDateFormat FILE_SUFFIX = new SimpleDateFormat("yyyy-MM-dd");// 日志文件格式
-    private static Boolean LOG_SWITCH = true; // 日志文件总开关
-    private static Boolean LOG_TO_FILE = false; // 日志写入文件开关
-    private static String LOG_TAG = "TAG"; // 默认的tag
-    private static char LOG_TYPE = 'v';// 输入日志类型，v代表输出所有信息,w则只输出警告...
-    private static int LOG_SAVE_DAYS = 7;// sd卡中日志文件的最多保存天数
+    private static final Boolean LOG_SWITCH = true; // 日志文件总开关
+    private static final Boolean LOG_TO_FILE = false; // 日志写入文件开关
+    private static final String LOG_TAG = "TAG"; // 默认的tag
+    private static final char LOG_TYPE = 'v';// 输入日志类型，v代表输出所有信息,w则只输出警告...
+    private static final int LOG_SAVE_DAYS = 7;// sd卡中日志文件的最多保存天数
     private static String LOG_FILE_PATH; // 日志文件保存路径
     private static String LOG_FILE_NAME;// 日志文件保存名称
 

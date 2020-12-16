@@ -41,6 +41,8 @@ import butterknife.OnClick;
  */
 public class ActivityLoginAct extends BaseActivity {
 
+    private final float scale = 0.6f; //logo缩放比例
+    private final int height = 0;
     @BindView(R2.id.logo)
     ImageView mLogo;
     @BindView(R2.id.et_mobile)
@@ -67,11 +69,8 @@ public class ActivityLoginAct extends BaseActivity {
     LinearLayout mService;
     @BindView(R2.id.root)
     RelativeLayout mRoot;
-
     private int screenHeight = 0;//屏幕高度
     private int keyHeight = 0; //软件盘弹起后所占高度
-    private final float scale = 0.6f; //logo缩放比例
-    private final int height = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

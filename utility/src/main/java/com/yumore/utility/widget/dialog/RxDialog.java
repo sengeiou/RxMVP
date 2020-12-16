@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
+
 import com.yumore.utility.R;
 
 

@@ -15,19 +15,16 @@ import java.nio.FloatBuffer;
  */
 public class GLImageYUVInputFilter extends GLImageFilter {
 
-    private int mRenderYUVHandle;
-    private int mInputTexture2Handle;
-    private int mInputTexture3Handle;
-
     // 纹理id, 当渲染YUV时，mInputTexture 为Y纹理，mInputTexture2为U纹理，mInputTexture3为V纹理
     // 当渲染BGRA时，只有mInputTexture有效
     private final int[] mInputTexture = new int[3];
-    // 是否渲染YUV。默认渲染YUV
-    private int mRenderYUV;
-
     private final FloatBuffer mVertexBuffer;
     private final FloatBuffer mTextureBuffer;
-
+    private int mRenderYUVHandle;
+    private int mInputTexture2Handle;
+    private int mInputTexture3Handle;
+    // 是否渲染YUV。默认渲染YUV
+    private int mRenderYUV;
     // 存放YUV数据
     private Buffer yBuffer;
     private Buffer uBuffer;

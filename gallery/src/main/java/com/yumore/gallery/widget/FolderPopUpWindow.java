@@ -9,7 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+
 import com.yumore.gallery.R;
 
 /**
@@ -19,7 +24,7 @@ public class FolderPopUpWindow extends PopupWindow implements View.OnClickListen
 
     private final View masker;
     private final View marginView;
-    private ListView listView;
+    private final ListView listView;
     private OnItemClickListener onItemClickListener;
     private int marginPx;
 

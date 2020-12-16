@@ -55,21 +55,26 @@ import java.io.IOException;
 public class VideoEditFragment extends Fragment implements View.OnClickListener {
 
     private static final String TAG = "VideoEditFragment";
+    /**
+     * 滤镜列表改变回调
+     */
+    private final VideoFilterAdapter.OnFilterChangeListener mFilterChangeListener = new VideoFilterAdapter.OnFilterChangeListener() {
+        @Override
+        public void onFilterChanged(ResourceData resourceData) {
 
+        }
+    };
     private Activity mActivity;
-
     private String mVideoPath;                      // 视频流路径
     private String mMusicPath;                      // 背景音乐路径
     private float mSourceVolumePercent = 0.5f;      // 源音量百分比
     private float mBackgroundVolumePercent = 0.5f;  // 背景音乐音量百分比
     private long mBackgroundDuration;               // 背景音乐时长，ms
-
     private View mContentView;
     // 播放控件
     private RelativeLayout mLayoutPlayer;
     private VideoTextureView mVideoPlayerView;
     private ImageView mIvVideoPlay;
-
     // 特效选择栏
     private LinearLayout mLayoutEffect;             // 特效布局
     private TextView mTvVideoCurrent;               // 当前位置
@@ -81,8 +86,24 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     private RecyclerView mListEffectCategoryView;   // 特效目录列表
     private boolean mEffectShowing;                 // 特效页面显示状态
     private VideoEffectAdapter mEffectAdapter;      // 特效列表适配器
+    /**
+     * 特效目录切换
+     */
+    private final VideoEffectCategoryAdapter.OnEffectCategoryChangeListener mEffectCategoryChangeListener = new VideoEffectCategoryAdapter.OnEffectCategoryChangeListener() {
+        @Override
+        public void onCategoryChange(EffectMimeType mimeType) {
+            if (mimeType == EffectMimeType.FILTER) {
+                mEffectAdapter.changeEffectData(EffectFilterHelper.getInstance().getEffectFilterData());
+            } else if (mimeType == EffectMimeType.MULTIFRAME) {
+                mEffectAdapter.changeEffectData(EffectFilterHelper.getInstance().getEffectMultiData());
+            } else if (mimeType == EffectMimeType.TRANSITION) {
+                mEffectAdapter.changeEffectData(EffectFilterHelper.getInstance().getEffectTransitionData());
+            } else {
+                mEffectAdapter.changeEffectData(null);
+            }
+        }
+    };
     private VideoEffectCategoryAdapter mEffectCategoryAdapter; // 特效目录列表适配器
-
     // 顶部控制栏
     private RelativeLayout mLayoutTop;
     // 顶部子控制栏
@@ -91,60 +112,36 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
     private RelativeLayout mLayoutBottom;
     // 底部子控制栏
     private FrameLayout mLayoutSubBottom;
-
     // 音量调节页面
     private View mLayoutVolumeChange;
     private SeekBar mSbBackgroundVolume;
-
     // 音乐裁剪页面
     private View mLayoutCutMusic;
     private WaveCutView mWaveCutView;
     private TextView mTvMusicCurrent;
     private TextView mTvMusicDuration;
-
     // 滤镜列表
     private RecyclerView mListFilterView;
     private VideoFilterAdapter mFilterAdapter;
-
-
     // 播放器
     private MediaPlayer mAudioPlayer;
-    private CainMediaPlayer mCainMediaPlayer;
-    private AudioManager mAudioManager;
-    private CainMediaEditor mMediaEditor;
-    private int mPlayViewWidth;
-    private int mPlayViewHeight;
-    private int mVideoWidth;
-    private int mVideoHeight;
-    // 视频显示监听
-    private SurfaceTexture mSurfaceTexture;
-    private Surface mSurface;
-    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
+    /**
+     * 裁剪音乐监听器
+     */
+    private final WaveCutView.OnDragListener mCutMusicListener = new WaveCutView.OnDragListener() {
         @Override
-        public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-            if (mSurfaceTexture == null) {
-                mSurfaceTexture = surface;
-                openMediaPlayer();
-            } else {
-                mVideoPlayerView.setSurfaceTexture(mSurfaceTexture);
+        public void onDragging(int position) {
+            mTvMusicCurrent.setText(StringUtils.generateStandardTime(position));
+        }
+
+        @Override
+        public void onDragFinish(float position) {
+            if (mAudioPlayer != null) {
+                mAudioPlayer.seekTo((int) position);
             }
         }
-
-        @Override
-        public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-
-        }
-
-        @Override
-        public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-            return mSurfaceTexture == null;
-        }
-
-        @Override
-        public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-
-        }
     };
+    private CainMediaPlayer mCainMediaPlayer;
     /**
      * 带特效选中的滑动监听
      */
@@ -201,31 +198,6 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
         }
     };
     /**
-     * 裁剪音乐监听器
-     */
-    private final WaveCutView.OnDragListener mCutMusicListener = new WaveCutView.OnDragListener() {
-        @Override
-        public void onDragging(int position) {
-            mTvMusicCurrent.setText(StringUtils.generateStandardTime(position));
-        }
-
-        @Override
-        public void onDragFinish(float position) {
-            if (mAudioPlayer != null) {
-                mAudioPlayer.seekTo((int) position);
-            }
-        }
-    };
-    /**
-     * 滤镜列表改变回调
-     */
-    private final VideoFilterAdapter.OnFilterChangeListener mFilterChangeListener = new VideoFilterAdapter.OnFilterChangeListener() {
-        @Override
-        public void onFilterChanged(ResourceData resourceData) {
-
-        }
-    };
-    /**
      * 特效列表切换
      */
     private final VideoEffectAdapter.OnEffectChangeListener mEffectChangeListener = new VideoEffectAdapter.OnEffectChangeListener() {
@@ -236,21 +208,39 @@ public class VideoEditFragment extends Fragment implements View.OnClickListener 
             }
         }
     };
-    /**
-     * 特效目录切换
-     */
-    private final VideoEffectCategoryAdapter.OnEffectCategoryChangeListener mEffectCategoryChangeListener = new VideoEffectCategoryAdapter.OnEffectCategoryChangeListener() {
+    private AudioManager mAudioManager;
+    private CainMediaEditor mMediaEditor;
+    private int mPlayViewWidth;
+    private int mPlayViewHeight;
+    private int mVideoWidth;
+    private int mVideoHeight;
+    // 视频显示监听
+    private SurfaceTexture mSurfaceTexture;
+    private Surface mSurface;
+    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
         @Override
-        public void onCategoryChange(EffectMimeType mimeType) {
-            if (mimeType == EffectMimeType.FILTER) {
-                mEffectAdapter.changeEffectData(EffectFilterHelper.getInstance().getEffectFilterData());
-            } else if (mimeType == EffectMimeType.MULTIFRAME) {
-                mEffectAdapter.changeEffectData(EffectFilterHelper.getInstance().getEffectMultiData());
-            } else if (mimeType == EffectMimeType.TRANSITION) {
-                mEffectAdapter.changeEffectData(EffectFilterHelper.getInstance().getEffectTransitionData());
+        public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
+            if (mSurfaceTexture == null) {
+                mSurfaceTexture = surface;
+                openMediaPlayer();
             } else {
-                mEffectAdapter.changeEffectData(null);
+                mVideoPlayerView.setSurfaceTexture(mSurfaceTexture);
             }
+        }
+
+        @Override
+        public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
+
+        }
+
+        @Override
+        public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
+            return mSurfaceTexture == null;
+        }
+
+        @Override
+        public void onSurfaceTextureUpdated(SurfaceTexture surface) {
+
         }
     };
     private OnSelectMusicListener mOnSelectMusicListener;

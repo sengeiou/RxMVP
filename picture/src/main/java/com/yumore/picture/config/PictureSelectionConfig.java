@@ -2,7 +2,9 @@ package com.yumore.picture.config;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import androidx.annotation.StyleRes;
+
 import com.yumore.picture.R;
 import com.yumore.picture.entity.LocalMedia;
 import com.yumore.picture.tools.PictureFileUtils;

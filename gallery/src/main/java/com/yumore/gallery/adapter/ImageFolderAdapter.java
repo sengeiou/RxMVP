@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.gallery.R;
 import com.yumore.gallery.entity.ImageFolder;
 import com.yumore.gallery.helper.ImagePicker;
@@ -21,10 +23,10 @@ import java.util.List;
  */
 public class ImageFolderAdapter extends BaseAdapter {
 
-    private ImagePicker imagePicker;
-    private AppCompatActivity mActivity;
-    private LayoutInflater mInflater;
-    private int mImageSize;
+    private final ImagePicker imagePicker;
+    private final AppCompatActivity mActivity;
+    private final LayoutInflater mInflater;
+    private final int mImageSize;
     private List<ImageFolder> imageFolders;
     private int lastSelected = 0;
 

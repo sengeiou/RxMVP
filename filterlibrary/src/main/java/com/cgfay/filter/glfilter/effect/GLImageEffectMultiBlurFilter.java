@@ -13,17 +13,16 @@ import java.nio.FloatBuffer;
  */
 public class GLImageEffectMultiBlurFilter extends GLImageEffectFilter {
 
+    // 高斯模糊图像缩放半径
+    private final float mBlurScale = 0.5f;
+    private final float mScale = 1.2f;
     private int mBlurTextureHandle;
     private int mBlurOffsetYHandle;
     private int mScaleHandle;
     private float blurOffsetY;
-
     // 高斯模糊滤镜
     private GLImageGaussianBlurFilter mGaussianBlurFilter;
-    // 高斯模糊图像缩放半径
-    private final float mBlurScale = 0.5f;
     private int mBlurTexture;
-    private final float mScale = 1.2f;
 
     public GLImageEffectMultiBlurFilter(Context context) {
         this(context, VERTEX_SHADER, OpenGLUtils.getShaderFromAssets(context,

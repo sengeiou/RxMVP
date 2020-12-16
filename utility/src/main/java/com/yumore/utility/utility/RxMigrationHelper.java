@@ -4,7 +4,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
+
 import org.greenrobot.greendao.AbstractDao;
 import org.greenrobot.greendao.database.Database;
 import org.greenrobot.greendao.database.StandardDatabase;
@@ -26,7 +28,7 @@ import java.util.List;
 
 public class RxMigrationHelper {
     public static boolean DEBUG = false;
-    private static String TAG = "RxMigrationHelper";
+    private static final String TAG = "RxMigrationHelper";
 
     public static void migrate(SQLiteDatabase sqliteDatabase, Class<? extends AbstractDao<?, ?>>... daoClasses) {
         StandardDatabase db = new StandardDatabase(sqliteDatabase);

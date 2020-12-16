@@ -1,6 +1,7 @@
 package com.cgfay.filter.glfilter.effect;
 
 import android.content.Context;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 
 /**

@@ -29,50 +29,50 @@ enum media_event_type {
 
 enum media_error_type {
     // 0xx
-            MEDIA_ERROR_UNKNOWN = 1,
+    MEDIA_ERROR_UNKNOWN = 1,
     // 1xx
-            MEDIA_ERROR_SERVER_DIED = 100,
+    MEDIA_ERROR_SERVER_DIED = 100,
     // 2xx
-            MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK = 200,
+    MEDIA_ERROR_NOT_VALID_FOR_PROGRESSIVE_PLAYBACK = 200,
     // 3xx
 };
 
 enum media_info_type {
     // 0xx
-            MEDIA_INFO_UNKNOWN = 1,
+    MEDIA_INFO_UNKNOWN = 1,
     // The player was started because it was used as the next player for another
     // player, which just completed playback
-            MEDIA_INFO_STARTED_AS_NEXT = 2,
+    MEDIA_INFO_STARTED_AS_NEXT = 2,
     // The player just pushed the very first video frame for rendering
-            MEDIA_INFO_RENDERING_START = 3,
+    MEDIA_INFO_RENDERING_START = 3,
     // 7xx
     // The video is too complex for the decoder: it can't decode frames fast
     // enough. Possibly only the audio plays fine at this stage.
-            MEDIA_INFO_VIDEO_TRACK_LAGGING = 700,
+    MEDIA_INFO_VIDEO_TRACK_LAGGING = 700,
     // MediaPlayer is temporarily pausing playback internally in order to
     // buffer more data.
-            MEDIA_INFO_BUFFERING_START = 701,
+    MEDIA_INFO_BUFFERING_START = 701,
     // MediaPlayer is resuming playback after filling buffers.
-            MEDIA_INFO_BUFFERING_END = 702,
+    MEDIA_INFO_BUFFERING_END = 702,
     // Bandwidth in recent past
-            MEDIA_INFO_NETWORK_BANDWIDTH = 703,
+    MEDIA_INFO_NETWORK_BANDWIDTH = 703,
 
     // 8xx
     // Bad interleaving means that a media has been improperly interleaved or not
     // interleaved at all, e.g has all the video samples first then all the audio
     // ones. Video is playing but a lot of disk seek may be happening.
-            MEDIA_INFO_BAD_INTERLEAVING = 800,
+    MEDIA_INFO_BAD_INTERLEAVING = 800,
     // The media is not seekable (e.g live stream).
-            MEDIA_INFO_NOT_SEEKABLE = 801,
+    MEDIA_INFO_NOT_SEEKABLE = 801,
     // New media metadata is available.
-            MEDIA_INFO_METADATA_UPDATE = 802,
+    MEDIA_INFO_METADATA_UPDATE = 802,
     // Audio can not be played.
-            MEDIA_INFO_PLAY_AUDIO_ERROR = 804,
+    MEDIA_INFO_PLAY_AUDIO_ERROR = 804,
     // Video can not be played.
-            MEDIA_INFO_PLAY_VIDEO_ERROR = 805,
+    MEDIA_INFO_PLAY_VIDEO_ERROR = 805,
 
     //9xx
-            MEDIA_INFO_TIMED_TEXT_ERROR = 900,
+    MEDIA_INFO_TIMED_TEXT_ERROR = 900,
 };
 
 

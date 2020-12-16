@@ -1,6 +1,7 @@
 package com.yumore.feature.module.scaner;
 
 import android.graphics.Bitmap;
+
 import com.google.zxing.LuminanceSource;
 
 /**
@@ -10,7 +11,7 @@ import com.google.zxing.LuminanceSource;
  */
 public class BitmapLuminanceSource extends LuminanceSource {
 
-    private byte[] bitmapPixels;
+    private final byte[] bitmapPixels;
 
     public BitmapLuminanceSource(Bitmap bitmap) {
         super(bitmap.getWidth(), bitmap.getHeight());

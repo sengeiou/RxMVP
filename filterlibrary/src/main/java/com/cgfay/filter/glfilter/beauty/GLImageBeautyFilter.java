@@ -15,6 +15,8 @@ import java.nio.FloatBuffer;
  */
 public class GLImageBeautyFilter extends GLImageFilter implements IBeautify {
 
+    // 缩放
+    private final float mBlurScale = 0.5f;
     // 美肤滤镜
     private GLImageBeautyComplexionFilter mComplexionFilter;
     // 高斯模糊
@@ -27,9 +29,6 @@ public class GLImageBeautyFilter extends GLImageFilter implements IBeautify {
     private GLImageBeautyAdjustFilter mBeautyAdjustFilter;
     // 人脸美化处理
     private GLImageBeautyFaceFilter mBeautyFaceFilter;
-
-    // 缩放
-    private final float mBlurScale = 0.5f;
 
     public GLImageBeautyFilter(Context context) {
         this(context, null, null);

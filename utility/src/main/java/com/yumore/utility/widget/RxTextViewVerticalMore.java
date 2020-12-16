@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ViewFlipper;
+
 import com.yumore.utility.R;
 
 import java.util.List;
@@ -19,12 +20,12 @@ import java.util.List;
 public class RxTextViewVerticalMore extends ViewFlipper {
 
     private Context mContext;
-    private boolean isSetAnimDuration = false;
-    private int interval = 5000;
+    private final boolean isSetAnimDuration = false;
+    private final int interval = 5000;
     /**
      * 动画时间
      */
-    private int animDuration = 500;
+    private final int animDuration = 500;
     /**
      * 点击
      */

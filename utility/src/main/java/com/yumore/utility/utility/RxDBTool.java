@@ -3,7 +3,12 @@ package com.yumore.utility.utility;
 import android.content.Context;
 import android.util.Log;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * @author yumore
@@ -16,7 +21,7 @@ public class RxDBTool {
      * 读文件buffer.
      */
     private static final int FILE_BUFFER = 1024;
-    private static String TAG = "RxDBTool";
+    private static final String TAG = "RxDBTool";
 
     /**
      * 数据库导出到sdcard.

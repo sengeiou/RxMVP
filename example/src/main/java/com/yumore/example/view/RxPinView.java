@@ -17,8 +17,13 @@ limitations under the License.
 package com.yumore.example.view;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PointF;
 import android.util.AttributeSet;
+
 import com.yumore.example.R;
 import com.yumore.utility.widget.scaleimage.RxScaleImageView;
 

@@ -28,6 +28,8 @@ public class ActivityCreateQRCode extends BaseActivity implements View.OnClickLi
 
     private static final android.os.Handler Handler = new Handler();
     private static Runnable mRunnable = null;
+    private final int time_second = 0;
+    private final int second = 60;
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
     @BindView(R2.id.iv_linecode)
@@ -56,8 +58,6 @@ public class ActivityCreateQRCode extends BaseActivity implements View.OnClickLi
             }
         }
     };
-    private final int time_second = 0;
-    private final int second = 60;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

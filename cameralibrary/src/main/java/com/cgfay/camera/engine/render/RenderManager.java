@@ -41,6 +41,8 @@ public final class RenderManager {
     private final SparseArray<GLImageFilter> mFilterArrays = new SparseArray<GLImageFilter>();
     // 坐标缓冲
     private final ScaleType mScaleType = ScaleType.CENTER_CROP;
+    // 相机参数
+    private final CameraParam mCameraParam;
     private FloatBuffer mVertexBuffer;
     private FloatBuffer mTextureBuffer;
     // 用于显示裁剪的纹理顶点缓冲
@@ -50,8 +52,6 @@ public final class RenderManager {
     private int mViewWidth, mViewHeight;
     // 输入图像大小
     private int mTextureWidth, mTextureHeight;
-    // 相机参数
-    private final CameraParam mCameraParam;
     // 上下文
     private Context mContext;
 

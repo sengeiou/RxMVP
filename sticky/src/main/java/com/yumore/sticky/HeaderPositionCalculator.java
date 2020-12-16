@@ -4,8 +4,10 @@ import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.sticky.caching.HeaderProvider;
 import com.yumore.sticky.calculation.DimensionCalculator;
 import com.yumore.sticky.util.OrientationProvider;

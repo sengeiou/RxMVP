@@ -2,7 +2,9 @@ package com.yumore.common.utility;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+
 import androidx.annotation.NonNull;
+
 import com.yumore.common.R;
 import com.yumore.common.entity.Option;
 

@@ -7,6 +7,7 @@ package com.yumore.traction;
 public interface OnActivityToFragment<T> {
     /**
      * 通过事件从fragment中获取数据
+     *
      * @param t data
      */
     void onCallback(T t);

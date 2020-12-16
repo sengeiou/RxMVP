@@ -7,49 +7,55 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.*;
+import android.view.MotionEvent;
+import android.view.VelocityTracker;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.ViewGroup;
 import android.widget.Scroller;
+
 import androidx.customview.widget.ViewDragHelper;
-import com.yumore.answer.anwerdemo.R;
+
+import com.yumore.answer.R;
 
 public class FlipperLayout extends ViewGroup {
 
 
-    private int index = 1;
-
-    public void setIndex(int position) {
-        this.index = position;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
+    public static final int MOVE_TO_RIGHT = 1;
+    /**
+     * Edge flag indicating that the left edge should be affected.
+     */
+    public static final int EDGE_LEFT = ViewDragHelper.EDGE_LEFT;
+    /**
+     * Edge flag indicating that the right edge should be affected.
+     */
+    public static final int EDGE_RIGHT = ViewDragHelper.EDGE_RIGHT;
+    public static final int EDGE_ALL = EDGE_LEFT | EDGE_RIGHT;
     private static final String TAG = "FlipperLayout";
-
-    /**
-     * 弹性滑动对象，实现过渡效果的滑动
-     */
-    private Scroller mScroller;
-
-    private VelocityTracker mVelocityTracker;
-
-    private int mVelocityValue = 0;
-
-    /**
-     * 商定这个滑动是否有效的距离
-     */
-    private int limitDistance = 50;
-
-    private int screenWidth = 0;
-
     /**
      * 手指移动的方向
      */
     private static final int MOVE_TO_LEFT = 0;
-    public static final int MOVE_TO_RIGHT = 1;
     private static final int MOVE_NO_RESULT = 2;
-
+    /**
+     * 触摸的模式
+     */
+    private static final int MODE_NONE = 0;
+    private static final int MODE_MOVE = 1;
+    private static final int FULL_ALPHA = 255;
+    private static final int DEFAULT_SCRIM_COLOR = 0x99000000;
+    private int index = 1;
+    /**
+     * 弹性滑动对象，实现过渡效果的滑动
+     */
+    private Scroller mScroller;
+    private VelocityTracker mVelocityTracker;
+    private int mVelocityValue = 0;
+    /**
+     * 商定这个滑动是否有效的距离
+     */
+    private int limitDistance = 50;
+    private int screenWidth = 0;
     /**
      * 最后触摸的结果方向
      */
@@ -58,35 +64,28 @@ public class FlipperLayout extends ViewGroup {
      * 一开始的方向
      */
     private int mDirection = MOVE_NO_RESULT;
-
-    /**
-     * 触摸的模式
-     */
-    private static final int MODE_NONE = 0;
-    private static final int MODE_MOVE = 1;
-
     private int mMode = MODE_NONE;
-
     /**
      * 滑动的view
      */
     private View mScrollerView = null;
-
     /**
      * 最上层的view（处于边缘的，看不到的）
      */
     private View currentTopView = null;
-
     /**
      * 显示的view，显示在屏幕
      */
     private View currentShowView = null;
-
     /**
      * 最底层的view（看不到的）
      */
     private View currentBottomView = null;
     private float upX;
+    private final Rect mTmpRect = new Rect();
+    private int startX = 0;
+    private OnSlidePageListener mListener;
+    private Drawable mShadowRight;
 
     public FlipperLayout(Context context) {
         super(context);
@@ -103,13 +102,20 @@ public class FlipperLayout extends ViewGroup {
         init(context);
     }
 
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int position) {
+        this.index = position;
+    }
+
     private void init(Context context) {
         mScroller = new Scroller(context);
         screenWidth = context.getResources().getDisplayMetrics().widthPixels;
         limitDistance = screenWidth / 2;
         mShadowRight = getResources().getDrawable(R.mipmap.shadow_right);
     }
-
 
     /***
      * @param listener
@@ -128,7 +134,6 @@ public class FlipperLayout extends ViewGroup {
         /** 默认将最上层的view滑动到边缘（用于查看上一页） */
         currentTopView.scrollTo(-screenWidth, 0);
     }
-
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
@@ -150,8 +155,6 @@ public class FlipperLayout extends ViewGroup {
             getChildAt(i).measure(widthMeasureSpec, heightMeasureSpec);
         }
     }
-
-    private int startX = 0;
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -278,10 +281,10 @@ public class FlipperLayout extends ViewGroup {
                 int time = 400;
 
                 if (mMode == MODE_MOVE && mDirection == MOVE_TO_LEFT) {
-                    if (scrollX > limitDistance || mVelocityValue < -time*8) {
+                    if (scrollX > limitDistance || mVelocityValue < -time * 8) {
                         // 手指向左移动，可以翻屏幕
                         mTouchResult = MOVE_TO_LEFT;
-                        if (mVelocityValue < -time*8) {
+                        if (mVelocityValue < -time * 8) {
                             time = 100;
                         }
                         mScroller.startScroll(scrollX, 0, screenWidth - scrollX, 0, time);
@@ -290,10 +293,10 @@ public class FlipperLayout extends ViewGroup {
                         mScroller.startScroll(scrollX, 0, -scrollX, 0, time);
                     }
                 } else if (mMode == MODE_MOVE && mDirection == MOVE_TO_RIGHT) {
-                    if ((screenWidth - scrollX) > limitDistance || mVelocityValue > time*8) {
+                    if ((screenWidth - scrollX) > limitDistance || mVelocityValue > time * 8) {
                         // 手指向右移动，可以翻屏幕
                         mTouchResult = MOVE_TO_RIGHT;
-                        if (mVelocityValue > time*8) {
+                        if (mVelocityValue > time * 8) {
                             time = 100;
                         }
                         mScroller.startScroll(scrollX, 0, -scrollX, 0, time);
@@ -302,7 +305,7 @@ public class FlipperLayout extends ViewGroup {
                         mScroller.startScroll(scrollX, 0, screenWidth - scrollX, 0, time);
                     }
                 }
-                Log.i("@@@",time+"==>"+mVelocityValue);
+                Log.i("@@@", time + "==>" + mVelocityValue);
                 resetVariables();
                 postInvalidate();
                 break;
@@ -317,12 +320,9 @@ public class FlipperLayout extends ViewGroup {
         releaseVelocityTracker();
     }
 
-    private OnSlidePageListener mListener;
-
     private void setTouchResultListener(OnSlidePageListener listener) {
         this.mListener = listener;
     }
-
 
     public void autoNextPage() {
         if (mListener != null && mListener.whetherHasNextPage()) {
@@ -350,8 +350,6 @@ public class FlipperLayout extends ViewGroup {
             postInvalidate();
         }
     }
-
-
 
     @Override
     public void computeScroll() {
@@ -420,7 +418,6 @@ public class FlipperLayout extends ViewGroup {
         }
     }
 
-
     private void obtainVelocityTracker(MotionEvent event) {
         if (mVelocityTracker == null) {
             mVelocityTracker = VelocityTracker.obtain();
@@ -434,6 +431,53 @@ public class FlipperLayout extends ViewGroup {
             mVelocityTracker = null;
         }
     }
+
+    /**
+     * Set a drawable used for edge shadow.
+     */
+    public void setShadow(int resId) {
+        mShadowRight = getResources().getDrawable(resId);
+    }
+
+    @Override
+    protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
+        if (mScrollerView != null) {
+            drawShadow(canvas, mScrollerView);
+//            drawScrim(canvas, mScrollerView);
+        }
+        return super.drawChild(canvas, child, drawingTime);
+    }
+
+    private void drawScrim(Canvas canvas, View child) {
+        final Rect childRect = mTmpRect;
+        child.getHitRect(childRect);
+        float rate = (mScrollerView.getScrollX() / (float) childRect.right);
+        final int baseAlpha = (DEFAULT_SCRIM_COLOR & 0xff000000) >>> 24;
+        final int alpha = (int) (baseAlpha * 0.5);
+        final int color = alpha << 24;
+
+        canvas.clipRect(child.getRight(), 0, getRight(), getHeight());
+
+        canvas.drawColor(color);
+    }
+
+    private void drawShadow(Canvas canvas, View child) {
+        final Rect childRect = mTmpRect;
+        child.getHitRect(childRect);
+
+        if ((childRect.right - mScrollerView.getScrollX()) != 0) {
+
+            mShadowRight.setBounds(childRect.right - mScrollerView.getScrollX(), childRect.top, (childRect.right - mScrollerView.getScrollX()) + mShadowRight.getIntrinsicWidth(), childRect.bottom);
+            Log.i("@@@", childRect.right + ":" + childRect.top + ":" + (childRect.right + mShadowRight.getIntrinsicWidth()) + ":" + childRect.bottom);
+//            mShadowRight.setAlpha((int)(0.5-(mScrollerView.getScrollX()/(float)childRect.right) * FULL_ALPHA/2));
+            mShadowRight.setAlpha((int) (0.4f * FULL_ALPHA));
+
+
+            mShadowRight.draw(canvas);
+        }
+
+    }
+
 
     /***
      * 用来实时回调触摸事件回调
@@ -474,71 +518,6 @@ public class FlipperLayout extends ViewGroup {
          * @return
          */
         boolean whetherHasNextPage();
-    }
-
-
-    /**
-     * Edge flag indicating that the left edge should be affected.
-     */
-    public static final int EDGE_LEFT = ViewDragHelper.EDGE_LEFT;
-
-    /**
-     * Edge flag indicating that the right edge should be affected.
-     */
-    public static final int EDGE_RIGHT = ViewDragHelper.EDGE_RIGHT;
-
-    public static final int EDGE_ALL = EDGE_LEFT | EDGE_RIGHT;
-
-    private Drawable mShadowRight;
-    private static final int FULL_ALPHA = 255;
-    private Rect mTmpRect = new Rect();
-    private static final int DEFAULT_SCRIM_COLOR = 0x99000000;
-
-    /**
-     * Set a drawable used for edge shadow.
-     */
-    public void setShadow(int resId) {
-        mShadowRight = getResources().getDrawable(resId);
-    }
-
-    @Override
-    protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
-        if (mScrollerView != null) {
-            drawShadow(canvas, mScrollerView);
-//            drawScrim(canvas, mScrollerView);
-        }
-        return super.drawChild(canvas, child, drawingTime);
-    }
-
-    private void drawScrim(Canvas canvas, View child) {
-        final Rect childRect = mTmpRect;
-        child.getHitRect(childRect);
-        float rate = (mScrollerView.getScrollX()/(float)childRect.right);
-        final int baseAlpha = (DEFAULT_SCRIM_COLOR & 0xff000000) >>> 24;
-        final int alpha = (int) (baseAlpha * 0.5);
-        final int color = alpha << 24;
-
-        canvas.clipRect(child.getRight(), 0, getRight(), getHeight());
-
-        canvas.drawColor(color);
-    }
-
-
-    private void drawShadow(Canvas canvas, View child) {
-        final Rect childRect = mTmpRect;
-        child.getHitRect(childRect);
-
-        if ((childRect.right - mScrollerView.getScrollX()) != 0) {
-
-            mShadowRight.setBounds(childRect.right - mScrollerView.getScrollX(), childRect.top, (childRect.right - mScrollerView.getScrollX()) + mShadowRight.getIntrinsicWidth(), childRect.bottom);
-            Log.i("@@@", childRect.right + ":" + childRect.top + ":" + (childRect.right + mShadowRight.getIntrinsicWidth()) + ":" + childRect.bottom);
-//            mShadowRight.setAlpha((int)(0.5-(mScrollerView.getScrollX()/(float)childRect.right) * FULL_ALPHA/2));
-            mShadowRight.setAlpha((int) (0.4f * FULL_ALPHA));
-
-
-            mShadowRight.draw(canvas);
-        }
-
     }
 
 }

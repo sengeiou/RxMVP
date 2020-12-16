@@ -26,6 +26,7 @@ import butterknife.OnClick;
  */
 public class ActivityLike extends BaseActivity {
 
+    private final Random random = new Random();
     @BindView(R2.id.po_image0)
     RxShineButton mRxShineButton;
     @BindView(R2.id.po_image1)
@@ -54,7 +55,6 @@ public class ActivityLike extends BaseActivity {
     RelativeLayout mActivityLike;
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
-    private final Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -33,8 +33,10 @@ public class FFMediaRecordPresenter implements Camera.PreviewCallback, AudioReco
     private static final String TAG = "FFMediaRecordPresenter";
     private static final boolean VERBOSE = true;
     private final List<VideoInfo> mVideoList;
-    private Activity mActivity;
     private final FFMediaRecordFragment mFragment;
+    private final AudioRecorder mAudioRecorder;
+    private final Handler mHandler;
+    private Activity mActivity;
     // 命令行编辑器
     private CainCommandEditor mCommandEditor;
     // 最大时长(毫秒)
@@ -43,10 +45,8 @@ public class FFMediaRecordPresenter implements Camera.PreviewCallback, AudioReco
     private int mPreviewRotate;
     private int mRecordWidth;
     private int mRecordHeight;
-    private final AudioRecorder mAudioRecorder;
     private FFMediaRecorder mMediaRecorder;
     private boolean mIsRecording;
-    private final Handler mHandler;
 
     public FFMediaRecordPresenter(Activity activity, FFMediaRecordFragment fragment) {
         mActivity = activity;

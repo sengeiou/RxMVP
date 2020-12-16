@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.yumore.answer.AnswerMainActivity;
 import com.yumore.daemon.DaemonActivity;
 import com.yumore.example.R;
 import com.yumore.example.R2;
@@ -106,11 +107,12 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("压缩与加密的艺术", R.drawable.circle_zip, ActivityZipEncrypt.class));
         modelMainItemList.add(new ModelMainItem("图片添加经纬度信息", R.drawable.circle_picture_location, ActivityRxExifTool.class));
         modelMainItemList.add(new ModelMainItem("RxWaveView", R.drawable.circle_wave, ActivityRxWaveView.class));
-        modelMainItemList.add(new ModelMainItem("app检测更新与安装", R.mipmap.ic_launcher, ActivitySplash.class));
-        modelMainItemList.add(new ModelMainItem("PULL解析XML", R.mipmap.ic_launcher, ActivityXmlParse.class));
+        modelMainItemList.add(new ModelMainItem("app检测更新与安装", R.mipmap.icon_pikachu, ActivitySplash.class));
+        modelMainItemList.add(new ModelMainItem("PULL解析XML", R.mipmap.icon_pikachu, ActivityXmlParse.class));
         modelMainItemList.add(new ModelMainItem("支付宝支付Demo", R.drawable.circle_alipay, AliPayActivity.class));
-        modelMainItemList.add(new ModelMainItem("流利说欢迎动画", R.mipmap.ic_launcher, PreviewActivity.class));
-        modelMainItemList.add(new ModelMainItem("相册选择界面", R.mipmap.ic_launcher, DaemonActivity.class));
+        modelMainItemList.add(new ModelMainItem("流利说欢迎动画", R.mipmap.icon_pikachu, PreviewActivity.class));
+        modelMainItemList.add(new ModelMainItem("相册选择界面", R.mipmap.icon_pikachu, DaemonActivity.class));
+        modelMainItemList.add(new ModelMainItem("Answer界面", R.mipmap.icon_pikachu, AnswerMainActivity.class));
     }
 
     private void initView() {

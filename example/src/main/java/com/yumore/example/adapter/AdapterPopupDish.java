@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.example.R;
 import com.yumore.example.callback.ShopCartInterface;
 import com.yumore.example.entity.ModelDish;
@@ -22,11 +24,11 @@ import java.util.ArrayList;
  */
 public class AdapterPopupDish extends RecyclerView.Adapter {
 
-    private static String TAG = "PopupDishAdapter";
-    private ModelShopCart mModelShopCart;
-    private Context context;
+    private static final String TAG = "PopupDishAdapter";
+    private final ModelShopCart mModelShopCart;
+    private final Context context;
     private int itemCount;
-    private ArrayList<ModelDish> mModelDishList;
+    private final ArrayList<ModelDish> mModelDishList;
     private ShopCartInterface shopCartImp;
 
     public AdapterPopupDish(Context context, ModelShopCart modelShopCart) {
@@ -102,12 +104,12 @@ public class AdapterPopupDish extends RecyclerView.Adapter {
     }
 
     private class DishViewHolder extends RecyclerView.ViewHolder {
-        private TextView right_dish_name_tv;
-        private TextView right_dish_price_tv;
-        private LinearLayout right_dish_layout;
-        private ImageView right_dish_remove_iv;
-        private ImageView right_dish_add_iv;
-        private TextView right_dish_account_tv;
+        private final TextView right_dish_name_tv;
+        private final TextView right_dish_price_tv;
+        private final LinearLayout right_dish_layout;
+        private final ImageView right_dish_remove_iv;
+        private final ImageView right_dish_add_iv;
+        private final TextView right_dish_account_tv;
 
         public DishViewHolder(View itemView) {
             super(itemView);

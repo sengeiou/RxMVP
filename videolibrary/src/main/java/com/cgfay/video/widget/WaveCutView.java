@@ -24,19 +24,19 @@ import com.yumore.uitls.utils.DensityUtils;
 public class WaveCutView extends View {
 
     private final int WAVE_COUNT = 45;
+    private final int[] mHeights;
+    private final int mImageWidth;
+    private final int mImageHeight;
+    private final Bitmap mImageBitmap;
     int mParentMargin;
     float mWaveWidth;
-    private final int[] mHeights;
     private int mMaxCount = 50;
     private int mSelectedCount = 15;
     private int mSelectedColor = 0x80F8CE17;
     private int mDefaultColor = 0x80FFFFFF;
     private boolean isDragging;
-    private final int mImageWidth;
-    private final int mImageHeight;
     private int mImagePositonX;
     private int mImagePositonY;
-    private final Bitmap mImageBitmap;
     private int mProgress;
     private OnDragListener mOnDragListener;
     private float mMoveX;

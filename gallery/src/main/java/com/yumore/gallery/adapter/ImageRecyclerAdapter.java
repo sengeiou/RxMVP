@@ -7,10 +7,12 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.gallery.R;
 import com.yumore.gallery.entity.ImageItem;
 import com.yumore.gallery.helper.ImagePicker;
@@ -42,8 +44,8 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
      * 第一个条目不是相机
      */
     private static final int ITEM_TYPE_NORMAL = 1;
-    private ImagePicker imagePicker;
-    private AppCompatActivity mActivity;
+    private final ImagePicker imagePicker;
+    private final AppCompatActivity mActivity;
     /**
      * 当前需要显示的所有的图片数据
      */
@@ -51,16 +53,16 @@ public class ImageRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.View
     /**
      * 全局保存的已经选中的图片数据
      */
-    private ArrayList<ImageItem> mSelectedImages;
+    private final ArrayList<ImageItem> mSelectedImages;
     /**
      * 是否显示拍照按钮
      */
-    private boolean isShowCamera;
+    private final boolean isShowCamera;
     /**
      * 每个条目的大小
      */
-    private int mImageSize;
-    private LayoutInflater mInflater;
+    private final int mImageSize;
+    private final LayoutInflater mInflater;
     /**
      * 图片被点击的监听
      */

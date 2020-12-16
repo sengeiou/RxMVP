@@ -17,6 +17,7 @@
 package com.yumore.feature.module.scaner;
 
 import android.graphics.Bitmap;
+
 import com.google.zxing.LuminanceSource;
 
 /**

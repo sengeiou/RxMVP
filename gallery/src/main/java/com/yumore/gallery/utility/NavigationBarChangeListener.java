@@ -3,6 +3,7 @@ package com.yumore.gallery.utility;
 import android.graphics.Rect;
 import android.view.View;
 import android.view.ViewTreeObserver;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
@@ -21,10 +22,10 @@ public class NavigationBarChangeListener implements ViewTreeObserver.OnGlobalLay
      */
     public static final int ORIENTATION_HORIZONTAL = 2;
 
-    private Rect rect;
-    private View rootView;
+    private final Rect rect;
+    private final View rootView;
     private boolean showNavigationBar = false;
-    private int orientation;
+    private final int orientation;
     private OnSoftInputStateChangeListener onSoftInputStateChangeListener;
 
     public NavigationBarChangeListener(View rootView, int orientation) {

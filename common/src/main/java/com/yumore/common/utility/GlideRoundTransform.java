@@ -1,8 +1,14 @@
 package com.yumore.common.utility;
 
 import android.content.Context;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.RectF;
+
 import androidx.annotation.NonNull;
+
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.yumore.common.R;
@@ -15,7 +21,7 @@ import java.security.MessageDigest;
  */
 public class GlideRoundTransform extends CenterCrop {
     private static final String ID = GlideRoundTransform.class.getPackage() + "." + GlideRoundTransform.class.getSimpleName();
-    private float radius;
+    private final float radius;
 
     public GlideRoundTransform(Context context, float radius) {
         if (radius == 0) {

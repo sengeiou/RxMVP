@@ -2,6 +2,7 @@ package com.cgfay.filter.glfilter.base;
 
 import android.content.Context;
 import android.opengl.GLES20;
+
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 
 /**

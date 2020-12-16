@@ -14,8 +14,10 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
@@ -25,7 +27,12 @@ import com.yumore.picture.config.PictureConfig;
 import com.yumore.picture.config.PictureMimeType;
 import com.yumore.picture.config.PictureSelectionConfig;
 import com.yumore.picture.entity.LocalMedia;
-import com.yumore.picture.tools.*;
+import com.yumore.picture.tools.DateUtils;
+import com.yumore.picture.tools.PictureFileUtils;
+import com.yumore.picture.tools.SdkVersionUtils;
+import com.yumore.picture.tools.StringUtils;
+import com.yumore.picture.tools.ToastManage;
+import com.yumore.picture.tools.VoiceUtils;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -40,24 +47,25 @@ import java.util.List;
  */
 public class PictureImageGridAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final static int DURATION = 450;
-    private Context context;
+    private final Context context;
     private boolean showCamera;
     private OnPhotoSelectChangedListener imageSelectChangedListener;
-    private int maxSelectNum;
+    private final int maxSelectNum;
     private List<LocalMedia> images = new ArrayList<LocalMedia>();
     private List<LocalMedia> selectImages = new ArrayList<LocalMedia>();
-    private boolean enablePreview;
-    private int selectMode;
-    private boolean enablePreviewVideo;
-    private boolean enablePreviewAudio;
-    private boolean is_checked_num;
-    private boolean enableVoice;
-    private int overrideWidth, overrideHeight;
-    private float sizeMultiplier;
-    private Animation animation;
-    private PictureSelectionConfig config;
-    private int mimeType;
-    private boolean zoomAnim;
+    private final boolean enablePreview;
+    private final int selectMode;
+    private final boolean enablePreviewVideo;
+    private final boolean enablePreviewAudio;
+    private final boolean is_checked_num;
+    private final boolean enableVoice;
+    private final int overrideWidth;
+    private final int overrideHeight;
+    private final float sizeMultiplier;
+    private final Animation animation;
+    private final PictureSelectionConfig config;
+    private final int mimeType;
+    private final boolean zoomAnim;
     /**
      * 单选图片
      */

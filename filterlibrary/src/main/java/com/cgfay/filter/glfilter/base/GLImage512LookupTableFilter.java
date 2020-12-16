@@ -12,11 +12,10 @@ import com.yumore.filter.glfilter.utils.OpenGLUtils;
 
 public class GLImage512LookupTableFilter extends GLImageFilter {
 
+    private final int mCurveTexture = OpenGLUtils.GL_NOT_INIT;
     private float mStrength;
     private int mStrengthHandle;
     private int mLookupTableTextureHandle;
-
-    private final int mCurveTexture = OpenGLUtils.GL_NOT_INIT;
 
     public GLImage512LookupTableFilter(Context context) {
         this(context, VERTEX_SHADER, OpenGLUtils.getShaderFromAssets(context,

@@ -20,6 +20,7 @@ import butterknife.OnClick;
 public class ActivityVibrate extends BaseActivity {
 
 
+    private final long[] temp = {100, 10, 100, 1000};
     @BindView(R2.id.btn_vibrate_once)
     Button mBtnVibrateOnce;
     @BindView(R2.id.btn_vibrate_Complicated)
@@ -28,8 +29,6 @@ public class ActivityVibrate extends BaseActivity {
     Button mBtnVibrateStop;
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
-
-    private final long[] temp = {100, 10, 100, 1000};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

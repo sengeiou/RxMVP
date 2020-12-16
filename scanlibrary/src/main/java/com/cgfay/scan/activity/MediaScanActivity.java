@@ -50,9 +50,6 @@ public class MediaScanActivity extends AppCompatActivity implements AlbumScanner
     private FrameLayout mLayoutAlbumSelect;
     private ListView mListAlbums;
     private AlbumScanAdapter mAlbumScanAdapter;
-
-    // 显示相册选择页面
-    private boolean mShowAlbumSelected;
     /**
      * 相册列表选中监听器
      */
@@ -74,6 +71,8 @@ public class MediaScanActivity extends AppCompatActivity implements AlbumScanner
             }
         }
     };
+    // 显示相册选择页面
+    private boolean mShowAlbumSelected;
     // 记录跳转到预览页面时的位置
     private int mPreviewPosition;
 

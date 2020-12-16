@@ -11,7 +11,7 @@ const std::string kDrosteFragmentShader = SHADER_TO_STRING(
         uniform
         sampler2D inputTexture;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
 
         uniform float repeat; // 画面重复的次数

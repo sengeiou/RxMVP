@@ -1,6 +1,7 @@
 package com.yumore.sticky;
 
 import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 public interface StickyRecyclerHeadersAdapter<VH extends RecyclerView.ViewHolder> {

@@ -3,11 +3,13 @@ package com.yumore.gallery.helper;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
+
 import com.yumore.gallery.R;
 import com.yumore.gallery.entity.ImageFolder;
 import com.yumore.gallery.entity.ImageItem;
@@ -48,15 +50,15 @@ public class ImageDataSource implements LoaderManager.LoaderCallbacks<Cursor> {
             MediaStore.Images.Media.DATE_ADDED
     };
 
-    private FragmentActivity activity;
+    private final FragmentActivity activity;
     /**
      * 图片加载完成的回调接口
      */
-    private OnImagesLoadedListener loadedListener;
+    private final OnImagesLoadedListener loadedListener;
     /**
      * 所有的图片文件夹
      */
-    private ArrayList<ImageFolder> imageFolders = new ArrayList<>();
+    private final ArrayList<ImageFolder> imageFolders = new ArrayList<>();
 
     /**
      * @param activity       用于初始化LoaderManager，需要兼容到2.3

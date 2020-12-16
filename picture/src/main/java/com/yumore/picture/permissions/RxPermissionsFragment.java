@@ -5,12 +5,14 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import io.reactivex.subjects.PublishSubject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import io.reactivex.subjects.PublishSubject;
 
 /**
  * author：luck
@@ -26,7 +28,7 @@ public class RxPermissionsFragment extends Fragment {
 
     // Contains all the current permission requests.
     // Once granted or denied, they are removed from it.
-    private Map<String, PublishSubject<Permission>> mSubjects = new HashMap<>();
+    private final Map<String, PublishSubject<Permission>> mSubjects = new HashMap<>();
     private boolean mLogging;
 
     public RxPermissionsFragment() {

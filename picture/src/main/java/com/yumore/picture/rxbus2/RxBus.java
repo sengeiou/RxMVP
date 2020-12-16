@@ -1,6 +1,13 @@
 package com.yumore.picture.rxbus2;
 
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import io.reactivex.Scheduler;
@@ -13,9 +20,6 @@ import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.PublishSubject;
 import io.reactivex.subjects.Subject;
 
-import java.lang.reflect.Method;
-import java.util.*;
-
 /**
  * RxBus
  * Created by gorden on 2016/5/12.
@@ -26,9 +30,9 @@ public class RxBus {
     public static final String LOG_BUS = "RXBUS_LOG";
     private static volatile RxBus defaultInstance;
     private final Subject<Object> bus;
-    private Map<Class, List<Disposable>> subscriptionsByEventType = new HashMap<>();
-    private Map<Object, List<Class>> eventTypesBySubscriber = new HashMap<>();
-    private Map<Class, List<SubscriberMethod>> subscriberMethodByEventType = new HashMap<>();
+    private final Map<Class, List<Disposable>> subscriptionsByEventType = new HashMap<>();
+    private final Map<Object, List<Class>> eventTypesBySubscriber = new HashMap<>();
+    private final Map<Class, List<SubscriberMethod>> subscriberMethodByEventType = new HashMap<>();
 
     private RxBus() {
         this.bus = PublishSubject.create().toSerialized();

@@ -16,12 +16,12 @@ import java.util.Set;
  */
 public class GLImageAudioFilter extends GLImageFilter {
 
+    private final Set<MediaPlayer> mPlayerSet = new HashSet<>();
     private Uri mAudioUri;
     private boolean mLooping = false;
     private boolean mPlayerInit = false;
     private PlayerStatus mPlayerStatus = PlayerStatus.RELEASE;
     private MediaPlayer mAudioPlayer = null;
-    private final Set<MediaPlayer> mPlayerSet = new HashSet<>();
     /**
      * 准备监听器
      */

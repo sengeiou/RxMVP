@@ -14,12 +14,18 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.*;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.SeekBar;
+import android.widget.TextView;
+
 import androidx.annotation.RequiresApi;
 import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
+
 import com.yumore.cropper.UCrop;
 import com.yumore.cropper.UCropMulti;
 import com.yumore.cropper.model.CutInfo;
@@ -38,16 +44,24 @@ import com.yumore.picture.permissions.RxPermissions;
 import com.yumore.picture.rxbus2.RxBus;
 import com.yumore.picture.rxbus2.Subscribe;
 import com.yumore.picture.rxbus2.ThreadMode;
-import com.yumore.picture.tools.*;
+import com.yumore.picture.tools.DateUtils;
+import com.yumore.picture.tools.DoubleUtils;
+import com.yumore.picture.tools.PhotoTools;
+import com.yumore.picture.tools.PictureFileUtils;
+import com.yumore.picture.tools.ScreenUtils;
+import com.yumore.picture.tools.SdkVersionUtils;
+import com.yumore.picture.tools.StringUtils;
+import com.yumore.picture.tools.ToastManage;
 import com.yumore.picture.widget.FolderPopWindow;
 import com.yumore.picture.widget.PhotoPopupWindow;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 
 /**
  * @author：luck
@@ -99,7 +113,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
     private boolean isPlayAudio = false;
     private CustomDialog audioDialog;
     private int audioH;
-    private Handler mHandler = new Handler() {
+    private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
@@ -1113,7 +1127,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
      * 播放音频点击事件
      */
     public class audioOnClick implements View.OnClickListener {
-        private String path;
+        private final String path;
 
         public audioOnClick(String path) {
             super();

@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class PreviewIndicator extends LinearLayout {
 
     //指示器个数
     private final int INDICATOR_COUNT = 3;
-    private List<ImageView> mImageList = new ArrayList<>();
+    private final List<ImageView> mImageList = new ArrayList<>();
 
     public PreviewIndicator(Context context, AttributeSet attrs) {
         this(context, attrs, 0);

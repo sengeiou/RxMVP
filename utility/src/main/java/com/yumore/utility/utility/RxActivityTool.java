@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;

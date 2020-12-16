@@ -15,9 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.core.app.DialogFragment;
 import androidx.core.app.Fragment;
 import androidx.core.content.ContextCompat;
+
 import com.cgfay.cameralibrary.R;
 
 /**

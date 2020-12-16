@@ -9,7 +9,7 @@ const std::string k512LutFragmentShader = SHADER_TO_STRING(
         precision
         mediump float;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
 
         uniform

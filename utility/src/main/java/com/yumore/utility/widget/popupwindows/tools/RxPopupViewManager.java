@@ -10,7 +10,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
+
 import com.yumore.utility.utility.RxAnimationTool;
 
 import java.util.HashMap;
@@ -26,7 +28,7 @@ public class RxPopupViewManager {
     private static final int DEFAULT_ANIM_DURATION = 400;
 
     // Parameter for managing tip creation or reuse
-    private Map<Integer, View> mTipsMap = new HashMap<>();
+    private final Map<Integer, View> mTipsMap = new HashMap<>();
 
     private int mAnimationDuration;
     private TipListener mListener;

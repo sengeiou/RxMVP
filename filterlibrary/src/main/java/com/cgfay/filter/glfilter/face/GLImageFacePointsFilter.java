@@ -34,11 +34,10 @@ public class GLImageFacePointsFilter extends GLImageFilter {
 
     // 关键点滤镜
     private final float[] color = {1.0f, 0.0f, 0.0f, 1.0f};
-
-    private int mColorHandle;
     private final int mPointCount = 114;
     private final float[] mPoints;
     private final FloatBuffer mPointVertexBuffer;
+    private int mColorHandle;
 
     public GLImageFacePointsFilter(Context context) {
         this(context, VertexShader, FragmentShader);

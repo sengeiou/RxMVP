@@ -23,13 +23,13 @@ final class VideoEncoder {
     private static final boolean VERBOSE = false;
 
     private final Surface mInputSurface;
-    private MediaMuxer mMediaMuxer;
-    private MediaCodec mMediaCodec;
     private final MediaCodec.BufferInfo mBufferInfo;
-    private int mTrackIndex;
-    private boolean mMuxerStarted;
     private final VideoParams mVideoParams;
     private final OnEncodingListener mRecordingListener;
+    private MediaMuxer mMediaMuxer;
+    private MediaCodec mMediaCodec;
+    private int mTrackIndex;
+    private boolean mMuxerStarted;
     // 录制起始时间戳
     private long mStartTimeStamp;
     // 录制时长

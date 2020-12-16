@@ -17,6 +17,7 @@
 package com.yumore.feature.module.scaner.decoding;
 
 import android.content.DialogInterface;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 /**

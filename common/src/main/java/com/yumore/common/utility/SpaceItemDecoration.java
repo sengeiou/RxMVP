@@ -3,6 +3,7 @@ package com.yumore.common.utility;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.view.View;
+
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -24,12 +25,12 @@ public class SpaceItemDecoration extends RecyclerView.ItemDecoration {
     public static final int STAGGERED_GRID_LAYOUT = 2;
     private int leftRight;
     private int topBottom;
-    private int headItemCount;
+    private final int headItemCount;
     private int space;
     private boolean includeEdge;
     private int spanCount;
     @LayoutManager
-    private int layoutManager;
+    private final int layoutManager;
     private GridLayoutManager gridLayoutManager;
 
     /**

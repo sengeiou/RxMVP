@@ -18,7 +18,7 @@ import com.yumore.uitls.utils.DensityUtils;
 public class VideoClipSeekBar extends View {
 
     private static final int MAX = 100;
-
+    private final int mMax = MAX;
     private int width;
     private int height;
     private RectF bar;
@@ -34,8 +34,6 @@ public class VideoClipSeekBar extends View {
     private int roundCorner;
     private boolean moveStart;
     private boolean moveEnd;
-    private final int mMax = MAX;
-
     private OnCutBarChangeListener callBack;
 
     public VideoClipSeekBar(Context context) {

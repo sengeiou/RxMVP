@@ -1,7 +1,13 @@
 package com.yumore.cropper.util;
 
 import android.annotation.TargetApi;
-import android.opengl.*;
+import android.opengl.EGL14;
+import android.opengl.EGLConfig;
+import android.opengl.EGLContext;
+import android.opengl.EGLDisplay;
+import android.opengl.EGLSurface;
+import android.opengl.GLES10;
+import android.opengl.GLES20;
 import android.os.Build;
 import android.util.Log;
 

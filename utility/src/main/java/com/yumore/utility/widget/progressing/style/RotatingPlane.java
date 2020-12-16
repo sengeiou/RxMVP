@@ -2,6 +2,7 @@ package com.yumore.utility.widget.progressing.style;
 
 import android.animation.ValueAnimator;
 import android.graphics.Rect;
+
 import com.yumore.utility.widget.progressing.animation.SpriteAnimatorBuilder;
 import com.yumore.utility.widget.progressing.sprite.RectSprite;
 

@@ -7,9 +7,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.utility.utility.RxImageTool;
@@ -20,6 +20,9 @@ import com.yumore.utility.widget.colorpicker.slider.AlphaSlider;
 import com.yumore.utility.widget.colorpicker.slider.LightnessSlider;
 import com.yumore.utility.widget.waveview.RxWaveHelper;
 import com.yumore.utility.widget.waveview.RxWaveView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author yumore

@@ -13,9 +13,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.DataSource;
@@ -41,8 +43,6 @@ import com.yumore.picture.widget.PreviewViewPager;
 import com.yumore.picture.widget.longimage.ImageSource;
 import com.yumore.picture.widget.longimage.ImageViewState;
 import com.yumore.picture.widget.longimage.SubsamplingScaleImageView;
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -51,6 +51,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 
 /**
  * author：luck
@@ -70,7 +73,7 @@ public class PictureExternalPreviewActivity extends PictureBaseActivity implemen
     private LayoutInflater inflater;
     private RxPermissions rxPermissions;
     private loadDataThread loadDataThread;
-    private Handler handler = new Handler() {
+    private final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
@@ -391,7 +394,7 @@ public class PictureExternalPreviewActivity extends PictureBaseActivity implemen
 
     // 进度条线程
     public class loadDataThread extends Thread {
-        private String path;
+        private final String path;
 
         public loadDataThread(String path) {
             super();

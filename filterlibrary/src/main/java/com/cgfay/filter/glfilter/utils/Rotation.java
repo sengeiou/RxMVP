@@ -1,4 +1,3 @@
-
 package com.yumore.filter.glfilter.utils;
 
 /**

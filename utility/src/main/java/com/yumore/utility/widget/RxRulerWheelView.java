@@ -2,7 +2,11 @@ package com.yumore.utility.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextPaint;
@@ -13,8 +17,10 @@ import android.view.MotionEvent;
 import android.view.SoundEffectConstants;
 import android.view.View;
 import android.widget.OverScroller;
+
 import androidx.core.view.GestureDetectorCompat;
 import androidx.core.view.ViewCompat;
+
 import com.yumore.utility.R;
 
 import java.util.ArrayList;
@@ -44,7 +50,7 @@ public class RxRulerWheelView extends View implements GestureDetector.OnGestureL
 
     private int mMarkCount;
     private float mAdditionCenterMarkWidth;
-    private Path mCenterIndicatorPath = new Path();
+    private final Path mCenterIndicatorPath = new Path();
     private float mCursorSize;
     private int mViewScopeSize;
 

@@ -18,12 +18,12 @@ import com.yumore.imagelibrary.R;
 public class CropCoverView extends View {
 
     private static final String TAG = "ImageCropView";
-
+    private final float mLastX = 0;
+    private final float mLastY = 0;
     private int mMeasuredWidth;
     private int mMeasuredHeight;
     private Paint mPaint;
     private int mStrokeWidth;
-
     // 边角长度
     private int mCornerLength;
     private float mMarginLeft;
@@ -31,13 +31,9 @@ public class CropCoverView extends View {
     private float mMarginTop;
     private float mMarginBottom;
     private int mStrokeWidthNew;
-
     // 按下坐标
     private float mTouchX;
     private float mTouchY;
-    private final float mLastX = 0;
-    private final float mLastY = 0;
-
     private boolean mTouchLeft;     // 左边触摸标志
     private boolean mTouchRight;    // 右边触摸标志
     private boolean mTouchTop;      // 上边触摸标志

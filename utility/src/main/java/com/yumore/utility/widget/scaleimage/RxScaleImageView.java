@@ -20,8 +20,16 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.database.Cursor;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
 import android.graphics.Paint.Style;
+import android.graphics.Point;
+import android.graphics.PointF;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -37,16 +45,27 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewParent;
+
 import androidx.annotation.AnyThread;
 import androidx.annotation.NonNull;
+
 import com.yumore.utility.R;
+import com.yumore.utility.widget.scaleimage.decoder.CompatDecoderFactory;
+import com.yumore.utility.widget.scaleimage.decoder.DecoderFactory;
 import com.yumore.utility.widget.scaleimage.decoder.ImageDecoder;
-import com.yumore.utility.widget.scaleimage.decoder.*;
+import com.yumore.utility.widget.scaleimage.decoder.ImageRegionDecoder;
+import com.yumore.utility.widget.scaleimage.decoder.SkiaImageDecoder;
+import com.yumore.utility.widget.scaleimage.decoder.SkiaImageRegionDecoder;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.concurrent.Executor;
 
 /**
@@ -245,7 +264,7 @@ public class RxScaleImageView extends View {
     // Long click listener
     private OnLongClickListener onLongClickListener;
     // Long click handler
-    private Handler handler;
+    private final Handler handler;
     // Paint objects created once and reused for efficiency
     private Paint bitmapPaint;
     private Paint debugPaint;
@@ -255,11 +274,11 @@ public class RxScaleImageView extends View {
     private ScaleAndTranslate satTemp;
     private Matrix matrix;
     private RectF sRect;
-    private float[] srcArray = new float[8];
-    private float[] dstArray = new float[8];
+    private final float[] srcArray = new float[8];
+    private final float[] dstArray = new float[8];
 
     //The logical density of the display
-    private float density;
+    private final float density;
 
 
     public RxScaleImageView(Context context, AttributeSet attr) {
@@ -2855,7 +2874,7 @@ public class RxScaleImageView extends View {
 
     private static class ScaleAndTranslate {
         private float scale;
-        private PointF vTranslate;
+        private final PointF vTranslate;
 
         private ScaleAndTranslate(float scale, PointF vTranslate) {
             this.scale = scale;

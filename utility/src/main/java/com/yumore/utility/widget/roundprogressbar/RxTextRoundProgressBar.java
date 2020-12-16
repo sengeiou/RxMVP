@@ -15,6 +15,7 @@ import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.yumore.utility.R;
 import com.yumore.utility.widget.roundprogressbar.common.RxBaseRoundProgressBar;
 

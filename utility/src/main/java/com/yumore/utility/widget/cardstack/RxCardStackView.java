@@ -7,10 +7,22 @@ import android.database.Observable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.*;
+import android.view.MotionEvent;
+import android.view.VelocityTracker;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.ViewGroup;
+import android.view.ViewParent;
 import android.widget.OverScroller;
+
 import com.yumore.utility.R;
-import com.yumore.utility.widget.cardstack.tools.*;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterAllMoveDownAnimator;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterAnimator;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterStack;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterUpDownAnimator;
+import com.yumore.utility.widget.cardstack.tools.RxAdapterUpDownStackAnimator;
+import com.yumore.utility.widget.cardstack.tools.RxScrollDelegate;
+import com.yumore.utility.widget.cardstack.tools.RxStackScrollDelegateImpl;
 
 import java.util.ArrayList;
 import java.util.List;

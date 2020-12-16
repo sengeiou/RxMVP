@@ -11,18 +11,37 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.*;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
-import android.widget.*;
-import androidx.annotation.*;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
+
 import com.yumore.cropper.callback.BitmapCropCallback;
 import com.yumore.cropper.model.AspectRatio;
 import com.yumore.cropper.util.SelectedStateListDrawable;
-import com.yumore.cropper.view.*;
+import com.yumore.cropper.view.CropImageView;
+import com.yumore.cropper.view.GestureCropImageView;
+import com.yumore.cropper.view.OverlayView;
+import com.yumore.cropper.view.TransformImageView;
+import com.yumore.cropper.view.UCropView;
 import com.yumore.cropper.view.widget.AspectRatioTextView;
 import com.yumore.cropper.view.widget.HorizontalProgressWheelView;
 
@@ -70,7 +89,7 @@ public class UCropActivity extends AppCompatActivity {
     private OverlayView mOverlayView;
     private ViewGroup mWrapperStateAspectRatio, mWrapperStateRotate, mWrapperStateScale;
     private ViewGroup mLayoutAspectRatio, mLayoutRotate, mLayoutScale;
-    private List<ViewGroup> mCropAspectRatioViews = new ArrayList<>();
+    private final List<ViewGroup> mCropAspectRatioViews = new ArrayList<>();
     private TextView mTextViewRotateAngle, mTextViewScalePercent;
     private View mBlockingView;
     private Bitmap.CompressFormat mCompressFormat = DEFAULT_COMPRESS_FORMAT;
@@ -93,7 +112,7 @@ public class UCropActivity extends AppCompatActivity {
      * 图片是否可拖动或旋转
      */
     private boolean scaleEnabled, rotateEnabled;
-    private TransformImageView.TransformImageListener mImageListener = new TransformImageView.TransformImageListener() {
+    private final TransformImageView.TransformImageListener mImageListener = new TransformImageView.TransformImageListener() {
         @Override
         public void onRotate(float currentAngle) {
             setAngleText(currentAngle);

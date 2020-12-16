@@ -2,13 +2,20 @@ package com.yumore.utility.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.PointF;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Scroller;
+
 import androidx.annotation.NonNull;
+
 import com.yumore.utility.R;
 import com.yumore.utility.entity.ModelSpider;
 import com.yumore.utility.utility.RxImageTool;
@@ -68,7 +75,7 @@ public class RxCobwebView extends View {
 
     private GestureDetector mDetector;
 
-    private Context mContext;
+    private final Context mContext;
 
     private Scroller mScroller;
     private float mFlingPoint;

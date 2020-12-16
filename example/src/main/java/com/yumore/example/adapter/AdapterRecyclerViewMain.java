@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.bumptech.glide.Glide;
 import com.yumore.example.R;
 import com.yumore.example.R2;
@@ -17,6 +17,9 @@ import com.yumore.example.entity.ModelMainItem;
 import com.yumore.utility.utility.RxActivityTool;
 
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author yumore
@@ -27,7 +30,7 @@ public class AdapterRecyclerViewMain extends RecyclerView.Adapter<AdapterRecycle
 
     private int mScreenWidth, mItemWidth, mItemHeight;
     private Context context;
-    private List<ModelMainItem> mValues;
+    private final List<ModelMainItem> mValues;
 
     public AdapterRecyclerViewMain(List<ModelMainItem> items) {
         mValues = items;

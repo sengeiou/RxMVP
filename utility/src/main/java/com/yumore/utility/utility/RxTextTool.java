@@ -9,8 +9,26 @@ import android.net.Uri;
 import android.text.Layout.Alignment;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
-import android.text.style.*;
+import android.text.style.AlignmentSpan;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.BulletSpan;
+import android.text.style.ClickableSpan;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.ImageSpan;
+import android.text.style.LeadingMarginSpan;
+import android.text.style.MaskFilterSpan;
+import android.text.style.QuoteSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.ScaleXSpan;
+import android.text.style.StrikethroughSpan;
+import android.text.style.StyleSpan;
+import android.text.style.SubscriptSpan;
+import android.text.style.SuperscriptSpan;
+import android.text.style.TypefaceSpan;
+import android.text.style.URLSpan;
+import android.text.style.UnderlineSpan;
 import android.widget.TextView;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
@@ -37,7 +55,7 @@ public class RxTextTool {
 
     public static class Builder {
 
-        private int defaultValue = 0x12000000;
+        private final int defaultValue = 0x12000000;
         private CharSequence text;
 
         private int flag;
@@ -85,7 +103,7 @@ public class RxTextTool {
         private float radius;
         private Blur style;
 
-        private SpannableStringBuilder mBuilder;
+        private final SpannableStringBuilder mBuilder;
 
 
         private Builder(@NonNull CharSequence text) {

@@ -6,6 +6,7 @@ import android.text.SpannableString;
 import android.text.TextUtils;
 import android.text.style.RelativeSizeSpan;
 import android.widget.TextView;
+
 import com.yumore.picture.R;
 import com.yumore.picture.config.PictureMimeType;
 

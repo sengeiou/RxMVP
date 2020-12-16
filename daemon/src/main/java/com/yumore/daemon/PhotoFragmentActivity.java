@@ -3,10 +3,13 @@ package com.yumore.daemon;
 import android.Manifest;
 import android.os.Bundle;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.picture.config.PictureConfig;
 import com.yumore.picture.permissions.RxPermissions;
 import com.yumore.picture.tools.PictureFileUtils;
+
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 

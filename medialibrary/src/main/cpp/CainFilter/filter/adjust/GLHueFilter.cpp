@@ -9,7 +9,7 @@ const std::string kHueFragmentShader = SHADER_TO_STRING(
         precision
         highp float;
         varying
-        highp
+                highp
         vec2 textureCoordinate;
 
         uniform

@@ -3,16 +3,23 @@ package com.yumore.common.basic;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.*;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
+
 import com.yumore.common.R;
 import com.yumore.common.utility.ActivityManager;
+
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * BaseActivity

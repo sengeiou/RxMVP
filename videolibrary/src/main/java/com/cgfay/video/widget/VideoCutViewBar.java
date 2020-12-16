@@ -32,14 +32,15 @@ public class VideoCutViewBar extends View {
 
     private final int TOUCH_EDGE = 30;
     private final int SLIDE_MESSAGE = 0x100;
+    // 帧列表
+    private final ArrayList<VideoFrameNode> mLoadingFrames;
+    private final int mViewNumber = 1;    // 控件显示多少帧
     private int mMaxTime = CROP_TIME_MAX_15;
     private long mFrameTime = 1000L;
     // 当前速度
     private VideoSpeed mCurrentSpeed = VideoSpeed.SPEED_L2;
     private String mVideoPath;
     private boolean loadFinish;
-    // 帧列表
-    private final ArrayList<VideoFrameNode> mLoadingFrames;
     private VideoFrameNode mCurrentNode;
     private VideoFrameNode mFirstNode;
     private VideoFrameNode mLastNode;
@@ -50,7 +51,6 @@ public class VideoCutViewBar extends View {
     private long mVideoDuration;    // 时长
     private float mVideoSar;        // 长宽比
     private float mViewFrameWidth;  // 帧宽度
-    private final int mViewNumber = 1;    // 控件显示多少帧
     private boolean loadFail;   // 加载失败
     // 裁剪参数
     private float mCropMax = CROP_TIME_MAX_15;  // 最大允许选取时间

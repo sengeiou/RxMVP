@@ -10,7 +10,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
+
 import androidx.viewpager.widget.ViewPager;
+
 import com.yumore.gallery.R;
 import com.yumore.gallery.entity.ImageItem;
 import com.yumore.gallery.helper.ImagePicker;

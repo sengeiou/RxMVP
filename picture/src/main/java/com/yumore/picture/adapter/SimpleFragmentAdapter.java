@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.viewpager.widget.PagerAdapter;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -36,9 +38,9 @@ import java.util.List;
  */
 
 public class SimpleFragmentAdapter extends PagerAdapter {
-    private List<LocalMedia> images;
-    private Context mContext;
-    private OnCallBackActivity onBackPressed;
+    private final List<LocalMedia> images;
+    private final Context mContext;
+    private final OnCallBackActivity onBackPressed;
 
     public SimpleFragmentAdapter(List<LocalMedia> images, Context context,
                                  OnCallBackActivity onBackPressed) {

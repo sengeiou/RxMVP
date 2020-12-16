@@ -9,6 +9,7 @@ import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
 import com.cgfay.cameralibrary.R;
 
 import java.util.ArrayList;
@@ -46,7 +47,7 @@ public class RecordProgressView extends View {
 
     private float mProgress;
 
-    private List<Float> mProgressList = new ArrayList<>();
+    private final List<Float> mProgressList = new ArrayList<>();
 
     public RecordProgressView(Context context) {
         super(context);

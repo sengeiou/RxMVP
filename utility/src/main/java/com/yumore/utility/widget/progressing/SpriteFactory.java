@@ -2,7 +2,21 @@ package com.yumore.utility.widget.progressing;
 
 
 import com.yumore.utility.widget.progressing.sprite.Sprite;
-import com.yumore.utility.widget.progressing.style.*;
+import com.yumore.utility.widget.progressing.style.ChasingDots;
+import com.yumore.utility.widget.progressing.style.Circle;
+import com.yumore.utility.widget.progressing.style.CubeGrid;
+import com.yumore.utility.widget.progressing.style.DoubleBounce;
+import com.yumore.utility.widget.progressing.style.FadingCircle;
+import com.yumore.utility.widget.progressing.style.FoldingCube;
+import com.yumore.utility.widget.progressing.style.MultiplePulse;
+import com.yumore.utility.widget.progressing.style.MultiplePulseRing;
+import com.yumore.utility.widget.progressing.style.Pulse;
+import com.yumore.utility.widget.progressing.style.PulseRing;
+import com.yumore.utility.widget.progressing.style.RotatingCircle;
+import com.yumore.utility.widget.progressing.style.RotatingPlane;
+import com.yumore.utility.widget.progressing.style.ThreeBounce;
+import com.yumore.utility.widget.progressing.style.WanderingCubes;
+import com.yumore.utility.widget.progressing.style.Wave;
 
 /**
  * @author yumore

@@ -21,26 +21,27 @@ import java.util.concurrent.TimeUnit;
  */
 public class TimeRotating extends View {
 
-    private String[] days = {"\t\t\t\t壹", "\t\t\t\t贰", "\t\t\t\t叁", "\t\t\t\t肆", "\t\t\t\t伍", "\t\t\t\t陆", "\t\t\t\t柒", "\t\t\t\t捌",
+    private final String[] days = {"\t\t\t\t壹", "\t\t\t\t贰", "\t\t\t\t叁", "\t\t\t\t肆", "\t\t\t\t伍", "\t\t\t\t陆", "\t\t\t\t柒", "\t\t\t\t捌",
             "\t\t\t\t玖", "\t\t\t\t拾", "拾壹", "拾贰", "拾叁", "拾肆", "拾伍", "拾陆", "拾柒", "拾捌", "拾玖", "贰拾", "贰拾壹", "贰拾贰",
             "贰拾叁", "贰拾肆", "贰拾伍", "贰拾陆", "贰拾柒", "贰拾捌", "贰拾玖", "叁拾", "叁拾壹"};
-    private String[] hours = {"\t\t壹", "\t\t贰", "\t\t叁", "\t\t肆", "\t\t伍", "\t\t陆", "\t\t柒", "\t\t捌", "\t\t玖", "\t\t拾", "拾壹", "拾贰"};
-    private String[] minutes = {"\t\t\t\t壹", "\t\t\t\t贰", "\t\t\t\t叁", "\t\t\t\t肆", "\t\t\t\t伍", "\t\t\t\t陆", "\t\t\t\t柒", "\t\t\t\t捌",
+    private final String[] hours = {"\t\t壹", "\t\t贰", "\t\t叁", "\t\t肆", "\t\t伍", "\t\t陆", "\t\t柒", "\t\t捌", "\t\t玖", "\t\t拾", "拾壹", "拾贰"};
+    private final String[] minutes = {"\t\t\t\t壹", "\t\t\t\t贰", "\t\t\t\t叁", "\t\t\t\t肆", "\t\t\t\t伍", "\t\t\t\t陆", "\t\t\t\t柒", "\t\t\t\t捌",
             "\t\t\t\t玖", "\t\t\t\t拾", "拾壹", "拾贰", "拾叁", "拾肆", "拾伍", "拾陆", "拾柒", "拾捌", "拾玖", "贰拾", "贰拾壹", "贰拾贰", "贰拾叁",
             "贰拾肆", "贰拾伍", "贰拾陆", "贰拾柒", "贰拾捌", "贰拾玖", "叁拾", "叁拾壹", "叁拾贰", "叁拾叁", "叁拾肆", "叁拾伍", "叁拾陆", "叁拾柒",
             "叁拾捌", "叁拾玖", "肆拾", "肆拾壹", "肆拾贰", "肆拾叁", "肆拾肆", "肆拾伍", "肆拾陆", "肆拾柒", "肆拾捌", "肆拾玖", "伍拾", "伍拾壹",
             "伍拾贰", "伍拾叁", "伍拾肆", "伍拾伍", "伍拾陆", "伍拾柒", "伍拾捌", "伍拾玖"};
-    private String[] months = {"壹", "贰", "仨", "肆", "伍", "陆", "柒", "捌", "玖", "拾", "拾壹", "拾贰"};
-    private String[] seconds = minutes;
+    private final String[] months = {"壹", "贰", "仨", "肆", "伍", "陆", "柒", "捌", "玖", "拾", "拾壹", "拾贰"};
+    private final String[] seconds = minutes;
 
     private Paint mPaint;
     private float mScale;
-    private Matrix matrix = new Matrix();
+    private final Matrix matrix = new Matrix();
     private int monthIndex = 0;
     private int dayIndex = 0;
     private int hourIndex = 0;
     private int minuteIndex = 0;
     private int secondIndex = 0;
+    private int i;
 
     public TimeRotating(Context context) {
         super(context);
@@ -67,8 +68,8 @@ public class TimeRotating extends View {
             @Override
             public void run() {
                 Calendar instance = Calendar.getInstance();
-                Log.e("TAG","instance.get(5) - 1=="+(instance.get(Calendar.HOUR_OF_DAY)));
-                monthIndex=instance.get(Calendar.MONTH);
+                Log.e("TAG", "instance.get(5) - 1==" + (instance.get(Calendar.HOUR_OF_DAY)));
+                monthIndex = instance.get(Calendar.MONTH);
                 dayIndex = instance.get(Calendar.DAY_OF_MONTH) - 1;
                 hourIndex = instance.get(Calendar.HOUR_OF_DAY) - 1;
                 minuteIndex = instance.get(Calendar.MINUTE) - 1;
@@ -79,8 +80,6 @@ public class TimeRotating extends View {
 
 
     }
-
-    private int i;
 
     @Override
     protected void onDraw(Canvas canvas) {

@@ -19,16 +19,14 @@ public class HWMediaRecorder implements OnRecordListener {
     private final AudioRecorder mAudioRecorder;
     // 视频录制器
     private final VideoRecorder mVideoRecorder;
+    // 录制状态回调
+    private final OnRecordStateListener mRecordStateListener;
     // 是否支持音频录制
     private boolean mAudioEnable = true;
     // 打开的录制器个数
     private int mRecorderCount;
-
     // 处理时长
     private long mProcessTime = 0;
-
-    // 录制状态回调
-    private final OnRecordStateListener mRecordStateListener;
 
     public HWMediaRecorder(OnRecordStateListener listener) {
         mRecordStateListener = listener;

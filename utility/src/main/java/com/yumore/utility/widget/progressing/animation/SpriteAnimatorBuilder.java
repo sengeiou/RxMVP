@@ -6,6 +6,7 @@ import android.animation.PropertyValuesHolder;
 import android.util.Property;
 import android.view.animation.Animation;
 import android.view.animation.Interpolator;
+
 import com.yumore.utility.widget.progressing.animation.interpolator.KeyFrameInterpolator;
 import com.yumore.utility.widget.progressing.sprite.Sprite;
 
@@ -17,8 +18,8 @@ import java.util.Locale;
  * @author yumore
  */
 public class SpriteAnimatorBuilder {
-    private Sprite sprite;
-    private List<PropertyValuesHolder> propertyValuesHolders = new ArrayList<>();
+    private final Sprite sprite;
+    private final List<PropertyValuesHolder> propertyValuesHolders = new ArrayList<>();
     private Interpolator interpolator;
     private int repeatCount = Animation.INFINITE;
     private long duration = 2000;

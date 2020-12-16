@@ -10,10 +10,10 @@ const std::string kOESInputVertexShader = SHADER_TO_STRING(
         uniform
         mat4 transformMatrix;
         attribute
-        highp
+                highp
         vec4 aPosition;
         attribute
-        highp
+                highp
         vec2 aTextureCoord;
         varying
         vec2 textureCoordinate;

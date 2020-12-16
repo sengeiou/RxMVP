@@ -2,6 +2,7 @@ package com.cgfay.filter.glfilter.multiframe;
 
 import android.content.Context;
 import android.opengl.GLES30;
+
 import com.cgfay.filter.glfilter.base.GLImageFilter;
 import com.cgfay.filter.glfilter.utils.OpenGLUtils;
 

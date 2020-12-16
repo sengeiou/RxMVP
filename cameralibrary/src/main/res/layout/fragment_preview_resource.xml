@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
 
     <!-- 类型选择 -->
     <LinearLayout
-            android:id="@+id/layout_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:gravity="bottom"
-            android:minHeight="@dimen/dp200"
-            android:orientation="vertical">
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:minHeight="@dimen/dp200"
+        android:orientation="vertical">
 
         <!-- 标题栏 -->
         <LinearLayout
-                android:id="@+id/layout_sticker_title"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp40"
-                android:layout_gravity="center"
-                android:background="@color/effectEditBackground"
-                android:gravity="center"
-                android:orientation="horizontal">
+            android:id="@+id/layout_sticker_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_gravity="center"
+            android:background="@color/effectEditBackground"
+            android:gravity="center"
+            android:orientation="horizontal">
 
         </LinearLayout>
 
         <!-- 分割线 -->
         <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/white" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white" />
 
         <!-- 内容栏 -->
         <LinearLayout
-                android:id="@+id/layout_sticker_content"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp160"
-                android:layout_gravity="center_horizontal"
-                android:background="@color/effectEditBackground"
-                android:gravity="top"
-                android:orientation="vertical">
+            android:id="@+id/layout_sticker_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp160"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/effectEditBackground"
+            android:gravity="top"
+            android:orientation="vertical">
 
         </LinearLayout>
     </LinearLayout>

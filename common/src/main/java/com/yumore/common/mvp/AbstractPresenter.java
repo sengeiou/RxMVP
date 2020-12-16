@@ -2,9 +2,12 @@ package com.yumore.common.mvp;
 
 import android.content.Context;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
+
 import com.yumore.common.basic.BaseContract;
 import com.yumore.common.basic.BaseViewer;
+
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 

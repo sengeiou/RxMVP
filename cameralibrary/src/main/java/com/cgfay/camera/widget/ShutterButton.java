@@ -28,10 +28,10 @@ public class ShutterButton extends View {
 
     // 按钮做缩放动画
     private static final int MSG_ZOOM_ANIM = 0x00;
-
+    // 分割列表
+    private final List<Float> mSplitList = new ArrayList<>();
     // 按钮的宽高
     private int mMeasuredWidth = -1;
-
     // 控件填充背景
     private Paint mFillPaint;
     // 进度条
@@ -42,7 +42,6 @@ public class ShutterButton extends View {
     private int mOuterBackgroundColor;
     // 设置外圆进度条颜色
     private int mOuterStrokeColor;
-
     // 内圆背景颜色
     private int mInnerBackgroundColor;
     // 外圆半径
@@ -51,22 +50,18 @@ public class ShutterButton extends View {
     private float mInnerOvalRadius;
     // 缩放比例
     private float mZoomValue = 0.8f;// 初始化缩放比例
-
     // 绘制分割线的Paint
     private Paint mPaintSplit;
     // 分割线的颜色
     private int mSplitColor;
-
     // 是否处于删除模式
     private boolean mDeleteMode = false;
     // 绘制删除模式的Paint
     private Paint mPaintDelete;
     // 删除模式下的颜色
     private int mDeleteColor;
-
     // 设置进度条起始角度，默认270度
     private int mStartDegree = 270;
-
     // 当前进度以角度为单位
     private float mGirthPro;
     // 绘制的大小
@@ -75,29 +70,14 @@ public class ShutterButton extends View {
     private int mMax = 10 * 1000;
     // 当前进度(默认值为0)
     private float mProgress = 0;
-
     // 手势监听器
     private OnShutterListener mOnShutterListener;
     // 动画时间
     private int mAnimDuration = 150;
-
     // button是否处于打开状态
     private boolean mOpenMode = false;
-
-    // 分割列表
-    private final List<Float> mSplitList = new ArrayList<>();
-
     // 按钮动画
     private ValueAnimator mButtonAnim;
-
-    // 编码器是否处于可用状态(包括处于非录制可用，以及可停止状态)
-    private boolean mEnableEncoder = true;
-
-    // 判断录制视频还是拍照
-    private boolean mIsRecord = false;
-
-    // 判断是否处于预览状态，主要用于页面刚打开状态的状态限定
-    private boolean mPreviewing = false;
     private final Handler mButtonHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -115,6 +95,12 @@ public class ShutterButton extends View {
 
         }
     };
+    // 编码器是否处于可用状态(包括处于非录制可用，以及可停止状态)
+    private boolean mEnableEncoder = true;
+    // 判断录制视频还是拍照
+    private boolean mIsRecord = false;
+    // 判断是否处于预览状态，主要用于页面刚打开状态的状态限定
+    private boolean mPreviewing = false;
     // 点击位置
     private float firstX;
     private float firstY;

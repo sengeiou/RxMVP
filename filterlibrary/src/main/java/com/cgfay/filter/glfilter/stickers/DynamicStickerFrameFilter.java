@@ -14,11 +14,11 @@ import java.nio.FloatBuffer;
  */
 public class DynamicStickerFrameFilter extends DynamicStickerBaseFilter {
 
+    // 贴纸缓冲
+    private final FloatBuffer mStickerBuffer;
     private int mStickerCoordHandle;
     private int mStickerTextureHandle;
     private int mEnableStickerHandle;
-    // 贴纸缓冲
-    private final FloatBuffer mStickerBuffer;
     private int mStickerTexture;
 
     public DynamicStickerFrameFilter(Context context, DynamicSticker sticker) {

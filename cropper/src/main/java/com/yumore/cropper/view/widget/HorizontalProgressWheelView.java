@@ -9,8 +9,10 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+
 import androidx.annotation.ColorInt;
 import androidx.core.content.ContextCompat;
+
 import com.yumore.cropper.R;
 
 /**

@@ -215,7 +215,7 @@ enum AVCodecID {
     AV_CODEC_ID_NONE,
 
     /* video codecs */
-            AV_CODEC_ID_MPEG1VIDEO,
+    AV_CODEC_ID_MPEG1VIDEO,
     AV_CODEC_ID_MPEG2VIDEO, ///< preferred ID for MPEG-1/2 video decoding
 #if FF_API_XVMC
     AV_CODEC_ID_MPEG2VIDEO_XVMC,
@@ -444,7 +444,7 @@ enum AVCodecID {
     AV_CODEC_ID_AV1,
 
     /* various PCM "codecs" */
-            AV_CODEC_ID_FIRST_AUDIO = 0x10000,     ///< A dummy id pointing at the start of audio codecs
+    AV_CODEC_ID_FIRST_AUDIO = 0x10000,     ///< A dummy id pointing at the start of audio codecs
     AV_CODEC_ID_PCM_S16LE = 0x10000,
     AV_CODEC_ID_PCM_S16BE,
     AV_CODEC_ID_PCM_U16LE,
@@ -483,7 +483,7 @@ enum AVCodecID {
     AV_CODEC_ID_PCM_F24LE,
 
     /* various ADPCM codecs */
-            AV_CODEC_ID_ADPCM_IMA_QT = 0x11000,
+    AV_CODEC_ID_ADPCM_IMA_QT = 0x11000,
     AV_CODEC_ID_ADPCM_IMA_WAV,
     AV_CODEC_ID_ADPCM_IMA_DK3,
     AV_CODEC_ID_ADPCM_IMA_DK4,
@@ -530,15 +530,15 @@ enum AVCodecID {
     AV_CODEC_ID_ADPCM_MTAF,
 
     /* AMR */
-            AV_CODEC_ID_AMR_NB = 0x12000,
+    AV_CODEC_ID_AMR_NB = 0x12000,
     AV_CODEC_ID_AMR_WB,
 
     /* RealAudio codecs*/
-            AV_CODEC_ID_RA_144 = 0x13000,
+    AV_CODEC_ID_RA_144 = 0x13000,
     AV_CODEC_ID_RA_288,
 
     /* various DPCM codecs */
-            AV_CODEC_ID_ROQ_DPCM = 0x14000,
+    AV_CODEC_ID_ROQ_DPCM = 0x14000,
     AV_CODEC_ID_INTERPLAY_DPCM,
     AV_CODEC_ID_XAN_DPCM,
     AV_CODEC_ID_SOL_DPCM,
@@ -546,7 +546,7 @@ enum AVCodecID {
     AV_CODEC_ID_SDX2_DPCM = 0x14800,
 
     /* audio codecs */
-            AV_CODEC_ID_MP2 = 0x15000,
+    AV_CODEC_ID_MP2 = 0x15000,
     AV_CODEC_ID_MP3, ///< preferred ID for decoding MPEG audio layer 1, 2 or 3
     AV_CODEC_ID_AAC,
     AV_CODEC_ID_AC3,
@@ -635,7 +635,7 @@ enum AVCodecID {
     AV_CODEC_ID_ATRAC3PAL,
 
     /* subtitle codecs */
-            AV_CODEC_ID_FIRST_SUBTITLE = 0x17000,          ///< A dummy ID pointing at the start of subtitle codecs.
+    AV_CODEC_ID_FIRST_SUBTITLE = 0x17000,          ///< A dummy ID pointing at the start of subtitle codecs.
     AV_CODEC_ID_DVD_SUBTITLE = 0x17000,
     AV_CODEC_ID_DVB_SUBTITLE,
     AV_CODEC_ID_TEXT,  ///< raw UTF-8 text
@@ -663,7 +663,7 @@ enum AVCodecID {
     AV_CODEC_ID_HDMV_TEXT_SUBTITLE,
 
     /* other specific kind of codecs (generally used for attachments) */
-            AV_CODEC_ID_FIRST_UNKNOWN = 0x18000,           ///< A dummy ID pointing at the start of various fake codecs.
+    AV_CODEC_ID_FIRST_UNKNOWN = 0x18000,           ///< A dummy ID pointing at the start of various fake codecs.
     AV_CODEC_ID_TTF = 0x18000,
 
     AV_CODEC_ID_SCTE_35, ///< Contain timestamp estimated through PCR of program stream.
@@ -813,7 +813,7 @@ enum Motion_Est_ID {
 enum AVDiscard {
     /* We leave some space between them for extensions (drop some
      * keyframes for intra-only or drop just some bidir frames). */
-            AVDISCARD_NONE = -16, ///< discard nothing
+    AVDISCARD_NONE = -16, ///< discard nothing
     AVDISCARD_DEFAULT = 0, ///< discard useless packets like 0 size packets in avi
     AVDISCARD_NONREF = 8, ///< discard all non reference
     AVDISCARD_BIDIR = 16, ///< discard all bidirectional frames
@@ -1400,7 +1400,7 @@ enum AVPacketSideDataType {
      * bytes worth of palette. This side data signals that a new palette is
      * present.
      */
-            AV_PKT_DATA_PALETTE,
+    AV_PKT_DATA_PALETTE,
 
     /**
      * The AV_PKT_DATA_NEW_EXTRADATA is used to notify the codec or the format
@@ -1409,7 +1409,7 @@ enum AVPacketSideDataType {
      * data buffer and should be immediately used for processing the current
      * frame or packet.
      */
-            AV_PKT_DATA_NEW_EXTRADATA,
+    AV_PKT_DATA_NEW_EXTRADATA,
 
     /**
      * An AV_PKT_DATA_PARAM_CHANGE side data packet is laid out as follows:
@@ -1426,7 +1426,7 @@ enum AVPacketSideDataType {
      *     s32le height
      * @endcode
      */
-            AV_PKT_DATA_PARAM_CHANGE,
+    AV_PKT_DATA_PARAM_CHANGE,
 
     /**
      * An AV_PKT_DATA_H263_MB_INFO side data packet contains a number of
@@ -1447,13 +1447,13 @@ enum AVPacketSideDataType {
      * u8    vertical MV predictor for block number 3
      * @endcode
      */
-            AV_PKT_DATA_H263_MB_INFO,
+    AV_PKT_DATA_H263_MB_INFO,
 
     /**
      * This side data should be associated with an audio stream and contains
      * ReplayGain information in form of the AVReplayGain struct.
      */
-            AV_PKT_DATA_REPLAYGAIN,
+    AV_PKT_DATA_REPLAYGAIN,
 
     /**
      * This side data contains a 3x3 transformation matrix describing an affine
@@ -1462,19 +1462,19 @@ enum AVPacketSideDataType {
      *
      * See libavutil/display.h for a detailed description of the data.
      */
-            AV_PKT_DATA_DISPLAYMATRIX,
+    AV_PKT_DATA_DISPLAYMATRIX,
 
     /**
      * This side data should be associated with a video stream and contains
      * Stereoscopic 3D information in form of the AVStereo3D struct.
      */
-            AV_PKT_DATA_STEREO3D,
+    AV_PKT_DATA_STEREO3D,
 
     /**
      * This side data should be associated with an audio stream and corresponds
      * to enum AVAudioServiceType.
      */
-            AV_PKT_DATA_AUDIO_SERVICE_TYPE,
+    AV_PKT_DATA_AUDIO_SERVICE_TYPE,
 
     /**
      * This side data contains quality related information from the encoder.
@@ -1486,7 +1486,7 @@ enum AVPacketSideDataType {
      * u64le[error count] sum of squared differences between encoder in and output
      * @endcode
      */
-            AV_PKT_DATA_QUALITY_STATS,
+    AV_PKT_DATA_QUALITY_STATS,
 
     /**
      * This side data contains an integer value representing the stream index
@@ -1494,12 +1494,12 @@ enum AVPacketSideDataType {
      * track to use when the current track can not be decoded for some reason.
      * e.g. no decoder available for codec.
      */
-            AV_PKT_DATA_FALLBACK_TRACK,
+    AV_PKT_DATA_FALLBACK_TRACK,
 
     /**
      * This side data corresponds to the AVCPBProperties struct.
      */
-            AV_PKT_DATA_CPB_PROPERTIES,
+    AV_PKT_DATA_CPB_PROPERTIES,
 
     /**
      * Recommmends skipping the specified number of samples
@@ -1510,7 +1510,7 @@ enum AVPacketSideDataType {
      * u8    reason for end   skip (0=padding silence, 1=convergence)
      * @endcode
      */
-            AV_PKT_DATA_SKIP_SAMPLES = 70,
+    AV_PKT_DATA_SKIP_SAMPLES = 70,
 
     /**
      * An AV_PKT_DATA_JP_DUALMONO side data packet indicates that
@@ -1520,13 +1520,13 @@ enum AVPacketSideDataType {
      * u8    selected channels (0=mail/left, 1=sub/right, 2=both)
      * @endcode
      */
-            AV_PKT_DATA_JP_DUALMONO,
+    AV_PKT_DATA_JP_DUALMONO,
 
     /**
      * A list of zero terminated key/value strings. There is no end marker for
      * the list, so it is required to rely on the side data size to stop.
      */
-            AV_PKT_DATA_STRINGS_METADATA,
+    AV_PKT_DATA_STRINGS_METADATA,
 
     /**
      * Subtitle event position
@@ -1537,7 +1537,7 @@ enum AVPacketSideDataType {
      * u32le y2
      * @endcode
      */
-            AV_PKT_DATA_SUBTITLE_POSITION,
+    AV_PKT_DATA_SUBTITLE_POSITION,
 
     /**
      * Data found in BlockAdditional element of matroska container. There is
@@ -1545,44 +1545,44 @@ enum AVPacketSideDataType {
      * size to recognize the end. 8 byte id (as found in BlockAddId) followed
      * by data.
      */
-            AV_PKT_DATA_MATROSKA_BLOCKADDITIONAL,
+    AV_PKT_DATA_MATROSKA_BLOCKADDITIONAL,
 
     /**
      * The optional first identifier line of a WebVTT cue.
      */
-            AV_PKT_DATA_WEBVTT_IDENTIFIER,
+    AV_PKT_DATA_WEBVTT_IDENTIFIER,
 
     /**
      * The optional settings (rendering instructions) that immediately
      * follow the timestamp specifier of a WebVTT cue.
      */
-            AV_PKT_DATA_WEBVTT_SETTINGS,
+    AV_PKT_DATA_WEBVTT_SETTINGS,
 
     /**
      * A list of zero terminated key/value strings. There is no end marker for
      * the list, so it is required to rely on the side data size to stop. This
      * side data includes updated metadata which appeared in the stream.
      */
-            AV_PKT_DATA_METADATA_UPDATE,
+    AV_PKT_DATA_METADATA_UPDATE,
 
     /**
      * MPEGTS stream ID, this is required to pass the stream ID
      * information from the demuxer to the corresponding muxer.
      */
-            AV_PKT_DATA_MPEGTS_STREAM_ID,
+    AV_PKT_DATA_MPEGTS_STREAM_ID,
 
     /**
      * Mastering display metadata (based on SMPTE-2086:2014). This metadata
      * should be associated with a video stream and containts data in the form
      * of the AVMasteringDisplayMetadata struct.
      */
-            AV_PKT_DATA_MASTERING_DISPLAY_METADATA,
+    AV_PKT_DATA_MASTERING_DISPLAY_METADATA,
 
     /**
      * This side data should be associated with a video stream and corresponds
      * to the AVSphericalMapping structure.
      */
-            AV_PKT_DATA_SPHERICAL,
+    AV_PKT_DATA_SPHERICAL,
 
     /**
      * The number of side data elements (in fact a bit more than it).
@@ -1592,7 +1592,7 @@ enum AVPacketSideDataType {
      * If its value becomes huge, some code using it
      * needs to be updated as it assumes it to be smaller than other limits.
      */
-            AV_PKT_DATA_NB
+    AV_PKT_DATA_NB
 };
 
 #define AV_PKT_DATA_QUALITY_FACTOR AV_PKT_DATA_QUALITY_STATS //DEPRECATED
@@ -4010,13 +4010,13 @@ enum AVSubtitleType {
      * Plain text, the text field must be set by the decoder and is
      * authoritative. ass and pict fields may contain approximations.
      */
-            SUBTITLE_TEXT,
+    SUBTITLE_TEXT,
 
     /**
      * Formatted text, the ass field must be set by the decoder and is
      * authoritative. pict and text fields may contain approximations.
      */
-            SUBTITLE_ASS,
+    SUBTITLE_ASS,
 };
 
 #define AV_SUBTITLE_FLAG_FORCED 0x00000001

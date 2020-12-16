@@ -3,9 +3,20 @@ package com.yumore.utility.widget;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Shader;
 import android.util.AttributeSet;
 import android.view.View;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxImageTool;
 
@@ -19,10 +30,10 @@ import com.yumore.utility.utility.RxImageTool;
 public class RxProgressBar extends View implements Runnable {
 
     BitmapShader bitmapShader;
-    private PorterDuffXfermode xfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
-    private int DEFAULT_HEIGHT_DP = 35;
+    private final PorterDuffXfermode xfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP);
+    private final int DEFAULT_HEIGHT_DP = 35;
     private int borderWidth;
-    private float maxProgress = 100f;
+    private final float maxProgress = 100f;
     private Paint textPaint;
     private Paint bgPaint;
     private Paint pgPaint;
@@ -257,11 +268,7 @@ public class RxProgressBar extends View implements Runnable {
 
     public void toggle() {
         if (!isFinish) {
-            if (isStop) {
-                setStop(false);
-            } else {
-                setStop(true);
-            }
+            setStop(!isStop);
         }
     }
 

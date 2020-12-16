@@ -22,18 +22,18 @@ import butterknife.ButterKnife;
  */
 public class ActivitySVG extends BaseActivity {
 
-    @BindView(R2.id.animated_svg_view)
-    AnimatedSvgView mSvgView;
-    @BindView(R2.id.activity_svg)
-    RelativeLayout mActivitySvg;
-    @BindView(R2.id.app_name)
-    ImageView mAppName;
     private final Handler checkhandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
 //            mAppName.setVisibility(View.VISIBLE);
         }
     };
+    @BindView(R2.id.animated_svg_view)
+    AnimatedSvgView mSvgView;
+    @BindView(R2.id.activity_svg)
+    RelativeLayout mActivitySvg;
+    @BindView(R2.id.app_name)
+    ImageView mAppName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

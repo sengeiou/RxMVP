@@ -16,13 +16,11 @@ import java.nio.FloatBuffer;
  */
 public class GLImageOldBeautyFilter extends GLImageFilter implements IBeautify {
 
+    // 高斯模糊处理的图像缩放倍数
+    private final float mBlurScale = 0.5f;
     private int mWidthLoc;
     private int mHeightLoc;
     private int mOpacityLoc;
-
-    // 高斯模糊处理的图像缩放倍数
-    private final float mBlurScale = 0.5f;
-
     private GLImageBeautyComplexionFilter mComplexionBeautyFilter;
 
     public GLImageOldBeautyFilter(Context context) {

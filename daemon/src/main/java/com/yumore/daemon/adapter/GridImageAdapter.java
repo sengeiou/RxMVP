@@ -9,8 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
@@ -37,14 +39,14 @@ public class GridImageAdapter extends
     public static final int TYPE_CAMERA = 1;
     public static final int TYPE_PICTURE = 2;
     protected OnItemClickListener mItemClickListener;
-    private LayoutInflater mInflater;
+    private final LayoutInflater mInflater;
     private List<LocalMedia> list = new ArrayList<>();
     private int selectMax = 9;
-    private Context context;
+    private final Context context;
     /**
      * 点击添加图片跳转
      */
-    private onAddPicClickListener mOnAddPicClickListener;
+    private final onAddPicClickListener mOnAddPicClickListener;
 
     public GridImageAdapter(Context context, onAddPicClickListener mOnAddPicClickListener) {
         this.context = context;

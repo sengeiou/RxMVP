@@ -24,8 +24,8 @@ import java.util.List;
 public class VideoEffectAdapter extends RecyclerView.Adapter<VideoEffectAdapter.ImageHolder> {
 
     private final Context mContext;
-    private int mSelected = -1;
     private final List<EffectType> mEffectList = new ArrayList<>();
+    private int mSelected = -1;
     private OnEffectChangeListener mEffectChangeListener;
 
     public VideoEffectAdapter(Context context, List<EffectType> effectTypeList) {

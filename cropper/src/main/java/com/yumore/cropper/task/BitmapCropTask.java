@@ -10,8 +10,10 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.yumore.cropper.callback.BitmapCropCallback;
 import com.yumore.cropper.model.CropParameters;
 import com.yumore.cropper.model.ExifInfo;
@@ -48,7 +50,8 @@ public class BitmapCropTask extends AsyncTask<Void, Void, Throwable> {
     private final ExifInfo mExifInfo;
     private final BitmapCropCallback mCropCallback;
     private Bitmap mViewBitmap;
-    private float mCurrentScale, mCurrentAngle;
+    private final float mCurrentAngle;
+    private float mCurrentScale;
     private int mCroppedImageWidth, mCroppedImageHeight;
     private int cropOffsetX, cropOffsetY;
 

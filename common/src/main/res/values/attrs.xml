@@ -1,86 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="RoundImageView">
-        <attr name="riv_corner_radius_top_left" format="dimension"/>
-        <attr name="riv_corner_radius_top_right" format="dimension"/>
-        <attr name="riv_corner_radius_bottom_left" format="dimension"/>
-        <attr name="riv_corner_radius_bottom_right" format="dimension"/>
-        <attr name="riv_border_width" format="dimension"/>
-        <attr name="riv_border_color" format="color"/>
-        <attr name="riv_oval" format="boolean"/>
-        <attr name="android:scaleType"/>
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_oval" format="boolean" />
+        <attr name="android:scaleType" />
     </declare-styleable>
 
     <declare-styleable name="nineImageView">
-        <attr name="singleSize" format="dimension"/>
-        <attr name="spacing" format="dimension"/>
-        <attr name="maxSize" format="integer"/>
-        <attr name="itemClickable" format="boolean"/>
+        <attr name="singleSize" format="dimension" />
+        <attr name="spacing" format="dimension" />
+        <attr name="maxSize" format="integer" />
+        <attr name="itemClickable" format="boolean" />
         <attr name="showStyle" format="enum">
-            <enum name="grid" value="0"/>
-            <enum name="fill" value="1"/>
+            <enum name="grid" value="0" />
+            <enum name="fill" value="1" />
         </attr>
     </declare-styleable>
 
     <declare-styleable name="ColorRatingBar">
-        <attr name="srb_borderColor" format="color"/>
-        <attr name="srb_fillColor" format="color"/>
-        <attr name="srb_backgroundColor" format="color"/>
-        <attr name="srb_starBackgroundColor" format="color"/>
-        <attr name="srb_pressedBorderColor" format="color"/>
-        <attr name="srb_pressedFillColor" format="color"/>
-        <attr name="srb_pressedBackgroundColor" format="color"/>
-        <attr name="srb_pressedStarBackgroundColor" format="color"/>
-        <attr name="srb_starDrawable" format="reference"/>
-        <attr name="srb_numberOfStars" format="integer"/>
-        <attr name="srb_starSize" format="dimension"/>
-        <attr name="srb_maxStarSize" format="dimension"/>
-        <attr name="srb_starsSeparation" format="dimension"/>
-        <attr name="srb_starBorderWidth" format="float"/>
-        <attr name="srb_starCornerRadius" format="float"/>
-        <attr name="srb_isIndicator" format="boolean"/>
-        <attr name="srb_rating" format="float"/>
-        <attr name="srb_stepSize" format="float"/>
-        <attr name="srb_drawBorderEnabled" format="boolean"/>
+        <attr name="srb_borderColor" format="color" />
+        <attr name="srb_fillColor" format="color" />
+        <attr name="srb_backgroundColor" format="color" />
+        <attr name="srb_starBackgroundColor" format="color" />
+        <attr name="srb_pressedBorderColor" format="color" />
+        <attr name="srb_pressedFillColor" format="color" />
+        <attr name="srb_pressedBackgroundColor" format="color" />
+        <attr name="srb_pressedStarBackgroundColor" format="color" />
+        <attr name="srb_starDrawable" format="reference" />
+        <attr name="srb_numberOfStars" format="integer" />
+        <attr name="srb_starSize" format="dimension" />
+        <attr name="srb_maxStarSize" format="dimension" />
+        <attr name="srb_starsSeparation" format="dimension" />
+        <attr name="srb_starBorderWidth" format="float" />
+        <attr name="srb_starCornerRadius" format="float" />
+        <attr name="srb_isIndicator" format="boolean" />
+        <attr name="srb_rating" format="float" />
+        <attr name="srb_stepSize" format="float" />
+        <attr name="srb_drawBorderEnabled" format="boolean" />
         <attr name="srb_gravity" format="enum">
-            <enum name="left" value="0"/>
-            <enum name="right" value="1"/>
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
         </attr>
     </declare-styleable>
 
     <declare-styleable name="ImageRatingBar">
         <attr name="maxCount" format="integer" />
         <attr name="minStep" format="float" />
-        <attr name="frontImage" format="reference"/>
-        <attr name="backImage" format="reference"/>
-        <attr name="spanSize" format="dimension"/>
-        <attr name="rating" format="float"/>
-        <attr name="touchable" format="boolean"/>
-        <attr name="imageWidth" format="dimension"/>
-        <attr name="imageHeight" format="dimension"/>
+        <attr name="frontImage" format="reference" />
+        <attr name="backImage" format="reference" />
+        <attr name="spanSize" format="dimension" />
+        <attr name="rating" format="float" />
+        <attr name="touchable" format="boolean" />
+        <attr name="imageWidth" format="dimension" />
+        <attr name="imageHeight" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="ToggleButton">
-        <attr name="tb_shadow_radius" format="reference|dimension"/>
-        <attr name="tb_shadow_offset" format="reference|dimension"/>
-        <attr name="tb_shadow_color" format="reference|color"/>
-        <attr name="tb_uncheck_color" format="reference|color"/>
-        <attr name="tb_checked_color" format="reference|color"/>
+        <attr name="tb_shadow_radius" format="reference|dimension" />
+        <attr name="tb_shadow_offset" format="reference|dimension" />
+        <attr name="tb_shadow_color" format="reference|color" />
+        <attr name="tb_uncheck_color" format="reference|color" />
+        <attr name="tb_checked_color" format="reference|color" />
 
-        <attr name="tb_border_width" format="reference|dimension"/>
-        <attr name="tb_checkline_color" format="reference|color"/>
-        <attr name="tb_checkline_width" format="reference|dimension"/>
-        <attr name="tb_uncheckcircle_color" format="reference|color"/>
-        <attr name="tb_uncheckcircle_width" format="reference|dimension"/>
-        <attr name="tb_uncheckcircle_radius" format="reference|dimension"/>
+        <attr name="tb_border_width" format="reference|dimension" />
+        <attr name="tb_checkline_color" format="reference|color" />
+        <attr name="tb_checkline_width" format="reference|dimension" />
+        <attr name="tb_uncheckcircle_color" format="reference|color" />
+        <attr name="tb_uncheckcircle_width" format="reference|dimension" />
+        <attr name="tb_uncheckcircle_radius" format="reference|dimension" />
 
-        <attr name="tb_checked" format="reference|boolean"/>
-        <attr name="tb_shadow_effect" format="reference|boolean"/>
-        <attr name="tb_effect_duration" format="reference|integer"/>
-        <attr name="tb_button_color" format="reference|color"/>
-        <attr name="tb_show_indicator" format="reference|boolean"/>
-        <attr name="tb_background" format="reference|color"/>
-        <attr name="tb_enable_effect" format="reference|boolean"/>
+        <attr name="tb_checked" format="reference|boolean" />
+        <attr name="tb_shadow_effect" format="reference|boolean" />
+        <attr name="tb_effect_duration" format="reference|integer" />
+        <attr name="tb_button_color" format="reference|color" />
+        <attr name="tb_show_indicator" format="reference|boolean" />
+        <attr name="tb_background" format="reference|color" />
+        <attr name="tb_enable_effect" format="reference|boolean" />
     </declare-styleable>
 
 </resources>

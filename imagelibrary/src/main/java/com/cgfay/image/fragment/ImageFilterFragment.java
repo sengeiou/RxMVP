@@ -54,8 +54,6 @@ public class ImageFilterFragment extends Fragment implements View.OnClickListene
 
     private Activity mActivity;
     private Handler mMainHandler;
-
-    private Bitmap mBitmap;
     /**
      * 截屏回调
      */
@@ -75,6 +73,7 @@ public class ImageFilterFragment extends Fragment implements View.OnClickListene
             });
         }
     };
+    private Bitmap mBitmap;
 
     /**
      * 获取图片缓存绝对路径

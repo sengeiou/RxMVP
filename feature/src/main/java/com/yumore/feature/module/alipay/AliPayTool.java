@@ -5,7 +5,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.alipay.sdk.app.PayTask;
 import com.yumore.utility.callback.OnSuccessAndErrorListener;
 
@@ -20,7 +22,7 @@ public class AliPayTool {
 
     private static OnSuccessAndErrorListener sOnSuccessAndErrorListener;
     @SuppressLint("HandlerLeak")
-    private static Handler mHandler = new Handler() {
+    private static final Handler mHandler = new Handler() {
         @SuppressWarnings("unused")
         public void handleMessage(Message msg) {
             switch (msg.what) {

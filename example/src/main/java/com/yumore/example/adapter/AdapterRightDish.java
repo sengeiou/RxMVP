@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.example.R;
 import com.yumore.example.callback.ShopCartInterface;
 import com.yumore.example.entity.ModelDish;
@@ -25,10 +27,10 @@ public class AdapterRightDish extends RecyclerView.Adapter {
     private final int DISH_TYPE = 1;
     private final int HEAD_TYPE = 2;
 
-    private Context mContext;
-    private ArrayList<ModelDishMenu> mMenuList;
+    private final Context mContext;
+    private final ArrayList<ModelDishMenu> mMenuList;
     private int mItemCount;
-    private ModelShopCart mModelShopCart;
+    private final ModelShopCart mModelShopCart;
     private ShopCartInterface shopCartImp;
 
     public AdapterRightDish(Context mContext, ArrayList<ModelDishMenu> mMenuList, ModelShopCart modelShopCart) {
@@ -172,8 +174,8 @@ public class AdapterRightDish extends RecyclerView.Adapter {
     }
 
     private class MenuViewHolder extends RecyclerView.ViewHolder {
-        private LinearLayout right_menu_layout;
-        private TextView right_menu_title;
+        private final LinearLayout right_menu_layout;
+        private final TextView right_menu_title;
 
         public MenuViewHolder(View itemView) {
             super(itemView);
@@ -183,12 +185,12 @@ public class AdapterRightDish extends RecyclerView.Adapter {
     }
 
     private class DishViewHolder extends RecyclerView.ViewHolder {
-        private TextView right_dish_name_tv;
-        private TextView right_dish_price_tv;
-        private LinearLayout right_dish_layout;
-        private ImageView right_dish_remove_iv;
-        private ImageView right_dish_add_iv;
-        private TextView right_dish_account_tv;
+        private final TextView right_dish_name_tv;
+        private final TextView right_dish_price_tv;
+        private final LinearLayout right_dish_layout;
+        private final ImageView right_dish_remove_iv;
+        private final ImageView right_dish_add_iv;
+        private final TextView right_dish_account_tv;
 
         public DishViewHolder(View itemView) {
             super(itemView);

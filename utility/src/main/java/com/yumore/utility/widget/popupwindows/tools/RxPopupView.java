@@ -4,7 +4,9 @@ import android.content.Context;
 import android.text.Spannable;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.IntDef;
+
 import com.yumore.utility.R;
 
 import java.lang.annotation.Retention;
@@ -25,24 +27,26 @@ public class RxPopupView {
     public static final int GRAVITY_CENTER = 0;
     public static final int GRAVITY_LEFT = 1;
     public static final int GRAVITY_RIGHT = 2;
-    private Context mContext;
-    private View mAnchorView;
-    private ViewGroup mRootViewGroup;
-    private String mMessage;
+    private final Context mContext;
+    private final View mAnchorView;
+    private final ViewGroup mRootViewGroup;
+    private final String mMessage;
     private @Position
     int mPosition;
     private @Align
+    final
     int mAlign;
     private int mOffsetX;
-    private int mOffsetY;
-    private boolean mArrow;
-    private int mBackgroundColor;
-    private int mTextColor;
-    private float mElevation;
+    private final int mOffsetY;
+    private final boolean mArrow;
+    private final int mBackgroundColor;
+    private final int mTextColor;
+    private final float mElevation;
     private @Gravity
+    final
     int mTextGravity;
-    private Spannable mSpannableMessage;
-    private int mTextSize;
+    private final Spannable mSpannableMessage;
+    private final int mTextSize;
 
     public RxPopupView(Builder builder) {
         mContext = builder.mContext;
@@ -185,10 +189,10 @@ public class RxPopupView {
     }
 
     public static class Builder {
-        private Context mContext;
-        private View mAnchorView;
-        private ViewGroup mRootViewGroup;
-        private String mMessage;
+        private final Context mContext;
+        private final View mAnchorView;
+        private final ViewGroup mRootViewGroup;
+        private final String mMessage;
         private @Position
         int mPosition;
         private @Align
@@ -201,7 +205,7 @@ public class RxPopupView {
         private float mElevation;
         private @Gravity
         int mTextGravity;
-        private Spannable mSpannableMessage;
+        private final Spannable mSpannableMessage;
         private int mTextSize;
 
 
