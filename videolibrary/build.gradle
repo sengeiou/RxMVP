@@ -25,7 +25,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':filterlibrary')
+    implementation project(':filter')
     implementation project(':medialibrary')
     implementation project(':utilslibrary')
     implementation 'androidx.appcompat:appcompat:1.2.0'

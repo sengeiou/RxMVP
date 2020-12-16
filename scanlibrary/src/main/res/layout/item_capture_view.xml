@@ -12,4 +12,4 @@
         android:background="@drawable/ic_media_thumbnail_camera" />
 
 
-</com.cgfay.scan.widget.SquareFrameLayout>
+</com.yumore.scan.widget.SquareFrameLayout>

@@ -4,6 +4,6 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cgfay.image.activity.ImageEditActivity">
+    tools:context="com.yumore.image.activity.ImageEditActivity">
 
 </androidx.constraintlayout.ConstraintLayout>

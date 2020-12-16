@@ -41,7 +41,7 @@
         android:orientation="vertical">
 
         <!-- 速度选择条 -->
-        <com.cgfay.video.widget.VideoSpeedLevelBar
+        <com.yumore.video.widget.VideoSpeedLevelBar
             android:id="@+id/video_crop_speed_bar"
             android:layout_width="@dimen/dp200"
             android:layout_height="35dp"

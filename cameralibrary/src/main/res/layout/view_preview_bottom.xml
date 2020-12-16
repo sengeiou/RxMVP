@@ -86,7 +86,7 @@
 
     <!-- 底部指示器 -->
 
-    <com.cgfay.widget.CameraTabView
+    <com.yumore.widget.CameraTabView
         android:id="@+id/tl_camera_tab"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bottom_indicator_height"
@@ -98,6 +98,6 @@
         app:tabSelectedTextColor="@color/colorHorizontalIndicator"
         app:tabTextColor="@android:color/darker_gray">
 
-    </com.cgfay.widget.CameraTabView>
+    </com.yumore.widget.CameraTabView>
 
 </LinearLayout>

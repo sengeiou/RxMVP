@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/video_window_background"
     android:orientation="vertical"
-    tools:context="com.cgfay.camera.activity.CameraActivity">
+    tools:context="com.yumore.camera.activity.CameraActivity">
 
     <!-- 安全区域 -->
     <View

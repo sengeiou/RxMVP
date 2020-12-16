@@ -1,0 +1,97 @@
+[
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/common/Point.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/common/Point.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/common/Point.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/FilterUtils.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/FilterUtils.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/FilterUtils.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/BlendFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/BlendFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/BlendFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/BlackWhiteFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/BlackWhiteFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/BlackWhiteFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/BrightContrastFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/BrightContrastFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/BrightContrastFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/ColorQuantizeFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/ColorQuantizeFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/ColorQuantizeFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/GaussianBlurFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/GaussianBlurFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/GaussianBlurFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/HistogramEqualFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/HistogramEqualFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/HistogramEqualFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/ImageFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/ImageFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/ImageFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/InvertFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/InvertFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/InvertFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/LookupTableFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/LookupTableFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/LookupTableFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/MosaicFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/MosaicFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/MosaicFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/ShiftFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/ShiftFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/ShiftFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/StackBlurFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/StackBlurFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/StackBlurFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/nativefilter/VignetteFilter.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/VignetteFilter.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/nativefilter/VignetteFilter.cpp"
+},
+
+{
+  "directory": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/debug/arm64-v8a",
+  "command": "/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnativefilter_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/nativefilter.dir/ImageFilterController.cpp.o -c /Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/ImageFilterController.cpp",
+  "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/ImageFilterController.cpp"
+}
+]

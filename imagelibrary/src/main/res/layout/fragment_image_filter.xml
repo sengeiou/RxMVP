@@ -26,7 +26,7 @@
         android:layout_gravity="center"
         android:gravity="center">
 
-        <com.cgfay.filter.widget.GLImageSurfaceView
+        <com.yumore.filter.widget.GLImageSurfaceView
             android:id="@+id/glImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
