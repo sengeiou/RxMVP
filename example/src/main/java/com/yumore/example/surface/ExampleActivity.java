@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.yumore.answer.AnswerMainActivity;
+import com.yumore.answer.SubjectActivity;
 import com.yumore.daemon.DaemonActivity;
 import com.yumore.example.R;
 import com.yumore.example.R2;
@@ -112,7 +112,7 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("支付宝支付Demo", R.drawable.circle_alipay, AliPayActivity.class));
         modelMainItemList.add(new ModelMainItem("流利说欢迎动画", R.mipmap.icon_pikachu, PreviewActivity.class));
         modelMainItemList.add(new ModelMainItem("相册选择界面", R.mipmap.icon_pikachu, DaemonActivity.class));
-        modelMainItemList.add(new ModelMainItem("Answer界面", R.mipmap.icon_pikachu, AnswerMainActivity.class));
+        modelMainItemList.add(new ModelMainItem("考试模式", R.mipmap.icon_pikachu, SubjectActivity.class));
     }
 
     private void initView() {

@@ -2,7 +2,6 @@ package com.yumore.answer;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,21 +21,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class CourseActivity extends AppCompatActivity implements AnimalsHeadersAdapter.OnCourseClickListener {
+/**
+ * @author nathaniel
+ */
+public class ScheduleActivity extends AppCompatActivity implements AnimalsHeadersAdapter.OnCourseClickListener {
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
     private GoogleApiClient client;
     private RecyclerView recyclerView;
-    private AnimalsHeadersAdapter adapter;
+    private AnimalsHeadersAdapter animalsHeadersAdapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course);
+        setContentView(R.layout.activity_schedule);
 
 
         recyclerView = findViewById(R.id.recyclerview);
@@ -45,11 +43,11 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new AnimalsHeadersAdapter(this);
+        animalsHeadersAdapter = new AnimalsHeadersAdapter(this);
 
 
         // Add the sticky headers decoration
-        final StickyRecyclerHeadersDecoration headersDecor = new StickyRecyclerHeadersDecoration(adapter);
+        final StickyRecyclerHeadersDecoration headersDecor = new StickyRecyclerHeadersDecoration(animalsHeadersAdapter);
         recyclerView.addItemDecoration(headersDecor);
 
         // Add decoration for dividers between list items
@@ -59,22 +57,15 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
         // Add touch listeners
         StickyRecyclerHeadersTouchListener touchListener =
                 new StickyRecyclerHeadersTouchListener(recyclerView, headersDecor);
-        touchListener.setOnHeaderClickListener(
-                new StickyRecyclerHeadersTouchListener.OnHeaderClickListener() {
-                    @Override
-                    public void onHeaderClick(View header, int position, long headerId) {
+        touchListener.setOnHeaderClickListener((header, position, headerId) -> {
 //                        Toast.makeText(CourseActivity.this, "Header position: " + position + ", id: " + headerId,
 //                                Toast.LENGTH_SHORT).show();
-                    }
-                });
+        });
         recyclerView.addOnItemTouchListener(touchListener);
-        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
-            @Override
-            public void onItemClick(View view, int position) {
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, (view, position) -> {
 
-            }
         }));
-        adapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+        animalsHeadersAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
             public void onChanged() {
                 headersDecor.invalidateHeaders();
@@ -84,37 +75,33 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
 
         CourseSheetInfo courseSheet = getCourseSheet();
         List<CourseSheetInfo.DataBean.ScheduleBean> data = courseSheet.getData().getData();
-        adapter.setData(data);
+        animalsHeadersAdapter.setData(data);
 
-        adapter.setOnCourseListener(this);
-        recyclerView.setAdapter(adapter);
+        animalsHeadersAdapter.setOnCourseListener(this);
+        recyclerView.setAdapter(animalsHeadersAdapter);
 
 
     }
 
 
     private CourseSheetInfo getCourseSheet() {
-
         try {
-            InputStream in = getAssets().open("course.json");
-            CourseSheetInfo courseSheetInfo = JSON.parseObject(inputStream2String(in), CourseSheetInfo.class);
-
-            return courseSheetInfo;
+            InputStream inputStream = getAssets().open("course.json");
+            return JSON.parseObject(inputStream2String(inputStream), CourseSheetInfo.class);
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("data.size=", e.toString());
         }
-
         return null;
     }
 
-    public String inputStream2String(InputStream is) throws IOException {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        int i = -1;
-        while ((i = is.read()) != -1) {
-            baos.write(i);
+    public String inputStream2String(InputStream inputStream) throws IOException {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        int index = -1;
+        while ((index = inputStream.read()) != -1) {
+            byteArrayOutputStream.write(index);
         }
-        return baos.toString();
+        return byteArrayOutputStream.toString();
     }
 
     @Override
@@ -136,7 +123,7 @@ public class CourseActivity extends AppCompatActivity implements AnimalsHeadersA
         CourseSheetInfo.DataBean.ScheduleBean.DetailBean.SubDetailBean subDetailBean = detailBean.getData().get(childPosition);
 
         String s = subDetailBean.getText2() + subDetailBean.getText();
-        Toast.makeText(CourseActivity.this, "groupPosition: " + groupPosition + ", childPosition: " + childPosition + ",s=" + s,
+        Toast.makeText(ScheduleActivity.this, "groupPosition: " + groupPosition + ", childPosition: " + childPosition + ",s=" + s,
                 Toast.LENGTH_SHORT).show();
     }
 }

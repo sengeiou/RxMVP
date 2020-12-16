@@ -4,10 +4,10 @@
 
     <application>
         <activity android:name=".AnswerMainActivity" />
-        <activity android:name=".CourseActivity" />
-        <activity android:name=".AnwerActivity" />
-        <activity android:name=".AnswerReadActivity" />
-        <activity android:name=".ReadActivity" />
+        <activity android:name=".ScheduleActivity" />
+        <activity android:name=".SubjectActivity" />
+        <activity android:name=".OutcomeActivity" />
+        <activity android:name=".AnalyzeActivity" />
 
     </application>
 </manifest>

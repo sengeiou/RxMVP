@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -23,7 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class AnswerReadActivity extends AppCompatActivity {
+public class OutcomeActivity extends AppCompatActivity {
 
     private RecyclerViewPager mRecyclerView;
     private LayoutAdapter layoutAdapter;
@@ -36,7 +39,7 @@ public class AnswerReadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anwers_read);
+        setContentView(R.layout.activity_outcome);
 
 
         initViewPager();
@@ -46,6 +49,13 @@ public class AnswerReadActivity extends AppCompatActivity {
 
         initList();
 
+        ImageView imageView = findViewById(R.id.common_header_back_iv);
+        imageView.setVisibility(View.VISIBLE);
+        imageView.setOnClickListener(view -> {
+            finish();
+        });
+        TextView textView = findViewById(R.id.common_header_title_tv);
+        textView.setText("考试结果");
         AnwerInfo anwerInfo = getAnwer();
 
         List<AnwerInfo.DataBean.SubDataBean> datas = anwerInfo.getData().getData();
@@ -73,22 +83,19 @@ public class AnswerReadActivity extends AppCompatActivity {
         recyclerView.setAdapter(topicAdapter);
 
 
-        topicAdapter.setOnTopicClickListener(new TopicAdapter.OnTopicClickListener() {
-            @Override
-            public void onClick(TopicAdapter.TopicViewHolder holder, int position) {
-                curPosition = position;
-                Log.i("点击了==>", position + "");
-                if (mLayout != null &&
-                        (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
-                    mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-                }
-                mRecyclerView.smoothScrollToPosition(position);
-
-                topicAdapter.notifyCurPosition(curPosition);
-                topicAdapter.notifyPrePosition(prePosition);
-
-                prePosition = curPosition;
+        topicAdapter.setOnTopicClickListener((holder, position) -> {
+            curPosition = position;
+            Log.i("点击了==>", position + "");
+            if (mLayout != null &&
+                    (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
+                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
             }
+            mRecyclerView.smoothScrollToPosition(position);
+
+            topicAdapter.notifyCurPosition(curPosition);
+            topicAdapter.notifyPrePosition(prePosition);
+
+            prePosition = curPosition;
         });
 
 
@@ -115,13 +122,7 @@ public class AnswerReadActivity extends AppCompatActivity {
                 Log.i("", "onPanelStateChanged " + newState);
             }
         });
-        mLayout.setFadeOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-            }
-        });
+        mLayout.setFadeOnClickListener(view -> mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED));
     }
 
 
@@ -139,36 +140,30 @@ public class AnswerReadActivity extends AppCompatActivity {
         mRecyclerView.setLongClickable(true);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int scrollState) {
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int scrollState) {
 //                updateState(scrollState);
             }
 
             @Override
-            public void onScrolled(RecyclerView recyclerView, int i, int i2) {
+            public void onScrolled(@NonNull RecyclerView recyclerView, int i, int i2) {
 //
             }
         });
-        mRecyclerView.addOnPageChangedListener(new RecyclerViewPager.OnPageChangedListener() {
-            @Override
-            public void OnPageChanged(int oldPosition, int newPosition) {
-                Log.d("test", "oldPosition:" + oldPosition + " newPosition:" + newPosition);
-                recyclerView.scrollToPosition(newPosition);
+        mRecyclerView.addOnPageChangedListener((oldPosition, newPosition) -> {
+            Log.d("test", "oldPosition:" + oldPosition + " newPosition:" + newPosition);
+            recyclerView.scrollToPosition(newPosition);
 
-                topicAdapter.notifyCurPosition(newPosition);
-                topicAdapter.notifyPrePosition(oldPosition);
+            topicAdapter.notifyCurPosition(newPosition);
+            topicAdapter.notifyPrePosition(oldPosition);
 
-                Log.i("DDD", newPosition + "");
+            Log.i("DDD", newPosition + "");
 
-            }
         });
 
 
-        mRecyclerView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
-            @Override
-            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+        mRecyclerView.addOnLayoutChangeListener((v, left, top, right, bottom, oldLeft, oldTop, oldRight, oldBottom) -> {
 
 
-            }
         });
     }
 
@@ -194,7 +189,7 @@ public class AnswerReadActivity extends AppCompatActivity {
     private AnwerInfo getAnwer() {
 
         try {
-            InputStream in = getAssets().open("anwer.json");
+            InputStream in = getAssets().open("answer.json");
             AnwerInfo anwerInfo = JSON.parseObject(inputStream2String(in), AnwerInfo.class);
 
             return anwerInfo;

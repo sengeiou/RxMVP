@@ -31,7 +31,7 @@ dependencies {
     implementation project(':preview')
     implementation project(':common')
     implementation project(':daemon')
-    implementation project(':answer')
+    implementation project(':driving')
 
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'jp.wasabeef:glide-transformations:3.3.0'

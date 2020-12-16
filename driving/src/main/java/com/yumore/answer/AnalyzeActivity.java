@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -27,7 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class ReadActivity extends AppCompatActivity {
+public class AnalyzeActivity extends AppCompatActivity {
 
     private SlidingUpPanelLayout mLayout;
     private TopicAdapter topicAdapter;
@@ -43,13 +44,20 @@ public class ReadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_read);
+        setContentView(R.layout.activity_analyze);
 
 
         initSlidingUoPanel();
 
         initList();
 
+        ImageView imageView = findViewById(R.id.common_header_back_iv);
+        imageView.setVisibility(View.VISIBLE);
+        imageView.setOnClickListener((view) -> {
+            finish();
+        });
+        TextView textView = findViewById(R.id.common_header_title_tv);
+        textView.setText("题目解析");
         AnwerInfo anwerInfo = getAnwer();
 
         datas = anwerInfo.getData().getData();
@@ -64,28 +72,22 @@ public class ReadActivity extends AppCompatActivity {
         Button bt_pre = findViewById(R.id.bt_pre);
         Button bt_next = findViewById(R.id.bt_next);
 
-        bt_pre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int currentItem = readerViewPager.getCurrentItem();
-                currentItem = currentItem - 1;
-                if (currentItem > datas.size() - 1) {
-                    currentItem = datas.size() - 1;
-                }
-                readerViewPager.setCurrentItem(currentItem, true);
+        bt_pre.setOnClickListener(v -> {
+            int currentItem = readerViewPager.getCurrentItem();
+            currentItem = currentItem - 1;
+            if (currentItem > datas.size() - 1) {
+                currentItem = datas.size() - 1;
             }
+            readerViewPager.setCurrentItem(currentItem, true);
         });
 
-        bt_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int currentItem = readerViewPager.getCurrentItem();
-                currentItem = currentItem + 1;
-                if (currentItem < 0) {
-                    currentItem = 0;
-                }
-                readerViewPager.setCurrentItem(currentItem, true);
+        bt_next.setOnClickListener(v -> {
+            int currentItem = readerViewPager.getCurrentItem();
+            currentItem = currentItem + 1;
+            if (currentItem < 0) {
+                currentItem = 0;
             }
+            readerViewPager.setCurrentItem(currentItem, true);
         });
     }
 
@@ -146,24 +148,21 @@ public class ReadActivity extends AppCompatActivity {
         recyclerView.setAdapter(topicAdapter);
 
 
-        topicAdapter.setOnTopicClickListener(new TopicAdapter.OnTopicClickListener() {
-            @Override
-            public void onClick(TopicAdapter.TopicViewHolder holder, int position) {
-                curPosition = position;
-                Log.i("点击了==>", position + "");
-                if (mLayout != null &&
-                        (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
-                    mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-                }
-
-                readerViewPager.setCurrentItem(position);
-
-
-                topicAdapter.notifyCurPosition(curPosition);
-                topicAdapter.notifyPrePosition(prePosition);
-
-                prePosition = curPosition;
+        topicAdapter.setOnTopicClickListener((holder, position) -> {
+            curPosition = position;
+            Log.i("点击了==>", position + "");
+            if (mLayout != null &&
+                    (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
+                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
             }
+
+            readerViewPager.setCurrentItem(position);
+
+
+            topicAdapter.notifyCurPosition(curPosition);
+            topicAdapter.notifyPrePosition(prePosition);
+
+            prePosition = curPosition;
         });
 
 
@@ -190,13 +189,7 @@ public class ReadActivity extends AppCompatActivity {
                 Log.i("", "onPanelStateChanged " + newState);
             }
         });
-        mLayout.setFadeOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-            }
-        });
+        mLayout.setFadeOnClickListener(view -> mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED));
     }
 
 

@@ -42,10 +42,10 @@ public class CourseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == NOMAL) {
-            View view = inflater.inflate(R.layout.course_item, parent, false);
+            View view = inflater.inflate(R.layout.item_schedule_recycler_list, parent, false);
             return new CourseViewHolder(view);
         } else if (viewType == HEAD) {
-            View view = inflater.inflate(R.layout.head_item, parent, false);
+            View view = inflater.inflate(R.layout.item_header_recycler_list, parent, false);
             return new HeaderViewHolder(view);
         }
         return null;
@@ -68,7 +68,7 @@ public class CourseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             courseViewHolder.ll_all_course.removeAllViews();
             for (int i = 0; i < dataList.size(); i++) {
                 CourseSheetInfo.DataBean.ScheduleBean.DetailBean.SubDetailBean subDetailBean = dataList.get(i);
-                View view = LayoutInflater.from(mContext).inflate(R.layout.course_text, null, false);
+                View view = LayoutInflater.from(mContext).inflate(R.layout.layout_schedule_text, null, false);
                 TextView textView = view.findViewById(R.id.tv_text);
                 textView.setText(subDetailBean.getText() + "\n" + subDetailBean.getText2());
 
@@ -95,7 +95,7 @@ public class CourseAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             for (int i = 0; i < scheduleList.size(); i++) {
                 String time = scheduleList.get(i);
                 String[] split = time.split("-");
-                View view = LayoutInflater.from(mContext).inflate(R.layout.course_text, null, false);
+                View view = LayoutInflater.from(mContext).inflate(R.layout.layout_schedule_text, null, false);
                 TextView textView = view.findViewById(R.id.tv_text);
                 textView.setText(split[0] + "\n" + split[1]);
                 headerViewHolder.ll_all_times.addView(view);

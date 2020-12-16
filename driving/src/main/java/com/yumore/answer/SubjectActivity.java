@@ -1,10 +1,12 @@
 package com.yumore.answer;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,23 +14,21 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alibaba.fastjson.JSON;
-import com.yumore.answer.adapter.LayoutAdapter;
 import com.yumore.answer.adapter.TopicAdapter;
 import com.yumore.answer.bean.AnwerInfo;
 import com.yumore.answer.bean.QuestionEntry;
 import com.yumore.answer.view.FlipperLayout;
-import com.yumore.sticky.RecyclerViewPager;
+import com.yumore.provider.utility.EmptyUtils;
 import com.yumore.sticky.SlidingUpPanelLayout;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
-public class AnwerActivity extends AppCompatActivity implements FlipperLayout.OnSlidePageListener {
+public class SubjectActivity extends AppCompatActivity implements FlipperLayout.OnSlidePageListener {
 
-    private RecyclerViewPager mRecyclerView;
-    private LayoutAdapter layoutAdapter;
     private SlidingUpPanelLayout mLayout;
     private TopicAdapter topicAdapter;
     private RecyclerView recyclerView;
@@ -41,58 +41,43 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anwer);
+        setContentView(R.layout.activity_subject);
+        ImageView imageView = findViewById(R.id.common_header_back_iv);
+        imageView.setVisibility(View.VISIBLE);
+        imageView.setOnClickListener(view -> {
+            finish();
+        });
 
-        TextView tv_title = findViewById(R.id.tv_title);
-
-        tv_title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    InputStream in = getAssets().open("test_1.json");
-                    List<QuestionEntry> questionEntries = JSON.parseArray(inputStream2String(in), QuestionEntry.class);
-                    int size = questionEntries.size();
-                    Log.i("AA", size + "");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    Log.e("data.size=", e.toString());
-                }
+        TextView tv_title = findViewById(R.id.common_header_title_tv);
+        tv_title.setText("答题");
+        tv_title.setOnClickListener(v -> {
+            try {
+                InputStream inputStream = getAssets().open("test_1.json");
+                List<QuestionEntry> questionEntries = JSON.parseArray(inputStream2String(inputStream), QuestionEntry.class);
+                int size = questionEntries.size();
+                Log.i("AA", size + "");
+            } catch (IOException e) {
+                e.printStackTrace();
+                Log.e("data.size=", e.toString());
             }
         });
 
-        Button bt_pre = findViewById(R.id.bt_pre);
-        Button bt_next = findViewById(R.id.bt_next);
+        findViewById(R.id.bt_next).setOnClickListener(v -> rootLayout.autoNextPage());
 
-        bt_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rootLayout.autoNextPage();
-            }
+        findViewById(R.id.bt_pre).setOnClickListener(v -> rootLayout.autoPrePage());
+
+        findViewById(R.id.subject_finish_tv).setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), OutcomeActivity.class));
         });
-
-        bt_pre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rootLayout.autoPrePage();
-            }
-        });
-
-
         AnwerInfo anwerInfo = getAnwer();
-
-        datas = anwerInfo.getData().getData();
-        Log.i("data.size=", "" + datas.size());
-
-
+        if (EmptyUtils.isEmpty(anwerInfo)) {
+            datas = new ArrayList<>();
+        } else {
+            datas = anwerInfo.getData().getData();
+        }
         initPage();
-
-
         initSlidingUoPanel();
-
-
         initList();
-
-
     }
 
     private void initPage() {
@@ -102,11 +87,11 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
             rootLayout.setIndex(1);
 
 
-            View recoverView = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
-            View view1 = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
-            View view2 = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
+            View recoverView = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
+            View view1 = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
+            View view2 = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
 
-            rootLayout.initFlipperViews(AnwerActivity.this, view2, view1, recoverView);
+            rootLayout.initFlipperViews(SubjectActivity.this, view2, view1, recoverView);
 
             final TextView readView1 = view1.findViewById(R.id.tv_anwer);
             final TextView readView2 = view2.findViewById(R.id.tv_anwer);
@@ -125,6 +110,7 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
 
     }
 
+    @SuppressLint("SetTextI18n")
     private void setText(TextView textView, AnwerInfo.DataBean.SubDataBean subDataBean) {
         textView.setText(subDataBean.getQuestionid() + ". " + subDataBean.getQuestion()
                 + "\n\nA." + subDataBean.getOptiona()
@@ -142,11 +128,11 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         int position = datas.size() - 1;
         rootLayout.setIndex(position + 1);
 
-        View recoverView = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
-        View view1 = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
-        View view2 = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
+        View recoverView = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
+        View view1 = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
+        View view2 = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
 
-        rootLayout.initFlipperViews(AnwerActivity.this, view2, view1, recoverView);
+        rootLayout.initFlipperViews(SubjectActivity.this, view2, view1, recoverView);
 
         final TextView recoverReadView = recoverView.findViewById(R.id.tv_anwer);
         final TextView readView1 = view1.findViewById(R.id.tv_anwer);
@@ -171,14 +157,14 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         if (direction == FlipperLayout.OnSlidePageListener.MOVE_TO_LEFT && index < datas.size()) { //下一页
             AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(index);
 
-            newView = LayoutInflater.from(this).inflate(R.layout.anwer_item, null);
+            newView = LayoutInflater.from(this).inflate(R.layout.item_answer_recycler_list, null);
             TextView readView = newView.findViewById(R.id.tv_anwer);
             setText(readView, subDataBean);
 
 
         } else if (direction == FlipperLayout.MOVE_TO_RIGHT && index >= 2) {//上一页
             AnwerInfo.DataBean.SubDataBean subDataBean = datas.get(index - 2);
-            newView = LayoutInflater.from(this).inflate(R.layout.anwer_item, null);
+            newView = LayoutInflater.from(this).inflate(R.layout.item_answer_recycler_list, null);
             TextView readView = newView.findViewById(R.id.tv_anwer);
             setText(readView, subDataBean);
 
@@ -218,11 +204,11 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         rootLayout.removeAllViews();
         rootLayout.setIndex(two);
 
-        View recoverView = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
-        View view1 = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
-        View view2 = LayoutInflater.from(AnwerActivity.this).inflate(R.layout.anwer_item, null);
+        View recoverView = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
+        View view1 = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
+        View view2 = LayoutInflater.from(SubjectActivity.this).inflate(R.layout.item_answer_recycler_list, null);
 
-        rootLayout.initFlipperViews(AnwerActivity.this, view2, view1, recoverView);
+        rootLayout.initFlipperViews(SubjectActivity.this, view2, view1, recoverView);
 
         final TextView recoverReadView = recoverView.findViewById(R.id.tv_anwer);
         final TextView readView1 = view1.findViewById(R.id.tv_anwer);
@@ -259,30 +245,28 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
         }
 
 
-        topicAdapter.setOnTopicClickListener(new TopicAdapter.OnTopicClickListener() {
-            @Override
-            public void onClick(TopicAdapter.TopicViewHolder holder, int position) {
-                curPosition = position;
-                Log.i("点击了==>", position + "");
-                if (position == 0) {
-                    initPage();
-                } else if (position == datas.size() - 1) {
-                    initLastPage();
-                } else {
-                    choosePage(position - 1, position, position + 1);
-                }
-
-
-                if (mLayout != null &&
-                        (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
-                    mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
-                }
-
-                topicAdapter.notifyCurPosition(curPosition);
-                topicAdapter.notifyPrePosition(prePosition);
-
-                prePosition = curPosition;
+        assert topicAdapter != null;
+        topicAdapter.setOnTopicClickListener((holder, position) -> {
+            curPosition = position;
+            Log.i("点击了==>", position + "");
+            if (position == 0) {
+                initPage();
+            } else if (position == datas.size() - 1) {
+                initLastPage();
+            } else {
+                choosePage(position - 1, position, position + 1);
             }
+
+
+            if (mLayout != null &&
+                    (mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.EXPANDED || mLayout.getPanelState() == SlidingUpPanelLayout.PanelState.ANCHORED)) {
+                mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
+            }
+
+            topicAdapter.notifyCurPosition(curPosition);
+            topicAdapter.notifyPrePosition(prePosition);
+
+            prePosition = curPosition;
         });
 
 
@@ -332,17 +316,13 @@ public class AnwerActivity extends AppCompatActivity implements FlipperLayout.On
     }
 
     private AnwerInfo getAnwer() {
-
         try {
-            InputStream in = getAssets().open("anwer.json");
-            AnwerInfo anwerInfo = JSON.parseObject(inputStream2String(in), AnwerInfo.class);
-
-            return anwerInfo;
+            InputStream in = getAssets().open("answer.json");
+            return JSON.parseObject(inputStream2String(in), AnwerInfo.class);
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("data.size=", e.toString());
         }
-
         return null;
     }
 }

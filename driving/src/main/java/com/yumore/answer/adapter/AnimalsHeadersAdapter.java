@@ -42,7 +42,7 @@ public class AnimalsHeadersAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext)
-                .inflate(R.layout.course_item, parent, false);
+                .inflate(R.layout.item_schedule_recycler_list, parent, false);
         return new CourseViewHolder(view);
     }
 
@@ -63,7 +63,7 @@ public class AnimalsHeadersAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             courseViewHolder.ll_all_course.removeAllViews();
             for (int i = 0; i < dataList.size(); i++) {
                 CourseSheetInfo.DataBean.ScheduleBean.DetailBean.SubDetailBean subDetailBean = dataList.get(i);
-                final View view = LayoutInflater.from(mContext).inflate(R.layout.course_text, null, false);
+                final View view = LayoutInflater.from(mContext).inflate(R.layout.layout_schedule_text, null, false);
                 TextView textView = view.findViewById(R.id.tv_text);
                 textView.setText(subDetailBean.getText() + "\n" + subDetailBean.getText2());
 
@@ -90,7 +90,7 @@ public class AnimalsHeadersAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     @Override
     public RecyclerView.ViewHolder onCreateHeaderViewHolder(ViewGroup parent) {
         View view = LayoutInflater.from(mContext)
-                .inflate(R.layout.head_item, parent, false);
+                .inflate(R.layout.item_header_recycler_list, parent, false);
         return new HeaderViewHolder(view);
     }
 
@@ -116,7 +116,7 @@ public class AnimalsHeadersAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             for (int i = 0; i < scheduleList.size(); i++) {
                 String time = scheduleList.get(i);
                 String[] split = time.split("-");
-                View view = LayoutInflater.from(mContext).inflate(R.layout.course_text, null, false);
+                View view = LayoutInflater.from(mContext).inflate(R.layout.layout_schedule_text, null, false);
                 TextView textView = view.findViewById(R.id.tv_text);
                 textView.setText(split[0] + "\n" + split[1]);
                 headerViewHolder.ll_all_times.addView(view);
