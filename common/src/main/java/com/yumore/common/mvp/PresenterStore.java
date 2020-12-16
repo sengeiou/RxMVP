@@ -3,14 +3,14 @@ package com.yumore.common.mvp;
 import java.util.HashMap;
 
 /**
- * create by lzx
+ * create by yumore
  * time:2018/7/26
  *
  * @author Nathaniel
  */
 public class PresenterStore<P extends AbstractPresenter> {
     private static final String STORE_DEFAULT_KEY = "PresenterStore.DefaultKey";
-    private HashMap<String, P> hashMap = new HashMap<>();
+    private final HashMap<String, P> hashMap = new HashMap<>();
 
     public final void put(String key, P presenter) {
         P oldPresenter = hashMap.put(STORE_DEFAULT_KEY + ":" + key, presenter);

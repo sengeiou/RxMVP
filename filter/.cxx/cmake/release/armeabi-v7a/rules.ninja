@@ -42,7 +42,7 @@ rule CXX_SHARED_LIBRARY_LINKER__nativefilter
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake -H/Users/nathaniel/workspace/AndroidStudio/RxMVP/filterlibrary/src/main/cpp -B/Users/nathaniel/workspace/AndroidStudio/RxMVP/filterlibrary/.cxx/cmake/release/armeabi-v7a
+  command = /Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake -H/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp -B/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/.cxx/cmake/release/armeabi-v7a
   description = Re-running CMake...
   generator = 1
 

@@ -32,6 +32,7 @@ dependencies {
     implementation project(':common')
     implementation project(':daemon')
     implementation project(':driving')
+    implementation project(':easymvp')
 
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'jp.wasabeef:glide-transformations:3.3.0'

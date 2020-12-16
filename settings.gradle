@@ -7,6 +7,7 @@ include ':utility'
 include ':feature'
 include ':camera'
 include ':gallery'
+include ':easymvp'
 
 include ':example'
 include ':master'

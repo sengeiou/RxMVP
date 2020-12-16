@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.yumore.answer.SubjectActivity;
 import com.yumore.daemon.DaemonActivity;
+import com.yumore.easymvp.example.ExampleActivity1;
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.adapter.AdapterRecyclerViewMain;
@@ -113,6 +114,7 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("流利说欢迎动画", R.mipmap.icon_pikachu, PreviewActivity.class));
         modelMainItemList.add(new ModelMainItem("相册选择界面", R.mipmap.icon_pikachu, DaemonActivity.class));
         modelMainItemList.add(new ModelMainItem("考试模式", R.mipmap.icon_pikachu, SubjectActivity.class));
+        modelMainItemList.add(new ModelMainItem("Presenter复用", R.mipmap.icon_pikachu, ExampleActivity1.class));
     }
 
     private void initView() {
