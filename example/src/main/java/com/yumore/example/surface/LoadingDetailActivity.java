@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import com.yumore.example.R;
 import com.yumore.example.tools.EvaluatorARGB;
 import com.yumore.utility.widget.progressing.SpinKitView;
@@ -22,7 +24,7 @@ import com.yumore.utility.widget.progressing.sprite.Sprite;
 /**
  * @author yumore
  */
-public class ActivityLoadingDetail extends AppCompatActivity {
+public class LoadingDetailActivity extends AppCompatActivity {
 
     int[] colors = new int[]{
             android.graphics.Color.parseColor("#D55400"),
@@ -37,7 +39,7 @@ public class ActivityLoadingDetail extends AppCompatActivity {
 
     @SuppressWarnings("WeakerAccess")
     public static void start(Context context, int position) {
-        Intent intent = new Intent(context, ActivityLoadingDetail.class);
+        Intent intent = new Intent(context, LoadingDetailActivity.class);
         intent.putExtra("position", position);
         context.startActivity(intent);
     }

@@ -3,19 +3,21 @@ package com.yumore.example.surface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.utility.RxVibrateTool;
+import com.yumore.utility.widget.RxTitle;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.utility.RxVibrateTool;
-import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore
  */
-public class ActivityVibrate extends ActivityBase {
+public class ActivityVibrate extends BaseActivity {
 
 
     @BindView(R2.id.btn_vibrate_once)
@@ -27,14 +29,14 @@ public class ActivityVibrate extends ActivityBase {
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
 
-    private long[] temp = {100, 10, 100, 1000};
+    private final long[] temp = {100, 10, 100, 1000};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vibrate);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     @OnClick({R2.id.btn_vibrate_once,

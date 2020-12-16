@@ -5,20 +5,22 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.jaredrummler.android.widget.AnimatedSvgView;
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.entity.ModelSVG;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxActivityTool;
 import com.yumore.utility.utility.RxBarTool;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author yumore
  */
-public class ActivitySVG extends ActivityBase {
+public class ActivitySVG extends BaseActivity {
 
     @BindView(R2.id.animated_svg_view)
     AnimatedSvgView mSvgView;
@@ -26,7 +28,7 @@ public class ActivitySVG extends ActivityBase {
     RelativeLayout mActivitySvg;
     @BindView(R2.id.app_name)
     ImageView mAppName;
-    private Handler checkhandler = new Handler() {
+    private final Handler checkhandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
 //            mAppName.setVisibility(View.VISIBLE);

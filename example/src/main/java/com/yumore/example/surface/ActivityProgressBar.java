@@ -7,12 +7,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.utility.RxDataTool;
 import com.yumore.utility.widget.RxProgressBar;
@@ -22,10 +20,14 @@ import com.yumore.utility.widget.roundprogressbar.RxIconRoundProgressBar;
 import com.yumore.utility.widget.roundprogressbar.RxRoundProgressBar;
 import com.yumore.utility.widget.roundprogressbar.RxTextRoundProgressBar;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityProgressBar extends ActivityBase {
+public class ActivityProgressBar extends BaseActivity {
 
 
     @BindView(R2.id.rx_title)
@@ -103,7 +105,7 @@ public class ActivityProgressBar extends ActivityBase {
     };
     private double progress;
     private int progress1;
-    private int money1 = 10000;
+    private final int money1 = 10000;
     private int mRxRoundProgress;
     Handler mRxRoundPdHandler = new Handler() {
         @Override
@@ -131,7 +133,7 @@ public class ActivityProgressBar extends ActivityBase {
             mProgressThree.setProgress(mRxRoundProgress);
         }
     };
-    private int mRxRoundPdMax = 100;
+    private final int mRxRoundPdMax = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,7 +150,7 @@ public class ActivityProgressBar extends ActivityBase {
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     private int getMax(double currentProgress) {

@@ -5,21 +5,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxImageTool;
 import com.yumore.utility.widget.RxRotateBar;
 import com.yumore.utility.widget.RxRotateBarBasic;
 import com.yumore.utility.widget.RxTitle;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityRxRotateBar extends ActivityBase {
+public class ActivityRxRotateBar extends BaseActivity {
 
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
@@ -46,7 +48,7 @@ public class ActivityRxRotateBar extends ActivityBase {
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         bar1 = new RxRotateBarBasic(5, "魅力");
         bar2 = new RxRotateBarBasic(8, "财力");

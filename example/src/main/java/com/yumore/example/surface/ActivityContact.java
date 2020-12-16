@@ -1,15 +1,15 @@
 package com.yumore.example.surface;
 
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.entity.ModelContactCity;
 import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.wavesidebar.ComparatorLetter;
@@ -22,10 +22,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivityContact extends ActivityBase {
+public class ActivityContact extends BaseActivity {
 
     @BindView(R2.id.recycler_view)
     RecyclerView mRecyclerView;
@@ -45,7 +48,7 @@ public class ActivityContact extends ActivityBase {
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -70,7 +73,7 @@ public class ActivityContact extends ActivityBase {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        mAdapterContactCity = new AdapterContactCity(mContext, list);
+                        mAdapterContactCity = new AdapterContactCity(baseActivity, list);
                         mRecyclerView.setAdapter(mAdapterContactCity);
                     }
                 });

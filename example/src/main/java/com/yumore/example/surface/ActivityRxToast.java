@@ -6,19 +6,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.RxToast;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.widget.RxTitle;
-import com.yumore.utility.widget.RxToast;
 
 /**
  * @author yumore
  */
-public class ActivityRxToast extends ActivityBase {
+public class ActivityRxToast extends BaseActivity {
 
     @BindView(R2.id.button_error_toast)
     Button mButtonErrorToast;
@@ -63,18 +65,18 @@ public class ActivityRxToast extends ActivityBase {
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.button_error_toast) {
-            RxToast.error(mContext, "这是一个提示错误的Toast！", Toast.LENGTH_SHORT, true).show();
+            RxToast.error(baseActivity, "这是一个提示错误的Toast！", Toast.LENGTH_SHORT, true).show();
         } else if (id == R.id.button_success_toast) {
-            RxToast.success(mContext, "这是一个提示成功的Toast!", Toast.LENGTH_SHORT, true).show();
+            RxToast.success(baseActivity, "这是一个提示成功的Toast!", Toast.LENGTH_SHORT, true).show();
         } else if (id == R.id.button_info_toast) {
-            RxToast.info(mContext, "这是一个提示信息的Toast.", Toast.LENGTH_SHORT, true).show();
+            RxToast.info(baseActivity, "这是一个提示信息的Toast.", Toast.LENGTH_SHORT, true).show();
         } else if (id == R.id.button_warning_toast) {
-            RxToast.warning(mContext, "这是一个提示警告的Toast.", Toast.LENGTH_SHORT, true).show();
+            RxToast.warning(baseActivity, "这是一个提示警告的Toast.", Toast.LENGTH_SHORT, true).show();
         } else if (id == R.id.button_normal_toast_wo_icon) {
-            RxToast.normal(mContext, "这是一个普通的没有ICON的Toast").show();
+            RxToast.normal(baseActivity, "这是一个普通的没有ICON的Toast").show();
         } else if (id == R.id.button_normal_toast_w_icon) {
             Drawable icon = getResources().getDrawable(R.drawable.set);
-            RxToast.normal(mContext, "这是一个普通的包含ICON的Toast", icon).show();
+            RxToast.normal(baseActivity, "这是一个普通的包含ICON的Toast", icon).show();
         }
     }
 }

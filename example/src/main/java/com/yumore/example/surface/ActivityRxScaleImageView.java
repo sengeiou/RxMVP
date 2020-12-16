@@ -5,9 +5,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
 import com.yumore.example.R;
 import com.yumore.example.view.RxPinView;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.scaleimage.ImageSource;
 import com.yumore.utility.widget.scaleimage.RxScaleImageView;
@@ -19,7 +20,7 @@ import java.util.Random;
 /**
  * @author yumore
  */
-public class ActivityRxScaleImageView extends ActivityBase implements View.OnClickListener {
+public class ActivityRxScaleImageView extends BaseActivity implements View.OnClickListener {
 
     private static final String BUNDLE_POSITION = "position";
 
@@ -33,7 +34,7 @@ public class ActivityRxScaleImageView extends ActivityBase implements View.OnCli
         setContentView(R.layout.activity_rx_scale_image_view);
 
         RxTitle rxTitle = findViewById(R.id.rx_title);
-        rxTitle.setLeftFinish(mContext);
+        rxTitle.setLeftFinish(baseActivity);
 
         findViewById(R.id.next).setOnClickListener(this);
         findViewById(R.id.previous).setOnClickListener(this);

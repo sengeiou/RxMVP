@@ -4,22 +4,30 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.SeekBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.widget.RxCaptcha;
 import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.RxToast;
 import com.yumore.utility.widget.swipecaptcha.RxSwipeCaptcha;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import static com.yumore.utility.widget.RxCaptcha.TYPE.CHARS;
 
@@ -27,7 +35,7 @@ import static com.yumore.utility.widget.RxCaptcha.TYPE.CHARS;
 /**
  * @author yumore
  */
-public class ActivityRxCaptcha extends ActivityBase {
+public class ActivityRxCaptcha extends BaseActivity {
 
     @BindView(R2.id.tv_code)
     TextView tvCode;
@@ -55,11 +63,11 @@ public class ActivityRxCaptcha extends ActivityBase {
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
         mRxSwipeCaptcha.setOnCaptchaMatchCallback(new RxSwipeCaptcha.OnCaptchaMatchCallback() {
             @Override
             public void matchSuccess(RxSwipeCaptcha rxSwipeCaptcha) {
-                RxToast.success(mContext, "验证通过！", Toast.LENGTH_SHORT).show();
+                RxToast.success(baseActivity, "验证通过！", Toast.LENGTH_SHORT).show();
                 //swipeCaptcha.createCaptcha();
                 mSeekBar.setEnabled(false);
             }
@@ -67,7 +75,7 @@ public class ActivityRxCaptcha extends ActivityBase {
             @Override
             public void matchFailed(RxSwipeCaptcha rxSwipeCaptcha) {
                 Log.d("zxt", "matchFailed() called with: rxSwipeCaptcha = [" + rxSwipeCaptcha + "]");
-                RxToast.error(mContext, "验证失败:拖动滑块将悬浮头像正确拼合", Toast.LENGTH_SHORT).show();
+                RxToast.error(baseActivity, "验证失败:拖动滑块将悬浮头像正确拼合", Toast.LENGTH_SHORT).show();
                 rxSwipeCaptcha.resetCaptcha();
                 mSeekBar.setProgress(0);
             }

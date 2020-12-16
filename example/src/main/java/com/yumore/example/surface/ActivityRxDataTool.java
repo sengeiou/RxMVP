@@ -5,19 +5,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.utility.RxDataTool;
+import com.yumore.utility.widget.RxTitle;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.utility.RxDataTool;
-import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore
  */
-public class ActivityRxDataTool extends ActivityBase {
+public class ActivityRxDataTool extends BaseActivity {
 
     @BindView(R2.id.editText)
     EditText mEditText;
@@ -147,7 +149,7 @@ public class ActivityRxDataTool extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_data_utils);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     @OnClick({R2.id.btn_null,

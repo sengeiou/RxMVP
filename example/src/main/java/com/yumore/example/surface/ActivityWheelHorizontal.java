@@ -5,26 +5,32 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.utility.RxDataTool;
 import com.yumore.utility.widget.RxRulerWheelView;
 import com.yumore.utility.widget.RxTitle;
-import com.yumore.utility.widget.wheelhorizontal.*;
+import com.yumore.utility.widget.wheelhorizontal.AbstractWheel;
+import com.yumore.utility.widget.wheelhorizontal.ArrayWheelAdapter;
+import com.yumore.utility.widget.wheelhorizontal.OnWheelClickedListener;
+import com.yumore.utility.widget.wheelhorizontal.OnWheelScrollListener;
+import com.yumore.utility.widget.wheelhorizontal.WheelHorizontalView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivityWheelHorizontal extends ActivityBase {
+public class ActivityWheelHorizontal extends BaseActivity {
 
 
     @BindView(R2.id.rx_title)
@@ -51,7 +57,7 @@ public class ActivityWheelHorizontal extends ActivityBase {
     TextView mSelectedTv;
     @BindView(R2.id.LinearLayout1)
     LinearLayout mLinearLayout1;
-    private List<String> listYearMonth = new ArrayList<>();
+    private final List<String> listYearMonth = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,7 +159,7 @@ public class ActivityWheelHorizontal extends ActivityBase {
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     private void initData() {

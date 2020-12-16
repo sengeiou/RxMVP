@@ -3,12 +3,12 @@ package com.yumore.example.surface;
 import android.Manifest;
 import android.os.Bundle;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.yumore.daemon.DaemonActivity;
 import com.yumore.example.R;
@@ -18,13 +18,16 @@ import com.yumore.example.entity.ModelMainItem;
 import com.yumore.feature.activity.ActivityCodeTool;
 import com.yumore.preview.PreviewActivity;
 import com.yumore.provider.RouterConstants;
-import com.yumore.utility.activity.ActivityWebView;
+import com.yumore.utility.activity.BrowserActivity;
 import com.yumore.utility.utility.RxImageTool;
 import com.yumore.utility.utility.RxPermissionsTool;
 import com.yumore.utility.utility.RxRecyclerViewDividerTool;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * @author yumore
@@ -64,7 +67,7 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("二维码与条形码的扫描与生成", R.drawable.circle_dynamic_generation_code, ActivityCodeTool.class));
         modelMainItemList.add(new ModelMainItem("动态生成码", R.drawable.circle_qr_code, ActivityCreateQRCode.class));
 
-        modelMainItemList.add(new ModelMainItem("WebView的封装可播放视频", R.drawable.circle_webpage, ActivityWebView.class));
+        modelMainItemList.add(new ModelMainItem("WebView的封装可播放视频", R.drawable.circle_webpage, BrowserActivity.class));
         modelMainItemList.add(new ModelMainItem("常用的Dialog展示", R.drawable.circle_dialog, ActivityDialog.class));
         modelMainItemList.add(new ModelMainItem("图片的缩放艺术", R.drawable.circle_scale_icon, ActivityRxScaleImageView.class));
 
@@ -73,7 +76,7 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("RxTextTool操作Demo", R.drawable.circle_text, ActivityTextTool.class));
 
         modelMainItemList.add(new ModelMainItem("进度条的艺术", R.drawable.circle_bar, ActivityProgressBar.class));
-        modelMainItemList.add(new ModelMainItem("加载的艺术", R.drawable.circle_loading_icon, ActivityLoading.class));
+        modelMainItemList.add(new ModelMainItem("加载的艺术", R.drawable.circle_loading_icon, LoadingActivity.class));
         modelMainItemList.add(new ModelMainItem("点赞控件", R.drawable.circle_heart_circle, ActivityLike.class));
 
         modelMainItemList.add(new ModelMainItem("旋转引擎View", R.drawable.circle_rotate, ActivityRxRotateBar.class));
@@ -105,7 +108,7 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("RxWaveView", R.drawable.circle_wave, ActivityRxWaveView.class));
         modelMainItemList.add(new ModelMainItem("app检测更新与安装", R.mipmap.ic_launcher, ActivitySplash.class));
         modelMainItemList.add(new ModelMainItem("PULL解析XML", R.mipmap.ic_launcher, ActivityXmlParse.class));
-        modelMainItemList.add(new ModelMainItem("支付宝支付Demo", R.drawable.circle_alipay, ActivityAliPay.class));
+        modelMainItemList.add(new ModelMainItem("支付宝支付Demo", R.drawable.circle_alipay, AliPayActivity.class));
         modelMainItemList.add(new ModelMainItem("流利说欢迎动画", R.mipmap.ic_launcher, PreviewActivity.class));
         modelMainItemList.add(new ModelMainItem("相册选择界面", R.mipmap.ic_launcher, DaemonActivity.class));
     }

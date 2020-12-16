@@ -2,22 +2,23 @@ package com.yumore.utility.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.yumore.utility.utility.RxActivityTool;
 
 /**
  * @author yumore
  */
-public class ActivityBase extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
 
-    public ActivityBase mContext;
+    public BaseActivity baseActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mContext = this;
+        baseActivity = this;
         RxActivityTool.addActivity(this);
-//        DragAndDropPermissionsCompat
     }
 
     @Override

@@ -5,19 +5,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.utility.RxDeviceTool;
+import com.yumore.utility.widget.RxTitle;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.utility.RxDeviceTool;
-import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore
  */
-public class ActivityDeviceInfo extends ActivityBase {
+public class ActivityDeviceInfo extends BaseActivity {
 
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
@@ -87,43 +89,43 @@ public class ActivityDeviceInfo extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_info);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     private void getPhoneInfo() {
-        if (RxDeviceTool.isPhone(mContext)) {
+        if (RxDeviceTool.isPhone(baseActivity)) {
             mTvDeviceIsPhone.setText("是");
         } else {
             mTvDeviceIsPhone.setText("否");
         }
 
-        mTvDeviceSoftwarePhoneType.setText(RxDeviceTool.getPhoneType(mContext) + "");
-        mTvDeviceDensity.setText(RxDeviceTool.getScreenDensity(mContext) + "");
+        mTvDeviceSoftwarePhoneType.setText(RxDeviceTool.getPhoneType(baseActivity) + "");
+        mTvDeviceDensity.setText(RxDeviceTool.getScreenDensity(baseActivity) + "");
         mTvDeviceManuFacturer.setText(RxDeviceTool.getUniqueSerialNumber() + "");
-        mTvDeviceWidth.setText(RxDeviceTool.getScreenWidth(mContext) + " ");
-        mTvDeviceHeight.setText(RxDeviceTool.getScreenHeight(mContext) + " ");
-        mTvDeviceVersionName.setText(RxDeviceTool.getAppVersionName(mContext) + "");
-        mTvDeviceVersionCode.setText(RxDeviceTool.getAppVersionNo(mContext) + "");
-        mTvDeviceImei.setText(RxDeviceTool.getDeviceIdIMEI(mContext) + "");
-        mTvDeviceImsi.setText(RxDeviceTool.getIMSI(mContext) + "");
-        mTvDeviceSoftwareVersion.setText(RxDeviceTool.getDeviceSoftwareVersion(mContext) + "");
-        mTvDeviceMac.setText(RxDeviceTool.getMacAddress(mContext));
-        mTvDeviceSoftwareMccMnc.setText(RxDeviceTool.getNetworkOperator(mContext) + "");
-        mTvDeviceSoftwareMccMncName.setText(RxDeviceTool.getNetworkOperatorName(mContext) + "");
-        mTvDeviceSoftwareSimCountryIso.setText(RxDeviceTool.getNetworkCountryIso(mContext) + "");
-        mTvDeviceSimOperator.setText(RxDeviceTool.getSimOperator(mContext) + "");
-        mTvDeviceSimSerialNumber.setText(RxDeviceTool.getSimSerialNumber(mContext) + "");
-        mTvDeviceSimState.setText(RxDeviceTool.getSimState(mContext) + "");
-        mTvDeviceSimOperatorName.setText(RxDeviceTool.getSimOperatorName(mContext) + "");
-        mTvDeviceSubscriberId.setText(RxDeviceTool.getSubscriberId(mContext) + "");
-        mTvDeviceVoiceMailNumber.setText(RxDeviceTool.getVoiceMailNumber(mContext) + "");
-        mTvDeviceAdnroidId.setText(RxDeviceTool.getAndroidId(mContext) + "");
+        mTvDeviceWidth.setText(RxDeviceTool.getScreenWidth(baseActivity) + " ");
+        mTvDeviceHeight.setText(RxDeviceTool.getScreenHeight(baseActivity) + " ");
+        mTvDeviceVersionName.setText(RxDeviceTool.getAppVersionName(baseActivity) + "");
+        mTvDeviceVersionCode.setText(RxDeviceTool.getAppVersionNo(baseActivity) + "");
+        mTvDeviceImei.setText(RxDeviceTool.getDeviceIdIMEI(baseActivity) + "");
+        mTvDeviceImsi.setText(RxDeviceTool.getIMSI(baseActivity) + "");
+        mTvDeviceSoftwareVersion.setText(RxDeviceTool.getDeviceSoftwareVersion(baseActivity) + "");
+        mTvDeviceMac.setText(RxDeviceTool.getMacAddress(baseActivity));
+        mTvDeviceSoftwareMccMnc.setText(RxDeviceTool.getNetworkOperator(baseActivity) + "");
+        mTvDeviceSoftwareMccMncName.setText(RxDeviceTool.getNetworkOperatorName(baseActivity) + "");
+        mTvDeviceSoftwareSimCountryIso.setText(RxDeviceTool.getNetworkCountryIso(baseActivity) + "");
+        mTvDeviceSimOperator.setText(RxDeviceTool.getSimOperator(baseActivity) + "");
+        mTvDeviceSimSerialNumber.setText(RxDeviceTool.getSimSerialNumber(baseActivity) + "");
+        mTvDeviceSimState.setText(RxDeviceTool.getSimState(baseActivity) + "");
+        mTvDeviceSimOperatorName.setText(RxDeviceTool.getSimOperatorName(baseActivity) + "");
+        mTvDeviceSubscriberId.setText(RxDeviceTool.getSubscriberId(baseActivity) + "");
+        mTvDeviceVoiceMailNumber.setText(RxDeviceTool.getVoiceMailNumber(baseActivity) + "");
+        mTvDeviceAdnroidId.setText(RxDeviceTool.getAndroidId(baseActivity) + "");
         mTvDeviceBuildBrandModel.setText(RxDeviceTool.getBuildBrandModel() + "");
         mTvDeviceBuildManuFacturer.setText(RxDeviceTool.getBuildMANUFACTURER() + "");
         mTvDeviceBuildBrand.setText(RxDeviceTool.getBuildBrand() + "");
         mTvDeviceSerialNumber.setText(RxDeviceTool.getSerialNumber() + "");
-        mTvDeviceIso.setText(RxDeviceTool.getNetworkCountryIso(mContext) + "");
-        mTvDevicePhone.setText(RxDeviceTool.getLine1Number(mContext) + "");
+        mTvDeviceIso.setText(RxDeviceTool.getNetworkCountryIso(baseActivity) + "");
+        mTvDevicePhone.setText(RxDeviceTool.getLine1Number(baseActivity) + "");
     }
 
     @OnClick(R2.id.btn_get_phone_info)

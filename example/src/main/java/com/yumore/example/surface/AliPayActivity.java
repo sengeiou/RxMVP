@@ -4,20 +4,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.common.SelfInfo;
 import com.yumore.feature.module.alipay.AliPayModel;
 import com.yumore.feature.module.alipay.AliPayTool;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.callback.OnSuccessAndErrorListener;
 import com.yumore.utility.utility.RxTimeTool;
 import com.yumore.utility.widget.RxToast;
 
-public class ActivityAliPay extends ActivityBase {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class AliPayActivity extends BaseActivity {
 
     @BindView(R2.id.iv_alipay)
     ImageView mIvAlipay;
@@ -40,7 +42,7 @@ public class ActivityAliPay extends ActivityBase {
         int id = view.getId();
         if (id == R.id.payV2) {
             //需要填写APPID 与 私钥
-            AliPayTool.aliPay(mContext, SelfInfo.ALIPAY_APPID, true, SelfInfo.ALIPAY_RSA2_PRIVATE, new AliPayModel(RxTimeTool.date2String(RxTimeTool.getCurTimeDate()), "0.01", "爱心", "一份爱心"), new OnSuccessAndErrorListener() {
+            AliPayTool.aliPay(baseActivity, SelfInfo.ALIPAY_APPID, true, SelfInfo.ALIPAY_RSA2_PRIVATE, new AliPayModel(RxTimeTool.date2String(RxTimeTool.getCurTimeDate()), "0.01", "爱心", "一份爱心"), new OnSuccessAndErrorListener() {
                 @Override
                 public void onSuccess(String s) {
                     RxToast.success("支付成功");

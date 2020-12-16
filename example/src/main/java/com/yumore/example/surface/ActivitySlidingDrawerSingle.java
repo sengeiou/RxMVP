@@ -7,21 +7,31 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.*;
-import android.widget.*;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import android.webkit.DownloadListener;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.SlidingDrawer;
+import android.widget.TextView;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.utility.RxConstants;
 import com.yumore.utility.widget.RxTitle;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivitySlidingDrawerSingle extends ActivityBase {
+public class ActivitySlidingDrawerSingle extends BaseActivity {
 
 
     @BindView(R2.id.rx_title)
@@ -63,7 +73,7 @@ public class ActivitySlidingDrawerSingle extends ActivityBase {
         RxBarTool.setTransparentStatusBar(this);
         ButterKnife.bind(this);
 
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         initData();
     }
@@ -105,11 +115,7 @@ public class ActivitySlidingDrawerSingle extends ActivityBase {
             webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         }
 
-        if (Build.VERSION.SDK_INT >= 19) {
-            webSettings.setLoadsImagesAutomatically(true);
-        } else {
-            webSettings.setLoadsImagesAutomatically(false);
-        }
+        webSettings.setLoadsImagesAutomatically(Build.VERSION.SDK_INT >= 19);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             mWebBase.setLayerType(View.LAYER_TYPE_SOFTWARE, null);

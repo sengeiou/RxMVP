@@ -4,20 +4,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.widget.RxSeatAirplane;
 import com.yumore.utility.widget.RxTitle;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityFlightSeat extends ActivityBase {
+public class ActivityFlightSeat extends BaseActivity {
 
     @BindView(R2.id.fsv)
     RxSeatAirplane mFlightSeatView;
@@ -39,7 +41,7 @@ public class ActivityFlightSeat extends ActivityBase {
         RxBarTool.setTransparentStatusBar(this);
         setContentView(R.layout.activity_flight_seat);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
         initView();
 
         setTestData();

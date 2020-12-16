@@ -5,19 +5,21 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.entity.CityModel;
 import com.yumore.example.tools.RxPullXml;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * @author yumore
@@ -25,7 +27,7 @@ import java.util.List;
  * PULL解析是Android官方推荐的XML解析方式，以事件驱动来解析XML
  * 注：Android中自带了Pull解析的jar包，故不需额外导入第三方jar包
  */
-public class ActivityXmlParse extends ActivityBase {
+public class ActivityXmlParse extends BaseActivity {
 
 
     @BindView(R2.id.btn_parse_xml)
@@ -43,7 +45,7 @@ public class ActivityXmlParse extends ActivityBase {
     @OnClick(R2.id.btn_parse_xml)
     public void onViewClicked() {
 
-        getCities(mContext);
+        getCities(baseActivity);
 
     }
 

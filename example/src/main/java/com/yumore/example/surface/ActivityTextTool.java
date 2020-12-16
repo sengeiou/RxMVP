@@ -9,14 +9,16 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxTextTool;
 import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.RxToast;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 import static com.yumore.utility.utility.RxBarTool.setTransparentStatusBar;
 import static com.yumore.utility.utility.RxConstants.URL_VONTOOLS;
@@ -24,7 +26,7 @@ import static com.yumore.utility.utility.RxConstants.URL_VONTOOLS;
 /**
  * @author yumore
  */
-public class ActivityTextTool extends ActivityBase {
+public class ActivityTextTool extends BaseActivity {
 
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
@@ -37,17 +39,17 @@ public class ActivityTextTool extends ActivityBase {
         setContentView(R.layout.activity_text_utils);
         ButterKnife.bind(this);
         setTransparentStatusBar(this);
-        mContext = this;
+        baseActivity = this;
         initView();
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View widget) {
-                RxToast.showToast(mContext, "事件触发了", 500);
+                RxToast.showToast(baseActivity, "事件触发了", 500);
             }
 
             @Override

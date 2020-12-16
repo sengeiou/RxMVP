@@ -8,13 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.orhanobut.logger.Logger;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxFileTool;
 import com.yumore.utility.utility.RxZipTool;
 import com.yumore.utility.widget.RxTitle;
@@ -24,10 +22,14 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityZipEncrypt extends ActivityBase {
+public class ActivityZipEncrypt extends BaseActivity {
 
     @BindView(R2.id.btn_create_folder)
     Button mBtnCreateFolder;
@@ -54,7 +56,7 @@ public class ActivityZipEncrypt extends ActivityBase {
     private String zipTempDeletePath;
     private String unzipPath;
     @SuppressLint("HandlerLeak")
-    private Handler _handler = new Handler() {
+    private final Handler _handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -92,7 +94,7 @@ public class ActivityZipEncrypt extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zip_encrypt);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
         zipParentPath = RxFileTool.getRootPath().getAbsolutePath() + File.separator + "RxTool";
         zipTempDeletePath = RxFileTool.getRootPath().getAbsolutePath() + File.separator + "RxTool" + File.separator + "RxTempTool";
         unzipPath = RxFileTool.getRootPath().getAbsolutePath() + File.separator + "解压缩文件夹";

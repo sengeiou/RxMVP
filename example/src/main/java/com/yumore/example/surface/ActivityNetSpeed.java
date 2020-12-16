@@ -4,19 +4,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.widget.RxNetSpeedView;
+import com.yumore.utility.widget.RxTitle;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.widget.RxNetSpeedView;
-import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore
  */
-public class ActivityNetSpeed extends ActivityBase {
+public class ActivityNetSpeed extends BaseActivity {
 
     @BindView(R2.id.button2)
     Button mButton2;
@@ -34,7 +36,7 @@ public class ActivityNetSpeed extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_net_speed);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     @OnClick({R2.id.button2, R2.id.button3})

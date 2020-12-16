@@ -6,20 +6,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.dialog.RxDialog;
+import com.yumore.utility.widget.dialog.RxDialogAcfunVideoLoading;
+import com.yumore.utility.widget.dialog.RxDialogEditSureCancel;
+import com.yumore.utility.widget.dialog.RxDialogLoading;
+import com.yumore.utility.widget.dialog.RxDialogScaleView;
+import com.yumore.utility.widget.dialog.RxDialogShapeLoading;
+import com.yumore.utility.widget.dialog.RxDialogSure;
+import com.yumore.utility.widget.dialog.RxDialogSureCancel;
+import com.yumore.utility.widget.dialog.RxDialogWheelYearMonthDay;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.utility.RxBarTool;
-import com.yumore.utility.widget.RxTitle;
-import com.yumore.utility.widget.dialog.*;
 
 /**
  * @author yumore
  */
-public class ActivityDialog extends ActivityBase {
+public class ActivityDialog extends BaseActivity {
 
     @BindView(R2.id.button_tran)
     Button mButtonTran;
@@ -56,7 +66,7 @@ public class ActivityDialog extends ActivityBase {
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     private void initWheelYearMonthDayDialog() {
@@ -104,15 +114,15 @@ public class ActivityDialog extends ActivityBase {
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.button_tran) {
-            RxDialog rxDialog = new RxDialog(mContext, R.style.tran_dialog);
-            View view1 = LayoutInflater.from(mContext).inflate(R.layout.image, null);
+            RxDialog rxDialog = new RxDialog(baseActivity, R.style.tran_dialog);
+            View view1 = LayoutInflater.from(baseActivity).inflate(R.layout.image, null);
             ImageView pageItem = view1.findViewById(R2.id.page_item);
             pageItem.setImageResource(R.drawable.coin);
             rxDialog.setContentView(view1);
             rxDialog.show();
         } else if (id == R.id.button_DialogSure) {
             //提示弹窗
-            final RxDialogSure rxDialogSure = new RxDialogSure(mContext);
+            final RxDialogSure rxDialogSure = new RxDialogSure(baseActivity);
             rxDialogSure.getLogoView().setImageResource(R.drawable.logo);
             rxDialogSure.getSureView().setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -123,7 +133,7 @@ public class ActivityDialog extends ActivityBase {
             rxDialogSure.show();
         } else if (id == R.id.button_DialogSureCancle) {
             //提示弹窗
-            final RxDialogSureCancel rxDialogSureCancel = new RxDialogSureCancel(mContext);
+            final RxDialogSureCancel rxDialogSureCancel = new RxDialogSureCancel(baseActivity);
             rxDialogSureCancel.getTitleView().setBackgroundResource(R.drawable.logo);
             rxDialogSureCancel.getSureView().setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -140,7 +150,7 @@ public class ActivityDialog extends ActivityBase {
             rxDialogSureCancel.show();
         } else if (id == R.id.button_DialogEditTextSureCancle) {
             //提示弹窗
-            final RxDialogEditSureCancel rxDialogEditSureCancel = new RxDialogEditSureCancel(mContext);
+            final RxDialogEditSureCancel rxDialogEditSureCancel = new RxDialogEditSureCancel(baseActivity);
             rxDialogEditSureCancel.getTitleView().setBackgroundResource(R.drawable.logo);
             rxDialogEditSureCancel.getSureView().setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -166,11 +176,11 @@ public class ActivityDialog extends ActivityBase {
         } else if (id == R.id.button_DialogLoadingProgressAcfunVideo) {
             new RxDialogAcfunVideoLoading(this).show();
         } else if (id == R.id.button_DialogLoadingspinkit) {
-            RxDialogLoading rxDialogLoading = new RxDialogLoading(mContext);
+            RxDialogLoading rxDialogLoading = new RxDialogLoading(baseActivity);
             rxDialogLoading.show();
             //rxDialogLoading.cancel(RxDialogLoading.RxCancelType.error,"");
         } else if (id == R.id.button_DialogScaleView) {
-            RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(mContext);
+            RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(baseActivity);
             rxDialogScaleView.setImage("squirrel.jpg", true);
             rxDialogScaleView.show();
         }

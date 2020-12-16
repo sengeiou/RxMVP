@@ -3,21 +3,23 @@ package com.yumore.example.surface;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxActivityTool;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.widget.RxShoppingView;
 import com.yumore.utility.widget.RxTitle;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityShoppingView extends ActivityBase {
+public class ActivityShoppingView extends BaseActivity {
 
     @BindView(R2.id.sv_1)
     RxShoppingView mSv1;
@@ -36,12 +38,12 @@ public class ActivityShoppingView extends ActivityBase {
         RxBarTool.noTitle(this);
         setContentView(R.layout.activity_shopping_view);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
     }
 
     @OnClick(R2.id.btn_take_out)
     public void onClick() {
-        RxActivityTool.skipActivity(mContext, ActivityELMe.class);
+        RxActivityTool.skipActivity(baseActivity, ActivityELMe.class);
     }
 }

@@ -8,7 +8,9 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.os.Bundle;
+
 import androidx.core.app.ActivityCompat;
+
 import com.yumore.utility.entity.Gps;
 import com.yumore.utility.utility.RxLocationTool;
 import com.yumore.utility.utility.RxVibrateTool;
@@ -20,7 +22,7 @@ import com.yumore.utility.widget.dialog.RxDialogTool;
 /**
  * @author yumore
  */
-public abstract class ActivityBaseLocation extends ActivityBase {
+public abstract class BaseLocationActivity extends BaseActivity {
 
     //经度
     public double mLongitude = 0;
@@ -51,7 +53,7 @@ public abstract class ActivityBaseLocation extends ActivityBase {
     //----------------------------------------------------------------------------------------------检测GPS是否已打开 start
     protected void gpsCheck() {
         if (!RxLocationTool.isGpsEnabled(this)) {
-            RxDialogGPSCheck rxDialogGPSCheck = new RxDialogGPSCheck(mContext);
+            RxDialogGPSCheck rxDialogGPSCheck = new RxDialogGPSCheck(baseActivity);
             rxDialogGPSCheck.show();
         } else {
             getLocation();
@@ -62,8 +64,8 @@ public abstract class ActivityBaseLocation extends ActivityBase {
     @SuppressLint("MissingPermission")
     private void getLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(mContext, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
-            RxDialogTool.initDialogSurePermission(mContext, "请先打开GPS定位权限");
+            ActivityCompat.requestPermissions(baseActivity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            RxDialogTool.initDialogSurePermission(baseActivity, "请先打开GPS定位权限");
             return;
         }
         mLocationListener = new LocationListener() {
@@ -86,7 +88,7 @@ public abstract class ActivityBaseLocation extends ActivityBase {
                     //GPS状态为服务区外时
                     case LocationProvider.OUT_OF_SERVICE:
                         RxToast.normal("当前GPS信号弱");
-                        RxVibrateTool.vibrateOnce(mContext, 3000);
+                        RxVibrateTool.vibrateOnce(baseActivity, 3000);
                         break;
                     //GPS状态为暂停服务时
                     case LocationProvider.TEMPORARILY_UNAVAILABLE:
@@ -100,13 +102,13 @@ public abstract class ActivityBaseLocation extends ActivityBase {
             @Override
             public void onProviderEnabled(String provider) {
                 RxToast.normal("当前GPS设备已打开");
-                RxVibrateTool.vibrateOnce(mContext, 800);
+                RxVibrateTool.vibrateOnce(baseActivity, 800);
             }
 
             @Override
             public void onProviderDisabled(String provider) {
                 RxToast.normal("当前GPS设备已关闭");
-                RxVibrateTool.vibrateOnce(mContext, 800);
+                RxVibrateTool.vibrateOnce(baseActivity, 800);
                 gpsCheck();
             }
         };

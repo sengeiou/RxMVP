@@ -11,11 +11,15 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
-import android.widget.*;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.example.adapter.AdapterLeftMenu;
@@ -27,15 +31,18 @@ import com.yumore.example.entity.ModelShopCart;
 import com.yumore.example.view.RxDialogShopCart;
 import com.yumore.example.view.RxFakeAddImageView;
 import com.yumore.example.view.RxPointFTypeEvaluator;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.widget.RxTitle;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivityELMe extends ActivityBase implements AdapterLeftMenu.onItemSelectedListener, ShopCartInterface, RxDialogShopCart.ShopCartDialogImp {
+public class ActivityELMe extends BaseActivity implements AdapterLeftMenu.onItemSelectedListener, ShopCartInterface, RxDialogShopCart.ShopCartDialogImp {
     private final static String TAG = "MainActivity";
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
@@ -71,7 +78,7 @@ public class ActivityELMe extends ActivityBase implements AdapterLeftMenu.onItem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elme);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
         initData();
         initView();
         initAdapter();
@@ -329,7 +336,7 @@ public class ActivityELMe extends ActivityBase implements AdapterLeftMenu.onItem
 
     private void showCart(View view) {
         if (mModelShopCart != null && mModelShopCart.getShoppingAccount() > 0) {
-            RxDialogShopCart dialog = new RxDialogShopCart(this, mModelShopCart, R.style.cartdialog);
+            RxDialogShopCart dialog = new RxDialogShopCart(this, mModelShopCart, R.style.CartDialog);
             Window window = dialog.getWindow();
             dialog.setShopCartDialogImp(this);
             dialog.setCanceledOnTouchOutside(true);

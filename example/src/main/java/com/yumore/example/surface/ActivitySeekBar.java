@@ -3,21 +3,23 @@ package com.yumore.example.surface;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.widget.RxSeekBar;
 import com.yumore.utility.widget.RxTitle;
 
 import java.text.DecimalFormat;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 /**
  * @author yumore
  */
-public class ActivitySeekBar extends ActivityBase {
+public class ActivitySeekBar extends BaseActivity {
 
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
@@ -34,7 +36,7 @@ public class ActivitySeekBar extends ActivityBase {
     @BindView(R2.id.activity_main)
     LinearLayout mActivityMain;
 
-    private DecimalFormat df = new DecimalFormat("0.00");
+    private final DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class ActivitySeekBar extends ActivityBase {
         setContentView(R.layout.activity_seek_bar);
         ButterKnife.bind(this);
 
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         mSeekbar1.setValue(10);
         mSeekbar2.setValue(-0.5f, 0.8f);

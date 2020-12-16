@@ -28,6 +28,5 @@ public class ExampleApplication implements InitializeHelper {
     @Override
     public void initialize(Context context) {
         RxTool.init(context);
-
     }
 }

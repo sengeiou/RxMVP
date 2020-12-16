@@ -12,25 +12,34 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
 import com.yumore.utility.activity.AndroidBug5497Workaround;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxAnimationTool;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.utility.RxKeyboardTool;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 /**
  * @author yumore
  */
-public class ActivityLoginAct extends ActivityBase {
+public class ActivityLoginAct extends BaseActivity {
 
     @BindView(R2.id.logo)
     ImageView mLogo;
@@ -61,15 +70,15 @@ public class ActivityLoginAct extends ActivityBase {
 
     private int screenHeight = 0;//屏幕高度
     private int keyHeight = 0; //软件盘弹起后所占高度
-    private float scale = 0.6f; //logo缩放比例
-    private int height = 0;
+    private final float scale = 0.6f; //logo缩放比例
+    private final int height = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_act);
         RxBarTool.setTransparentStatusBar(this);//状态栏透明化
-        RxBarTool.StatusBarLightMode(mContext);
+        RxBarTool.StatusBarLightMode(baseActivity);
         ButterKnife.bind(this);
 
         if (isFullScreen(this)) {
@@ -128,7 +137,7 @@ public class ActivityLoginAct extends ActivityBase {
                 }
                 if (!s.toString().matches("[A-Za-z0-9]+")) {
                     String temp = s.toString();
-                    Toast.makeText(mContext, "请输入数字或字母", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(baseActivity, "请输入数字或字母", Toast.LENGTH_SHORT).show();
                     s.delete(temp.length() - 1, temp.length());
                     mEtPassword.setSelection(s.length());
                 }
@@ -178,7 +187,7 @@ public class ActivityLoginAct extends ActivityBase {
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxKeyboardTool.hideSoftInput(mContext);
+                RxKeyboardTool.hideSoftInput(baseActivity);
             }
         });
     }

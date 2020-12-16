@@ -5,19 +5,20 @@ import android.os.Build;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.FrameLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author yumore
  */
 public class AndroidBug5497Workaround {
-    private View mChildOfContent;
+    private final View mChildOfContent;
     private int usableHeightPrevious;
-    private FrameLayout.LayoutParams frameLayoutParams;
+    private final FrameLayout.LayoutParams frameLayoutParams;
     private int contentHeight;
     private boolean isfirst = true;
-    private AppCompatActivity activity;
-    private int statusBarHeight;
+    private final AppCompatActivity activity;
+    private final int statusBarHeight;
 
     private AndroidBug5497Workaround(AppCompatActivity activity) {
         //获取状态栏的高度
@@ -29,6 +30,7 @@ public class AndroidBug5497Workaround {
 
         //界面出现变动都会调用这个监听事件
         mChildOfContent.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
             public void onGlobalLayout() {
                 if (isfirst) {
                     contentHeight = mChildOfContent.getHeight();//兼容华为等机型

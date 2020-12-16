@@ -2,11 +2,10 @@ package com.yumore.example.surface;
 
 import android.os.Bundle;
 import android.widget.SeekBar;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.entity.ModelSpider;
 import com.yumore.utility.widget.RxCobwebView;
 import com.yumore.utility.widget.RxTitle;
@@ -20,10 +19,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivityCobweb extends ActivityBase implements SeekBar.OnSeekBarChangeListener {
+public class ActivityCobweb extends BaseActivity implements SeekBar.OnSeekBarChangeListener {
 
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
@@ -46,7 +48,7 @@ public class ActivityCobweb extends ActivityBase implements SeekBar.OnSeekBarCha
     @BindView(R2.id.v_alpha_slider_level)
     AlphaSlider mVAlphaSliderLevel;
 
-    private String[] nameStrs = {
+    private final String[] nameStrs = {
             "金钱", "能力", "美貌", "智慧", "交际",
             "口才", "力量", "智力", "体力", "体质",
             "敏捷", "精神", "耐力", "精通", "急速",
@@ -60,7 +62,7 @@ public class ActivityCobweb extends ActivityBase implements SeekBar.OnSeekBarCha
 //        RxBarTool.setTransparentStatusBar(mContext);
         setContentView(R.layout.activity_cobweb);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
         mSeekbarLevel.setOnSeekBarChangeListener(this);
         mSeekbarSpiderNumber.setOnSeekBarChangeListener(this);
 

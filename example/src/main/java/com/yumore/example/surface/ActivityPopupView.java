@@ -5,15 +5,18 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.entity.ActionItem;
 import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.RxToast;
@@ -22,10 +25,14 @@ import com.yumore.utility.widget.popupwindows.RxPopupSingleView;
 import com.yumore.utility.widget.popupwindows.tools.RxPopupView;
 import com.yumore.utility.widget.popupwindows.tools.RxPopupViewManager;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityPopupView extends ActivityBase implements RxPopupViewManager.TipListener {
+public class ActivityPopupView extends BaseActivity implements RxPopupViewManager.TipListener {
 
 
     public static final String TIP_TEXT = "Tip";
@@ -83,7 +90,7 @@ public class ActivityPopupView extends ActivityBase implements RxPopupViewManage
     }
 
     protected void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         mRxPopupViewManager = new RxPopupViewManager(this);
 
@@ -92,7 +99,7 @@ public class ActivityPopupView extends ActivityBase implements RxPopupViewManage
     }
 
     private void initPopupView() {
-        titlePopup = new RxPopupSingleView(mContext, ViewGroup.LayoutParams.WRAP_CONTENT,
+        titlePopup = new RxPopupSingleView(baseActivity, ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT, R.layout.popupwindow_definition_layout);
         titlePopup.addAction(new ActionItem("标清"));
         titlePopup.addAction(new ActionItem("高清"));
@@ -103,7 +110,7 @@ public class ActivityPopupView extends ActivityBase implements RxPopupViewManage
             public void onItemClick(ActionItem item, int position) {
                 // TODO Auto-generated method stub
                 if (titlePopup.getAction(position).mTitle.equals(mTvDefinition.getText())) {
-                    RxToast.showToast(mContext, "当前已经为" + mTvDefinition.getText(), 500);
+                    RxToast.showToast(baseActivity, "当前已经为" + mTvDefinition.getText(), 500);
                 } else {
                     if (position >= 0 && position < 3) {
                         mTvDefinition.setText(titlePopup.getAction(position).mTitle);
@@ -129,7 +136,7 @@ public class ActivityPopupView extends ActivityBase implements RxPopupViewManage
         int id = view.getId();
         if (id == R.id.tv_imply) {
             if (popupImply == null) {
-                popupImply = new RxPopupImply(mContext);
+                popupImply = new RxPopupImply(baseActivity);
             }
             popupImply.show(mTvImply);
         } else if (id == R.id.tv_definition) {

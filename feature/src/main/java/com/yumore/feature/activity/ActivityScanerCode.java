@@ -21,9 +21,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import com.google.zxing.*;
+
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.DecodeHintType;
+import com.google.zxing.MultiFormatReader;
+import com.google.zxing.ReaderException;
+import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 import com.yumore.feature.R;
 import com.yumore.feature.module.scaner.CameraManager;
@@ -31,8 +38,14 @@ import com.yumore.feature.module.scaner.OnRxScanerListener;
 import com.yumore.feature.module.scaner.PlanarYUVLuminanceSource;
 import com.yumore.feature.module.scaner.decoding.InactivityTimer;
 import com.yumore.feature.tool.RxQrBarTool;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.utility.*;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.utility.RxAnimationTool;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxBeepTool;
+import com.yumore.utility.utility.RxConstants;
+import com.yumore.utility.utility.RxDataTool;
+import com.yumore.utility.utility.RxPhotoTool;
+import com.yumore.utility.utility.RxSPTool;
 import com.yumore.utility.widget.RxToast;
 import com.yumore.utility.widget.dialog.RxDialogSure;
 
@@ -47,7 +60,7 @@ import static android.content.ContentValues.TAG;
 /**
  * @author yumore
  */
-public class ActivityScanerCode extends ActivityBase {
+public class ActivityScanerCode extends BaseActivity {
 
     /**
      * 扫描结果监听
@@ -89,7 +102,7 @@ public class ActivityScanerCode extends ActivityBase {
     /**
      * 扫描成功后是否震动
      */
-    private boolean vibrate = true;
+    private final boolean vibrate = true;
 
     /**
      * 闪光灯开启状态
@@ -133,7 +146,7 @@ public class ActivityScanerCode extends ActivityBase {
         //扫描动画初始化
         initScanerAnimation();
         //初始化 CameraManager
-        CameraManager.init(mContext);
+        CameraManager.init(baseActivity);
         hasSurface = false;
         inactivityTimer = new InactivityTimer(this);
     }
@@ -238,9 +251,9 @@ public class ActivityScanerCode extends ActivityBase {
 
     private void initPermission() {
         //请求Camera权限 与 文件读写 权限
-        if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED &&
-                ContextCompat.checkSelfPermission(mContext, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(mContext, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+        if (ContextCompat.checkSelfPermission(baseActivity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(baseActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(baseActivity, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
         }
     }
 
@@ -275,7 +288,7 @@ public class ActivityScanerCode extends ActivityBase {
         } else if (viewId == R.id.top_back) {
             finish();
         } else if (viewId == R.id.top_openpicture) {
-            RxPhotoTool.openLocalImage(mContext);
+            RxPhotoTool.openLocalImage(baseActivity);
         }
     }
 
@@ -350,7 +363,7 @@ public class ActivityScanerCode extends ActivityBase {
 
         if (rxDialogSure == null) {
             //提示弹窗
-            rxDialogSure = new RxDialogSure(mContext);
+            rxDialogSure = new RxDialogSure(baseActivity);
         }
 
         if (BarcodeFormat.QR_CODE.equals(type)) {
@@ -382,14 +395,14 @@ public class ActivityScanerCode extends ActivityBase {
             rxDialogSure.show();
         }
 
-        RxSPTool.putContent(mContext, RxConstants.SP_SCAN_CODE, RxDataTool.stringToInt(RxSPTool.getContent(mContext, RxConstants.SP_SCAN_CODE)) + 1 + "");
+        RxSPTool.putContent(baseActivity, RxConstants.SP_SCAN_CODE, RxDataTool.stringToInt(RxSPTool.getContent(baseActivity, RxConstants.SP_SCAN_CODE)) + 1 + "");
     }
     //==============================================================================================解析结果 及 后续处理 end
 
     public void handleDecode(Result result) {
         inactivityTimer.onActivity();
         //扫描成功之后的振动与声音提示
-        RxBeepTool.playBeep(mContext, vibrate);
+        RxBeepTool.playBeep(baseActivity, vibrate);
 
         String result1 = result.getText();
         Log.v("二维码/条形码 扫描结果", result1);

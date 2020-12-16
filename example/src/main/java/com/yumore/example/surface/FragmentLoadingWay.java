@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.yumore.example.R;
 import com.yumore.utility.utility.RxImageTool;
 import com.yumore.utility.utility.RxRecyclerViewDividerTool;
@@ -84,7 +86,7 @@ public class FragmentLoadingWay extends Fragment {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ActivityLoadingDetail.start(v.getContext(), finalPosition);
+                    LoadingDetailActivity.start(v.getContext(), finalPosition);
                 }
             });
             position = position % 15;

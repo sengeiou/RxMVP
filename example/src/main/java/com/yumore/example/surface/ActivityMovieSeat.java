@@ -2,19 +2,21 @@ package com.yumore.example.surface;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.widget.RxSeatMovie;
 import com.yumore.utility.widget.RxTitle;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivityMovieSeat extends ActivityBase {
+public class ActivityMovieSeat extends BaseActivity {
 
     @BindView(R2.id.seatView)
     RxSeatMovie mSeatView;
@@ -35,7 +37,7 @@ public class ActivityMovieSeat extends ActivityBase {
 
 
     protected void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         mSeatView.setScreenName("3号厅荧幕");//设置屏幕名称
         mSeatView.setMaxSelected(8);//设置最多选中

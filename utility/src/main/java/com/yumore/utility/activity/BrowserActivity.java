@@ -10,8 +10,17 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.webkit.*;
-import android.widget.*;
+import android.webkit.DownloadListener;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.yumore.utility.R;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.utility.RxConstants;
@@ -22,9 +31,9 @@ import com.yumore.utility.widget.RxTextAutoZoom;
 /**
  * @author yumore
  */
-public class ActivityWebView extends ActivityBase {
+public class BrowserActivity extends BaseActivity {
 
-    private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
+    private static final int TIME_INTERVAL = 2000;
     ProgressBar pbWebBase;
     TextView tvTitle;
     WebView webBase;
@@ -38,7 +47,7 @@ public class ActivityWebView extends ActivityBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         RxBarTool.setTransparentStatusBar(this);
-        setContentView(R.layout.activity_webview);
+        setContentView(R.layout.activity_browser);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         initView();// 初始化控件 - FindViewById之类的操作
         initData();// 初始化控件的数据及监听事件
@@ -97,11 +106,8 @@ public class ActivityWebView extends ActivityBase {
             webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);//加载缓存否则网络
         }
 
-        if (Build.VERSION.SDK_INT >= 19) {
-            webSettings.setLoadsImagesAutomatically(true);//图片自动缩放 打开
-        } else {
-            webSettings.setLoadsImagesAutomatically(false);//图片自动缩放 关闭
-        }
+        //图片自动缩放 关闭
+        webSettings.setLoadsImagesAutomatically(Build.VERSION.SDK_INT >= 19);//图片自动缩放 打开
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             webBase.setLayerType(View.LAYER_TYPE_SOFTWARE, null);//软件解码

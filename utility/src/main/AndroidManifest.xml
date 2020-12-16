@@ -27,8 +27,8 @@
     <uses-feature android:name="android.hardware.camera.autofocus"/>
     <application>
         <activity
-                android:name="com.yumore.utility.activity.ActivityWebView"
-                android:windowSoftInputMode="stateHidden|adjustResize"/>
+                android:name="com.yumore.utility.activity.BrowserActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
 
         <provider
                 android:name="androidx.core.content.FileProvider"

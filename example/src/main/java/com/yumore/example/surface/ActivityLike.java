@@ -7,22 +7,24 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.heart.RxHeartLayout;
 import com.yumore.utility.widget.likeview.RxShineButton;
 
 import java.util.Random;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityLike extends ActivityBase {
+public class ActivityLike extends BaseActivity {
 
     @BindView(R2.id.po_image0)
     RxShineButton mRxShineButton;
@@ -52,14 +54,14 @@ public class ActivityLike extends ActivityBase {
     RelativeLayout mActivityLike;
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_like);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         mRxShineButton.init(this);
         porterShapeImageView1.init(this);

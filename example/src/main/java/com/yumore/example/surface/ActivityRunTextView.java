@@ -6,20 +6,26 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.widget.*;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.widget.RxRunTextView;
+import com.yumore.utility.widget.RxTextViewVertical;
+import com.yumore.utility.widget.RxTextViewVerticalMore;
+import com.yumore.utility.widget.RxTitle;
+import com.yumore.utility.widget.RxToast;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivityRunTextView extends ActivityBase {
+public class ActivityRunTextView extends BaseActivity {
 
 
     @BindView(R2.id.rx_title)
@@ -32,7 +38,7 @@ public class ActivityRunTextView extends ActivityBase {
     RxTextViewVerticalMore mUpview1;
     @BindView(R2.id.activity_run_text_view)
     LinearLayout mActivityRunTextView;
-    private ArrayList<String> titleList = new ArrayList<String>();
+    private final ArrayList<String> titleList = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +49,7 @@ public class ActivityRunTextView extends ActivityBase {
     }
 
     protected void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         titleList.add("你是天上最受宠的一架钢琴");
         titleList.add("我是丑人脸上的鼻涕");
@@ -60,7 +66,7 @@ public class ActivityRunTextView extends ActivityBase {
         mRxVText.setOnItemClickListener(new RxTextViewVertical.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                RxToast.success(mContext, "点击了 : " + titleList.get(position), Toast.LENGTH_SHORT, true).show();
+                RxToast.success(baseActivity, "点击了 : " + titleList.get(position), Toast.LENGTH_SHORT, true).show();
             }
         });
 
@@ -73,7 +79,7 @@ public class ActivityRunTextView extends ActivityBase {
         for (int i = 0; i < size; i = i + 2) {
             final int position = i;
             //设置滚动的单个布局
-            LinearLayout moreView = (LinearLayout) LayoutInflater.from(mContext).inflate(R.layout.item_view, null);
+            LinearLayout moreView = (LinearLayout) LayoutInflater.from(baseActivity).inflate(R.layout.item_view, null);
             //初始化布局的控件
             TextView tv1 = moreView.findViewById(R.id.tv1);
             TextView tv2 = moreView.findViewById(R.id.tv2);

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        tools:context=".surface.ActivityAliPay">
+<androidx.constraintlayout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".surface.AliPayActivity">
 
     <ImageView
-            android:id="@+id/iv_alipay"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/msp_demo_title_bg"
-            android:scaleType="center"
-            app:srcCompat="@drawable/msp_demo_title"
-            tools:ignore="ContentDescription"/>
+        android:id="@+id/iv_alipay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/msp_demo_title_bg"
+        android:scaleType="center"
+        app:srcCompat="@drawable/msp_demo_title"
+        tools:ignore="ContentDescription" />
 
     <ScrollView
             android:layout_width="fill_parent"

@@ -1,14 +1,15 @@
 package com.yumore.example.surface;
 
 import android.os.Bundle;
+
 import com.yumore.example.R;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 
 /**
  * @author yumore
  */
-public class ActivityAutoImageView extends ActivityBase {
+public class ActivityAutoImageView extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

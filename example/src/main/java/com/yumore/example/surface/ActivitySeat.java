@@ -4,19 +4,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.yumore.example.R;
+import com.yumore.example.R2;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.utility.RxActivityTool;
+import com.yumore.utility.widget.RxTitle;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import com.yumore.example.R;
-import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.utility.RxActivityTool;
-import com.yumore.utility.widget.RxTitle;
 
 /**
  * @author yumore
  */
-public class ActivitySeat extends ActivityBase {
+public class ActivitySeat extends BaseActivity {
 
     @BindView(R2.id.btn_movie)
     Button mBtnMovie;
@@ -32,7 +34,7 @@ public class ActivitySeat extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seat);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
     }
 
     @OnClick({R2.id.btn_movie, R2.id.btn_flight})

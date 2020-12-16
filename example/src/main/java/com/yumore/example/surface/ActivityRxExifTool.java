@@ -7,27 +7,35 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.yumore.camera.RxCameraView;
 import com.yumore.camera.tool.RxCameraTool;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBaseLocation;
+import com.yumore.utility.activity.BaseLocationActivity;
 import com.yumore.utility.callback.OnRxCamera;
-import com.yumore.utility.utility.*;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxFileTool;
+import com.yumore.utility.utility.RxLocationTool;
+import com.yumore.utility.utility.RxPermissionsTool;
+import com.yumore.utility.utility.RxTimeTool;
+import com.yumore.utility.utility.RxTool;
 import com.yumore.utility.widget.RxToast;
 import com.yumore.utility.widget.dialog.RxDialogScaleView;
 
 import java.io.File;
 import java.util.Random;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * @author yumore
  */
-public class ActivityRxExifTool extends ActivityBaseLocation {
+public class ActivityRxExifTool extends BaseLocationActivity {
 
     @BindView(R2.id.camera)
     RxCameraView mCameraView;
@@ -56,7 +64,7 @@ public class ActivityRxExifTool extends ActivityBaseLocation {
         ButterKnife.bind(this);
 
         RxPermissionsTool.
-                with(mContext).
+                with(baseActivity).
                 addPermission(Manifest.permission.ACCESS_FINE_LOCATION).
                 addPermission(Manifest.permission.ACCESS_COARSE_LOCATION).
                 addPermission(Manifest.permission.READ_EXTERNAL_STORAGE).
@@ -90,7 +98,7 @@ public class ActivityRxExifTool extends ActivityBaseLocation {
     private void initCameraEvent(final byte[] data) {
         String fileDir = RxFileTool.getRootPath().getAbsolutePath() + File.separator + "RoadExcel" + File.separator + "picture";
         String fileName = RxTimeTool.getCurrentDateTime("yyyyMMddHHmmss") + "_" + new Random().nextInt(1000) + ".jpg";
-        RxCameraTool.initCameraEvent(mContext, mCameraView, data, fileDir, fileName, mLongitude, mLatitude, false, new OnRxCamera() {
+        RxCameraTool.initCameraEvent(baseActivity, mCameraView, data, fileDir, fileName, mLongitude, mLatitude, false, new OnRxCamera() {
             @Override
             public void onBefore() {
                 mTvState.setText("拍照成功,开始压缩\n");
@@ -100,14 +108,14 @@ public class ActivityRxExifTool extends ActivityBaseLocation {
             public void onSuccessCompress(File file) {
                 mTvState.setText(String.format("%s图片压缩成功\n", mTvState.getText()));
                 photo = file;
-                mIvPic.setImageURI(RxFileTool.getImageContentUri(mContext, photo));
+                mIvPic.setImageURI(RxFileTool.getImageContentUri(baseActivity, photo));
             }
 
             @Override
             public void onSuccessExif(File filePhoto) {
                 mTvState.setText(String.format("%s地理位置信息写入图片成功\n", mTvState.getText()));
                 photo = filePhoto;
-                mIvPic.setImageURI(RxFileTool.getImageContentUri(mContext, photo));
+                mIvPic.setImageURI(RxFileTool.getImageContentUri(baseActivity, photo));
             }
         });
     }
@@ -142,13 +150,13 @@ public class ActivityRxExifTool extends ActivityBaseLocation {
                 RxToast.normal("请不要重复点击拍照按钮");
                 return;
             } else {
-                RxCameraTool.takePic(mContext, mCameraView);
+                RxCameraTool.takePic(baseActivity, mCameraView);
             }
         } else if (id == R.id.iv_pic) {
             if (photo == null) {
                 RxToast.normal("请先拍照");
             } else {
-                RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(mContext);
+                RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(baseActivity);
                 rxDialogScaleView.setImage(photo.getAbsolutePath(), false);
                 rxDialogScaleView.show();
             }

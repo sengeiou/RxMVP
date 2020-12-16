@@ -2,29 +2,36 @@ package com.yumore.example.surface;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.location.*;
+import android.location.GpsSatellite;
+import android.location.GpsStatus;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxLocationTool;
 import com.yumore.utility.widget.RxTitle;
 
 import java.util.Iterator;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * @author yumore
  */
-public class ActivityLocation extends ActivityBase implements LocationListener {//原生的定位 需要手机设备GPS 很好
+public class ActivityLocation extends BaseActivity implements LocationListener {//原生的定位 需要手机设备GPS 很好
 
     @BindView(R2.id.tv_about_location)
     TextView mTvAboutLocation;
@@ -45,7 +52,7 @@ public class ActivityLocation extends ActivityBase implements LocationListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
         ButterKnife.bind(this);
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
         initLocation();
         gpsCheck();
 
@@ -74,7 +81,7 @@ public class ActivityLocation extends ActivityBase implements LocationListener {
                     .onPositive(new MaterialDialog.SingleButtonCallback() {
                         @Override
                         public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                            RxLocationTool.openGpsSettings(mContext);
+                            RxLocationTool.openGpsSettings(baseActivity);
                         }
                     }).build();
             materialDialog.setCanceledOnTouchOutside(false);
@@ -88,7 +95,7 @@ public class ActivityLocation extends ActivityBase implements LocationListener {
 
     private void getLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(mContext, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+            ActivityCompat.requestPermissions(baseActivity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
             return;
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 0, this);
@@ -105,7 +112,7 @@ public class ActivityLocation extends ActivityBase implements LocationListener {
                         break;
                     case GpsStatus.GPS_EVENT_SATELLITE_STATUS:
                         System.out.println("GPS_EVENT_SATELLITE_STATUS");
-                        if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        if (ActivityCompat.checkSelfPermission(baseActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                             return;
                         }
                         GpsStatus gpsStatus = locationManager.getGpsStatus(null);

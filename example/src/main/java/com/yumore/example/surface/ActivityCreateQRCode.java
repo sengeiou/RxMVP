@@ -8,23 +8,25 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.feature.tool.RxBarCode;
 import com.yumore.feature.tool.RxQRCode;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.widget.RxTitle;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 /**
  * @author yumore
  */
-public class ActivityCreateQRCode extends ActivityBase implements View.OnClickListener {
+public class ActivityCreateQRCode extends BaseActivity implements View.OnClickListener {
 
-    private static android.os.Handler Handler = new Handler();
+    private static final android.os.Handler Handler = new Handler();
     private static Runnable mRunnable = null;
     @BindView(R2.id.rx_title)
     RxTitle mRxTitle;
@@ -54,15 +56,15 @@ public class ActivityCreateQRCode extends ActivityBase implements View.OnClickLi
             }
         }
     };
-    private int time_second = 0;
-    private int second = 60;
+    private final int time_second = 0;
+    private final int second = 60;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RxBarTool.noTitle(mContext);
+        RxBarTool.noTitle(baseActivity);
         setContentView(R.layout.activity_create_qrcode);
-        RxBarTool.setTransparentStatusBar(mContext);
+        RxBarTool.setTransparentStatusBar(baseActivity);
         ButterKnife.bind(this);
         initView();
         initData();
@@ -97,7 +99,7 @@ public class ActivityCreateQRCode extends ActivityBase implements View.OnClickLi
     }
 
     private void initView() {
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
         mRxTitle.setTitle("动态生成码");
         mLlRefresh.setOnClickListener(this);
     }

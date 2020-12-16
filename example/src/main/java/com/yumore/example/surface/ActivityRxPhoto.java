@@ -6,11 +6,14 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import androidx.core.app.ActivityCompat;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
@@ -19,7 +22,7 @@ import com.yalantis.ucrop.UCrop;
 import com.yalantis.ucrop.UCropActivity;
 import com.yumore.example.R;
 import com.yumore.example.R2;
-import com.yumore.utility.activity.ActivityBase;
+import com.yumore.utility.activity.BaseActivity;
 import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.utility.RxPhotoTool;
 import com.yumore.utility.utility.RxSPTool;
@@ -33,13 +36,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 import static com.yumore.utility.widget.dialog.RxDialogChooseImage.LayoutType.TITLE;
 
 
 /**
  * @author yumore
  */
-public class ActivityRxPhoto extends ActivityBase {
+public class ActivityRxPhoto extends BaseActivity {
 
 
     @BindView(R2.id.rx_title)
@@ -82,13 +89,13 @@ public class ActivityRxPhoto extends ActivityBase {
     }
 
     protected void initView() {
-        Resources r = mContext.getResources();
+        Resources r = baseActivity.getResources();
         resultUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
                 + r.getResourcePackageName(R.drawable.circle_elves_ball) + "/"
                 + r.getResourceTypeName(R.drawable.circle_elves_ball) + "/"
                 + r.getResourceEntryName(R.drawable.circle_elves_ball));
 
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         mIvAvatar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,7 +107,7 @@ public class ActivityRxPhoto extends ActivityBase {
             @Override
             public boolean onLongClick(View view) {
 //                RxImageTool.showBigImageView(mContext, resultUri);
-                RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(mContext);
+                RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(baseActivity);
                 rxDialogScaleView.setImage(resultUri);
                 rxDialogScaleView.show();
                 return false;
@@ -109,7 +116,7 @@ public class ActivityRxPhoto extends ActivityBase {
     }
 
     private void initDialogChooseImage() {
-        RxDialogChooseImage dialogChooseImage = new RxDialogChooseImage(mContext, TITLE);
+        RxDialogChooseImage dialogChooseImage = new RxDialogChooseImage(baseActivity, TITLE);
         dialogChooseImage.show();
     }
 
@@ -139,7 +146,7 @@ public class ActivityRxPhoto extends ActivityBase {
                         //禁止Glide硬盘缓存缓存
                         .diskCacheStrategy(DiskCacheStrategy.RESOURCE);
 
-                Glide.with(mContext).
+                Glide.with(baseActivity).
                         load(RxPhotoTool.cropImageUri).
                         apply(options).
                         thumbnail(0.5f).
@@ -151,7 +158,7 @@ public class ActivityRxPhoto extends ActivityBase {
                 if (resultCode == RESULT_OK) {
                     resultUri = UCrop.getOutput(data);
                     roadImageView(resultUri, mIvAvatar);
-                    RxSPTool.putContent(mContext, "AVATAR", resultUri.toString());
+                    RxSPTool.putContent(baseActivity, "AVATAR", resultUri.toString());
                 } else if (resultCode == UCrop.RESULT_ERROR) {
                     final Throwable cropError = UCrop.getError(data);
                 }
@@ -175,7 +182,7 @@ public class ActivityRxPhoto extends ActivityBase {
                 //禁止Glide硬盘缓存缓存
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE);
 
-        Glide.with(mContext).
+        Glide.with(baseActivity).
                 load(uri).
                 apply(options).
                 thumbnail(0.5f).

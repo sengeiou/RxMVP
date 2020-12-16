@@ -6,12 +6,18 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import androidx.core.widget.NestedScrollView;
+
 import com.yumore.feature.R;
 import com.yumore.feature.tool.RxBarCode;
 import com.yumore.feature.tool.RxQRCode;
-import com.yumore.utility.activity.ActivityBase;
-import com.yumore.utility.utility.*;
+import com.yumore.utility.activity.BaseActivity;
+import com.yumore.utility.utility.RxActivityTool;
+import com.yumore.utility.utility.RxBarTool;
+import com.yumore.utility.utility.RxDataTool;
+import com.yumore.utility.utility.RxImageTool;
+import com.yumore.utility.utility.RxSPTool;
 import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.RxToast;
 import com.yumore.utility.widget.ticker.RxTickerUtils;
@@ -23,7 +29,7 @@ import static com.yumore.utility.utility.RxConstants.SP_SCAN_CODE;
 /**
  * @author yumore
  */
-public class ActivityCodeTool extends ActivityBase {
+public class ActivityCodeTool extends BaseActivity {
 
     private static final char[] NUMBER_LIST = RxTickerUtils.getDefaultNumberList();
     private RxTitle mRxTitle;
@@ -90,18 +96,18 @@ public class ActivityCodeTool extends ActivityBase {
     }
 
     private void updateScanCodeCount() {
-        mRxTickerViewScan.setText(RxDataTool.stringToInt(RxSPTool.getContent(mContext, SP_SCAN_CODE)) + "", true);
+        mRxTickerViewScan.setText(RxDataTool.stringToInt(RxSPTool.getContent(baseActivity, SP_SCAN_CODE)) + "", true);
     }
 
     private void updateMadeCodeCount() {
-        mRxTickerViewMade.setText(RxDataTool.stringToInt(RxSPTool.getContent(mContext, SP_MADE_CODE)) + "", true);
+        mRxTickerViewMade.setText(RxDataTool.stringToInt(RxSPTool.getContent(baseActivity, SP_MADE_CODE)) + "", true);
     }
 
     private void initEvent() {
         mRxTitle.setLeftIconVisibility(true);
         mRxTitle.setTitleColor(Color.WHITE);
         mRxTitle.setTitleSize(RxImageTool.dp2px(20));
-        mRxTitle.setLeftFinish(mContext);
+        mRxTitle.setLeftFinish(baseActivity);
 
         mRxTickerViewScan.setAnimationDuration(500);
 
@@ -128,7 +134,7 @@ public class ActivityCodeTool extends ActivityBase {
 
                     RxToast.success("二维码已生成!");
 
-                    RxSPTool.putContent(mContext, SP_MADE_CODE, RxDataTool.stringToInt(RxSPTool.getContent(mContext, SP_MADE_CODE)) + 1 + "");
+                    RxSPTool.putContent(baseActivity, SP_MADE_CODE, RxDataTool.stringToInt(RxSPTool.getContent(baseActivity, SP_MADE_CODE)) + 1 + "");
 
                     updateMadeCodeCount();
 
@@ -161,7 +167,7 @@ public class ActivityCodeTool extends ActivityBase {
 
                     RxToast.success("条形码已生成!");
 
-                    RxSPTool.putContent(mContext, SP_MADE_CODE, RxDataTool.stringToInt(RxSPTool.getContent(mContext, SP_MADE_CODE)) + 1 + "");
+                    RxSPTool.putContent(baseActivity, SP_MADE_CODE, RxDataTool.stringToInt(RxSPTool.getContent(baseActivity, SP_MADE_CODE)) + 1 + "");
 
                     updateMadeCodeCount();
                 }
@@ -171,7 +177,7 @@ public class ActivityCodeTool extends ActivityBase {
         mLlScaner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxActivityTool.skipActivity(mContext, ActivityScanerCode.class);
+                RxActivityTool.skipActivity(baseActivity, ActivityScanerCode.class);
             }
         });
 
