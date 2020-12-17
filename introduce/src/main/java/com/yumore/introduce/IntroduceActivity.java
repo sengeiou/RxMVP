@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.yumore.introduce.databinding.ActivityIntroduceBinding;
 import com.yumore.provider.ISampleProvider;
@@ -29,7 +28,6 @@ import java.util.List;
 /**
  * @author nathaniel
  */
-@Route(path = RouterConstants.INTRODUCE_HOME)
 public class IntroduceActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
     private static final int[] IMAGE_RESOURCES = {
             R.drawable.icon_indicator_00,

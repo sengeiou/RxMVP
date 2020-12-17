@@ -31,6 +31,7 @@ public class WelcomeActivity extends BasicActivity {
                             ExampleActivity.class : TractionActivity.class : IntroduceActivity.class;
             Intent intent = new Intent(getApplicationContext(), clazz);
             startActivity(intent);
+            finish();
         }, 2000);
     }
 }

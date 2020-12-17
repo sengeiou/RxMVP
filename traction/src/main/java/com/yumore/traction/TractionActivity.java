@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.yumore.provider.ISampleProvider;
 import com.yumore.provider.RouterConstants;
@@ -22,7 +21,6 @@ import java.util.List;
 /**
  * @author Nathaniel
  */
-@Route(path = RouterConstants.TRACTION_HOME)
 public class TractionActivity extends FragmentActivity implements ViewPager.OnPageChangeListener, OnFragmentToActivity<Integer>, View.OnClickListener {
     private final int[] videoRes = new int[]{
             R.raw.guide1,
