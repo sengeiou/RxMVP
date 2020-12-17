@@ -14,7 +14,7 @@ import java.lang.reflect.Field;
  */
 public class PresenterProviders {
 
-    private final PresenterStore<BasePresenter<BaseMvpView>> presenterStore = new PresenterStore<>();
+    private final PresenterStore presenterStore = new PresenterStore<>();
     private Activity activity;
     private Fragment fragment;
     private Class<?> clazz;
@@ -68,7 +68,7 @@ public class PresenterProviders {
     }
 
     @SuppressWarnings("unchecked")
-    private <P extends BasePresenter<BaseMvpView>> PresenterProviders resolveCreatePresenter() {
+    private <P extends BasePresenter> PresenterProviders resolveCreatePresenter() {
         CreatePresenter createPresenter = clazz.getAnnotation(CreatePresenter.class);
         if (createPresenter != null) {
 
@@ -86,7 +86,7 @@ public class PresenterProviders {
     }
 
     @SuppressWarnings("unchecked")
-    private <P extends BasePresenter<BaseMvpView>> PresenterProviders resolvePresenterVariable() {
+    private <P extends BasePresenter> PresenterProviders resolvePresenterVariable() {
         for (Field field : clazz.getDeclaredFields()) {
             //获取字段上的注解
             Annotation[] annotations = field.getDeclaredAnnotations();
@@ -111,7 +111,7 @@ public class PresenterProviders {
 
 
     @SuppressWarnings("unchecked")
-    public <P extends BasePresenter<BaseMvpView>> P getPresenter(int index) {
+    public <P extends BasePresenter> P getPresenter(int index) {
         CreatePresenter createPresenter = clazz.getAnnotation(CreatePresenter.class);
         if (createPresenter == null) {
             return null;
@@ -121,7 +121,7 @@ public class PresenterProviders {
         }
         if (index >= 0 && index < createPresenter.presenter().length) {
             String key = createPresenter.presenter()[index].getCanonicalName();
-            BasePresenter<BaseMvpView> presenter = presenterStore.get(key);
+            BasePresenter presenter = presenterStore.get(key);
             if (presenter != null) {
                 return (P) presenter;
             } else {
@@ -132,7 +132,7 @@ public class PresenterProviders {
         }
     }
 
-    public PresenterStore<BasePresenter<BaseMvpView>> getPresenterStore() {
+    public PresenterStore<BasePresenter> getPresenterStore() {
         return presenterStore;
     }
 }

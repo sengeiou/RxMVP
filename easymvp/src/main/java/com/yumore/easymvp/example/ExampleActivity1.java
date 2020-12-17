@@ -26,12 +26,12 @@ public class ExampleActivity1 extends BaseMvpActivity implements LoginView, Regi
     private RegisterPresenter mRegisterPresenter;
 
     @Override
-    protected int getContentView() {
+    protected int getLayoutId() {
         return R.layout.activity_mainmvp;
     }
 
     @Override
-    public void init() {
+    public void initialize() {
         mLoginPresenter.login();
         mRegisterPresenter.register();
     }

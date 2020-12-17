@@ -2,6 +2,7 @@ package com.yumore.easymvp.base;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.yumore.easymvp.mvp.BaseMvpView;
@@ -15,41 +16,49 @@ import com.yumore.easymvp.mvp.PresenterProviders;
  */
 public abstract class BaseMvpActivity<P extends BasePresenter> extends AppCompatActivity implements BaseMvpView {
 
-    private PresenterProviders mPresenterProviders;
-    private PresenterDispatch mPresenterDispatch;
+    private PresenterProviders presenterProviders;
+    private PresenterDispatch presenterDispatch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getContentView());
-        mPresenterProviders = PresenterProviders.inject(this);
-        mPresenterDispatch = new PresenterDispatch(mPresenterProviders);
+        setContentView(getLayoutId());
+        presenterProviders = PresenterProviders.inject(this);
+        presenterDispatch = new PresenterDispatch(presenterProviders);
 
-        mPresenterDispatch.attachView(this, this);
-        mPresenterDispatch.onCreatePresenter(savedInstanceState);
-        init();
+        presenterDispatch.attachView(this, this);
+        presenterDispatch.onCreatePresenter(savedInstanceState);
+        initialize();
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        mPresenterDispatch.onSaveInstanceState(outState);
+        presenterDispatch.onSaveInstanceState(outState);
     }
 
-    protected abstract int getContentView();
+    /**
+     * 获取布局文件
+     *
+     * @return layoutId
+     */
+    protected abstract int getLayoutId();
 
-    public abstract void init();
+    /**
+     * 初始化
+     */
+    public abstract void initialize();
 
     protected P getPresenter() {
-        return mPresenterProviders.getPresenter(0);
+        return presenterProviders.getPresenter(0);
     }
 
     public PresenterProviders getPresenterProviders() {
-        return mPresenterProviders;
+        return presenterProviders;
     }
 
     @Override
-    public void showError(String msg) {
+    public void showError(String message) {
 
     }
 
@@ -59,13 +68,13 @@ public abstract class BaseMvpActivity<P extends BasePresenter> extends AppCompat
     }
 
     @Override
-    public void showProgressUI(boolean isShow) {
+    public void showProgress(boolean display) {
 
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mPresenterDispatch.detachView();
+        presenterDispatch.detachView();
     }
 }

@@ -19,55 +19,53 @@ import com.yumore.easymvp.mvp.PresenterDispatch;
 import com.yumore.easymvp.mvp.PresenterProviders;
 
 /**
- * create by yumore
- * time:2018/7/30
+ * @author nathaniel
  */
 public abstract class BaseMvpFragment<P extends BasePresenter> extends Fragment implements BaseMvpView {
-    protected View mRootView;
+    protected View rootView;
     protected LayoutInflater inflater;
-    // 标志位 标志已经初始化完成。
-    protected boolean isPrepared;
-    //标志位 fragment是否可见
-    protected boolean isVisible;
+    protected boolean prepared;
+    protected boolean visible;
 
-    protected Context mContext;
-    protected Activity mActivity;
+    protected Context context;
+    protected Activity activity;
 
-    private PresenterProviders mPresenterProviders;
-    private PresenterDispatch mPresenterDispatch;
+    private PresenterProviders presenterProviders;
+    private PresenterDispatch presenterDispatch;
 
     @Override
-    public void onAttach(Context context) {
-        mActivity = (Activity) context;
-        mContext = context;
+    public void onAttach(@NonNull Context context) {
+        activity = (Activity) context;
+        this.context = context;
         super.onAttach(context);
     }
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (mRootView != null) {
-            ViewGroup parent = (ViewGroup) mRootView.getParent();
-            if (parent != null)
-                parent.removeView(mRootView);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if (rootView != null) {
+            ViewGroup parent = (ViewGroup) rootView.getParent();
+            if (parent != null) {
+                parent.removeView(rootView);
+            }
         } else {
-            mRootView = inflater.inflate(getLayoutId(), container, false);
-            mActivity = getActivity();
-            mContext = mActivity;
+            rootView = inflater.inflate(getLayoutId(), container, false);
+            activity = getActivity();
+            context = activity;
             this.inflater = inflater;
         }
-        return mRootView;
+        return rootView;
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mPresenterProviders = PresenterProviders.inject(this);
-        mPresenterDispatch = new PresenterDispatch(mPresenterProviders);
+        presenterProviders = PresenterProviders.inject(this);
+        presenterDispatch = new PresenterDispatch(presenterProviders);
 
-        mPresenterDispatch.attachView(getActivity(), this);
-        mPresenterDispatch.onCreatePresenter(savedInstanceState);
-        isPrepared = true;
+        presenterDispatch.attachView(getActivity(), this);
+        presenterDispatch.onCreatePresenter(savedInstanceState);
+        prepared = true;
         init();
         lazyLoad();
     }
@@ -75,15 +73,15 @@ public abstract class BaseMvpFragment<P extends BasePresenter> extends Fragment 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        mPresenterDispatch.onSaveInstanceState(outState);
+        presenterDispatch.onSaveInstanceState(outState);
     }
 
     protected P getPresenter() {
-        return mPresenterProviders.getPresenter(0);
+        return presenterProviders.getPresenter(0);
     }
 
     public PresenterProviders getPresenterProviders() {
-        return mPresenterProviders;
+        return presenterProviders;
     }
 
     /**
@@ -101,8 +99,8 @@ public abstract class BaseMvpFragment<P extends BasePresenter> extends Fragment 
 
     public View findViewById(@IdRes int id) {
         View view;
-        if (mRootView != null) {
-            view = mRootView.findViewById(id);
+        if (rootView != null) {
+            view = rootView.findViewById(id);
             return view;
         }
         return null;
@@ -112,11 +110,11 @@ public abstract class BaseMvpFragment<P extends BasePresenter> extends Fragment 
      * 懒加载
      */
     private void lazyLoad() {
-        if (!isPrepared || !isVisible) {
+        if (!prepared || !visible) {
             return;
         }
         lazyLoadData();
-        isPrepared = false;
+        prepared = false;
     }
 
     /**
@@ -138,16 +136,16 @@ public abstract class BaseMvpFragment<P extends BasePresenter> extends Fragment 
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if (getUserVisibleHint()) {
-            isVisible = true;
+            visible = true;
             onVisible();
         } else {
-            isVisible = false;
+            visible = false;
             onInvisible();
         }
     }
 
     @Override
-    public void showError(String msg) {
+    public void showError(String message) {
 
     }
 
@@ -157,19 +155,19 @@ public abstract class BaseMvpFragment<P extends BasePresenter> extends Fragment 
     }
 
     @Override
-    public void showProgressUI(boolean isShow) {
+    public void showProgress(boolean display) {
 
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        mPresenterDispatch.detachView();
+        presenterDispatch.detachView();
     }
 
     @Override
     public void onDetach() {
-        this.mActivity = null;
+        this.activity = null;
         super.onDetach();
     }
 }

@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * @author nathaniel
  */
-public class PresenterStore<P extends BasePresenter<BaseMvpView>> {
+public class PresenterStore<P extends BasePresenter> {
 
     private static final String DEFAULT_KEY = "PresenterStore.DefaultKey";
     private final HashMap<String, P> hashMap = new HashMap<>();

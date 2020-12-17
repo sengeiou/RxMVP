@@ -10,12 +10,12 @@ import com.yumore.easymvp.base.BaseMvpActivity;
  */
 public class ExampleActivity4 extends BaseMvpActivity {
     @Override
-    protected int getContentView() {
+    protected int getLayoutId() {
         return R.layout.activity_mainmvp;
     }
 
     @Override
-    public void init() {
+    public void initialize() {
 
     }
 }

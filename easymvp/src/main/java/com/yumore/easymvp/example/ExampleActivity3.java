@@ -17,12 +17,12 @@ import com.yumore.easymvp.mvp.CreatePresenter;
 public class ExampleActivity3 extends BaseMvpActivity<LoginPresenter> implements LoginView {
 
     @Override
-    protected int getContentView() {
+    protected int getLayoutId() {
         return R.layout.activity_mainmvp;
     }
 
     @Override
-    public void init() {
+    public void initialize() {
         getPresenter().login();
     }
 

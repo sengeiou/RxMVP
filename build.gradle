@@ -36,7 +36,7 @@ allprojects {
 def debuggable() {
     def taskNames = gradle.startParameter.taskNames
     for (taskName in taskNames) {
-        if ((taskName.contains("install") || taskName.contains("assemble")) && taskName.contains("Debug")) {
+        if ((taskName.contains("install") || taskName.contains("assemble")) && taskName.contains("debug")) {
             return true
         }
     }

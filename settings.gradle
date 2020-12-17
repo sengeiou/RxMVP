@@ -23,7 +23,7 @@ include ':cropper'
 include ':picture'
 
 include ':caincamera'
-include ':cameralibrary'
+include ':camerax'
 include ':facedetect'
 include ':filter'
 include ':videolibrary'

@@ -4,9 +4,22 @@ package com.yumore.easymvp.mvp;
  * @author nathaniel
  */
 public interface BaseMvpView {
-    void showError(String msg);
+    /**
+     * 展示错误信息
+     *
+     * @param message message
+     */
+    void showError(String message);
 
+    /**
+     * 加载完成
+     */
     void complete();
 
-    void showProgressUI(boolean isShow);
+    /**
+     * 展示加载动画
+     *
+     * @param display display
+     */
+    void showProgress(boolean display);
 }

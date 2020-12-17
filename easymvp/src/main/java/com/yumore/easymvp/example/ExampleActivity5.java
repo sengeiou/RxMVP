@@ -11,12 +11,12 @@ import com.yumore.easymvp.base.BaseMvpActivity;
 public class ExampleActivity5 extends BaseMvpActivity {
 
     @Override
-    protected int getContentView() {
+    protected int getLayoutId() {
         return R.layout.activity_fragment;
     }
 
     @Override
-    public void init() {
+    public void initialize() {
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.frame_layout, new ExampleFragment())

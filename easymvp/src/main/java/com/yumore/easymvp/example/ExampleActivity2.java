@@ -23,12 +23,12 @@ public class ExampleActivity2 extends BaseMvpActivity implements LoginView, Regi
     private RegisterPresenter mRegisterPresenter;
 
     @Override
-    protected int getContentView() {
+    protected int getLayoutId() {
         return R.layout.activity_mainmvp;
     }
 
     @Override
-    public void init() {
+    public void initialize() {
         mLoginPresenter = getPresenterProviders().getPresenter(0);
         mRegisterPresenter = getPresenterProviders().getPresenter(1);
 
