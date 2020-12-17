@@ -1,14 +1,14 @@
 {
   "stringTable": {
     "0": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a",
-    "1": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffcommand_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC",
-    "2": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffcommand_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
-    "3": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffrecorder_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
-    "4": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmetadata_retriever_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
-    "5": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dsoundtouch_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
-    "6": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcainfilter_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/. -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
-    "7": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmedia_player_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
-    "8": "--target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmedia_editor_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC"
+    "1": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffcommand_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC",
+    "2": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffcommand_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFCommand/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "3": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dffrecorder_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/../Common -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "4": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmetadata_retriever_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/source -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "5": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dsoundtouch_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/SoundTouch/source/SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "6": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dcainfilter_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CainFilter/. -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "7": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmedia_player_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/source -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/android -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../SoundTouch -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaPlayer/../CainFilter -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC",
+    "8": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/nathaniel/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dmedia_editor_EXPORTS -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/include -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/android -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/source -I/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/MediaEditor/../SoundTouch -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -std=c++11 -D__STDC_CONSTANT_MACROS -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
     "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/CMakeLists.txt",
@@ -501,6 +501,95 @@
       "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libsoundtouch.so",
       "runtimeFiles": []
     },
+    "ffrecorder-Debug-armeabi-v7a": {
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" ffrecorder",
+      "buildType": "debug",
+      "toolchain": "574402080",
+      "abi": "armeabi-v7a",
+      "artifactName": "ffrecorder",
+      "files": [
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFrameFilter.cpp",
+          "flagsOrdinal": 8,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaWriter.cpp",
+          "flagsOrdinal": 8,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFormatter.cpp",
+          "flagsOrdinal": 8,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaData.cpp",
+          "flagsOrdinal": 8,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvConvertor.cpp",
+          "flagsOrdinal": 8,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvData.cpp",
+          "flagsOrdinal": 8,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/FFMediaRecorder.cpp",
+          "flagsOrdinal": 3,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/RecordParams.cpp",
+          "flagsOrdinal": 3,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/com_cgfay_media_recorder_FFMediaRecorder.cpp",
+          "flagsOrdinal": 3,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libffrecorder.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libyuv.so"
+      ]
+    },
+    "metadata_retriever-Debug-armeabi-v7a": {
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" metadata_retriever",
+      "buildType": "debug",
+      "toolchain": "574402080",
+      "abi": "armeabi-v7a",
+      "artifactName": "metadata_retriever",
+      "files": [
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/MediaMetadataRetriever.cpp",
+          "flagsOrdinal": 4,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/Metadata.cpp",
+          "flagsOrdinal": 4,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/com_cgfay_media_MediaMetadataRetriever.cpp",
+          "flagsOrdinal": 4,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libmetadata_retriever.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so"
+      ]
+    },
     "media_player-Debug-armeabi-v7a": {
       "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" media_player",
       "buildType": "debug",
@@ -610,95 +699,6 @@
         "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so",
         "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libsoundtouch.so",
         "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libcainfilter.so"
-      ]
-    },
-    "ffrecorder-Debug-armeabi-v7a": {
-      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" ffrecorder",
-      "buildType": "debug",
-      "toolchain": "574402080",
-      "abi": "armeabi-v7a",
-      "artifactName": "ffrecorder",
-      "files": [
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFrameFilter.cpp",
-          "flagsOrdinal": 8,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaWriter.cpp",
-          "flagsOrdinal": 8,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVFormatter.cpp",
-          "flagsOrdinal": 8,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/AVMediaData.cpp",
-          "flagsOrdinal": 8,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvConvertor.cpp",
-          "flagsOrdinal": 8,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Common/YuvData.cpp",
-          "flagsOrdinal": 8,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/FFMediaRecorder.cpp",
-          "flagsOrdinal": 3,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/RecordParams.cpp",
-          "flagsOrdinal": 3,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/FFMediaRecorder/com_cgfay_media_recorder_FFMediaRecorder.cpp",
-          "flagsOrdinal": 3,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [],
-      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libffrecorder.so",
-      "runtimeFiles": [
-        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so",
-        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libyuv.so"
-      ]
-    },
-    "metadata_retriever-Debug-armeabi-v7a": {
-      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" metadata_retriever",
-      "buildType": "debug",
-      "toolchain": "574402080",
-      "abi": "armeabi-v7a",
-      "artifactName": "metadata_retriever",
-      "files": [
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/MediaMetadataRetriever.cpp",
-          "flagsOrdinal": 4,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/Metadata.cpp",
-          "flagsOrdinal": 4,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/cpp/Metadata/com_cgfay_media_MediaMetadataRetriever.cpp",
-          "flagsOrdinal": 4,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [],
-      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libmetadata_retriever.so",
-      "runtimeFiles": [
-        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so"
       ]
     }
   },

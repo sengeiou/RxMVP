@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Darwin-20.1.0")
+set(CMAKE_HOST_SYSTEM "Darwin-20.2.0")
 set(CMAKE_HOST_SYSTEM_NAME "Darwin")
-set(CMAKE_HOST_SYSTEM_VERSION "20.1.0")
+set(CMAKE_HOST_SYSTEM_VERSION "20.2.0")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/Users/nathaniel/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake")
