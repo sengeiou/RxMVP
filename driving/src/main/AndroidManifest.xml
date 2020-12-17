@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yumore.answer">
+    package="com.yumore.driving">
 
     <application>
-        <activity android:name=".AnswerMainActivity" />
-        <activity android:name=".ScheduleActivity" />
-        <activity android:name=".SubjectActivity" />
-        <activity android:name=".OutcomeActivity" />
-        <activity android:name=".AnalyzeActivity" />
-
+        <activity android:name="com.yumore.driving.ScheduleActivity" />
+        <activity android:name="com.yumore.driving.SubjectActivity" />
+        <activity android:name="com.yumore.driving.OutcomeActivity" />
+        <activity android:name="com.yumore.driving.AnalyzeActivity" />
     </application>
 </manifest>

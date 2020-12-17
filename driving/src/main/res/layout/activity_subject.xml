@@ -7,7 +7,7 @@
     android:gravity="bottom"
     sothree:umanoDragView="@+id/dragView"
     sothree:umanoOverlay="true"
-    sothree:umanoPanelHeight="45dp"
+    sothree:umanoPanelHeight="@dimen/common_header_height"
     sothree:umanoParallaxOffset="0dp"
     sothree:umanoScrollableView="@+id/list"
     sothree:umanoShadowHeight="1dp">
@@ -20,7 +20,7 @@
 
         <include layout="@layout/common_header_blue" />
 
-        <com.yumore.answer.view.FlipperLayout
+        <com.yumore.driving.view.FlipperLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

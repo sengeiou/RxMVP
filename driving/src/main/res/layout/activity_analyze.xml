@@ -30,7 +30,7 @@
                 android:background="@mipmap/shadow_right" />
 
             <!--阴影-->
-            <com.yumore.answer.view.ReaderViewPager
+            <com.yumore.driving.view.ReaderViewPager
                 android:id="@+id/readerViewPager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
