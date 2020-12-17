@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.yumore.introduce.databinding.FragmentIntroduceBinding;
 
 
 /**
@@ -15,7 +17,7 @@ import androidx.fragment.app.Fragment;
  */
 public class IntroduceFragment extends Fragment {
     private final int imageResource;
-
+    private FragmentIntroduceBinding introduceBinding;
 
     private IntroduceFragment(int imageResource) {
         this.imageResource = imageResource;
@@ -32,10 +34,9 @@ public class IntroduceFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_introduce, container, false);
-        ImageView imageView = view.findViewById(R.id.traction_image_iv);
-        imageView.setImageResource(imageResource);
-        return view;
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        introduceBinding = FragmentIntroduceBinding.inflate(inflater);
+        introduceBinding.tractionImageIv.setImageResource(imageResource);
+        return introduceBinding.getRoot();
     }
 }

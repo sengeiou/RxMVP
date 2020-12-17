@@ -1,0 +1,5 @@
+# ninja log v5
+0	114	1608109045	CMakeFiles/nativegdx.dir/src/main/cpp/Matrix4.cpp.o	f49c16cd9333b97a
+114	155	1608109046	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnativegdx.so	7de382809b6c1736
+8	73	1608171166	build.ninja	460e2d1fb075ecc0
+0	7	0	clean	d52c9b1b425297c8
