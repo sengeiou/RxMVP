@@ -27,7 +27,7 @@
             android:name=".surface.ExampleActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".surface.ActivityRxPhoto"
+            android:name=".surface.ProfileActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"

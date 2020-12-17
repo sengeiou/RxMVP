@@ -144,6 +144,12 @@
     "tag": "release|armeabi-v7a"
   },
   {
+    "level": "WARN",
+    "message": "Observed package id \u0027ndk;22.0.7026061\u0027 in inconsistent location \u0027/Users/nathaniel/Library/Android/sdk/ndk-bundle\u0027 (Expected \u0027/Users/nathaniel/Library/Android/sdk/ndk/22.0.7026061\u0027)",
+    "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/CMakeLists.txt",
+    "tag": "release|armeabi-v7a"
+  },
+  {
     "level": "INFO",
     "message": "Parsing /Users/nathaniel/Library/Android/sdk/ndk/22.0.7026061/package.xml",
     "file": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/filter/src/main/cpp/CMakeLists.txt",

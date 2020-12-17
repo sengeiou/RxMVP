@@ -65,7 +65,7 @@ public class ExampleActivity extends AppCompatActivity {
 
     private void initData() {
         modelMainItemList = new ArrayList<>();
-        modelMainItemList.add(new ModelMainItem("RxPhotoTool操作UZrop裁剪图片", R.drawable.circle_elves_ball, ActivityRxPhoto.class));
+        modelMainItemList.add(new ModelMainItem("RxPhotoTool操作UZrop裁剪图片", R.drawable.circle_elves_ball, ProfileActivity.class));
         modelMainItemList.add(new ModelMainItem("二维码与条形码的扫描与生成", R.drawable.circle_dynamic_generation_code, ActivityCodeTool.class));
         modelMainItemList.add(new ModelMainItem("动态生成码", R.drawable.circle_qr_code, ActivityCreateQRCode.class));
 

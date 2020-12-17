@@ -6,7 +6,6 @@ import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -23,10 +22,8 @@ import com.yalantis.ucrop.UCropActivity;
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.utility.activity.BaseActivity;
-import com.yumore.utility.utility.RxBarTool;
 import com.yumore.utility.utility.RxPhotoTool;
 import com.yumore.utility.utility.RxSPTool;
-import com.yumore.utility.widget.RxTitle;
 import com.yumore.utility.widget.dialog.RxDialogChooseImage;
 import com.yumore.utility.widget.dialog.RxDialogScaleView;
 import com.yumore.utility.widget.dialog.RxDialogSureCancel;
@@ -40,17 +37,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.yumore.utility.widget.dialog.RxDialogChooseImage.LayoutType.TITLE;
-
 
 /**
  * @author yumore
  */
-public class ActivityRxPhoto extends BaseActivity {
-
-
-    @BindView(R2.id.rx_title)
-    RxTitle mRxTitle;
+public class ProfileActivity extends BaseActivity {
     @BindView(R2.id.tv_bg)
     TextView mTvBg;
     @BindView(R2.id.iv_avatar)
@@ -74,7 +65,7 @@ public class ActivityRxPhoto extends BaseActivity {
     @BindView(R2.id.editText2)
     TextView mEditText2;
     @BindView(R2.id.btn_exit)
-    Button mBtnExit;
+    TextView mBtnExit;
     @BindView(R2.id.activity_user)
     LinearLayout mActivityUser;
     private Uri resultUri;
@@ -82,41 +73,37 @@ public class ActivityRxPhoto extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RxBarTool.noTitle(this);
-        setContentView(R.layout.activity_von_photo);
+        setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
         initView();
     }
 
     protected void initView() {
-        Resources r = baseActivity.getResources();
+        Resources resources = baseActivity.getResources();
         resultUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"
-                + r.getResourcePackageName(R.drawable.circle_elves_ball) + "/"
-                + r.getResourceTypeName(R.drawable.circle_elves_ball) + "/"
-                + r.getResourceEntryName(R.drawable.circle_elves_ball));
+                + resources.getResourcePackageName(R.drawable.circle_elves_ball) + "/"
+                + resources.getResourceTypeName(R.drawable.circle_elves_ball) + "/"
+                + resources.getResourceEntryName(R.drawable.circle_elves_ball));
 
-        mRxTitle.setLeftFinish(baseActivity);
-
-        mIvAvatar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                initDialogChooseImage();
-            }
+        ImageView imageView = findViewById(R.id.common_header_back_iv);
+        imageView.setVisibility(View.VISIBLE);
+        imageView.setOnClickListener(view -> {
+            finish();
         });
-        mIvAvatar.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-//                RxImageTool.showBigImageView(mContext, resultUri);
-                RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(baseActivity);
-                rxDialogScaleView.setImage(resultUri);
-                rxDialogScaleView.show();
-                return false;
-            }
+        TextView textView = findViewById(R.id.common_header_title_tv);
+        textView.setText("个人中心");
+
+        mIvAvatar.setOnClickListener(view -> initDialogChooseImage());
+        mIvAvatar.setOnLongClickListener(view -> {
+            RxDialogScaleView rxDialogScaleView = new RxDialogScaleView(baseActivity);
+            rxDialogScaleView.setImage(resultUri);
+            rxDialogScaleView.show();
+            return false;
         });
     }
 
     private void initDialogChooseImage() {
-        RxDialogChooseImage dialogChooseImage = new RxDialogChooseImage(baseActivity, TITLE);
+        RxDialogChooseImage dialogChooseImage = new RxDialogChooseImage(baseActivity, RxDialogChooseImage.LayoutType.TITLE);
         dialogChooseImage.show();
     }
 
@@ -151,7 +138,6 @@ public class ActivityRxPhoto extends BaseActivity {
                         apply(options).
                         thumbnail(0.5f).
                         into(mIvAvatar);
-//                RequestUpdateAvatar(new File(RxPhotoTool.getRealFilePath(mContext, RxPhotoTool.cropImageUri)));
                 break;
 
             case UCrop.REQUEST_CROP://UCrop裁剪之后的处理
@@ -236,18 +222,8 @@ public class ActivityRxPhoto extends BaseActivity {
     @OnClick(R2.id.btn_exit)
     public void onClick() {
         final RxDialogSureCancel rxDialogSureCancel = new RxDialogSureCancel(this);
-        rxDialogSureCancel.getCancelView().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rxDialogSureCancel.cancel();
-            }
-        });
-        rxDialogSureCancel.getSureView().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        rxDialogSureCancel.getCancelView().setOnClickListener(v -> rxDialogSureCancel.cancel());
+        rxDialogSureCancel.getSureView().setOnClickListener(v -> finish());
         rxDialogSureCancel.show();
     }
 }

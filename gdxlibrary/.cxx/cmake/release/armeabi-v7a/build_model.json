@@ -145,7 +145,7 @@
       ],
       "ndkMetaPlatforms": {
         "min": 16,
-        "max": 29,
+        "max": 30,
         "aliases": {
           "20": 19,
           "25": 24,
@@ -161,7 +161,8 @@
           "O": 26,
           "O-MR1": 27,
           "P": 28,
-          "Q": 29
+          "Q": 29,
+          "R": 30
         }
       },
       "ndkSupportedAbiList": [
@@ -171,7 +172,7 @@
         "X86_64"
       ],
       "ndkDefaultStl": "LIBCXX_STATIC",
-      "ndkVersion": "21.1.6352462",
+      "ndkVersion": "22.0.7026061",
       "project": {
         "compilerSettingsCacheFolder": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/.cxx",
         "cxxFolder": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/.cxx",

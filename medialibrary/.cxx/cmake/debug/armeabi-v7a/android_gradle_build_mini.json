@@ -50,6 +50,17 @@
       "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libsoundtouch.so",
       "runtimeFiles": []
     },
+    "media_player-Debug-armeabi-v7a": {
+      "artifactName": "media_player",
+      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" media_player",
+      "abi": "armeabi-v7a",
+      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libmedia_player.so",
+      "runtimeFiles": [
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libsoundtouch.so",
+        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libcainfilter.so"
+      ]
+    },
     "ffrecorder-Debug-armeabi-v7a": {
       "artifactName": "ffrecorder",
       "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" ffrecorder",
@@ -67,17 +78,6 @@
       "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libmetadata_retriever.so",
       "runtimeFiles": [
         "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so"
-      ]
-    },
-    "media_player-Debug-armeabi-v7a": {
-      "artifactName": "media_player",
-      "buildCommand": "/Users/nathaniel/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/.cxx/cmake/debug/armeabi-v7a\" media_player",
-      "abi": "armeabi-v7a",
-      "output": "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libmedia_player.so",
-      "runtimeFiles": [
-        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/src/main/jniLibs/armeabi-v7a/libffmpeg.so",
-        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libsoundtouch.so",
-        "/Users/nathaniel/workspace/AndroidStudio/RxMVP/medialibrary/build/intermediates/cmake/debug/obj/armeabi-v7a/libcainfilter.so"
       ]
     }
   }

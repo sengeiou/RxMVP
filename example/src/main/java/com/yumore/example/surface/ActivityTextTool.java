@@ -70,7 +70,7 @@ public class ActivityTextTool extends BaseActivity {
                 .append("测试").append("上标").setSuperscript().append("下标\n").setSubscript()
                 .append("测试").append("点击事件\n").setClickSpan(clickableSpan)
                 .append("测试").append("serif 字体\n").setFontFamily("serif")
-                .append("测试").append("图片\n").setResourceId(R.drawable.logo)
+                .append("测试").append("图片\n").setResourceId(R.drawable.icon_frame_logo)
                 .append("测试").append("前景色").setForegroundColor(Color.GREEN).append("背景色\n").setBackgroundColor(getResources().getColor(R.color.blue_baby))
                 .append("测试").append("删除线").setStrikethrough().append("下划线\n").setUnderline()
                 .append("测试").append("sans-serif 字体\n").setFontFamily("sans-serif")
