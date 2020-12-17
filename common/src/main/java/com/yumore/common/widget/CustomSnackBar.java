@@ -423,7 +423,7 @@ public final class CustomSnackBar {
                     })
                     .start();
         } else {
-            Animation anim = AnimationUtils.loadAnimation(snackbarLayout.getContext(), R.anim.slide_from_top_in);
+            Animation anim = AnimationUtils.loadAnimation(snackbarLayout.getContext(), R.anim.slide_top_in);
             anim.setInterpolator(CustomAnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
             anim.setDuration(ANIMATION_DURATION);
             anim.setAnimationListener(new Animation.AnimationListener() {
@@ -467,7 +467,7 @@ public final class CustomSnackBar {
                     })
                     .start();
         } else {
-            Animation animation = AnimationUtils.loadAnimation(snackbarLayout.getContext(), R.anim.slide_to_top_out);
+            Animation animation = AnimationUtils.loadAnimation(snackbarLayout.getContext(), R.anim.slide_top_out);
             animation.setInterpolator(CustomAnimationUtils.FAST_OUT_SLOW_IN_INTERPOLATOR);
             animation.setDuration(ANIMATION_DURATION);
             animation.setAnimationListener(new Animation.AnimationListener() {

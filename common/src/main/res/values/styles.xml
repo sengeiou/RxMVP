@@ -19,8 +19,8 @@
     </style>
 
     <style name="PopupWindowStyle">
-        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
-        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom_out</item>
     </style>
 
     <!-- 自定义Dialog -->

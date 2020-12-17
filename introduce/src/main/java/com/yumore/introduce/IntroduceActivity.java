@@ -9,7 +9,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,7 +47,6 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
     private static final int HANDLER_MESSAGE = 1, DELAY_MILLIS = 5 * 1000;
     private static final int DOT_SIZE = 8, DOT_MARGIN = 16;
     private List<Fragment> fragmentList;
-    private TextView textView;
     private LinearLayout.LayoutParams normalParams, focusParams;
     private Handler handler;
     private int currentPosition;
@@ -89,8 +87,7 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
         }
         introduceBinding.tractionDotsLayout.setGravity(Gravity.CENTER);
         introduceBinding.tractionViewPagerVp.addOnPageChangeListener(this);
-        textView = findViewById(R.id.enter_button_tv);
-        textView.setOnClickListener(this);
+        introduceBinding.enterButtonTv.setOnClickListener(this);
         initHandler();
         handler.sendEmptyMessageDelayed(HANDLER_MESSAGE, DELAY_MILLIS);
     }
@@ -140,7 +137,7 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
             }
 
         }
-        textView.setVisibility(position == imageResources.length - 1 ? View.VISIBLE : View.GONE);
+        introduceBinding.enterButtonTv.setVisibility(position == imageResources.length - 1 ? View.VISIBLE : View.GONE);
     }
 
     @Override
