@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 public class IntroduceFragment extends Fragment {
     private final int imageResource;
 
+
     private IntroduceFragment(int imageResource) {
         this.imageResource = imageResource;
     }

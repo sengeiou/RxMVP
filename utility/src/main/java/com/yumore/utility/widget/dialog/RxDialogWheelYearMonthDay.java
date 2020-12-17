@@ -49,14 +49,14 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
     public RxDialogWheelYearMonthDay(Context mContext) {
         super(mContext);
         // TODO Auto-generated constructor stub
-        this.mContext = mContext;
+        this.context = mContext;
         build();
     }
 
     public RxDialogWheelYearMonthDay(Context mContext, int beginYear) {
         super(mContext);
         // TODO Auto-generated constructor stub
-        this.mContext = mContext;
+        this.context = mContext;
         this.beginYear = beginYear;
         build();
     }
@@ -64,7 +64,7 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
     public RxDialogWheelYearMonthDay(Context mContext, int beginYear, int endYear) {
         super(mContext);
         // TODO Auto-generated constructor stub
-        this.mContext = mContext;
+        this.context = mContext;
         this.beginYear = beginYear;
         this.endYear = endYear;
         build();
@@ -73,7 +73,7 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
     public RxDialogWheelYearMonthDay(Context mContext, TextView tvTime) {
         super(mContext);
         // TODO Auto-generated constructor stub
-        this.mContext = mContext;
+        this.context = mContext;
         build();
         tvTime.setText(curYear + "年" + mMonths[curMonth] + "月");
     }
@@ -102,7 +102,7 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
 
     private void build() {
         mCalendar = Calendar.getInstance();
-        final View dialogView1 = LayoutInflater.from(mContext).inflate(R.layout.dialog_year_month_day, null);
+        final View dialogView1 = LayoutInflater.from(context).inflate(R.layout.dialog_year_month_day, null);
 
         OnWheelChangedListener listener = new OnWheelChangedListener() {
             @Override
@@ -128,7 +128,7 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
         mYearView.setWheelBackground(R.drawable.transparent_bg);
         mYearView.setWheelForeground(R.drawable.wheel_val_holo);
         mYearView.setShadowColor(0xFFDADCDB, 0x88DADCDB, 0x00DADCDB);
-        mYearView.setViewAdapter(new DateNumericAdapter(mContext, beginYear, endYear, endYear - beginYear));
+        mYearView.setViewAdapter(new DateNumericAdapter(context, beginYear, endYear, endYear - beginYear));
         mYearView.setCurrentItem(endYear - beginYear);
         mYearView.addChangingListener(listener);
 
@@ -141,7 +141,7 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
         mMonthView.setWheelForeground(R.drawable.wheel_val_holo);
         mMonthView.setShadowColor(0xFFDADCDB, 0x88DADCDB, 0x00DADCDB);
         curMonth = mCalendar.get(Calendar.MONTH);
-        mMonthView.setViewAdapter(new DateArrayAdapter(mContext, mMonths, curMonth));
+        mMonthView.setViewAdapter(new DateArrayAdapter(context, mMonths, curMonth));
         mMonthView.setCurrentItem(curMonth);
         mMonthView.addChangingListener(listener);
 
@@ -242,7 +242,7 @@ public class RxDialogWheelYearMonthDay extends RxDialog {
         mCalendar.set(Calendar.MONTH, month.getCurrentItem());
         int maxDay = mCalendar.getActualMaximum(Calendar.DAY_OF_MONTH);
         int maxDays = RxTimeTool.getDaysByYearMonth(beginYear + year.getCurrentItem(), month.getCurrentItem() + 1);
-        day.setViewAdapter(new DateNumericAdapter(mContext, 1, maxDays, mCalendar.get(Calendar.DAY_OF_MONTH) - 1));
+        day.setViewAdapter(new DateNumericAdapter(context, 1, maxDays, mCalendar.get(Calendar.DAY_OF_MONTH) - 1));
         int curDay = Math.min(maxDays, day.getCurrentItem() + 1);
         day.setCurrentItem(curDay - 1, true);
 

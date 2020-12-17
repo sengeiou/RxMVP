@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 /**
  * @author Nathaniel
  */
-public class TractionFragment extends FloppyFragment implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
+public class TractionFragment extends AbstractFragment implements MediaPlayer.OnPreparedListener, MediaPlayer.OnCompletionListener {
 
     private VideoView videoView;
     private int currentPage;

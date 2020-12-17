@@ -53,7 +53,7 @@ public class RxDialogGPSCheck extends RxDialogSureCancel {
         getSureView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxLocationTool.openGpsSettings(mContext);
+                RxLocationTool.openGpsSettings(context);
                 cancel();
             }
         });

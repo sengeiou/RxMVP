@@ -13,10 +13,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.yumore.common.R;
-import com.yumore.common.utility.ActivityManager;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
@@ -29,7 +27,7 @@ import butterknife.Unbinder;
  * @version v1.0.0
  * @date 2018/3/8 - 15:11
  */
-public abstract class BaseActivity<P extends BaseContract> extends AppCompatActivity implements BaseViewer {
+public abstract class BaseActivity<P extends BaseContract> extends BasicActivity implements BaseViewer {
     protected P presenter;
     protected boolean withoutMore;
     private Context context;
@@ -53,8 +51,6 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
     @Override
     public void initialize() {
         context = this;
-        //将当前activity添加进入管理栈
-        ActivityManager.getAppInstance().addActivity(this);
         presenter = initPresenter();
         if (null != presenter) {
             presenter.attachView(this);
@@ -73,8 +69,6 @@ public abstract class BaseActivity<P extends BaseContract> extends AppCompatActi
 
     @Override
     protected void onDestroy() {
-        //将当前activity移除管理栈
-        ActivityManager.getAppInstance().removeActivity(this);
         if (null != presenter) {
             //在presenter中解绑释放view
             presenter.detachView();

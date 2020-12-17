@@ -18,8 +18,8 @@ import androidx.fragment.app.Fragment;
  * @author Nathaniel
  */
 
-public abstract class FloppyFragment extends Fragment {
-    protected final String TAG = FloppyFragment.class.getSimpleName();
+public abstract class AbstractFragment extends Fragment {
+    protected final String TAG = AbstractFragment.class.getSimpleName();
     protected boolean initialized = false;
     protected boolean firstLoaded = false;
     private View view;

@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Stack;
 
+/**
+ * @author nathaniel
+ */
 public class ActivityManager {
     private static final String TAG = ActivityManager.class.getSimpleName();
     private static Stack<AppCompatActivity> activityStack;
@@ -18,7 +21,7 @@ public class ActivityManager {
     /**
      * 单一实例
      */
-    public static synchronized ActivityManager getAppInstance() {
+    public static synchronized ActivityManager getInstance() {
         if (instance == null) {
             instance = new ActivityManager();
         }
@@ -101,7 +104,7 @@ public class ActivityManager {
     /**
      * 退出应用程序
      */
-    public void AppExit(Context context) {
+    public void exitApplication(Context context) {
         try {
             finishAllActivity();
             android.app.ActivityManager activityMgr = (android.app.ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);

@@ -4,8 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.yumore.common.basic.BasicActivity;
 import com.yumore.common.utility.PreferencesUtils;
 import com.yumore.example.surface.ExampleActivity;
 import com.yumore.introduce.IntroduceActivity;
@@ -20,7 +19,7 @@ import com.yumore.traction.TractionActivity;
  * @version v1.0.0
  * @date 2018/3/8 - 14:57
  */
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends BasicActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,6 @@ public class WelcomeActivity extends AppCompatActivity {
                             ExampleActivity.class : TractionActivity.class : IntroduceActivity.class;
             Intent intent = new Intent(getApplicationContext(), clazz);
             startActivity(intent);
-            finish();
         }, 2000);
     }
 }

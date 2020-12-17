@@ -27,7 +27,6 @@ import com.google.android.material.snackbar.Snackbar;
 import com.yumore.common.BuildConfig;
 import com.yumore.common.R;
 import com.yumore.common.callback.OnNetworkListener;
-import com.yumore.common.manager.ActivityManager;
 import com.yumore.common.mvp.AbstractPresenter;
 import com.yumore.common.mvp.PresenterDispatch;
 import com.yumore.common.mvp.PresenterProvider;
@@ -55,7 +54,7 @@ import butterknife.Unbinder;
  * * 如果需要使用沉浸式状态栏 支持链式调用
  * 集体的设置参考
  */
-public abstract class AbstractActivity<P extends BaseContract> extends AppCompatActivity implements BaseViewer, OnNetworkListener {
+public abstract class AbstractActivity<P extends BaseContract> extends BasicActivity implements BaseViewer, OnNetworkListener {
     private static final String TAG = AbstractActivity.class.getSimpleName();
     protected static int SNACK_MESSAGE_SUCCESS = 0;
     protected static int SNACK_MESSAGE_FAILED = 1;
@@ -85,7 +84,6 @@ public abstract class AbstractActivity<P extends BaseContract> extends AppCompat
 
         registerNetworkListener();
         initialize();
-        ActivityManager.getAppInstance().addActivity(getActivity());
     }
 
     private void registerNetworkListener() {

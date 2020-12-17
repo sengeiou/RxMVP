@@ -18,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.yumore.introduce.databinding.ActivityIntroduceBinding;
 import com.yumore.provider.ISampleProvider;
 import com.yumore.provider.RouterConstants;
 
@@ -50,29 +51,28 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
     private static final int DOT_SIZE = 8, DOT_MARGIN = 16;
     private List<Fragment> fragmentList;
     private TextView textView;
-    private LinearLayout linearLayout;
     private LinearLayout.LayoutParams normalParams, focusParams;
     private Handler handler;
     private int currentPosition;
-    private ViewPager viewPager;
     private int[] imageResources;
+    private ActivityIntroduceBinding introduceBinding;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_introduce);
-        viewPager = findViewById(R.id.traction_viewPager_vp);
-        linearLayout = findViewById(R.id.traction_dots_layout);
+        introduceBinding = ActivityIntroduceBinding.inflate(getLayoutInflater());
+        setContentView(introduceBinding.getRoot());
+
         fragmentList = new ArrayList<>();
         imageResources = IMAGE_RESOURCES;
         for (int imageResource : imageResources) {
             fragmentList.add(IntroduceFragment.newInstance(imageResource));
         }
         FragmentAdapter tractionAdapter = new FragmentAdapter(getSupportFragmentManager(), fragmentList);
-        viewPager.setAdapter(tractionAdapter);
-        viewPager.setOffscreenPageLimit(fragmentList.size());
+        introduceBinding.tractionViewPagerVp.setAdapter(tractionAdapter);
+        introduceBinding.tractionViewPagerVp.setOffscreenPageLimit(fragmentList.size());
         normalParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), DOT_SIZE), dip2px(getApplicationContext(), DOT_SIZE));
         normalParams.leftMargin = dip2px(getApplicationContext(), DOT_SIZE);
         focusParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), DOT_MARGIN), dip2px(getApplicationContext(), DOT_SIZE));
@@ -87,10 +87,10 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
                 dotView.setLayoutParams(normalParams);
                 dotView.setBackgroundResource(R.drawable.icon_dot_normal);
             }
-            linearLayout.addView(dotView);
+            introduceBinding.tractionDotsLayout.addView(dotView);
         }
-        linearLayout.setGravity(Gravity.CENTER);
-        viewPager.addOnPageChangeListener(this);
+        introduceBinding.tractionDotsLayout.setGravity(Gravity.CENTER);
+        introduceBinding.tractionViewPagerVp.addOnPageChangeListener(this);
         textView = findViewById(R.id.enter_button_tv);
         textView.setOnClickListener(this);
         initHandler();
@@ -105,10 +105,10 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
                 if (message.what == 1) {
                     if (currentPosition == fragmentList.size() - 1) {
                         currentPosition = 0;
-                        viewPager.setCurrentItem(0, false);
+                        introduceBinding.tractionViewPagerVp.setCurrentItem(0, false);
                     } else {
                         currentPosition++;
-                        viewPager.setCurrentItem(currentPosition, true);
+                        introduceBinding.tractionViewPagerVp.setCurrentItem(currentPosition, true);
                     }
                     handler.sendEmptyMessageDelayed(HANDLER_MESSAGE, DELAY_MILLIS);
                 } else {
@@ -131,8 +131,8 @@ public class IntroduceActivity extends AppCompatActivity implements ViewPager.On
     @Override
     public void onPageSelected(int position) {
         currentPosition = position;
-        for (int i = 0; i < linearLayout.getChildCount(); i++) {
-            View dotView = linearLayout.getChildAt(i);
+        for (int i = 0; i < introduceBinding.tractionDotsLayout.getChildCount(); i++) {
+            View dotView = introduceBinding.tractionDotsLayout.getChildAt(i);
             if (i == position) {
                 dotView.setLayoutParams(focusParams);
                 dotView.setBackgroundResource(R.drawable.icon_dot_focus);

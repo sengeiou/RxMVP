@@ -147,7 +147,7 @@ public class RxDialogChooseImage extends RxDialog {
             }
         });
         setContentView(dialogView);
-        mLayoutParams.gravity = Gravity.BOTTOM;
+        layoutParams.gravity = Gravity.BOTTOM;
     }
 
     private void initView(final Fragment fragment) {
@@ -191,7 +191,7 @@ public class RxDialogChooseImage extends RxDialog {
         });
 
         setContentView(dialogView);
-        mLayoutParams.gravity = Gravity.BOTTOM;
+        layoutParams.gravity = Gravity.BOTTOM;
     }
 
     public enum LayoutType {
