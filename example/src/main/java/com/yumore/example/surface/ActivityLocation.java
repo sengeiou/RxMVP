@@ -1,6 +1,8 @@
 package com.yumore.example.surface;
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.GpsSatellite;
 import android.location.GpsStatus;
@@ -12,11 +14,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.yumore.example.R;
 import com.yumore.example.R2;
 import com.yumore.utility.activity.BaseActivity;
@@ -76,17 +75,17 @@ public class ActivityLocation extends BaseActivity implements LocationListener {
     //----------------------------------------------------------------------------------------------检测GPS是否已打开 start
     private void gpsCheck() {
         if (!RxLocationTool.isGpsEnabled(this)) {
-            MaterialDialog.Builder builder = new MaterialDialog.Builder(this);
-            MaterialDialog materialDialog = builder.title("GPS未打开").content("您需要在系统设置中打开GPS方可采集数据").positiveText("去设置")
-                    .onPositive(new MaterialDialog.SingleButtonCallback() {
+            new AlertDialog.Builder(this)
+                    .setTitle("GPS未打开")
+                    .setMessage("您需要在系统设置中打开GPS方可采集数据")
+                    .setPositiveButton("去设置", new DialogInterface.OnClickListener() {
                         @Override
-                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                        public void onClick(DialogInterface dialog, int which) {
                             RxLocationTool.openGpsSettings(baseActivity);
                         }
-                    }).build();
-            materialDialog.setCanceledOnTouchOutside(false);
-            materialDialog.setCancelable(false);
-            materialDialog.show();
+                    })
+                    .setCancelable(false)
+                    .show();
         } else {
             getLocation();
         }
@@ -129,6 +128,8 @@ public class ActivityLocation extends BaseActivity implements LocationListener {
                         System.out.println("GPS_EVENT_STOPPED");
                         //gpsState.setText("已停止定位");
                         break;
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + event);
                 }
             }
         });

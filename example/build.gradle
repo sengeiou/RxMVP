@@ -38,7 +38,6 @@ dependencies {
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
     implementation 'com.github.yalantis:ucrop:2.2.2-native'
     implementation 'com.jaredrummler:animated-svg-view:1.0.6'
-    implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'com.orhanobut:logger:2.2.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'

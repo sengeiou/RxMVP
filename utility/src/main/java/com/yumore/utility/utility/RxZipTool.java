@@ -8,8 +8,10 @@ import android.text.TextUtils;
 import net.lingala.zip4j.exception.ZipException;
 import net.lingala.zip4j.model.FileHeader;
 import net.lingala.zip4j.model.ZipParameters;
+import net.lingala.zip4j.model.enums.CompressionLevel;
+import net.lingala.zip4j.model.enums.CompressionMethod;
+import net.lingala.zip4j.model.enums.EncryptionMethod;
 import net.lingala.zip4j.progress.ProgressMonitor;
-import net.lingala.zip4j.util.Zip4jConstants;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -18,6 +20,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -324,8 +328,8 @@ public class RxZipTool {
             }
 
             //2.初始化zip工具
-            net.lingala.zip4j.core.ZipFile zFile = new net.lingala.zip4j.core.ZipFile(zipFile);
-            zFile.setFileNameCharset("UTF-8");
+            net.lingala.zip4j.ZipFile zFile = new net.lingala.zip4j.ZipFile(zipFile);
+            zFile.setCharset(StandardCharsets.UTF_8);
             if (!zFile.isValidZipFile()) {
                 throw new ZipException("压缩文件不合法,可能被损坏.");
             }
@@ -516,17 +520,16 @@ public class RxZipTool {
         dest = buildDestinationZipFilePath(srcFile, dest);
         ZipParameters parameters = new ZipParameters();
         // 压缩方式
-        parameters.setCompressionMethod(Zip4jConstants.COMP_DEFLATE);
+        parameters.setCompressionMethod(CompressionMethod.DEFLATE);
         // 压缩级别
-        parameters.setCompressionLevel(Zip4jConstants.DEFLATE_LEVEL_NORMAL);
+        parameters.setCompressionLevel(CompressionLevel.NORMAL);
         if (!RxDataTool.isNullString(passwd)) {
             parameters.setEncryptFiles(true);
             // 加密方式
-            parameters.setEncryptionMethod(Zip4jConstants.ENC_METHOD_STANDARD);
-            parameters.setPassword(passwd.toCharArray());
+            parameters.setEncryptionMethod(EncryptionMethod.ZIP_STANDARD);
         }
         try {
-            net.lingala.zip4j.core.ZipFile zipFile = new net.lingala.zip4j.core.ZipFile(dest);
+            net.lingala.zip4j.ZipFile zipFile = new net.lingala.zip4j.ZipFile(dest);
             if (srcFile.isDirectory()) {
                 // 如果不创建目录的话,将直接把给定目录下的文件压缩到压缩文件,即没有目录结构
                 if (!isCreateDir) {
@@ -601,31 +604,31 @@ public class RxZipTool {
         dest = buildDestinationZipFilePath(srcFile, dest);
         ZipParameters parameters = new ZipParameters();
         // 默认COMP_DEFLATE
-        parameters.setCompressionMethod(Zip4jConstants.COMP_DEFLATE);
-        parameters.setCompressionLevel(Zip4jConstants.DEFLATE_LEVEL_NORMAL);
+        parameters.setCompressionMethod(CompressionMethod.DEFLATE);
+        parameters.setCompressionLevel(CompressionLevel.NORMAL);
         if (!RxDataTool.isNullString(passwd)) {
             parameters.setEncryptFiles(true);
-            parameters.setEncryptionMethod(0);
-            parameters.setPassword(passwd.toCharArray());
+            parameters.setEncryptionMethod(EncryptionMethod.NONE);
+            //parameters.setPassword(passwd.toCharArray());
         }
 
         try {
-            net.lingala.zip4j.core.ZipFile zipFile = new net.lingala.zip4j.core.ZipFile(dest);
+            net.lingala.zip4j.ZipFile zipFile = new net.lingala.zip4j.ZipFile(dest);
             if (srcFile.isDirectory()) {
                 if (!isCreateDir) {
                     File[] subFiles = srcFile.listFiles();
-                    ArrayList<File> temp = new ArrayList();
+                    ArrayList<File> temp = new ArrayList<>();
                     Collections.addAll(temp, subFiles);
 //                    zipFile.addFiles(temp, parameters);
-                    zipFile.createZipFile(temp, parameters, true, unit * 1000);
+                    zipFile.createSplitZipFile(temp, parameters, true, unit * 1000);
                     return dest;
                 }
-                zipFile.createZipFileFromFolder(srcFile, parameters, true, unit * 1000);
+                zipFile.createSplitZipFileFromFolder(srcFile, parameters, true, unit * 1000);
                 //粗略的算一下分成多少份，获取的大小比实际的大点（一般是准确的）
-                int partsize = (int) zipInfo(dest) / (unit); //65536byte=64kb
-                System.out.println("分割成功！总共分割成了" + (partsize + 1) + "个文件！");
+                int partSize = (int) zipInfo(dest) / (unit); //65536byte=64kb
+                System.out.println("分割成功！总共分割成了" + (partSize + 1) + "个文件！");
             } else {
-                zipFile.createZipFile(srcFile, parameters, true, unit * 1000);
+                zipFile.addFile(srcFile, parameters);
             }
 
             return dest;
@@ -637,8 +640,8 @@ public class RxZipTool {
 
     // 预览压缩文件信息
     public static double zipInfo(String zipFile) throws ZipException {
-        net.lingala.zip4j.core.ZipFile zip = new net.lingala.zip4j.core.ZipFile(zipFile);
-        zip.setFileNameCharset("GBK");
+        net.lingala.zip4j.ZipFile zip = new net.lingala.zip4j.ZipFile(zipFile);
+        zip.setCharset(Charset.forName("GBK"));
         List<FileHeader> list = zip.getFileHeaders();
         long zipCompressedSize = 0;
         for (FileHeader head : list) {
@@ -663,8 +666,8 @@ public class RxZipTool {
     public static boolean removeDirFromZipArchive(String file, String removeDir) {
         try {
             // 创建ZipFile并设置编码
-            net.lingala.zip4j.core.ZipFile zipFile = new net.lingala.zip4j.core.ZipFile(file);
-            zipFile.setFileNameCharset("GBK");
+            net.lingala.zip4j.ZipFile zipFile = new net.lingala.zip4j.ZipFile(file);
+            zipFile.setCharset(Charset.forName("GBK"));
 
             // 给要删除的目录加上路径分隔符
             if (!removeDir.endsWith(File.separator)) {
@@ -704,11 +707,11 @@ public class RxZipTool {
     public static void Unzip(final File zipFile, String dest, String passwd,
                              String charset, final Handler handler, final boolean isDeleteZipFile) {
         try {
-            net.lingala.zip4j.core.ZipFile zFile = new net.lingala.zip4j.core.ZipFile(zipFile);
+            net.lingala.zip4j.ZipFile zFile = new net.lingala.zip4j.ZipFile(zipFile);
             if (TextUtils.isEmpty(charset)) {
                 charset = "UTF-8";
             }
-            zFile.setFileNameCharset(charset);
+            zFile.setCharset(Charset.forName(charset));
             if (!zFile.isValidZipFile()) {
                 throw new ZipException(
                         "Compressed files are not illegal, may be damaged.");

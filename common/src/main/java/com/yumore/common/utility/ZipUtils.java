@@ -8,7 +8,9 @@ import com.yumore.provider.utility.EmptyUtils;
 
 import net.lingala.zip4j.model.FileHeader;
 import net.lingala.zip4j.model.ZipParameters;
-import net.lingala.zip4j.util.Zip4jConstants;
+import net.lingala.zip4j.model.enums.CompressionLevel;
+import net.lingala.zip4j.model.enums.CompressionMethod;
+import net.lingala.zip4j.model.enums.EncryptionMethod;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -20,6 +22,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -99,13 +102,9 @@ public class ZipUtils {
      * @throws ZipException 压缩文件有损坏或者解压缩失败抛出
      */
     public static File[] unzip(File zipFile, String dest, String passwd) throws ZipException {
-        net.lingala.zip4j.core.ZipFile zFile = null;
-        try {
-            zFile = new net.lingala.zip4j.core.ZipFile(zipFile);
-            zFile.setFileNameCharset("GBK");
-        } catch (net.lingala.zip4j.exception.ZipException e) {
-            e.printStackTrace();
-        }
+        net.lingala.zip4j.ZipFile zFile = null;
+        zFile = new net.lingala.zip4j.ZipFile(zipFile);
+        zFile.setCharset(Charset.forName("GBK"));
 
         if (!zFile.isValidZipFile()) {
             throw new ZipException("压缩文件不合法,可能被损坏.");
@@ -192,19 +191,15 @@ public class ZipUtils {
         File srcFile = new File(src);
         dest = buildDestinationZipFilePath(srcFile, dest);
         ZipParameters parameters = new ZipParameters();
-        parameters.setCompressionMethod(Zip4jConstants.COMP_DEFLATE);           // 压缩方式
-        parameters.setCompressionLevel(Zip4jConstants.DEFLATE_LEVEL_NORMAL);    // 压缩级别
+        parameters.setCompressionMethod(CompressionMethod.DEFLATE);           // 压缩方式
+        parameters.setCompressionLevel(CompressionLevel.NORMAL);    // 压缩级别
         if (!TextUtils.isEmpty(passwd)) {
             parameters.setEncryptFiles(true);
-            parameters.setEncryptionMethod(Zip4jConstants.ENC_METHOD_STANDARD); // 加密方式
-            parameters.setPassword(passwd.toCharArray());
+            parameters.setEncryptionMethod(EncryptionMethod.ZIP_STANDARD); // 加密方式
+//            parameters.setPassword(passwd.toCharArray());
         }
-        net.lingala.zip4j.core.ZipFile zipFile = null;
-        try {
-            zipFile = new net.lingala.zip4j.core.ZipFile(dest);
-        } catch (net.lingala.zip4j.exception.ZipException e) {
-            e.printStackTrace();
-        }
+        net.lingala.zip4j.ZipFile zipFile = null;
+        zipFile = new net.lingala.zip4j.ZipFile(dest);
         if (srcFile.isDirectory()) {
             // 如果不创建目录的话,将直接把给定目录下的文件压缩到压缩文件,即没有目录结构
             if (!isCreateDir) {
