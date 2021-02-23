@@ -7,12 +7,11 @@ if (keyStore.exists()) {
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
-
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 100
         versionName "1.9.9"
 
@@ -45,5 +44,5 @@ android {
 dependencies {
     api 'androidx.appcompat:appcompat:1.2.0'
     api 'androidx.recyclerview:recyclerview:1.1.0'
-    api "com.github.bumptech.glide:glide:4.11.0"
+    api 'com.github.bumptech.glide:glide:4.12.0'
 }

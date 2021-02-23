@@ -2,12 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '29.0.3'
-
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0.0"
         // router
@@ -35,13 +34,13 @@ dependencies {
     implementation project(':easymvp')
 
     implementation 'com.nineoldandroids:library:2.4.0'
-    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
     implementation 'com.github.yalantis:ucrop:2.2.2-native'
     implementation 'com.jaredrummler:animated-svg-view:1.0.6'
-    implementation 'com.afollestad.material-dialogs:core:0.9.3.0'
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'com.orhanobut:logger:2.2.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }

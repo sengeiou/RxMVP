@@ -27,12 +27,12 @@ def increaseVersionCode() {
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
     defaultConfig {
-        applicationId "com.yumore.rxmvp.sample"
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 30
+        applicationId "com.yumore.rxmvp.sample"
         versionCode increaseVersionCode() as Integer
         versionName "${properties.getProperty("config.versionName")}"
         multiDexEnabled true
