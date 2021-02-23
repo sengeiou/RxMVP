@@ -2,7 +2,7 @@ package com.yumore.master.surface;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.yumore.master.provider.SampleProvider;
+import com.yumore.master.provider.MasterProvider;
 
 /**
  * @author Nathaniel
@@ -11,7 +11,7 @@ import com.yumore.master.provider.SampleProvider;
 public class UserAgencyDemo {
 
     @Autowired
-    SampleProvider userAgency;
+    MasterProvider userAgency;
 
     private void useAgencyWithAnnotation() {
         // 使用注解
@@ -19,7 +19,7 @@ public class UserAgencyDemo {
     }
 
     private void useAgencyWithoutAnnotation() {
-        SampleProvider userAgency = ARouter.getInstance().navigation(SampleProvider.class);
+        MasterProvider userAgency = ARouter.getInstance().navigation(MasterProvider.class);
         userAgency.getUsername();
     }
 }

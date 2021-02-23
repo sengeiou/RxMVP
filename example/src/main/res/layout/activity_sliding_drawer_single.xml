@@ -107,7 +107,7 @@
                 android:orientation="vertical">
 
                 <include
-                    layout="@layout/include_webview"
+                    layout="@layout/layout_browser_container"
                     android:layout_width="fill_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>

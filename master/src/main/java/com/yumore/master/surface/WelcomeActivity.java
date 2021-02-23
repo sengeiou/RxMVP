@@ -20,18 +20,22 @@ import com.yumore.traction.TractionActivity;
  * @date 2018/3/8 - 14:57
  */
 public class WelcomeActivity extends BasicActivity {
+    private static final int DELAY_MILLS = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        new Handler().postDelayed(() -> {
+        /*
+         * TODO: 解决new Handler() 无参过时
+         */
+        new Handler(getMainLooper()).postDelayed(() -> {
             Class<?> clazz = PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ?
                     PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ?
                             ExampleActivity.class : TractionActivity.class : IntroduceActivity.class;
             Intent intent = new Intent(getApplicationContext(), clazz);
             startActivity(intent);
             finish();
-        }, 2000);
+        }, DELAY_MILLS);
     }
 }

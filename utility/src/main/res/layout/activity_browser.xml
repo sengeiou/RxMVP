@@ -50,6 +50,17 @@
 
     </LinearLayout>
 
-    <include layout="@layout/include_webview" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <include
+            android:id="@+id/browser_container"
+            layout="@layout/layout_browser_container" />
+
+        <include
+            android:id="@+id/browser_error"
+            layout="@layout/layout_network_error"
+            android:visibility="gone" />
+    </RelativeLayout>
 </LinearLayout>

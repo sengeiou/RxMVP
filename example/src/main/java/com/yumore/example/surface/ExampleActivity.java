@@ -70,7 +70,6 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("动态生成码", R.drawable.circle_qr_code, ActivityCreateQRCode.class));
 
         modelMainItemList.add(new ModelMainItem("WebView的封装可播放视频", R.drawable.circle_webpage, BrowserActivity.class));
-        modelMainItemList.add(new ModelMainItem("常用的Dialog展示", R.drawable.circle_dialog, ActivityDialog.class));
         modelMainItemList.add(new ModelMainItem("图片的缩放艺术", R.drawable.circle_scale_icon, ActivityRxScaleImageView.class));
 
         modelMainItemList.add(new ModelMainItem("RxDataTool操作Demo", R.drawable.circle_data, ActivityRxDataTool.class));

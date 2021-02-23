@@ -11,7 +11,7 @@ import com.yumore.example.ExampleApplication;
  * @author Nathaniel
  * @date 2018/7/1-14:06
  */
-public class SampleApplication extends BaseApplication implements InitializeHelper {
+public class MasterApplication extends BaseApplication implements InitializeHelper {
 
     @Override
     public void initialize(Context context) {

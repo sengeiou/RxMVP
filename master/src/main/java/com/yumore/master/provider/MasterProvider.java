@@ -12,7 +12,7 @@ import com.yumore.provider.RouterConstants;
  * @date 19-3-1 - 下午5:23
  */
 @Route(path = RouterConstants.SAMPLE_PROVIDER)
-public class SampleProvider implements ISampleProvider {
+public class MasterProvider implements ISampleProvider {
     private Context context;
 
     @Override

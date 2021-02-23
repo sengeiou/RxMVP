@@ -13,10 +13,15 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.core.content.ContextCompat;
 
 import com.yumore.common.R;
+import com.yumore.provider.utility.EmptyUtils;
 
 
+/**
+ * @author nathaniel
+ */
 public class ClearEditText extends AppCompatEditText implements View.OnFocusChangeListener, TextWatcher {
     private Drawable drawable;
     private boolean focusable;
@@ -31,7 +36,7 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
 
     public ClearEditText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init();
+        init(context);
     }
 
     public static Animation shakeAnimation(int counts) {
@@ -41,13 +46,15 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
         return translateAnimation;
     }
 
-    private void init() {
+    private void init(Context context) {
         drawable = getCompoundDrawables()[2];
         if (drawable == null) {
-            drawable = getResources().getDrawable(R.drawable.common_selector_clear_edittext);
+            drawable = ContextCompat.getDrawable(context, R.drawable.common_selector_clear_edittext);
         }
 
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth() - 20, drawable.getIntrinsicHeight() - 20);
+        if (!EmptyUtils.isEmpty(drawable)) {
+            drawable.setBounds(0, 0, drawable.getIntrinsicWidth() - 20, drawable.getIntrinsicHeight() - 20);
+        }
         setClearIconVisible(false);
         setOnFocusChangeListener(this);
         addTextChangedListener(this);
@@ -72,7 +79,7 @@ public class ClearEditText extends AppCompatEditText implements View.OnFocusChan
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
         this.focusable = hasFocus;
-        if (hasFocus) {
+        if (hasFocus && !EmptyUtils.isEmpty(getText())) {
             setClearIconVisible(getText().length() > 0);
         } else {
             setClearIconVisible(false);

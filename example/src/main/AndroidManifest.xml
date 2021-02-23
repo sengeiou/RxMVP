@@ -39,7 +39,6 @@
         <activity
             android:name=".surface.ActivitySplash"
             android:screenOrientation="portrait" />
-        <activity android:name=".surface.ActivityDialog" />
         <activity android:name=".surface.ActivityTextTool" />
         <activity android:name=".surface.ActivitySlidingDrawerSingle" />
         <activity android:name=".surface.ActivityProgressBar" />

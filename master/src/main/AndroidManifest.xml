@@ -4,7 +4,7 @@
     package="com.yumore.master">
 
     <application
-        android:name=".SampleApplication"
+        android:name=".MasterApplication"
         android:allowBackup="true"
         android:appComponentFactory="@string/app_name"
         android:icon="@mipmap/logo"
