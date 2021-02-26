@@ -3,6 +3,7 @@ package com.yumore.example.surface;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,7 +27,7 @@ import butterknife.ButterKnife;
  */
 public class ActivityCreateQRCode extends BaseActivity implements View.OnClickListener {
 
-    private static final android.os.Handler Handler = new Handler();
+    private static final android.os.Handler HANDLER = new Handler(Looper.getMainLooper());
     private static Runnable mRunnable = null;
     private final int time_second = 0;
     private final int second = 60;
@@ -48,13 +49,10 @@ public class ActivityCreateQRCode extends BaseActivity implements View.OnClickLi
     Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what) {
-                case 60000:
-                    initData();
-                    break;
-                default:
-                    break;
+            if (msg.what == 60000) {
+                initData();
+            } else {
+                super.handleMessage(msg);
             }
         }
     };
@@ -76,26 +74,27 @@ public class ActivityCreateQRCode extends BaseActivity implements View.OnClickLi
         mRunnable = new Runnable() {
             int mSumNum = timeSecond;
 
+            @SuppressLint("DefaultLocale")
             @Override
             public void run() {
-                Handler.postDelayed(mRunnable, 1000);
-                view.setText(mSumNum + "");
+                HANDLER.postDelayed(mRunnable, 1000);
+                view.setText(String.format("%d", mSumNum));
                 view.setEnabled(false);
                 mSumNum--;
                 if (mSumNum < 0) {
-                    view.setText(0 + "");
+                    view.setText(String.format("0"));
                     view.setEnabled(true);
                     Message message = new Message();
                     message.what = 60000;
                     mHandler.sendMessage(message);
                     // 干掉这个定时器，下次减不会累加
-                    Handler.removeCallbacks(mRunnable);
+                    HANDLER.removeCallbacks(mRunnable);
                     AuthCode(mTvTimeSecond, second);
                 }
             }
 
         };
-        Handler.postDelayed(mRunnable, 1000);
+        HANDLER.postDelayed(mRunnable, 1000);
     }
 
     private void initView() {
@@ -110,12 +109,13 @@ public class ActivityCreateQRCode extends BaseActivity implements View.OnClickLi
         mIvLinecode.setImageBitmap(RxBarCode.createBarCode("" + System.currentTimeMillis(), 1000, 300));
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public void onClick(View arg0) {
         if (arg0.getId() == R.id.ll_refresh) {
-            Handler.removeCallbacks(mRunnable);
+            HANDLER.removeCallbacks(mRunnable);
             initData();
-            mTvTimeSecond.setText(second + "");
+            mTvTimeSecond.setText(String.format("%d", second));
             AuthCode(mTvTimeSecond, second);
         }
     }
