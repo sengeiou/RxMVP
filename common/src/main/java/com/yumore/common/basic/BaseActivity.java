@@ -27,7 +27,7 @@ import butterknife.Unbinder;
  * @version v1.0.0
  * @date 2018/3/8 - 15:11
  */
-public abstract class BaseActivity<P extends BaseContract> extends BasicActivity implements BaseViewer {
+abstract class BaseActivity<P extends BaseContract> extends BasicActivity implements BaseViewer {
     protected P presenter;
     protected boolean withoutMore;
     private Context context;
@@ -106,9 +106,9 @@ public abstract class BaseActivity<P extends BaseContract> extends BasicActivity
             textView.setText(message);
         }
         alertDialog = new AlertDialog.Builder(getContext(), R.style.CustomDialog)
-                .setCancelable(false)
-                .setView(view)
-                .create();
+            .setCancelable(false)
+            .setView(view)
+            .create();
         alertDialog.show();
         Window dialogWindow = alertDialog.getWindow();
         if (dialogWindow != null) {

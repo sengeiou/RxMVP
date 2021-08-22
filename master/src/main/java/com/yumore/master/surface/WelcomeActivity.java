@@ -26,13 +26,10 @@ public class WelcomeActivity extends BasicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        /*
-         * TODO: 解决new Handler() 无参过时
-         */
         new Handler(getMainLooper()).postDelayed(() -> {
-            Class<?> clazz = PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ?
-                    PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ?
-                            ExampleActivity.class : TractionActivity.class : IntroduceActivity.class;
+            Class<?> clazz = PreferencesUtils.getInstance(getApplicationContext()).getIntroduceEnable() ?
+                PreferencesUtils.getInstance(getApplicationContext()).getTractionEnable() ?
+                    ExampleActivity.class : TractionActivity.class : IntroduceActivity.class;
             Intent intent = new Intent(getApplicationContext(), clazz);
             startActivity(intent);
             finish();

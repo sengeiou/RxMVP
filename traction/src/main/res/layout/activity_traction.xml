@@ -31,7 +31,7 @@
             android:textSize="16sp" />
     </RelativeLayout>
 
-    <com.yumore.traction.ExtendedViewPager
+    <com.nathaniel.baseui.widget.ExtendedViewPager
         android:id="@+id/traction_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

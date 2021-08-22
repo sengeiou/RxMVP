@@ -3,15 +3,16 @@ package com.yumore.traction;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.nathaniel.baseui.adapter.FragmentAdapter;
+import com.nathaniel.baseui.binding.AbstractActivity;
+import com.nathaniel.baseui.callback.OnFragmentToActivity;
 import com.yumore.provider.ISampleProvider;
 import com.yumore.provider.RouterConstants;
 import com.yumore.traction.databinding.ActivityTractionBinding;
@@ -23,11 +24,11 @@ import java.util.List;
  * @author Nathaniel
  */
 @Route(path = RouterConstants.TRACTION_HOME)
-public class TractionActivity extends FragmentActivity implements ViewPager.OnPageChangeListener, OnFragmentToActivity<Integer>, View.OnClickListener {
+public class TractionActivity extends AbstractActivity<ActivityTractionBinding> implements ViewPager.OnPageChangeListener, OnFragmentToActivity<Integer>, View.OnClickListener {
     private final int[] videoRes = new int[]{
-            R.raw.guide1,
-            R.raw.guide2,
-            R.raw.guide3
+        R.raw.guide1,
+        R.raw.guide2,
+        R.raw.guide3
     };
     private ActivityTractionBinding tractionBinding;
     private LinearLayout.LayoutParams focusedParams, unfocusedParams;
@@ -38,16 +39,7 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        tractionBinding = ActivityTractionBinding.inflate(getLayoutInflater());
-        setContentView(tractionBinding.getRoot());
-
-        initialize();
-    }
-
-    private void initialize() {
+    public void loadData() {
         List<Fragment> fragmentList = new ArrayList<>();
         focusedParams = new LinearLayout.LayoutParams(dip2px(getApplicationContext(), 7), dip2px(getApplicationContext(), 7));
         focusedParams.leftMargin = dip2px(getApplicationContext(), 15);
@@ -77,6 +69,10 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
         FragmentAdapter fragmentAdapter = new FragmentAdapter(fragmentList, getSupportFragmentManager());
         tractionBinding.tractionViewpager.setOffscreenPageLimit(fragmentList.size());
         tractionBinding.tractionViewpager.setAdapter(fragmentAdapter);
+    }
+
+    @Override
+    public void bindView() {
         tractionBinding.tractionViewpager.addOnPageChangeListener(this);
         tractionBinding.tractionLayout.bringToFront();
         tractionBinding.tractionEnter.setOnClickListener(this);
@@ -123,5 +119,10 @@ public class TractionActivity extends FragmentActivity implements ViewPager.OnPa
             integer++;
             tractionBinding.tractionViewpager.setCurrentItem(integer, true);
         }
+    }
+
+    @Override
+    protected ActivityTractionBinding getViewBinding() {
+        return ActivityTractionBinding.inflate(getLayoutInflater());
     }
 }

@@ -4,12 +4,12 @@ import android.Manifest;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.yumore.common.basic.AbsMVPActivity;
+import com.yumore.common.basic.BaseContract;
 import com.yumore.daemon.DaemonActivity;
 import com.yumore.driving.SubjectActivity;
 import com.yumore.easymvp.example.ExampleActivity1;
@@ -29,41 +29,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * @author yumore
  */
 @Route(path = RouterConstants.EXAMPLE_HOME)
-public class ExampleActivity extends AppCompatActivity {
+public class ExampleActivity extends AbsMVPActivity {
     private static final int TIME_INTERVAL = 2000;
     private static final int COLUMN_COUNT_DEFAULT = 3;
     @BindView(R2.id.recyclerView)
     RecyclerView recyclerview;
     private List<ModelMainItem> modelMainItemList;
     private ExampleActivity mContext;
-    private long mBackPressed;
+    private long lastClickTime;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_example);
-        ButterKnife.bind(this);
-        mContext = this;
-        initData();
-        initView();
-
+    public void beforeInit(Bundle savedInstanceState) {
+        super.beforeInit(savedInstanceState);
         RxPermissionsTool.with(mContext).
-                addPermission(Manifest.permission.ACCESS_FINE_LOCATION).
-                addPermission(Manifest.permission.ACCESS_COARSE_LOCATION).
-                addPermission(Manifest.permission.READ_EXTERNAL_STORAGE).
-                addPermission(Manifest.permission.CAMERA).
-                addPermission(Manifest.permission.CALL_PHONE).
-                addPermission(Manifest.permission.READ_PHONE_STATE).
-                initPermission();
+            addPermission(Manifest.permission.ACCESS_FINE_LOCATION).
+            addPermission(Manifest.permission.ACCESS_COARSE_LOCATION).
+            addPermission(Manifest.permission.READ_EXTERNAL_STORAGE).
+            addPermission(Manifest.permission.CAMERA).
+            addPermission(Manifest.permission.CALL_PHONE).
+            addPermission(Manifest.permission.READ_PHONE_STATE).
+            initPermission();
     }
 
-    private void initData() {
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_example;
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void loadData() {
         modelMainItemList = new ArrayList<>();
         modelMainItemList.add(new ModelMainItem("RxPhotoTool操作UZrop裁剪图片", R.drawable.circle_elves_ball, ProfileActivity.class));
         modelMainItemList.add(new ModelMainItem("二维码与条形码的扫描与生成", R.drawable.circle_dynamic_generation_code, ActivityCodeTool.class));
@@ -116,13 +120,9 @@ public class ExampleActivity extends AppCompatActivity {
         modelMainItemList.add(new ModelMainItem("Presenter复用", R.mipmap.icon_pikachu, ExampleActivity1.class));
     }
 
-    private void initView() {
-        if (COLUMN_COUNT_DEFAULT <= 1) {
-            recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
-        } else {
-            recyclerview.setLayoutManager(new GridLayoutManager(mContext, COLUMN_COUNT_DEFAULT));
-        }
-
+    @Override
+    public void bindView() {
+        recyclerview.setLayoutManager(new LinearLayoutManager(mContext));
         recyclerview.addItemDecoration(new RxRecyclerViewDividerTool(RxImageTool.dp2px(5f)));
         AdapterRecyclerViewMain recyclerViewMain = new AdapterRecyclerViewMain(modelMainItemList);
 
@@ -130,13 +130,18 @@ public class ExampleActivity extends AppCompatActivity {
     }
 
     @Override
+    protected BaseContract initPresenter() {
+        return null;
+    }
+
+    @Override
     public void onBackPressed() {
-        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {
+        if (lastClickTime + TIME_INTERVAL > System.currentTimeMillis()) {
             super.onBackPressed();
             return;
         } else {
             Toast.makeText(getBaseContext(), "再次点击返回键退出", Toast.LENGTH_SHORT).show();
         }
-        mBackPressed = System.currentTimeMillis();
+        lastClickTime = System.currentTimeMillis();
     }
 }

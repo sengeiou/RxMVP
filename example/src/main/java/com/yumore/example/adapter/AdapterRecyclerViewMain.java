@@ -28,7 +28,6 @@ import butterknife.ButterKnife;
 
 public class AdapterRecyclerViewMain extends RecyclerView.Adapter<AdapterRecyclerViewMain.ViewHolder> {
 
-    private int mScreenWidth, mItemWidth, mItemHeight;
     private Context context;
     private final List<ModelMainItem> mValues;
 

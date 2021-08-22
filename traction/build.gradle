@@ -1,35 +1,12 @@
 apply plugin: 'com.android.library'
-apply plugin: "com.alibaba.arouter"
+apply from: "${rootDir}/common.gradle"
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion '30.0.3'
-    defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
-            }
-        }
-    }
-
     viewBinding {
-        enabled = true
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+        enabled true
     }
 }
 
-dependencies {
-    implementation project(':provider')
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+dependencies{
+    implementation project(':basicui')
 }

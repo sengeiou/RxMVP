@@ -20,7 +20,7 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import com.yumore.common.R;
 import com.yumore.common.R2;
-import com.yumore.common.basic.AbstractActivity;
+import com.yumore.common.basic.AbsMVPActivity;
 import com.yumore.common.basic.BaseContract;
 import com.yumore.common.utility.DataUtils;
 import com.yumore.common.widget.CustomPopupWindow;
@@ -38,7 +38,7 @@ import io.reactivex.functions.Consumer;
  * @author Nathaniel
  * @date 18-8-6-上午9:56
  */
-public class GalleryActivity extends AbstractActivity implements ViewPager.OnPageChangeListener, OnItemClickListener, View.OnClickListener {
+public class GalleryActivity extends AbsMVPActivity implements ViewPager.OnPageChangeListener, OnItemClickListener, View.OnClickListener {
     private final List<String> imageUrlList = new ArrayList<>();
     @BindView(R2.id.common_header_back_iv)
     ImageView commonHeaderBackIv;
